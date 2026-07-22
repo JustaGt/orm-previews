@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Robertson Farm Feed — Feed, Hay &amp; Straw | Greenwich, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --kraft:#e9dcc0; --kraft2:#f3ebd7; --sack:#cdb98f;
+  --red:#a8392a; --red-d:#82281c;
+  --green:#3f5a2e; --green-d:#2c401f;
+  --gold:#d99a2b; --ink:#2b2419; --soft:#6c6047; --line:#d8c8a4; --paper:#fbf6ea;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--paper);line-height:1.62}
+h1,h2,h3,.disp{font-family:'Oswald',sans-serif;letter-spacing:.5px;text-transform:uppercase}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+.btn{display:inline-block;background:var(--red);color:#fff;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:1px;font-weight:600;padding:15px 30px;border-radius:4px;text-decoration:none;font-size:1.02rem}
+.btn:hover{background:var(--red-d)}
+.btn.green{background:var(--green)} .btn.green:hover{background:var(--green-d)}
+/* top bar */
+.top{background:var(--green-d);color:#f0e9d6;font-size:.92rem}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;padding:9px 22px;flex-wrap:wrap;gap:6px}
+.top b{color:#fff}
+/* hero */
+.hero{background:
+  linear-gradient(rgba(43,36,25,.74),rgba(43,36,25,.62)),
+  repeating-linear-gradient(45deg,#7a5e34 0 22px,#6f5530 22px 44px);
+  color:#fff;padding:84px 0 76px}
+.hero .wrap{max-width:840px}
+.eyebrow{font-family:'Oswald',sans-serif;letter-spacing:3px;font-size:.85rem;color:var(--gold);margin-bottom:14px}
+.hero h1{font-size:3.05rem;line-height:1.04;margin-bottom:16px}
+.hero p{font-size:1.22rem;max-width:640px;color:#f1ead8;margin-bottom:28px}
+.hero .row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.phone-big{font-family:'Oswald',sans-serif;font-size:1.35rem;color:#fff;text-decoration:none;border:2px solid rgba(255,255,255,.5);padding:12px 20px;border-radius:4px}
+/* section */
+section{padding:64px 0}
+.sec-head{text-align:center;max-width:680px;margin:0 auto 40px}
+.sec-head h2{font-size:2.05rem;color:var(--green-d)}
+.sec-head .bar{width:64px;height:5px;background:var(--gold);margin:14px auto 18px;border-radius:3px}
+.sec-head p{color:var(--soft);font-size:1.08rem}
+/* feed grid */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:24px 22px;border-top:6px solid var(--green)}
+.card:nth-child(2n){border-top-color:var(--gold)}
+.card:nth-child(3n){border-top-color:var(--red)}
+.card .ic{font-family:'Oswald',sans-serif;font-size:1.5rem;color:var(--green-d);margin-bottom:6px}
+.card h3{font-size:1.18rem;color:var(--ink);margin-bottom:8px}
+.card p{color:var(--soft);font-size:.98rem}
+/* bulk band */
+.band{background:var(--kraft);border-top:4px solid var(--sack);border-bottom:4px solid var(--sack)}
+.band .wrap{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.band h2{font-size:1.9rem;color:var(--green-d);margin-bottom:12px}
+.band p{color:#5a4f38;font-size:1.06rem;margin-bottom:10px}
+.band .tag{display:inline-block;background:var(--green-d);color:#fff;font-family:'Oswald',sans-serif;letter-spacing:1px;padding:6px 14px;border-radius:3px;font-size:.85rem;margin:4px 6px 4px 0}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{text-align:center;padding:10px}
+.step .n{width:54px;height:54px;border-radius:50%;background:var(--red);color:#fff;font-family:'Oswald',sans-serif;font-size:1.5rem;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+.step h3{font-size:1.12rem;margin-bottom:6px}
+.step p{color:var(--soft);font-size:.97rem}
+/* serve */
+.serve{background:var(--green-d);color:#eae3d0}
+.serve .sec-head h2{color:#fff}
+.serve .sec-head .bar{background:var(--gold)}
+.serve ul{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:780px;margin:0 auto}
+.serve li{background:rgba(255,255,255,.06);border-left:4px solid var(--gold);padding:14px 18px;border-radius:0 6px 6px 0}
+.serve li b{font-family:'Oswald',sans-serif;letter-spacing:.5px;color:#fff;display:block;text-transform:uppercase;font-size:.98rem;margin-bottom:2px}
+/* visit */
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.box{background:#fff;border:1px solid var(--line);border-radius:10px;padding:30px}
+.box h2{font-size:1.7rem;color:var(--green-d);margin-bottom:14px}
+.box .line{display:flex;gap:10px;margin-bottom:12px;font-size:1.05rem}
+.box .line span{color:var(--red);font-weight:700;font-family:'Oswald',sans-serif}
+.note{font-size:.86rem;color:var(--soft);font-style:italic}
+.map{border-radius:10px;overflow:hidden;min-height:280px;background:var(--kraft);display:flex;align-items:center;justify-content:center;text-align:center;color:#7a6b48;border:1px dashed var(--sack);padding:20px;font-style:italic}
+/* footer */
+footer{background:var(--ink);color:#cfc4ab;padding:34px 0;text-align:center}
+footer b{color:#fff;font-family:'Oswald',sans-serif;letter-spacing:1px}
+footer a{color:var(--gold);text-decoration:none}
+@media(max-width:780px){
+  .hero h1{font-size:2.25rem}
+  .grid,.steps,.serve ul{grid-template-columns:1fr}
+  .band .wrap,.visit .wrap{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <span>165 John Robertson Road, Greenwich, NY</span>
+  <span>Call ahead: <b>(518) 791-5700</b></span>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">GREENWICH · WASHINGTON COUNTY, NY</div>
+  <h1>Feed for every animal on your place</h1>
+  <p>Bagged and bulk feed for poultry, horses, cattle, hogs, goats and sheep — plus small square bales of hay and straw. A local feed mill where someone knows what your animals eat.</p>
+  <div class="row">
+    <a class="btn" href="tel:+15187915700">Call to reserve feed</a>
+    <a class="phone-big" href="tel:+15187915700">(518) 791-5700</a>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <div class="sec-head">
+    <h2>What we carry</h2>
+    <div class="bar"></div>
+    <p>Feed by the bag or by the ton, for the animals Washington County actually keeps. Call ahead and we'll have it ready on the dock.</p>
+  </div>
+  <div class="grid">
+    <div class="card"><div class="ic">Poultry</div><h3>Chicken &amp; flock feed</h3><p>Layer, starter/grower, scratch and broiler feed for backyard flocks and bigger coops.</p></div>
+    <div class="card"><div class="ic">Horse</div><h3>Horse feed</h3><p>Pelleted and textured horse feed for pleasure horses, barns and boarders.</p></div>
+    <div class="card"><div class="ic">Cattle</div><h3>Cattle feed</h3><p>Feed and minerals for beef and dairy cattle, by the bag or in bulk.</p></div>
+    <div class="card"><div class="ic">Swine</div><h3>Hog feed</h3><p>Grower and finisher rations for the family hog or a small herd.</p></div>
+    <div class="card"><div class="ic">Goat &amp; Sheep</div><h3>Goat &amp; sheep feed</h3><p>Feed and minerals for goats, sheep and the rest of the small-livestock crowd.</p></div>
+    <div class="card"><div class="ic">Small Animal</div><h3>Hay, straw &amp; more</h3><p>Small square bales of hay and straw, plus feed for rabbits and small animals.</p></div>
+  </div>
+  <p class="note" style="text-align:center;margin-top:18px">Exact brands and current stock vary — call and we'll tell you what's on hand. <em>(Brand list to confirm.)</em></p>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <div>
+    <h2>Bag or bulk — and hay when you need it</h2>
+    <p>Picking up a couple bags for the coop or filling a truck for the herd, we'll load you either way. Hay and straw in bags or bulk, while it lasts.</p>
+    <span class="tag">By the bag</span>
+    <span class="tag">By the ton</span>
+    <span class="tag">Small square bales</span>
+    <span class="tag">Straw</span>
+  </div>
+  <div>
+    <a class="btn green" href="tel:+15187915700">Ask what's in stock</a>
+    <p class="note" style="margin-top:12px">Hay and straw availability is seasonal — a quick call saves you the drive.</p>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head">
+    <h2>Call ahead, we'll have it ready</h2>
+    <div class="bar"></div>
+  </div>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><h3>Call us</h3><p>Tell us the animal and how much — bag or bulk. We'll tell you what's on hand and the price.</p></div>
+    <div class="step"><div class="n">2</div><h3>We pull it</h3><p>Your feed, hay and straw is set aside and ready when you pull in.</p></div>
+    <div class="step"><div class="n">3</div><h3>Load &amp; go</h3><p>Pull up, we load it, you're back to the barn. No wandering a big-box aisle.</p></div>
+  </div>
+</div></section>
+
+<section class="serve"><div class="wrap">
+  <div class="sec-head">
+    <h2>Who we feed</h2>
+    <div class="bar"></div>
+  </div>
+  <ul>
+    <li><b>Homesteaders &amp; backyard flocks</b>A few chickens, a couple goats, a hog or two — we stock for your size, not just commercial loads.</li>
+    <li><b>Horse owners &amp; barns</b>Steady feed for pleasure horses and boarding barns around Greenwich.</li>
+    <li><b>Small &amp; working farms</b>Bulk feed and minerals for cattle, sheep and goats by the ton.</li>
+    <li><b>4-H &amp; FFA families</b>Feed and a hand for the kids raising a project animal this year.</li>
+  </ul>
+</div></section>
+
+<section class="visit"><div class="wrap">
+  <div class="box">
+    <h2>Find us &amp; hours</h2>
+    <div class="line"><span>Where</span><div>165 John Robertson Road<br>Greenwich, NY 12834</div></div>
+    <div class="line"><span>Call</span><div><a href="tel:+15187915700" style="text-decoration:none;color:var(--red);font-weight:700">(518) 791-5700</a></div></div>
+    <div class="line"><span>Hours</span><div>Open seasonal hours — <em>hours to confirm.</em></div></div>
+    <p class="note">Calling ahead is the surest way to know we have your feed ready.</p>
+    <div style="margin-top:18px"><a class="btn" href="tel:+15187915700">Call Robertson Farm Feed</a></div>
+  </div>
+  <div class="map">Greenwich, NY — map embed goes here<br>(165 John Robertson Road)</div>
+</div></section>
+
+<footer><div class="wrap">
+  <b>ROBERTSON FARM FEED, LLC</b><br>
+  165 John Robertson Road · Greenwich, NY 12834 · <a href="tel:+15187915700">(518) 791-5700</a><br>
+  <span style="font-size:.85rem;color:#9c8f73;display:block;margin-top:8px">Preview concept prepared by Onyx Rise Media · not the business's live site</span>
+</div></footer>
+
+</body>
+</html>

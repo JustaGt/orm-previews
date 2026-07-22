@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RMB Marine Construction — Bulkheads &amp; Docks, West Islip NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --slate:#2c3439; --slate-d:#1b2124; --sand:#d8cdb9; --paper:#f4f1ea;
+  --orange:#c8622a; --steel:#8a959b; --line:#c9c1b0;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Source Sans 3",system-ui,sans-serif;color:var(--slate-d);background:var(--paper);line-height:1.6;font-size:17px}
+h1,h2,h3,.disp{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.08;font-weight:600}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+
+/* pile motif */
+.piles{height:14px;background:repeating-linear-gradient(90deg,var(--slate) 0 7px,transparent 7px 15px)}
+
+header{background:var(--slate-d);color:var(--paper)}
+.bar{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;padding:16px 0}
+.logo{font-family:Oswald,sans-serif;font-size:23px;letter-spacing:.04em}
+.logo span{color:var(--orange)}
+.bar .ph{font-family:Oswald,sans-serif;font-size:21px;color:var(--sand);text-decoration:none}
+.bar .ph small{display:block;font-family:"Source Sans 3";font-size:12px;letter-spacing:.08em;color:var(--steel);text-transform:uppercase}
+
+.hero{background:var(--slate);color:var(--paper);padding:74px 0 66px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;inset:auto 0 0 0;height:10px;background:repeating-linear-gradient(90deg,var(--sand) 0 5px,transparent 5px 13px);opacity:.5}
+.hero h1{font-size:clamp(34px,6vw,60px);max-width:16ch}
+.hero p.sub{font-size:clamp(17px,2.3vw,21px);max-width:52ch;margin-top:20px;color:#e4ddd0}
+.cta{display:inline-block;background:var(--orange);color:#fff;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.05em;font-size:19px;padding:15px 30px;text-decoration:none;margin-top:28px;border:0}
+.cta:hover{background:#a94f1f}
+.hero .meta{margin-top:26px;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--steel)}
+
+section{padding:60px 0}
+.eyebrow{font-family:Oswald,sans-serif;color:var(--orange);letter-spacing:.16em;font-size:14px;text-transform:uppercase;margin-bottom:10px}
+h2{font-size:clamp(26px,4vw,38px);margin-bottom:14px}
+.lead{max-width:62ch;color:#454f55}
+
+.signs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:2px;margin-top:34px;background:var(--line)}
+.sign{background:#fff;padding:26px 22px}
+.sign .n{font-family:Oswald,sans-serif;font-size:34px;color:var(--sand);line-height:1}
+.sign h3{font-size:19px;margin:8px 0 8px}
+.sign p{font-size:15.5px;color:#4d565c}
+
+.svc{background:var(--slate-d);color:var(--paper)}
+.svc ul{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1px;background:#3a4348;margin-top:30px}
+.svc li{background:var(--slate-d);padding:22px 20px}
+.svc li b{font-family:Oswald,sans-serif;font-size:19px;letter-spacing:.02em;display:block;margin-bottom:6px}
+.svc li span{font-size:15px;color:#b9c2c7}
+
+.permit{background:var(--sand)}
+.permit .box{display:grid;grid-template-columns:1.15fr .85fr;gap:38px;align-items:start}
+.permit ol{margin:18px 0 0 20px}
+.permit li{margin-bottom:12px}
+.pull{background:var(--slate-d);color:var(--paper);padding:28px;border-left:7px solid var(--orange)}
+.pull p{font-size:19px;line-height:1.45}
+
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:26px;margin-top:30px}
+.why div b{font-family:Oswald,sans-serif;font-size:20px;display:block;color:var(--orange);margin-bottom:6px}
+
+.area{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+.chips span{border:1px solid var(--line);padding:7px 15px;font-size:15px;background:var(--paper)}
+
+form{background:#fff;border:1px solid var(--line);padding:30px;margin-top:28px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:13.5px;letter-spacing:.07em;text-transform:uppercase;color:#5c666c;margin:14px 0 5px;font-weight:600}
+input,select,textarea{width:100%;padding:12px;border:1px solid var(--line);font:inherit;font-size:16px;background:var(--paper)}
+textarea{min-height:104px;resize:vertical}
+.hint{font-size:14px;color:#6b747a;margin-top:16px}
+
+footer{background:var(--slate-d);color:#aeb7bc;padding:44px 0;font-size:15px}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:26px}
+footer b{color:var(--paper);font-family:Oswald,sans-serif;font-size:18px;display:block;margin-bottom:8px;letter-spacing:.03em}
+footer a{color:var(--sand)}
+.ph-big{font-family:Oswald,sans-serif;font-size:30px;color:var(--paper);text-decoration:none;display:block}
+.note{font-size:12.5px;color:#6f797e;margin-top:26px;border-top:1px solid #39424700;padding-top:14px}
+@media(max-width:760px){.permit .box,.row{grid-template-columns:1fr}.hero{padding:52px 0 46px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <div class="logo">RMB <span>MARINE</span> CONSTRUCTION</div>
+    <a class="ph" href="tel:16318345699">631-834-5699<small>7 days · 8am–8pm</small></a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>Your bulkhead is holding your backyard up. Ours are built to keep doing it.</h1>
+    <p class="sub">Bulkheading, refacing, piers, pilings and floating docks on the canals of West Islip, Babylon, Bay Shore and Islip. Family owned, licensed and insured, and we carry the permit paperwork ourselves.</p>
+    <a class="cta" href="#estimate">Get an on-site estimate</a>
+    <div class="meta">25+ years · Licensed &amp; insured · Permit expediting in house</div>
+  </div>
+</div>
+<div class="piles"></div>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Before you call anyone</div>
+    <h2>Four things that mean your wall is already working against you</h2>
+    <p class="lead">Bulkheads rarely fail all at once. They tell you first. If you can see any of these from your back step, the wall is moving — and the sooner it is looked at, the more of it can usually be saved.</p>
+    <div class="signs">
+      <div class="sign"><div class="n">01</div><h3>Sinkholes in the lawn</h3><p>Soil is escaping through the sheathing and going into the canal. The hole in the yard is the last place it shows up, not the first.</p></div>
+      <div class="sign"><div class="n">02</div><h3>The cap is out of line</h3><p>Sight down the top of the wall. A bow or a dip means tiebacks or deadmen behind it have let go.</p></div>
+      <div class="sign"><div class="n">03</div><h3>Gaps between boards</h3><p>Daylight or water running through the face at low tide. Refacing may still be an option at this stage. It usually is not later.</p></div>
+      <div class="sign"><div class="n">04</div><h3>The neighbour just replaced theirs</h3><p>Canal walls fail in runs. Tying a new wall into an old one at the property line is a job worth planning, not discovering.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="svc">
+  <div class="wrap">
+    <div class="eyebrow">What we build</div>
+    <h2>Marine construction, start to finish</h2>
+    <p class="lead" style="color:#bcc5ca">One crew, one number, from the permit application through to the last plank.</p>
+    <ul>
+      <li><b>Bulkheading</b><span>New walls and full replacement, residential and commercial.</span></li>
+      <li><b>Refacing</b><span>When the structure behind the face is still sound, refacing costs a fraction of replacement.</span></li>
+      <li><b>Piers &amp; pilings</b><span>Driven pilings, fixed piers, catwalks and ramps.</span></li>
+      <li><b>Floating docks</b><span>Float systems sized to your slip and your tide range.</span></li>
+      <li><b>Decks &amp; dock decking</b><span>Waterside decking built to live in salt air.</span></li>
+      <li><b>Dredging</b><span>Getting the depth back at your own dock.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="permit">
+  <div class="wrap">
+    <div class="box">
+      <div>
+        <div class="eyebrow">The part nobody warns you about</div>
+        <h2>Permits, handled here</h2>
+        <p class="lead">Waterfront work on the South Shore is permitted work. For most homeowners this is the part that stalls the project — not the construction. We have a permit expediter available, so the filing does not land on your kitchen table.</p>
+        <ol>
+          <li><b>Site visit and measurement.</b> We look at the wall, the tie-in at both property lines and the access route for equipment.</li>
+          <li><b>Scope and price.</b> Reface or replace, in writing, with what each option assumes.</li>
+          <li><b>Filing.</b> Our expediter prepares and submits the application package.</li>
+          <li><b>Build.</b> Scheduled once the approval is in hand, so your dates are real dates.</li>
+        </ol>
+      </div>
+      <div class="pull">
+        <p>Ask any contractor who quotes you one question: <b>who files the permit?</b> If the answer is “you do,” that is months of your summer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Who you are hiring</div>
+    <h2>Rob Marcisak, and the same crew each time</h2>
+    <div class="why">
+      <div><b>25+ years</b>Working these canals long enough to know which ones silt in, which ones scour, and how the walls on your block were originally built.</div>
+      <div><b>Family owned</b>The owner is on the job. When you call the number on this page during working hours, you are not routed to a call centre.</div>
+      <div><b>Licensed &amp; insured</b>Certificates provided before work starts, to you and to your insurer if they ask.</div>
+      <div><b>7 days, 8–8</b>Because the only time most homeowners can meet at the water is early, late, or Saturday.</div>
+    </div>
+  </div>
+</section>
+
+<section class="area">
+  <div class="wrap">
+    <div class="eyebrow">Service area</div>
+    <h2>The Great South Bay waterfront</h2>
+    <p class="lead">Based on Higbie Lane in West Islip — most of our work is within twenty minutes of the shop.</p>
+    <div class="chips">
+      <span>West Islip</span><span>Babylon</span><span>West Babylon</span><span>Bay Shore</span><span>Brightwaters</span><span>Islip</span><span>East Islip</span><span>Great River</span><span>Oakdale</span><span>Copiague</span><span>Amityville</span>
+    </div>
+  </div>
+</section>
+
+<section id="estimate">
+  <div class="wrap">
+    <div class="eyebrow">Free estimate</div>
+    <h2>Tell us what the wall is doing</h2>
+    <p class="lead">The more you can describe now, the more useful the site visit is. Rough numbers are fine — we measure when we get there.</p>
+    <form onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';">
+      <div class="row">
+        <div><label for="n">Name</label><input id="n" required></div>
+        <div><label for="p">Phone</label><input id="p" type="tel" required></div>
+      </div>
+      <div class="row">
+        <div><label for="e">Email</label><input id="e" type="email" required></div>
+        <div><label for="a">Property address or canal</label><input id="a" placeholder="Street, West Islip"></div>
+      </div>
+      <div class="row">
+        <div>
+          <label for="t">Waterfront type</label>
+          <select id="t"><option>Residential canal</option><option>Open bay frontage</option><option>Creek / cove</option><option>Commercial waterfront</option><option>Not sure</option></select>
+        </div>
+        <div>
+          <label for="l">Approximate length of wall</label>
+          <select id="l"><option>Under 50 ft</option><option>50–100 ft</option><option>100–150 ft</option><option>Over 150 ft</option><option>Not sure</option></select>
+        </div>
+      </div>
+      <label for="w">What are you seeing?</label>
+      <textarea id="w" placeholder="Sinkholes near the wall, cap out of line, gaps in the face, a section that has dropped, a dock that needs replacing…"></textarea>
+      <label for="wh">When would you like the work done?</label>
+      <select id="wh"><option>As soon as possible</option><option>This season</option><option>Next off-season</option><option>Planning ahead / budgeting</option></select>
+      <p class="hint">We will call to arrange a time to look at it. No charge for the estimate.</p>
+      <button class="cta" type="submit" style="margin-top:20px">Request my estimate</button>
+      <p class="ok" style="display:none;margin-top:16px;color:#2c6b3f;font-weight:600">Thanks — we have your details and will call to arrange a look at the wall.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <b>RMB Marine Construction</b>
+        745 Higbie Lane<br>West Islip, NY 11795
+      </div>
+      <div>
+        <b>Call</b>
+        <a class="ph-big" href="tel:16318345699">631-834-5699</a>
+        <a href="mailto:rmbmarine@aol.com">rmbmarine@aol.com</a>
+      </div>
+      <div>
+        <b>Hours</b>
+        8:00am – 8:00pm<br>Seven days a week
+      </div>
+      <div>
+        <b>Credentials</b>
+        Licensed &amp; insured<br>Family owned &amp; operated<br>Permit expediter available
+      </div>
+    </div>
+    <p class="note">Concept page prepared by Onyx Rise Media for review. Service-area towns, review counts and any pricing shown are placeholders for confirmation by the owner before publication.</p>
+  </div>
+</footer>
+
+</body>
+</html>

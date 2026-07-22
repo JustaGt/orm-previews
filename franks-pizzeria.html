@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frank's Pizzeria — Bronx, since 2002</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--red:#b8202a;--red-deep:#7d1219;--green:#1f6b3a;--charcoal:#211c19;--cream:#fbf4e6;--ink:#2a221d;--gold:#e8b04a;}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  h1,h2,h3,.cond{font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:1}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  a{color:inherit}
+  .preview-tag{background:var(--charcoal);color:var(--gold);text-align:center;padding:7px;font-size:.78rem;font-weight:600;letter-spacing:.05em}
+  .topbar{background:var(--red-deep);color:#fbe3d4;font-size:.85rem}
+  .topbar .wrap{display:flex;justify-content:space-between;padding:8px 24px;flex-wrap:wrap;gap:6px}
+  .topbar a{color:var(--gold);font-weight:700;text-decoration:none}
+  nav{background:var(--charcoal);color:#fff;position:sticky;top:0;z-index:10}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:13px 24px}
+  nav .logo{font-family:'Anton';font-size:1.6rem;text-transform:uppercase;letter-spacing:.02em}
+  nav .logo span{color:var(--red)}
+  .callbtn{background:var(--gold);color:var(--charcoal);font-weight:700;text-decoration:none;padding:10px 20px;border-radius:4px;font-size:.92rem}
+  .hero{background:linear-gradient(rgba(25,18,15,.82),rgba(25,18,15,.88)),
+     repeating-linear-gradient(135deg,#2a201b 0 20px,#231a16 20px 40px);color:#fbf4e6;padding:84px 24px 92px;text-align:center}
+  .since{display:inline-block;border:2px solid var(--gold);color:var(--gold);font-weight:700;font-size:.82rem;letter-spacing:.18em;padding:6px 16px;border-radius:3px;margin-bottom:22px}
+  .hero h1{font-family:'Anton';font-size:clamp(3rem,9vw,5.6rem)}
+  .hero h1 span{color:var(--red)}
+  .hero p{font-size:1.16rem;margin:16px auto 30px;color:#e8d6c4;max-width:520px}
+  .btn{display:inline-block;text-decoration:none;font-weight:700;padding:15px 28px;border-radius:4px;transition:.2s;font-size:.95rem}
+  .btn.g{background:var(--gold);color:var(--charcoal)}.btn.g:hover{background:#f0bd5f}
+  .btn.o{border:2px solid #fff;color:#fff;margin-left:10px}.btn.o:hover{background:#fff;color:var(--charcoal)}
+  .strip{display:flex;gap:28px;justify-content:center;margin-top:34px;flex-wrap:wrap}
+  .strip div{font-size:.88rem;color:#c8b6a6}
+  .strip b{display:block;font-family:'Anton';font-size:1.7rem;color:var(--gold)}
+  section{padding:70px 0}
+  .eyebrow{color:var(--green);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem;margin-bottom:10px}
+  h2.title{font-family:'Anton';font-size:clamp(2.2rem,5vw,3.2rem);color:var(--red-deep);margin-bottom:8px}
+  .menu{background:#fff}
+  .mcols{display:grid;grid-template-columns:1fr 1fr;gap:14px 44px;margin-top:34px}
+  .mrow{display:flex;align-items:baseline;gap:12px;padding:13px 0;border-bottom:1px dashed #e7d6bf}
+  .mrow .name{font-weight:600;white-space:nowrap}
+  .mrow .desc{color:#8a7766;font-size:.86rem;font-weight:400}
+  .mrow .dots{flex:1;border-bottom:1px dotted #d8c4a8;transform:translateY(-4px)}
+  .mrow .price{font-family:'Anton';color:var(--red);font-size:1.1rem}
+  .menu .note{margin-top:20px;font-size:.85rem;color:#8a7766}
+  .story{background:var(--red-deep);color:#fbe3d4}
+  .story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .story h2.title{color:#fff}
+  .photo{min-height:300px;border-radius:8px;background:linear-gradient(150deg,#b8202a,#7d1219);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);font-style:italic;text-align:center;padding:24px}
+  .story p{margin-bottom:16px;font-size:1.06rem;color:#f3d6c6}
+  .reviews{background:var(--cream)}
+  .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
+  .quote{background:#fff;border-radius:8px;padding:24px;border-top:3px solid var(--green)}
+  .stars{color:var(--gold);letter-spacing:2px;margin-bottom:8px}
+  .quote p{font-weight:500}.quote .ph{display:block;margin-top:12px;font-size:.8rem;color:var(--green);font-weight:600}
+  .order{background:var(--charcoal);color:#fbf4e6}
+  .order .wrap{display:grid;grid-template-columns:1fr 1fr;gap:46px}
+  .order h2.title{color:#fff}
+  .info-row{display:flex;gap:12px;margin-bottom:16px;align-items:center}
+  .info-row .ic{color:var(--gold);width:22px}
+  form label{display:block;font-weight:600;margin:14px 0 6px;font-size:.9rem}
+  form input,form textarea{width:100%;padding:12px 14px;border:none;border-radius:5px;font-family:inherit;font-size:1rem}
+  .formcard{background:#fff;color:var(--ink);border-radius:8px;padding:32px}
+  footer{background:#181310;color:#9a8a78;text-align:center;padding:40px 24px}
+  footer .logo{font-family:'Anton';color:#fff;font-size:1.5rem;display:block;margin-bottom:6px;text-transform:uppercase}
+  footer .logo span{color:var(--red)}
+  @media(max-width:800px){.mcols,.rgrid,.story .wrap,.order .wrap{grid-template-columns:1fr;gap:26px}.btn.o{margin-left:0}}
+</style>
+</head>
+<body>
+<div class="preview-tag">PREVIEW CONCEPT — prepared by Onyx Rise Media for Frank's Pizzeria</div>
+<div class="topbar"><div class="wrap">
+  <span>2823 Middletown Rd, Bronx · Pickup & delivery</span>
+  <span>Order: <a href="tel:17185973333">(718) 597-3333</a></span>
+</div></div>
+<nav><div class="wrap">
+  <span class="logo">Frank's <span>Pizzeria</span></span>
+  <a class="callbtn" href="tel:17185973333">☎ Call to order</a>
+</div></nav>
+
+<header class="hero">
+  <span class="since">Bronx · Since 2002</span>
+  <h1>Real slices.<br><span>Real neighborhood.</span></h1>
+  <p>Hand-stretched pies, fold-in-half slices, and hot heroes — the Middletown Road spot the neighborhood's been calling for over 20 years.</p>
+  <div>
+    <a class="btn g" href="#menu">See the menu</a>
+    <a class="btn o" href="tel:17185973333">Call to order</a>
+  </div>
+  <div class="strip">
+    <div><b>20+</b>years on Middletown Rd</div>
+    <div><b>142</b>reviews</div>
+    <div><b>Pickup</b>& delivery</div>
+  </div>
+</header>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="eyebrow">The menu</div>
+    <h2 class="title">Pies, slices &amp; heroes</h2>
+    <div class="mcols">
+      <div>
+        <div class="mrow"><span class="name">Cheese Slice</span><span class="dots"></span><span class="price">$3.50</span></div>
+        <div class="mrow"><span class="name">Sicilian Slice</span><span class="dots"></span><span class="price">$4</span></div>
+        <div class="mrow"><span class="name">Grandma Slice</span><span class="dots"></span><span class="price">$4.50</span></div>
+        <div class="mrow"><div><span class="name">Large Pie</span> <span class="desc">— 18", whole</span></div><span class="dots"></span><span class="price">$22</span></div>
+        <div class="mrow"><div><span class="name">Specialty Pie</span> <span class="desc">— vodka, margherita, BBQ</span></div><span class="dots"></span><span class="price">$26+</span></div>
+      </div>
+      <div>
+        <div class="mrow"><div><span class="name">Chicken Parm Hero</span></div><span class="dots"></span><span class="price">$11</span></div>
+        <div class="mrow"><div><span class="name">Meatball Hero</span></div><span class="dots"></span><span class="price">$10</span></div>
+        <div class="mrow"><div><span class="name">Garlic Knots</span> <span class="desc">— half dozen</span></div><span class="dots"></span><span class="price">$5</span></div>
+        <div class="mrow"><div><span class="name">Baked Ziti</span></div><span class="dots"></span><span class="price">$9</span></div>
+        <div class="mrow"><div><span class="name">Calzone / Roll</span></div><span class="dots"></span><span class="price">$8+</span></div>
+      </div>
+    </div>
+    <p class="note">Sample menu &amp; pricing — final menu confirmed with the shop on build.</p>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap">
+    <div class="photo">[ Photo: the counter / a fresh pie coming out ]</div>
+    <div>
+      <div class="eyebrow" style="color:var(--gold)">Since 2002</div>
+      <h2 class="title">Twenty years on the same corner</h2>
+      <p>Frank's has been feeding Morris Park and Pelham since 2002 — the kind of pizzeria where the counter guy knows your order before you finish saying it.</p>
+      <p>Same recipes, same hands, same neighborhood. Whether it's a quick slice on your lunch or a couple of pies for the family on Friday, it's the spot people keep coming back to.</p>
+      <a class="btn g" href="tel:17185973333">Call in an order</a>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <div class="eyebrow">From 142 reviews</div>
+    <h2 class="title">What the neighborhood says</h2>
+    <div class="rgrid">
+      <div class="quote"><div class="stars">★★★★★</div><p>"Best slice on Middletown Road. Been coming here for years and it never misses."</p><span class="ph">Review placeholder — pull live</span></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"Garlic knots and a vodka slice — my Friday ritual. Always hot, always fresh."</p><span class="ph">Review placeholder — pull live</span></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"Real neighborhood pizzeria. Fast, friendly, and the pie is the real deal."</p><span class="ph">Review placeholder — pull live</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="order" id="order">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" style="color:var(--gold)">Order & visit</div>
+      <h2 class="title">Hungry? Call it in.</h2>
+      <p style="color:#e8d6c4;margin-bottom:24px">Fastest way is to call for pickup or delivery. Big order or party? Send the details below.</p>
+      <div class="info-row"><span class="ic">📍</span><span>2823 Middletown Rd, Bronx, NY 10461</span></div>
+      <div class="info-row"><span class="ic">☎</span><span><a href="tel:17185973333">(718) 597-3333</a></span></div>
+      <div class="info-row"><span class="ic">🕒</span><span>Mon–Sun 11am–10pm</span></div>
+      <a class="btn g" href="tel:17185973333" style="margin-top:8px">Call to order</a>
+    </div>
+    <div class="formcard">
+      <h3 class="cond" style="color:var(--red-deep);font-size:1.6rem;margin-bottom:6px">Big order / catering</h3>
+      <form onsubmit="event.preventDefault();this.style.display='none';document.getElementById('thx-f').style.display='block';">
+        <label>Name</label><input required placeholder="Your name">
+        <label>Phone</label><input required placeholder="(___) ___-____">
+        <label>What do you need?</label><textarea rows="3" placeholder="e.g. 5 pies + 2 trays of ziti for Saturday 6pm"></textarea>
+        <button class="btn g" type="submit" style="margin-top:18px;width:100%">Send order request</button>
+      </form>
+      <div id="thx-f" style="display:none"><p style="background:#fff7df;border:1px solid var(--gold);padding:12px;border-radius:6px;font-weight:600">Got it — we'll call you back. <span style="font-weight:400;font-size:.82rem">(Demo form; connects to the Onyx Rise Media CRM on build.)</span></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="logo">Frank's <span>Pizzeria</span></span>
+  2823 Middletown Rd, Bronx, NY 10461 · (718) 597-3333 · Since 2002<br>
+  <span style="font-size:.8rem;opacity:.7">Preview concept by Onyx Rise Media · not the official site</span>
+</footer>
+</body>
+</html>

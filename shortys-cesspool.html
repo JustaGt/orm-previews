@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shorty's Cesspool Service — Suffolk County, NY | Pumping, Repairs, Installs &amp; Port-A-Bowls Since 1977</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#12283f;--navy2:#1b3a5c;--orange:#f47a20;--paper:#f5f7f9;--ink:#1c2429;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Barlow',sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;}
+h1,h2,h3,.tel{font-family:'Barlow Condensed',sans-serif;}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px;}
+/* emergency strip */
+.alert{background:var(--orange);color:#231205;text-align:center;padding:10px 14px;font-weight:700;}
+.alert a{color:#231205;}
+/* header */
+header{background:var(--navy);color:#fff;padding:16px 0;}
+header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+.logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.6rem;letter-spacing:.02em;}
+.logo span{color:var(--orange);}
+.head-tel{text-align:right;}
+.head-tel a{color:#fff;text-decoration:none;font-weight:800;font-size:1.5rem;font-family:'Barlow Condensed',sans-serif;}
+.head-tel small{display:block;color:#9db4c9;}
+/* hero */
+.hero{background:linear-gradient(105deg,var(--navy) 58%,var(--navy2) 58.2%);color:#fff;padding:70px 0 64px;}
+.hero h1{font-size:clamp(2.1rem,5.5vw,3.6rem);line-height:1.05;max-width:22ch;text-transform:uppercase;letter-spacing:.01em;}
+.hero p{margin:16px 0 26px;font-size:1.15rem;color:#cfdcE8;max-width:58ch;}
+.badges{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px;}
+.badge{border:1.5px solid #3d5c7d;border-radius:999px;padding:6px 14px;font-size:.9rem;color:#cfe0f0;font-weight:600;}
+.btn{display:inline-block;padding:16px 30px;border-radius:5px;font-weight:800;text-decoration:none;font-size:1.15rem;font-family:'Barlow Condensed',sans-serif;letter-spacing:.03em;text-transform:uppercase;}
+.btn-o{background:var(--orange);color:#231205;}
+.btn-ghost{border:2px solid #7d97b1;color:#fff;margin-left:10px;}
+/* three services */
+.svc{padding:66px 0;}
+.svc h2,.how h2,.fam h2,.faq h2,.contact h2{font-size:clamp(1.7rem,3.6vw,2.5rem);text-transform:uppercase;letter-spacing:.02em;}
+.sub{color:#54636e;max-width:64ch;margin:8px 0 34px;}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
+.svc-card{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 3px 10px rgba(18,40,63,.1);}
+.svc-card .head{padding:18px 22px;color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.35rem;text-transform:uppercase;}
+.h-a{background:var(--navy);}
+.h-b{background:#20618f;}
+.h-c{background:#54636e;}
+.svc-card ul{list-style:none;padding:20px 22px;}
+.svc-card li{padding:7px 0 7px 26px;position:relative;font-size:1rem;}
+.svc-card li::before{content:"";position:absolute;left:0;top:13px;width:12px;height:12px;background:var(--orange);border-radius:2px;}
+/* how it works */
+.how{background:var(--navy);color:#fff;padding:66px 0;}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:30px;}
+.step{background:rgba(255,255,255,.06);padding:24px;border-radius:8px;}
+.step .n{font-family:'Barlow Condensed',sans-serif;font-size:2.4rem;font-weight:800;color:var(--orange);}
+.step h3{margin:6px 0 8px;font-size:1.2rem;}
+.step p{color:#c3d2df;font-size:.97rem;}
+/* family band */
+.fam{padding:66px 0;}
+.fam .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;}
+.fam p{margin-bottom:14px;color:#3a4650;}
+.lic{background:#fff;border:2px dashed #b5c4cf;border-radius:8px;padding:26px;text-align:center;}
+.lic .big{font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:800;color:var(--navy);}
+.lic p{color:#54636e;font-size:.95rem;margin-top:6px;}
+/* faq */
+.faq{background:#e8edf1;padding:66px 0;}
+.faq-item{background:#fff;border-radius:6px;padding:20px 24px;margin-top:14px;}
+.faq-item h3{color:var(--navy);font-size:1.15rem;margin-bottom:6px;}
+.faq-item p{font-size:.98rem;color:#3a4650;}
+/* contact */
+.contact{padding:66px 0;}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+.c-card{background:var(--navy);color:#fff;border-radius:8px;padding:30px;}
+.c-card .tel{font-size:2.2rem;font-weight:800;color:var(--orange);text-decoration:none;display:block;margin:8px 0;}
+.c-card p{color:#c3d2df;margin-bottom:8px;}
+.c-card a{color:#fff;}
+footer{background:#0c1c2d;color:#8fa3b5;text-align:center;padding:24px 12px;font-size:.9rem;}
+@media(max-width:840px){.fam .wrap,.contact .wrap{grid-template-columns:1fr;}.btn-ghost{margin-left:0;margin-top:10px;}}
+</style>
+</head>
+<body>
+
+<div class="alert">Cesspool backing up? 7-day emergency service — call <a href="tel:+16319244813">(631) 924-4813</a> now.</div>
+
+<header>
+ <div class="wrap">
+  <div class="logo">SHORTY'S <span>CESSPOOL SERVICE</span></div>
+  <div class="head-tel"><a href="tel:+16319244813">(631) 924-4813</a><small>Suffolk County · Since 1977 · License #109-W</small></div>
+ </div>
+</header>
+
+<section class="hero">
+ <div class="wrap">
+  <h1>Pumped, repaired or replaced — one family has handled Suffolk's cesspools since 1977.</h1>
+  <p>Shorty's is a licensed, fully insured, family-run outfit: cesspool and septic pumping, repairs and full system installations — with our own crane and backhoe, so the job never waits on someone else's equipment. Portable toilets too, through Shorty's Port-A-Bowls.</p>
+  <div class="badges">
+   <span class="badge">Family owned since 1977</span>
+   <span class="badge">Suffolk consumer license #109-W</span>
+   <span class="badge">Fully insured</span>
+   <span class="badge">7-day emergency service</span>
+  </div>
+  <a class="btn btn-o" href="tel:+16319244813">Call for same-day service</a>
+  <a class="btn btn-ghost" href="mailto:shortyscesspool@yahoo.com">Request a free estimate</a>
+ </div>
+</section>
+
+<section class="svc">
+ <div class="wrap">
+  <h2>Three trucks, one phone number</h2>
+  <p class="sub">Most companies pump. Some install. Almost nobody carries their own crane. Shorty's does all three — which is why a backed-up tank on Tuesday doesn't become a three-contractor project by Friday.</p>
+  <div class="svc-grid">
+   <div class="svc-card"><div class="head h-a">Cesspool &amp; Septic</div>
+    <ul><li>Pumping &amp; routine maintenance</li><li>Repairs: covers, baffles, overflows</li><li>New septic system installations</li><li>Aeration &amp; problem diagnosis</li></ul>
+   </div>
+   <div class="svc-card"><div class="head h-b">Shorty's Port-A-Bowls</div>
+    <ul><li>Portable toilet rentals, delivered</li><li>Job sites — week or season</li><li>Parties, festivals &amp; events</li><li>Scheduled service &amp; cleanouts</li></ul>
+   </div>
+   <div class="svc-card"><div class="head h-c">Crane &amp; Backhoe</div>
+    <ul><li>Precast tank &amp; ring setting</li><li>Excavation for new systems</li><li>Tight-access residential digs</li><li>Our equipment, our operators</li></ul>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="how">
+ <div class="wrap">
+  <h2>What happens when you call</h2>
+  <div class="steps">
+   <div class="step"><div class="n">1</div><h3>Straight answers</h3><p>Describe what's happening — slow drains, wet spots, an event date — and you'll get an honest read and a fair price, not a sales script.</p></div>
+   <div class="step"><div class="n">2</div><h3>A truck, fast</h3><p>Emergency pump-outs run 7 days a week across Suffolk County.</p></div>
+   <div class="step"><div class="n">3</div><h3>Informed the whole way</h3><p>If it's more than a pump-out, we show you what we found and price the fix before any digging starts.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="fam">
+ <div class="wrap">
+  <div>
+   <h2>Almost 50 years in the same trade</h2>
+   <p>Shorty's Cesspool Service Inc. has been family owned and operated since 1977. The company's rule hasn't changed: a fair, honest, affordable estimate — and a customer kept informed through the entire job.</p>
+   <p>We've always believed the best advertisement is a customer's recommendation. Ask a neighbor who's used us; there are five decades of them out there.</p>
+  </div>
+  <div class="lic">
+   <div class="big">License #109-W</div>
+   <p>Suffolk County consumer license, printed on every truck. Fully insured, residential and commercial.</p>
+  </div>
+ </div>
+</section>
+
+<section class="faq">
+ <div class="wrap">
+  <h2>Quick answers</h2>
+  <div class="faq-item"><h3>How often should a cesspool be pumped?</h3><p>For most Suffolk households, every 2–3 years — sooner with heavy use, a garbage disposal, or slow drains. If you can't remember your last pump-out, it's time.</p></div>
+  <div class="faq-item"><h3>Do you handle emergencies on weekends?</h3><p>Yes — service runs 7 days a week. Call (631) 924-4813 and talk to a person.</p></div>
+  <div class="faq-item"><h3>How many portable toilets does my event need?</h3><p>A good rule: one unit per 50 guests for a 4-hour event. Tell us the headcount and hours and we'll size it for you.</p></div>
+ </div>
+</section>
+
+<section class="contact">
+ <div class="wrap">
+  <div>
+   <h2>Serving all of Suffolk County</h2>
+   <p class="sub">Residential and commercial — from the North Shore to the South Shore, Huntington to the East End. Free estimates on installations, repairs and Port-A-Bowl rentals.</p>
+  </div>
+  <div class="c-card">
+   <p><strong>Emergencies &amp; estimates</strong></p>
+   <a class="tel" href="tel:+16319244813">(631) 924-4813</a>
+   <p>Email: <a href="mailto:shortyscesspool@yahoo.com">shortyscesspool@yahoo.com</a></p>
+   <p>Open 7 days · Family owned since 1977</p>
+  </div>
+ </div>
+</section>
+
+<footer>Shorty's Cesspool Service Inc. &amp; Shorty's Port-A-Bowls · Suffolk County, NY · License #109-W · (631) 924-4813</footer>
+
+</body>
+</html>

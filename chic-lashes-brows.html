@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chic Lashes & Brows — Jackson Heights</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--mauve:#8d6a72;--rose:#caa3a6;--taupe:#b9a79c;--blush:#f6ebe9;--cream:#fdf8f6;--ink:#3a2e31;}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;font-weight:300}
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:600;letter-spacing:.01em}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  a{color:inherit}
+  .preview-tag{background:var(--mauve);color:#fff;text-align:center;padding:7px;font-size:.78rem;letter-spacing:.06em}
+  nav{position:sticky;top:0;z-index:10;background:rgba(253,248,246,.92);backdrop-filter:blur(8px);border-bottom:1px solid #efe0dd}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:16px 24px}
+  nav .logo{font-family:'Cormorant Garamond';font-size:1.5rem;letter-spacing:.04em;color:var(--mauve)}
+  .bookbtn{background:var(--mauve);color:#fff;text-decoration:none;padding:10px 22px;border-radius:40px;font-weight:500;font-size:.9rem}
+  .hero{background:radial-gradient(circle at 80% 20%,var(--blush),transparent 55%),var(--cream);padding:74px 24px 84px}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}
+  .pill{display:inline-block;background:#fff;border:1px solid #ecdad7;border-radius:40px;padding:7px 16px;font-size:.8rem;font-weight:500;margin-bottom:22px;letter-spacing:.04em}
+  .hero h1{font-size:clamp(2.8rem,6.5vw,4.4rem);line-height:1.04}
+  .hero h1 em{font-style:italic;color:var(--rose)}
+  .hero p{font-size:1.12rem;margin:18px 0 30px;max-width:440px;color:#6b585c}
+  .btn{display:inline-block;text-decoration:none;font-weight:500;padding:14px 28px;border-radius:40px;transition:.2s;letter-spacing:.03em}
+  .btn.d{background:var(--mauve);color:#fff}.btn.d:hover{background:#7a5a61}
+  .btn.o{border:1px solid var(--mauve);color:var(--mauve);margin-left:10px}
+  .hero-art{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .swatch{border-radius:16px;min-height:140px;display:flex;align-items:flex-end;padding:14px;color:#fff;font-weight:500;font-size:.85rem}
+  .s1{background:linear-gradient(150deg,#caa3a6,#8d6a72);grid-row:span 2}
+  .s2{background:linear-gradient(150deg,#d8c3bb,#b9a79c)}
+  .s3{background:linear-gradient(150deg,#e7cfcb,#caa3a6)}
+  section{padding:72px 0}
+  .eyebrow{color:var(--rose);font-weight:600;letter-spacing:.18em;text-transform:uppercase;font-size:.76rem;margin-bottom:10px}
+  h2.title{font-size:clamp(2rem,4.5vw,2.9rem);color:var(--mauve);line-height:1.08;margin-bottom:8px}
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:34px}
+  .tile{aspect-ratio:3/4;border-radius:14px;display:flex;align-items:flex-end;padding:12px;color:rgba(255,255,255,.85);font-size:.78rem;font-weight:500}
+  .g1{background:linear-gradient(160deg,#caa3a6,#8d6a72)}.g2{background:linear-gradient(160deg,#d8c3bb,#b9a79c)}
+  .g3{background:linear-gradient(160deg,#e7cfcb,#caa3a6)}.g4{background:linear-gradient(160deg,#b9a79c,#8d6a72)}
+  .gal-note{text-align:center;margin-top:16px;color:#a08d92;font-size:.9rem}
+  .services{background:#fff}
+  .sgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 40px;margin-top:34px}
+  .srow{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #f1e6e3;padding:15px 0}
+  .srow h3{font-family:'Jost';font-weight:500;font-size:1.05rem}
+  .srow .desc{color:#a08d92;font-size:.88rem}
+  .srow .price{font-family:'Cormorant Garamond';font-weight:600;color:var(--rose);font-size:1.25rem;white-space:nowrap;padding-left:16px}
+  .price-note{margin-top:20px;font-size:.85rem;color:#a08d92}
+  .trust{background:var(--blush)}
+  .trust .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .tcard{background:#fff;border-radius:18px;padding:28px;text-align:center}
+  .tcard .ic{font-size:1.6rem;margin-bottom:8px}
+  .tcard h3{font-family:'Jost';font-weight:600;font-size:1.05rem;margin-bottom:4px}
+  .tcard p{color:#6b585c;font-size:.92rem}
+  .book .wrap{display:grid;grid-template-columns:1fr 1fr;gap:46px}
+  .formcard{background:var(--mauve);color:#fff;border-radius:22px;padding:36px}
+  form label{display:block;font-weight:400;margin:14px 0 6px;font-size:.9rem;letter-spacing:.03em}
+  form input,form select{width:100%;padding:13px 15px;border:none;border-radius:10px;font-family:inherit;font-size:1rem}
+  .info-row{display:flex;gap:12px;margin-bottom:16px;align-items:center}
+  .info-row .ic{width:40px;height:40px;border-radius:50%;background:var(--blush);display:flex;align-items:center;justify-content:center}
+  footer{background:var(--ink);color:#cdbdc0;text-align:center;padding:42px 24px}
+  footer .logo{font-family:'Cormorant Garamond';color:#fff;font-size:1.5rem;display:block;margin-bottom:6px}
+  @media(max-width:800px){.hero .wrap,.book .wrap{grid-template-columns:1fr;gap:32px}.gal{grid-template-columns:repeat(2,1fr)}.sgrid,.trust .wrap{grid-template-columns:1fr}.btn.o{margin-left:0}}
+</style>
+</head>
+<body>
+<div class="preview-tag">PREVIEW CONCEPT — prepared by Onyx Rise Media for Chic Lashes & Brows</div>
+<nav><div class="wrap">
+  <span class="logo">Chic Lashes & Brows</span>
+  <a class="bookbtn" href="#book">Book now</a>
+</div></nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="pill">Lash & brow specialists · Jackson Heights</span>
+      <h1>Brows shaped right. Lashes that <em>last</em>.</h1>
+      <p>A dedicated lash and brow studio — precise sets, clean fills, and brows mapped to your face. See the work, check pricing, and book in a tap.</p>
+      <div>
+        <a class="btn d" href="#book">Book an appointment</a>
+        <a class="btn o" href="#gallery">See the work</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="swatch s1">Hybrid lash set</div>
+      <div class="swatch s2">Brow lamination</div>
+      <div class="swatch s3">Classic fill</div>
+    </div>
+  </div>
+</header>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="eyebrow">The work</div>
+    <h2 class="title">Before &amp; after</h2>
+    <div class="gal">
+      <div class="tile g1">Volume set</div><div class="tile g2">Brow lam</div><div class="tile g3">Lash lift</div><div class="tile g4">Classic set</div>
+    </div>
+    <p class="gal-note">↪ Live build pulls real before/after photos from the studio's gallery.</p>
+  </div>
+</section>
+
+<section class="services">
+  <div class="wrap">
+    <div class="eyebrow">Menu</div>
+    <h2 class="title">Services &amp; pricing</h2>
+    <div class="sgrid">
+      <div>
+        <div class="srow"><div><h3>Classic Lash Set</h3><div class="desc">Natural, one-to-one</div></div><span class="price">$90+</span></div>
+        <div class="srow"><div><h3>Hybrid Lash Set</h3><div class="desc">Mix of classic & volume</div></div><span class="price">$110+</span></div>
+        <div class="srow"><div><h3>Volume Set</h3><div class="desc">Full, fluffy fans</div></div><span class="price">$130+</span></div>
+        <div class="srow"><div><h3>Lash Fill (2–3 wk)</h3><div class="desc">Keep them full</div></div><span class="price">$55+</span></div>
+      </div>
+      <div>
+        <div class="srow"><div><h3>Lash Lift & Tint</h3><div class="desc">Your own lashes, lifted</div></div><span class="price">$75</span></div>
+        <div class="srow"><div><h3>Brow Lamination</h3><div class="desc">Brushed-up, set brows</div></div><span class="price">$65</span></div>
+        <div class="srow"><div><h3>Brow Shaping & Tint</h3><div class="desc">Mapped to your face</div></div><span class="price">$35</span></div>
+        <div class="srow"><div><h3>Threading</h3><div class="desc">Clean, precise</div></div><span class="price">$15+</span></div>
+      </div>
+    </div>
+    <p class="price-note">Pricing shown as starting points — final menu confirmed with the studio on build.</p>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="tcard"><div class="ic">✦</div><h3>Specialists, not a side service</h3><p>Lashes and brows are all we do — so the work is consistent.</p></div>
+    <div class="tcard"><div class="ic">✦</div><h3>Clean & careful</h3><p>Fresh tools, gentle application, aftercare you'll actually follow.</p></div>
+    <div class="tcard"><div class="ic">✦</div><h3>Easy booking</h3><p>Reserve online or tap to call — no back-and-forth.</p></div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Book</div>
+      <h2 class="title">Reserve your appointment</h2>
+      <p style="margin-bottom:24px;color:#6b585c">Book online or tap to call. New clients welcome.</p>
+      <div class="info-row"><span class="ic">📍</span><span>81-23 37th Ave, Jackson Heights, NY 11372</span></div>
+      <div class="info-row"><span class="ic">🕒</span><span>Mon–Sat 10am–7pm · Sun by appointment</span></div>
+      <a class="btn d" href="#" style="margin-top:6px">Book on Fresha</a>
+      <a class="btn o" href="#">Tap to call</a>
+    </div>
+    <div class="formcard">
+      <h3 class="serif" style="font-size:1.6rem;margin-bottom:6px">Request a time</h3>
+      <form onsubmit="event.preventDefault();this.style.display='none';document.getElementById('thx-c').style.display='block';">
+        <label>Name</label><input required placeholder="Your name">
+        <label>Phone</label><input required placeholder="(___) ___-____">
+        <label>Service</label>
+        <select><option>Classic Lash Set</option><option>Hybrid Set</option><option>Volume Set</option><option>Lash Fill</option><option>Lash Lift & Tint</option><option>Brow Lamination</option><option>Brow Shaping</option></select>
+        <label>Preferred day/time</label><input placeholder="e.g. Sat afternoon">
+        <button class="btn" type="submit" style="margin-top:18px;width:100%;background:var(--rose);color:#fff">Request appointment</button>
+      </form>
+      <div id="thx-c" style="display:none">Thank you — we'll confirm by text. <span style="font-size:.8rem;opacity:.8">(Demo form; connects to the Onyx Rise Media CRM on build.)</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="logo">Chic Lashes & Brows</span>
+  81-23 37th Ave, Jackson Heights, NY 11372<br>
+  <span style="font-size:.8rem;opacity:.7">Preview concept by Onyx Rise Media · not the official site</span>
+</footer>
+</body>
+</html>

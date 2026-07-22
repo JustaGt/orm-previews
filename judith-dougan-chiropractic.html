@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Judith Dougan Chiropractic | Kingston</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#1f6f72;--teal-dk:#175356;--sand:#e6c79c;--off:#f7f3ec;--ink:#243634;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;background:var(--off);color:var(--ink);line-height:1.7;}
+h1,h2,h3,.serif{font-family:'Fraunces',serif;font-weight:500;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 26px;}
+.btn{display:inline-block;padding:13px 28px;border-radius:30px;font-weight:600;font-size:.86rem;transition:.25s;}
+.btn-fill{background:var(--teal);color:#fff;}.btn-fill:hover{background:var(--teal-dk);}
+.btn-ghost{border:1px solid var(--teal);color:var(--teal);}.btn-ghost:hover{background:var(--teal);color:#fff;}
+.kicker{color:var(--teal);letter-spacing:.26em;text-transform:uppercase;font-size:.72rem;font-weight:600;}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(247,243,236,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(31,111,114,.16);}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:16px 26px;}
+.brand{display:flex;align-items:center;gap:12px;font-family:'Fraunces',serif;font-size:1.16rem;}
+.mono{width:42px;height:42px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:1.1rem;}
+.navlinks{display:flex;gap:28px;align-items:center;font-size:.88rem;}
+.navlinks a.lnk:hover{color:var(--teal);}
+
+.hero{text-align:center;padding:96px 0 80px;background:radial-gradient(circle at 50% 0%,rgba(230,199,156,.35),transparent 60%);}
+.hero .bigmono{width:84px;height:84px;border-radius:50%;background:var(--teal);color:#fff;font-family:'Fraunces',serif;font-size:2.2rem;display:flex;align-items:center;justify-content:center;margin:0 auto 26px;box-shadow:0 12px 30px rgba(31,111,114,.25);}
+.hero h1{font-size:3.1rem;line-height:1.12;max-width:760px;margin:16px auto 18px;}
+.hero p.sub{max-width:580px;margin:0 auto 32px;font-size:1.05rem;color:#42514f;font-weight:300;}
+.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.stats{display:flex;gap:54px;justify-content:center;margin-top:56px;flex-wrap:wrap;}
+.stat .n{font-family:'Fraunces',serif;font-size:2rem;color:var(--teal);}
+.stat .l{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:#6a7775;}
+
+section{padding:84px 0;}
+.sec-head{text-align:center;max-width:600px;margin:0 auto 50px;}
+.sec-head h2{font-size:2.3rem;margin:12px 0;}
+.sec-head p{color:#52615f;font-weight:300;}
+
+.menu{max-width:760px;margin:0 auto;}
+.mrow{padding:20px 0;border-bottom:1px solid rgba(31,111,114,.16);}
+.mrow .top{display:flex;align-items:baseline;}
+.mrow .name{font-family:'Fraunces',serif;font-size:1.2rem;}
+.mrow .dots{flex:1;border-bottom:1px dotted rgba(31,111,114,.4);margin:0 12px;transform:translateY(-5px);}
+.mrow .price{color:var(--teal);font-weight:600;}
+.mrow .desc{font-size:.9rem;color:#5b6a68;font-weight:300;margin-top:5px;}
+
+.split{display:grid;grid-template-columns:.95fr 1.05fr;gap:54px;align-items:center;}
+.split .img{min-height:420px;border-radius:14px;background:linear-gradient(rgba(31,83,86,.18),rgba(31,83,86,.3)),url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:var(--teal-dk);}
+.split h2{font-size:2.1rem;margin:12px 0 16px;}
+.split ul{list-style:none;margin-top:18px;}
+.split li{padding:11px 0;border-bottom:1px solid rgba(31,111,114,.12);font-size:.95rem;}
+.split li::before{content:"✓";color:var(--teal);font-weight:700;margin-right:12px;}
+
+.cred{background:var(--ink);color:var(--off);}
+.cred .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.cred .card{background:rgba(255,255,255,.05);border:1px solid rgba(230,199,156,.25);border-radius:12px;padding:32px 26px;}
+.cred .card h3{font-size:1.2rem;margin-bottom:8px;color:var(--sand);}
+.cred .card p{font-size:.9rem;opacity:.82;font-weight:300;}
+
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.strip .g{height:200px;border-radius:10px;background-size:cover;background-position:center;background-color:var(--teal-dk);}
+.g1{background-image:linear-gradient(rgba(31,83,86,.15),rgba(31,83,86,.3)),url('https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1400&q=80');}
+.g2{background-image:linear-gradient(rgba(31,83,86,.15),rgba(31,83,86,.3)),url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1400&q=80');}
+.g3{background-image:linear-gradient(rgba(31,83,86,.15),rgba(31,83,86,.3)),url('https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=1400&q=80');}
+.g4{background-image:linear-gradient(rgba(31,83,86,.15),rgba(31,83,86,.3)),url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1400&q=80');}
+
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start;}
+.contact h2{font-size:2.1rem;margin-bottom:16px;}
+.info p{margin-bottom:12px;color:#42514f;font-weight:300;}
+.info .label{color:var(--teal);letter-spacing:.1em;text-transform:uppercase;font-size:.7rem;display:block;font-weight:600;}
+.hours{margin-top:18px;border-top:1px solid rgba(31,111,114,.16);padding-top:16px;}
+.hours div{display:flex;justify-content:space-between;padding:6px 0;font-size:.9rem;}
+form{background:#fff;border:1px solid rgba(31,111,114,.16);border-radius:16px;padding:34px;box-shadow:0 14px 36px rgba(31,111,114,.08);}
+form label{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);font-weight:600;margin:13px 0 5px;}
+form input,form select,form textarea{width:100%;border:1px solid rgba(31,111,114,.25);background:var(--off);padding:11px 13px;border-radius:8px;font-family:inherit;font-size:.92rem;}
+form button{margin-top:22px;width:100%;border:none;cursor:pointer;}
+.thanks{display:none;text-align:center;padding:36px 18px;}
+.thanks.show{display:block;}
+.thanks h3{color:var(--teal);font-size:1.5rem;margin-bottom:8px;}
+
+footer{background:var(--ink);color:var(--off);text-align:center;padding:42px 20px;}
+footer .brand{justify-content:center;font-size:1.2rem;color:var(--off);margin-bottom:8px;}
+footer p{opacity:.7;font-size:.85rem;font-weight:300;}
+.orm{color:var(--sand);margin-top:12px;font-size:.74rem;letter-spacing:.08em;}
+
+@media(max-width:860px){
+.navlinks .lnk{display:none;}
+.hero h1{font-size:2.2rem;}
+.split,.contact{grid-template-columns:1fr;}
+.cred .grid{grid-template-columns:1fr;}
+.strip{grid-template-columns:1fr 1fr;}
+.split .img{min-height:280px;}
+.stats{gap:30px;}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap" style="padding:16px 0;">
+<div class="brand"><div class="mono">JD</div>Judith Dougan, D.C.</div>
+<div class="navlinks">
+<a class="lnk" href="#care">Care</a>
+<a class="lnk" href="#about">About</a>
+<a class="lnk" href="#visit">Visit</a>
+<a class="btn btn-fill" href="#visit">Request a Visit</a>
+</div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+<div class="bigmono">JD</div>
+<span class="kicker">Kingston, New York</span>
+<h1>Gentle chiropractic care from a name Kingston has trusted for years.</h1>
+<p class="sub">Dr. Judith Dougan offers unhurried, patient-centered adjustments for back and neck pain, stiffness, and everyday wellness — in a calm office where you're treated like a neighbor, because you are one.</p>
+<div class="hero-ctas">
+<a class="btn btn-fill" href="#visit">Request a Visit</a>
+<a class="btn btn-ghost" href="#care">What We Treat</a>
+</div>
+<div class="stats">
+<div class="stat"><div class="n">Est.</div><div class="l">Local practice</div></div>
+<div class="stat"><div class="n">1-on-1</div><div class="l">Hands-on care</div></div>
+<div class="stat"><div class="n">Gentle</div><div class="l">Adjustment style</div></div>
+</div>
+</div></header>
+
+<section id="about" class="split-sec"><div class="wrap"><div class="split">
+<div class="img"></div>
+<div>
+<span class="kicker">About the Practice</span>
+<h2>Steady hands, familiar face</h2>
+<p style="color:#52615f;font-weight:300;">Patients come back to Dr. Dougan because she takes the time most offices don't. Each visit begins with listening — where it hurts, what makes it worse, what you'd like to get back to doing — followed by a careful, gentle adjustment tailored to your body.</p>
+<ul>
+<li>Thorough first-visit evaluation, never rushed</li>
+<li>Gentle techniques suited to all ages</li>
+<li>Clear explanations of what's going on and why</li>
+<li>A quiet, welcoming Kingston office</li>
+</ul>
+</div>
+</div></div></section>
+
+<section id="care"><div class="wrap">
+<div class="sec-head"><span class="kicker">How We Help</span><h2>Care for everyday aches and long-term wellness</h2><p>Common reasons patients come in. Your plan is set after a first-visit evaluation.</p></div>
+<div class="menu">
+<div class="mrow"><div class="top"><span class="name">First Visit &amp; Evaluation</span><span class="dots"></span><span class="price">Consult</span></div><div class="desc">History, posture and movement assessment, and a plan that fits you.</div></div>
+<div class="mrow"><div class="top"><span class="name">Gentle Spinal Adjustment</span><span class="dots"></span><span class="price">Per visit</span></div><div class="desc">Hands-on correction for back, neck, and joint restriction.</div></div>
+<div class="mrow"><div class="top"><span class="name">Neck &amp; Headache Relief</span><span class="dots"></span><span class="price">Per visit</span></div><div class="desc">Targeted care for tension headaches and cervical stiffness.</div></div>
+<div class="mrow"><div class="top"><span class="name">Low-Back &amp; Sciatica Care</span><span class="dots"></span><span class="price">Per visit</span></div><div class="desc">Relief for the aches that make sitting and standing hard.</div></div>
+<div class="mrow"><div class="top"><span class="name">Wellness &amp; Maintenance</span><span class="dots"></span><span class="price">Ongoing</span></div><div class="desc">Keep things moving well between flare-ups.</div></div>
+</div>
+</div></section>
+
+<section class="cred"><div class="wrap">
+<div class="sec-head"><span class="kicker" style="color:var(--sand);">Why Patients Stay</span><h2 style="color:var(--off);">Credible care, calm setting</h2></div>
+<div class="grid">
+<div class="card"><h3>Doctor of Chiropractic</h3><p>Care delivered by a licensed D.C. — every adjustment performed by Dr. Dougan herself.</p></div>
+<div class="card"><h3>Time to listen</h3><p>No assembly line. Visits move at a pace that lets us actually understand your body.</p></div>
+<div class="card"><h3>Rooted in Kingston</h3><p>An established neighborhood practice that knows its patients by name.</p></div>
+</div>
+</div></section>
+
+<section style="padding-bottom:0;"><div class="wrap">
+<div class="sec-head"><span class="kicker">The Office</span><h2>A calm place to feel better</h2></div>
+<div class="strip"><div class="g g1"></div><div class="g g2"></div><div class="g g3"></div><div class="g g4"></div></div>
+</div></section>
+
+<section id="visit"><div class="wrap"><div class="contact">
+<div class="info">
+<span class="kicker">Visit Us</span>
+<h2>Request a Visit</h2>
+<p>Call or send a note and we'll find a time that works. New patients welcome.</p>
+<p><span class="label">Phone</span>(845) 331-1103</p>
+<p><span class="label">Location</span>Kingston, NY</p>
+<div class="hours">
+<div><span>Monday – Friday</span><span>By appointment</span></div>
+<div><span>Saturday</span><span>Limited hours</span></div>
+<div><span>Sunday</span><span>Closed</span></div>
+</div>
+</div>
+<div>
+<form id="jdform" onsubmit="event.preventDefault();document.getElementById('jdform').style.display='none';document.getElementById('jdthx').classList.add('show');">
+<label>Name</label><input required type="text" placeholder="Your name">
+<label>Phone</label><input required type="tel" placeholder="(845) 000-0000">
+<label>What brings you in?</label>
+<select><option>Back pain</option><option>Neck pain / headaches</option><option>Sciatica</option><option>Wellness / maintenance</option><option>Not sure yet</option></select>
+<label>Message</label><textarea rows="3" placeholder="When did it start? Best times to reach you?"></textarea>
+<button class="btn btn-fill" type="submit">Send Request</button>
+</form>
+<div id="jdthx" class="thanks"><h3>Thank you.</h3><p style="color:#52615f;font-weight:300;">We've received your note. The office will call (845) 331-1103 to schedule your visit.</p></div>
+</div>
+</div></div></section>
+
+<footer>
+<div class="brand" style="display:flex;"><div class="mono">JD</div><span style="color:var(--off);font-family:'Fraunces',serif;">Judith Dougan, D.C.</span></div>
+<p>Kingston, NY · (845) 331-1103</p>
+<p class="orm">Website preview by Onyx Rise Media</p>
+</footer>
+</body>
+</html>

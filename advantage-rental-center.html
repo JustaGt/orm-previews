@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advantage Rental Center — Equipment Rental, Sales, Service & Propane | East Northport, NY</title>
+<meta name="description" content="Renting equipment to Long Island contractors, landscapers and homeowners since 1959. Excavating, lifts, compaction, saws, lawn gear. Propane filling station. 4031 E. Jericho Tpke, East Northport. (631) 499-6302.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --steel:#2b2f33; --steel-2:#3a4046; --line:#4a5158; --paper:#f4f4f2;
+    --orange:#f26722; --orange-d:#d5551a; --ink:#1c1e20; --gray:#6b7178; --ok:#2e7d32;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
+  h1,h2,h3,.cond{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.02em}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+  .util{background:var(--steel);color:#c9ced3;font-size:.85rem;padding:7px 0}
+  .util .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  .util b{color:#fff}
+  .util .open{color:#8fd694;font-weight:700}
+
+  header{background:#fff;border-bottom:4px solid var(--orange);position:sticky;top:0;z-index:60}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+  .logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.6rem;text-transform:uppercase;color:var(--steel)}
+  .logo em{color:var(--orange);font-style:normal}
+  .logo small{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.68rem;letter-spacing:.18em;color:var(--gray);text-transform:uppercase}
+  .nav .call{background:var(--orange);color:#fff;text-decoration:none;font-weight:700;padding:11px 20px;border-radius:4px}
+
+  .hero{background:linear-gradient(120deg,var(--steel) 55%,var(--steel-2));color:#fff;padding:64px 0}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+  .hero h1{font-size:3.1rem;line-height:1.02;color:#fff}
+  .hero h1 span{color:var(--orange)}
+  .hero p{margin:18px 0 26px;color:#c9ced3;font-size:1.08rem;max-width:32rem}
+  .hero .cta{display:inline-block;background:var(--orange);color:#fff;text-decoration:none;padding:15px 30px;border-radius:4px;font-weight:700;font-size:1.02rem}
+  .hero .cta:hover{background:var(--orange-d)}
+  .badge59{border:2px solid var(--orange);border-radius:6px;padding:22px;text-align:center;background:rgba(255,255,255,.04)}
+  .badge59 .yr{font-family:'Barlow Condensed',sans-serif;font-size:4rem;font-weight:800;color:var(--orange);line-height:1}
+  .badge59 p{margin:6px 0 0;color:#c9ced3;font-size:.92rem}
+  .badge59 .bbb{margin-top:14px;font-size:.8rem;color:#8fd694;font-weight:700;letter-spacing:.08em}
+
+  section{padding:60px 0}
+  .kicker{color:var(--orange);font-weight:800;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:.95rem}
+  h2{font-size:2.2rem;color:var(--steel);margin:6px 0 10px}
+
+  .cats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
+  .cat{background:#fff;border:1px solid #e2e2de;border-left:5px solid var(--orange);padding:20px 18px;border-radius:4px}
+  .cat h3{font-size:1.15rem;color:var(--steel)}
+  .cat p{font-size:.86rem;color:var(--gray);margin-top:6px}
+  .cat a{display:inline-block;margin-top:10px;font-size:.85rem;font-weight:700;color:var(--orange);text-decoration:none}
+
+  .sunday{background:var(--orange);color:#fff}
+  .sunday .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:30px;align-items:center}
+  .sunday .tag{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.5rem;text-transform:uppercase;border:2px dashed rgba(255,255,255,.7);padding:12px 18px;border-radius:6px}
+  .sunday p{font-size:1.02rem;max-width:44rem}
+  .sunday a{background:#fff;color:var(--orange-d);text-decoration:none;font-weight:700;padding:12px 22px;border-radius:4px;white-space:nowrap}
+
+  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
+  .svc{background:#fff;border:1px solid #e2e2de;border-radius:4px;padding:26px}
+  .svc h3{font-size:1.25rem;color:var(--steel);margin-bottom:8px}
+  .svc p{font-size:.93rem;color:var(--gray)}
+  .svc .brands{margin-top:12px;font-size:.8rem;letter-spacing:.06em;color:var(--steel);font-weight:700;text-transform:uppercase}
+
+  .heritage{background:var(--steel);color:#c9ced3}
+  .heritage h2{color:#fff}
+  .heritage .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .timeline{list-style:none;margin-top:8px}
+  .timeline li{padding:12px 0;border-bottom:1px solid var(--line);display:flex;gap:16px}
+  .timeline b{font-family:'Barlow Condensed',sans-serif;color:var(--orange);font-size:1.2rem;min-width:64px}
+
+  .contact{background:var(--paper)}
+  .contact .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;margin-top:26px}
+  .cbox{background:#fff;border:1px solid #e2e2de;border-radius:4px;padding:30px}
+  .cbox h3{font-size:1.3rem;color:var(--steel);margin-bottom:12px}
+  .cbox .big{font-family:'Barlow Condensed',sans-serif;font-size:2rem;color:var(--orange);font-weight:800}
+  .hours td{padding:6px 14px 6px 0;font-size:.95rem}
+  form .f{margin-bottom:12px}
+  form label{display:block;font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;color:var(--steel)}
+  form input,form select{width:100%;padding:11px;border:1px solid #d5d5d0;border-radius:4px;background:#fafaf8;font-family:inherit}
+  form button{background:var(--steel);color:#fff;border:none;padding:13px 24px;border-radius:4px;font-weight:700;width:100%;cursor:pointer;font-size:1rem}
+
+  footer{background:#1c1e20;color:#8b9298;padding:26px 0;font-size:.85rem;text-align:center}
+  @media(max-width:900px){
+    .hero .wrap,.heritage .wrap,.contact .grid{grid-template-columns:1fr}
+    .cats{grid-template-columns:1fr 1fr}
+    .three{grid-template-columns:1fr}
+    .sunday .wrap{grid-template-columns:1fr;text-align:center}
+    .hero h1{font-size:2.3rem}
+  }
+</style>
+</head>
+<body>
+
+<div class="util">
+  <div class="wrap">
+    <div><b>4031 E. Jericho Tpke, East Northport</b> · Mon–Sat 7 AM–5 PM</div>
+    <div class="open">Propane filling station open all business hours</div>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">Advantage <em>Rental Center</em><small>Rent · Buy · Service · Propane — since 1959</small></div>
+    <a class="call" href="tel:6314996302">(631) 499-6302</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>The machine you need.<br><span>The know-how included.</span></h1>
+      <p>Skid steers to demo saws, plate compactors to lawn gear — rented across the counter by people who can tell you exactly how to run it. Serving Long Island contractors, landscapers and homeowners from the same spot on Jericho Turnpike since 1959.</p>
+      <a class="cta" href="tel:6314996302">Call to check availability</a>
+    </div>
+    <div class="badge59">
+      <div class="yr">1959</div>
+      <p>67 years renting to Long Island — three generations of contractors have picked up at this counter.</p>
+      <div class="bbb">BBB A+ · ACCREDITED SINCE 2011</div>
+    </div>
+  </div>
+</section>
+
+<section id="rental">
+  <div class="wrap">
+    <span class="kicker">Rental categories</span>
+    <h2>What's on the yard</h2>
+    <div class="cats">
+      <div class="cat"><h3>Excavating</h3><p>Skid steers, breakers, trenchers, augers for footings and site work.</p><a href="tel:6314996302">Check availability →</a></div>
+      <div class="cat"><h3>Lifts &amp; Hoists</h3><p>Fork lifts and aerial equipment for jobs above ladder height.</p><a href="tel:6314996302">Check availability →</a></div>
+      <div class="cat"><h3>Concrete &amp; Compaction</h3><p>Mixers, plate compactors, demo saws, core rigs.</p><a href="tel:6314996302">Check availability →</a></div>
+      <div class="cat"><h3>Lawn &amp; Landscape</h3><p>Tillers, dethatchers, aerators, stump grinders, chippers.</p><a href="tel:6314996302">Check availability →</a></div>
+      <div class="cat"><h3>Moving &amp; Hauling</h3><p>Dollies, ramps, appliance movers, trailer gear.</p><a href="tel:6314996302">Check availability →</a></div>
+      <div class="cat"><h3>Plumbing</h3><p>Drain snakes, pipe tools, pressure-test equipment.</p><a href="tel:6314996302">Check availability →</a></div>
+      <div class="cat"><h3>Flooring &amp; Painting</h3><p>Sanders, strippers, sprayers, wallpaper steamers.</p><a href="tel:6314996302">Check availability →</a></div>
+      <div class="cat"><h3>Air &amp; Power</h3><p>Kaeser compressors, generators, breakers and hose.</p><a href="tel:6314996302">Check availability →</a></div>
+    </div>
+    <p style="margin-top:16px;font-size:.85rem;color:var(--gray)">Category list drawn from Advantage's published rental lines — full item-by-item catalog built with the owner at launch.</p>
+  </div>
+</section>
+
+<section class="sunday">
+  <div class="wrap">
+    <div class="tag">The Sunday Move</div>
+    <p><b>Working on a Sunday?</b> Pick your equipment up Saturday at 4:30 PM and have it back Monday at 7 AM — you're only charged for <b>one day</b>. The whole weekend project, one day's rate.</p>
+    <a href="tel:6314996302">Reserve for Saturday</a>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">More than rental</span>
+    <h2>Buy it. Fix it. Fill it.</h2>
+    <div class="three">
+      <div class="svc"><h3>Equipment Sales</h3><p>Buying instead of renting? Get an educated purchase from people who repair what they sell — not a box-store aisle.</p><div class="brands">Stihl · Bosch · Multiquip · CST-Berger · Kaeser</div></div>
+      <div class="svc"><h3>Equipment Service</h3><p>Factory-grade repair and maintenance on the same machines we rent — your gear gets the fleet treatment.</p></div>
+      <div class="svc"><h3>Propane Filling</h3><p>Filled by weight while you wait, every business hour, 7 to 5 Monday through Saturday. Grill tanks to forklift cylinders.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="heritage">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Since 1959</span>
+      <h2>Older than the LIE's last exit</h2>
+      <p>Advantage opened its doors in March 1959 — before most of the subdivisions its equipment helped build. National chains came to Long Island later. The counter that answers the phone here still belongs to the same independent business.</p>
+    </div>
+    <ul class="timeline">
+      <li><b>1959</b><span>Advantage begins renting equipment on Long Island.</span></li>
+      <li><b>2011</b><span>BBB accreditation — A+ rating held since.</span></li>
+      <li><b>Today</b><span>Rental, sales, service and propane under one roof on Jericho Turnpike.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="kicker">Contact</span>
+    <h2>Check availability before you drive</h2>
+    <div class="grid">
+      <div class="cbox">
+        <h3>Call the counter</h3>
+        <div class="big"><a href="tel:6314996302" style="color:inherit;text-decoration:none">(631) 499-6302</a></div>
+        <table class="hours" style="margin-top:14px">
+          <tr><td><b>Mon–Sat</b></td><td>7:00 AM – 5:00 PM</td></tr>
+          <tr><td><b>Sunday</b></td><td>Closed — use the Sunday Move (Sat pickup, Mon return, one-day rate)</td></tr>
+        </table>
+        <p style="margin-top:14px;font-size:.95rem">4031 E. Jericho Turnpike<br>East Northport, NY 11731</p>
+      </div>
+      <div class="cbox">
+        <h3>Hold a machine</h3>
+        <form onsubmit="return false">
+          <div class="f"><label>Name</label><input type="text" placeholder="Your name"></div>
+          <div class="f"><label>Equipment needed</label><input type="text" placeholder="e.g., plate compactor, 19' scissor lift"></div>
+          <div class="f"><label>Dates</label><input type="text" placeholder="Pickup and return"></div>
+          <div class="f"><label>Phone</label><input type="tel" placeholder="We confirm by phone"></div>
+          <button>Request a hold</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Advantage Rental Center · Serving Long Island contractors, homeowners and landscapers since 1959 · 4031 E. Jericho Tpke, East Northport, NY 11731 · (631) 499-6302<br>Website preview by Onyx Rise Media</div>
+</footer>
+
+</body>
+</html>

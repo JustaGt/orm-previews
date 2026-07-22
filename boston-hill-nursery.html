@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boston Hill Nursery — Trees, Shrubs, Landscaping &amp; Cut-Your-Own Christmas Trees, Colden NY</title>
+<meta name="description" content="Boston Hill Nursery in Colden, NY — quality trees, shrubs, perennials and annuals, landscape design and planting, mulch and topsoil delivery, plus a 20-acre cut-your-own Christmas tree farm. Family-run since 1992.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pine:#20503c; --pine-d:#153728; --spruce:#357355; --sage:#7ba589;
+    --berry:#a5273b; --berry-d:#821e2e; --gold:#e0a63c;
+    --cream:#f7f4ea; --linen:#efe9da; --bark:#43382b; --ink:#26302a; --gray:#5f6b62; --white:#fff;
+    --shadow:0 16px 40px rgba(21,55,40,.16);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Nunito Sans',sans-serif;color:var(--ink);background:var(--cream);line-height:1.62}
+  h1,h2,h3,.disp{font-family:'Bitter',serif;line-height:1.1}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--berry);color:#fff;font-weight:700;padding:14px 30px;border-radius:6px;
+    text-decoration:none;box-shadow:0 8px 18px rgba(165,39,59,.3);transition:transform .15s,background .15s}
+  .btn:hover{transform:translateY(-2px);background:var(--berry-d)}
+  .btn.pine{background:var(--pine)}
+  .btn.pine:hover{background:var(--pine-d)}
+  .btn.ghost{background:transparent;border:2px solid rgba(255,255,255,.6);color:#fff;box-shadow:none}
+
+  .top{background:var(--pine-d);color:#cfe0d5;font-size:.9rem}
+  .top .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;padding:9px 22px}
+  .top strong{color:#fff}
+  .top a{color:var(--gold);font-weight:700;text-decoration:none}
+
+  header.hero{position:relative;color:#fff;overflow:hidden;background:linear-gradient(160deg,var(--spruce) 0%,var(--pine) 55%,var(--pine-d) 100%)}
+  header.hero:before{content:"";position:absolute;inset:0;opacity:.16;
+    background:radial-gradient(circle at 82% 20%,rgba(255,255,255,.5),transparent 40%),
+    radial-gradient(circle at 15% 90%,rgba(123,165,137,.6),transparent 45%)}
+  .hero .wrap{position:relative;z-index:2;padding:66px 22px 70px;max-width:760px}
+  .eyebrow{display:inline-block;background:rgba(224,166,60,.18);border:1px solid rgba(224,166,60,.55);color:var(--gold);
+    padding:6px 15px;border-radius:30px;font-weight:700;font-size:.82rem;margin-bottom:18px}
+  .hero h1{font-size:3.1rem;font-weight:700}
+  .hero h1 em{font-style:italic;color:#ffdca0}
+  .hero p.lede{font-size:1.18rem;max-width:48ch;margin-top:18px;color:#e7f0ea}
+  .hero .cta{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+
+  .seasons{background:var(--linen)}
+  .seasons .wrap{display:grid;grid-template-columns:1fr 1fr;gap:22px;padding:34px 22px}
+  .scard{background:var(--white);border-radius:12px;padding:26px;box-shadow:0 8px 22px rgba(21,55,40,.08);border-left:5px solid var(--spruce)}
+  .scard.winter{border-left-color:var(--berry)}
+  .scard span{font-family:'Bitter',serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:1px;color:var(--spruce)}
+  .scard.winter span{color:var(--berry)}
+  .scard h3{font-size:1.4rem;margin:6px 0 8px;color:var(--pine)}
+  .scard p{color:var(--gray);font-size:.98rem}
+
+  section{padding:62px 0}
+  .kicker{color:var(--berry);font-family:'Bitter',serif;font-weight:700;text-transform:uppercase;letter-spacing:1.4px;font-size:.86rem}
+  h2.sec{font-size:2.15rem;color:var(--pine);margin:8px 0 8px}
+  .sub{color:var(--gray);max-width:60ch;margin-bottom:32px}
+
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .pcard{background:var(--white);border:1px solid var(--linen);border-radius:10px;padding:22px;text-align:center;box-shadow:0 5px 16px rgba(21,55,40,.05)}
+  .pcard b{display:block;font-family:'Bitter',serif;color:var(--pine);font-size:1.08rem;margin-bottom:6px}
+  .pcard p{color:var(--gray);font-size:.9rem}
+  .dot{width:38px;height:38px;border-radius:50%;background:var(--sage);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Bitter',serif;font-weight:700}
+
+  .land{background:var(--pine);color:#fff}
+  .land .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .land h2{color:#fff;font-size:2.1rem}
+  .land p{color:#d6e4db;margin-top:12px}
+  .land ul{list-style:none;margin-top:18px;columns:2;gap:10px}
+  .land li{padding:7px 0 7px 24px;position:relative;color:#e7f0ea;font-size:.96rem;break-inside:avoid}
+  .land li:before{content:"";position:absolute;left:0;top:12px;width:9px;height:9px;background:var(--gold);border-radius:50%}
+  .landbox{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:28px}
+  .landbox h3{color:var(--gold);font-size:1.25rem}
+  .landbox p{color:#d6e4db;margin-top:10px}
+
+  .xmas{background:linear-gradient(150deg,var(--berry) 0%,var(--berry-d) 100%);color:#fff;border-radius:0}
+  .xmas .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:34px;align-items:center}
+  .xmas h2{color:#fff;font-size:2.2rem}
+  .xmas p{color:#ffe1e5;margin-top:12px}
+  .xtag{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.4);padding:5px 14px;border-radius:30px;font-weight:700;font-size:.8rem;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px}
+  .xfacts{background:rgba(0,0,0,.14);border-radius:12px;padding:24px}
+  .xfacts div{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.18);display:flex;justify-content:space-between;gap:10px}
+  .xfacts div:last-child{border-bottom:0}
+  .xfacts b{font-family:'Bitter',serif}
+
+  .found{background:var(--linen)}
+  .found .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .found .quote{font-family:'Bitter',serif;font-size:1.5rem;color:var(--pine);line-height:1.3}
+  .found small{display:block;color:var(--gray);margin-top:14px;font-family:'Nunito Sans',sans-serif;font-size:.95rem}
+  .owners div{background:var(--white);border-radius:10px;padding:18px 20px;margin-bottom:12px;border-left:4px solid var(--spruce)}
+  .owners b{color:var(--pine);font-family:'Bitter',serif}
+  .owners span{color:var(--gray);font-size:.92rem}
+
+  .contact .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px}
+  .contact h2{color:var(--pine);font-size:2rem}
+  .cinfo{margin-top:18px}
+  .cinfo div{padding:11px 0;border-bottom:1px solid var(--linen)}
+  .cinfo b{color:var(--berry);font-family:'Bitter',serif}
+  form label{display:block;font-size:.82rem;text-transform:uppercase;letter-spacing:.5px;margin:12px 0 5px;color:var(--gray);font-weight:700}
+  form input,form textarea{width:100%;padding:11px 13px;border:1px solid #d7d0bf;border-radius:6px;background:var(--white);font-family:inherit}
+  form .btn{margin-top:16px;width:100%;border:0;cursor:pointer;font-size:1rem}
+  .note{background:#fff;border:1px dashed #cdbf9f;color:#8a7b5c;font-size:.82rem;padding:9px 12px;border-radius:6px;margin-top:14px}
+
+  footer{background:var(--pine-d);color:#9db6a6;text-align:center;padding:26px;font-size:.9rem}
+
+  @media(max-width:820px){
+    .seasons .wrap,.grid4,.land .wrap,.xmas .wrap,.found .wrap,.contact .wrap{grid-template-columns:1fr}
+    .land ul{columns:1}
+    .hero h1{font-size:2.4rem}
+    .grid4{grid-template-columns:1fr 1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <span><strong>Boston Hill Nursery</strong> · 7421 Old Lower E. Hill Rd, Colden NY · Open 7 days</span>
+  <span>Call <a href="tel:7166627411">(716) 662-7411</a></span>
+</div></div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Family-grown in Colden since 1992</span>
+    <h1>The plants come from <em>our</em> hill — not a truck from three states away.</h1>
+    <p class="lede">Ten minutes from Orchard Park, Hamburg and East Aurora, Boston Hill grows and stands behind the trees, shrubs and perennials that go in your yard. In December, that same hill becomes 20 acres of cut-your-own Christmas trees.</p>
+    <div class="cta">
+      <a class="btn" href="#visit">Plan a visit</a>
+      <a class="btn pine" href="tel:7166627411">Ask about delivery</a>
+    </div>
+  </div>
+</header>
+
+<div class="seasons"><div class="wrap">
+  <div class="scard">
+    <span>April – November</span>
+    <h3>The garden center &amp; landscape yard</h3>
+    <p>Trees, shrubs, perennials and annuals ready to plant, plus bulk mulch, topsoil, compost and grass seed. We'll deliver it — or design and install it for you.</p>
+  </div>
+  <div class="scard winter">
+    <span>Thanksgiving – December 23</span>
+    <h3>Cut-your-own Christmas tree farm</h3>
+    <p>Twenty acres of trees to walk, pick and cut yourself. A day out, not a lot in a parking lot — the tradition families in the Southtowns come back for every year.</p>
+  </div>
+</div></div>
+
+<section><div class="wrap">
+  <span class="kicker">In the yard</span>
+  <h2 class="sec">Everything a planting project needs, in one stop</h2>
+  <p class="sub">Boston Hill isn't a big-box garden aisle. It's a working nursery where the people selling the plant know how it grows in Erie County clay and how far apart to space a windbreak.</p>
+  <div class="grid4">
+    <div class="pcard"><div class="dot">T</div><b>Trees &amp; Shrubs</b><p>Shade, ornamental and evergreen stock sized for real landscapes.</p></div>
+    <div class="pcard"><div class="dot">P</div><b>Perennials &amp; Annuals</b><p>Color that comes back, and color for right now.</p></div>
+    <div class="pcard"><div class="dot">M</div><b>Mulch &amp; Topsoil</b><p>Bulk mulch, compost, topsoil and grass seed — delivered.</p></div>
+    <div class="pcard"><div class="dot">🎁</div><b>Gift Certificates</b><p>For the gardener who already has every trowel.</p></div>
+  </div>
+</div></section>
+
+<section class="land"><div class="wrap">
+  <div>
+    <span class="kicker" style="color:var(--gold)">Design &amp; install</span>
+    <h2>We don't just sell the tree — we'll put it in the right spot</h2>
+    <p>Landscape planting is its own trade, and it's half of what Boston Hill does. Brian and the crew lay out and install the plantings other garden centers just sell over the counter.</p>
+    <ul>
+      <li>Foundation plantings</li>
+      <li>Privacy screens &amp; windbreaks</li>
+      <li>Islands &amp; berms</li>
+      <li>Hedges &amp; trimming</li>
+      <li>Individual &amp; group tree planting</li>
+      <li>Lawn seeding</li>
+    </ul>
+  </div>
+  <div class="landbox">
+    <h3>Planted by the people who grew it</h3>
+    <p>Twenty-five-plus years of putting trees in the ground around Colden, Boston, East Aurora and the Southtowns means a screen that actually screens and a foundation bed that fits the house.</p>
+  </div>
+</div></section>
+
+<section class="xmas"><div class="wrap">
+  <div>
+    <span class="xtag">A Southtowns tradition</span>
+    <h2>Twenty acres. Bring the family, cut your own.</h2>
+    <p>Come out to the hill, walk the rows, and cut the tree yourselves — the visit that turns a chore into the start of the season. Fresh from the field beats "fresh" off a corner lot every time.</p>
+  </div>
+  <div class="xfacts">
+    <div><span>Where</span><b>7421 Old Lower E. Hill Rd</b></div>
+    <div><span>Farm size</span><b>~20 acres, cut-your-own</b></div>
+    <div><span>Season</span><b>Late Nov – Dec 23</b></div>
+    <div><span>December hours</span><b>Mon&ndash;Fri 10&ndash;6 · Sat&ndash;Sun 9&ndash;5</b></div>
+  </div>
+</div></section>
+
+<section class="found"><div class="wrap">
+  <div>
+    <p class="quote">"Since 1992, focused on quality plant material and the service to go with it."</p>
+    <small>The Schottin family has run Boston Hill for three decades — long enough that the trees they planted early on are shading the yards they went into.</small>
+  </div>
+  <div class="owners">
+    <div><b>Brian Schottin</b> — President<br><span>Landscape design &amp; installation · nursery production · 25+ years</span></div>
+    <div><b>Brad Schottin</b> — Vice President<br><span>Retail manager · nursery production · 25+ years</span></div>
+  </div>
+</div></section>
+
+<section class="contact" id="visit"><div class="wrap">
+  <div>
+    <h2>Come see us on the hill</h2>
+    <p class="sub" style="margin-top:8px">Open seven days a week, April 3rd through December 23rd. Stop in, or send a question about a planting project or a delivery.</p>
+    <div class="cinfo">
+      <div><b>Address</b><br>7421 Old Lower E. Hill Road, Colden, NY 14033</div>
+      <div><b>Phone</b><br>(716) 662-7411 · Fax (716) 662-1208</div>
+      <div><b>Spring–fall hours</b><br>7 days · 9am–5pm (closed Easter)</div>
+    </div>
+    <div class="note">Preview concept for Boston Hill Nursery, Inc. built by Onyx Rise Media. Details drawn from public listings — to be confirmed before launch.</div>
+  </div>
+  <div>
+    <form onsubmit="return false">
+      <label>Name</label><input type="text" placeholder="Your name">
+      <label>Phone or email</label><input type="text" placeholder="How should we reach you?">
+      <label>What can we help with?</label>
+      <input type="text" placeholder="e.g. privacy screen, mulch delivery, Christmas trees">
+      <label>Details</label><textarea rows="4" placeholder="Tell us about your yard or project..."></textarea>
+      <button class="btn pine">Send message</button>
+    </form>
+  </div>
+</div></section>
+
+<footer>
+  Boston Hill Nursery, Inc. · 7421 Old Lower E. Hill Road, Colden, NY 14033 · (716) 662-7411 · Growing in the Southtowns since 1992<br>
+  Design concept by Onyx Rise Media — not the business's current live site.
+</footer>
+
+</body>
+</html>

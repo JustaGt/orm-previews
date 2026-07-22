@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Three Pines Lodging &amp; Marina — Lakefront Cabins with a Boat Slip Included · North Bay, Oneida Lake NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mist:#8fa8b8; --slate:#3d5361; --deepwater:#22333f; --pine:#2e5339; --pine-l:#4a7a58;
+  --dawn:#e8c56b; --dawn-d:#c9a13f; --shore:#f4f1e8; --card:#ffffff; --ink:#1f2c34;
+  --soft:#5d7280; --line:#dbe2df;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Public Sans',sans-serif;color:var(--ink);background:var(--shore);line-height:1.65}
+h1,h2,h3{font-family:'Bitter',serif}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+/* top bar */
+.topbar{background:var(--deepwater);color:#dfe9ee;font-size:.85rem;padding:8px 0}
+.topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.topbar a{color:var(--dawn);text-decoration:none;font-weight:600}
+/* hero */
+header.hero{background:linear-gradient(175deg,var(--slate) 0%,var(--mist) 58%,var(--dawn) 130%);color:#fff;padding:70px 0 86px;position:relative;overflow:hidden}
+header.hero:after{content:"";position:absolute;bottom:-2px;left:0;right:0;height:70px;background:var(--shore);clip-path:polygon(0 65%,8% 55%,20% 68%,33% 52%,47% 66%,60% 50%,74% 64%,88% 52%,100% 62%,100% 100%,0 100%)}
+.brand{font-family:'Bitter',serif;font-weight:800;font-size:1.15rem;letter-spacing:.04em;text-transform:uppercase;color:#fff;margin-bottom:38px}
+.brand span{color:var(--dawn)}
+.hero h1{font-size:clamp(1.9rem,4.6vw,3.1rem);line-height:1.15;max-width:660px;font-weight:800}
+.hero h1 em{font-style:normal;color:var(--dawn)}
+.hero p.sub{margin:18px 0 30px;font-size:1.12rem;max-width:600px;color:#eef4f7}
+.cta{display:inline-block;background:var(--dawn);color:var(--deepwater);font-weight:700;padding:15px 30px;border-radius:6px;text-decoration:none;font-size:1.02rem;box-shadow:0 4px 14px rgba(0,0,0,.22)}
+.cta.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7);margin-left:10px;box-shadow:none}
+.hero .factline{margin-top:34px;display:flex;gap:26px;flex-wrap:wrap;font-size:.92rem;color:#f2f6f8}
+.hero .factline b{color:var(--dawn);display:block;font-size:1.05rem}
+/* slip banner */
+.slipband{background:var(--pine);color:#fff;padding:34px 0}
+.slipband .wrap{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.slipband .big{font-family:'Bitter',serif;font-size:1.5rem;font-weight:700;flex:1;min-width:260px}
+.slipband p{flex:2;min-width:260px;color:#e4eee6}
+/* sections */
+section{padding:60px 0}
+.kicker{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--pine-l);margin-bottom:8px}
+h2.title{font-size:clamp(1.5rem,3.2vw,2.2rem);color:var(--deepwater);margin-bottom:14px}
+p.lead{color:var(--soft);max-width:640px;margin-bottom:34px}
+/* cabins */
+.cabins{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.cabin{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:26px 24px;position:relative}
+.cabin h3{color:var(--pine);font-size:1.15rem;margin-bottom:6px}
+.cabin .sleeps{display:inline-block;background:var(--shore);border:1px solid var(--line);color:var(--slate);font-weight:700;font-size:.8rem;border-radius:20px;padding:3px 12px;margin-bottom:12px}
+.cabin ul{list-style:none;font-size:.93rem;color:var(--soft)}
+.cabin ul li{padding:4px 0 4px 20px;position:relative}
+.cabin ul li:before{content:"›";position:absolute;left:4px;color:var(--dawn-d);font-weight:800}
+.cabin .slip{margin-top:14px;font-size:.85rem;font-weight:700;color:var(--pine)}
+/* marina */
+.marina{background:var(--deepwater);color:#dfe9ee}
+.marina h2.title{color:#fff}
+.marina p.lead{color:#b9c9d2}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.mcell{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:20px}
+.mcell h3{color:var(--dawn);font-size:1rem;margin-bottom:8px}
+.mcell p{font-size:.9rem;color:#c9d7de}
+/* season */
+.season .rail{display:flex;gap:0;flex-wrap:wrap;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)}
+.stop{flex:1;min-width:200px;padding:24px 22px;border-left:4px solid var(--dawn)}
+.stop:nth-child(2){border-left-color:var(--pine-l)}
+.stop:nth-child(3){border-left-color:var(--slate)}
+.stop h3{font-size:1rem;color:var(--deepwater);margin-bottom:6px}
+.stop p{font-size:.9rem;color:var(--soft)}
+/* local */
+.local{background:linear-gradient(180deg,var(--shore),#ece7d8)}
+.local .duo{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+@media(max-width:760px){.local .duo{grid-template-columns:1fr}}
+.local .duo ul{list-style:none;margin-top:10px}
+.local .duo ul li{padding:8px 0 8px 26px;position:relative;color:var(--slate)}
+.local .duo ul li:before{content:"⚓";position:absolute;left:0;font-size:.8rem}
+/* contact */
+.contact{background:var(--pine);color:#fff}
+.contact h2.title{color:#fff}
+.contact .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px}
+@media(max-width:760px){.contact .grid{grid-template-columns:1fr}}
+.contact form{background:#fff;border-radius:10px;padding:26px;color:var(--ink)}
+.contact label{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--slate);display:block;margin:12px 0 4px}
+.contact input,.contact select,.contact textarea{width:100%;padding:11px;border:1px solid var(--line);border-radius:6px;font-family:inherit;font-size:.95rem;background:var(--shore)}
+.contact button{margin-top:18px;width:100%;background:var(--dawn);border:none;color:var(--deepwater);font-weight:800;font-size:1rem;padding:14px;border-radius:6px;cursor:pointer}
+.contact .info p{margin-bottom:14px;color:#e4eee6}
+.contact .info a{color:var(--dawn);font-weight:700;text-decoration:none}
+.contact .note{font-size:.85rem;color:#cfdfd3;margin-top:16px}
+footer{background:var(--deepwater);color:#8fa4af;font-size:.85rem;padding:22px 0;text-align:center}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <div>North Bay · north shore of Oneida Lake · 2 miles from Sylvan Beach</div>
+  <div>Call <a href="tel:13152453830">(315) 245-3830</a> · <a href="mailto:threepineslodging@gmail.com">threepineslodging@gmail.com</a></div>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="brand">Three Pines <span>Lodging &amp; Marina</span></div>
+  <h1>Wake up on Oneida Lake with <em>your boat already in the water.</em></h1>
+  <p class="sub">Five furnished lakefront cabins on the quiet North Bay shore — and every single one comes with its own boat slip. Launch at our private harbor, fish the walleye opener from your doorstep, and be at the Sylvan Beach midway by boat in minutes.</p>
+  <a class="cta" href="#book">Check Cabin Availability</a>
+  <a class="cta ghost" href="#cabins">See the Five Cabins</a>
+  <div class="factline">
+    <div><b>Slip included</b>with every cabin</div>
+    <div><b>Sleeps 3–13</b>five cabin sizes</div>
+    <div><b>May → ice season</b>open for the walleye opener</div>
+  </div>
+</div></header>
+
+<div class="slipband"><div class="wrap">
+  <div class="big">Every cabin comes with a dock. No trailer queue. No marina fees elsewhere.</div>
+  <p>Rent a cabin and a boat slip is yours for the stay — steps from your porch, in our private harbor. Need more room for a second boat? Additional slips are available for a small fee, and our launch gets you off the ramp and onto the lake in minutes.</p>
+</div></div>
+
+<section id="cabins"><div class="wrap">
+  <div class="kicker">The Cabins</div>
+  <h2 class="title">Five cabins. One shoreline. Pick your size.</h2>
+  <p class="lead">All cabins are fully furnished with satellite TV and Wi-Fi, and every rental includes a boat slip. Guests bring their own bedding and towels — everything else is waiting.</p>
+  <div class="cabins">
+    <div class="cabin">
+      <h3>Cabin 1 — The Big One</h3><span class="sleeps">Sleeps up to 13</span>
+      <ul><li>Full kitchen, living &amp; dining rooms</li><li>2 full baths</li><li>Front porch on the water</li><li>Bring the whole fishing crew</li></ul>
+      <div class="slip">⚓ Boat slip included</div>
+    </div>
+    <div class="cabin">
+      <h3>Cabins 2 &amp; 3 — Family Size</h3><span class="sleeps">Sleep up to 10 each</span>
+      <ul><li>Full kitchen, living &amp; dining rooms</li><li>1 full + 1 half bath</li><li>Screened-in front porch</li><li>Room for two families</li></ul>
+      <div class="slip">⚓ Boat slip included</div>
+    </div>
+    <div class="cabin">
+      <h3>Cabins 4 &amp; 5 — The Anglers</h3><span class="sleeps">Sleep up to 3 each</span>
+      <ul><li>Kitchenette + full bath</li><li>Cabin 4: screened porch</li><li>Cabin 5: second-story porch with the best lake view on the property</li><li>Perfect for an opener weekend</li></ul>
+      <div class="slip">⚓ Boat slip included</div>
+    </div>
+  </div>
+</div></section>
+
+<section class="marina"><div class="wrap">
+  <div class="kicker" style="color:var(--dawn)">The Marina Side</div>
+  <h2 class="title">Everything a fishing trip needs, on the property.</h2>
+  <p class="lead">Oneida Lake is one of the best walleye fisheries in the country. We're set up so you spend your time on the water, not driving around for supplies.</p>
+  <div class="mgrid">
+    <div class="mcell"><h3>Private Harbor &amp; Launch</h3><p>Protected slips and a boat launch right here — no public-ramp lines on opener weekend.</p></div>
+    <div class="mcell"><h3>14′ Boat Rentals</h3><p>No boat? Rent one of our 14-foot fishing boats with a 15 hp motor and get out there anyway.</p></div>
+    <div class="mcell"><h3>Bait Shop On Site</h3><p>Pick up bait and ice before first light without leaving the property.</p></div>
+    <div class="mcell"><h3>Fish-Cleaning Station</h3><p>Clean your catch at the station, then straight to the grill — gas grills and fire pits at the cabins.</p></div>
+    <div class="mcell"><h3>Kayaks &amp; Swimming</h3><p>Calm-morning kayaks, a sandbox for the kids, and lake swimming off the shore.</p></div>
+    <div class="mcell"><h3>The Practical Stuff</h3><p>Laundry, ice, firewood, outdoor refrigerator, free parking. Bring bedding and towels; we handle the rest.</p></div>
+  </div>
+</div></section>
+
+<section class="season"><div class="wrap">
+  <div class="kicker">The Season</div>
+  <h2 class="title">Open from the walleye opener until the ice fishermen go home.</h2>
+  <p class="lead">We open the first weekend of May for the start of walleye season and stay with the lake through ice-fishing season.</p>
+  <div class="rail">
+    <div class="stop"><h3>May — The Opener</h3><p>Walleye season kicks off the first Saturday of May. Cabins 4 &amp; 5 book fast for opener weekend — reserve early.</p></div>
+    <div class="stop"><h3>Summer — Family Weeks</h3><p>Bass, perch, swimming off the shore, evenings at the fire pit, and boat runs to the Sylvan Beach midway.</p></div>
+    <div class="stop"><h3>Winter — Hard Water</h3><p>When Oneida freezes, the ice-fishing crowd moves in. Ask about winter cabin availability.</p></div>
+  </div>
+</div></section>
+
+<section class="local"><div class="wrap">
+  <div class="duo">
+    <div>
+      <div class="kicker">Where You Are</div>
+      <h2 class="title">The quiet side of the lake, two miles from the busy side.</h2>
+      <p style="color:var(--soft)">Three Pines sits in North Bay on Oneida Lake's north shore — far enough from the crowds to hear the loons, close enough that Sylvan Beach's restaurants, sandy public beach, and amusement-park midway are minutes away by boat, by car, or by the state trail that runs from the property.</p>
+    </div>
+    <div>
+      <ul>
+        <li><b>Sylvan Beach midway &amp; restaurants</b> — 2 miles (take the boat)</li>
+        <li><b>Verona Beach State Park</b> — across the bay</li>
+        <li><b>Oneida Lake</b> — 22 miles of walleye water at your dock</li>
+        <li><b>2050 Lakeshore Drive, N. Blossvale, NY 13123</b></li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="contact" id="book"><div class="wrap">
+  <div class="kicker" style="color:var(--dawn)">Book Direct</div>
+  <h2 class="title">Check availability for your week on the water.</h2>
+  <div class="grid">
+    <form onsubmit="return false">
+      <label>Your name</label><input type="text" placeholder="First and last name">
+      <label>Phone or email</label><input type="text" placeholder="Best way to reach you">
+      <label>Which cabin?</label>
+      <select><option>Cabin 1 (sleeps 13)</option><option>Cabin 2 (sleeps 10)</option><option>Cabin 3 (sleeps 10)</option><option>Cabin 4 (sleeps 3)</option><option>Cabin 5 (sleeps 3)</option><option>Not sure — help me pick</option></select>
+      <label>Dates you're hoping for</label><input type="text" placeholder="e.g., week of the walleye opener">
+      <label>Anything we should know?</label><textarea rows="3" placeholder="Bringing a boat? Need an extra slip?"></textarea>
+      <button type="submit">Send Availability Request</button>
+    </form>
+    <div class="info">
+      <p><b>Prefer to talk?</b> Call us at <a href="tel:13152453830">(315) 245-3830</a> — you'll get a person who knows which cabin fits your crew.</p>
+      <p><b>Email:</b> <a href="mailto:threepineslodging@gmail.com">threepineslodging@gmail.com</a></p>
+      <p><b>Find us:</b> 2050 Lakeshore Drive, N. Blossvale, NY 13123 — North Bay, on Oneida Lake's north shore.</p>
+      <p class="note">Booking direct means no third-party booking fees for you — and your slip is confirmed with your cabin. [Rates available by phone — seasonal rate table placeholder, to be confirmed with owner.]</p>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Three Pines Lodging &amp; Marina, LLC · 2050 Lakeshore Drive, N. Blossvale, NY 13123 · (315) 245-3830 · Website preview by Onyx Rise Media</div></footer>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pacha Barbershop Unisex & Nails — Beacon, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --char:#1b1a18; --char-2:#26241f; --terra:#c0603a; --terra-2:#d9784f;
+    --bone:#efe7da; --bone-2:#f6f1e7; --clay:#8a8175; --ink:#1b1a18;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Work Sans',sans-serif;color:var(--ink);background:var(--bone-2);line-height:1.65}
+  h1,h2,h3,.disp{font-family:'Bebas Neue',sans-serif;font-weight:400;line-height:.95;letter-spacing:.01em}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 30px}
+  a{color:inherit;text-decoration:none}
+  .btn{display:inline-block;background:var(--terra);color:#fff;font-weight:600;padding:15px 34px;letter-spacing:.06em;text-transform:uppercase;font-size:.82rem;transition:.25s}
+  .btn:hover{background:var(--char);color:var(--bone)}
+  .btn-line{background:transparent;border:2px solid var(--bone);color:var(--bone)}
+  .btn-line:hover{background:var(--bone);color:var(--char)}
+  .tag{font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--terra);font-weight:700}
+
+  nav{position:sticky;top:0;z-index:40;background:var(--char);border-bottom:3px solid var(--terra)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .logo{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--bone);letter-spacing:.04em}
+  .logo span{color:var(--terra)}
+  .nl{display:flex;gap:32px;align-items:center}
+  .nl a{color:var(--bone);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;opacity:.85}
+  .nl a:hover{color:var(--terra-2);opacity:1}
+  @media(max-width:880px){.nl a:not(.btn){display:none}}
+
+  .hero{position:relative;background:
+    linear-gradient(90deg,rgba(27,26,24,.96) 0%,rgba(27,26,24,.7) 55%,rgba(27,26,24,.2) 100%),
+    url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;background-position:center;color:var(--bone);overflow:hidden}
+  .hero .wrap{padding:104px 30px 110px}
+  .hero h1{font-size:clamp(3.4rem,9vw,7rem);color:var(--bone);max-width:16ch}
+  .hero h1 span{color:var(--terra-2)}
+  .hero p{font-family:'Work Sans',sans-serif;font-size:1.16rem;max-width:44ch;margin:22px 0 32px;color:#d9d0c2}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .ribbon{position:absolute;bottom:0;left:0;right:0;background:var(--terra);color:#fff;font-family:'Bebas Neue';font-size:1.1rem;letter-spacing:.2em;padding:10px 0;text-align:center}
+
+  section{padding:90px 0}
+  h2{font-size:clamp(2.6rem,6vw,4.2rem);color:var(--char)}
+  .sub{font-size:1.06rem;color:#5f574b;max-width:60ch;margin-top:12px}
+
+  /* two sides */
+  .two{background:var(--char);color:var(--bone);padding:0}
+  .two-grid{display:grid;grid-template-columns:1fr 1fr}
+  .side{padding:80px 50px;position:relative;min-height:420px;display:flex;flex-direction:column;justify-content:flex-end;background-size:cover;background-position:center}
+  .side::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(27,26,24,.92),rgba(27,26,24,.45))}
+  .side>*{position:relative;z-index:1}
+  .side-barber{background-image:url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=900&q=80')}
+  .side-nails{background-image:url('https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=900&q=80')}
+  .side h3{font-size:3rem;color:var(--bone)}
+  .side h3 span{color:var(--terra-2)}
+  .side p{color:#cfc6b8;margin:10px 0 18px;max-width:38ch}
+  .side a{color:var(--terra-2);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem}
+  @media(max-width:880px){.two-grid{grid-template-columns:1fr}}
+
+  /* services list */
+  .svc{background:var(--bone-2)}
+  .svc-cols{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin-top:46px}
+  .svc-col h3{font-size:2.2rem;color:var(--terra);border-bottom:3px solid var(--char);padding-bottom:10px;margin-bottom:8px}
+  .row{display:flex;justify-content:space-between;padding:15px 0;border-bottom:1px solid #e0d6c6}
+  .row .n{font-weight:600}
+  .row .n small{display:block;font-weight:400;color:#8a8175;font-size:.85rem}
+  .row .p{font-family:'Bebas Neue';font-size:1.5rem;color:var(--char)}
+  @media(max-width:880px){.svc-cols{grid-template-columns:1fr;gap:30px}}
+
+  /* experience band */
+  .exp{background:var(--terra);color:#fff}
+  .exp .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;text-align:center}
+  .exp .big{font-family:'Bebas Neue';font-size:3.4rem;line-height:1}
+  .exp p{font-size:.95rem;color:#fae6dd}
+
+  /* gallery */
+  .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:10px;margin-top:44px}
+  .gp{background-size:cover;background-position:center;background-color:var(--char-2)}
+  .gp.tall{grid-row:span 2}
+  .gp.wide{grid-column:span 2}
+  .gp1{background-image:url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=800&q=80')}
+  .gp2{background-image:url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=800&q=80')}
+  .gp3{background-image:url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80')}
+  .gp4{background-image:url('https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=800&q=80')}
+  .gp5{background-image:url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80')}
+  @media(max-width:880px){.gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:150px}}
+
+  /* visit */
+  .visit{background:var(--char);color:var(--bone)}
+  .visit h2{color:var(--bone)}
+  .visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+  .vline{padding:16px 0;border-bottom:1px solid #3a372f}
+  .vline .k{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--terra-2);margin-bottom:3px}
+  .vline .v{font-size:1.2rem}
+  .hrs{list-style:none;margin-top:6px}
+  .hrs li{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #3a372f}
+  .hrs b{font-family:'Bebas Neue';font-size:1.25rem;letter-spacing:.04em}
+  form{display:grid;gap:13px;margin-top:8px}
+  input,select,textarea{padding:13px 15px;border:none;font-family:'Work Sans';font-size:.94rem;background:#322f29;color:var(--bone)}
+  input::placeholder,textarea::placeholder{color:#8a8175}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--terra)}
+  @media(max-width:880px){.visit .wrap{grid-template-columns:1fr;gap:34px}.exp .wrap{grid-template-columns:1fr;gap:26px}}
+
+  footer{background:#121110;color:#8a8175;padding:38px 0;font-size:.82rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .pv{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;opacity:.6}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">PACHA <span>/</span> BEACON</div>
+    <div class="nl">
+      <a href="#two">Barber + Nails</a>
+      <a href="#svc">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+      <a href="#visit" class="btn">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="tag">4 S Chestnut St · Beacon, NY</span>
+    <h1 style="margin-top:16px">One chair. <span>Sharp cuts.</span> Clean sets. Everybody welcome.</h1>
+    <p>A unisex barbershop and nail studio in the heart of Beacon — where the fade is tight, the polish is precise, and nobody's out of place.</p>
+    <div class="hero-actions">
+      <a href="#visit" class="btn">Book a Chair</a>
+      <a href="#svc" class="btn btn-line">See Services</a>
+    </div>
+  </div>
+  <div class="ribbon">CUTS · COLOR · BEARDS · GEL · ACRYLIC · KIDS · WALK-INS</div>
+</header>
+
+<section class="two" id="two">
+  <div class="two-grid">
+    <div class="side side-barber">
+      <span class="tag">The Chair</span>
+      <h3>Barber<span>shop</span></h3>
+      <p>Skin fades, scissor work, beard line-ups and hot-towel finishes. For him, for her, for the kids. No "men only" energy here.</p>
+      <a href="#svc">View cuts →</a>
+    </div>
+    <div class="side side-nails">
+      <span class="tag">The Studio</span>
+      <h3>Nail<span>s</span></h3>
+      <p>Gel, acrylic, dip and clean classic manicures — done at the same shop, same day you came in for a cut.</p>
+      <a href="#svc">View nail services →</a>
+    </div>
+  </div>
+</section>
+
+<section class="svc" id="svc">
+  <div class="wrap">
+    <span class="tag">The Price List</span>
+    <h2>Straight pricing, no surprises</h2>
+    <p class="sub">Walk in or book ahead. Cash and card welcome.</p>
+    <div class="svc-cols">
+      <div class="svc-col">
+        <h3>Barbering</h3>
+        <div class="row"><div class="n">Signature Cut<small>Wash, cut, style</small></div><div class="p">$35</div></div>
+        <div class="row"><div class="n">Skin Fade<small>Tapered, blended clean</small></div><div class="p">$35</div></div>
+        <div class="row"><div class="n">Cut + Beard<small>Line-up & hot towel</small></div><div class="p">$50</div></div>
+        <div class="row"><div class="n">Kids (under 12)<small>Any style</small></div><div class="p">$25</div></div>
+        <div class="row"><div class="n">Beard Trim<small>Shape & detail</small></div><div class="p">$20</div></div>
+      </div>
+      <div class="svc-col">
+        <h3>Nails</h3>
+        <div class="row"><div class="n">Classic Manicure<small>Shape, cuticle, polish</small></div><div class="p">$22</div></div>
+        <div class="row"><div class="n">Gel Manicure<small>Two-week wear</small></div><div class="p">$35</div></div>
+        <div class="row"><div class="n">Full Acrylic Set<small>Custom shape</small></div><div class="p">$45</div></div>
+        <div class="row"><div class="n">Spa Pedicure<small>Soak & massage</small></div><div class="p">$45</div></div>
+        <div class="row"><div class="n">Dip Powder<small>Long-lasting, no lamp</small></div><div class="p">$40</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="exp">
+  <div class="wrap">
+    <div><div class="big">UNISEX</div><p>Every chair is for everyone. Cuts and color for all hair, all ages.</p></div>
+    <div><div class="big">SAME DAY</div><p>Cut and a fresh set in one stop — no second appointment across town.</p></div>
+    <div><div class="big">WALK-INS</div><p>Booked is best, but we'll always try to fit you in when you stop by.</p></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <span class="tag">In the Shop</span>
+    <h2>Recent work</h2>
+    <div class="gal-grid">
+      <div class="gp tall gp1"></div>
+      <div class="gp gp2"></div>
+      <div class="gp gp3"></div>
+      <div class="gp wide gp4"></div>
+      <div class="gp gp5"></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div>
+      <span class="tag">Find Pacha</span>
+      <h2>On Chestnut, off Main</h2>
+      <div class="vline"><div class="k">Address</div><div class="v">4 S Chestnut St, Beacon, NY 12508</div></div>
+      <div class="vline"><div class="k">Phone</div><div class="v">(845) 440-8638</div></div>
+      <ul class="hrs">
+        <li><span>Monday – Saturday</span><b>9:00a – 7:00p</b></li>
+        <li><span>Sunday</span><b>Closed</b></li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="font-size:2.2rem;color:var(--bone)">Book a chair</h3>
+      <p style="color:#cfc6b8;font-size:.94rem;margin-bottom:6px">Pick your service — we'll text back to lock the time.</p>
+      <form onsubmit="event.preventDefault();this.innerHTML='<p style=\'color:var(--terra-2);font-family:Bebas Neue;font-size:1.6rem;letter-spacing:.05em\'>Booked it — we\'ll text you to confirm.</p>'">
+        <input type="text" placeholder="Name" required>
+        <input type="tel" placeholder="Phone" required>
+        <select><option>Barber — cut</option><option>Barber — cut + beard</option><option>Nails — manicure</option><option>Nails — full set</option><option>Cut + nails (same visit)</option></select>
+        <textarea rows="3" placeholder="Day & time that works for you"></textarea>
+        <button class="btn" type="submit">Request Booking</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Pacha Barbershop Unisex & Nails · 4 S Chestnut St, Beacon, NY</div>
+    <div class="pv">Website preview by Onyx Rise Media</div>
+  </div>
+</footer>
+
+</body>
+</html>

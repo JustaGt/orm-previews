@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Walt's Diner — Old Forge, NY | Homemade Breakfast, Lunch &amp; Friday Fish Fry</title>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#24402b; --green-d:#172a1c; --cream:#fbf3e2; --butter:#f4c542;
+    --butter-d:#d99c1f; --red:#b23b32; --ink:#22271f; --paper:#fffdf7;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3,.script{font-family:'Bitter',serif;line-height:1.12}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--butter);color:var(--green-d);font-weight:700;padding:14px 26px;border-radius:8px;text-decoration:none;border:2px solid var(--butter);transition:.2s}
+  .btn:hover{background:var(--butter-d);border-color:var(--butter-d)}
+  .btn-red{background:var(--red);color:#fff;border-color:var(--red)}
+  .btn-red:hover{background:#8f2c25;border-color:#8f2c25}
+  .btn-out{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7)}
+  .btn-out:hover{background:#fff;color:var(--green-d)}
+
+  /* sticky utility bar with TODAY hours */
+  .util{background:var(--green-d);color:#fff;font-size:.92rem;position:sticky;top:0;z-index:50}
+  .util .wrap{display:flex;justify-content:space-between;align-items:center;padding:8px 22px;flex-wrap:wrap;gap:6px}
+  .util b{color:var(--butter)}
+  .util a.call{color:#fff;font-weight:700;text-decoration:none;border:1px solid rgba(255,255,255,.4);padding:4px 12px;border-radius:6px}
+
+  header .wrap{display:flex;align-items:center;justify-content:space-between;padding:16px 22px;flex-wrap:wrap;gap:10px}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo .badge{background:var(--green);color:var(--butter);font-family:'Bitter',serif;font-weight:800;
+    width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-size:1.3rem;border:3px solid var(--butter)}
+  .logo .name{font-family:'Bitter',serif;font-weight:800;font-size:1.4rem;color:var(--green)}
+  .logo .tag{font-size:.78rem;color:var(--red);font-weight:600;letter-spacing:1px}
+  nav.main a{margin-left:20px;text-decoration:none;font-weight:600;font-size:.95rem;color:var(--green)}
+  nav.main a:hover{color:var(--red)}
+  @media(max-width:780px){nav.main{display:none}}
+
+  /* hero */
+  .hero{background:
+    linear-gradient(180deg,rgba(23,42,28,.72),rgba(23,42,28,.78)),
+    repeating-linear-gradient(45deg,#2a4a31 0 18px,#264430 18px 36px);
+    color:#fff;text-align:center;padding:76px 0}
+  .hero .kick{color:var(--butter);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.82rem;margin-bottom:14px}
+  .hero h1{font-size:3rem;max-width:780px;margin:0 auto 12px}
+  .hero h1 span{color:var(--butter)}
+  .hero p{font-size:1.2rem;max-width:620px;margin:0 auto 26px;opacity:.95}
+  .hero .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .award{margin-top:24px;display:inline-flex;gap:10px;align-items:center;background:rgba(244,197,66,.14);
+    border:1px solid var(--butter);border-radius:30px;padding:7px 18px;font-size:.9rem}
+  .award b{color:var(--butter)}
+
+  /* the food strip */
+  section{padding:64px 0}
+  .eyebrow{color:var(--red);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;font-size:.78rem;margin-bottom:8px}
+  .sec-title{font-size:2.2rem;color:var(--green);margin-bottom:8px}
+  .lead{font-size:1.08rem;max-width:660px;color:#3c4a3a}
+
+  .plates{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px}
+  .plate{border-radius:16px;overflow:hidden;border:1px solid #ece3cf;background:#fff}
+  .plate .pic{height:150px;background-size:cover;background-position:center;position:relative}
+  .p1{background:linear-gradient(135deg,#e8a23a,#c9762a)}
+  .p2{background:linear-gradient(135deg,#d8b24e,#a8842c)}
+  .p3{background:linear-gradient(135deg,#b23b32,#7e2a24)}
+  .plate .pic .emoji{position:absolute;inset:0;display:grid;place-items:center;font-size:3.2rem;filter:drop-shadow(0 4px 8px rgba(0,0,0,.25))}
+  .plate .body{padding:20px}
+  .plate h3{color:var(--green);font-size:1.2rem;margin-bottom:6px}
+  .plate p{font-size:.96rem;color:#4c5947}
+  .photo-note{margin-top:18px;font-size:.85rem;color:#9a8e6f;font-style:italic}
+
+  /* fish fry banner */
+  .fry{background:var(--red);color:#fff;text-align:center}
+  .fry .wrap{padding:54px 22px}
+  .fry h2{font-size:2.1rem;margin-bottom:8px}
+  .fry p{opacity:.95;max-width:560px;margin:0 auto 18px;font-size:1.08rem}
+
+  /* why walt's */
+  .why{background:var(--cream)}
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:32px}
+  .why-item{background:#fff;border-radius:14px;padding:26px;border:1px solid #ecdfc4}
+  .why-item .ic{font-size:1.9rem;margin-bottom:10px}
+  .why-item h3{color:var(--green);font-size:1.12rem;margin-bottom:6px}
+  .why-item p{font-size:.95rem;color:#4c5947}
+
+  /* hours + find us */
+  .find{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+  .hourscard{background:var(--green);color:#fff;border-radius:16px;padding:30px}
+  .hourscard h3{color:var(--butter);margin-bottom:14px;font-size:1.3rem}
+  .hourscard ul{list-style:none}
+  .hourscard li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:1rem}
+  .hourscard li:last-child{border:0}
+  .hourscard li.closed span:last-child{color:#e7b9b4}
+  .hourscard .fry-tag{color:var(--butter);font-weight:700}
+  .findbox h3{color:var(--green);font-size:1.3rem;margin-bottom:8px}
+  .findbox p{margin-bottom:8px}
+  .findbox .sled{background:var(--cream);border-left:4px solid var(--red);padding:12px 16px;border-radius:8px;margin:14px 0;font-size:.96rem}
+  .ph{color:var(--butter-d);font-weight:700}
+
+  footer{background:var(--green-d);color:#cdd9cf;padding:44px 0 22px}
+  .foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:28px}
+  footer h4{color:#fff;font-family:'Bitter',serif;margin-bottom:12px}
+  footer a{color:#cdd9cf;text-decoration:none;display:block;padding:3px 0;font-size:.95rem}
+  footer a:hover{color:var(--butter)}
+  .fbrand{font-family:'Bitter',serif;font-weight:800;color:#fff;font-size:1.25rem;margin-bottom:8px}
+  .copy{border-top:1px solid rgba(255,255,255,.12);margin-top:28px;padding-top:16px;text-align:center;font-size:.84rem;opacity:.7}
+
+  @media(max-width:780px){
+    .hero h1{font-size:2.1rem}
+    .plates,.why-grid,.find,.foot{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="util">
+  <div class="wrap">
+    <div>🍳 <b>Open today</b> · Breakfast 6am–Noon · Lunch Noon–3pm <span style="opacity:.7">(Fri till 8pm — Fish Fry)</span></div>
+    <a href="tel:3153692582" class="call">Call to order · (315) 369-2582</a>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <div class="logo">
+      <div class="badge">W</div>
+      <div>
+        <div class="name">Walt's Diner</div>
+        <div class="tag">OLD FORGE, NY · AN ADIRONDACK TRADITION</div>
+      </div>
+    </div>
+    <nav class="main">
+      <a href="#food">The Food</a>
+      <a href="#fishfry">Fish Fry</a>
+      <a href="#why">Why Walt's</a>
+      <a href="#find">Hours &amp; Find Us</a>
+    </nav>
+    <a href="tel:3153692582" class="btn">Call to order</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="kick">Main Street · Old Forge · since the '90s</p>
+    <h1>Enormous pancakes, giant omelets, and a <span>Friday fish fry</span> — all homemade on the griddle you can watch.</h1>
+    <p>The Old Forge breakfast-and-lunch stop locals and lake-country travelers have packed for 25+ years. Pull off the trail, park out back, and dig in.</p>
+    <div class="cta">
+      <a href="#food" class="btn">See what's cooking</a>
+      <a href="tel:3153692582" class="btn-out btn">Call ahead: (315) 369-2582</a>
+    </div>
+    <div class="award">🏆 <span>Voted <b>Best Breakfast &amp; Diner in the Adirondacks</b> — <i>Adirondack Life</i>, 2015–2018</span></div>
+  </div>
+</section>
+
+<section id="food">
+  <div class="wrap">
+    <p class="eyebrow">All homemade · open-air kitchen</p>
+    <h2 class="sec-title">What people drive up for</h2>
+    <p class="lead">Everything comes off our open-air griddle so you can watch your plate come together. Breakfast runs all morning; lunch is hot soups, chili, and stacked sandwiches.</p>
+    <div class="plates">
+      <div class="plate">
+        <div class="pic p1"><div class="emoji">🥞</div></div>
+        <div class="body">
+          <h3>Enormous pancakes</h3>
+          <p>The ones that hang off the plate, plus giant omelets and breakfast served every morning, 6am to noon.</p>
+        </div>
+      </div>
+      <div class="plate">
+        <div class="pic p2"><div class="emoji">🥪</div></div>
+        <div class="body">
+          <h3>Homemade lunch</h3>
+          <p>Hand-built sandwiches, daily soups and chili from noon to 3pm — the fuel for a day on the lake or the trail.</p>
+        </div>
+      </div>
+      <div class="plate">
+        <div class="pic p3"><div class="emoji">🐟</div></div>
+        <div class="body">
+          <h3>Friday fish fry</h3>
+          <p>Fresh, hand-battered fish fry on Friday nights till 8pm — an Old Forge end-of-week ritual.</p>
+        </div>
+      </div>
+    </div>
+    <p class="photo-note ph">Note for Sandro: real plate photography drops in here (the current site's galleries load empty) — pull the best shots from the Walt's Facebook/Instagram before the GHL build.</p>
+    <div style="margin-top:26px;display:flex;gap:14px;flex-wrap:wrap">
+      <a href="#" class="btn">View the full menu</a>
+      <a href="#" class="btn btn-red">Catering menu</a>
+    </div>
+  </div>
+</section>
+
+<section class="fry" id="fishfry">
+  <div class="wrap">
+    <h2>Friday night means fish fry.</h2>
+    <p>Open till 8pm on Fridays for the fish fry that fills the place every week. Call ahead and we'll have your order ready to grab and go.</p>
+    <a href="tel:3153692582" class="btn">Order the fish fry · (315) 369-2582</a>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <p class="eyebrow">Why Walt's</p>
+    <h2 class="sec-title">A real diner, run by people who cook</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="ic">🏆</div>
+        <h3>Adirondack Life's pick</h3>
+        <p>Named Best Breakfast &amp; Diner in the Adirondacks four years running, 2015–2018.</p>
+      </div>
+      <div class="why-item">
+        <div class="ic">🍳</div>
+        <h3>Open-air kitchen</h3>
+        <p>Watch your meal hit the griddle. Owner-operated by David Aliasso, with 30+ years in the kitchen.</p>
+      </div>
+      <div class="why-item">
+        <div class="ic">🛷</div>
+        <h3>Right on the trail</h3>
+        <p>Snowmobile parking and trail access off Garmon Avenue — sled in, eat, sled out.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="find">
+  <div class="wrap">
+    <div class="find">
+      <div class="hourscard">
+        <h3>Hours</h3>
+        <ul>
+          <li><span>Monday</span><span>6am – 3pm</span></li>
+          <li class="closed"><span>Tuesday</span><span>Closed</span></li>
+          <li><span>Wednesday</span><span>6am – 3pm</span></li>
+          <li><span>Thursday</span><span>6am – 3pm</span></li>
+          <li><span>Friday</span><span class="fry-tag">6am – 8pm · Fish Fry</span></li>
+          <li><span>Saturday</span><span>6am – 3pm</span></li>
+          <li><span>Sunday</span><span>6am – 3pm</span></li>
+        </ul>
+        <p style="margin-top:14px;font-size:.85rem;opacity:.8" class="ph">Note for Sandro: the current site's hours contradict themselves (body says one thing, the contact box another). Confirm the real schedule with David before publishing — placeholders shown here.</p>
+      </div>
+      <div class="findbox">
+        <h3>Find Walt's</h3>
+        <p><strong>3047 Main Street, Old Forge, NY 13420</strong></p>
+        <p>Right on Old Forge's Main Street, in the heart of town.</p>
+        <div class="sled">🛷 <strong>Snowmobilers:</strong> direct parking &amp; trail access from Garmon Avenue.</div>
+        <p><strong>Phone:</strong> <a href="tel:3153692582" style="color:var(--red);font-weight:700">(315) 369-2582</a></p>
+        <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap">
+          <a href="https://www.google.com/maps/place/Walt's+Diner,+Old+Forge,+NY" class="btn" target="_blank" rel="noopener">Get directions</a>
+          <a href="tel:3153692582" class="btn btn-red">Call to order</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="fbrand">Walt's Diner</div>
+        <p style="max-width:340px">An Adirondack tradition on Old Forge's Main Street for 25+ years — homemade breakfast, lunch, and the Friday fish fry, all off the open-air griddle.</p>
+      </div>
+      <div>
+        <h4>Menu</h4>
+        <a href="#food">The food</a>
+        <a href="#fishfry">Friday fish fry</a>
+        <a href="#">Full menu</a>
+        <a href="#">Catering</a>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <a href="tel:3153692582">(315) 369-2582</a>
+        <a href="https://www.google.com/maps/place/Walt's+Diner,+Old+Forge,+NY" target="_blank" rel="noopener">3047 Main Street<br>Old Forge, NY 13420</a>
+        <a href="#">Facebook &amp; Instagram</a>
+      </div>
+    </div>
+    <div class="copy">© 2026 Walt's Diner · Old Forge, NY · Preview concept by Onyx Rise Media</div>
+  </div>
+</footer>
+
+</body>
+</html>

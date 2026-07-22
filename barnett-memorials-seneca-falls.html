@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barnett Memorials — Family Monument Makers Since 1974 · Seneca Falls, Auburn &amp; Elbridge NY</title>
+<meta name="description" content="Barnett Memorials is a three-generation family monument company serving Seneca Falls, Auburn and Elbridge, NY since 1974. Upright monuments, markers, bronze, mausoleums, and stone restoration — designed with you, unhurried.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --granite:#3a3f44; --granite-d:#282c30; --slate:#5b6b78; --slate-l:#8a9aa6;
+    --ivory:#f6f3ec; --paper:#efeae0; --line:#ddd6c8; --ink:#2c3034; --muted:#5f676e;
+    --brass:#9c7c46; --brass-d:#7d6132; --white:#fff;
+    --shadow:0 16px 40px rgba(40,44,48,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--ivory);line-height:1.7}
+  h1,h2,h3,.disp{font-family:'Cormorant Garamond',serif;font-weight:600;letter-spacing:.01em}
+  a{color:inherit}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+  .btn{display:inline-block;background:var(--brass);color:#fff;font-weight:600;font-size:.98rem;
+    padding:13px 30px;border-radius:3px;text-decoration:none;letter-spacing:.02em;transition:background .16s,transform .16s}
+  .btn:hover{background:var(--brass-d);transform:translateY(-1px)}
+  .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,.55);color:#fff}
+  .btn.ghost:hover{background:rgba(255,255,255,.12)}
+
+  .top{background:var(--granite-d);color:#cfd6dc;font-size:.9rem}
+  .top .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;padding:9px 24px}
+  .top a{color:#fff;text-decoration:none;font-weight:600}
+
+  header.hero{position:relative;color:#fff;
+    background:linear-gradient(160deg,var(--granite) 0%, var(--granite-d) 100%);}
+  header.hero::after{content:"";position:absolute;inset:0;opacity:.10;
+    background-image:radial-gradient(circle at 20% 30%,#fff 0 1px,transparent 1px),radial-gradient(circle at 70% 60%,#fff 0 1px,transparent 1px);
+    background-size:26px 26px,34px 34px}
+  .hero .wrap{position:relative;z-index:2;padding:74px 24px 82px;max-width:820px}
+  .eyebrow{display:inline-block;border:1px solid rgba(255,255,255,.32);color:#e9d9bd;
+    padding:6px 15px;border-radius:2px;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:22px}
+  .hero h1{font-size:3.3rem;line-height:1.08;font-weight:700}
+  .hero h1 em{font-style:italic;color:#e6cfa4}
+  .hero p.lede{font-size:1.2rem;max-width:52ch;margin-top:20px;color:#dfe4e8;font-weight:400}
+  .hero .cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+
+  .assure{background:var(--paper);border-bottom:1px solid var(--line)}
+  .assure .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;padding:26px 24px}
+  .assure div{display:flex;gap:12px;align-items:flex-start}
+  .assure .n{font-family:'Cormorant Garamond',serif;font-size:1.9rem;color:var(--brass);line-height:1;min-width:34px}
+  .assure b{display:block;color:var(--granite);font-weight:700}
+  .assure p{color:var(--muted);font-size:.92rem}
+
+  section{padding:66px 0}
+  h2.t{font-size:2.35rem;color:var(--granite);margin-bottom:6px}
+  .kick{color:var(--brass);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;margin-bottom:8px}
+  .lead{color:var(--muted);max-width:60ch;font-size:1.05rem}
+
+  .story .row{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+  .story p+p{margin-top:14px}
+  .story .quote{background:#fff;border-left:3px solid var(--brass);padding:26px 28px;border-radius:2px;box-shadow:var(--shadow)}
+  .story .quote .disp{font-size:1.5rem;color:var(--granite);line-height:1.3}
+  .story .quote span{display:block;margin-top:12px;color:var(--slate);font-weight:600;font-size:.95rem}
+
+  .types{background:var(--paper)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:4px;padding:26px;transition:transform .16s,box-shadow .16s}
+  .card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .card h3{font-size:1.5rem;color:var(--granite);margin-bottom:6px}
+  .card p{color:var(--muted);font-size:.95rem}
+  .card .mk{width:34px;height:4px;background:var(--brass);border-radius:2px;margin-bottom:16px}
+
+  .care{background:var(--granite);color:#e7ebef}
+  .care .row{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .care h2{color:#fff;font-size:2.1rem;margin-bottom:12px}
+  .care p{color:#c3ccd3}
+  .care ul{list-style:none;margin-top:18px}
+  .care li{padding:12px 0 12px 30px;position:relative;border-bottom:1px solid rgba(255,255,255,.12);color:#dfe4e8}
+  .care li:last-child{border-bottom:0}
+  .care li::before{content:"";position:absolute;left:0;top:19px;width:12px;height:12px;border:2px solid var(--brass);border-radius:50%}
+  .care li b{color:#fff}
+
+  .visit .grid{grid-template-columns:repeat(3,1fr)}
+  .loc{background:#fff;border:1px solid var(--line);border-radius:4px;padding:24px}
+  .loc h3{font-size:1.45rem;color:var(--granite);margin-bottom:4px}
+  .loc .tag{color:var(--brass);font-weight:700;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;display:block}
+  .loc .r{padding:6px 0;color:var(--muted);font-size:.95rem}
+  .loc a.tel{display:inline-block;margin-top:8px;font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--slate);text-decoration:none;font-weight:600}
+
+  .begin{background:var(--paper)}
+  .begin .box{background:#fff;border:1px solid var(--line);border-radius:6px;box-shadow:var(--shadow);
+    display:grid;grid-template-columns:.9fr 1.1fr;overflow:hidden}
+  .begin .left{background:var(--slate);color:#fff;padding:38px}
+  .begin .left h2{color:#fff;font-size:2rem;line-height:1.15;margin-bottom:12px}
+  .begin .left p{color:#e3eaef}
+  .begin .left .ph{color:#cbd6de;font-size:.85rem;font-style:italic;display:block;margin-top:16px}
+  .begin form{padding:36px;display:grid;gap:14px}
+  .begin label{font-size:.76rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--slate);display:block;margin-bottom:4px}
+  .begin input,.begin select,.begin textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:3px;font-family:inherit;font-size:.97rem;color:var(--ink);background:var(--ivory)}
+  .begin .btn{border:0;cursor:pointer;width:100%;text-align:center;padding:14px}
+  .begin .fine{font-size:.82rem;color:var(--muted)}
+
+  footer{background:var(--granite-d);color:#aeb7bf;text-align:center;padding:40px 24px}
+  footer .big{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1.7rem;margin-bottom:4px}
+  footer .locs{color:#cfd6dc;font-size:.95rem;margin-top:6px}
+  .note{margin-top:16px;font-size:.8rem;color:#7f8a93;max-width:70ch;margin-left:auto;margin-right:auto}
+
+  @media(max-width:880px){
+    .hero h1{font-size:2.4rem}
+    .assure .wrap{grid-template-columns:1fr}
+    .story .row,.care .row{grid-template-columns:1fr}
+    .grid,.visit .grid{grid-template-columns:1fr}
+    .begin .box{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <span>Seneca Falls · Auburn · Elbridge, New York</span>
+  <span>Seneca Falls showroom: <a href="tel:13152570106">(315) 257-0106</a></span>
+</div></div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">A family monument company since 1974</span>
+    <h1>A lasting memorial, <em>made with you</em> — never rushed.</h1>
+    <p class="lede">Ken Barnett started drawing monuments at his dining-room table in 1974. Three generations later, his grandson Bill still sits down with families across the Finger Lakes to design a headstone that says exactly what it should.</p>
+    <div class="cta">
+      <a class="btn" href="#begin">Start a memorial</a>
+      <a class="btn ghost" href="#visit">Visit a showroom</a>
+    </div>
+  </div>
+</header>
+
+<div class="assure"><div class="wrap">
+  <div><span class="n">50</span><div><b>years, three generations</b><p>Founded 1974 by Ken &amp; Betty Barnett; run today by grandson Bill Rinaldi.</p></div></div>
+  <div><span class="n">3</span><div><b>showrooms to sit down in</b><p>Seneca Falls, Auburn and Elbridge — see and touch real granite before you decide.</p></div></div>
+  <div><span class="n">✦</span><div><b>designed at your pace</b><p>No pressure, no rush. We work through the wording and design with you.</p></div></div>
+</div></div>
+
+<section class="story">
+  <div class="wrap">
+    <div class="row">
+      <div>
+        <div class="kick">Who you're working with</div>
+        <h2 class="t">The same family, still at the table</h2>
+        <p>In 1974, Ken Barnett created and sold monuments from a pad of graph paper at his home on Hamilton Road in Elbridge. His grandson, Bill Rinaldi, grew up helping him set stones in the cemetery. When Ken retired in 1999, there wasn't anyone better to carry it on.</p>
+        <p>That's still how it works. When you come to Barnett, you're not filling out a catalog order — you're sitting with the family, working out the stone, the shape, the wording and the artwork until it's right. Then we make it, deliver it, and set it.</p>
+      </div>
+      <div class="quote">
+        <div class="disp">"A monument is the one thing that stays after everything else is done. It should be handled by people who treat it that way."</div>
+        <span>— Three generations of the Barnett family, Seneca Falls · Auburn · Elbridge</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="types">
+  <div class="wrap">
+    <div class="kick">What we make</div>
+    <h2 class="t">Memorials for every kind of remembering</h2>
+    <p class="lead">From a simple flush marker to a full family monument in granite or bronze — and care for the stones already in the cemetery.</p>
+    <div class="grid">
+      <div class="card"><div class="mk"></div><h3>Upright Monuments &amp; Slants</h3><p>Traditional standing monuments and slant markers in a range of granites, shapes and finishes — with hand-set lettering and custom artwork.</p></div>
+      <div class="card"><div class="mk"></div><h3>Flush &amp; Grass Markers</h3><p>Flat granite and bronze markers sized to cemetery requirements, laid level with the ground.</p></div>
+      <div class="card"><div class="mk"></div><h3>Bronze &amp; Specialty Memorials</h3><p>Cast bronze plaques, custom-shape and etched designs, and one-of-a-kind memorials for a life that wasn't ordinary.</p></div>
+      <div class="card"><div class="mk"></div><h3>Cremation Memorials &amp; Benches</h3><p>Companion and cremation stones, memorial benches and pedestals — a place to sit and remember.</p></div>
+      <div class="card"><div class="mk"></div><h3>Mausoleums &amp; Statues</h3><p>Private mausoleums, statuary and larger commissions, engineered and installed to last generations.</p></div>
+      <div class="card"><div class="mk"></div><h3>Cleaning &amp; Restoration</h3><p>Bringing weathered and older family stones back to legible — cleaning, resetting and re-lettering.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="care">
+  <div class="wrap">
+    <div class="row">
+      <div>
+        <div class="kick" style="color:#e6cfa4">Why families come back to Barnett</div>
+        <h2>Handled with care, start to finish</h2>
+        <p>Ordering a memorial can feel like one more heavy task at the hardest possible time. Our job is to make that part simple — and to get every detail exactly right, because there's no fixing a name spelled wrong in granite.</p>
+      </div>
+      <div>
+        <ul>
+          <li><b>We design it with you</b> — wording, dates, symbols and artwork, checked and re-checked before we cut.</li>
+          <li><b>Real granite, in front of you</b> — walk the showroom and see finishes and colors in person.</li>
+          <li><b>We handle the cemetery</b> — permits, foundations and setting are on us.</li>
+          <li><b>Veterans' memorials</b> — help with markers and honoring those who served.</li>
+          <li><b>We're still here after</b> — a local family you can reach, not a website in another state.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="kick">Come in and sit down</div>
+    <h2 class="t">Three showrooms across Central New York</h2>
+    <p class="lead">Stop in at whichever is closest. Call ahead if you'd like to be sure someone's free to spend time with you.</p>
+    <div class="grid">
+      <div class="loc">
+        <span class="tag">Seneca Falls</span>
+        <h3>26 State Street</h3>
+        <div class="r">Seneca Falls, NY 13148</div>
+        <div class="r">Fax (315) 257-0146</div>
+        <a class="tel" href="tel:13152570106">(315) 257-0106</a>
+      </div>
+      <div class="loc">
+        <span class="tag">Auburn</span>
+        <h3>131 Seymour Street</h3>
+        <div class="r">Auburn, NY 13021</div>
+        <div class="r">Fax (315) 255-1333</div>
+        <a class="tel" href="tel:13152551234">(315) 255-1234</a>
+      </div>
+      <div class="loc">
+        <span class="tag">Elbridge</span>
+        <h3>236 East Main Street</h3>
+        <div class="r">Elbridge, NY 13060</div>
+        <div class="r">Fax (315) 689-5241</div>
+        <a class="tel" href="tel:13156893813">(315) 689-3813</a>
+      </div>
+    </div>
+    <p class="fine" style="margin-top:18px;color:var(--muted);font-size:.85rem;font-style:italic">Showroom hours to be added and kept current here once the page is live.</p>
+  </div>
+</section>
+
+<section class="begin" id="begin">
+  <div class="wrap">
+    <div class="box">
+      <div class="left">
+        <h2>Start a memorial, at your own pace</h2>
+        <p>Tell us as little or as much as you like and we'll reach back gently — no obligation, no pressure. If you'd rather just talk, call the Seneca Falls showroom at (315) 257-0106.</p>
+        <span class="ph">Preview form — on the live site this would reach Bill and the Barnett family directly at Barnettmemorials1@gmail.com.</span>
+      </div>
+      <form onsubmit="event.preventDefault();alert('Thank you. This is a preview form — on the live site your note would reach the Barnett family privately.');">
+        <div><label>Your name</label><input required placeholder="First and last name"></div>
+        <div><label>Best way to reach you</label><input required placeholder="Phone or email"></div>
+        <div><label>Which showroom is closest?</label>
+          <select><option>Seneca Falls</option><option>Auburn</option><option>Elbridge</option><option>Not sure yet</option></select>
+        </div>
+        <div><label>How can we help? (optional)</label><textarea rows="3" placeholder="A new memorial, a marker, restoring an older family stone, pre-planning — whatever's on your mind."></textarea></div>
+        <button class="btn" type="submit">Send privately</button>
+        <p class="fine">We'll only use this to reply to you. There's no cost to start a conversation.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="big">Barnett Memorials</div>
+  <div>A family monument company since 1974 · Owner, Bill Rinaldi</div>
+  <div class="locs">Seneca Falls (315) 257-0106 · Auburn (315) 255-1234 · Elbridge (315) 689-3813</div>
+  <div class="note">Preview concept prepared by Onyx Rise Media for the Barnett family's review. Showroom hours are placeholders to be confirmed before this page goes live; no prices or reviews have been added.</div>
+</footer>
+
+</body>
+</html>

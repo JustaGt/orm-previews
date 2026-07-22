@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Docteur's Cottages &amp; Seasonal Park — On the St. Lawrence Since 1935 · Cape Vincent, NY</title>
+<meta name="description" content="Riverfront housekeeping cottages by the week and seasonal campground lots on the St. Lawrence River in Cape Vincent, NY. Three generations, since 1935.">
+<style>
+  :root{
+    --teal:#0f5257; --teal-deep:#0a3a3e; --cream:#f6f0e4; --cream-2:#efe6d3;
+    --brass:#b9862f; --brass-lt:#d8a94a; --ink:#22282a; --sage:#6f8a7e;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",-apple-system,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.62}
+  h1,h2,h3,.serif{font-family:"Palatino Linotype",Palatino,Georgia,serif}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  a{color:inherit}
+  /* header */
+  header{background:var(--teal-deep);color:#eaf3f2;position:sticky;top:0;z-index:40}
+  .nav{max-width:1140px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between}
+  .brand{font-family:"Palatino Linotype",Palatino,serif;font-size:1.3rem;font-weight:700;letter-spacing:.3px;line-height:1}
+  .brand small{display:block;font-family:"Segoe UI",sans-serif;font-weight:400;font-size:.6rem;letter-spacing:3px;text-transform:uppercase;color:#9dc4c1;margin-top:4px}
+  nav ul{display:flex;gap:24px;list-style:none;font-size:.9rem}
+  nav a{text-decoration:none;color:#cfe4e2}
+  nav a:hover{color:var(--brass)}
+  .btn{display:inline-block;background:var(--brass);color:#2a1c05;padding:11px 22px;border-radius:4px;text-decoration:none;font-weight:700;font-size:.9rem;letter-spacing:.3px;transition:.2s;border:none;cursor:pointer}
+  .btn:hover{background:#a6771f}
+  .btn-outline{background:transparent;border:1.5px solid #cfe4e2;color:#eaf3f2}
+  .btn-outline:hover{background:rgba(255,255,255,.1)}
+  @media(max-width:800px){nav ul{display:none}}
+  /* hero */
+  .hero{position:relative;background:
+    linear-gradient(180deg,rgba(10,58,62,.35),rgba(10,58,62,.8)),
+    linear-gradient(160deg,#15767c,#0f5257 60%,#0a3a3e);
+    color:#fff;padding:90px 0 78px;overflow:hidden}
+  .badge{display:inline-flex;align-items:center;gap:10px;border:1.5px solid var(--brass);color:#f3d9a6;border-radius:40px;padding:7px 18px;font-size:.74rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:26px}
+  .badge b{color:#fff;font-family:"Palatino Linotype",serif;font-size:1rem;letter-spacing:1px}
+  .hero h1{font-size:clamp(2.2rem,5.2vw,4rem);line-height:1.05;max-width:17ch}
+  .hero p{font-size:1.16rem;max-width:46ch;margin:22px 0 30px;color:#e4f0ee}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .est{position:absolute;right:-20px;bottom:-30px;font-family:"Palatino Linotype",serif;font-size:13rem;color:rgba(255,255,255,.06);font-weight:700;line-height:1;pointer-events:none}
+  /* two paths */
+  .paths{padding:0;margin-top:-42px;position:relative;z-index:5}
+  .pcard-wrap{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .pcard{background:#fff;border-radius:14px;box-shadow:0 18px 40px rgba(10,58,62,.14);border-top:5px solid var(--teal);padding:30px 28px}
+  .pcard.b{border-top-color:var(--brass)}
+  .pcard .tag{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--sage);margin-bottom:8px}
+  .pcard h3{font-size:1.5rem;color:var(--teal-deep);margin-bottom:8px}
+  .pcard p{font-size:.98rem;color:#4a555a;margin-bottom:16px}
+  .pcard .price{font-family:"Palatino Linotype",serif;font-size:1.1rem;color:var(--brass);margin-bottom:16px}
+  .pcard .price span{font-size:.78rem;color:#8a929a;font-family:"Segoe UI",sans-serif}
+  @media(max-width:800px){.pcard-wrap{grid-template-columns:1fr}}
+  /* sections */
+  section{padding:76px 0}
+  .kick{font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--brass);margin-bottom:12px;font-weight:600}
+  h2{font-size:clamp(1.7rem,3.4vw,2.5rem);color:var(--teal-deep);line-height:1.12;margin-bottom:14px}
+  .lead{font-size:1.08rem;max-width:62ch;color:#46525a}
+  /* cottages */
+  .cott{background:#fff}
+  .cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+  .cot{background:var(--cream);border:1px solid #e5d9c1;border-radius:12px;overflow:hidden}
+  .cot .img{height:130px;background:linear-gradient(135deg,#1a6b70,#0f5257);position:relative}
+  .cot .img:after{content:attr(data-l);position:absolute;left:14px;bottom:10px;color:#d9ede9;font-size:.78rem;letter-spacing:.5px}
+  .cot .b{padding:18px}
+  .cot h4{font-family:"Palatino Linotype",serif;font-size:1.15rem;color:var(--teal-deep);margin-bottom:5px}
+  .cot .s{font-size:.8rem;text-transform:uppercase;letter-spacing:1px;color:var(--sage);margin-bottom:10px}
+  .cot ul{list-style:none;font-size:.9rem;color:#4a555a}
+  .cot li{padding:2px 0 2px 18px;position:relative}
+  .cot li:before{content:"·";position:absolute;left:5px;color:var(--brass);font-weight:700;font-size:1.2rem;top:-2px}
+  @media(max-width:800px){.cgrid{grid-template-columns:1fr}}
+  /* seasonal */
+  .season{background:var(--teal-deep);color:#e4f0ee}
+  .ssplit{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+  .season h2{color:#fff}
+  .season .lead{color:#c5ddd9}
+  .facts{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:8px 26px}
+  .fact{display:flex;justify-content:space-between;gap:20px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .fact:last-child{border-bottom:none}
+  .fact .k{color:#9dc4c1;font-size:.92rem}
+  .fact .v{font-family:"Palatino Linotype",serif;color:#fff;font-size:1.05rem;text-align:right}
+  @media(max-width:800px){.ssplit{grid-template-columns:1fr;gap:28px}}
+  /* daytrips */
+  .trips{background:var(--cream-2)}
+  .tgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
+  .trip{background:#fff;border:1px solid #e5d9c1;border-radius:10px;padding:18px}
+  .trip .t{font-family:"Palatino Linotype",serif;font-size:1.05rem;color:var(--teal-deep)}
+  .trip .m{font-size:.8rem;color:var(--sage);margin-top:4px}
+  @media(max-width:800px){.tgrid{grid-template-columns:1fr 1fr}}
+  /* form */
+  .enquire{background:#fff}
+  .fcard{margin-top:34px;background:var(--cream);border:1px solid #e5d9c1;border-radius:18px;padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .fcard .full{grid-column:1/3}
+  label{display:block;font-size:.8rem;color:var(--sage);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+  input,select,textarea{width:100%;padding:12px 14px;border:1px solid #d9cbb0;border-radius:8px;font-size:.96rem;font-family:inherit;background:#fff}
+  textarea{min-height:90px;resize:vertical}
+  @media(max-width:640px){.fcard{grid-template-columns:1fr}.fcard .full{grid-column:1}}
+  /* footer */
+  footer{background:#082c30;color:#a9cbc7;padding:52px 0 28px;font-size:.92rem}
+  .fg{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+  footer h4{font-family:"Palatino Linotype",serif;color:#fff;font-size:1.05rem;margin-bottom:12px}
+  footer a{color:#a9cbc7;text-decoration:none}
+  footer a:hover{color:var(--brass)}
+  .flag{background:#7c2b2b;color:#fff;font-size:.72rem;padding:3px 8px;border-radius:6px;display:inline-block;margin-top:10px}
+  .fnote{border-top:1px solid rgba(255,255,255,.1);margin-top:32px;padding-top:18px;font-size:.8rem;color:#7fa5a1;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  @media(max-width:800px){.fg{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">Docteur's Cottages<small>On the River's Edge · Cape Vincent</small></div>
+    <nav><ul>
+      <li><a href="#cottages">Cottages</a></li>
+      <li><a href="#seasonal">Seasonal Lots</a></li>
+      <li><a href="#trips">Day Trips</a></li>
+      <li><a href="#enquire">Reserve</a></li>
+    </ul></nav>
+    <a href="#enquire" class="btn">Reserve a stay</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="badge">On the St. Lawrence · <b>Since 1935</b></span>
+    <h1>Three generations on the same stretch of river.</h1>
+    <p>Rent a housekeeping cottage by the week, or lease a seasonal lot for your camper — both right on the St. Lawrence, a couple of minutes east of Cape Vincent village.</p>
+    <div class="hero-cta">
+      <a href="#cottages" class="btn">Cottage by the week</a>
+      <a href="#seasonal" class="btn btn-outline">Seasonal lot leasing</a>
+    </div>
+  </div>
+  <div class="est">1935</div>
+</section>
+
+<div class="wrap paths">
+  <div class="pcard-wrap">
+    <div class="pcard">
+      <div class="tag">For a week on the river</div>
+      <h3>Housekeeping Cottages</h3>
+      <p>Five cottages directly on the bank, each with an enclosed porch and a full kitchen. A boat comes with every cabin.</p>
+      <div class="price">Weekly rentals · <span>rates confirmed at booking (placeholder)</span></div>
+      <a href="#cottages" class="btn">See the cottages</a>
+    </div>
+    <div class="pcard b">
+      <div class="tag">For the whole season</div>
+      <h3>Seasonal Campground Lots</h3>
+      <p>Park your seasonal home on the river May through Columbus Day, with dockage for a boat up to 20'.</p>
+      <div class="price">$1,400–$1,600 / season · <span>dockage $500/season, up to 20'</span></div>
+      <a href="#seasonal" class="btn">Lot details</a>
+    </div>
+  </div>
+</div>
+
+<section class="cott" id="cottages">
+  <div class="wrap">
+    <p class="kick">The Cottages</p>
+    <h2>Enclosed porches, the water lapping, ships going by</h2>
+    <p class="lead">Four two-bedroom cottages and one one-bedroom, all on the bank of the St. Lawrence. Each has a screened porch with sliding glass, a full kitchen, and a boat provided free with the cabin. <em>(Nightly/weekly rates to be confirmed with the owner.)</em></p>
+    <div class="cgrid">
+      <div class="cot"><div class="img" data-l="2-bedroom · riverbank"></div><div class="b"><h4>Two-Bedroom Cottage</h4><div class="s">Sleeps ~4 · four available</div><ul><li>Enclosed porch on the water</li><li>Stove, refrigerator, full kitchen</li><li>Boat provided with the cabin</li></ul></div></div>
+      <div class="cot"><div class="img" data-l="1-bedroom · cozy"></div><div class="b"><h4>One-Bedroom Cottage</h4><div class="s">Sleeps ~2 · one available</div><ul><li>Same river view, smaller footprint</li><li>Great for a couple or an angler</li><li>Motor available to rent</li></ul></div></div>
+      <div class="cot"><div class="img" data-l="dockage · river access"></div><div class="b"><h4>River Access &amp; Dockage</h4><div class="s">Every stay</div><ul><li>Fishing &amp; boating at the door</li><li>Swimming access on site</li><li>Free wifi</li></ul></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="season" id="seasonal">
+  <div class="wrap ssplit">
+    <div>
+      <p class="kick" style="color:#f3d9a6">Seasonal Lots</p>
+      <h2>Keep your camper on the river all summer</h2>
+      <p class="lead">Lease an annual lot and settle in from May 1 through Columbus Day weekend. Dockage for your boat, swimming and fishing on site, and the same shoreline families have returned to for decades.</p>
+      <a href="#enquire" class="btn" style="margin-top:20px">Ask about a lot for next season</a>
+    </div>
+    <div class="facts">
+      <div class="fact"><span class="k">Season</span><span class="v">May 1 – Columbus Day</span></div>
+      <div class="fact"><span class="k">Annual lot lease</span><span class="v">$1,400 – $1,600</span></div>
+      <div class="fact"><span class="k">Boat dockage (up to 20')</span><span class="v">$500 / season</span></div>
+      <div class="fact"><span class="k">Off-season boat storage</span><span class="v">nearby</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="trips" id="trips">
+  <div class="wrap">
+    <p class="kick">From the Door</p>
+    <h2>A short drive to the whole Thousand Islands</h2>
+    <div class="tgrid">
+      <div class="trip"><div class="t">Cape Vincent village</div><div class="m">3-minute drive · shops &amp; the ferry</div></div>
+      <div class="trip"><div class="t">Clayton &amp; the boat museum</div><div class="m">~17-minute drive</div></div>
+      <div class="trip"><div class="t">Alexandria Bay &amp; Boldt Castle</div><div class="m">~30-minute drive · boat tours</div></div>
+      <div class="trip"><div class="t">Tibbetts Point Lighthouse</div><div class="m">at the west end of the cape</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="enquire" id="enquire">
+  <div class="wrap">
+    <p class="kick">Reserve</p>
+    <h2>Tell us what you're after — a week, or a season</h2>
+    <p class="lead">Let us know whether you want a cottage week or a seasonal lot, and we'll get back to you with what's open and the rate.</p>
+    <form class="fcard" onsubmit="return false;">
+      <div><label>Name</label><input type="text" placeholder="First &amp; last"></div>
+      <div><label>Email</label><input type="email" placeholder="you@email.com"></div>
+      <div><label>I'm interested in</label><select><option>A cottage by the week</option><option>A seasonal lot lease</option><option>Not sure yet — tell me both</option></select></div>
+      <div><label>Preferred dates / season</label><input type="text" placeholder="e.g. week of Aug 8, or 2027 season"></div>
+      <div class="full"><label>Anything else?</label><textarea placeholder="Party size, a boat to dock, questions…"></textarea></div>
+      <div class="full"><button class="btn" style="width:100%;padding:15px;font-size:1rem">Send my request to Docteur's</button></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fg">
+    <div>
+      <h4>Docteur's Cottages &amp; Seasonal Park</h4>
+      <p>Riverfront housekeeping cottages and seasonal campground lots on the St. Lawrence River — a Cape Vincent family since 1935.</p>
+      <span class="flag">Preview concept — Onyx Rise Media</span>
+    </div>
+    <div>
+      <h4>Find us</h4>
+      <p>33163 NYS Route 12E<br>Cape Vincent, NY 13618</p>
+      <p style="margin-top:8px"><a href="https://www.facebook.com/DocteursCottages">Facebook: Docteur's Cottages</a></p>
+    </div>
+    <div>
+      <h4>Reach us</h4>
+      <p><a href="tel:3156542114">(315) 654-2114</a><br><a href="tel:3157777989">(315) 777-7989</a></p>
+      <p style="margin-top:8px;font-size:.78rem;color:#7fa5a1">Open May 1 – Columbus Day weekend</p>
+    </div>
+  </div>
+  <div class="wrap fnote">
+    <span>© 2026 Docteur's Cottages · Cape Vincent, NY</span>
+    <span>Design preview prepared for the owners — not the live site.</span>
+  </div>
+</footer>
+
+</body>
+</html>

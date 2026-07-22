@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>J&amp;B Stables — Full-Care Horse Boarding on 140 Acres | Freeville, NY</title>
+<meta name="description" content="Full-care horse boarding minutes from Ithaca and Cornell. 90x180 indoor arena, 200x250 outdoor, daily turnout, hay grown on the farm, and 3,000 acres of state-land trails off the back gate.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --field:#33452F; --deep:#1E2A1C; --hay:#C9A44C; --clay:#8C5B3F;
+    --linen:#F7F4EC; --card:#FFFFFF; --rule:#E0DACB; --text:#232A20; --muted:#5E6656;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Karla',system-ui,sans-serif;color:var(--text);background:var(--linen);line-height:1.62}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.15}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+
+  header{background:var(--deep);color:#EDEADF;position:sticky;top:0;z-index:20}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px;flex-wrap:wrap}
+  .brand{font-family:'Fraunces';font-weight:700;font-size:1.3rem}
+  .brand small{display:block;font-family:'Karla';font-weight:500;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--hay)}
+  .navlinks{display:flex;gap:20px}
+  .navlinks a{text-decoration:none;font-size:.92rem;font-weight:500;color:#CFD4C6}
+  .navlinks a:hover{color:var(--hay)}
+  .btn{display:inline-block;text-decoration:none;font-weight:700;border-radius:2px;padding:13px 24px;font-size:.98rem}
+  .btn-hay{background:var(--hay);color:#241C08}
+  .btn-hay:hover{background:#DCB85E}
+  .btn-out{border:1px solid #5E6C56;color:#EDEADF}
+  .btn-sm{padding:9px 16px;font-size:.86rem}
+
+  .hero{background:var(--field);color:#F1EFE4;padding:76px 0 60px;position:relative;overflow:hidden}
+  .hero:after{content:"";position:absolute;inset:auto 0 0 0;height:6px;background:repeating-linear-gradient(90deg,var(--hay) 0 40px,transparent 40px 80px)}
+  .hero .eyebrow{font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--hay);font-weight:700;margin-bottom:16px}
+  .hero h1{font-size:clamp(2rem,4.6vw,3.05rem);font-weight:700;max-width:19ch;margin-bottom:18px}
+  .hero p.sub{max-width:58ch;font-size:1.12rem;color:#D6DBCC;margin-bottom:28px}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+  .facts{margin-top:36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px;max-width:760px}
+  .fact{border-left:2px solid var(--hay);padding-left:14px}
+  .fact b{display:block;font-family:'Fraunces';font-size:1.35rem;color:#fff}
+  .fact span{font-size:.86rem;color:#B9C1AC}
+
+  section{padding:66px 0}
+  .sec-head{margin-bottom:34px;max-width:64ch}
+  .sec-head h2{font-size:clamp(1.5rem,3vw,2.05rem);color:var(--deep);margin-bottom:10px}
+  .sec-head p{color:var(--muted)}
+
+  /* Board packages — the thing the current site hides in a PDF */
+  .boards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+  .board{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:26px;display:flex;flex-direction:column}
+  .board.featured{border:2px solid var(--field);box-shadow:0 10px 30px rgba(30,42,28,.08)}
+  .tag{display:inline-block;background:var(--field);color:#EFECDF;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 9px;border-radius:2px;margin-bottom:12px;align-self:flex-start}
+  .board h3{font-size:1.3rem;color:var(--deep);margin-bottom:6px}
+  .price{font-family:'Fraunces';font-size:2rem;color:var(--clay);margin:8px 0 4px}
+  .price span{font-family:'Karla';font-size:.9rem;color:var(--muted);font-weight:500}
+  .board ul{list-style:none;margin:16px 0 22px;font-size:.95rem}
+  .board li{padding:7px 0 7px 22px;position:relative;border-bottom:1px solid #F0EDE3}
+  .board li:before{content:"✓";position:absolute;left:0;color:var(--field);font-weight:700}
+  .board .btn{margin-top:auto;text-align:center}
+  .ph{background:#FCF6E4;border:1px dashed #D9C48A;color:#6E5A22;font-size:.83rem;padding:11px 13px;margin-top:20px;border-radius:3px}
+
+  /* Facility */
+  .facility{background:var(--deep);color:#DFE3D6}
+  .facility h2{color:#fff}
+  .fac-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px}
+  .fac{border-top:2px solid var(--hay);padding-top:16px}
+  .fac h3{font-size:1.05rem;color:#fff;margin-bottom:7px}
+  .fac p{font-size:.94rem;color:#B7BEAB}
+
+  /* Trails — the differentiator */
+  .trails{background:var(--card);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .trail-cols{display:grid;grid-template-columns:1.15fr 1fr;gap:44px;align-items:center}
+  .trail-cols ul{list-style:none;font-size:.98rem}
+  .trail-cols li{padding:10px 0 10px 24px;position:relative;border-bottom:1px solid var(--rule)}
+  .trail-cols li:before{content:"›";position:absolute;left:4px;color:var(--clay);font-weight:700;font-size:1.1rem}
+  .quotebox{background:var(--linen);border-left:4px solid var(--hay);padding:24px;font-family:'Fraunces';font-size:1.1rem;color:var(--deep)}
+
+  /* Disciplines */
+  .disc{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px}
+  .d{background:var(--card);border:1px solid var(--rule);padding:20px;border-radius:4px}
+  .d h3{font-size:1rem;color:var(--deep);margin-bottom:6px}
+  .d p{font-size:.92rem;color:var(--muted)}
+
+  /* Enquiry */
+  .enq{background:var(--field);color:#EFEFE4}
+  .enq h2{color:#fff}
+  .enq-cols{display:grid;grid-template-columns:1.05fr .95fr;gap:44px}
+  .field-row{margin-bottom:14px}
+  label{display:block;font-size:.82rem;font-weight:700;margin-bottom:5px;color:#DDE3D2}
+  input,select,textarea{width:100%;padding:11px 12px;border:1px solid #5E6C56;border-radius:3px;background:#FAF9F3;color:var(--text);font:inherit;font-size:.95rem}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  button.submit{width:100%;padding:15px;border:0;background:var(--hay);color:#241C08;font-weight:700;font-size:1rem;border-radius:3px;cursor:pointer;font-family:inherit}
+  .contact p{margin-bottom:11px}
+  .contact a{color:var(--hay);font-weight:700;text-decoration:none}
+  .visit{margin-top:22px;background:rgba(0,0,0,.16);border:1px solid #5E6C56;padding:18px;font-size:.93rem}
+
+  footer{background:var(--deep);color:#8B937F;padding:34px 0;font-size:.88rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer a{color:var(--hay);text-decoration:none}
+
+  @media(max-width:820px){
+    .navlinks{display:none}
+    .trail-cols,.enq-cols{grid-template-columns:1fr}
+    section{padding:48px 0}
+    .hero{padding:56px 0 46px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="brand">J&amp;B Stables<small>Freeville, NY · 140 acres</small></div>
+      <div class="navlinks">
+        <a href="#board">Boarding</a>
+        <a href="#facility">Facility</a>
+        <a href="#trails">Trails</a>
+        <a href="#lessons">Lessons &amp; leasing</a>
+        <a href="#visit">Book a visit</a>
+      </div>
+      <a class="btn btn-hay btn-sm" href="#visit">Check stall availability</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Twelve minutes from Cornell · Ringwood Road, Freeville</div>
+    <h1>Your horse can go out every day here. And so can you.</h1>
+    <p class="sub">Full-care boarding on 140 acres, with hay we grow ourselves, an indoor arena that works in February, and a back gate that opens onto 3,000 acres of Hammond Hill state land. No trailering out to ride.</p>
+    <div class="cta-row">
+      <a class="btn btn-hay" href="#visit">Book a barn tour</a>
+      <a class="btn btn-out" href="tel:6072809378">Call Dannielle: (607) 280-9378</a>
+    </div>
+    <div class="facts">
+      <div class="fact"><b>90 × 180</b><span>Indoor arena</span></div>
+      <div class="fact"><b>200 × 250</b><span>Outdoor arena</span></div>
+      <div class="fact"><b>3,000 ac</b><span>State-land trails</span></div>
+      <div class="fact"><b>Daily</b><span>Turnout, every horse</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="board">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>What full board actually includes</h2>
+      <p>Every horse here gets turned out daily, and there are round bales in the paddocks year-round. The hay is grown on this property, so we know exactly what's in it.</p>
+    </div>
+    <div class="boards">
+      <div class="board featured">
+        <span class="tag">Most boarders</span>
+        <h3>Full-care stall board</h3>
+        <div class="price">$525<span> / month</span></div>
+        <ul>
+          <li>Daily turnout — individual or group</li>
+          <li>Free-choice hay, grown on the farm</li>
+          <li>Grain fed to your program</li>
+          <li>Stall cleaned daily, shavings included</li>
+          <li>Blanket on / off with the weather</li>
+          <li>Full use of both arenas and the trail access</li>
+          <li>Farrier and vet held for you if you're at work</li>
+        </ul>
+        <a class="btn btn-hay" href="#visit">Ask about a stall</a>
+      </div>
+      <div class="board">
+        <span class="tag">Outdoor</span>
+        <h3>Pasture / run-in board</h3>
+        <div class="price">Ask<span> — by season</span></div>
+        <ul>
+          <li>Round bales always in the paddock</li>
+          <li>Shelter access</li>
+          <li>Daily eyes-on check</li>
+          <li>Arena and trail privileges included</li>
+        </ul>
+        <a class="btn btn-out" href="#visit">Ask what's open</a>
+      </div>
+      <div class="board">
+        <span class="tag">Short term</span>
+        <h3>Layup &amp; rehab</h3>
+        <div class="price">Ask<span> — case by case</span></div>
+        <ul>
+          <li>Small-paddock or stall rest</li>
+          <li>Meds and wraps to vet instruction</li>
+          <li>Controlled hand-walking</li>
+          <li>Progress reports to you and your vet</li>
+        </ul>
+        <a class="btn btn-out" href="#visit">Talk it through</a>
+      </div>
+    </div>
+    <div class="ph"><strong>Placeholder for review:</strong> $525 stall board is taken from J&amp;B's own stabling intake form. Pasture, layup and lesson rates are shown as "Ask" until Dannielle confirms current numbers — nothing here is invented.</div>
+  </div>
+</section>
+
+<section class="facility" id="facility">
+  <div class="wrap">
+    <div class="sec-head"><h2>The parts of a barn you only notice in January</h2><p style="color:#B7BEAB">A 90×180 indoor is the difference between riding all winter and not riding from December to April. That's most of what people are really shopping for.</p></div>
+    <div class="fac-grid">
+      <div class="fac"><h3>90 × 180 indoor arena</h3><p>Big enough for a real course or a full dressage court, and open when the footing outside is frozen solid.</p></div>
+      <div class="fac"><h3>200 × 250 outdoor arena</h3><p>Room to gallop a line, set a grid, or just get a young horse out of an enclosed space.</p></div>
+      <div class="fac"><h3>Hay grown on the property</h3><p>We cut it here. Round bales stay in the paddocks; free-choice, not rationed.</p></div>
+      <div class="fac"><h3>Daily turnout, no exceptions</h3><p>Horses that live out are sounder and saner. Individual or group depending on your horse.</p></div>
+      <div class="fac"><h3>Room for every discipline</h3><p>Hunters, dressage riders, trail riders and western boarders all keep horses here without stepping on each other.</p></div>
+      <div class="fac"><h3>140 acres of quiet</h3><p>Hill views, no traffic noise, and a drive from campus that takes twelve minutes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="trails" id="trails">
+  <div class="wrap">
+    <div class="trail-cols">
+      <div>
+        <div class="sec-head"><h2>The back gate is the whole point</h2><p>Most boarding barns near Ithaca mean loading up a trailer and driving somewhere to hack out. Here you tack up, walk out, and you're on state land.</p></div>
+        <ul>
+          <li>Direct access to roughly 3,000 acres of state forest trail</li>
+          <li>Ride out after work without hitching a trailer</li>
+          <li>Conditioning hills for endurance and eventing riders</li>
+          <li>Quiet trail work for young or spooky horses</li>
+          <li>Somewhere to go on the days the arena feels small</li>
+        </ul>
+      </div>
+      <div class="quotebox">If you have ever spent a Sunday morning loading a horse into a trailer just to go for a walk in the woods, you already understand what this farm is offering.</div>
+    </div>
+  </div>
+</section>
+
+<section id="lessons">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Lessons, leasing and sales</h2>
+      <p>An important thing to know up front: J&amp;B is not a public trail-ride operation. Lessons are for boarders and for riders leasing a horse here — that's how the barn stays quiet and the horses stay consistent.</p>
+    </div>
+    <div class="disc">
+      <div class="d"><h3>Leasing a horse</h3><p>Ride regularly without buying. Lessees get instruction and full use of the arenas and trails.</p></div>
+      <div class="d"><h3>Lessons for leasers</h3><p>Flat and jump work, tailored to the horse you're riding and where you're trying to get to.</p></div>
+      <div class="d"><h3>Horses for sale</h3><p>Sale horses come through the barn from time to time. Ask what's currently available.</p></div>
+      <div class="d"><h3>Cornell &amp; Ithaca riders</h3><p>Bringing a horse to school? Twelve minutes from campus, with turnout and an indoor.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="enq" id="visit">
+  <div class="wrap">
+    <div class="enq-cols">
+      <div>
+        <div class="sec-head"><h2>Come walk the barn</h2><p style="color:#D6DBCC">Tell us about your horse and what you're looking for. We'll tell you honestly whether we have the right spot — and if we don't, we'll say so.</p></div>
+        <form onsubmit="event.preventDefault();this.querySelector('button.submit').textContent='Thanks — Dannielle will get back to you.';">
+          <div class="two">
+            <div class="field-row"><label for="n">Your name</label><input id="n" required></div>
+            <div class="field-row"><label for="p">Phone</label><input id="p" type="tel" required></div>
+          </div>
+          <div class="field-row"><label for="e">Email</label><input id="e" type="email" required></div>
+          <div class="two">
+            <div class="field-row"><label for="i">I'm asking about</label>
+              <select id="i">
+                <option>Full-care stall board</option>
+                <option>Pasture / run-in board</option>
+                <option>Layup or rehab</option>
+                <option>Leasing a horse</option>
+                <option>Lessons (as a leaser)</option>
+                <option>A horse for sale</option>
+              </select>
+            </div>
+            <div class="field-row"><label for="w">Move-in timing</label>
+              <select id="w"><option>As soon as there's a stall</option><option>Within a month</option><option>Next season</option><option>Just looking for now</option></select>
+            </div>
+          </div>
+          <div class="field-row"><label for="h">About your horse</label><textarea id="h" rows="4" placeholder="Age, breed, discipline, turnout habits, anything we should know"></textarea></div>
+          <button class="submit" type="submit">Request a barn tour</button>
+        </form>
+      </div>
+      <div class="contact">
+        <div class="sec-head"><h2>Reach us directly</h2></div>
+        <p><strong>Owner:</strong> Dannielle Cornelius</p>
+        <p><strong>Phone:</strong> <a href="tel:6072809378">(607) 280-9378</a></p>
+        <p><strong>Email:</strong> <a href="mailto:jandbfreeville@gmail.com">jandbfreeville@gmail.com</a></p>
+        <p><strong>Farm:</strong> 297 Ringwood Road, Freeville, NY 13068</p>
+        <div class="visit">
+          <strong>Visiting:</strong> tours are by appointment — this is a working farm and horses are turned out most of the day. Give us a call or send the form and we'll find a time that suits.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>J&amp;B Stables · 297 Ringwood Road, Freeville, NY 13068 · <a href="tel:6072809378">(607) 280-9378</a></span>
+    <span>Full-care horse boarding · Freeville, Dryden &amp; Ithaca, NY</span>
+  </div>
+</footer>
+
+</body>
+</html>

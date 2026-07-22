@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Premiere Dental Care — Red Hook &amp; Amenia, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#16243f; --navy-2:#1f3358; --gold:#c9a35a; --gold-dk:#b08d44;
+  --ink:#1b2434; --muted:#6a7385; --bg:#fff; --soft:#f6f4ef; --line:#e7e2d6;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
+h1,h2,h3,.logo,.mono{font-family:'Playfair Display',serif}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.btn{display:inline-block;font-family:'Inter';font-weight:600;letter-spacing:.02em;border-radius:4px;padding:14px 28px;font-size:.92rem;cursor:pointer;border:none;transition:.2s}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:var(--gold-dk)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-2)}
+.btn-out{background:transparent;border:1px solid var(--gold);color:var(--gold-dk)}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:80px}
+.logo{font-weight:700;font-size:1.3rem;color:var(--navy);letter-spacing:.01em}
+.logo small{display:block;font-family:'Inter';font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-dk);font-weight:600;margin-top:1px}
+.nav-links{display:flex;gap:32px;font-weight:500;font-size:.93rem}
+.nav-links a:hover{color:var(--gold-dk)}
+
+/* HERO archetype B: centered hero (kicker + monogram) */
+.hero{text-align:center;padding:88px 0 80px;background:radial-gradient(circle at 50% 0%,var(--soft),#fff 70%)}
+.mono-badge{width:84px;height:84px;margin:0 auto 26px;border-radius:50%;border:2px solid var(--gold);display:grid;place-items:center;font-family:'Playfair Display';font-size:2rem;color:var(--navy);background:#fff;box-shadow:0 8px 22px rgba(22,36,63,.08)}
+.kicker{display:inline-block;font-weight:600;font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:18px}
+.hero h1{font-size:3.2rem;line-height:1.12;color:var(--navy);max-width:760px;margin:0 auto 20px}
+.hero p.sub{font-size:1.13rem;color:var(--muted);max-width:560px;margin:0 auto 32px}
+.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:46px}
+.trust{display:flex;gap:0;justify-content:center;flex-wrap:wrap;max-width:680px;margin:0 auto}
+.trust div{padding:0 34px;border-right:1px solid var(--line)}
+.trust div:last-child{border-right:none}
+.trust b{font-family:'Playfair Display';font-size:1.7rem;color:var(--gold-dk);display:block}
+.trust small{color:var(--muted);font-size:.85rem}
+
+/* SECTION */
+.sec{padding:84px 0}
+.sec-head{text-align:center;max-width:620px;margin:0 auto 52px}
+.sec-head h2{font-size:2.3rem;color:var(--navy);margin:14px 0 12px}
+.sec-head p{color:var(--muted)}
+
+/* SERVICE MENU itemized */
+.menu{max-width:760px;margin:0 auto}
+.mrow{display:flex;align-items:baseline;gap:18px;padding:24px 0;border-bottom:1px solid var(--line)}
+.mrow .num{font-family:'Playfair Display';font-size:1.2rem;color:var(--gold);width:36px;flex-shrink:0}
+.mrow .body{flex:1}
+.mrow h3{font-size:1.25rem;color:var(--navy);margin-bottom:4px}
+.mrow p{color:var(--muted);font-size:.95rem}
+
+/* FEATURE split image */
+.feature{background:var(--navy);color:#fff}
+.feature-grid{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;min-height:440px}
+.feature-img{background:linear-gradient(150deg,rgba(22,36,63,.28),rgba(201,163,90,.14)),url('https://images.unsplash.com/photo-1609840114035-3c981b782dfc?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:var(--navy-2)}
+.feature-txt{padding:64px 56px;display:flex;flex-direction:column;justify-content:center}
+.feature-txt .kicker{color:var(--gold)}
+.feature-txt h2{font-size:2.1rem;margin:12px 0 18px;color:#fff}
+.feature-txt p{opacity:.85;margin-bottom:24px}
+.cred{list-style:none}
+.cred li{display:flex;gap:12px;margin-bottom:14px;align-items:flex-start}
+.cred .d{color:var(--gold);font-size:1.1rem;line-height:1.3}
+
+/* IMAGE STRIP thin */
+.strip{display:grid;grid-template-columns:repeat(5,1fr);height:170px}
+.s1{background:linear-gradient(rgba(22,36,63,.25),rgba(22,36,63,.25)),url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:var(--navy)}
+.s2{background:linear-gradient(rgba(201,163,90,.2),rgba(0,0,0,.15)),url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:var(--gold)}
+.s3{background:linear-gradient(rgba(22,36,63,.3),rgba(22,36,63,.3)),url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:var(--navy-2)}
+.s4{background:linear-gradient(rgba(201,163,90,.2),rgba(0,0,0,.15)),url('https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:var(--gold)}
+.s5{background:linear-gradient(rgba(22,36,63,.3),rgba(22,36,63,.3)),url('https://images.unsplash.com/photo-1609840114035-3c981b782dfc?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:var(--navy)}
+
+/* LOCATIONS + CONTACT panel */
+.locs{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:44px}
+.loc{border:1px solid var(--line);border-radius:10px;padding:30px;background:var(--soft)}
+.loc h3{font-size:1.3rem;color:var(--navy);margin-bottom:8px}
+.loc .tag{display:inline-block;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dk);font-weight:600;margin-bottom:12px}
+.loc p{color:var(--muted);font-size:.93rem;margin-bottom:6px}
+.panel{border:1px solid var(--line);border-radius:14px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr}
+.panel-l{background:var(--navy);color:#fff;padding:44px}
+.panel-l h2{font-size:1.7rem;margin-bottom:10px}
+.panel-l p.lead{opacity:.82;margin-bottom:24px}
+.info-row{display:flex;gap:13px;margin-bottom:18px}
+.info-row .ic{width:38px;height:38px;border-radius:9px;background:rgba(255,255,255,.1);display:grid;place-items:center;flex-shrink:0;color:var(--gold)}
+.info-row b{font-family:'Inter';font-weight:600;display:block}
+.info-row small{opacity:.8;font-size:.87rem}
+.form{padding:44px}
+.form h3{color:var(--navy);font-size:1.4rem;margin-bottom:16px}
+.form label{display:block;font-size:.83rem;font-weight:600;margin-bottom:6px}
+.form input,.form select,.form textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:6px;font-family:inherit;font-size:.94rem;margin-bottom:14px;background:var(--soft)}
+.form textarea{resize:vertical;min-height:76px}
+.thanks{display:none;text-align:center;padding:36px 8px}
+.thanks .big{font-size:2.4rem;color:var(--gold)}
+.thanks h3{color:var(--navy);margin:10px 0 8px}
+
+/* FOOTER */
+footer{background:var(--navy);color:#fff;padding:48px 0 30px;margin-top:0}
+.foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;align-items:center}
+.foot-logo{font-family:'Playfair Display';font-weight:700;font-size:1.3rem}
+.foot-sub{opacity:.78;font-size:.9rem;margin-top:6px}
+.foot-credit{border-top:1px solid rgba(255,255,255,.14);margin-top:30px;padding-top:20px;text-align:center;opacity:.68;font-size:.85rem}
+
+@media(max-width:860px){
+  .nav-links{display:none}
+  .hero h1{font-size:2.3rem}
+  .trust div{padding:8px 22px}
+  .feature-grid{grid-template-columns:1fr}
+  .feature-img{min-height:240px}
+  .feature-txt{padding:44px 30px}
+  .strip{grid-template-columns:repeat(2,1fr);height:auto;grid-auto-rows:120px}
+  .s5{display:none}
+  .locs{grid-template-columns:1fr}
+  .panel{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap nav-in">
+    <div class="logo">Premiere Dental Care<small>Cosmetic · Family · Implant</small></div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#feature">Our Doctors</a>
+      <a href="#locations">Locations</a>
+      <a href="#contact">Request Visit</a>
+    </div>
+    <a class="btn btn-navy" href="#contact">Request Appointment</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="mono-badge">PD</div>
+    <span class="kicker">Red Hook &amp; Amenia, New York</span>
+    <h1>Refined dentistry from Dr. Cernasov &amp; Dr. Cheung</h1>
+    <p class="sub">Cosmetic, family, and implant care delivered with a steady hand and an eye for detail — across two convenient Hudson Valley locations.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-gold" href="#contact">Request an Appointment</a>
+      <a class="btn btn-out" href="#services">Explore Services</a>
+    </div>
+    <div class="trust">
+      <div><b>Two</b><small>Locations to serve you</small></div>
+      <div><b>Implants</b><small>Restorative expertise</small></div>
+      <div><b>Cosmetic</b><small>Natural, lasting results</small></div>
+    </div>
+  </div>
+</header>
+
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Our Services</span>
+      <h2>Considered care, beautifully done</h2>
+      <p>A focused menu of treatments, each performed with precision and patience.</p>
+    </div>
+    <div class="menu">
+      <div class="mrow"><span class="num">01</span><div class="body"><h3>Cosmetic Dentistry</h3><p>Veneers, bonding, and whitening designed to look natural and suit your features — never overdone.</p></div></div>
+      <div class="mrow"><span class="num">02</span><div class="body"><h3>Dental Implants</h3><p>Permanent, stable replacements for missing teeth, restoring both function and a complete smile.</p></div></div>
+      <div class="mrow"><span class="num">03</span><div class="body"><h3>Family Dentistry</h3><p>Cleanings, exams, and preventive care for every member of the household, all ages welcome.</p></div></div>
+      <div class="mrow"><span class="num">04</span><div class="body"><h3>Crowns &amp; Restorations</h3><p>Custom-fit crowns and restorations that protect and rebuild teeth for the long term.</p></div></div>
+      <div class="mrow"><span class="num">05</span><div class="body"><h3>Smile Consultations</h3><p>A thoughtful plan built around your goals, with options explained clearly before anything begins.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="feature" id="feature">
+  <div class="feature-grid">
+    <div class="feature-img"></div>
+    <div class="feature-txt">
+      <span class="kicker">Dr. Cernasov &amp; Dr. Cheung</span>
+      <h2>Two doctors, one standard of care</h2>
+      <p>Patients across Red Hook and Amenia return because the work is meticulous and the experience is calm. You'll always know what's happening and why.</p>
+      <ul class="cred">
+        <li><span class="d">&#9670;</span><span>Cosmetic and implant dentistry as a primary focus</span></li>
+        <li><span class="d">&#9670;</span><span>Unhurried appointments and clear, honest planning</span></li>
+        <li><span class="d">&#9670;</span><span>Two locations for easier, closer-to-home scheduling</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true">
+  <div class="s1"></div><div class="s2"></div><div class="s3"></div><div class="s4"></div><div class="s5"></div>
+</div>
+
+<section class="sec" id="locations">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Where to Find Us</span>
+      <h2>Two Hudson Valley locations</h2>
+    </div>
+    <div class="locs">
+      <div class="loc"><span class="tag">Primary Office</span><h3>Red Hook</h3><p>Red Hook, NY</p><p>Phone: (845) 876-2628</p><p>Cosmetic, family &amp; implant dentistry</p></div>
+      <div class="loc"><span class="tag">Second Location</span><h3>Amenia</h3><p>Amenia, NY</p><p>By appointment</p><p>Use the request form to schedule here</p></div>
+    </div>
+    <div class="panel" id="contact">
+      <div class="panel-l">
+        <h2>Request an appointment</h2>
+        <p class="lead">Tell us your preferred location and we'll be in touch to confirm.</p>
+        <div class="info-row"><span class="ic">&#128222;</span><div><b>Phone</b><small>(845) 876-2628</small></div></div>
+        <div class="info-row"><span class="ic">&#128205;</span><div><b>Locations</b><small>Red Hook &amp; Amenia, NY</small></div></div>
+        <div class="info-row"><span class="ic">&#128336;</span><div><b>Hours</b><small>Mon–Fri 9am–5pm · By appointment</small></div></div>
+      </div>
+      <div class="form">
+        <form id="apptForm" onsubmit="event.preventDefault();document.getElementById('apptForm').style.display='none';document.getElementById('thanks').style.display='block';">
+          <h3>Tell us a little</h3>
+          <label>Your name</label><input required placeholder="First and last name">
+          <label>Phone or email</label><input required placeholder="How should we reach you?">
+          <label>Preferred location</label>
+          <select><option>Red Hook</option><option>Amenia</option><option>Either works</option></select>
+          <label>What can we help with?</label>
+          <select><option>Cosmetic consult</option><option>Dental implants</option><option>Family / cleaning</option><option>Crown / restoration</option></select>
+          <label>Notes</label><textarea placeholder="Anything that helps us prepare"></textarea>
+          <button class="btn btn-navy" type="submit" style="width:100%">Send Request</button>
+        </form>
+        <div class="thanks" id="thanks">
+          <div class="big">&#9670;</div>
+          <h3>Thank you</h3>
+          <p>Your request has been received. Our team will reach out to confirm your appointment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="foot-logo">Premiere Dental Care</div>
+      <div class="foot-sub">Dr. Cernasov &amp; Dr. Cheung · Red Hook &amp; Amenia, NY · (845) 876-2628</div>
+    </div>
+    <a class="btn btn-gold" href="#contact">Request Appointment</a>
+  </div>
+  <div class="wrap foot-credit">Website preview by Onyx Rise Media</div>
+</footer>
+</body>
+</html>

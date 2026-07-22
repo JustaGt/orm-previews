@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bryan's Small Engine Repair — Norwood, NY | Mowers, Snow Blowers, Chainsaws & More</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--steel:#3b4048;--dark:#23272e;--orange:#e8710a;--wood:#c9a26b;--paper:#f4f1ec;--white:#ffffff;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--dark);background:var(--paper);line-height:1.6;}
+  h1,h2,h3{font-family:'Archivo',sans-serif;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px;}
+  /* top bar */
+  .topbar{background:var(--dark);color:#cfd4da;font-size:.9rem;padding:8px 0;}
+  .topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;}
+  .topbar a{color:var(--white);text-decoration:none;font-weight:600;}
+  /* hero */
+  header{background:linear-gradient(135deg,var(--steel) 0%,var(--dark) 100%);color:var(--white);padding:70px 0 60px;position:relative;overflow:hidden;}
+  header::after{content:"";position:absolute;right:-60px;top:-40px;width:340px;height:340px;border:16px dashed rgba(232,113,10,.25);border-radius:50%;}
+  .kicker{display:inline-block;background:var(--orange);color:var(--white);font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:3px;margin-bottom:18px;}
+  header h1{font-size:clamp(1.9rem,4.5vw,3.1rem);font-weight:900;line-height:1.12;max-width:640px;}
+  header p.sub{margin:18px 0 28px;font-size:1.15rem;color:#dfe3e8;max-width:560px;}
+  .btn{display:inline-block;background:var(--orange);color:var(--white);font-weight:700;padding:14px 28px;border-radius:4px;text-decoration:none;font-size:1.05rem;}
+  .btn.ghost{background:transparent;border:2px solid var(--white);margin-left:10px;}
+  .hero-strip{margin-top:34px;display:flex;gap:26px;flex-wrap:wrap;font-size:.95rem;color:#cfd4da;}
+  .hero-strip b{color:var(--white);}
+  /* seasons */
+  .seasons{display:grid;grid-template-columns:1fr 1fr;background:var(--white);}
+  .season{padding:40px 34px;}
+  .season.mow{border-right:1px solid #e4ded4;}
+  .season h3{font-size:1.25rem;margin-bottom:8px;}
+  .season.mow h3{color:#3a7d2c;} .season.snow h3{color:#2c5f7d;}
+  /* services */
+  section.services{padding:64px 0;}
+  section.services h2, section.dealer h2, section.trust h2, section.visit h2{font-size:2rem;font-weight:900;margin-bottom:10px;}
+  .lead{color:#5a5f66;max-width:640px;margin-bottom:36px;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;}
+  .card{background:var(--white);border-top:4px solid var(--orange);padding:22px;border-radius:0 0 6px 6px;box-shadow:0 2px 6px rgba(35,39,46,.07);}
+  .card h3{font-size:1.05rem;margin-bottom:6px;}
+  .card p{font-size:.95rem;color:#5a5f66;}
+  /* dealer */
+  section.dealer{background:var(--dark);color:var(--white);padding:64px 0;}
+  section.dealer .lead{color:#c3c9d1;}
+  .dealer-flex{display:flex;gap:36px;flex-wrap:wrap;align-items:center;}
+  .dealer-box{flex:1;min-width:260px;background:#2e333b;border-left:5px solid var(--wood);padding:26px;}
+  .dealer-box li{margin:8px 0 8px 18px;color:#dfe3e8;}
+  /* trust */
+  section.trust{padding:64px 0;}
+  .badges{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;}
+  .badge{background:var(--white);padding:24px;text-align:center;border-radius:6px;box-shadow:0 2px 6px rgba(35,39,46,.07);}
+  .badge .big{font-family:'Archivo';font-size:1.9rem;font-weight:900;color:var(--orange);}
+  .badge p{font-size:.92rem;color:#5a5f66;margin-top:4px;}
+  .note{font-size:.8rem;color:#8a8f96;margin-top:14px;}
+  /* visit + form */
+  section.visit{background:var(--white);padding:64px 0;}
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;}
+  table.hours{width:100%;border-collapse:collapse;margin-top:14px;}
+  table.hours td{padding:9px 6px;border-bottom:1px solid #ece7de;font-size:.98rem;}
+  table.hours td:last-child{text-align:right;font-weight:600;}
+  form{display:flex;flex-direction:column;gap:12px;}
+  input,select,textarea{padding:12px;border:1px solid #d5cfc4;border-radius:4px;font-family:inherit;font-size:1rem;background:var(--paper);}
+  textarea{min-height:96px;}
+  form button{background:var(--orange);color:var(--white);border:none;padding:14px;font-weight:700;font-size:1.05rem;border-radius:4px;cursor:pointer;}
+  footer{background:var(--dark);color:#9aa0a8;text-align:center;padding:26px 20px;font-size:.9rem;}
+  @media(max-width:760px){.seasons,.visit-grid{grid-template-columns:1fr;}.season.mow{border-right:none;border-bottom:1px solid #e4ded4;}.btn.ghost{margin-left:0;margin-top:10px;}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>2899 County Route 49, Norwood, NY 13668</span>
+  <span>Call or fax ahead: <a href="tel:13153847009">(315) 384-7009</a> · Fax (315) 384-7011</span>
+</div></div>
+
+<header><div class="wrap">
+  <span class="kicker">Small Engine Repair · Norwood, NY</span>
+  <h1>If it has a small engine, it leaves this shop running.</h1>
+  <p class="sub">Chainsaws, mowers, snow blowers, trimmers, tillers, generators, leaf blowers — repaired right here on County Route 49 since 2012. Drop it off, get a straight answer, get back to work.</p>
+  <a class="btn" href="#dropoff">Request a Repair Drop-Off</a>
+  <a class="btn ghost" href="tel:13153847009">Call (315) 384-7009</a>
+  <div class="hero-strip">
+    <span><b>A+</b> BBB rating</span>
+    <span><b>4.6★</b> across 59 local reviews</span>
+    <span><b>25+ yrs</b> on small engines</span>
+  </div>
+</div></header>
+
+<div class="seasons">
+  <div class="season mow">
+    <h3>Mowing season backed up?</h3>
+    <p>A mower that won't start in May doesn't get better by June. Bring it in early — carb cleanings, blade sharpening, and no-start diagnostics move fastest before the first cut.</p>
+  </div>
+  <div class="season snow">
+    <h3>Snow blower ready for lake-effect?</h3>
+    <p>Norwood winters don't wait for a repair queue. Fall service — auger, belts, fresh fuel system — means the machine starts the morning the first storm ends.</p>
+  </div>
+</div>
+
+<section class="services"><div class="wrap">
+  <h2>What comes across the bench</h2>
+  <p class="lead">Straight repairs on the equipment a North Country household actually runs — with an honest call on fix-versus-replace before any work starts.</p>
+  <div class="grid">
+    <div class="card"><h3>Lawn Mowers & Riders</h3><p>No-starts, carburetors, decks, belts, tune-ups, blade sharpening while you wait when the bench allows.</p></div>
+    <div class="card"><h3>Snow Blowers</h3><p>Auger and drive repairs, shear pins, cables, pre-season service so it starts at 5 a.m. in January.</p></div>
+    <div class="card"><h3>Chainsaws & Trimmers</h3><p>Chain sharpening, bar service, fuel-system cleanouts for saws that sat over the winter.</p></div>
+    <div class="card"><h3>Generators</h3><p>The machine you can't afford to find out about during an outage — load testing and carb service.</p></div>
+    <div class="card"><h3>Tillers & Leaf Blowers</h3><p>Tines, starters, ignition — seasonal gear fixed before its season, not after.</p></div>
+    <div class="card"><h3>Saw & Blade Sharpening</h3><p>Mower blades, saw chains, and shop blades brought back to a working edge.</p></div>
+  </div>
+</div></section>
+
+<section class="dealer"><div class="wrap">
+  <h2>Authorized Big Dog Mower Dealer</h2>
+  <p class="lead">When a repair stops making sense, you don't have to drive to a big-box in Watertown. Bryan's carries Big Dog zero-turns and mowers for yards from village lots to back forties.</p>
+  <div class="dealer-flex">
+    <div class="dealer-box">
+      <ul>
+        <li>Residential and commercial-duty models on the lot</li>
+        <li>Set up, adjusted, and test-run before you take it home</li>
+        <li>Serviced afterward by the same shop that sold it</li>
+        <li>Trade honest fix-or-replace advice — not a sales pitch</li>
+      </ul>
+    </div>
+    <div style="flex:1;min-width:240px;">
+      <p style="font-size:1.1rem;color:#dfe3e8;">Buying a mower from the person who'll be fixing it for the next ten years is the oldest warranty there is.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="trust"><div class="wrap">
+  <h2>Why Norwood keeps coming back</h2>
+  <p class="lead">A local partnership, not a franchise counter — the same hands on every machine since 2012.</p>
+  <div class="badges">
+    <div class="badge"><div class="big">A+</div><p>BBB rating, file open since 2017</p></div>
+    <div class="badge"><div class="big">2012</div><p>Serving Norwood, Potsdam & Massena since</p></div>
+    <div class="badge"><div class="big">4.6★</div><p>59 reviews from North Country neighbors</p></div>
+    <div class="badge"><div class="big">25+</div><p>Years of small-engine experience</p></div>
+  </div>
+  <p class="note">Review count and rating as listed on Birdeye; verify current figures before publishing.</p>
+</div></section>
+
+<section class="visit" id="dropoff"><div class="wrap">
+  <div class="visit-grid">
+    <div>
+      <h2>Hours & location</h2>
+      <p class="lead" style="margin-bottom:0;">2899 County Route 49, Norwood — ten minutes off Route 56, between Potsdam and Massena.</p>
+      <table class="hours">
+        <tr><td>Monday – Friday</td><td>8:00 am – 5:00 pm</td></tr>
+        <tr><td>Saturday</td><td>8:00 am – 12:00 pm</td></tr>
+        <tr><td>Sunday</td><td>Closed</td></tr>
+      </table>
+      <p style="margin-top:16px;font-size:.95rem;color:#5a5f66;">[Hours as directory-listed — confirm before publishing]</p>
+    </div>
+    <div>
+      <h2>Tell us what's broken</h2>
+      <form>
+        <input type="text" placeholder="Name" required>
+        <input type="tel" placeholder="Phone" required>
+        <select required>
+          <option value="">What needs work?</option>
+          <option>Lawn mower / rider</option>
+          <option>Snow blower</option>
+          <option>Chainsaw / trimmer</option>
+          <option>Generator</option>
+          <option>Tiller / leaf blower</option>
+          <option>Blade or chain sharpening</option>
+          <option>Interested in a Big Dog mower</option>
+        </select>
+        <textarea placeholder="What's it doing (or not doing)?"></textarea>
+        <button type="submit">Send Drop-Off Request</button>
+      </form>
+    </div>
+  </div>
+</div></section>
+
+<footer>Bryan's Small Engine Repair · 2899 County Route 49, Norwood, NY 13668 · (315) 384-7009</footer>
+
+</body>
+</html>

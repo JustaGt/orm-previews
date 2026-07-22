@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spencer's Gladiolus — Perry, NY | Field-Grown Glads & Made-to-Order Arrangements</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fffaf2; --field:#3f6b46; --field-d:#2f5135; --leaf:#8db36a;
+    --fuchsia:#d23a7c; --coral:#ef6a4a; --marigold:#f4a72c; --violet:#7d5bb0; --plum:#52214a;
+    --ink:#3a2f38; --soft:#7a6d76; --line:#efe2d6;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Karla',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+  h1,h2,h3,.disp{font-family:'Playfair Display',Georgia,serif;line-height:1.08}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  /* season ribbon */
+  .ribbon{background:linear-gradient(90deg,var(--fuchsia),var(--coral),var(--marigold),var(--violet));
+    color:#fff;text-align:center;padding:8px;font-weight:700;font-size:.9rem;letter-spacing:.4px}
+  /* hero */
+  .hero{position:relative;padding:72px 0 64px;background:var(--cream);overflow:hidden}
+  /* glad spikes */
+  .spikes{position:absolute;top:0;bottom:0;right:-10px;width:220px;display:flex;gap:14px;justify-content:flex-end;opacity:.9}
+  .spike{width:30px;border-radius:16px 16px 0 0;align-self:flex-end;
+    background-image:radial-gradient(circle at 50% 14%,#fff6 0 5px,transparent 6px);
+    background-size:30px 34px;background-repeat:repeat-y}
+  .s1{height:74%;background-color:var(--fuchsia)}
+  .s2{height:90%;background-color:var(--coral)}
+  .s3{height:62%;background-color:var(--marigold)}
+  .s4{height:82%;background-color:var(--violet)}
+  .hero .wrap{position:relative;z-index:2}
+  .kicker{display:inline-block;color:var(--field-d);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.8rem;
+    border-bottom:2px solid var(--marigold);padding-bottom:3px}
+  .hero h1{font-size:clamp(2.5rem,6.4vw,4.4rem);font-weight:700;margin:18px 0 8px;max-width:14ch;color:var(--plum)}
+  .hero h1 em{font-style:italic;color:var(--fuchsia)}
+  .hero p{font-size:1.2rem;max-width:520px;color:#5d4f59;margin-bottom:26px}
+  .btn{display:inline-block;text-decoration:none;font-weight:700;padding:14px 28px;border-radius:40px;font-size:1rem}
+  .btn.f{background:var(--fuchsia);color:#fff;box-shadow:0 6px 0 #a82a60}
+  .btn.g{background:transparent;border:2px solid var(--field);color:var(--field-d);margin-left:8px}
+  /* season clock */
+  .season{background:var(--field);color:#fff}
+  .season .inner{display:grid;grid-template-columns:1fr 1.3fr;gap:30px;align-items:center}
+  .clock{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);border-radius:16px;padding:26px;text-align:center}
+  .clock .big{font-family:'Playfair Display',serif;font-size:2.4rem;color:var(--marigold);font-weight:700;line-height:1.1}
+  .clock .sub{font-size:.95rem;color:#e7f0e2;margin-top:6px}
+  .season h2{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:700;color:#fff}
+  .season p{color:#dde9d6;font-size:1.08rem;margin-top:10px}
+  .season .days{margin-top:14px;font-weight:700;color:var(--marigold)}
+  /* how it works */
+  section{padding:62px 0}
+  .head{text-align:center;max-width:600px;margin:0 auto}
+  .eyebrow{color:var(--fuchsia);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.8rem}
+  h2{font-size:clamp(1.8rem,4.2vw,2.7rem);font-weight:700;margin:8px 0 10px;color:var(--plum)}
+  .head p{color:var(--soft);font-size:1.08rem}
+  .three{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:36px}
+  .stand{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;border-top:6px solid var(--coral)}
+  .stand:nth-child(2){border-top-color:var(--marigold)}
+  .stand:nth-child(3){border-top-color:var(--violet)}
+  .stand .num{font-family:'Playfair Display',serif;font-weight:700;font-size:1.4rem;color:var(--fuchsia)}
+  .stand h3{font-size:1.2rem;margin:6px 0 6px;color:var(--ink)}
+  .stand p{color:var(--soft);font-size:.97rem}
+  /* arrangements */
+  .arr{background:linear-gradient(180deg,#fff,#fdf3ea)}
+  .arr-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center;margin-top:14px}
+  .arr ul{list-style:none;margin-top:18px}
+  .arr li{padding:10px 0;border-bottom:1px dashed var(--line);font-size:1.05rem;display:flex;gap:12px;align-items:center}
+  .arr li:before{content:"❀";color:var(--fuchsia);font-size:1.1rem}
+  .arr .card{background:var(--plum);color:#fff;border-radius:18px;padding:30px}
+  .arr .card h3{font-size:1.5rem;color:#fff;margin-bottom:8px}
+  .arr .card p{color:#e9d9e6;margin-bottom:18px}
+  .arr .card a{display:block;background:var(--marigold);color:#4a2a00;text-align:center;font-weight:700;
+    padding:14px;border-radius:40px;text-decoration:none}
+  /* colors strip */
+  .colors{background:var(--cream)}
+  .swatches{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
+  .sw{padding:9px 18px;border-radius:30px;color:#fff;font-weight:700;font-size:.92rem}
+  .ph{background:#fff3cf;color:#7a5a00;font-size:.72rem;padding:2px 7px;border-radius:4px;font-weight:700}
+  /* visit */
+  .visit{background:var(--field-d);color:#fff;text-align:center}
+  .visit h2{color:#fff}
+  .visit .addr{font-size:1.25rem;font-family:'Playfair Display',serif;margin:10px 0 4px}
+  .visit .call{display:inline-block;background:var(--fuchsia);color:#fff;font-weight:700;text-decoration:none;
+    padding:14px 32px;border-radius:40px;margin-top:18px;font-size:1.05rem;box-shadow:0 6px 0 #a82a60}
+  .visit .meta{color:#cfe0c8;margin-top:16px;font-size:.95rem}
+  footer{background:#2a1f28;color:#cdbcc8;text-align:center;padding:32px 0;font-size:.9rem}
+  footer .disp{color:var(--marigold);font-size:1.25rem;margin-bottom:6px}
+  @media(max-width:760px){.season .inner{grid-template-columns:1fr}.arr-grid{grid-template-columns:1fr}.spikes{opacity:.35}.btn.g{margin-left:0;margin-top:10px}}
+</style>
+</head>
+<body>
+<div class="ribbon">Roadside stand open mid-July through September · 10–6 daily · 6496 Oatka Road, Perry</div>
+
+<header class="hero">
+  <div class="spikes"><div class="spike s1"></div><div class="spike s2"></div><div class="spike s3"></div><div class="spike s4"></div></div>
+  <div class="wrap">
+    <span class="kicker">Field-grown gladiolus · Perry, NY</span>
+    <h1>A roadside wall of <em>glads</em>, cut this morning.</h1>
+    <p>John and Norma Spencer grow gladiolus by the field off Oatka Road — fresh stems by the armful, plus vases, baskets and arrangements made up on request.</p>
+    <a class="btn f" href="#arrangements">Order an arrangement</a>
+    <a class="btn g" href="#visit">Plan a stop</a>
+  </div>
+</header>
+
+<section class="season">
+  <div class="wrap">
+    <div class="inner">
+      <div class="clock">
+        <div class="big">Mid-July<br>→ September</div>
+        <div class="sub">The glads only bloom for a short summer run — here's the window.</div>
+      </div>
+      <div>
+        <h2>A short season, worth catching</h2>
+        <p>Gladiolus come on strong in mid-summer and they don't last. When the field's in bloom, the stand fills with color daily — and when the frost comes, that's the year. Catch it while it's open.</p>
+        <p class="days">Open daily 10–6, mid-July through September</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">How the stand works</p>
+      <h2>Pull over, pick your color, take them home</h2>
+      <p>A simple roadside stand on a 300-acre family farm. No florist markup — just fresh-cut spikes by the stem.</p>
+    </div>
+    <div class="three">
+      <div class="stand"><div class="num">1</div><h3>Find the stand</h3><p>The color display sits right at 6496 Oatka Road, just outside the Village of Perry near Silver Lake.</p></div>
+      <div class="stand"><div class="num">2</div><h3>Pick your stems</h3><p>Choose the colors you like by the stem, or have us bunch you a mixed armful on the spot.</p></div>
+      <div class="stand"><div class="num">3</div><h3>Want it arranged?</h3><p>Ask and we'll make up a vase, basket or bouquet — call ahead for anything bigger.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="arr" id="arrangements">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Made to request</p>
+      <h2>Arrangements for the moments that matter</h2>
+      <p>Beyond the stand, the Spencers make up arrangements to order — call ahead and tell us the occasion.</p>
+    </div>
+    <div class="arr-grid">
+      <div>
+        <ul>
+          <li>Vases &amp; baskets made up while you wait</li>
+          <li>Bouquets for a birthday, anniversary or "just because"</li>
+          <li>Wedding &amp; shower flowers in your colors</li>
+          <li>Funeral &amp; memorial arrangements, handled with care</li>
+          <li>Church, banquet &amp; event flowers by the batch</li>
+        </ul>
+        <p style="margin-top:16px;font-size:.92rem;color:var(--soft)"><span class="ph">PLACEHOLDER</span> confirm how far ahead to order for large events &amp; any minimums.</p>
+      </div>
+      <div class="card">
+        <h3>Planning an event?</h3>
+        <p>Tell us your date, your colors and how many — we'll cut fresh and have it ready.</p>
+        <a href="tel:5852373581">Call (585) 237-3581</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="colors">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">What's in the field</p>
+      <h2>Colors that change through the season</h2>
+      <p>Glads bloom in waves, so the colors out front shift week to week all summer.</p>
+    </div>
+    <div class="swatches">
+      <span class="sw" style="background:var(--fuchsia)">Pink &amp; rose</span>
+      <span class="sw" style="background:var(--coral)">Coral &amp; salmon</span>
+      <span class="sw" style="background:var(--marigold);color:#4a2a00">Yellow &amp; gold</span>
+      <span class="sw" style="background:var(--violet)">Purple &amp; violet</span>
+      <span class="sw" style="background:#b23030">Red</span>
+      <span class="sw" style="background:#6e6e6e">White &amp; cream</span>
+    </div>
+    <p style="text-align:center;margin-top:18px;font-size:.9rem;color:var(--soft)"><span class="ph">PLACEHOLDER</span> swap in the actual varieties/colors you grow if you'd like them named.</p>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--marigold)">Come see the field</p>
+    <h2>Find the stand on Oatka Road</h2>
+    <p class="addr">6496 Oatka Road · Perry, NY 14530</p>
+    <p style="color:#cfe0c8">A few minutes from Silver Lake and Letchworth — an easy stop on a summer drive.</p>
+    <a class="call" href="tel:5852373581">Call (585) 237-3581</a>
+    <p class="meta">Open daily 10–6, mid-July through September · Grown on the Spencer family farm</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="disp">Spencer's Gladiolus</div>
+    <p>6496 Oatka Road, Perry, NY 14530 · (585) 237-3581 · Seasonal: mid-July–September</p>
+    <p style="margin-top:10px;font-size:.78rem;color:#8f7d8a">Preview concept prepared by Onyx Rise Media for review. Season dates, hours and event lead-times to be confirmed by the owner.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Circle R Fruit Farms — Waterport, NY | Farm Market, Ice Cream & Live Music on Roosevelt Hwy</title>
+<meta name="description" content="Roadside farm market in Waterport, NY: apples and sweet corn picked down the road, soft-serve and hard ice cream, a grill food truck, Amish baked goods and honey, and live music on summer weekends. Right on Roosevelt Highway (Route 18).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --apple:#c43a32;       /* apple red */
+  --apple-deep:#9c2a24;
+  --leaf:#3e7a45;        /* orchard green */
+  --leaf-deep:#2c5a32;
+  --cream:#fbf4e6;       /* market cream */
+  --butter:#f6c453;      /* ice-cream yellow */
+  --ink:#3a2c22;
+  --chalk:#26221d;
+  --line:rgba(58,44,34,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.62}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;color:var(--apple-deep);line-height:1.12}
+a{color:inherit;text-decoration:none}
+.wrap{width:90%;max-width:1060px;margin:0 auto}
+.btn{display:inline-block;background:var(--apple);color:#fff;font-weight:700;padding:14px 28px;border-radius:40px;font-family:'Nunito Sans';transition:transform .15s,background .2s}
+.btn:hover{background:var(--apple-deep);transform:translateY(-2px)}
+.btn-leaf{background:var(--leaf)}
+.btn-leaf:hover{background:var(--leaf-deep)}
+
+nav{background:var(--cream);position:sticky;top:0;z-index:20;border-bottom:3px dotted var(--apple)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{font-family:'Fraunces',serif;font-weight:900;font-size:1.35rem;color:var(--apple)}
+.brand i{font-style:normal;color:var(--leaf)}
+.navlinks{display:flex;gap:24px;font-weight:600;font-size:.94rem}
+.navlinks a:hover{color:var(--apple)}
+@media(max-width:760px){.navlinks{display:none}}
+
+.hero{background:radial-gradient(circle at 80% 10%,rgba(246,196,83,.35),transparent 45%),linear-gradient(160deg,#fdf7ea,#f3e7cf);padding:80px 0 70px;position:relative}
+.hero .wrap{max-width:780px}
+.tag{display:inline-block;background:var(--leaf);color:#fff;padding:6px 15px;border-radius:30px;font-size:.8rem;font-weight:700;letter-spacing:.4px;margin-bottom:22px}
+.hero h1{font-size:3rem;font-weight:900;margin-bottom:18px}
+.hero h1 em{font-style:italic;color:var(--leaf)}
+.hero p.lead{font-size:1.2rem;max-width:600px;margin-bottom:28px;color:#5a4636}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap}
+@media(max-width:600px){.hero h1{font-size:2.1rem}}
+
+.ticker{background:var(--apple);color:#fff;padding:14px 0;font-weight:700;text-align:center;font-size:1rem;letter-spacing:.3px}
+.ticker span{margin:0 14px;white-space:nowrap}
+.ticker b{color:var(--butter)}
+
+section{padding:66px 0}
+.section-head{max-width:620px;margin-bottom:38px}
+.section-head .tag{background:var(--apple)}
+h2{font-size:2.05rem;margin-bottom:10px}
+.section-head p{font-size:1.05rem;color:#5a4636}
+
+.season{background:#fff;border:1px solid var(--line);border-left:8px solid var(--leaf);border-radius:12px;padding:34px}
+.season h2{color:var(--leaf-deep)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.chip{background:var(--cream);border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-weight:600;font-size:.92rem}
+.chip.ripe{background:var(--leaf);color:#fff;border-color:var(--leaf)}
+.ph-note{font-size:.85rem;font-style:italic;color:#8a7256;margin-top:16px}
+
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:760px){.duo{grid-template-columns:1fr}}
+.bigcard{border-radius:14px;padding:34px;color:#fff}
+.bigcard.cream{background:linear-gradient(150deg,#f6c453,#e9a93a);color:#3a2c22}
+.bigcard.grill{background:linear-gradient(150deg,#c43a32,#9c2a24)}
+.bigcard h3{font-size:1.6rem;color:inherit;margin-bottom:8px}
+.bigcard p{font-size:1rem}
+.bigcard .hours{margin-top:16px;font-weight:700;font-size:.95rem;opacity:.9}
+
+.music{background:var(--chalk);color:#f3ead6}
+.music h2{color:#fff}
+.music .section-head p{color:#c9bda6}
+.gig{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.13);font-size:1.02rem}
+.gig b{color:var(--butter)}
+.gig .who{font-weight:700;color:#fff}
+
+.pantry .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:8px}
+.pcard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;border-top:5px solid var(--butter)}
+.pcard h3{font-size:1.15rem;margin-bottom:6px}
+.pcard p{font-size:.94rem;color:#5a4636}
+
+.visit{background:linear-gradient(160deg,#2c5a32,#3e7a45);color:#eaf3e7}
+.visit h2{color:#fff}
+.visit .vgrid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+@media(max-width:760px){.visit .vgrid{grid-template-columns:1fr}}
+.vline{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.16)}
+.vline b{min-width:96px;color:var(--butter)}
+.map{background:rgba(255,255,255,.1);border:1px dashed rgba(255,255,255,.4);border-radius:12px;min-height:230px;display:flex;align-items:center;justify-content:center;text-align:center;color:#dcead8;padding:20px;font-size:.92rem}
+
+footer{background:var(--apple-deep);color:#f4d4d1;padding:36px 0;font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+footer b{color:#fff}
+.ph{color:var(--butter);font-weight:700}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="brand">Circle&nbsp;R <i>Fruit Farms</i></div>
+  <div class="navlinks">
+    <a href="#season">What's Ripe</a>
+    <a href="#window">Ice Cream &amp; Grill</a>
+    <a href="#music">Live Music</a>
+    <a href="#pantry">Bakery &amp; Honey</a>
+    <a href="#visit">Visit</a>
+  </div>
+  <a href="#visit" class="btn" style="padding:10px 20px">Hours &amp; directions</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="tag">Roosevelt Highway · Waterport, Orleans County</span>
+  <h1>Cones, sweet corn, and <em>live music</em> off Roosevelt Highway.</h1>
+  <p class="lead">A roadside farm market on 550 acres of Orleans County fruit &mdash; pick up what's ripe this week, get a cone from the window, grab lunch off the grill, and stay for a band on summer weekends.</p>
+  <div class="actions">
+    <a href="#season" class="btn btn-leaf">See what's ripe this week</a>
+    <a href="#window" class="btn">Ice cream &amp; food truck</a>
+  </div>
+</div></header>
+
+<div class="ticker">
+  <span>🍎 <b>Apples</b> &mdash; 14 varieties</span>
+  <span>🌽 <b>Sweet corn</b>, picked daily</span>
+  <span>🍦 <b>Ice cream</b> window</span>
+  <span>🎸 <b>Live music</b>, summer weekends</span>
+  <span>🍯 <b>Honey</b> &amp; Amish baked goods</span>
+</div>
+
+<section id="season">
+  <div class="wrap">
+    <div class="season">
+      <span class="tag" style="background:var(--leaf)">Picked down the road</span>
+      <h2>What's ripe this week</h2>
+      <p style="font-size:1.05rem;color:#5a4636;margin-top:8px">We grow it here, so the stand changes as the season turns. Here's the kind of thing on the tables through the year &mdash; we'll keep the live list current for you.</p>
+      <div class="chips">
+        <span class="chip ripe">Sweet corn</span>
+        <span class="chip ripe">Summer berries</span>
+        <span class="chip">Peaches &amp; plums</span>
+        <span class="chip">Tomatoes &amp; peppers</span>
+        <span class="chip">14 apple varieties</span>
+        <span class="chip">Fall squash &amp; pumpkins</span>
+        <span class="chip">Cider &amp; pressed apples</span>
+      </div>
+      <p class="ph-note">Crop list shown as an example &mdash; the live site shows exactly what's on the tables right now.</p>
+    </div>
+  </div>
+</section>
+
+<section id="window" style="background:#fdf7ea">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">Open the window</span>
+      <h2>Ice cream one side, the grill the other.</h2>
+      <p>Pull in off Route 18, get a cone and a burger, and eat at the picnic tables while the kids run around the farm.</p>
+    </div>
+    <div class="duo">
+      <div class="bigcard cream">
+        <h3>🍦 The ice cream window</h3>
+        <p>Soft-serve and hand-dipped hard ice cream &mdash; a cone after a day on the lake or a stop on the way through Waterport.</p>
+        <div class="hours">Window open 11am – 9pm in season</div>
+      </div>
+      <div class="bigcard grill">
+        <h3>🔥 The grill food truck</h3>
+        <p>Burgers, dogs and grilled lunch made to order right on the property, no drive-through line and no chain in sight.</p>
+        <div class="hours">Grill open 11am – 8pm in season</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="music" class="music">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag" style="background:var(--apple)">Summer weekends</span>
+      <h2>Live music in the orchard.</h2>
+      <p>Local bands on the weekend through the summer &mdash; bring a chair, get a cone, and stay for the set.</p>
+    </div>
+    <div class="gig"><span class="who">This weekend's band</span><span><b>Sat · 6pm</b></span></div>
+    <div class="gig"><span class="who">Next Friday's act</span><span><b>Fri · 6pm</b></span></div>
+    <div class="gig"><span class="who">Sunday acoustic</span><span><b>Sun · 2pm</b></span></div>
+    <p class="ph-note" style="color:#c9bda6">Lineup shown as placeholders &mdash; the live site carries the real weekend schedule pulled straight from the farm.</p>
+  </div>
+</section>
+
+<section id="pantry" class="pantry">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag">From the shelves inside</span>
+      <h2>Amish baked goods, canned goods &amp; raw honey.</h2>
+      <p>Past the produce there's a market shelf worth the stop on its own.</p>
+    </div>
+    <div class="grid">
+      <div class="pcard"><h3>Amish baked goods</h3><p>Pies, breads and cookies from local Amish bakers &mdash; the kind of thing that doesn't last the drive home.</p></div>
+      <div class="pcard"><h3>Canned &amp; preserved</h3><p>Jams, pickles and put-up fruit so the orchard tastes the same in January as it does in August.</p></div>
+      <div class="pcard"><h3>Raw local honey</h3><p>Honey from right around Orleans County &mdash; pollinated, in part, by the same orchard you're standing in.</p></div>
+      <div class="pcard"><h3>Bulk &amp; by the case</h3><p>Buying for canning, cider-pressing or a crowd? Order apples and produce by the bushel and the case.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit" class="visit">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="tag" style="background:var(--butter);color:#3a2c22">Find the stand</span>
+      <h2 style="color:#fff">Right on Roosevelt Highway.</h2>
+      <p style="color:#dcead8">You'll see the stand from Route 18 between Waterport and the lake. Open through the growing season.</p>
+    </div>
+    <div class="vgrid">
+      <div>
+        <div class="vline"><b>Address</b><span>13485 Roosevelt Hwy (Rte 18), Waterport, NY 14571</span></div>
+        <div class="vline"><b>Phone</b><span><a class="ph" href="tel:5856826162">(585) 682-6162</a></span></div>
+        <div class="vline"><b>Produce</b><span>9am – 8pm in season</span></div>
+        <div class="vline"><b>Ice cream</b><span>11am – 9pm in season</span></div>
+        <div class="vline"><b>Grill</b><span>11am – 8pm in season</span></div>
+        <a href="tel:5856826162" class="btn" style="margin-top:22px;background:var(--butter);color:#3a2c22">Call the farm market</a>
+      </div>
+      <div class="map">Map of 13485 Roosevelt Hwy, Waterport NY<br>(embedded on the live site)</div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div><b>Circle R Fruit Farms</b><br>13485 Roosevelt Highway, Waterport, NY 14571<br>Orleans County</div>
+  <div>Farm market <b>(585) 682-6162</b><br>Open through the growing season<br>Find us on Facebook</div>
+</div></footer>
+
+</body>
+</html>

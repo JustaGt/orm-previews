@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steckowski Antique Repair &amp; Restoration — Bridgehampton, NY · Furniture, Antiques &amp; Teak Brought Back</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --walnut:#4a3325; --walnut-d:#34231a; --brass:#b08545; --brass-l:#caa468;
+  --linen:#f3ece0; --cream:#fbf7ef; --ink:#322a23; --taupe:#7c6f60; --line:#e3d8c6;
+  --char:#211c18;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;font-weight:400}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-block;background:var(--brass);color:#fff;font-family:'Jost';font-weight:500;letter-spacing:1.5px;text-transform:uppercase;font-size:.8rem;padding:14px 30px;border-radius:2px;transition:.14s}
+.btn:hover{background:#946d33}
+.btn.dk{background:var(--walnut)}
+.btn.dk:hover{background:var(--walnut-d)}
+.btn.line{background:transparent;border:1px solid #ffffff66;color:#fff}
+.btn.line:hover{border-color:var(--brass-l);color:var(--brass-l)}
+
+nav{background:var(--char)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand b{font-family:'Cormorant Garamond';font-weight:700;color:#fff;font-size:1.5rem;display:block;line-height:1}
+.brand small{color:var(--brass-l);font-size:.6rem;letter-spacing:3px;text-transform:uppercase}
+.navlinks{display:flex;gap:26px;color:#d8cdbd;font-size:.82rem;letter-spacing:1px;text-transform:uppercase}
+.navlinks a:hover{color:var(--brass-l)}
+.navphone{color:#fff;font-size:.95rem;letter-spacing:1px}
+@media(max-width:880px){.navlinks{display:none}}
+
+.hero{position:relative;color:#f3ece0;overflow:hidden;background:var(--walnut-d)}
+.hero::before{content:"";position:absolute;inset:0;
+  background:
+   linear-gradient(95deg,rgba(33,28,24,.92) 0 50%,rgba(74,51,37,.6)),
+   repeating-linear-gradient(91deg,rgba(176,133,69,.05) 0 3px,transparent 3px 26px),
+   linear-gradient(160deg,#4a3325,#241811)}
+.hero .wrap{position:relative;z-index:1;padding:90px 24px 96px}
+.kick{font-size:.78rem;letter-spacing:4px;text-transform:uppercase;color:var(--brass-l);margin-bottom:20px}
+.hero h1{font-family:'Cormorant Garamond';font-weight:600;font-size:3.9rem;line-height:1.04;max-width:17ch}
+.hero h1 em{font-style:italic;color:var(--brass-l)}
+.hero p{font-size:1.16rem;max-width:54ch;margin:20px 0 30px;color:#e6dccd;font-weight:300}
+.cta-row{display:flex;gap:13px;flex-wrap:wrap}
+@media(max-width:600px){.hero h1{font-size:2.6rem}}
+
+.cred{background:var(--linen);border-bottom:1px solid var(--line)}
+.cred .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:38px;padding:20px 24px;text-align:center}
+.cred div{font-size:.82rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--taupe)}
+.cred b{color:var(--walnut);font-weight:600}
+
+section{padding:80px 0}
+.shead{text-align:center;max-width:60ch;margin:0 auto 44px}
+.shead .k{font-size:.78rem;letter-spacing:3px;text-transform:uppercase;color:var(--brass)}
+.shead h2{font-family:'Cormorant Garamond';font-weight:600;font-size:2.8rem;color:var(--walnut);margin-top:8px;line-height:1.06}
+.shead p{color:var(--taupe);margin-top:11px;font-size:1.05rem}
+
+.svc .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+@media(max-width:820px){.svc .grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.svc .grid{grid-template-columns:1fr}}
+.scard{background:var(--cream);padding:32px 28px}
+.scard .no{font-family:'Cormorant Garamond';font-style:italic;font-size:1.1rem;color:var(--brass)}
+.scard h3{font-family:'Cormorant Garamond';font-weight:600;font-size:1.5rem;color:var(--walnut);margin:4px 0 8px}
+.scard p{color:var(--taupe);font-size:.95rem}
+.scard.feat{background:var(--walnut);color:#efe6d7}
+.scard.feat h3{color:#fff}.scard.feat p{color:#d6c8b4}.scard.feat .no{color:var(--brass-l)}
+
+.story{background:var(--linen)}
+.story .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center}
+@media(max-width:820px){.story .wrap{grid-template-columns:1fr}}
+.portrait{aspect-ratio:4/5;border-radius:8px;border:1px solid var(--line);
+  background:
+   linear-gradient(160deg,#6b4e38,#3a2819);position:relative;overflow:hidden;display:flex;align-items:flex-end}
+.portrait::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(88deg,rgba(0,0,0,.14) 0 2px,transparent 2px 16px)}
+.portrait .lab{position:relative;z-index:1;color:#f0e7d8;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;padding:16px;background:linear-gradient(0deg,rgba(0,0,0,.55),transparent);width:100%}
+.story h2{font-family:'Cormorant Garamond';font-weight:600;font-size:2.5rem;color:var(--walnut);line-height:1.08}
+.story p{color:var(--ink);margin-top:14px;font-size:1.04rem;font-weight:300}
+.story .sig{font-family:'Cormorant Garamond';font-style:italic;font-size:1.3rem;color:var(--brass);margin-top:18px}
+
+/* before after */
+.ba .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:820px){.ba .grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.ba .grid{grid-template-columns:1fr}}
+.bcard{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--cream)}
+.bsplit{display:flex;aspect-ratio:3/2}
+.bsplit .h{flex:1;display:flex;align-items:flex-end;justify-content:center;padding:10px;position:relative}
+.bsplit .before{background:linear-gradient(160deg,#b9a888,#9c8a6c)}
+.bsplit .after{background:linear-gradient(160deg,#6b4e38,#4a3325)}
+.bsplit .h span{font-size:.66rem;letter-spacing:1.5px;text-transform:uppercase;color:#fff;background:#00000055;padding:3px 8px;border-radius:3px}
+.bcard .cap{padding:13px 16px;font-size:.92rem;color:var(--walnut);font-family:'Cormorant Garamond';font-weight:600;font-size:1.08rem}
+.banote{text-align:center;font-size:.85rem;color:var(--taupe);font-style:italic;margin-top:18px}
+
+/* in-home */
+.home{background:var(--walnut);color:#eaddcb}
+.home .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center}
+@media(max-width:820px){.home .wrap{grid-template-columns:1fr}}
+.home .k{font-size:.78rem;letter-spacing:3px;text-transform:uppercase;color:var(--brass-l)}
+.home h2{font-family:'Cormorant Garamond';font-weight:600;font-size:2.5rem;color:#fff;margin:6px 0 12px;line-height:1.08}
+.home p{color:#d6c8b4;font-size:1.04rem;font-weight:300;margin-bottom:14px}
+.hlist{display:flex;flex-direction:column;gap:10px}
+.hlist div{padding-left:24px;position:relative;color:#ecdfcd;font-size:.97rem}
+.hlist div::before{content:"✦";position:absolute;left:0;color:var(--brass-l);font-size:.8rem;top:3px}
+
+/* estimate */
+.est{background:var(--char);color:#e6dccd}
+.est .wrap{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+@media(max-width:820px){.est .wrap{grid-template-columns:1fr}}
+.est h2{font-family:'Cormorant Garamond';font-weight:600;font-size:2.7rem;color:#fff;line-height:1.06}
+.est p{color:#c8bdac;margin:14px 0 18px;font-weight:300}
+.est .li{padding-left:22px;position:relative;color:#e3d6c4;font-size:.96rem;margin-bottom:9px}
+.est .li::before{content:"›";position:absolute;left:0;color:var(--brass-l);font-weight:600}
+.ebox{background:#2c2520;border:1px solid #443a30;border-radius:10px;padding:30px}
+.ebox .r{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid #443a30}
+.ebox .r:last-of-type{border:0}
+.ebox .r span{color:#a3917a;font-size:.78rem;letter-spacing:1.2px;text-transform:uppercase;padding-top:3px}
+.ebox .r b{font-family:'Cormorant Garamond';color:#fff;text-align:right;font-size:1.3rem;font-weight:600}
+.ebox .cta-row{margin-top:18px}
+
+footer{background:#191512;color:#9d8c78;text-align:center;padding:30px 0;font-size:.9rem}
+footer b{font-family:'Cormorant Garamond';color:#fff;font-size:1.3rem}
+footer .sm{margin-top:7px;color:#6f6052;font-size:.8rem}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="brand"><b>Steckowski</b><small>Antique Repair &amp; Restoration</small></div>
+  <div class="navlinks">
+    <a href="#svc">What I Restore</a>
+    <a href="#story">The Workshop</a>
+    <a href="#ba">Before &amp; After</a>
+    <a href="#home">In-Home Service</a>
+    <a href="#est">Estimate</a>
+  </div>
+  <a href="tel:6319032149" class="navphone">631‑903‑2149</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="kick">Bridgehampton, NY · The Hamptons furniture expert</div>
+  <h1>The water-ringed table and the salt-grayed teak — <em>brought back, not replaced.</em></h1>
+  <p>From a great-grandmother's mahogany dresser to a weathered teak dining set off the deck, the pieces you won't throw away come back to my Bridgehampton bench and leave looking like themselves again.</p>
+  <div class="cta-row">
+    <a href="#est" class="btn">Send a photo for an estimate</a>
+    <a href="tel:6319032149" class="btn line">Call the workshop</a>
+  </div>
+</div></header>
+
+<div class="cred"><div class="wrap">
+  <div><b>Antiques &amp; heirlooms</b> · conserved with care</div>
+  <div><b>Outdoor teak</b> · revived every season</div>
+  <div><b>In-home</b> · estate &amp; designer work</div>
+</div></div>
+
+<section id="svc" class="svc"><div class="wrap">
+  <div class="shead">
+    <div class="k">What I bring back</div>
+    <h2>One bench, the whole range of repair</h2>
+    <p>Antiques and outdoor teak are the heart of the work — but the same hands handle the everyday repairs and finishes a Hamptons house goes through.</p>
+  </div>
+  <div class="grid">
+    <div class="scard feat">
+      <div class="no">i.</div>
+      <h3>Antique Restoration</h3>
+      <p>Heirlooms and period pieces conserved with respect for the original — joinery, veneer, finish and patina kept intact, not sanded away.</p>
+    </div>
+    <div class="scard feat">
+      <div class="no">ii.</div>
+      <h3>Teak &amp; Outdoor</h3>
+      <p>Salt-grayed teak tables, chairs and loungers cleaned, repaired and re-oiled so the patio set survives another season by the water.</p>
+    </div>
+    <div class="scard">
+      <div class="no">iii.</div>
+      <h3>Repair &amp; Refinishing</h3>
+      <p>Loose joints, water rings, scratches and tired finishes on the furniture you use every day — repaired and refinished to last.</p>
+    </div>
+    <div class="scard">
+      <div class="no">iv.</div>
+      <h3>Wicker Painting</h3>
+      <p>Indoor and porch wicker brought back with an even, durable finish that holds up to Hamptons weather and use.</p>
+    </div>
+    <div class="scard">
+      <div class="no">v.</div>
+      <h3>Brass Polishing</h3>
+      <p>Hardware, fittings and brass pieces cleaned of tarnish and sealed back to a clean, lasting shine.</p>
+    </div>
+    <div class="scard">
+      <div class="no">vi.</div>
+      <h3>In-Home Waxing</h3>
+      <p>Built-ins and large pieces that can't travel — cleaned, waxed and protected right in the house.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="story" class="story"><div class="wrap">
+  <div class="portrait"><div class="lab">Placeholder — a real shot of Michael at the bench</div></div>
+  <div>
+    <h2>A bench in Bridgehampton, and a piece worth saving</h2>
+    <p>People bring me the things they can't bring themselves to put on the curb — a desk that came over with the family, a dining table three generations have eaten at, a teak set that's lived through ten summers on the deck. The work is patient and quiet: figure out what the piece needs, do only that, and hand it back looking like itself.</p>
+    <p>That's restoration, not replacement — and it's why designers, dealers and homeowners across the East End keep my number.</p>
+    <div class="sig">— E. Michael Steckowski</div>
+  </div>
+</div></section>
+
+<section id="ba" class="ba"><div class="wrap">
+  <div class="shead">
+    <div class="k">Before &amp; after</div>
+    <h2>The proof is in the piece</h2>
+    <p>The single most convincing thing a restorer can show is a real before and after. These slots are built for your own photographs of finished work.</p>
+  </div>
+  <div class="grid">
+    <div class="bcard">
+      <div class="bsplit"><div class="h before"><span>Before</span></div><div class="h after"><span>After</span></div></div>
+      <div class="cap">Mahogany dresser · water damage &amp; veneer</div>
+    </div>
+    <div class="bcard">
+      <div class="bsplit"><div class="h before"><span>Before</span></div><div class="h after"><span>After</span></div></div>
+      <div class="cap">Teak dining set · salt-grayed to re-oiled</div>
+    </div>
+    <div class="bcard">
+      <div class="bsplit"><div class="h before"><span>Before</span></div><div class="h after"><span>After</span></div></div>
+      <div class="cap">Antique chair · joinery &amp; finish</div>
+    </div>
+  </div>
+  <p class="banote">Placeholder before/after slots — drop in Michael's own photos of completed restorations. Real work shown here replaces the stock photos the current site relies on.</p>
+</div></section>
+
+<section id="home" class="home"><div class="wrap">
+  <div>
+    <div class="k">For estates &amp; designers</div>
+    <h2>When the piece can't leave the house</h2>
+    <p>Built-ins, oversized tables and pieces too valuable or too large to move are handled on-site — discreet, careful work in the home, on the schedule a property manager or designer needs.</p>
+    <div class="hlist">
+      <div>In-home repair, waxing and finish touch-ups</div>
+      <div>Estate and designer projects across the East End</div>
+      <div>Paid consultations and condition assessments on request</div>
+    </div>
+  </div>
+  <div>
+    <div class="ebox" style="background:#3a2a1f;border-color:#5a4636">
+      <div class="r" style="border-color:#5a4636"><span style="color:#cbae7f">Workshop</span><b>84 Windmill Lane</b></div>
+      <div class="r" style="border-color:#5a4636"><span style="color:#cbae7f">Town</span><b>Bridgehampton, NY</b></div>
+      <div class="r"><span style="color:#cbae7f">Consultation</span><b>By appointment</b></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="est" class="est"><div class="wrap">
+  <div>
+    <h2>Send a photo of the piece.</h2>
+    <p>The fastest way to start is a clear photo and a sentence about what's wrong. I'll tell you what it needs and what it runs — drop it at the Bridgehampton shop, or have me come to the house.</p>
+    <div class="li">A photo and a quick description is all I need</div>
+    <div class="li">Drop-off at the workshop or in-home assessment</div>
+    <div class="li">Antiques, teak and everyday repairs alike</div>
+  </div>
+  <div class="ebox">
+    <div class="r"><span>Call / text</span><b>631‑903‑2149</b></div>
+    <div class="r"><span>Workshop</span><b>84 Windmill Lane<br>Bridgehampton, NY 11932</b></div>
+    <div class="r"><span>Email</span><b>add at build</b></div>
+    <div class="cta-row">
+      <a href="tel:6319032149" class="btn">Call the workshop</a>
+      <a href="#svc" class="btn dk">See what I restore</a>
+    </div>
+  </div>
+</div></section>
+
+<footer>
+  <b>Steckowski Antique Repair &amp; Restoration</b><br>
+  84 Windmill Lane, Bridgehampton, NY 11932 · 631‑903‑2149 · Antiques · Teak · Furniture repair &amp; refinishing · In-home service
+  <div class="sm">Restoration, not replacement — serving Bridgehampton, Southampton, East Hampton &amp; Sag Harbor</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pully's Farm Market &amp; Greenhouse — Le Roy, NY · Plants in Spring, Produce All Summer, Pumpkins in Fall</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#2f7d4f; --green2:#22603c; --leaf:#4aa96c; --geranium:#d64b47; --geranium2:#e8615d;
+  --mum:#e79a2b; --sky:#eaf5ec; --ink:#22301f; --paper:#fbfaf3; --card:#ffffff; --line:#e5e6d8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito Sans',sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+h1,h2,h3{font-family:'Fraunces',serif;line-height:1.12}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}
+/* season strip */
+.season{background:var(--mum);color:#3a2807;text-align:center;font-weight:700;padding:9px 14px;font-size:.95rem}
+.season b{background:#3a2807;color:var(--mum);padding:2px 9px;border-radius:20px;font-size:.82rem;margin-right:8px;letter-spacing:.04em}
+nav{background:var(--card);color:var(--green2);position:sticky;top:0;z-index:40;border-bottom:1px solid var(--line);box-shadow:0 2px 12px rgba(47,125,79,.06)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 22px}
+.brand{font-family:'Fraunces';font-weight:700;font-size:1.5rem;color:var(--green2);display:flex;flex-direction:column;line-height:1}
+.brand small{font-family:'Nunito Sans';font-size:.6rem;letter-spacing:.18em;color:#8aa88f;font-weight:700;margin-top:4px;text-transform:uppercase}
+.nlinks{display:flex;gap:22px;font-weight:700;font-size:1rem;color:var(--green)}
+.nlinks a:hover{color:var(--geranium)}
+.ncta{background:var(--geranium);color:#fff;padding:9px 18px;border-radius:24px;font-weight:700;font-size:.95rem}
+.ncta:hover{background:var(--geranium2)}
+@media(max-width:860px){.nlinks{display:none}}
+.hero{background:linear-gradient(160deg,#f2f9f2,#e6f2e8);padding:64px 0 58px;position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:2}
+.hero .eye{color:var(--green);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.9rem;margin-bottom:12px}
+.hero h1{font-size:3.5rem;color:var(--green2);max-width:15ch;margin-bottom:16px;font-weight:700}
+.hero h1 em{color:var(--geranium);font-style:normal}
+.hero p{font-size:1.18rem;color:#425140;max-width:50ch;margin-bottom:24px}
+.hbtns{display:flex;gap:12px;flex-wrap:wrap}
+.b1{background:var(--green);color:#fff;padding:14px 26px;border-radius:26px;font-weight:700;font-size:1.08rem}
+.b1:hover{background:var(--green2)}
+.b2{background:#fff;border:2px solid var(--green);color:var(--green);padding:13px 24px;border-radius:26px;font-weight:700;font-size:1.02rem}
+.b2:hover{background:var(--sky)}
+.hero .veg{position:absolute;right:-30px;top:-20px;font-size:16rem;opacity:.08;z-index:1}
+.nowbox{background:#fff;border:1px solid var(--line);border-left:5px solid var(--mum);border-radius:12px;padding:18px 22px;margin-top:28px;max-width:560px;box-shadow:0 6px 18px rgba(47,125,79,.06)}
+.nowbox b{color:var(--green2);font-family:'Fraunces'}
+.nowbox .tag{display:inline-block;background:var(--mum);color:#3a2807;font-weight:700;font-size:.75rem;padding:3px 10px;border-radius:20px;letter-spacing:.05em;margin-bottom:6px}
+@media(max-width:600px){.hero h1{font-size:2.4rem}}
+section{padding:58px 0}
+.eyebrow{color:var(--leaf);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.88rem;margin-bottom:8px}
+.stitle{font-size:2.2rem;color:var(--green2);margin-bottom:10px;font-weight:700}
+.lead{color:#4f5c4c;max-width:62ch;margin-bottom:32px;font-size:1.04rem}
+/* seasons row */
+.seasons{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sc{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 8px 20px rgba(47,125,79,.06)}
+.sc .cap{padding:16px 20px;color:#fff}
+.sc.spring .cap{background:linear-gradient(140deg,var(--leaf),var(--green))}
+.sc.summer .cap{background:linear-gradient(140deg,var(--geranium),#b83a37)}
+.sc.fall .cap{background:linear-gradient(140deg,var(--mum),#c67a17)}
+.sc .cap h3{font-size:1.4rem;margin-bottom:2px}
+.sc .cap span{font-size:.82rem;opacity:.9;font-weight:700;letter-spacing:.04em}
+.sc .body{padding:18px 20px}
+.sc ul{list-style:none}
+.sc li{padding:6px 0 6px 22px;position:relative;font-size:.95rem;color:#4f5c4c;border-bottom:1px dashed var(--line)}
+.sc li:last-child{border-bottom:none}
+.sc li::before{content:"🌱";position:absolute;left:0;font-size:.8rem;top:9px}
+.sc.summer li::before{content:"🍅"}
+.sc.fall li::before{content:"🎃"}
+@media(max-width:820px){.seasons{grid-template-columns:1fr}}
+/* visit band */
+.visit{background:var(--green2);color:#dff0e4}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.visit h2{color:#fff;font-size:2.1rem;margin-bottom:12px;font-weight:700}
+.hours{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:24px}
+.hours .row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:.98rem}
+.hours .row:last-child{border-bottom:none}
+.hours .row b{color:#fff}
+.hours .note{font-size:.85rem;color:#a9cdb4;margin-top:12px}
+/* contact */
+.contact{background:var(--sky)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:36px;align-items:start}
+.contact h2{color:var(--green2);font-size:2.1rem;margin-bottom:12px;font-weight:700}
+.contact .info p{margin-bottom:9px;color:#4f5c4c}
+.contact .info b{color:var(--green2)}
+.formbox{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:0 8px 22px rgba(47,125,79,.07)}
+.formbox h3{font-family:'Fraunces';color:var(--green2);font-size:1.4rem;margin-bottom:6px;font-weight:700}
+.formbox p.sm{font-size:.9rem;color:#4f5c4c;margin-bottom:14px}
+label{display:block;font-size:.78rem;font-weight:700;color:var(--green);margin-bottom:5px;text-transform:uppercase;letter-spacing:.03em}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid #d6dccb;border-radius:8px;font-family:inherit;font-size:.95rem;background:#fcfdfa}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--leaf)}
+.frow2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fbtn{margin-top:15px;background:var(--geranium);color:#fff;border:none;padding:14px 22px;border-radius:26px;font-family:'Fraunces';font-weight:700;font-size:1.08rem;cursor:pointer;width:100%}
+.fbtn:hover{background:var(--geranium2)}
+@media(max-width:820px){.contact .wrap{grid-template-columns:1fr}.frow2{grid-template-columns:1fr}}
+footer{background:var(--green2);color:#bcd8c3;padding:38px 0 20px}
+footer .cols{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:26px}
+footer h4{color:#fff;font-family:'Fraunces';font-size:1.15rem;margin-bottom:10px;font-weight:700}
+footer a:hover{color:#fff}
+.copy{border-top:1px solid #2f6f47;margin-top:22px;padding-top:14px;font-size:.8rem;color:#84ad91}
+@media(max-width:720px){footer .cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="season"><b>RIGHT NOW</b> Sweet corn &amp; summer tomatoes are in — mums &amp; pumpkins start early September. <span style="opacity:.7">(update weekly)</span></div>
+
+<nav><div class="wrap">
+  <span class="brand">Pully's Farm Market &amp; Greenhouse<small>Le Roy, NY · Family-Grown</small></span>
+  <div class="nlinks">
+    <a href="#seasons">The Seasons</a>
+    <a href="#visit">Hours &amp; Directions</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="#visit" class="ncta">Plan a Visit</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="veg">🌻</span>
+  <div class="eye">GREENHOUSE · FARM MARKET · LE ROY, NY</div>
+  <h1>Plants in spring, produce all summer, <em>pumpkins in the fall.</em></h1>
+  <p>A family greenhouse and roadside market on Lake Street Road — where the neighbors come for hanging baskets in May, sweet corn in July, and mums and pumpkins when the leaves turn.</p>
+  <div class="hbtns">
+    <a href="#seasons" class="b1">What's Growing</a>
+    <a href="#visit" class="b2">Hours &amp; Directions</a>
+  </div>
+  <div class="nowbox">
+    <span class="tag">WHAT'S READY THIS WEEK</span>
+    <p><b>Right now:</b> summer produce is rolling in and the greenhouse is turning over to fall. Check back each week — this box is the first thing that changes as the season does.</p>
+  </div>
+</div></header>
+
+<section id="seasons"><div class="wrap">
+  <div class="eyebrow">Our Three Seasons</div>
+  <h2 class="stitle">One stand, three times a year worth stopping</h2>
+  <p class="lead">A greenhouse market runs on a calendar, and Pully's fills it start to finish — from the first flats of spring to the last pumpkin of October.</p>
+  <div class="seasons">
+    <div class="sc spring">
+      <div class="cap"><h3>Spring</h3><span>THE GREENHOUSE OPENS</span></div>
+      <div class="body"><ul>
+        <li>Hanging baskets &amp; potted flowers</li>
+        <li>Vegetable &amp; herb starts for your garden</li>
+        <li>Annuals, geraniums &amp; bedding plants</li>
+        <li>Everything to plant your beds &amp; pots</li>
+      </ul></div>
+    </div>
+    <div class="sc summer">
+      <div class="cap"><h3>Summer</h3><span>THE MARKET FILLS UP</span></div>
+      <div class="body"><ul>
+        <li>Fresh-picked sweet corn</li>
+        <li>Summer tomatoes &amp; garden vegetables</li>
+        <li>Seasonal produce as it comes ripe</li>
+        <li>Picked close to home, not trucked in</li>
+      </ul></div>
+    </div>
+    <div class="sc fall">
+      <div class="cap"><h3>Fall</h3><span>MUMS &amp; PUMPKINS</span></div>
+      <div class="body"><ul>
+        <li>Hardy mums in every color</li>
+        <li>Pumpkins &amp; gourds for the porch</li>
+        <li>Fall decorating — cornstalks &amp; more</li>
+        <li>A family stop before Halloween</li>
+      </ul></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <div>
+    <div class="eyebrow" style="color:#9fd3ac">Come See Us</div>
+    <h2>On Lake Street Road, just outside the village</h2>
+    <p style="color:#cfe6d5;max-width:44ch;margin-bottom:16px">We're a roadside greenhouse and market in Le Roy — easy to find, easy to pull into, and worth the drive from Stafford, Bergen, Pavilion and Batavia.</p>
+    <p style="color:#cfe6d5;max-width:44ch"><b style="color:#fff">Hours shift with the seasons</b> — the greenhouse keeps different hours than the fall stand, so we'll always post the current ones right here instead of sending you to Facebook to dig.</p>
+  </div>
+  <div class="hours">
+    <h3 style="color:#fff;font-size:1.3rem;margin-bottom:12px">Seasonal Hours</h3>
+    <div class="row"><span>Spring (greenhouse)</span><b>Daily — call for hours</b></div>
+    <div class="row"><span>Summer (market)</span><b>In-season daily</b></div>
+    <div class="row"><span>Fall (mums &amp; pumpkins)</span><b>Through October</b></div>
+    <div class="row"><span>Winter</span><b>Closed</b></div>
+    <p class="note">Exact daily hours get posted here each season — the current site never showed them, so nobody knew when to come.</p>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div class="info">
+    <div class="eyebrow">Get In Touch</div>
+    <h2>Questions? Big order? Ask away.</h2>
+    <p style="color:#4f5c4c;max-width:44ch;margin-bottom:18px">Want a case of corn, a porch-full of mums, or flats for the garden club? Send a note and we'll set it aside.</p>
+    <p><b>Phone:</b> (585) 768-2280</p>
+    <p><b>Find us:</b> 8160 Lake Street Rd, Le Roy, NY 14482</p>
+    <p><b>Follow along:</b> facebook.com/pullysfarmmarket</p>
+    <p style="margin-top:14px;color:#6c7a68;font-size:.9rem">Family-grown greenhouse &amp; farm market · Le Roy, NY.</p>
+  </div>
+  <div class="formbox">
+    <h3>Ask Us Anything</h3>
+    <p class="sm">We'll get back to you — and hold anything you want set aside.</p>
+    <form onsubmit="return false">
+      <div class="frow2">
+        <div><label>Name</label><input type="text" placeholder="Your name"></div>
+        <div><label>Phone or email</label><input type="text" placeholder="Best way to reach you"></div>
+      </div>
+      <div style="margin-top:12px"><label>What's up?</label>
+        <select><option>What's ready right now?</option><option>Greenhouse / plant question</option><option>Big produce order</option><option>Mums / pumpkins for fall</option><option>Something else</option></select></div>
+      <div style="margin-top:12px"><label>Message</label><textarea rows="3" placeholder="e.g. do you have 20 mums I could pick up next weekend for a church event?"></textarea></div>
+      <button class="fbtn">Send Message</button>
+    </form>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div>
+      <h4>Pully's Farm Market &amp; Greenhouse</h4>
+      <p>Spring bedding plants &amp; hanging baskets, summer produce and sweet corn, fall mums &amp; pumpkins. A family greenhouse in Le Roy, NY.</p>
+      <p style="font-family:'Fraunces';font-weight:700;font-size:1.4rem;color:#fff;margin-top:10px">(585) 768-2280</p>
+    </div>
+    <div>
+      <h4>Find Us</h4>
+      <p>8160 Lake Street Rd<br>Le Roy, NY 14482<br>Genesee County</p>
+    </div>
+    <div>
+      <h4>Visit</h4>
+      <p><a href="#seasons">The seasons</a><br><a href="#visit">Hours &amp; directions</a><br><a href="#contact">Contact</a></p>
+    </div>
+  </div>
+  <div class="copy">© 2026 Pully's Farm Market &amp; Greenhouse · Le Roy, NY · Preview concept prepared by Onyx Rise Media.</div>
+</div></footer>
+
+</body>
+</html>

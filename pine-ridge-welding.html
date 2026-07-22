@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pine Ridge Welding &amp; Machine — Structural Steel Fabrication, Penn Yan NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#12233b;--blue:#1f4e79;--steel:#5b7291;--yellow:#f4c20d;--grid:#22374f;--pane:#eef2f6;--ink:#16202c;--white:#f8fafc;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'IBM Plex Sans',sans-serif;background:var(--white);color:var(--ink);line-height:1.6;}
+  h1,h2,h3{font-family:'Saira Condensed',sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.06;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 22px;}
+  .topbar{background:var(--navy);color:var(--white);padding:10px 0;font-size:.9rem;}
+  .topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:center;}
+  .topbar b{font-family:'Saira Condensed',sans-serif;letter-spacing:.05em;}
+  .topbar a{color:var(--yellow);text-decoration:none;font-weight:600;}
+  .hero{background:
+     linear-gradient(rgba(18,35,59,.92),rgba(18,35,59,.94)),
+     linear-gradient(0deg,transparent 23px,var(--grid) 24px),
+     linear-gradient(90deg,transparent 23px,var(--grid) 24px);
+     background-size:auto,24px 24px,24px 24px;
+     color:var(--white);padding:84px 0 70px;border-bottom:7px solid var(--yellow);}
+  .hero .tag{display:inline-block;background:var(--yellow);color:#241d00;font-weight:700;font-size:.76rem;letter-spacing:.15em;text-transform:uppercase;padding:6px 13px;margin-bottom:20px;}
+  .hero h1{font-size:clamp(2.2rem,5.6vw,3.7rem);max-width:19ch;}
+  .hero p{max-width:58ch;margin-top:16px;font-size:1.06rem;color:#c7d3e0;}
+  .btn{display:inline-block;margin-top:26px;background:var(--yellow);color:#241d00;font-weight:700;padding:15px 32px;text-decoration:none;font-size:1.02rem;text-transform:uppercase;letter-spacing:.05em;font-family:'Saira Condensed',sans-serif;}
+  .btn.ghost{background:transparent;color:var(--yellow);border:2px solid var(--yellow);margin-left:12px;}
+  section{padding:64px 0;}
+  .sec-h{font-size:2.1rem;margin-bottom:6px;color:var(--navy);}
+  .lead{color:#4c5b6c;max-width:64ch;margin-bottom:30px;}
+  .fab{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;}
+  .fcard{background:var(--pane);border-top:5px solid var(--blue);padding:26px;}
+  .fcard h3{font-size:1.3rem;margin-bottom:10px;color:var(--navy);}
+  .fcard p{font-size:.96rem;color:#3a4552;}
+  .fcard .k{margin-top:14px;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--steel);font-family:'Saira Condensed',sans-serif;}
+  .who{background:var(--navy);color:var(--white);}
+  .who h2{font-size:2rem;color:var(--yellow);margin-bottom:26px;}
+  .wgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;}
+  .witem{border-top:3px solid var(--blue);padding-top:14px;}
+  .witem h3{font-size:1.1rem;margin-bottom:8px;}
+  .witem p{font-size:.93rem;color:#bcc9d8;}
+  .adv .cols{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;}
+  .adv h2{font-size:2rem;color:var(--navy);margin-bottom:14px;}
+  .adv p{margin-bottom:12px;color:#3a4552;}
+  .adv .box{background:var(--navy);color:var(--white);padding:30px;border-left:5px solid var(--yellow);}
+  .adv .box h3{color:var(--yellow);font-size:1.2rem;margin-bottom:10px;}
+  .adv .box p{color:#c7d3e0;font-size:.96rem;}
+  .about{background:var(--pane);}
+  .about .cols{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:start;}
+  .about h2{font-size:2rem;color:var(--navy);margin-bottom:14px;}
+  .about p{margin-bottom:12px;color:#3a4552;}
+  .facts{background:#fff;border:1px solid #d5dde5;padding:24px;}
+  .facts table{width:100%;border-collapse:collapse;font-size:.92rem;}
+  .facts td{padding:9px 0;border-bottom:1px solid #e3e9ef;vertical-align:top;}
+  .facts td:first-child{color:var(--blue);font-weight:700;font-family:'Saira Condensed',sans-serif;letter-spacing:.03em;width:44%;}
+  .contact{background:var(--blue);color:var(--white);text-align:center;}
+  .contact h2{font-size:2.3rem;color:#fff;}
+  .contact p{max-width:54ch;margin:12px auto 0;color:#d5e2ef;}
+  .contact .num{font-family:'Saira Condensed',sans-serif;font-size:2.4rem;color:var(--yellow);display:inline-block;margin-top:20px;text-decoration:none;}
+  .contact .addr{margin-top:12px;color:#cbdaea;font-size:.95rem;}
+  footer{background:var(--navy);color:var(--steel);padding:22px 0;font-size:.85rem;}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+  @media(max-width:780px){.adv .cols,.about .cols{grid-template-columns:1fr;}.btn.ghost{margin-left:0;margin-top:12px;}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <b>PINE RIDGE WELDING &amp; MACHINE</b>
+    <span>3643 State Route 14A, Penn Yan · <a href="tel:3155362102">(315) 536-2102</a></span>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">Structural Steel Fabrication · Penn Yan, NY</span>
+    <h1>Send us the drawing. We'll fabricate the steel — and machine it to fit.</h1>
+    <p>Pine Ridge Welding &amp; Machine fabricates structural steel — beams, columns, brackets, and repair steel — with an in-house machine shop, on Route 14A in Penn Yan. Built for the builders, farms, and contractors putting up the Finger Lakes.</p>
+    <a class="btn" href="tel:3155362102">Request a Fabrication Quote</a>
+    <a class="btn ghost" href="#fab">What We Fabricate</a>
+  </div>
+</section>
+
+<section id="fab">
+  <div class="wrap">
+    <h2 class="sec-h">What we fabricate</h2>
+    <p class="lead">Fabrication and machining under one roof — so the member comes out ready to bolt up, not ready for a second shop.</p>
+    <div class="fab">
+      <div class="fcard">
+        <h3>Structural Members</h3>
+        <p>Beams, columns, lintels, and steel framing fabricated to your prints. The load-bearing steel behind pole barns, additions, mezzanines, and equipment platforms.</p>
+        <div class="k">Beams · Columns · Framing</div>
+      </div>
+      <div class="fcard">
+        <h3>Brackets, Plates &amp; Repair Steel</h3>
+        <p>Custom brackets, base plates, gussets, and one-off repair pieces cut and welded to spec — the parts a job stalls without when nothing off the shelf fits.</p>
+        <div class="k">Custom &amp; one-off</div>
+      </div>
+      <div class="fcard">
+        <h3>In-House Machine Work</h3>
+        <p>Drilling, boring, and turning done here — so bolt holes, bushings, and machined surfaces come out true and to dimension without shipping the part elsewhere.</p>
+        <div class="k">Drill · Bore · Turn</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="who">
+  <div class="wrap">
+    <h2>Who we build for</h2>
+    <div class="wgrid">
+      <div class="witem"><h3>Pole-Barn &amp; Post-Frame Builders</h3><p>Fabricated brackets, headers, and structural steel for the region's busy post-frame construction market.</p></div>
+      <div class="witem"><h3>Ag &amp; Commercial Contractors</h3><p>Framing, platforms, and repair steel for barns, shops, and light-commercial builds around the lakes.</p></div>
+      <div class="witem"><h3>Farms</h3><p>Custom steel for equipment mounts, gates, and structures — made to the actual dimensions on your operation.</p></div>
+      <div class="witem"><h3>Other Fabricators</h3><p>Machine work and overflow fabrication when a job needs a lathe or mill they don't have.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="adv">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h2>Fabrication plus a machine shop</h2>
+        <p>Most welding shops can lay a bead. Fewer can also turn a shaft, bore a bushing, or drill a bolt pattern true. Pine Ridge does both, which means a structural piece and its machined details come out of the same shop — one quote, one lead time, one point of accountability.</p>
+        <p>For a builder on a schedule, that's the difference between bolting up on Friday and waiting on a second vendor.</p>
+      </div>
+      <div class="box">
+        <h3>Right now, contractors can't find you</h3>
+        <p>Search "structural steel fabrication near Penn Yan" and Pine Ridge shows up only as an unclaimed directory card — no photos, no capability list, no way to send a drawing. This page is a concept to change that.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h2>A Penn Yan fabrication shop</h2>
+        <p>Pine Ridge Welding &amp; Machine has fabricated structural steel and machined parts on Route 14A for about fourteen years under managing member Raymond Hoover. It's a working fab-and-machine shop — the place a GC points to when a job needs steel made, not just bought.</p>
+      </div>
+      <div class="facts">
+        <table>
+          <tr><td>In business</td><td>~14 years</td></tr>
+          <tr><td>Managing member</td><td>Raymond Hoover</td></tr>
+          <tr><td>Location</td><td>3643 State Route 14A, Penn Yan, NY 14527</td></tr>
+          <tr><td>Core work</td><td>Structural steel fabrication</td></tr>
+          <tr><td>Also</td><td>In-house machine shop</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Have a drawing? Let's price it.</h2>
+    <p>Call the shop with your project — structural members, custom brackets, or a machined part. We'll talk through the steel and get you a fabrication quote and a lead time.</p>
+    <a class="num" href="tel:3155362102">(315) 536-2102</a>
+    <div class="addr">3643 State Route 14A, Penn Yan, NY 14527 · Mon–Fri</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Pine Ridge Welding &amp; Machine · Penn Yan, NY</span>
+    <span>Structural steel fabrication &amp; machine work</span>
+  </div>
+</footer>
+
+</body>
+</html>

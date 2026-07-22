@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reynolds Logging &amp; Lumber — Odessa, NY · Timber Buyers &amp; Custom Sawmill</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bark:#3b2c1d; --bark2:#2a1f14; --timber:#7d5a34; --timber2:#9c7444; --pine:#4c5a34; --pine2:#5f7040;
+  --blade:#7c8a92; --amber:#d99a2b; --ink:#22190f; --paper:#f6f0e6; --card:#fffbf3; --line:#e2d6c0;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Roboto',sans-serif;color:var(--ink);background:var(--paper);line-height:1.62}
+h1,h2,h3,h4{font-family:'Roboto Slab',serif;line-height:1.14}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}
+.topbar{background:var(--bark2);color:#c9b394;font-size:.86rem}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:8px 22px;flex-wrap:wrap;gap:6px}
+.topbar b{color:var(--amber)}
+nav{background:var(--bark);color:#fff;position:sticky;top:0;z-index:40}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:13px 22px}
+.brand{font-family:'Roboto Slab';font-weight:800;font-size:1.5rem;display:flex;flex-direction:column;line-height:1}
+.brand small{font-family:'Roboto';font-size:.58rem;letter-spacing:.2em;color:#cbab82;font-weight:500;margin-top:5px;text-transform:uppercase}
+.nlinks{display:flex;gap:22px;font-weight:500;font-size:.98rem;color:#e4d3ba}
+.nlinks a:hover{color:var(--amber)}
+.ncta{background:var(--timber);color:#fff;padding:9px 18px;border-radius:5px;font-weight:700;font-size:.92rem}
+.ncta:hover{background:var(--timber2)}
+@media(max-width:880px){.nlinks{display:none}}
+.hero{position:relative;color:#f2e6d3;padding:82px 0 68px;
+  background:linear-gradient(115deg,rgba(42,31,20,.94),rgba(59,44,29,.8)),
+  repeating-linear-gradient(90deg,#3b2c1d 0 5px,#42311f 5px 11px,#382a1a 11px 19px)}
+.hero .eye{color:var(--amber);font-weight:700;letter-spacing:.15em;font-size:.85rem;margin-bottom:14px;text-transform:uppercase}
+.hero h1{font-size:3.4rem;max-width:17ch;margin-bottom:18px;font-weight:800}
+.hero h1 em{color:var(--timber2);font-style:normal}
+.hero p{font-size:1.15rem;color:#e0cfb4;max-width:56ch;margin-bottom:26px}
+.hbtns{display:flex;gap:13px;flex-wrap:wrap}
+.b1{background:var(--pine);color:#fff;padding:15px 28px;border-radius:6px;font-weight:700;font-size:1.08rem}
+.b1:hover{background:var(--pine2)}
+.b2{background:var(--timber);color:#fff;padding:15px 28px;border-radius:6px;font-weight:700;font-size:1.08rem}
+.b2:hover{background:var(--timber2)}
+.hnote{margin-top:24px;font-size:.92rem;color:#c9b394}
+@media(max-width:600px){.hero h1{font-size:2.3rem}}
+section{padding:62px 0}
+.eyebrow{color:var(--pine);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.85rem;margin-bottom:9px}
+.stitle{font-size:2.3rem;color:var(--bark2);margin-bottom:10px;font-weight:800}
+.lead{color:#5b4a35;max-width:64ch;margin-bottom:34px;font-size:1.05rem}
+/* two audiences */
+.paths .two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.pcard{border-radius:14px;padding:34px;color:#f4e9d6}
+.pcard.sell{background:linear-gradient(155deg,var(--pine),#3a4527)}
+.pcard.buy{background:linear-gradient(155deg,var(--timber),#5f4326)}
+.pcard .tag{display:inline-block;background:rgba(0,0,0,.22);color:#fff;font-weight:700;font-size:.76rem;letter-spacing:.08em;padding:5px 12px;border-radius:20px;margin-bottom:14px;text-transform:uppercase}
+.pcard h3{font-size:1.7rem;color:#fff;margin-bottom:8px}
+.pcard p{opacity:.9;margin-bottom:14px;font-size:.97rem}
+.pcard ul{list-style:none}
+.pcard li{padding:7px 0 7px 24px;position:relative;border-bottom:1px solid rgba(255,255,255,.14);font-size:.95rem}
+.pcard li:last-child{border-bottom:none}
+.pcard li::before{content:"✔";position:absolute;left:0;color:var(--amber);font-size:.85rem;top:9px}
+@media(max-width:760px){.paths .two{grid-template-columns:1fr}}
+/* products */
+.prod{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pc{text-align:center;padding:24px 16px;border:1px solid var(--line);border-radius:10px;background:var(--paper)}
+.pc .ic{font-size:2rem;margin-bottom:8px}
+.pc h4{font-size:1.15rem;color:var(--bark);margin-bottom:4px}
+.pc p{font-size:.86rem;color:#6d5a41}
+@media(max-width:760px){.pgrid{grid-template-columns:1fr 1fr}}
+/* how / stock strip */
+.strip{background:var(--bark);color:#e9d8bd;border-radius:12px;padding:22px 26px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:26px}
+.strip b{color:#fff;font-family:'Roboto Slab'}
+.strip a{background:var(--amber);color:#3a2a10;padding:12px 22px;border-radius:7px;font-weight:700;white-space:nowrap}
+/* about */
+.about{background:linear-gradient(160deg,#eee3cf,#e5d7bd)}
+.about .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:36px;align-items:center}
+.about h2{font-size:2.05rem;color:var(--bark2);margin-bottom:14px;font-weight:800}
+.about p{color:#564531;margin-bottom:12px}
+.yearcard{background:var(--bark);color:#e9d8bd;border-radius:14px;padding:30px;text-align:center}
+.yearcard .big{font-family:'Roboto Slab';font-size:2.8rem;color:var(--amber);line-height:1}
+.yearcard span{font-size:.9rem;color:#c9b394}
+.yearcard hr{border:none;border-top:1px solid rgba(255,255,255,.16);margin:16px 0}
+/* contact */
+.contact{background:var(--bark2);color:#e4d3ba}
+.contact .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:36px;align-items:start}
+.contact h2{color:#fff;font-size:2.1rem;margin-bottom:12px;font-weight:800}
+.contact .info p{margin-bottom:9px;color:#cbab82}
+.contact .info b{color:var(--amber)}
+.formbox{background:var(--card);color:var(--ink);border-radius:14px;padding:28px}
+.formbox h3{font-family:'Roboto Slab';color:var(--bark2);font-size:1.35rem;margin-bottom:6px}
+.formbox p.sm{font-size:.88rem;color:#5b4a35;margin-bottom:14px}
+label{display:block;font-size:.74rem;font-weight:700;color:var(--bark);margin-bottom:5px;text-transform:uppercase;letter-spacing:.03em}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid #d6c8ad;border-radius:7px;font-family:inherit;font-size:.95rem;background:#fffdf7}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--timber)}
+.frow2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fbtn{margin-top:15px;background:var(--pine);color:#fff;border:none;padding:14px 22px;border-radius:8px;font-family:'Roboto Slab';font-weight:700;font-size:1.08rem;cursor:pointer;width:100%}
+.fbtn:hover{background:var(--pine2)}
+@media(max-width:820px){.contact .wrap{grid-template-columns:1fr}.frow2{grid-template-columns:1fr}}
+footer{background:#241a10;color:#a98f6c;padding:38px 0 20px}
+footer .cols{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:26px}
+footer h4{color:#fff;font-family:'Roboto Slab';font-size:1.1rem;margin-bottom:10px}
+footer a:hover{color:var(--amber)}
+.copy{border-top:1px solid #3d2d1b;margin-top:22px;padding-top:14px;font-size:.8rem;color:#87704f}
+@media(max-width:720px){footer .cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Odessa, NY · Working sawmill on Route 224 · Schuyler County</span>
+  <span>Timber &amp; lumber: <b>(607) 594-4434</b></span>
+</div></div>
+
+<nav><div class="wrap">
+  <span class="brand">REYNOLDS LOGGING &amp; LUMBER<small>Family Sawmill · Odessa, NY · 40+ Years</small></span>
+  <div class="nlinks">
+    <a href="#paths">Timber &amp; Lumber</a>
+    <a href="#products">What We Cut</a>
+    <a href="#about">The Mill</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="#contact" class="ncta">Call the Sawyer</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="eye">STANDING TIMBER · CUSTOM SAWING · ROUGH-CUT LUMBER</div>
+  <h1>The mill that buys your timber <em>and cuts your lumber.</em></h1>
+  <p>A family sawmill on Route 224 in Odessa for more than forty years — we harvest standing timber off local woodlots and saw rough-cut boards, beams and barn lumber to order. Two sides of the same yard, one phone call.</p>
+  <div class="hbtns">
+    <a href="#paths" class="b1">I Have Timber to Sell</a>
+    <a href="#paths" class="b2">I Want Lumber Cut</a>
+  </div>
+  <div class="hnote">🪵 Small family mill — talk to a real sawyer, not a call center.</div>
+</div></header>
+
+<section class="paths" id="paths"><div class="wrap">
+  <div class="eyebrow">Two Ways to Work With Us</div>
+  <h2 class="stitle">Selling timber, or buying boards?</h2>
+  <p class="lead">Most people find us for one of two reasons — and the website never made either one clear. So here's the plain version: if you've got trees, we'll look at them; if you need lumber, we'll cut it.</p>
+  <div class="two">
+    <div class="pcard sell">
+      <span class="tag">Landowners</span>
+      <h3>Sell Your Standing Timber</h3>
+      <p>Got a woodlot, a fence line of mature hardwood, or acreage you want thinned? We harvest standing timber and handle the logging end ourselves.</p>
+      <ul>
+        <li>Walk your woodlot and talk through what's marketable</li>
+        <li>Selective harvest by a DOT-registered logging crew</li>
+        <li>Local, family operation — not an out-of-state broker</li>
+        <li>Clean, straightforward terms</li>
+      </ul>
+    </div>
+    <div class="pcard buy">
+      <span class="tag">Woodworkers &amp; Builders</span>
+      <h3>Buy Lumber &amp; Custom Sawing</h3>
+      <p>Rough-cut boards, beams and barn lumber straight off a working mill — or bring your own logs and we'll saw them to the sizes you need.</p>
+      <ul>
+        <li>Rough-cut hardwood &amp; utility lumber</li>
+        <li>Beams &amp; timbers for barns and framing</li>
+        <li>Custom sawing — your log, your dimensions</li>
+        <li>Priced by the job — call for what's on the yard</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="prod" id="products"><div class="wrap">
+  <div class="eyebrow">Off the Mill</div>
+  <h2 class="stitle">Rough-cut stock for real work</h2>
+  <p class="lead">This is a working mill — the honest, raw lumber that farmers, framers and woodworkers keep coming back to Route 224 for.</p>
+  <div class="pgrid">
+    <div class="pc"><div class="ic">🪵</div><h4>Rough-Cut Boards</h4><p>Sawn to your thickness</p></div>
+    <div class="pc"><div class="ic">🟫</div><h4>Beams &amp; Timbers</h4><p>Barn &amp; structural framing</p></div>
+    <div class="pc"><div class="ic">🚜</div><h4>Barn / Utility Lumber</h4><p>Siding, fencing, rough stock</p></div>
+    <div class="pc"><div class="ic">🪚</div><h4>Custom Sawing</h4><p>Your logs, milled to order</p></div>
+  </div>
+  <div class="strip">
+    <span>What's on the yard changes as logs come in. <b>Want to know what we can cut for your project right now?</b></span>
+    <a href="tel:6075944434">Call (607) 594-4434</a>
+  </div>
+</div></section>
+
+<section class="about" id="about"><div class="wrap">
+  <div class="txt">
+    <div class="eyebrow">The Mill</div>
+    <h2>Forty-plus years on Route 224</h2>
+    <p>Reynolds Logging &amp; Lumber is a small family sawmill, logging and construction operation that's been cutting in Odessa for more than forty years. Brett Reynolds runs it the way small mills have always run — on repeat customers, fair cuts and word of mouth.</p>
+    <p>What it's never had is a page online. A landowner searching "sell timber Schuyler County" or a woodworker looking for "rough-cut lumber Odessa NY" finds a Facebook page and a couple of directory stubs — nothing that explains that this mill both buys timber and saws lumber. That's the one thing this page is built to fix.</p>
+  </div>
+  <div class="yearcard">
+    <div class="big">40+</div>
+    <span>Years family-run in Odessa</span>
+    <hr>
+    <div class="big">2</div>
+    <span>Sides of the yard — timber in, lumber out</span>
+    <hr>
+    <span style="font-size:.82rem">DOT-registered logging operation · Schuyler County</span>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div class="info">
+    <div class="eyebrow" style="color:var(--amber)">Get In Touch</div>
+    <h2>Call about timber or lumber</h2>
+    <p style="color:#cbab82;max-width:44ch;margin-bottom:20px">Tell us whether you've got timber to sell or lumber to buy — and roughly what you're working with — and we'll take it from there.</p>
+    <p><b>Phone:</b> (607) 594-4434</p>
+    <p><b>Mill:</b> 5119 State Route 224, Odessa, NY 14869</p>
+    <p><b>Owner:</b> Brett Reynolds</p>
+    <p style="margin-top:14px;color:#a98f6c;font-size:.9rem">A mill's a loud place — if nobody picks up, leave a message and we'll call back.</p>
+  </div>
+  <div class="formbox">
+    <h3>Timber &amp; Lumber Inquiry</h3>
+    <p class="sm">Fill this out and we'll call you back.</p>
+    <form onsubmit="return false">
+      <div class="frow2">
+        <div><label>Name</label><input type="text" placeholder="Your name"></div>
+        <div><label>Phone</label><input type="tel" placeholder="(607) 000-0000"></div>
+      </div>
+      <div style="margin-top:12px"><label>What's this about?</label>
+        <select><option>I have standing timber to sell</option><option>I want to buy rough-cut lumber</option><option>Custom sawing — I have logs to mill</option><option>Beams / barn lumber</option><option>Something else</option></select></div>
+      <div style="margin-top:12px"><label>Details</label><textarea rows="3" placeholder="e.g. about 8 acres of hardwood I'd like looked at — or — need roughly 200 bd ft of rough oak for a barn repair"></textarea></div>
+      <button class="fbtn">Send Inquiry</button>
+    </form>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div>
+      <h4>Reynolds Logging &amp; Lumber</h4>
+      <p>Family sawmill, logging and standing-timber buyer on Route 224 in Odessa, NY — rough-cut lumber, beams, barn stock and custom sawing for Schuyler County and beyond.</p>
+      <p style="font-family:'Roboto Slab';font-weight:800;font-size:1.5rem;color:#fff;margin-top:10px">(607) 594-4434</p>
+    </div>
+    <div>
+      <h4>Find the Mill</h4>
+      <p>5119 State Route 224<br>Odessa, NY 14869<br>Schuyler County</p>
+    </div>
+    <div>
+      <h4>Mill</h4>
+      <p><a href="#paths">Timber &amp; lumber</a><br><a href="#products">What we cut</a><br><a href="#about">The mill</a><br><a href="#contact">Contact</a></p>
+    </div>
+  </div>
+  <div class="copy">© 2026 Reynolds Logging &amp; Lumber Company · Odessa, NY · Preview concept prepared by Onyx Rise Media.</div>
+</div></footer>
+
+</body>
+</html>

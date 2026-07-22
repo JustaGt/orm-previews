@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4 Seasons Storage &amp; Rentals — Self, Boat &amp; Camper Storage in Warrensburg, NY</title>
+<meta name="description" content="Self-storage units from 5x5 to 15x30 plus boat, camper and RV storage on Main Street in Warrensburg. Drive-up access, 24/7 gate, cameras, on-site manager.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --steel:#2b3138; --steel-dk:#1a1f24; --steel-lt:#3c444d;
+    --amber:#e8871e; --amber-dk:#c26f11;
+    --paper:#f4f2ee; --line:#d9d5cd; --ink:#20242a; --muted:#646c76;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  h1,h2,h3,.cond{font-family:'Barlow Condensed','Inter',sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.05}
+
+  /* top bar */
+  .topbar{background:var(--steel-dk);color:#cfd4da;font-size:.82rem}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:9px 22px;flex-wrap:wrap}
+  .topbar a{color:#fff;text-decoration:none;font-weight:600}
+
+  /* nav */
+  nav{background:var(--steel);position:sticky;top:0;z-index:40;border-bottom:3px solid var(--amber)}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:12px 22px;gap:16px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:11px;color:#fff;text-decoration:none}
+  .mark{width:38px;height:38px;background:var(--amber);display:grid;place-items:center;font-family:'Barlow Condensed';font-weight:700;color:#20242a;font-size:1.25rem;border-radius:3px}
+  .brand b{font-family:'Barlow Condensed';font-size:1.32rem;letter-spacing:.03em;text-transform:uppercase;display:block;line-height:1}
+  .brand span{font-size:.68rem;letter-spacing:.16em;color:#9aa3ad;text-transform:uppercase}
+  .navlinks{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+  .navlinks a{color:#c9cfd6;text-decoration:none;font-size:.85rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+  .navlinks a:hover{color:#fff}
+  .btn{display:inline-block;background:var(--amber);color:#1a1f24;font-weight:700;padding:11px 20px;border-radius:3px;text-decoration:none;font-size:.88rem;letter-spacing:.03em;border:none;cursor:pointer;text-transform:uppercase;font-family:'Barlow Condensed';font-size:1.02rem}
+  .btn:hover{background:var(--amber-dk)}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid #5b646e}
+  .btn-ghost:hover{background:#3c444d}
+
+  /* hero */
+  header.hero{background:linear-gradient(180deg,#2b3138 0%,#20252b 100%);color:#fff;padding:74px 0 84px;position:relative;overflow:hidden}
+  header.hero:before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0 2px,transparent 2px 46px);pointer-events:none}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:52px;align-items:center;position:relative}
+  .eyebrow{display:inline-block;background:rgba(232,135,30,.16);border:1px solid rgba(232,135,30,.45);color:#f2ab5e;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:6px 12px;border-radius:3px;margin-bottom:20px}
+  h1{font-size:3.5rem;margin-bottom:18px}
+  h1 em{font-style:normal;color:var(--amber)}
+  .sub{font-size:1.12rem;color:#b9c1c9;max-width:37em;margin-bottom:26px}
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+  .facts{display:flex;gap:26px;flex-wrap:wrap;border-top:1px solid #3c444d;padding-top:20px}
+  .facts div b{font-family:'Barlow Condensed';font-size:1.5rem;color:#fff;display:block;line-height:1}
+  .facts div span{font-size:.76rem;color:#8f98a2;text-transform:uppercase;letter-spacing:.09em}
+
+  /* availability card */
+  .avail{background:#fff;color:var(--ink);border-radius:5px;padding:26px;box-shadow:0 22px 50px rgba(0,0,0,.4);border-top:5px solid var(--amber)}
+  .avail h3{font-size:1.55rem;margin-bottom:5px}
+  .avail p.small{font-size:.85rem;color:var(--muted);margin-bottom:16px}
+  label{display:block;font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--steel-lt);margin-bottom:5px}
+  input,select,textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:3px;font:inherit;font-size:.94rem;margin-bottom:13px;background:#fbfaf8}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--amber);border-color:var(--amber)}
+  .avail .btn{width:100%;text-align:center;padding:13px}
+  .avail .note{font-size:.76rem;color:var(--muted);margin-top:10px;text-align:center}
+
+  section{padding:70px 0}
+  .sec-head{margin-bottom:38px;max-width:44em}
+  .sec-head h2{font-size:2.35rem;margin-bottom:10px}
+  .sec-head p{color:var(--muted);font-size:1.03rem}
+  .kicker{font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--amber-dk);margin-bottom:8px}
+
+  /* size grid */
+  .sizes{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .size-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .size{border:1px solid var(--line);border-radius:4px;padding:20px;background:#fbfaf8;transition:.16s}
+  .size:hover{border-color:var(--amber);background:#fff;transform:translateY(-2px)}
+  .size .dim{font-family:'Barlow Condensed';font-size:2.1rem;color:var(--steel);line-height:1;margin-bottom:3px}
+  .size .sqft{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--amber-dk);font-weight:700;margin-bottom:12px}
+  .size ul{list-style:none;font-size:.88rem;color:var(--muted)}
+  .size li{padding:3px 0 3px 15px;position:relative}
+  .size li:before{content:"—";position:absolute;left:0;color:var(--line)}
+  .size-note{margin-top:20px;font-size:.88rem;color:var(--muted);border-left:3px solid var(--amber);padding-left:14px}
+
+  /* seasonal */
+  .seasonal{background:var(--steel);color:#fff}
+  .seasonal .kicker{color:#f2ab5e}
+  .seasonal h2{color:#fff}
+  .seasonal .sec-head p{color:#aeb6be}
+  .rig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .rig{background:#333a42;border-radius:4px;padding:24px;border-left:4px solid var(--amber)}
+  .rig h3{font-size:1.4rem;margin-bottom:8px;color:#fff}
+  .rig p{font-size:.93rem;color:#b3bbc3}
+  .timeline{margin-top:34px;display:flex;gap:0;flex-wrap:wrap;border-top:1px solid #454e57;padding-top:24px}
+  .tl{flex:1 1 160px;padding-right:18px}
+  .tl b{display:block;font-family:'Barlow Condensed';font-size:1.15rem;color:var(--amber);letter-spacing:.05em}
+  .tl span{font-size:.86rem;color:#9ea7b0}
+
+  /* features */
+  .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .feat{display:flex;gap:14px;align-items:flex-start}
+  .feat .ic{flex:0 0 42px;height:42px;border-radius:3px;background:var(--steel);display:grid;place-items:center}
+  .feat .ic svg{width:20px;height:20px;stroke:var(--amber);fill:none;stroke-width:1.8}
+  .feat h3{font-size:1.22rem;margin-bottom:3px}
+  .feat p{font-size:.92rem;color:var(--muted)}
+
+  /* local */
+  .local{background:#fff;border-top:1px solid var(--line)}
+  .local-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .local p{margin-bottom:14px;color:#3f464e}
+  .local .place{border:1px solid var(--line);border-radius:4px;overflow:hidden}
+  .local .place .bar{background:var(--steel);color:#fff;padding:12px 18px;font-family:'Barlow Condensed';letter-spacing:.06em;font-size:1.15rem;text-transform:uppercase}
+  .local .place .body{padding:20px 18px}
+  .local .place .row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #eeebe6;font-size:.92rem}
+  .local .place .row:last-child{border:none}
+  .local .place .row b{color:var(--steel)}
+
+  /* contact */
+  .contact{background:var(--steel-dk);color:#fff}
+  .contact h2{color:#fff}
+  .c-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  .c-list{list-style:none}
+  .c-list li{padding:15px 0;border-bottom:1px solid #333a42;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .c-list li b{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:#8f98a2;font-weight:700}
+  .c-list li span{color:#fff;font-weight:600;text-align:right}
+  .c-list a{color:var(--amber);text-decoration:none;font-weight:600}
+  .cform{background:#fff;color:var(--ink);border-radius:5px;padding:26px}
+  .cform h3{font-size:1.5rem;margin-bottom:14px}
+
+  footer{background:#12161a;color:#7d868f;padding:30px 0;font-size:.84rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .ph{background:#fff5e6;border:1px dashed var(--amber);color:#8a5a10;font-size:.78rem;padding:8px 12px;border-radius:3px;margin-top:14px}
+
+  @media(max-width:900px){
+    .hero-grid,.local-grid,.c-grid{grid-template-columns:1fr;gap:34px}
+    .size-grid{grid-template-columns:repeat(2,1fr)}
+    .rig-grid,.feat-grid{grid-template-columns:1fr}
+    h1{font-size:2.5rem}
+    .sec-head h2{font-size:1.85rem}
+    .navlinks{display:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>3975 Main Street, Warrensburg NY · Gate open 24/7 for tenants</span>
+  <span>Office: <a href="tel:5186231500">518-623-1500</a></span>
+</div></div>
+
+<nav><div class="wrap">
+  <a class="brand" href="#"><span class="mark">4S</span><span><b>4 Seasons Storage</b><span>Storage &amp; Rentals · Warrensburg</span></span></a>
+  <div class="navlinks">
+    <a href="#sizes">Unit Sizes</a>
+    <a href="#seasonal">Boat &amp; Camper</a>
+    <a href="#facility">The Facility</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a class="btn" href="#hold">Check Availability</a>
+</div></nav>
+
+<header class="hero"><div class="wrap hero-grid">
+  <div>
+    <span class="eyebrow">Warrensburg · Since 2007</span>
+    <h1>The camper comes off the driveway.<br><em>The garage goes back to being a garage.</em></h1>
+    <p class="sub">Drive-up storage units from 5&times;5 to 15&times;30 on Main Street in Warrensburg — plus outdoor boat, camper and RV storage for the nine months a year you're not using them. Cameras on the lot, lights that stay on, and a gate you can pull through at 6am on a Saturday.</p>
+    <div class="hero-cta">
+      <a class="btn" href="#hold">See what's open this month</a>
+      <a class="btn btn-ghost" href="#sizes">Which size do I need?</a>
+    </div>
+    <div class="facts">
+      <div><b>5&times;5 – 15&times;30</b><span>Unit sizes</span></div>
+      <div><b>24/7</b><span>Tenant gate access</span></div>
+      <div><b>Boat · Camper · RV</b><span>Outdoor season storage</span></div>
+    </div>
+  </div>
+
+  <div class="avail" id="hold">
+    <h3>Ask what's open</h3>
+    <p class="small">Tell us the size and the month you need it. We'll call back with what's actually on the lot — we don't keep a list online that goes stale.</p>
+    <form onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Sent — we\'ll call you';">
+      <label for="s1">What are you storing?</label>
+      <select id="s1">
+        <option>Household / moving between houses</option>
+        <option>Boat (season storage)</option>
+        <option>Camper / travel trailer</option>
+        <option>RV / motorhome</option>
+        <option>Business inventory or tools</option>
+        <option>Not sure yet — need advice</option>
+      </select>
+      <label for="s2">Size you think you need</label>
+      <select id="s2">
+        <option>5×5 — closet-sized</option>
+        <option>5×10 — one room</option>
+        <option>10×10 — small apartment</option>
+        <option>10×20 — house or one vehicle</option>
+        <option>15×30 — large / commercial</option>
+        <option>Outdoor space (boat, camper, RV)</option>
+      </select>
+      <label for="s3">Start month</label>
+      <input id="s3" type="text" placeholder="e.g. September">
+      <label for="s4">Name &amp; phone</label>
+      <input id="s4" type="text" placeholder="Name and best number">
+      <button class="btn" type="submit">Request availability</button>
+      <p class="note">Or just call the office: 518-623-1500</p>
+    </form>
+  </div>
+</div></header>
+
+<section class="sizes" id="sizes"><div class="wrap">
+  <div class="sec-head">
+    <div class="kicker">Unit sizes</div>
+    <h2>Pick the size by what's going in it, not by the number</h2>
+    <p>Nobody thinks in square feet. Here's what each unit on our lot actually swallows.</p>
+  </div>
+  <div class="size-grid">
+    <div class="size">
+      <div class="dim">5&times;5</div>
+      <div class="sqft">25 sq ft</div>
+      <ul><li>Ski and snowboard gear</li><li>Boxes of files</li><li>Seasonal decorations</li><li>A dorm room's worth</li></ul>
+    </div>
+    <div class="size">
+      <div class="dim">5&times;10</div>
+      <div class="sqft">50 sq ft</div>
+      <ul><li>One bedroom of furniture</li><li>Mattress + boxspring</li><li>Kayaks and paddleboards</li><li>Tools and a workbench</li></ul>
+    </div>
+    <div class="size">
+      <div class="dim">10&times;20</div>
+      <div class="sqft">200 sq ft</div>
+      <ul><li>A whole house between moves</li><li>Car or small trailer indoors</li><li>Contractor's materials</li><li>Restaurant or shop overflow</li></ul>
+    </div>
+    <div class="size">
+      <div class="dim">15&times;30</div>
+      <div class="sqft">450 sq ft</div>
+      <ul><li>Large camper under roof</li><li>Two vehicles</li><li>Full commercial inventory</li><li>Estate contents</li></ul>
+    </div>
+  </div>
+  <p class="size-note">Sizes between these exist too — 10&times;10 and 10&times;15 are the two we turn over most. Call and describe the pile; we've been guessing this right since 2007.</p>
+</div></section>
+
+<section class="seasonal" id="seasonal"><div class="wrap">
+  <div class="sec-head">
+    <div class="kicker">Boat, camper &amp; RV storage</div>
+    <h2>Warrensburg is where the trailer stops</h2>
+    <p>You're 12 minutes from Lake George, half an hour from Schroon and Loon. Nobody wants to tow a 24-foot boat back down the Northway in October — and nobody wants it sitting in the side yard until May either.</p>
+  </div>
+  <div class="rig-grid">
+    <div class="rig">
+      <h3>Boats</h3>
+      <p>Bowriders, pontoons, fishing rigs. Off the water in the fall, out of the weather all winter, ready to hook up the week the ramps open.</p>
+    </div>
+    <div class="rig">
+      <h3>Campers &amp; travel trailers</h3>
+      <p>Park it here instead of the driveway. Pull it out for a long weekend at the state campgrounds and bring it right back.</p>
+    </div>
+    <div class="rig">
+      <h3>RVs &amp; motorhomes</h3>
+      <p>Room to maneuver on a lot built for rigs, not a lot built for cars with a truck squeezed in.</p>
+    </div>
+  </div>
+  <div class="timeline">
+    <div class="tl"><b>October</b><span>Rigs start coming in. Call before the first hard freeze — this is our busiest month.</span></div>
+    <div class="tl"><b>November – March</b><span>Snow country. Your camper isn't buried in your own driveway.</span></div>
+    <div class="tl"><b>April</b><span>Pull-out season. Call ahead and we'll have it accessible.</span></div>
+    <div class="tl"><b>Year-round</b><span>Indoor units stay available in every month, storm or no storm.</span></div>
+  </div>
+</div></section>
+
+<section id="facility"><div class="wrap">
+  <div class="sec-head">
+    <div class="kicker">The facility</div>
+    <h2>What's actually on the lot</h2>
+  </div>
+  <div class="feat-grid">
+    <div class="feat">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V6z"/></svg></div>
+      <div><h3>Security cameras</h3><p>The lot is covered and lit. You should never have to wonder what your unit looks like at 2am.</p></div>
+    </div>
+    <div class="feat">
+      <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+      <div><h3>24/7 tenant access</h3><p>Get to your things on your schedule — before the trip, after the shift, the night before the move.</p></div>
+    </div>
+    <div class="feat">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 9l9-6 9 6v10a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 21V12h6v9"/></svg></div>
+      <div><h3>Drive-up doors</h3><p>Back the truck to the door. No elevators, no hallways, no carrying a table sideways.</p></div>
+    </div>
+    <div class="feat">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M6 20V9l6-5 6 5v11"/><path d="M10 20v-5h4v5"/></svg></div>
+      <div><h3>On-site manager</h3><p>A person answers the phone. If a door sticks or a latch freezes, someone local handles it.</p></div>
+    </div>
+    <div class="feat">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M2 12h20"/><path d="M6 12V7h12v5"/><circle cx="7" cy="16" r="2"/><circle cx="17" cy="16" r="2"/></svg></div>
+      <div><h3>Room for a trailer</h3><p>Wide lanes. You can swing a truck-and-trailer through without a five-point turn.</p></div>
+    </div>
+    <div class="feat">
+      <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M5 8l7-5 7 5"/><path d="M5 16l7 5 7-5"/></svg></div>
+      <div><h3>Month to month</h3><p>Store for a season or for years. Nobody's locking you into a contract to hold a camper.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="local"><div class="wrap local-grid">
+  <div>
+    <div class="kicker">Why Main Street</div>
+    <h2 style="font-size:2.1rem;margin-bottom:14px">You pass us on the way in and on the way out</h2>
+    <p>We're on Main Street in the middle of Warrensburg — the road everyone takes between Exit 23 and the lakes. That matters more than it sounds. Storage is only convenient if it's on a route you already drive.</p>
+    <p>Camp owners on Schroon River Road, contractors working Bolton and Chestertown, families in Thurman with one garage and two vehicles — this is the yard that's on your way, not the one that's 40 minutes the wrong direction in Queensbury.</p>
+    <a class="btn" href="#contact" style="margin-top:8px">Get directions &amp; hours</a>
+  </div>
+  <div class="place">
+    <div class="bar">4 Seasons Storage &amp; Rentals</div>
+    <div class="body">
+      <div class="row"><b>Address</b><span>3975 Main St, Warrensburg NY 12885</span></div>
+      <div class="row"><b>Office phone</b><span>518-623-1500</span></div>
+      <div class="row"><b>Established</b><span>2007</span></div>
+      <div class="row"><b>Unit range</b><span>5×5 to 15×30</span></div>
+      <div class="row"><b>Outdoor storage</b><span>Boat · Camper · RV</span></div>
+      <div class="row"><b>Access</b><span>24/7 for tenants</span></div>
+      <div class="ph">Placeholder: office hours and current monthly rates to be confirmed by the owner before this page goes live.</div>
+    </div>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div class="sec-head">
+    <div class="kicker" style="color:#f2ab5e">Contact</div>
+    <h2>Call, or leave us the details</h2>
+    <p style="color:#aeb6be">Storage questions get answered fastest by phone. If it's after hours, fill this in and we'll come back to you.</p>
+  </div>
+  <div class="c-grid">
+    <ul class="c-list">
+      <li><b>Phone</b><span><a href="tel:5186231500">518-623-1500</a></span></li>
+      <li><b>Email</b><span><a href="mailto:fourseasonsstorage518@yahoo.com">fourseasonsstorage518@yahoo.com</a></span></li>
+      <li><b>Address</b><span>3975 Main Street<br>Warrensburg, NY 12885</span></li>
+      <li><b>Facebook</b><span>4 Seasons Storage &amp; Rentals LLC</span></li>
+    </ul>
+    <div class="cform">
+      <h3>Send a storage question</h3>
+      <form onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Thanks — we\'ll be in touch';">
+        <label for="n">Name</label><input id="n" type="text">
+        <label for="p">Phone</label><input id="p" type="tel">
+        <label for="m">What do you need to store?</label>
+        <textarea id="m" rows="3" placeholder="e.g. 21ft bowrider for the winter, starting in October"></textarea>
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>4 Seasons Storage &amp; Rentals LLC · 3975 Main Street, Warrensburg, NY 12885</span>
+  <span>518-623-1500 · Serving Warrensburg, Chestertown, Lake George &amp; Thurman</span>
+</div></footer>
+
+</body>
+</html>

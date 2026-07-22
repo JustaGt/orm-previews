@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mucker's Meat Shop — Hand-Cut Meats & Custom Processing in Downsville, NY</title>
+<meta name="description" content="Hand-cut meats, custom orders, freezer beef and pork, and deer & bear processing in Downsville, NY. Family meat shop in the East Branch Delaware valley.">
+<style>
+  :root{
+    --kraft:#e7d8b8; --kraft-d:#d8c39a; --brick:#9c2b22; --brick-d:#7a1f18;
+    --char:#2b2522; --chalk:#f3efe6; --board:#2e3530; --muted:#6b6258; --gold:#c98a2b; --line:#cbb990;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Georgia",serif;color:var(--char);background:var(--chalk);line-height:1.6}
+  .sans{font-family:"Arial Narrow",Arial,sans-serif}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+  /* top */
+  .topbar{background:var(--char);color:var(--kraft);font-size:.84rem}
+  .topbar .wrap{display:flex;justify-content:space-between;gap:12px;padding:8px 22px;flex-wrap:wrap;align-items:center}
+  .topbar a{color:#fff;font-weight:700;text-decoration:none}
+  /* hero */
+  .hero{background:
+      linear-gradient(rgba(43,37,34,.78),rgba(43,37,34,.84)),
+      repeating-linear-gradient(45deg,#3a322c,#3a322c 22px,#332c27 22px,#332c27 44px);
+    color:var(--chalk);padding:60px 0 64px;text-align:center}
+  .tagstamp{display:inline-block;border:2px solid var(--gold);color:var(--gold);border-radius:4px;padding:6px 14px;font-family:"Arial Narrow",Arial,sans-serif;font-weight:800;letter-spacing:.18em;text-transform:uppercase;font-size:.74rem;margin-bottom:22px}
+  .hero h1{font-size:2.7rem;line-height:1.12;margin-bottom:14px}
+  .hero h1 span{color:#eab64f}
+  .hero p{font-size:1.12rem;max-width:52ch;margin:0 auto 26px;color:#ecdfc6}
+  .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;border-radius:4px;padding:14px 26px;font-weight:800;text-decoration:none;font-size:1rem;font-family:"Arial Narrow",Arial,sans-serif;letter-spacing:.03em}
+  .btn-brick{background:var(--brick);color:#fff}
+  .btn-out{border:2px solid var(--kraft);color:var(--kraft)}
+  /* banner */
+  .banner{background:var(--brick);color:#fff;text-align:center;padding:12px 22px;font-family:"Arial Narrow",Arial,sans-serif;font-weight:700;letter-spacing:.04em;font-size:1rem}
+  /* sections */
+  section{padding:54px 0}
+  .eyebrow{color:var(--brick);font-family:"Arial Narrow",Arial,sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:.8rem;margin-bottom:10px}
+  h2{font-size:1.85rem;margin-bottom:8px}
+  .sub{color:var(--muted);max-width:60ch;margin-bottom:28px}
+  /* case board */
+  .case{background:var(--board);border-radius:12px;padding:30px 26px;color:var(--chalk);box-shadow:inset 0 0 0 6px #20251f, inset 0 0 0 8px #3a443c}
+  .case h2{color:#fff;text-align:center}
+  .case .sub{color:#c2cbbd;text-align:center;margin:0 auto 24px}
+  .menu{display:grid;grid-template-columns:1fr 1fr;gap:6px 40px;max-width:760px;margin:0 auto}
+  .mrow{display:flex;align-items:baseline;justify-content:space-between;gap:8px;border-bottom:1px dotted #5a655a;padding:9px 0}
+  .mrow .name{font-family:"Arial Narrow",Arial,sans-serif;font-size:1.08rem;letter-spacing:.02em}
+  .mrow .dot{flex:1;border-bottom:1px dotted #5a655a;margin:0 6px;transform:translateY(-3px)}
+  .mrow .meta{font-size:.8rem;color:#9fb09f;font-family:"Arial Narrow",Arial,sans-serif}
+  .case .pf{text-align:center;color:#8c9a8c;font-size:.76rem;margin-top:18px;font-style:italic}
+  /* two jobs */
+  .jobs{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .job{background:var(--kraft);border:1px solid var(--line);border-radius:10px;padding:26px}
+  .job h3{font-size:1.35rem;margin-bottom:6px;color:var(--brick-d)}
+  .job p{font-size:.96rem;color:#5c5346}
+  .job ul{list-style:none;margin-top:12px}
+  .job ul li{padding:6px 0 6px 24px;position:relative;font-family:"Arial Narrow",Arial,sans-serif;font-size:1rem}
+  .job ul li:before{content:"✦";color:var(--brick);position:absolute;left:2px}
+  /* deer steps */
+  .deer{background:var(--char);color:var(--chalk);border-radius:12px;padding:34px 26px}
+  .deer h2{color:#fff}
+  .deer .eyebrow{color:#eab64f}
+  .drow{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;margin-top:22px}
+  .dstep{position:relative;padding-left:44px}
+  .dstep .n{position:absolute;left:0;top:-2px;width:32px;height:32px;border:2px solid var(--gold);color:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800}
+  .dstep h4{font-family:"Arial Narrow",Arial,sans-serif;font-size:1.1rem;margin-bottom:4px}
+  .dstep p{font-size:.86rem;color:#cabfae}
+  /* visit + form */
+  .visit{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;align-items:start}
+  .hours{background:var(--kraft);border-left:5px solid var(--brick);border-radius:0 10px 10px 0;padding:22px}
+  .hours table{width:100%;border-collapse:collapse;font-family:"Arial Narrow",Arial,sans-serif}
+  .hours td{padding:6px 0;border-bottom:1px solid var(--line);font-size:1rem}
+  .hours td:last-child{text-align:right;color:var(--muted)}
+  .pf2{font-size:.74rem;color:var(--brick);font-family:"Arial Narrow",Arial,sans-serif;margin-top:8px}
+  form{background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px}
+  label{font-family:"Arial Narrow",Arial,sans-serif;font-weight:700;font-size:.9rem;display:block;margin-bottom:5px}
+  input,select,textarea{width:100%;border:1px solid var(--line);border-radius:6px;padding:11px;font-size:.95rem;font-family:Georgia,serif;background:var(--chalk);margin-bottom:13px}
+  /* footer */
+  footer{background:var(--char);color:#c5b89c;padding:34px 0;font-size:.92rem}
+  footer a{color:#fff;text-decoration:none}
+  footer .fg{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap}
+  @media(max-width:760px){.hero h1{font-size:2rem}.menu{grid-template-columns:1fr}.jobs{grid-template-columns:1fr}.visit{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span class="sans" style="letter-spacing:.04em">Hand-cut meats &amp; custom processing · Downsville, NY</span>
+  <span>Call the shop: <a href="tel:6073632888">(607) 363-2888</a></span>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <span class="tagstamp">Cut to order · Special orders welcome</span>
+  <h1>Real meat, cut by hand. <span>Right here in Downsville.</span></h1>
+  <p>No shrink-wrapped supermarket trays. Mucker's cuts to order, fills freezer beef and pork orders, and processes your deer or bear in season — for families and farmers up and down the East Branch.</p>
+  <div class="ctas">
+    <a href="tel:6073632888" class="btn btn-brick">Call (607) 363-2888</a>
+    <a href="#ask" class="btn btn-out">Ask about an order</a>
+  </div>
+</div></header>
+
+<div class="banner">Bringing in a beef, a hog, or a deer? Call ahead so we can schedule your cut.</div>
+
+<section><div class="wrap">
+  <div class="case">
+    <div class="eyebrow" style="color:#eab64f;text-align:center">What's in the case</div>
+    <h2>Cut fresh, the way you ask for it</h2>
+    <p class="sub">A working butcher's counter — steaks, chops, roasts, ground, and house items. Want it thicker, leaner, or packaged a certain way? Just say so.</p>
+    <div class="menu">
+      <div class="mrow"><span class="name">Steaks — cut to thickness</span><span class="dot"></span><span class="meta">cut to order</span></div>
+      <div class="mrow"><span class="name">Pork &amp; lamb chops</span><span class="dot"></span><span class="meta">cut to order</span></div>
+      <div class="mrow"><span class="name">Roasts — beef &amp; pork</span><span class="dot"></span><span class="meta">any size</span></div>
+      <div class="mrow"><span class="name">Fresh ground beef</span><span class="dot"></span><span class="meta">your lean</span></div>
+      <div class="mrow"><span class="name">House sausage &amp; specialties</span><span class="dot"></span><span class="meta">seasonal</span></div>
+      <div class="mrow"><span class="name">Special &amp; party orders</span><span class="dot"></span><span class="meta">just ask</span></div>
+    </div>
+    <div class="pf">// Case selection and any prices shown on the live site to be confirmed with the shop — placeholders here.</div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="eyebrow">Two things we do</div>
+  <h2>Buy it cut — or bring us yours</h2>
+  <p class="sub">Mucker's is both a retail counter and a custom processor. Most folks come for one or the other.</p>
+  <div class="jobs">
+    <div class="job">
+      <h3>Buy hand-cut</h3>
+      <p>Stop in for fresh meat cut the way you want it, or place a freezer order and stock up.</p>
+      <ul>
+        <li>Hand-cut steaks, chops &amp; roasts</li>
+        <li>Freezer orders — quarter / half / whole</li>
+        <li>Special orders for holidays &amp; cookouts</li>
+        <li>Cut, wrapped &amp; labeled for the freezer</li>
+      </ul>
+    </div>
+    <div class="job">
+      <h3>Bring us your animal</h3>
+      <p>Farmers and homesteaders: bring a beef or hog and we'll cut and wrap it to your order.</p>
+      <ul>
+        <li>Custom beef &amp; pork cut-and-wrap</li>
+        <li>You choose the cuts, thickness &amp; packaging</li>
+        <li>Ground, sausage &amp; specialty options</li>
+        <li>Call ahead to schedule your drop-off</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="deer">
+    <div class="eyebrow">Deer &amp; bear season</div>
+    <h2>Hunters — we process your deer &amp; bear</h2>
+    <div class="drow">
+      <div class="dstep"><div class="n">1</div><h4>Call before you come</h4><p>Ring the shop to check we're taking drop-offs and confirm the day's hours during season.</p></div>
+      <div class="dstep"><div class="n">2</div><h4>Drop it off</h4><p>Bring your deer or bear in. Tell us how you want it cut — steaks, roasts, ground, or a mix.</p></div>
+      <div class="dstep"><div class="n">3</div><h4>We cut &amp; wrap</h4><p>Processed, wrapped and labeled to your order. Add ground or specialty options if you want.</p></div>
+      <div class="dstep"><div class="n">4</div><h4>Pick up</h4><p>We'll let you know when it's ready for the freezer. Listed on the NYS deer/bear processor directory.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="ask"><div class="wrap">
+  <div class="visit">
+    <div>
+      <div class="eyebrow">Find us</div>
+      <h2>Stop by the shop</h2>
+      <div class="hours">
+        <strong class="sans" style="font-size:1.1rem;letter-spacing:.04em">Hours</strong>
+        <table>
+          <tr><td>Mon – Fri</td><td>placeholder</td></tr>
+          <tr><td>Saturday</td><td>placeholder</td></tr>
+          <tr><td>Sunday</td><td>placeholder</td></tr>
+          <tr><td>Deer season</td><td>call to confirm</td></tr>
+        </table>
+        <div class="pf2">// Hours to be confirmed with the shop before going live.</div>
+      </div>
+      <p style="margin-top:16px;font-family:'Arial Narrow',Arial,sans-serif;font-size:1.05rem">
+        7 Mary Lou Street<br>Downsville, NY 13755<br>
+        <a href="tel:6073632888" style="color:var(--brick);font-weight:800;text-decoration:none">(607) 363-2888</a>
+      </p>
+    </div>
+    <form onsubmit="return false">
+      <div class="eyebrow">Ask about an order</div>
+      <p class="sub" style="margin-bottom:18px">Freezer order, a custom cut, or scheduling a deer or farm-animal drop-off? Send a note and we'll get back to you.</p>
+      <label>Name</label><input type="text" placeholder="Your name">
+      <label>Phone</label><input type="tel" placeholder="(607) 000-0000">
+      <label>What do you need?</label>
+      <select><option>Freezer order (quarter/half/whole)</option><option>A custom cut / special order</option><option>Schedule a beef or hog drop-off</option><option>Deer / bear processing</option><option>Something else</option></select>
+      <label>Details</label><textarea rows="3" placeholder="Cuts you want, timing, how many, questions…"></textarea>
+      <button class="btn btn-brick" type="submit">Send it to the shop</button>
+      <div class="pf2">// Demo form — wire to Sandro's GHL form / shop contact on the live build.</div>
+    </form>
+  </div>
+</div></section>
+
+<footer><div class="wrap fg">
+  <div>
+    <strong style="color:#fff;font-size:1.1rem">Mucker's Meat Shop</strong><br>
+    7 Mary Lou Street, Downsville, NY 13755<br>
+    <a href="tel:6073632888">(607) 363-2888</a>
+  </div>
+  <div class="sans" style="text-align:right;letter-spacing:.03em">
+    Hand-cut meats · Freezer orders<br>
+    Custom beef &amp; pork processing<br>
+    <span style="color:#eab64f">Deer &amp; bear processing in season</span>
+  </div>
+</div></footer>
+
+</body>
+</html>

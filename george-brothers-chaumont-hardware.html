@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>George Brothers Chaumont Hardware — Hardware, Tackle &amp; Lumber on Route 12E, Chaumont NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Rye&family=Bitter:wght@500;700&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--green:#1e4632;--green-dark:#12301f;--brass:#c9973a;--cream:#f7f2e7;--paper:#efe7d4;--ink:#26251f;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Public Sans',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+h1,h2,h3{font-family:'Bitter',serif}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+/* header */
+header{background:var(--green);color:#f3ead6;padding:0}
+.signboard{text-align:center;padding:30px 16px 24px;border-bottom:3px double var(--brass)}
+.signboard .est{letter-spacing:3px;text-transform:uppercase;font-size:.72rem;color:var(--brass)}
+.signboard h1{font-family:'Rye',serif;font-weight:400;font-size:clamp(1.6rem,4.2vw,2.7rem);margin:6px 0 4px;color:#fff}
+.signboard .tag{font-size:.95rem;color:#d8cfb4}
+.utility{background:var(--green-dark);padding:10px 0}
+.utility .wrap{display:flex;justify-content:center;gap:12px 30px;flex-wrap:wrap;font-size:.92rem;color:#e9dfc4}
+.utility a{color:var(--brass);font-weight:700;text-decoration:none}
+/* hero */
+.hero{padding:70px 0 56px;background:repeating-linear-gradient(90deg,var(--paper) 0,var(--paper) 68px,#e7ddc6 68px,#e7ddc6 70px)}
+.hero .inner{background:var(--cream);border:1px solid #d9cba6;box-shadow:0 3px 0 #d9cba6;padding:42px 34px;max-width:720px;margin:0 auto;text-align:center}
+.hero h2{font-size:clamp(1.5rem,3.4vw,2.3rem);line-height:1.2;color:var(--green)}
+.hero p{margin:16px auto 24px;max-width:540px}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:13px 26px;border-radius:4px}
+.btn-green{background:var(--green);color:#fff}
+.btn-line{border:2px solid var(--green);color:var(--green);margin-left:10px}
+.onename{margin-top:20px;font-size:.85rem;color:#8a7d5c;font-style:italic}
+/* departments */
+section{padding:60px 0}
+.kicker{color:var(--brass);text-transform:uppercase;letter-spacing:2.5px;font-weight:700;font-size:.78rem}
+h2.sec{font-size:clamp(1.4rem,3vw,2rem);color:var(--green);margin:6px 0 22px}
+.aisles{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.aisle{background:#fff;border:1px solid #e0d5b8;border-radius:6px;overflow:hidden}
+.aisle .tab{background:var(--green);color:var(--brass);font-family:'Bitter',serif;font-weight:700;padding:10px 16px;font-size:.95rem;letter-spacing:1px}
+.aisle .body{padding:18px}
+.aisle p{font-size:.94rem}
+.aisle ul{list-style:none;margin-top:10px;font-size:.9rem}
+.aisle li{padding:4px 0 4px 20px;position:relative}
+.aisle li:before{content:"—";position:absolute;left:0;color:var(--brass);font-weight:700}
+/* promise */
+.promise{background:var(--green);color:#efe7d4}
+.promise .wrap{max-width:820px;text-align:center}
+.promise h2{color:#fff;font-size:clamp(1.4rem,3vw,2rem);margin-bottom:14px}
+.promise .kicker{color:var(--brass)}
+.promise .row{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:30px;text-align:left}
+.promise .cell{border-top:2px solid var(--brass);padding-top:12px}
+.promise .cell b{color:#fff}
+/* story */
+.story .wrap{display:grid;gap:36px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:center}
+.story .photo{background:#d8cdb0 url() center/cover;border:8px solid #fff;box-shadow:0 4px 14px rgba(38,37,31,.18);min-height:260px;display:flex;align-items:center;justify-content:center;color:#8a7d5c;font-size:.85rem;text-align:center;padding:16px}
+.story p{margin-bottom:12px}
+.note{font-size:.8rem;color:#8a7d5c;margin-top:10px}
+/* find us */
+.find{background:var(--paper);border-top:3px double var(--brass);border-bottom:3px double var(--brass)}
+.find .wrap{display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.find .card{background:#fff;border:1px solid #e0d5b8;border-radius:6px;padding:24px}
+.find h3{color:var(--green);margin-bottom:8px}
+.find a{color:var(--green);font-weight:700}
+.hours td{padding:4px 14px 4px 0;font-size:.95rem}
+footer{background:var(--green-dark);color:#b9ac89;text-align:center;padding:22px 12px;font-size:.85rem}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="signboard">
+    <div class="est">Route 12E · Chaumont, New York</div>
+    <h1>George Brothers Chaumont Hardware</h1>
+    <div class="tag">Hardware · Fishing Tackle · Lumber — a True Value store</div>
+  </div>
+  <div class="utility">
+    <div class="wrap">
+      <span>12119 State Route 12E, Chaumont</span>
+      <a href="tel:+13156492959">(315) 649-2959</a>
+      <span>[Current hours — confirm with owner before publishing]</span>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="inner">
+    <h2>The bolt, the bobber, or the board — before you drive to Watertown for it.</h2>
+    <p>Chaumont's hardware store keeps camp owners, contractors, and bay anglers moving: fasteners and fittings, bay-tested tackle, lumber for the porch that didn't survive winter, and somebody at the counter who knows which one you actually need.</p>
+    <a class="btn btn-green" href="tel:+13156492959">Call before you drive</a>
+    <a class="btn btn-line" href="#find">Hours &amp; directions</a>
+    <p class="onename">One store, one name — whatever the internet has told you. George Brothers True Value and "Chaumont Hardware" are the same counter on 12E.</p>
+  </div>
+</section>
+
+<section id="departments">
+  <div class="wrap">
+    <p class="kicker">Down the aisles</p>
+    <h2 class="sec">Four departments under one village roof.</h2>
+    <div class="aisles">
+      <div class="aisle"><div class="tab">AISLE 1 — HARDWARE</div><div class="body"><p>The everyday fixes for houses and camps that live through North Country winters.</p><ul><li>Fasteners, fittings, plumbing &amp; electrical basics</li><li>Paint, tools, stove &amp; weatherizing supplies</li><li>True Value ordering for what's not on the shelf</li></ul></div></div>
+      <div class="aisle"><div class="tab">AISLE 2 — FISHING TACKLE</div><div class="body"><p>You're ten minutes from Chaumont Bay. The tackle wall acts like it.</p><ul><li>Tackle picked for bay water</li><li>Seasonal stock that follows the bite</li><li>Straight answers on what's working</li></ul></div></div>
+      <div class="aisle"><div class="tab">AISLE 3 — LUMBER</div><div class="body"><p>Boards, sheet goods, and repair stock without the trip to town.</p><ul><li>Dimensional lumber for weekend fixes</li><li>Deck, dock &amp; camp repair material</li><li>Call ahead — we'll pull it for pickup</li></ul></div></div>
+      <div class="aisle"><div class="tab">AISLE 4 — SEASONAL &amp; CAMP</div><div class="body"><p>Whatever the calendar is about to do to you.</p><ul><li>Camp opening &amp; closing supplies</li><li>Ice, snow &amp; heating season gear</li><li>Summer dock &amp; yard essentials</li></ul></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="promise">
+  <div class="wrap">
+    <p class="kicker">The counter promise</p>
+    <h2>Call it in. We'll set it on the counter.</h2>
+    <div class="row">
+      <div class="cell"><b>Check first.</b><br>One call tells you if it's in stock — no wasted drive around the bay.</div>
+      <div class="cell"><b>Ask anything.</b><br>Bring the broken part. Half of hardware is diagnosis, and that's free here.</div>
+      <div class="cell"><b>Ordered fast.</b><br>Not on the shelf? True Value's network usually gets it here quicker than shipping to your door.</div>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap">
+    <div class="photo">[Historic photo placeholder — the Town of Lyme historical society shares an early-1900s photo of the George Brothers hardware store. Secure permission before use.]</div>
+    <div>
+      <p class="kicker">The story</p>
+      <h2 class="sec">Hardware has been sold in this village for over a century.</h2>
+      <p>Chaumont has had a hardware counter since the days when goods arrived by rail and schooner, and this store carries that line forward — the same trade, the same village, generations later.</p>
+      <p>Today it runs as George Brothers Chaumont Hardware, a True Value store on Route 12E: part hardware, part tackle shop, part lumberyard, entirely local.</p>
+      <p class="note">[Founding/ownership dates to be confirmed with the owner before publishing — directory records reference the incorporated business from 1971.]</p>
+    </div>
+  </div>
+</section>
+
+<section class="find" id="find">
+  <div class="wrap">
+    <div class="card">
+      <h3>Find the store</h3>
+      <p>12119 State Route 12E<br>Chaumont, NY 13622</p>
+      <p style="margin-top:10px">On the main road through the village — between the bay and everything that needs fixing.</p>
+      <p style="margin-top:10px">Phone: <a href="tel:+13156492959">(315) 649-2959</a></p>
+    </div>
+    <div class="card">
+      <h3>Hours</h3>
+      <table class="hours">
+        <tr><td>Mon–Sun</td><td>[Confirm current hours — listings conflict online; this site becomes the single source of truth]</td></tr>
+      </table>
+      <p class="note">Seasonal hours change with camp season — check here, not the directories.</p>
+    </div>
+  </div>
+</section>
+
+<footer>George Brothers Chaumont Hardware · 12119 State Route 12E, Chaumont, NY 13622 · (315) 649-2959<br>Website concept by Onyx Rise Media</footer>
+
+</body>
+</html>

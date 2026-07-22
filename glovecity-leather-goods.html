@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!--
+NICHE IDENTITY BRIEF — Glovecity Leather Goods LLC (Julie Grant), Gloversville NY (Fulton Co.) — FRESH NICHE: heritage glove / leather-goods maker (first in ORM DB)
+Business: Small-batch leather glove & goods maker reviving Gloversville's ("Glove Capital of the World") craft. Owner Julie Grant (15 yrs glove-making). 12 Saint Thomas Place, Suite B2, Gloversville 12078 — restored former William H. Thomas leather-goods factory. Team of skilled Fulton County makers. Products: deerskin/bison/goatskin gloves, women's gloves, hats, purses; custom (e.g., Elks Veteran Society). Email glovecityleathergoods@yahoo.com (PUBLIC — published in downtowngloversville.org feature; DRAFT-ELIGIBLE).
+Target: gift buyers/glove wearers wanting Made-in-Gloversville leather; heritage/craft shoppers & tourists; orgs needing custom leather; wholesale/consignment outlets.
+Local market: Gloversville/Fulton heritage-tourism + national craft/gift buyers online.
+Tone: proud, handmade, heritage-rooted, warm.
+Visual: saddle/cognac browns, cream, deep forest, gold-foil accents; stitched-seam/hide texture, vintage-factory nods.
+Pain points: NO owned website — Etsy shop + FB/IG + one consignment shelf only. No branded home to tell the William-H.-Thomas heritage story, take custom/wholesale orders directly, capture email, or sell without Etsy fees.
+Desires: buy real Gloversville-made gloves, commission custom, learn the story/where made, find local + online stockists.
+Trust: Etsy Star Seller, 15 yrs maker experience, made in historic glove district by local makers, named review, custom work for Elks Veteran Society.
+Conversion goal: shop/inquire (custom & wholesale requests) + email capture; branded home that outranks the marketplace listing.
+Sections: hero, the collection, custom & commission, heritage story (Glove City / Thomas building), where to buy (Etsy + 44 Lakes + wholesale), reviews, contact.
+Cliches to avoid: ORM banned list; "timeless elegance"/"luxury redefined"/heritage-washing; no invented SKUs/prices/inventory — placeholders; only the one public named review.
+Unique: literal town-identity story ("gloves still made in the Glove City"); sells heritage + custom/wholesale path an Etsy-only listing can't; branded home off the marketplace.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glovecity Leather Goods — Handmade Leather Gloves Still Crafted in Gloversville, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --hide:#5a3620; --hide-d:#3f2515; --cognac:#a4642f; --tan:#c98a4e; --gold:#c9a44c;
+  --forest:#2f4034; --cream:#f4ebdd; --paper:#faf4ea; --ink:#33271d; --soft:#6f6152; --line:#e6dac6; --white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;letter-spacing:.3px}
+a{color:inherit}
+.note{background:#efe4cf;border-bottom:1px solid #e3d3b4;color:#7c6636;font-size:.8rem;text-align:center;padding:10px}
+.top{background:var(--hide-d);color:#d8c6b2;font-size:.84rem}
+.top .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;padding:9px 24px}
+.top b{color:var(--gold)}
+.bar{background:var(--hide);border-bottom:2px solid var(--gold)}
+.bar .wrap{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;flex-wrap:wrap;gap:10px}
+.brand{display:flex;align-items:center;gap:13px;color:#fff}
+.mark{width:50px;height:50px;border-radius:50%;background:var(--cream);color:var(--hide);display:flex;align-items:center;justify-content:center;font-size:1.6rem;border:2px solid var(--gold)}
+.brand .nm{font-family:'Cormorant Garamond';font-size:1.55rem;font-weight:700;line-height:1}
+.brand .nm small{display:block;font-family:'Jost';font-size:.58rem;letter-spacing:3.5px;color:var(--gold);font-weight:500;margin-top:5px;text-transform:uppercase}
+.nav{display:flex;gap:22px;align-items:center;font-size:.9rem;font-weight:400}
+.nav a{text-decoration:none;color:#e6d5c3}.nav a:hover{color:#fff}
+.nav .cta{background:var(--gold);color:var(--hide-d);padding:10px 18px;border-radius:2px;font-weight:600;letter-spacing:.5px}
+.hero{background:linear-gradient(158deg,#6b4326 0%,var(--hide) 60%,var(--hide-d) 100%);color:#fff;padding:82px 0 76px;position:relative}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:repeating-linear-gradient(90deg,transparent 0 14px,var(--gold) 14px 16px)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.kick{display:inline-block;color:var(--gold);font-size:.78rem;letter-spacing:4px;text-transform:uppercase;font-weight:500;margin-bottom:18px}
+.hero h1{font-size:3.5rem;line-height:1.04;font-weight:700;margin-bottom:16px}
+.hero h1 em{color:var(--tan);font-style:italic}
+.hero p{font-size:1.12rem;color:#e2d1bf;max-width:520px;font-weight:300}
+.row{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:600;padding:13px 26px;border-radius:2px;font-size:.92rem;letter-spacing:.6px}
+.btn-g{background:var(--gold);color:var(--hide-d)}.btn-g:hover{background:#b8932f}
+.btn-o{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5)}.btn-o:hover{border-color:#fff}
+.hcard{background:rgba(255,255,255,.06);border:1px solid rgba(201,164,76,.35);border-radius:6px;padding:26px}
+.hcard h3{font-family:'Cormorant Garamond';font-size:1.4rem;color:#fff;margin-bottom:12px}
+.hcard .li{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;font-size:.92rem;color:#e2d1bf;font-weight:300}
+.hcard .li:last-child{margin-bottom:0}.hcard .li b{color:var(--gold)}
+.strip{background:var(--forest)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:24px;text-align:center}
+.strip .s b{display:block;font-family:'Cormorant Garamond';font-size:1.7rem;color:var(--gold);font-weight:700}
+.strip .s span{font-size:.8rem;color:#cdd8ce;letter-spacing:.5px}
+section{padding:70px 0}
+.eyebrow{font-size:.76rem;letter-spacing:4px;text-transform:uppercase;color:var(--cognac);font-weight:500;margin-bottom:12px}
+h2{font-size:2.7rem;color:var(--hide);line-height:1.1;margin-bottom:12px;font-weight:700}
+.lead{color:var(--soft);max-width:680px;font-size:1.06rem;margin-bottom:38px;font-weight:300}
+.coll{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.item{background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.item .ph{height:150px;background:linear-gradient(135deg,var(--tan),var(--cognac));display:flex;align-items:center;justify-content:center;font-size:2.6rem;color:rgba(255,255,255,.85)}
+.item .bd{padding:22px}
+.item h3{font-family:'Cormorant Garamond';font-size:1.5rem;color:var(--hide);margin-bottom:6px}
+.item p{color:var(--soft);font-size:.92rem;font-weight:300}
+.commission{background:var(--hide);color:#e2d1bf;border-radius:8px;padding:48px;display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+.commission .eyebrow{color:var(--gold)}
+.commission h2{color:#fff}
+.commission p{color:#e2d1bf;font-weight:300;font-size:1.04rem}
+.commission .box{background:rgba(255,255,255,.05);border:1px solid rgba(201,164,76,.3);border-radius:6px;padding:28px}
+.commission .box ul{list-style:none}
+.commission .box li{padding:11px 0 11px 26px;position:relative;font-size:.98rem;color:#efe1d1;font-weight:300;border-bottom:1px solid rgba(255,255,255,.1)}
+.commission .box li:last-child{border:none}
+.commission .box li:before{content:"\2726";position:absolute;left:0;top:11px;color:var(--gold)}
+.story{background:var(--cream)}
+.story .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:44px;align-items:center}
+.story .plate{background:linear-gradient(160deg,var(--hide),var(--hide-d));border-radius:8px;padding:40px;color:#f0e2d2;border:1px solid var(--gold)}
+.story .plate .big{font-family:'Cormorant Garamond';font-size:2.4rem;color:var(--gold);line-height:1.1;margin-bottom:10px}
+.story .plate p{font-weight:300;font-size:.98rem;color:#e2d1bf}
+.story h2{margin-bottom:16px}
+.story p.body{color:#4c3e30;font-size:1.05rem;font-weight:300;margin-bottom:14px}
+.buy{text-align:center}
+.buy .opts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px;text-align:left}
+.buy .o{background:#fff;border:1px solid var(--line);border-radius:6px;padding:26px;border-top:3px solid var(--cognac)}
+.buy .o .ic{font-size:1.6rem;margin-bottom:8px}
+.buy .o h3{font-family:'Cormorant Garamond';font-size:1.5rem;color:var(--hide);margin-bottom:5px}
+.buy .o p{color:var(--soft);font-size:.93rem;font-weight:300}
+.review{background:var(--forest);color:#eef2ec;text-align:center}
+.review .q{font-family:'Cormorant Garamond';font-size:1.9rem;line-height:1.35;max-width:820px;margin:0 auto 16px;color:#fff;font-weight:600}
+.review .who{color:var(--gold);letter-spacing:1px;font-size:.9rem}
+.review .who span{color:#bcc9bd;display:block;font-size:.8rem;margin-top:4px}
+.cta{background:linear-gradient(158deg,var(--cognac),var(--hide));color:#fff;text-align:center;padding:78px 0}
+.cta h2{color:#fff;font-size:2.6rem;max-width:720px;margin:0 auto 14px}
+.cta p{color:#efe1d1;max-width:580px;margin:0 auto 26px;font-size:1.05rem;font-weight:300}
+.cta .em{font-family:'Cormorant Garamond';font-size:1.6rem;font-weight:700;color:var(--gold);margin-top:16px}
+.foot{background:var(--hide-d);color:#c3ad97;padding:32px 0;font-size:.86rem}
+.foot .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media(max-width:860px){
+  .nav{display:none}
+  .hero .wrap,.strip .wrap,.coll,.commission,.story .wrap,.buy .opts{grid-template-columns:1fr}
+  .hero h1{font-size:2.5rem}h2{font-size:2rem}.commission,.story .plate{padding:28px}
+}
+</style>
+</head>
+<body>
+<div class="note">Preview concept prepared by Onyx Rise Media for Glovecity Leather Goods — not the company's live website. Product names, prices, and photos shown are placeholders pending the maker's own details.</div>
+<div class="top"><div class="wrap">
+  <div>📍 12 Saint Thomas Place, Suite B2, Gloversville, NY 12078</div>
+  <div>🧤 <b>Handmade in the historic Glove City</b></div>
+</div></div>
+<header class="bar"><div class="wrap">
+  <div class="brand">
+    <div class="mark">🧤</div>
+    <div class="nm">Glovecity Leather Goods<small>Gloversville, New York</small></div>
+  </div>
+  <nav class="nav">
+    <a href="#collection">The Collection</a>
+    <a href="#commission">Custom Work</a>
+    <a href="#story">Our Story</a>
+    <a href="#buy">Where to Buy</a>
+    <a href="#contact" class="cta">Commission a Pair</a>
+  </nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="kick">Deerskin · Bison · Goatskin — Made in Gloversville</span>
+    <h1>Gloves still cut and sewn <em>in the Glove City</em>.</h1>
+    <p>Gloversville made gloves for the world for a century. Julie Grant and a crew of Fulton County hands keep that craft alive — real leather gloves, hats, and bags, stitched inside a restored 12 Saint Thomas Place leather factory.</p>
+    <div class="row">
+      <a href="#collection" class="btn btn-g">Shop the collection</a>
+      <a href="#commission" class="btn btn-o">Commission custom</a>
+    </div>
+  </div>
+  <div class="hcard">
+    <h3>Why they last</h3>
+    <div class="li"><b>✦</b><span>Cut &amp; sewn by hand from <b>deerskin, bison &amp; goatskin</b></span></div>
+    <div class="li"><b>✦</b><span>Made by <b>experienced Fulton County glove makers</b></span></div>
+    <div class="li"><b>✦</b><span>Custom &amp; specialty orders welcome <em>(veteran groups, clubs, gifts)</em></span></div>
+    <div class="li"><b>✦</b><span>Etsy <b>Star Seller</b> — sold and shipped nationwide</span></div>
+  </div>
+</div></section>
+
+<div class="strip"><div class="wrap">
+  <div class="s"><b>100+ yrs</b><span>Of Gloversville craft</span></div>
+  <div class="s"><b>15 yrs</b><span>Maker experience</span></div>
+  <div class="s"><b>3 leathers</b><span>Deerskin · Bison · Goat</span></div>
+  <div class="s"><b>Star Seller</b><span>On Etsy</span></div>
+</div></div>
+
+<section id="collection"><div class="wrap">
+  <div class="eyebrow">Handmade &amp; small-batch</div>
+  <h2>The collection</h2>
+  <p class="lead">Every piece is cut and stitched here, not imported and relabeled. Styles and colors rotate — this is a sample of what the workshop makes <em>(current lineup and pricing to be filled from the maker's own catalog)</em>.</p>
+  <div class="coll">
+    <div class="item"><div class="ph">🧤</div><div class="bd"><h3>Leather Gloves</h3><p>Deerskin, bison, and goatskin gloves for men and women — the piece Gloversville built its name on.</p></div></div>
+    <div class="item"><div class="ph">👒</div><div class="bd"><h3>Hats</h3><p>Leather hats and accessories made from the same hides, in the same workshop.</p></div></div>
+    <div class="item"><div class="ph">👜</div><div class="bd"><h3>Purses &amp; Bags</h3><p>Handmade leather purses and bags — a nod to the wallets and travel goods once made in this very building.</p></div></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="commission" id="commission">
+    <div>
+      <div class="eyebrow">Have something specific in mind?</div>
+      <h2>Custom &amp; commissioned leather</h2>
+      <p>The workshop already makes specialty orders — including custom gloves for the Elks Veteran Society. If you need a particular leather, size run, or a bulk order for a group, gift, or shop, Julie and the crew can make it here by hand.</p>
+    </div>
+    <div class="box">
+      <ul>
+        <li>Custom gloves in your leather, size &amp; color</li>
+        <li>Group &amp; organization orders (veteran groups, clubs)</li>
+        <li>Corporate &amp; gift commissions</li>
+        <li>Wholesale &amp; consignment for shops</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="story" id="story"><div class="wrap">
+  <div class="plate">
+    <div class="big">"The Glove Capital of the World"</div>
+    <p>12 Saint Thomas Place was once a bustling leather-goods factory owned by William H. Thomas, turning out wallets, purses, and travel bags. Restored in 2021, it's home again to glove making — this time by Glovecity Leather Goods.</p>
+  </div>
+  <div>
+    <div class="eyebrow">Gloversville, New York</div>
+    <h2>The craft never fully left town</h2>
+    <p class="body">For over a century, Gloversville earned its name — the gloves worn across America were cut and sewn here. When the factories closed, most of that skill scattered. Julie Grant, with fifteen years in the trade, gathered a team of Fulton County makers who still know the work and put them back to it, inside one of the old leather buildings itself.</p>
+    <p class="body">Buying a pair isn't just buying gloves. It's keeping a genuine American craft — and the people who practice it — working in the town that invented it.</p>
+  </div>
+</div></section>
+
+<section class="buy" id="buy"><div class="wrap">
+  <div class="eyebrow" style="text-align:center">Get a pair</div>
+  <h2>Where to find them</h2>
+  <p class="lead" style="margin:0 auto">Online, in town, or straight from the workshop for custom and wholesale.</p>
+  <div class="opts">
+    <div class="o"><div class="ic">🛒</div><h3>Online</h3><p>Shop the current lineup on Etsy (Glovecity Goods) — Star Seller, shipped nationwide.</p></div>
+    <div class="o"><div class="ic">🏬</div><h3>In Gloversville</h3><p>Find their goods at 44 Lakes Customized Gifts &amp; Décor, 15 N. Main St., Downtown Gloversville.</p></div>
+    <div class="o"><div class="ic">✉️</div><h3>Direct &amp; Custom</h3><p>Email the workshop for custom pairs, group orders, and wholesale — straight from the makers.</p></div>
+  </div>
+</div></section>
+
+<section class="review"><div class="wrap">
+  <p class="q">"The craftsmanship that goes into these gloves is truly exceptional… high-quality material and beautifully made. Highly recommend!"</p>
+  <div class="who">Jordan S.<span>Verified customer review</span></div>
+</div></section>
+
+<section class="cta" id="contact"><div class="wrap">
+  <div class="eyebrow" style="color:var(--gold)">Commission or wholesale</div>
+  <h2>Want a custom pair, a group order, or to stock them in your shop?</h2>
+  <p>Tell us the leather, the sizes, and the quantity. Julie and the team will make it by hand in Gloversville — the way it's been done here for generations.</p>
+  <a href="mailto:glovecityleathergoods@yahoo.com" class="btn btn-g">Email the workshop</a>
+  <div class="em">glovecityleathergoods@yahoo.com</div>
+</div></section>
+
+<footer class="foot"><div class="wrap">
+  <div><strong>Glovecity Leather Goods LLC</strong> · 12 Saint Thomas Place, Suite B2, Gloversville, NY 12078 · glovecityleathergoods@yahoo.com</div>
+  <div>Handmade leather gloves, hats &amp; bags — still crafted in the Glove City</div>
+</div></footer>
+</body>
+</html>

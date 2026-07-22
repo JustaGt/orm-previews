@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zoar Valley Canoe & Rafting Co. — Whitewater on the Cattaraugus | Gowanda, NY | Since 1983</title>
+<meta name="description" content="Guided whitewater rafting through the Zoar Valley gorge on Cattaraugus Creek. Spring snowmelt season, mid-March through May. 10-mile main gorge run and 6-mile lower run. Gowanda, NY — one hour from Buffalo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --river:#0f4c5c; --deep:#082f38; --ice:#9fd8cb; --cliff:#3f4a4d;
+    --melt:#e0fbfc; --signal:#ffd166; --ink:#10222a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:#f5fafa;line-height:1.65}
+  h1,h2,h3{font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.015em;line-height:1.05;font-weight:400}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+  .btn{display:inline-block;background:var(--signal);color:var(--deep);padding:14px 30px;text-decoration:none;font-weight:700;border-radius:3px;border:none;font-size:1rem;cursor:pointer}
+  .btn.o{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7)}
+  nav{position:sticky;top:0;background:var(--deep);z-index:60;padding:13px 0}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center}
+  .logo{color:#fff;font-family:'Anton';font-size:1.05rem;text-transform:uppercase;letter-spacing:.05em}
+  .logo em{color:var(--ice);font-style:normal}
+  .nl{display:flex;gap:20px;align-items:center}
+  .nl a{color:#c6dde0;text-decoration:none;font-size:.88rem;font-weight:500}
+  .nl .btn{padding:9px 18px;font-size:.85rem}
+  /* hero */
+  header{background:linear-gradient(180deg,var(--deep) 0%,var(--river) 82%,#12606f 100%);color:#fff;padding:90px 0 0;overflow:hidden}
+  .season-tag{display:inline-block;background:rgba(255,209,102,.15);border:1px solid var(--signal);color:var(--signal);padding:7px 16px;border-radius:100px;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:22px}
+  h1{font-size:clamp(2.4rem,6.5vw,4.4rem);max-width:16ch}
+  .sub{margin:24px 0 32px;font-size:1.15rem;color:#cfe7ea;max-width:54ch}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:60px}
+  .gorge-strip{background:var(--cliff);padding:18px 0;color:#e8eff0}
+  .gorge-strip .wrap{display:flex;gap:30px;flex-wrap:wrap;justify-content:space-between;font-size:.88rem}
+  .gorge-strip b{color:var(--signal)}
+  section{padding:74px 0}
+  .k{color:var(--river);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.76rem}
+  h2{font-size:clamp(1.7rem,4vw,2.5rem);margin:10px 0 34px;color:var(--deep)}
+  /* trips */
+  .trips{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+  .trip{background:#fff;border:1px solid #dbe7e8;border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+  .trip .head{padding:26px;color:#fff}
+  .trip.main .head{background:var(--river)}
+  .trip.lower .head{background:var(--cliff)}
+  .trip .head h3{font-size:1.4rem}
+  .trip .head p{color:rgba(255,255,255,.85);font-size:.9rem;margin-top:6px}
+  .trip ul{list-style:none;padding:24px 26px;flex:1}
+  .trip li{padding:7px 0;font-size:.95rem;border-bottom:1px dashed #e2ebeb}
+  .trip li b{color:var(--river)}
+  .trip .foot{padding:0 26px 26px}
+  .trip .price{font-family:'Anton';font-size:1.3rem;color:var(--deep);margin-bottom:12px}
+  .trip .price small{font-family:'Inter';font-weight:500;font-size:.75rem;color:#7d8c8f;display:block}
+  /* river timeline */
+  .miles{background:var(--deep);color:#fff}
+  .miles h2{color:#fff}
+  .mrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2px;margin-top:6px}
+  .m{background:rgba(255,255,255,.05);padding:22px 18px;border-top:3px solid var(--ice)}
+  .m .mm{font-family:'Anton';color:var(--signal);font-size:1.1rem}
+  .m h3{font-size:.92rem;margin:8px 0 6px;letter-spacing:.04em}
+  .m p{font-size:.85rem;color:#b8d2d6}
+  /* prep */
+  .prep .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+  .pc{background:#fff;border:1px solid #dbe7e8;border-radius:6px;padding:26px}
+  .pc h3{color:var(--deep);font-size:1.05rem;margin-bottom:12px}
+  .pc li{margin-left:18px;font-size:.93rem;padding:3px 0}
+  /* since 83 */
+  .heritage{background:linear-gradient(120deg,var(--river),var(--deep));color:#fff}
+  .heritage h2{color:#fff}
+  .heritage p{max-width:64ch;color:#d3e8ea;font-size:1.04rem}
+  .heritage .stats{display:flex;gap:40px;margin-top:34px;flex-wrap:wrap}
+  .heritage .stats strong{display:block;font-family:'Anton';font-size:2rem;color:var(--signal)}
+  .heritage .stats span{font-size:.83rem;color:#a9c8cc}
+  /* faq */
+  details{background:#fff;border:1px solid #dbe7e8;border-radius:5px;margin-bottom:10px;padding:18px 22px}
+  summary{font-weight:700;cursor:pointer;color:var(--deep)}
+  details p{margin-top:10px;font-size:.94rem;color:#41535a}
+  /* form */
+  .book{background:var(--river);color:#fff}
+  .book h2{color:#fff}
+  .book form{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:700px}
+  .book input,.book select{padding:14px;border:none;border-radius:4px;width:100%;font-family:inherit;font-size:.95rem}
+  .book .full{grid-column:1/-1}
+  .book p.note{grid-column:1/-1;font-size:.85rem;color:#c9e2e5}
+  footer{background:#051f26;color:#7fa0a5;padding:32px 0;font-size:.85rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  @media(max-width:640px){.nl a:not(.btn){display:none}.book form{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">Zoar Valley <em>Canoe &amp; Rafting</em></div>
+    <div class="nl">
+      <a href="#trips">Trips</a>
+      <a href="#river">The River</a>
+      <a href="#prep">Good to Know</a>
+      <a href="#book" class="btn">Reserve a Raft</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <span class="season-tag">Season: mid-March → May · snowmelt only</span>
+    <h1>Eight weekends a year, the Cattaraugus runs big.</h1>
+    <p class="sub">Spring melt turns a quiet creek into the finest whitewater west of the Adirondacks — pushing through a gorge of 400-foot shale cliffs, old-growth timber and nesting bald eagles. We've been guiding it since 1983. When the melt is gone, the season's gone.</p>
+    <div class="hero-ctas">
+      <a class="btn" href="#book">Reserve your raft</a>
+      <a class="btn o" href="tel:7164102824">(716) 410-2824</a>
+    </div>
+  </div>
+  <div class="gorge-strip">
+    <div class="wrap">
+      <div><b>1 hr</b> from Buffalo</div>
+      <div><b>10 mi</b> main gorge run</div>
+      <div><b>2–4 hrs</b> on the water</div>
+      <div><b>Since 1983</b> on this river</div>
+    </div>
+  </div>
+</header>
+
+<section id="trips">
+  <div class="wrap">
+    <p class="k">Pick your water</p>
+    <h2>Two runs. One river. Very different days.</h2>
+    <div class="trips">
+      <div class="trip main">
+        <div class="head"><h3>The Main Gorge — 10 miles</h3><p>The full Zoar Valley: big spring water, canyon walls, the whole show.</p></div>
+        <ul>
+          <li><b>For:</b> first-timers with nerve, groups, returning paddlers</li>
+          <li><b>Time on water:</b> 2–4 hours depending on flow</li>
+          <li><b>You'll see:</b> 400-ft cliffs, waterfalls, eagle nests</li>
+          <li><b>Guides:</b> every raft, every trip</li>
+        </ul>
+        <div class="foot"><div class="price">Call for rates &amp; dates<small>[rates placeholder — confirm current pricing before publishing]</small></div><a class="btn" href="#book">Request dates</a></div>
+      </div>
+      <div class="trip lower">
+        <div class="head"><h3>The Lower Run — 6 miles</h3><p>A milder read of the river for families and mixed groups.</p></div>
+        <ul>
+          <li><b>For:</b> families with teens, first paddles, corporate groups</li>
+          <li><b>Time on water:</b> roughly 2 hours</li>
+          <li><b>You'll see:</b> the open lower valley and its wildlife</li>
+          <li><b>Guides:</b> same crews, gentler water</li>
+        </ul>
+        <div class="foot"><div class="price">Call for rates &amp; dates<small>[rates placeholder — confirm current pricing before publishing]</small></div><a class="btn" href="#book">Request dates</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="miles" id="river">
+  <div class="wrap">
+    <p class="k" style="color:var(--ice)">Mile by mile</p>
+    <h2>What the gorge gives you</h2>
+    <div class="mrow">
+      <div class="m"><div class="mm">Put-in</div><h3>Gowanda</h3><p>Wetsuits on, safety talk, rafts in. The water is snowmelt — it means business and so do we.</p></div>
+      <div class="m"><div class="mm">Miles 1–3</div><h3>Into the walls</h3><p>The valley narrows and the shale cliffs start climbing a few hundred feet over your shoulder.</p></div>
+      <div class="m"><div class="mm">Miles 4–6</div><h3>The heart</h3><p>The biggest water of the run, threading between rock faces streaked with spring waterfalls.</p></div>
+      <div class="m"><div class="mm">Miles 7–10</div><h3>Eagle water</h3><p>The gorge opens up. Look up — bald eagles nest in the old growth above the rim.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="prep" id="prep">
+  <div class="wrap">
+    <p class="k">Good to know</p>
+    <h2>Spring water is cold water. Come ready.</h2>
+    <div class="cols">
+      <div class="pc"><h3>We provide</h3><ul><li>Raft, paddle, helmet, PFD</li><li>Wetsuits — the creek runs cold into May</li><li>A guide who has run this exact river for years</li><li>Shuttle back to your car</li></ul></div>
+      <div class="pc"><h3>You bring</h3><ul><li>Swimwear + wool or synthetic layers (no cotton)</li><li>Sneakers or water shoes that can get soaked</li><li>Dry clothes for after</li><li>A sense of humor about getting splashed in April</li></ul></div>
+      <div class="pc"><h3>Honest fine print</h3><ul><li>Flow depends on melt — dates can shift; we'll always call you</li><li>Minimum ages vary by water level — ask when booking</li><li>No experience needed on either run, but you will paddle</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="heritage">
+  <div class="wrap">
+    <p class="k" style="color:var(--ice)">Since 1983</p>
+    <h2>Forty-three springs on the Cattaraugus</h2>
+    <p>Anyone can buy rafts. Reading this gorge — knowing which line to take at every level between "barely runnable" and "big" — takes seasons. Our guides have been putting in at Gowanda since 1983, longer than some of our paddlers have been alive. That's the difference between a trip and a story you tell for years.</p>
+    <div class="stats">
+      <div><strong>1983</strong><span>first season</span></div>
+      <div><strong>~8</strong><span>raftable weekends a year</span></div>
+      <div><strong>2</strong><span>runs to choose from</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="k">Questions we get every March</p>
+    <h2>Before you call</h2>
+    <details><summary>How cold is the water, really?</summary><p>It's snowmelt — 40s°F early season. That's exactly why we put you in wetsuits and why the rapids are worth it. By May it's friendlier.</p></details>
+    <details><summary>Do I need whitewater experience?</summary><p>No. Guides handle the reading; you handle paddling when they call it. The 6-mile lower run is the gentler introduction.</p></details>
+    <details><summary>Why is the season so short?</summary><p>The Cattaraugus is a free-flowing creek — no dam releases. Only spring melt makes it big enough to raft. That's the trade: a wilder river, a shorter window.</p></details>
+    <details><summary>Can you take groups?</summary><p>Yes — bachelor parties, teams, clubs and scout troops are our bread and butter. Tell us your headcount and we'll build the day around it.</p></details>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <p class="k" style="color:var(--ice)">The melt won't wait</p>
+    <h2>Reserve your raft</h2>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="tel" placeholder="Phone" required>
+      <input type="email" placeholder="Email">
+      <select><option>Which run?</option><option>Main Gorge — 10 mi</option><option>Lower Run — 6 mi</option><option>Not sure — advise me</option></select>
+      <input type="text" placeholder="Group size">
+      <input type="text" placeholder="Preferred weekend(s)">
+      <p class="note">We'll confirm by phone — river flow sets the schedule, and we'd rather talk you into the right date than the wrong one.</p>
+      <button class="btn full" type="submit">Send reservation request</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><strong style="color:#fff">Zoar Valley Canoe &amp; Rafting Co.</strong> · since 1983<br>11 S Water St, Gowanda, NY 14070</div>
+    <div>(716) 410-2824 · Season: mid-March–May<br>Website preview by Onyx Rise Media</div>
+  </div>
+</footer>
+
+</body>
+</html>

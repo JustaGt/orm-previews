@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dudley's Truck &amp; Equipment — 24-Hour Heavy Towing &amp; Truck Repair | Whitehall, NY, US-4 Corridor</title>
+<meta name="description" content="24-hour heavy-duty towing, recovery and truck &amp; trailer repair on the US-4 corridor. Hydraulic hoses, load shifts, forklift on site. Whitehall NY. (518) 499-2541.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --coal:#181a1c; --steel:#24282c; --orange:#f27d1f; --amber:#ffb64d;
+    --fog:#e9eaec; --line:#3a4046;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Barlow',sans-serif;background:var(--coal);color:var(--fog);line-height:1.6}
+  h1,h2,h3{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.08}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  /* dispatch bar */
+  .dispatch{background:var(--orange);color:#1b1206;text-align:center;padding:10px 14px;font-weight:700;font-size:.95rem}
+  .dispatch a{color:#1b1206;text-decoration:none;border-bottom:2px solid #1b1206}
+  header{background:var(--coal);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+  .logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.45rem;text-transform:uppercase}
+  .logo em{color:var(--orange);font-style:normal}
+  .logo span{display:block;font-family:'Barlow',sans-serif;font-weight:600;font-size:.62rem;letter-spacing:.24em;color:#8d949b;text-transform:uppercase}
+  .nav a.call{background:var(--orange);color:#1b1206;text-decoration:none;padding:11px 20px;border-radius:3px;font-weight:700;font-size:.95rem}
+  /* hero */
+  .hero{padding:66px 0 60px;background:linear-gradient(180deg,var(--coal),var(--steel));border-bottom:4px solid var(--orange)}
+  .hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+  .tag{display:inline-block;background:rgba(242,125,31,.14);border:1px solid var(--orange);color:var(--amber);padding:5px 14px;font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;border-radius:2px}
+  .hero h1{font-size:clamp(2.2rem,5.4vw,3.6rem);margin:18px 0 14px;color:#fff}
+  .hero h1 em{color:var(--orange);font-style:normal}
+  .hero p{font-size:1.08rem;color:#b9bfc5;max-width:34em}
+  .bigcall{display:block;background:var(--orange);color:#1b1206;text-decoration:none;text-align:center;border-radius:6px;padding:26px 20px;box-shadow:0 10px 30px rgba(242,125,31,.25)}
+  .bigcall .label{font-weight:700;font-size:.82rem;letter-spacing:.2em;text-transform:uppercase}
+  .bigcall .num{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:2.5rem;line-height:1.1}
+  .bigcall .sub{font-weight:600;font-size:.85rem}
+  .capstrip{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .cap{border:1px solid var(--line);border-radius:2px;padding:7px 13px;font-size:.8rem;font-weight:600;color:#c9ced3;background:rgba(255,255,255,.03)}
+  /* services */
+  .services{padding:64px 0}
+  .services h2{font-size:2rem;color:#fff}
+  .services p.lead{color:#9aa1a8;max-width:46em;margin:10px 0 36px}
+  .sgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+  .scard{background:var(--steel);border:1px solid var(--line);border-left:4px solid var(--orange);border-radius:3px;padding:22px 20px}
+  .scard h3{font-size:1.12rem;color:#fff;margin-bottom:8px}
+  .scard p{font-size:.88rem;color:#a9b0b7}
+  /* coverage */
+  .coverage{background:var(--steel);padding:60px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .coverage .grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .coverage h2{font-size:1.9rem;color:#fff;margin-bottom:12px}
+  .coverage p{color:#a9b0b7;margin-bottom:10px}
+  .corridor{background:var(--coal);border:1px solid var(--line);border-radius:4px;padding:26px}
+  .corridor h3{font-size:.95rem;color:var(--amber);letter-spacing:.14em;margin-bottom:16px}
+  .stop{display:flex;align-items:flex-start;gap:14px;padding:9px 0;border-bottom:1px solid #2d3237;font-size:.9rem}
+  .stop:last-child{border-bottom:none}
+  .dot{width:10px;height:10px;border-radius:50%;background:var(--orange);margin-top:6px;flex-shrink:0}
+  .dot.hub{background:var(--amber);box-shadow:0 0 0 4px rgba(255,182,77,.2)}
+  .stop strong{color:#e9eaec}
+  .stop span{color:#8d949b;display:block;font-size:.82rem}
+  /* rates */
+  .rates{padding:64px 0}
+  .rates .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start}
+  .rates h2{font-size:1.9rem;color:#fff;margin-bottom:12px}
+  .rates p{color:#a9b0b7;margin-bottom:10px}
+  .ratetable{background:var(--steel);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+  .ratetable table{width:100%;border-collapse:collapse;font-size:.95rem}
+  .ratetable th{background:rgba(242,125,31,.12);color:var(--amber);text-align:left;padding:13px 18px;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:1rem}
+  .ratetable td{padding:13px 18px;border-top:1px solid var(--line);color:#c9ced3}
+  .ratetable td:last-child{text-align:right;font-weight:700;color:#fff}
+  .ratenote{font-size:.78rem;color:#8d949b;padding:12px 18px;border-top:1px solid var(--line)}
+  /* fleet + uhaul */
+  .duo{padding:0 0 64px}
+  .duo .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .panel{background:var(--steel);border:1px solid var(--line);border-radius:4px;padding:28px 26px}
+  .panel h3{font-size:1.3rem;color:#fff;margin-bottom:10px}
+  .panel p{font-size:.9rem;color:#a9b0b7;margin-bottom:10px}
+  .panel ul{list-style:none}
+  .panel li{padding:6px 0 6px 22px;position:relative;font-size:.88rem;color:#c9ced3}
+  .panel li::before{content:"▸";position:absolute;left:2px;color:var(--orange)}
+  /* reviews */
+  .quoteband{background:var(--orange);color:#1b1206;padding:44px 0}
+  .quoteband blockquote{font-size:1.25rem;font-weight:600;max-width:44em}
+  .quoteband cite{display:block;margin-top:10px;font-style:normal;font-size:.85rem;font-weight:700}
+  /* find */
+  .find{padding:64px 0}
+  .find .grid{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+  .find h2{font-size:1.9rem;color:#fff;margin-bottom:12px}
+  .find p{color:#a9b0b7;margin-bottom:10px}
+  .find a{color:var(--amber)}
+  .mapbox{background:var(--steel);border:1px dashed var(--line);border-radius:4px;min-height:220px;display:flex;align-items:center;justify-content:center;color:#8d949b;font-size:.9rem;text-align:center;padding:20px}
+  footer{background:#101214;color:#7c828a;padding:24px 0;font-size:.8rem;text-align:center;border-top:1px solid var(--line)}
+  @media(max-width:840px){.hero .grid,.coverage .grid,.rates .grid,.duo .grid,.find .grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="dispatch">Broken down right now? Dispatch answers 24/7 — <a href="tel:15184992541">(518) 499-2541</a></div>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">Dudley's <em>Truck &amp; Equipment</em><span>Whitehall, NY · US-4 Corridor · 25+ Years</span></div>
+    <a class="call" href="tel:15184992541">(518) 499-2541</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <span class="tag">24-Hour Roadside · Towing · Recovery</span>
+      <h1>The 2 AM call that <em>actually gets answered.</em></h1>
+      <p>Heavy, medium and light-duty towing, recovery and truck &amp; trailer repair from the only 24/7 heavy shop on the Whitehall stretch of US-4 — the pinch point between Glens Falls and Rutland.</p>
+      <div class="capstrip">
+        <span class="cap">Forklift on site</span>
+        <span class="cap">Load shifts &amp; transfers</span>
+        <span class="cap">Hydraulic hoses made here</span>
+        <span class="cap">Welding service</span>
+        <span class="cap">USDOT 2914502</span>
+      </div>
+    </div>
+    <a class="bigcall" href="tel:15184992541">
+      <span class="label">24/7 Dispatch</span>
+      <span class="num">(518) 499-2541</span>
+      <span class="sub">10139 US-4, Whitehall NY — tell us your mile marker</span>
+    </a>
+  </div>
+</section>
+
+<section class="services">
+  <div class="wrap">
+    <h2>What we roll out for</h2>
+    <p class="lead">One shop, one number — repair bays and recovery trucks under the same roof, so a tow doesn't mean a second phone call.</p>
+    <div class="sgrid">
+      <div class="scard"><h3>Towing &amp; recovery</h3><p>Light, medium and heavy duty — semis, box trucks, buses, RVs, equipment. Winch-outs and off-road recovery included.</p></div>
+      <div class="scard"><h3>Truck &amp; trailer repair</h3><p>Brakes and air systems, wheel bearings, lights, kingpins — in the bay or at the roadside.</p></div>
+      <div class="scard"><h3>Tires — new, used &amp; recap</h3><p>Roadside tire calls day and night, plus mounted spares to get a loaded rig moving again.</p></div>
+      <div class="scard"><h3>Hydraulic hoses</h3><p>Hoses built while you wait — dump trailers, log loaders, plows, farm equipment. Bring the dead one, leave with a live one.</p></div>
+      <div class="scard"><h3>Load shifts &amp; transfers</h3><p>Forklift on site and transfer capability — a shifted load doesn't have to become a towed load.</p></div>
+      <div class="scard"><h3>PM service &amp; oil</h3><p>Scheduled preventive maintenance, oil changes and lube for single trucks and small fleets.</p></div>
+      <div class="scard"><h3>Jump starts, lockouts &amp; fuel</h3><p>The small saves too — dead batteries, locked cabs, dry tanks. If it's stuck, start with a call.</p></div>
+      <div class="scard"><h3>Equipment transport</h3><p>Machinery moved between yards, job sites and auctions across the NY–VT line.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="coverage">
+  <div class="wrap grid">
+    <div>
+      <h2>We cover the pinch point.</h2>
+      <p>Whitehall is where US-4 squeezes between the Adirondack foothills and the Vermont line — heavy freight runs through, but heavy help is thin. Our yard sits right on the corridor, so response times aren't measured in "eventually."</p>
+      <p>Dispatchers: pin us at <strong>10139 US-4, Whitehall NY 12887</strong>. Drivers: tell us direction of travel and mile marker, and we'll tell you an honest ETA.</p>
+    </div>
+    <div class="corridor">
+      <h3>The corridor, north to south</h3>
+      <div class="stop"><span class="dot"></span><div><strong>Ticonderoga / Champlain bridges</strong><span>NY 22 north leg</span></div></div>
+      <div class="stop"><span class="dot hub"></span><div><strong>WHITEHALL — our yard</strong><span>US-4 at the NY/VT pinch point</span></div></div>
+      <div class="stop"><span class="dot"></span><div><strong>Rutland, VT</strong><span>US-4 east over the line</span></div></div>
+      <div class="stop"><span class="dot"></span><div><strong>Fort Ann · Hudson Falls · Glens Falls</strong><span>US-4 south to I-87 exit 17</span></div></div>
+      <div class="stop"><span class="dot"></span><div><strong>Granville / NY 22 south</strong><span>Slate Valley leg</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="rates">
+  <div class="wrap grid">
+    <div>
+      <h2>Rates you can read before you call.</h2>
+      <p>Nobody stranded on a shoulder should have to guess what the truck costs. These are our posted shop rates — dispatch will quote your exact job before a wheel turns.</p>
+      <p>We keep it simple: hourly, after-hours, mileage. No mystery line items.</p>
+    </div>
+    <div class="ratetable">
+      <table>
+        <tr><th colspan="2">Posted rates</th></tr>
+        <tr><td>Shop / service hourly rate</td><td>$140 / hr</td></tr>
+        <tr><td>After-hours rate</td><td>$225 / hr</td></tr>
+        <tr><td>Mileage</td><td>$3 / mile</td></tr>
+        <tr><td>Service call fee</td><td>$140</td></tr>
+      </table>
+      <div class="ratenote">Rates as posted by the shop (2026). Heavy recovery and load transfers quoted per job — call dispatch for a firm number.</div>
+    </div>
+  </div>
+</section>
+
+<section class="duo">
+  <div class="wrap grid">
+    <div class="panel">
+      <h3>Fleet &amp; farm accounts</h3>
+      <p>Whitehall-area fleets, loggers and farms: keep the downtime on our calendar instead of yours.</p>
+      <ul>
+        <li>Scheduled PM programs with service records kept</li>
+        <li>Priority dispatch for account customers</li>
+        <li>Hose and tire stock matched to your equipment</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>U-Haul &amp; U-Box dealer</h3>
+      <p>Moving, not breaking down? We're also Whitehall's U-Haul spot.</p>
+      <ul>
+        <li>Trucks and trailers for local and one-way moves</li>
+        <li>U-Box moving &amp; storage containers on site</li>
+        <li>Hitches and moving supplies at the counter</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="quoteband">
+  <div class="wrap">
+    <blockquote>"Top notch company — handled our rental truck issue quickly and efficiently."<cite>— driver review via national truck-service directory <em>(placeholder — swap in final quote &amp; source at publish)</em></cite></blockquote>
+  </div>
+</section>
+
+<section class="find">
+  <div class="wrap grid">
+    <div>
+      <h2>Find the yard</h2>
+      <p><strong>Dudley's Truck &amp; Equipment, LLC</strong><br>10139 US-4, Whitehall, NY 12887</p>
+      <p>24/7 dispatch: <a href="tel:15184992541">(518) 499-2541</a></p>
+      <p>Family owned, 25+ years on the corridor. If you're under load and unsure we can handle it — call anyway. We'll either fix it or tell you exactly who can.</p>
+    </div>
+    <div class="mapbox">Google Map embed — 10139 US-4, Whitehall NY<br>(wired in at build time in GHL)</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Dudley's Truck &amp; Equipment, LLC · Whitehall, NY · USDOT 2914502 · 24-hour towing, recovery &amp; repair. — Website preview by Onyx Rise Media</div>
+</footer>
+
+</body>
+</html>

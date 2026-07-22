@@ -1,0 +1,222 @@
+<!--
+NICHE IDENTITY BRIEF — Southold Fish Market (#157)
+Business type: North Fork retail fish market + fry-kitchen/raw-bar (owner-fisherman Charlie Manwaring, 25+ yrs) — buy raw catch to take home or eat it cooked on site; indoor/outdoor seating, beer.
+Target customers: North Fork locals doing their weekly seafood run + day-trippers/second-homers on the Route 25 wine-country drive who want a real, unfussy seafood stop.
+Local market: Southold, North Fork Suffolk (64755 Route 25); draws the whole East End + summer visitors.
+Emotional tone: Salt, honesty, no-fuss coastal — "fresh, never frozen, off our own boat." Warm and local, zero pretension.
+Visual style: Deep harbor navy + dock-rope tan + buoy-red accent + sea-glass; weathered, appetizing, photo-forward feel.
+Pain points: The place is iconic and mobbed but has NO owned website — top Google hits are auto-generated third-party pages, one literally cross-labeled with a Texas burger joint; visitors can't see today's catch, the menu, hours, or how to order ahead; a summer line with no call-ahead path.
+Desires: See what came in today, view the market + kitchen menu, know hours & how busy, call/order ahead for pickup, get directions, plan the wine-trail stop.
+Trust signals: Owner is a working local fisherman (25+ yrs); "fresh, never frozen"; deep local review love (247 Yelp reviews / 340 photos); a North Fork institution.
+Conversion goal: Call-ahead order for pickup + drive traffic (directions/hours) + capture regulars for a "today's catch" list.
+Sections: hero (today's catch / market+kitchen), the counter (raw seafood), the kitchen (cooked favorites), owner story, plan-your-visit (hours/directions/wine-trail), call-ahead, contact.
+Clichés to avoid: transform, innovative, we help you grow, experience excellence, AI-powered, trusted partner, modern digital presence, digital solutions, cutting-edge, revolutionary; "culinary journey"/"elevated dining" fluff.
+Unique to niche: an owned home that finally shows TODAY'S catch + real hours + a call-ahead line, replacing the contaminated auto-pages — built for both the local weekly-run customer and the wine-trail day-tripper.
+CURRENT WEAKNESS (verified 2026-07-01): no official website. southold-fish-market.site returns an empty JS shell; the eniplaces page states "This is not the official website" and its meta-keywords are cross-contaminated ("Texas burger restaurant, Bellville burgers, Roland Beainy"). Real presence = Facebook (facebook.com/southoldfishmarket) + Yelp (247 reviews / 340 photos). Owner Charlie Manwaring. Phone (631) 765-3200, 64755 Route 25, Southold NY 11971.
+NOTE: No verified public email (Facebook-only) — outreach body saved to .email.txt, NO Gmail draft. Menu items widely attested; specific prices & hours = clearly-labeled placeholders to confirm.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Southold Fish Market — Fresh Off the Boat on the North Fork · Market &amp; Kitchen</title>
+<style>
+  :root{
+    --harbor:#12303f; --harbor2:#1c485d; --rope:#e7d3ad; --sand:#f6efe1;
+    --buoy:#c8482f; --seaglass:#7bb0a6; --ink:#182831; --muted:#4f6169; --line:#e2d9c6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--sand);line-height:1.6}
+  h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.14}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .btn{display:inline-block;background:var(--buoy);color:#fff;font-weight:700;padding:14px 26px;border-radius:4px;text-decoration:none;letter-spacing:.01em}
+  .btn:hover{background:#a93a24}
+  .btn-o{display:inline-block;color:var(--sand);font-weight:700;padding:14px 26px;border:2px solid rgba(231,211,173,.6);border-radius:4px;text-decoration:none}
+
+  .top{background:#0c2531;color:var(--rope);font-size:.86rem}
+  .top .wrap{display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:space-between;align-items:center;padding:8px 22px}
+  .top b{color:#fff}
+
+  header.hero{background:linear-gradient(180deg,rgba(18,48,63,.9),rgba(18,48,63,.78)),radial-gradient(circle at 80% 20%,#245a6f,#12303f 70%);color:var(--sand)}
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+  .logo{font-family:Georgia,serif;font-weight:700;font-size:1.3rem;color:#fff}
+  .logo small{display:block;font-family:"Segoe UI",sans-serif;font-weight:400;font-size:.6rem;letter-spacing:.24em;color:var(--rope);text-transform:uppercase}
+  .hero-in{padding:52px 0 60px;max-width:60ch}
+  .kick{display:inline-block;background:rgba(231,211,173,.14);border:1px solid rgba(231,211,173,.4);color:var(--rope);padding:5px 14px;border-radius:30px;font-size:.76rem;letter-spacing:.05em}
+  .hero-in h1{font-size:2.9rem;color:#fff;margin:16px 0 14px}
+  .hero-in p{font-size:1.18rem;color:#e9ddc6;max-width:52ch}
+  .ctas{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+  .catch{margin-top:30px;background:rgba(255,255,255,.07);border:1px solid rgba(231,211,173,.28);border-radius:10px;padding:18px 20px}
+  .catch .s{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--seaglass);font-weight:700}
+  .catch .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  .chip{background:rgba(123,176,166,.2);border:1px solid rgba(123,176,166,.5);color:#eaf5f2;padding:6px 13px;border-radius:30px;font-size:.9rem}
+  .catch .ph{font-size:.78rem;color:#b7c9c4;margin-top:10px}
+
+  section{padding:54px 0}
+  .eyebrow{font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--buoy);font-weight:700;margin-bottom:10px}
+  h2{font-size:2rem;color:var(--harbor);margin-bottom:8px}
+  .lead{font-size:1.07rem;color:var(--muted);max-width:64ch}
+
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px}
+  .panel{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px}
+  .panel h3{font-size:1.4rem;color:var(--harbor2);margin-bottom:4px}
+  .panel .sub{font-size:.85rem;color:var(--buoy);font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:12px}
+  .panel ul{list-style:none}
+  .panel li{padding:9px 0;border-bottom:1px dashed var(--line);display:flex;justify-content:space-between;gap:14px;font-size:1rem}
+  .panel li span.p{color:var(--muted);font-size:.92rem;white-space:nowrap}
+  .panel li:last-child{border-bottom:none}
+
+  .story{background:var(--harbor);color:var(--sand)}
+  .story .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center}
+  .story h2{color:#fff}
+  .story p{color:#e2d7c0;font-size:1.06rem}
+  .quote{background:rgba(231,211,173,.1);border-left:4px solid var(--buoy);border-radius:8px;padding:20px;font-family:Georgia,serif;font-style:italic;font-size:1.12rem;color:#fff}
+  .quote small{display:block;font-style:normal;font-family:"Segoe UI",sans-serif;font-size:.82rem;color:var(--rope);margin-top:8px;letter-spacing:.04em}
+
+  .visit{background:var(--seaglass);color:#0e2a26}
+  .visit h2{color:#0e2a26}
+  .vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+  .vcard{background:rgba(255,255,255,.9);border-radius:12px;padding:22px}
+  .vcard h3{font-size:1.12rem;color:var(--harbor);margin-bottom:6px}
+  .vcard p{font-size:.95rem;color:#33474a}
+  .ph-flag{background:#fff5d6;border:1px dashed #cf9f2e;color:#7a5f14;font-size:.76rem;padding:2px 8px;border-radius:4px;display:inline-block;margin-top:6px}
+
+  .callahead{background:#fff}
+  .cabox{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:24px}
+  .cabox .big{background:var(--harbor);color:#fff;border-radius:14px;padding:30px}
+  .cabox .big .num{font-family:Georgia,serif;font-size:2.3rem;font-weight:700;margin:6px 0}
+  .cabox .big p{color:#d7cbb4;font-size:.98rem}
+  form{background:var(--sand);border:1px solid var(--line);border-radius:14px;padding:22px;display:grid;gap:12px}
+  label{display:block;font-size:.78rem;letter-spacing:.03em;text-transform:uppercase;color:var(--harbor2);margin-bottom:5px}
+  input,textarea,select{width:100%;padding:11px;border:1px solid var(--line);border-radius:8px;font-size:1rem;font-family:inherit;background:#fff}
+
+  footer{background:#0c2531;color:#b7c3c9;padding:32px 0;font-size:.92rem}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+  footer b{color:var(--rope)}
+
+  @media(max-width:820px){
+    .two,.story .grid,.cabox{grid-template-columns:1fr}
+    .vgrid{grid-template-columns:1fr}
+    .hero-in h1{font-size:2.2rem}
+  }
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <span>64755 Route 25 · Southold, North Fork</span>
+  <span>Order ahead: <b>(631) 765-3200</b></span>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="nav">
+    <div class="logo">Southold Fish Market<small>Fresh off the boat · North Fork, NY</small></div>
+    <a class="btn" href="#callahead">Call ahead</a>
+  </div>
+  <div class="hero-in">
+    <span class="kick">Retail market &amp; kitchen · fresh, never frozen</span>
+    <h1>The catch comes off the boat. You decide how you want it.</h1>
+    <p>Pick up raw fish, clams, scallops and lobster for the grill at home — or grab a picnic table and let the kitchen fry it, roll it, or ladle it into a bowl of chowder. Same fresh catch, either way.</p>
+    <div class="ctas">
+      <a class="btn" href="#kitchen">See the menu</a>
+      <a class="btn-o" href="tel:6317653200">Call (631) 765-3200</a>
+    </div>
+    <div class="catch">
+      <div class="s">On ice at the counter this week</div>
+      <div class="row">
+        <span class="chip">Local oysters</span><span class="chip">Peconic Bay scallops</span><span class="chip">Littleneck clams</span><span class="chip">Fluke &amp; flounder</span><span class="chip">Lobster</span><span class="chip">Wild shrimp</span>
+      </div>
+      <div class="ph">Catch varies with the boats and the season — call the counter for today's list. <em>[Sample list — live "today's catch" board to be wired to the market.]</em></div>
+    </div>
+  </div>
+</div></header>
+
+<section id="kitchen"><div class="wrap">
+  <div class="eyebrow">Two ways to eat</div>
+  <h2>The counter and the kitchen</h2>
+  <p class="lead">Buy it raw to cook at home, or eat it here — fried, rolled, or in a bowl. The market runs seven days; the kitchen's going right alongside it.</p>
+  <div class="two">
+    <div class="panel">
+      <div class="sub">The Market — take it home</div>
+      <h3>Raw &amp; ready to cook</h3>
+      <ul>
+        <li>Fresh fillets — fluke, flounder, striped bass, tuna <span class="p">by the lb</span></li>
+        <li>Local clams — littlenecks &amp; cherrystones <span class="p">by the count</span></li>
+        <li>Peconic Bay scallops (in season) <span class="p">by the lb</span></li>
+        <li>Oysters — shuck-at-home by the dozen <span class="p">by the doz</span></li>
+        <li>Live &amp; cooked lobster <span class="p">market price</span></li>
+        <li>Wild shrimp, crab &amp; house prepared sides <span class="p">by the lb</span></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="sub">The Kitchen — eat it here</div>
+      <h3>Fried, rolled &amp; in a bowl</h3>
+      <ul>
+        <li>Warm buttered lobster roll <span class="p">the one to try</span></li>
+        <li>Fried clams &amp; fish and chips <span class="p">crisp, not greasy</span></li>
+        <li>Sea scallop basket <span class="p">sweet &amp; simple</span></li>
+        <li>Stuffed flounder <span class="p">house favorite</span></li>
+        <li>Clam chowder — New England &amp; Manhattan <span class="p">both styles</span></li>
+        <li>Cold beer + outdoor picnic tables <span class="p">in season</span></li>
+      </ul>
+    </div>
+  </div>
+  <p style="margin-top:16px;font-size:.86rem;color:var(--muted)"><span class="ph-flag">Menu is a working sample — dishes widely reviewed; exact list &amp; prices to be confirmed with the market before publishing.</span></p>
+</div></section>
+
+<section class="story"><div class="wrap">
+  <div class="grid">
+    <div>
+      <div class="eyebrow" style="color:var(--rope)">Who's behind the counter</div>
+      <h2>Run by a fisherman, not a chain</h2>
+      <p>Charlie Manwaring has fished these waters for decades and run the market for more than twenty-five years. That's the whole pitch: the person choosing the fish for your dinner is the same person who knows which boats came in and what's actually good this week. No middleman, no freezer truck — just what's fresh, sold straight.</p>
+    </div>
+    <div class="quote">
+      Locals come for the weekly catch. Visitors make it the stop on their North Fork day. Either way, it's fresh, it's fast, and it tastes like the water it came out of.
+      <small>— The Southold Fish Market way</small>
+    </div>
+  </div>
+</div></section>
+
+<section class="visit"><div class="wrap">
+  <div class="eyebrow" style="color:var(--harbor)">Plan your stop</div>
+  <h2>Find us on Route 25</h2>
+  <div class="vgrid">
+    <div class="vcard"><h3>Where</h3><p>64755 Route 25, Southold, NY 11971 — right on the Main Road, an easy pull-off on the North Fork wine-trail drive.</p></div>
+    <div class="vcard"><h3>Hours</h3><p>Market open seven days; kitchen running alongside it.<br><span class="ph-flag">Exact daily hours to confirm &amp; keep current here</span></p></div>
+    <div class="vcard"><h3>Make it a day</h3><p>Pair a counter run with the vineyards and farm stands up and down Route 25 — grab the seafood on the way home so it rides back on ice.</p></div>
+  </div>
+</div></section>
+
+<section class="callahead" id="callahead"><div class="wrap">
+  <div class="eyebrow">Skip the summer line</div>
+  <h2>Call ahead &amp; grab it to go</h2>
+  <p class="lead">Weekends get busy. Phone the counter with your order and a pickup time, or send it here and we'll ring you back to confirm what's in.</p>
+  <div class="cabox">
+    <div class="big">
+      <div style="font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--seaglass);font-weight:700">Order by phone</div>
+      <div class="num">(631) 765-3200</div>
+      <p>Tell us the fish and the time — raw for the grill or cooked to go. Fastest way, every time.</p>
+      <div style="margin-top:14px;font-size:.9rem;color:#cdbfa6">64755 Route 25 · Southold, NY</div>
+    </div>
+    <form onsubmit="return false">
+      <div><label>Name</label><input type="text" placeholder="Your name"></div>
+      <div><label>Phone</label><input type="tel" placeholder="(631) 000-0000"></div>
+      <div><label>Pickup day &amp; time</label><input type="text" placeholder="e.g. Saturday around 5pm"></div>
+      <div><label>Your order</label><textarea rows="3" placeholder="e.g. 2 lobster rolls + a dozen littlenecks + 1 lb fluke"></textarea></div>
+      <div><button class="btn" type="submit">Send order request</button></div>
+    </form>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b>Southold Fish Market</b><br>64755 Route 25, Southold, NY 11971<br>(631) 765-3200</div>
+  <div>Retail seafood counter &amp; kitchen · fresh, never frozen<br>Open seven days on the North Fork's Main Road<br>
+    <span style="font-size:.8rem;color:#6f818a">Concept preview prepared for Southold Fish Market — not the live site.</span>
+  </div>
+</div></footer>
+
+</body>
+</html>

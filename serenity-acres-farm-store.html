@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serenity Acres Farm Store & Custom Meats — Ogdensburg, NY | Open 7am–8pm Every Day</title>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700;900&family=Nunito+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{--barn:#8f3b2c;--pasture:#4e6b3c;--hay:#e9dfc8;--cream:#faf6ec;--soil:#3a3128;--sun:#d9a441;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Nunito Sans',sans-serif;color:var(--soil);background:var(--cream);line-height:1.65;}
+  h1,h2,h3{font-family:'Bitter',serif;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px;}
+  /* hours banner */
+  .hours-banner{background:var(--pasture);color:var(--cream);text-align:center;padding:10px 16px;font-weight:800;letter-spacing:.04em;font-size:.95rem;}
+  /* hero */
+  header{background:linear-gradient(160deg,var(--barn) 0%,#6e2c20 100%);color:var(--cream);padding:70px 0 60px;position:relative;overflow:hidden;}
+  header::after{content:"";position:absolute;bottom:-2px;left:0;right:0;height:46px;background:var(--cream);clip-path:polygon(0 100%,100% 100%,100% 0,75% 60%,50% 10%,25% 60%,0 0);}
+  .tag{display:inline-block;border:2px solid var(--sun);color:var(--sun);font-weight:800;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:18px;}
+  header h1{font-size:clamp(1.9rem,4.6vw,3rem);font-weight:900;line-height:1.15;max-width:680px;}
+  header p.sub{margin:18px 0 28px;font-size:1.14rem;color:#f3e6dd;max-width:600px;}
+  .btn{display:inline-block;background:var(--sun);color:var(--soil);font-weight:800;padding:14px 30px;border-radius:6px;text-decoration:none;font-size:1.03rem;}
+  .btn.alt{background:transparent;color:var(--cream);border:2px solid var(--cream);margin-left:12px;}
+  /* store grid */
+  section{padding:64px 0;}
+  h2.t{font-size:1.95rem;font-weight:900;margin-bottom:10px;}
+  .lead{color:#6d6155;max-width:640px;margin-bottom:36px;}
+  .case-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;}
+  .case{background:#fff;border:1px solid #e8dfcc;border-radius:8px;padding:22px;}
+  .case h3{color:var(--barn);font-size:1.02rem;margin-bottom:6px;}
+  .case p{font-size:.93rem;color:#6d6155;}
+  .snap{margin-top:26px;background:var(--hay);border-left:6px solid var(--pasture);padding:16px 20px;font-size:.98rem;border-radius:0 6px 6px 0;}
+  /* freezer */
+  .freezer{background:var(--soil);color:var(--cream);}
+  .freezer .lead{color:#cfc4b4;}
+  .f-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start;}
+  .f-card{background:#4a4034;border-radius:8px;padding:26px;}
+  .f-card h3{color:var(--sun);margin-bottom:10px;font-size:1.15rem;}
+  .f-card li{margin:8px 0 8px 20px;color:#e8e0d3;font-size:.98rem;}
+  /* farmers */
+  .farmers .f2-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+  .f2{background:#fff;border-top:6px solid var(--pasture);border-radius:0 0 8px 8px;padding:26px;box-shadow:0 2px 8px rgba(58,49,40,.06);}
+  .f2 h3{font-size:1.1rem;margin-bottom:8px;}
+  .f2 p{font-size:.96rem;color:#6d6155;}
+  /* about */
+  .about{background:var(--hay);}
+  .about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:center;}
+  .about p{margin-bottom:14px;}
+  .fact-stack{display:flex;flex-direction:column;gap:14px;}
+  .fact{background:#fff;border-radius:8px;padding:18px 22px;display:flex;align-items:center;gap:16px;}
+  .fact .n{font-family:'Bitter';font-size:1.7rem;font-weight:900;color:var(--barn);min-width:86px;}
+  .fact p{font-size:.92rem;color:#6d6155;margin:0;}
+  /* visit */
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;}
+  .big-hours{background:var(--pasture);color:var(--cream);border-radius:10px;padding:30px;text-align:center;margin-bottom:18px;}
+  .big-hours .h{font-family:'Bitter';font-size:2rem;font-weight:900;}
+  .line{padding:11px 0;border-bottom:1px dashed #d9cdb6;font-size:1rem;}
+  .line b{font-family:'Bitter';}
+  form{display:flex;flex-direction:column;gap:12px;background:#fff;padding:28px;border:1px solid #e8dfcc;border-radius:8px;}
+  input,select,textarea{padding:12px;border:1px solid #d9cdb6;border-radius:5px;font-family:inherit;font-size:1rem;background:var(--cream);}
+  textarea{min-height:90px;}
+  form button{background:var(--barn);color:var(--cream);border:none;padding:14px;font-weight:800;font-size:1.03rem;border-radius:6px;cursor:pointer;}
+  footer{background:var(--soil);color:#b7aa97;text-align:center;padding:26px 20px;font-size:.9rem;}
+  .note{font-size:.8rem;color:#93876f;margin-top:12px;}
+  @media(max-width:780px){.f-grid,.farmers .f2-grid,.about-grid,.visit-grid{grid-template-columns:1fr;}.btn.alt{margin-left:0;margin-top:12px;}}
+</style>
+</head>
+<body>
+
+<div class="hours-banner">OPEN 7:00 AM – 8:00 PM · EVERY SINGLE DAY · 6489 STATE HIGHWAY 68, OGDENSBURG</div>
+
+<header><div class="wrap">
+  <span class="tag">Farm Store & Custom Meats · Since 2008</span>
+  <h1>Raised on this farm. Cut for your freezer. Open when you actually get off work.</h1>
+  <p class="sub">Beef, pork, turkey, and chicken raised at Serenity Acres — plus organic milk, farm eggs, raw honey, local maple, cheese curd, and produce. On Route 68 outside Ogdensburg, seven days a week.</p>
+  <a class="btn" href="#visit">Plan Your Visit</a>
+  <a class="btn alt" href="tel:13153231145">(315) 323-1145</a>
+</div></header>
+
+<section><div class="wrap">
+  <h2 class="t">What's in the store</h2>
+  <p class="lead">A working farm's storefront — not a gift shop. The case and coolers are stocked with what this land and its neighbors produce.</p>
+  <div class="case-grid">
+    <div class="case"><h3>Our Own Meats</h3><p>Beef, pork, turkey & chicken raised at Serenity Acres, USDA-inspected and pre-packaged for the freezer.</p></div>
+    <div class="case"><h3>Organic Milk & Dairy</h3><p>Organic milk and cheese curd from North Country herds.</p></div>
+    <div class="case"><h3>Farm Eggs</h3><p>Fresh extra-large eggs, gathered close to home.</p></div>
+    <div class="case"><h3>Honey & Maple</h3><p>Raw local honey and St. Lawrence County maple syrup.</p></div>
+    <div class="case"><h3>Seasonal Produce</h3><p>Vegetables in season — tomatoes, sweet corn, squash, beans, and whatever the week brings.</p></div>
+    <div class="case"><h3>Freezer Staples</h3><p>USDA-inspected frozen cuts, priced for families who cook.</p></div>
+  </div>
+  <div class="snap"><b>SNAP/EBT welcome.</b> Real food from a real farm shouldn't require a specialty budget — benefits are accepted right at the register.</div>
+</div></section>
+
+<section class="freezer"><div class="wrap">
+  <h2 class="t" style="color:var(--cream);">Fill the freezer once, eat well all winter</h2>
+  <p class="lead">Ask at the counter about buying in bulk — the North Country way to put meat on the table for less per pound than any grocery run.</p>
+  <div class="f-grid">
+    <div class="f-card">
+      <h3>How bulk works</h3>
+      <li>Ask what's available — beef and pork move seasonally</li>
+      <li>Choose your quantity and your cuts</li>
+      <li>Pick it up packaged, labeled, and frozen</li>
+    </div>
+    <div class="f-card">
+      <h3>Why families do it</h3>
+      <li>One trip stocks months of meals</li>
+      <li>You know the farm — because you're standing on it</li>
+      <li>Cuts packaged the way your kitchen actually uses them</li>
+    </div>
+  </div>
+</div></section>
+
+<section class="farmers"><div class="wrap">
+  <h2 class="t">For local farmers: custom processing</h2>
+  <p class="lead">Serenity Acres isn't just a storefront — it's processing infrastructure for the St. Lawrence Valley's farms.</p>
+  <div class="f2-grid">
+    <div class="f2"><h3>Custom meat processing</h3><p>Cut-and-wrap done locally, without sending your animals hours downstate or waiting a season for a slot. Call the store to talk dates and options.</p></div>
+    <div class="f2"><h3>Farm-raised standards</h3><p>Run by a farmer who's been in the North Country ag community her whole life — your animals handled the way you'd handle them.</p></div>
+  </div>
+  <p class="note">[Processing options and scheduling details to be confirmed with Kandace before publishing.]</p>
+</div></section>
+
+<section class="about"><div class="wrap">
+  <div class="about-grid">
+    <div>
+      <h2 class="t">The farm behind the counter</h2>
+      <p>Serenity Acres opened its store in May 2008, and it's still owned and worked by Kandace Dietschweiler-Hartley — a farmer raised in the North Country agricultural community, selling what her farm and her neighbors' farms produce.</p>
+      <p>No distributor trucks, no mystery labels. If you have a question about where something came from, the person at the register can usually point out the window.</p>
+    </div>
+    <div class="fact-stack">
+      <div class="fact"><span class="n">2008</span><p>Store opened — 18 years serving Ogdensburg</p></div>
+      <div class="fact"><span class="n">7 days</span><p>Open every day, 7:00 am to 8:00 pm</p></div>
+      <div class="fact"><span class="n">Rt. 68</span><p>Minutes from Ogdensburg, worth the drive from Canton or Potsdam</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="visit"><div class="wrap">
+  <div class="visit-grid">
+    <div>
+      <div class="big-hours"><div class="h">7 am – 8 pm</div><div>Every day of the week</div></div>
+      <div class="line"><b>Address:</b> 6489 State Highway 68, Ogdensburg, NY 13669</div>
+      <div class="line"><b>Phone:</b> (315) 323-1145 · (315) 323-7011</div>
+      <div class="line"><b>Payment:</b> Cash, card, SNAP/EBT</div>
+      <p class="note">Tip for searchers: we're the Serenity Acres on <b>Route 68 in Ogdensburg, New York</b> — if a website says Ohio, that's a different farm.</p>
+    </div>
+    <div>
+      <h2 class="t" style="font-size:1.4rem;">Ask about the case, bulk orders, or processing</h2>
+      <form>
+        <input type="text" placeholder="Name" required>
+        <input type="tel" placeholder="Phone" required>
+        <select required>
+          <option value="">What can we help with?</option>
+          <option>What's in stock this week</option>
+          <option>Bulk / freezer meat order</option>
+          <option>Custom processing (farmers)</option>
+          <option>Something else</option>
+        </select>
+        <textarea placeholder="Your question"></textarea>
+        <button type="submit">Send to the Farm Store</button>
+      </form>
+    </div>
+  </div>
+</div></section>
+
+<footer>Serenity Acres Farm Store & Custom Meats · 6489 State Highway 68, Ogdensburg, NY 13669 · (315) 323-1145 · Open 7am–8pm every day</footer>
+
+</body>
+</html>

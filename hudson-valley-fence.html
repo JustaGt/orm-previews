@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hudson Valley Fence Company | New Paltz Fencing & Railings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#2e4032;--cedar:#b07a4a;--sand:#efe9df;--ink:#1c241e;--line:#d8d0c2;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--sand);line-height:1.6;}
+h1,h2,h3,.disp{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.5px;line-height:1.05;}
+a{text-decoration:none;color:inherit;}
+.wrap{max-width:1160px;margin:0 auto;padding:0 26px;}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:var(--pine);color:#fff;border-bottom:3px solid var(--cedar);}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:14px 26px;max-width:1160px;margin:0 auto;}
+.brand{font-family:'Oswald';font-weight:700;font-size:1.25rem;letter-spacing:1px;}
+.brand span{color:var(--cedar);}
+.nav-links{display:flex;gap:26px;align-items:center;font-size:.82rem;text-transform:uppercase;letter-spacing:1px;}
+.nav-links a.menu{opacity:.85;}
+.nav-links a.menu:hover{opacity:1;}
+.callbtn{background:var(--cedar);color:#fff;font-family:'Oswald';font-weight:600;padding:10px 18px;letter-spacing:1px;border-radius:2px;}
+.callbtn:hover{background:#9c6a3c;}
+
+/* hero archetype A */
+.hero{min-height:88vh;display:flex;align-items:center;
+background:linear-gradient(100deg,rgba(28,36,30,.86) 38%,rgba(28,36,30,.45)),url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1400&q=80');
+background-size:cover;background-position:center;background-color:#2e4032;color:#fff;}
+.hero-c{max-width:660px;padding:70px 0;}
+.kicker{font-family:'Oswald';color:var(--cedar);letter-spacing:3px;font-size:.85rem;font-weight:600;margin-bottom:18px;}
+.hero h1{font-size:3.6rem;font-weight:700;margin-bottom:18px;}
+.hero p.sub{font-size:1.12rem;max-width:540px;color:#e6e0d4;margin-bottom:30px;}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:42px;}
+.btn{display:inline-block;font-family:'Oswald';font-weight:600;letter-spacing:1px;padding:14px 26px;border-radius:2px;font-size:.92rem;}
+.btn-pri{background:var(--cedar);color:#fff;}.btn-pri:hover{background:#9c6a3c;}
+.btn-sec{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55);}
+.btn-sec:hover{border-color:#fff;}
+.stats{display:flex;gap:38px;flex-wrap:wrap;}
+.stat .n{font-family:'Oswald';font-size:2.2rem;font-weight:700;color:var(--cedar);}
+.stat .l{font-size:.78rem;text-transform:uppercase;letter-spacing:1.5px;color:#d8d2c6;}
+
+/* section base */
+section{padding:78px 0;}
+.eyebrow{font-family:'Oswald';color:var(--cedar);letter-spacing:3px;font-size:.8rem;font-weight:600;}
+.sec-h{font-size:2.3rem;font-weight:700;margin:8px 0 14px;color:var(--pine);}
+.lead{max-width:640px;color:#4a5249;margin-bottom:42px;}
+
+/* services 3-col */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.svc{background:#fff;border:1px solid var(--line);border-top:4px solid var(--cedar);padding:30px 26px;}
+.svc h3{font-size:1.18rem;color:var(--pine);margin-bottom:10px;}
+.svc p{font-size:.94rem;color:#54594f;}
+.svc .ic{font-size:1.6rem;margin-bottom:14px;}
+
+/* trust band */
+.band{background:var(--pine);color:#fff;}
+.band .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding:56px 26px;}
+.tcard h3{color:var(--cedar);font-size:1.15rem;margin-bottom:8px;}
+.tcard p{color:#dcd6ca;font-size:.93rem;}
+
+/* gallery 4-tile */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.tile{aspect-ratio:1/1.1;border-radius:3px;display:flex;align-items:flex-end;color:#fff;}
+.tile span{font-family:'Oswald';background:rgba(28,36,30,.78);padding:7px 12px;font-size:.78rem;letter-spacing:1px;margin:12px;text-transform:uppercase;}
+.t1{background:linear-gradient(rgba(28,36,30,.18),rgba(28,36,30,.45)),url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:#2e4032;}
+.t2{background:linear-gradient(rgba(28,36,30,.18),rgba(28,36,30,.45)),url('https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:#3a4a3a;}
+.t3{background:linear-gradient(rgba(28,36,30,.18),rgba(28,36,30,.45)),url('https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:#b07a4a;}
+.t4{background:linear-gradient(rgba(28,36,30,.18),rgba(28,36,30,.45)),url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:#4e5a4a;}
+
+/* contact split */
+.contact{background:#fff;}
+.csplit{display:grid;grid-template-columns:1fr 1fr;gap:54px;}
+.info h3{color:var(--pine);font-size:1.3rem;margin:22px 0 6px;}
+.info p{color:#54594f;}
+.info .big{font-family:'Oswald';font-size:1.9rem;color:var(--cedar);font-weight:700;}
+.form label{display:block;font-size:.82rem;text-transform:uppercase;letter-spacing:1px;color:var(--pine);margin:14px 0 5px;font-family:'Oswald';}
+.form input,.form select,.form textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:2px;font-family:inherit;font-size:.95rem;background:var(--sand);}
+.form button{margin-top:20px;width:100%;background:var(--pine);color:#fff;font-family:'Oswald';font-weight:600;letter-spacing:1px;padding:15px;border:none;border-radius:2px;cursor:pointer;font-size:1rem;}
+.form button:hover{background:#243528;}
+.thanks{background:var(--sand);border:1px solid var(--cedar);padding:30px;text-align:center;border-radius:3px;}
+.thanks h3{color:var(--pine);margin-bottom:8px;}
+
+footer{background:var(--ink);color:#cfc9bd;padding:34px 0;text-align:center;font-size:.85rem;}
+footer .by{color:var(--cedar);font-family:'Oswald';letter-spacing:1px;margin-top:8px;}
+
+@media(max-width:860px){
+.nav-links .menu{display:none;}
+.hero h1{font-size:2.4rem;}
+.svc-grid,.band .wrap,.gal,.csplit{grid-template-columns:1fr;}
+.gal{grid-template-columns:1fr 1fr;}
+.stats{gap:24px;}
+section{padding:54px 0;}
+}
+</style>
+</head>
+<body>
+<nav><div class="nav-in">
+<div class="brand">HUDSON VALLEY <span>FENCE</span></div>
+<div class="nav-links">
+<a class="menu" href="#services">Fencing</a>
+<a class="menu" href="#work">Our Work</a>
+<a class="menu" href="#contact">Estimate</a>
+<a class="callbtn" href="tel:18458240764">(845) 824-0764</a>
+</div></div></nav>
+
+<header class="hero"><div class="wrap"><div class="hero-c">
+<div class="kicker">NEW PALTZ &middot; HUDSON VALLEY</div>
+<h1>Fences That Stand Straight For Decades</h1>
+<p class="sub">Cedar privacy, vinyl, aluminum, and chain-link installed by a crew that digs the posts deep and sets the lines true. From backyard fences to commercial perimeters and Trex railings.</p>
+<div class="cta-row">
+<a class="btn btn-pri" href="#contact">Get a Free Estimate</a>
+<a class="btn btn-sec" href="#work">See Recent Jobs</a>
+</div>
+<div class="stats">
+<div class="stat"><div class="n">25+</div><div class="l">Years Fencing</div></div>
+<div class="stat"><div class="n">L&amp;I</div><div class="l">Licensed &amp; Insured</div></div>
+<div class="stat"><div class="n">1yr</div><div class="l">Workmanship Warranty</div></div>
+</div>
+</div></div></header>
+
+<section id="services"><div class="wrap">
+<div class="eyebrow">WHAT WE BUILD</div>
+<h2 class="sec-h">Fencing &amp; Railing Services</h2>
+<p class="lead">Every job starts with marking the line, calling in utility locates, and setting posts in concrete. No shortcuts on the parts you can't see.</p>
+<div class="svc-grid">
+<div class="svc"><div class="ic">&#127794;</div><h3>Wood &amp; Cedar Fence</h3><p>Privacy, picket, and post-and-rail in pressure-treated pine or western red cedar. Hand-built sections, not pre-fab panels.</p></div>
+<div class="svc"><div class="ic">&#9633;</div><h3>Vinyl &amp; Aluminum</h3><p>Low-maintenance vinyl privacy and ornamental aluminum that holds up to Hudson Valley winters without rust or rot.</p></div>
+<div class="svc"><div class="ic">&#9095;</div><h3>Chain-Link</h3><p>Galvanized and black-vinyl coated chain-link for yards, dog runs, ball fields, and commercial lots.</p></div>
+<div class="svc"><div class="ic">&#9617;</div><h3>Trex &amp; Cable Railings</h3><p>Composite Trex railings and sleek stainless cable systems for decks, porches, and waterfront views.</p></div>
+<div class="svc"><div class="ic">&#127981;</div><h3>Commercial Fence</h3><p>Security fencing, gates, and access for businesses, municipalities, and construction sites across the region.</p></div>
+<div class="svc"><div class="ic">&#9874;</div><h3>Repairs &amp; Gates</h3><p>Leaning posts reset, storm damage fixed, and custom gates built to match an existing run.</p></div>
+</div>
+</div></section>
+
+<section class="band"><div class="wrap">
+<div class="tcard"><h3>Set To Last</h3><p>Posts dug below the frost line and set in concrete so your fence doesn't heave after the first hard winter.</p></div>
+<div class="tcard"><h3>Local &amp; Accountable</h3><p>Based in New Paltz. We answer the phone, show up when we say, and you can drive by our finished jobs.</p></div>
+<div class="tcard"><h3>Clear Quotes</h3><p>Written estimates with materials and labor spelled out. The price we quote is the price you pay.</p></div>
+</div></section>
+
+<section id="work"><div class="wrap">
+<div class="eyebrow">RECENT INSTALLS</div>
+<h2 class="sec-h">Project Gallery</h2>
+<p class="lead">A look at fences and railings we've built across New Paltz, Gardiner, and the surrounding towns.</p>
+<div class="gal">
+<div class="tile t1"><span>Cedar Privacy &middot; Gardiner</span></div>
+<div class="tile t2"><span>Post &amp; Rail &middot; New Paltz</span></div>
+<div class="tile t3"><span>Aluminum Ornamental</span></div>
+<div class="tile t4"><span>Cable Railing &middot; Deck</span></div>
+</div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap"><div class="csplit">
+<div class="info">
+<div class="eyebrow">REQUEST A QUOTE</div>
+<h2 class="sec-h">Let's Talk About Your Fence</h2>
+<p>Serving New Paltz, Gardiner, Highland, Rosendale, Wallkill, and the surrounding Hudson Valley towns.</p>
+<h3>Call Us</h3>
+<a class="big" href="tel:18458240764">(845) 824-0764</a>
+<h3>Hours</h3>
+<p>Mon&ndash;Fri 7:00am &ndash; 5:00pm<br>Saturday by appointment<br>Closed Sunday</p>
+<h3>Service Area</h3>
+<p>Ulster County and greater Hudson Valley</p>
+</div>
+<div class="form">
+<form id="qf" onsubmit="return ty(event)">
+<label>Name</label><input required placeholder="Your name">
+<label>Phone</label><input required placeholder="(845) 000-0000">
+<label>Fence Type</label>
+<select><option>Wood / Cedar Privacy</option><option>Vinyl</option><option>Aluminum Ornamental</option><option>Chain-Link</option><option>Trex / Cable Railing</option><option>Commercial</option><option>Repair</option></select>
+<label>Project Details</label><textarea rows="4" placeholder="Approx. length, location, timeline..."></textarea>
+<button type="submit">Get My Free Estimate</button>
+</form>
+<div id="ty" class="thanks" style="display:none">
+<h3>Thanks &mdash; we got it!</h3>
+<p>We'll reach out within one business day to set up your free on-site estimate.</p>
+</div>
+</div>
+</div></div></section>
+
+<footer><div class="wrap">
+Hudson Valley Fence Company &middot; New Paltz, NY &middot; (845) 824-0764<br>
+<span class="by">Website preview by Onyx Rise Media</span>
+</div></footer>
+<script>
+function ty(e){e.preventDefault();document.getElementById('qf').style.display='none';document.getElementById('ty').style.display='block';return false;}
+</script>
+</body>
+</html>

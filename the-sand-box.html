@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Sand Box — Sandblasting &amp; Powder Coating | Elmira, NY</title>
+<style>
+  :root{
+    --coal:#1c1f24; --coal2:#262b32; --steel:#3a424c; --grit:#cbb992;
+    --grit2:#a8946a; --volt:#f4c20d; --volt2:#e0ad05; --rust:#c4622d;
+    --paper:#f4f1ea; --card:#ffffff; --ink:#1d2126; --mute:#6b6357; --line:#e2ddd1;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3{font-family:"Arial Narrow","Segoe UI",Arial,sans-serif;text-transform:uppercase;letter-spacing:.5px;line-height:1.08}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .btn{display:inline-block;background:var(--volt);color:#241c00;text-decoration:none;font-weight:800;padding:13px 26px;border-radius:4px;font-size:.92rem;text-transform:uppercase;letter-spacing:.6px}
+  .btn:hover{background:var(--volt2)}
+  .btn-o{background:transparent;color:#fff;border:2px solid var(--grit);border-radius:4px}
+  .btn-o:hover{background:rgba(203,185,146,.15)}
+  .top{background:#000;color:#bdb39c;font-size:.8rem}
+  .top .wrap{display:flex;justify-content:space-between;gap:10px;padding:7px 22px;flex-wrap:wrap;align-items:center}
+  .top b{color:var(--volt)}
+  header{background:var(--coal);position:sticky;top:0;z-index:30;border-bottom:3px solid var(--volt)}
+  .head{display:flex;justify-content:space-between;align-items:center;padding:12px 22px;gap:12px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:12px}
+  .mk{width:48px;height:48px;border-radius:7px;background:repeating-linear-gradient(45deg,var(--volt) 0 7px,#1c1f24 7px 14px);position:relative;flex:0 0 auto;border:2px solid #000}
+  .brand h2{font-size:1.2rem;color:#fff}
+  .brand small{display:block;font-size:.62rem;letter-spacing:2px;color:var(--grit)}
+  .nav a{text-decoration:none;font-size:.84rem;color:#d7d0c1;margin-left:16px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+  .nav a:hover{color:var(--volt)}
+  .hero{position:relative;background:linear-gradient(120deg,var(--coal) 0%,var(--coal2) 60%,var(--steel) 100%);color:#fff;overflow:hidden}
+  .hero:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(244,194,13,.05) 0 2px,transparent 2px 26px)}
+  .hero .wrap{position:relative;z-index:2;padding:64px 22px}
+  .kick{display:inline-block;background:rgba(244,194,13,.14);border:1px solid rgba(244,194,13,.4);font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;padding:6px 13px;border-radius:4px;margin-bottom:16px;font-weight:700;color:var(--volt)}
+  .hero h1{font-size:3.2rem;max-width:18ch;margin-bottom:14px}
+  .hero h1 span{color:var(--volt)}
+  .hero p{font-family:"Segoe UI",sans-serif;text-transform:none;letter-spacing:0;font-size:1.1rem;color:#d9d3c5;max-width:36rem;margin-bottom:22px}
+  .cta-row{display:flex;gap:11px;flex-wrap:wrap}
+  .specs{display:flex;gap:26px;flex-wrap:wrap;margin-top:30px;border-top:1px solid rgba(255,255,255,.16);padding-top:20px}
+  .specs div{font-family:"Segoe UI",sans-serif}
+  .specs b{display:block;font-family:"Arial Narrow",sans-serif;font-size:1.7rem;color:var(--volt);letter-spacing:0}
+  .specs span{font-size:.78rem;color:#bdb39c;text-transform:uppercase;letter-spacing:1px}
+  section{padding:56px 0}
+  .lead{max-width:40rem;margin:0 auto 34px;text-align:center}
+  .lead .ey{font-size:.74rem;letter-spacing:2px;color:var(--rust);font-weight:800}
+  .lead h2{font-size:2rem;color:var(--coal);margin:7px 0 9px}
+  .lead p{color:var(--mute);text-transform:none}
+  /* two col */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .col{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:26px;border-top:5px solid var(--steel)}
+  .col.coat{border-top-color:var(--volt)}
+  .col h3{font-size:1.4rem;color:var(--coal);margin-bottom:6px}
+  .col .s{font-family:"Segoe UI",sans-serif;text-transform:none;color:var(--mute);font-size:.92rem;margin-bottom:14px}
+  .col ul{list-style:none}
+  .col li{padding:8px 0 8px 26px;position:relative;border-bottom:1px solid #efeadd;font-size:.94rem}
+  .col li:last-child{border-bottom:none}
+  .col li:before{content:"■";position:absolute;left:4px;color:var(--grit2);font-size:.7rem;top:11px}
+  .col.coat li:before{color:var(--volt2)}
+  /* media menu */
+  .media{background:var(--coal);color:#fff}
+  .media .wrap{padding:54px 22px}
+  .media h2{font-size:1.95rem;margin-bottom:6px}
+  .media .sub{font-family:"Segoe UI",sans-serif;text-transform:none;color:#bdb39c;margin-bottom:26px}
+  .mgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .mc{background:rgba(255,255,255,.05);border:1px solid rgba(203,185,146,.25);border-radius:9px;padding:18px}
+  .mc h4{font-family:"Arial Narrow",sans-serif;text-transform:uppercase;color:var(--volt);font-size:1.1rem;letter-spacing:.5px;margin-bottom:5px}
+  .mc p{font-family:"Segoe UI",sans-serif;text-transform:none;font-size:.86rem;color:#cfc7b6}
+  /* process */
+  .proc{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:step}
+  .step{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px 22px;position:relative}
+  .step:before{counter-increment:step;content:"0" counter(step);font-family:"Arial Narrow",sans-serif;font-size:2.4rem;color:var(--grit);font-weight:800;display:block;margin-bottom:6px}
+  .step h3{font-size:1.18rem;color:var(--coal);margin-bottom:5px}
+  .step p{font-family:"Segoe UI",sans-serif;text-transform:none;font-size:.9rem;color:var(--mute)}
+  /* parts */
+  .parts{background:var(--grit);color:#2a2417}
+  .parts .wrap{padding:46px 22px;text-align:center}
+  .parts h2{font-size:1.85rem;margin-bottom:8px}
+  .parts p{font-family:"Segoe UI",sans-serif;text-transform:none;max-width:40rem;margin:0 auto 18px;color:#4a4130}
+  .ptags{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+  .ptags span{background:#2a2417;color:var(--grit);font-family:"Segoe UI",sans-serif;font-size:.88rem;padding:8px 16px;border-radius:30px}
+  /* color note */
+  .color .wrap{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+  .swatches{display:flex;flex-wrap:wrap;gap:10px}
+  .sw{width:54px;height:54px;border-radius:8px;border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+  .color h2{font-size:1.85rem;color:var(--coal);margin-bottom:10px}
+  .color p{text-transform:none;color:var(--mute);margin-bottom:8px}
+  /* contact */
+  .contact{background:var(--coal2);color:#e7e1d3}
+  .contact .wrap{padding:54px 22px;display:grid;grid-template-columns:1fr 1fr;gap:34px}
+  .contact h2{color:#fff;font-size:1.95rem;margin-bottom:10px}
+  .contact p{font-family:"Segoe UI",sans-serif;text-transform:none;color:#bdb39c;margin-bottom:14px}
+  .cl{font-family:"Segoe UI",sans-serif;font-size:.98rem;margin:8px 0}
+  .cl b{color:var(--volt)}
+  .qbox{background:rgba(255,255,255,.05);border:1px solid rgba(203,185,146,.25);border-radius:12px;padding:24px}
+  .qbox label{display:block;font-family:"Segoe UI",sans-serif;font-size:.74rem;letter-spacing:.6px;text-transform:uppercase;color:#bdb39c;margin:12px 0 5px}
+  .qbox input,.qbox select{width:100%;padding:11px 12px;border-radius:7px;border:1px solid #4a5159;background:#1b1e23;color:#fff;font-size:.92rem}
+  .qbox .btn{margin-top:18px;width:100%;text-align:center;border:none;cursor:pointer}
+  footer{background:#000;color:#8a8270;font-family:"Segoe UI",sans-serif;font-size:.82rem;text-align:center;padding:22px}
+  @media(max-width:820px){
+    .two,.mgrid,.proc,.color .wrap,.contact .wrap{grid-template-columns:1fr}
+    .hero h1{font-size:2.3rem}.nav{display:none}
+  }
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><span>104 W Miller St, Elmira, NY · Sandblasting &amp; Powder Coating since 2010</span><span><b>Quotes &amp; drop-off:</b> (607) 259-5204</span></div></div>
+
+<header><div class="head">
+  <div class="brand"><div class="mk"></div><div><h2>The Sand Box</h2><small>Sandblasting &amp; Powder Coating · Elmira, NY</small></div></div>
+  <nav class="nav"><a href="#what">What We Do</a><a href="#media">Blast Media</a><a href="#process">Process</a><a href="#parts">Parts</a><a href="#contact">Get a Quote</a></nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <span class="kick">Strip the rust · coat it for good</span>
+  <h1>Bring us the rusty, faded, peeling thing — <span>get it back better than new</span></h1>
+  <p>We blast off old paint and rust down to clean metal, then powder coat it in the color and finish you want — baked on to last. Frames, wheels, trailers, railings, hardware, and almost anything metal in between.</p>
+  <div class="cta-row"><a href="#contact" class="btn">Get a quote</a><a href="#media" class="btn btn-o">See our blast media</a></div>
+  <div class="specs">
+    <div><b>15×30</b><span>blast booth</span></div>
+    <div><b>2</b><span>blast cabinets</span></div>
+    <div><b>10×20</b><span>powder oven</span></div>
+    <div><b>2010</b><span>in business since</span></div>
+  </div>
+</div></section>
+
+<section id="what"><div class="wrap">
+  <div class="lead"><div class="ey">Two steps, one shop</div><h2>Blast it clean. Coat it to last.</h2><p>Most jobs come through here for both — strip first, then a durable powder finish. We can also do one or the other.</p></div>
+  <div class="two">
+    <div class="col"><h3>What we blast</h3><div class="s">Media blasting strips rust, old paint, coatings and scale back to bare, ready-to-finish metal.</div>
+      <ul><li>Rusted frames, brackets &amp; mounts</li><li>Old paint &amp; flaking powder coat</li><li>Wheels, rims and suspension parts</li><li>Trailers, decks and gates</li><li>Hardware down to nuts &amp; bolts</li></ul></div>
+    <div class="col coat"><h3>What we coat</h3><div class="s">Powder coating is electrostatically applied then oven-baked — tougher and longer-lasting than spray paint.</div>
+      <ul><li>Any color — gloss, satin, matte or texture</li><li>Automotive &amp; motorcycle parts</li><li>Patio furniture &amp; railings</li><li>Equipment, brackets and fabrications</li><li>Single parts or full batches</li></ul></div>
+  </div>
+</div></section>
+
+<section id="media" class="media"><div class="wrap">
+  <h2>The blast-media menu</h2>
+  <p class="sub">Different jobs need different grit. We run the full range and pick the right one for your part.</p>
+  <div class="mgrid">
+    <div class="mc"><h4>Sand</h4><p>Workhorse media for heavy rust and scale on tough steel parts.</p></div>
+    <div class="mc"><h4>Coal Slag</h4><p>Aggressive cut for thick coatings and stubborn surface rust.</p></div>
+    <div class="mc"><h4>Glass Bead</h4><p>Cleans and leaves a smooth satin finish without eating the metal.</p></div>
+    <div class="mc"><h4>Walnut Shell</h4><p>Gentle organic media for softer metals and delicate parts.</p></div>
+    <div class="mc"><h4>Corn Cob</h4><p>Low-abrasion cleaning that strips grime without warping thin stock.</p></div>
+    <div class="mc"><h4>Soda</h4><p>The softest option — cleans without removing the base metal underneath.</p></div>
+  </div>
+</div></section>
+
+<section id="process"><div class="wrap">
+  <div class="lead"><div class="ey">How a job runs</div><h2>Strip → blast → powder &amp; bake</h2></div>
+  <div class="proc">
+    <div class="step"><h3>Strip &amp; inspect</h3><p>We look the part over, mask anything that shouldn't be coated, and pick the blast media that fits the metal.</p></div>
+    <div class="step"><h3>Blast to bare metal</h3><p>In the booth or cabinet, every bit of rust, paint and old coating comes off so the powder has clean metal to grip.</p></div>
+    <div class="step"><h3>Powder &amp; bake</h3><p>Your color goes on electrostatically, then bakes in the 10×20 oven into a hard, even finish that won't chip like spray paint.</p></div>
+  </div>
+</div></section>
+
+<section id="parts" class="parts"><div class="wrap">
+  <h2>From a handful of bolts to a full trailer frame</h2>
+  <p>If it's metal and it fits in the booth, there's a good chance we can blast and coat it. Not sure? Send a photo and we'll tell you straight.</p>
+  <div class="ptags"><span>Truck &amp; auto frames</span><span>Wheels &amp; rims</span><span>Motorcycle parts</span><span>Trailers &amp; gates</span><span>Patio furniture</span><span>Railings &amp; fences</span><span>Equipment brackets</span><span>Nuts, bolts &amp; hardware</span></div>
+</div></section>
+
+<section class="color"><div class="wrap">
+  <div>
+    <h2>Pick your color and finish</h2>
+    <p>Powder coating isn't just black. Gloss, satin, matte, metallics, textures and just about any color you want — all baked on to hold up to weather, salt and wear.</p>
+    <p style="color:var(--rust);font-weight:bold">Swatches below are illustrative — full color range confirmed at drop-off.</p>
+  </div>
+  <div class="swatches">
+    <div class="sw" style="background:#1c1f24"></div><div class="sw" style="background:#c4622d"></div>
+    <div class="sw" style="background:#f4c20d"></div><div class="sw" style="background:#2e6b8f"></div>
+    <div class="sw" style="background:#7a1f24"></div><div class="sw" style="background:#3c5a3a"></div>
+    <div class="sw" style="background:#8a8e92"></div><div class="sw" style="background:#e7e1d3"></div>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <div>
+    <h2>Tell us the part and the finish</h2>
+    <p>Give us a call or send a photo with what it is and the color you're after — we'll quote it and tell you the turnaround before you drive over.</p>
+    <div class="cl"><b>Call:</b> (607) 259-5204</div>
+    <div class="cl"><b>Shop:</b> 104 W Miller St, Elmira, NY 14904</div>
+    <div class="cl"><b>Bring in:</b> single parts or full batches — hardware to trailer frames</div>
+  </div>
+  <form class="qbox" onsubmit="return false">
+    <label>Name</label><input type="text" placeholder="Your name">
+    <label>What's the part?</label><input type="text" placeholder="e.g. truck frame, set of wheels, railing">
+    <label>Service</label>
+    <select><option>Blast + powder coat</option><option>Sandblasting only</option><option>Powder coating only</option><option>Not sure — need advice</option></select>
+    <label>Color / finish wanted</label><input type="text" placeholder="e.g. gloss black, satin red, texture">
+    <label>Phone</label><input type="text" placeholder="Best number to reach you">
+    <button class="btn">Request a quote</button>
+  </form>
+</div></section>
+
+<footer>"The Sand Box" Sandblasting &amp; Powder Coating Center · 104 W Miller St, Elmira, NY 14904 · (607) 259-5204 · Est. 2010 — Preview concept by Onyx Rise Media</footer>
+</body>
+</html>

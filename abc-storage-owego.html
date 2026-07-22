@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABC Storage Inc — Self Storage in Owego, NY | Sizes, Prices &amp; Reserve</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --slate:#27384a; --slate-d:#1b2733; --steel:#3f5468; --door:#ef7d1a; --door-d:#cf6606;
+    --conc:#eef1f4; --conc2:#dfe5ea; --line:#cdd6df; --ink:#1d2730; --soft:#5d6b78; --white:#fff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--white);line-height:1.62}
+  h1,h2,h3,.cond{font-family:'Barlow Condensed',sans-serif;letter-spacing:.4px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  /* top bar */
+  .top{background:var(--door);color:#fff;text-align:center;padding:7px;font-size:.9rem;font-weight:600}
+  /* nav */
+  .nav{background:var(--slate);padding:13px 0}
+  .nav .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  .brand{display:flex;align-items:center;gap:11px;color:#fff}
+  .brand .mark{width:38px;height:30px;border-radius:4px;background:var(--door);position:relative;display:inline-block;
+    background-image:repeating-linear-gradient(var(--door) 0 4px,#f0a662 4px 6px)}
+  .brand .nm{font-family:'Barlow Condensed';font-weight:700;font-size:1.55rem;line-height:1}
+  .brand .nm small{display:block;font-family:'Inter';font-weight:500;font-size:.62rem;letter-spacing:2px;color:#a8bccd}
+  .nav a.call{background:var(--door);color:#fff;text-decoration:none;font-weight:700;padding:9px 18px;border-radius:6px;font-size:.95rem}
+  /* hero */
+  .hero{background:linear-gradient(180deg,var(--slate) 0%,var(--steel) 100%);color:#fff;padding:64px 0 60px;position:relative}
+  .hero h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:700;line-height:.98;text-transform:uppercase}
+  .hero h1 span{color:var(--door)}
+  .hero p{font-size:1.18rem;max-width:540px;color:#d3dde6;margin:16px 0 26px}
+  .hbtns a{display:inline-block;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:6px;font-size:1.02rem}
+  .hbtns .go{background:var(--door);color:#fff;border-bottom:3px solid var(--door-d)}
+  .hbtns .ghost{border:2px solid #6f8597;color:#fff;margin-left:8px}
+  .hstats{display:flex;gap:30px;flex-wrap:wrap;margin-top:34px;border-top:1px solid #4a6075;padding-top:22px}
+  .hstats div{min-width:120px}
+  .hstats b{font-family:'Barlow Condensed';font-size:2rem;color:var(--door);display:block;line-height:1}
+  .hstats span{font-size:.82rem;color:#bccbd7;letter-spacing:.5px}
+  /* sizes */
+  section{padding:62px 0}
+  .h2c{text-align:center;max-width:640px;margin:0 auto 8px}
+  .eye{color:var(--door-d);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.8rem}
+  h2{font-size:clamp(1.9rem,4.4vw,2.9rem);font-weight:700;text-transform:uppercase;margin:6px 0 10px}
+  .h2c p{color:var(--soft);font-size:1.06rem}
+  .sizes{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:36px}
+  .size{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+  .size .cap{background:var(--conc);padding:14px 16px;border-bottom:3px solid var(--door)}
+  .size .dim{font-family:'Barlow Condensed';font-weight:700;font-size:1.7rem;line-height:1;color:var(--slate)}
+  .size .nm{font-size:.78rem;font-weight:600;letter-spacing:1px;color:var(--soft);text-transform:uppercase;margin-top:3px}
+  .size .body{padding:16px;flex:1;display:flex;flex-direction:column}
+  .size .fits{font-size:.92rem;color:var(--soft);flex:1}
+  .size .price{font-family:'Barlow Condensed';font-size:1.5rem;font-weight:700;color:var(--ink);margin:12px 0 4px}
+  .size .price small{font-family:'Inter';font-size:.7rem;font-weight:600;color:#fff;background:#b89500;padding:2px 6px;border-radius:4px;vertical-align:middle}
+  .size a{text-align:center;text-decoration:none;background:var(--slate);color:#fff;font-weight:600;padding:9px;border-radius:6px;font-size:.9rem}
+  .sizenote{text-align:center;color:var(--soft);font-size:.86rem;margin-top:18px}
+  .ph{background:#fff3cf;color:#7a5a00;font-size:.7rem;padding:2px 7px;border-radius:4px;font-weight:700}
+  /* why band */
+  .why{background:var(--conc)}
+  .whygrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:34px}
+  .why .card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px}
+  .why .ic{width:46px;height:46px;border-radius:8px;background:var(--slate);color:var(--door);display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:700;margin-bottom:12px}
+  .why h3{font-size:1.3rem;font-weight:700;text-transform:uppercase;margin-bottom:4px}
+  .why p{font-size:.95rem;color:var(--soft)}
+  /* who */
+  .whorow{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:30px}
+  .tag{border:1px solid var(--line);background:#fff;border-radius:30px;padding:10px 20px;font-weight:600;font-size:.95rem;color:var(--slate)}
+  .tag b{color:var(--door-d)}
+  /* location */
+  .loc{background:var(--slate);color:#fff}
+  .loc h2{color:#fff}
+  .locgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:30px;align-items:center;margin-top:30px}
+  .loc .addr{font-family:'Barlow Condensed';font-size:1.7rem;font-weight:700;color:var(--door)}
+  .loc ul{list-style:none;margin-top:14px}
+  .loc li{padding:7px 0;border-bottom:1px solid #41576b;color:#d6e0e9}
+  .loc li b{color:#fff}
+  .mapbox{background:#33485c;border:1px dashed #6f8597;border-radius:10px;height:230px;display:flex;align-items:center;justify-content:center;text-align:center;color:#a8bccd;font-size:.9rem;padding:20px}
+  /* end cta */
+  .end{background:var(--door);color:#fff;text-align:center}
+  .end h2{color:#fff}
+  .end p{max-width:520px;margin:10px auto 0;color:#fff0e0}
+  .end a{display:inline-block;background:var(--slate);color:#fff;text-decoration:none;font-weight:700;padding:15px 32px;border-radius:6px;margin-top:18px;font-size:1.08rem}
+  footer{background:var(--slate-d);color:#9fb0bf;text-align:center;padding:32px 0;font-size:.9rem}
+  footer .cond{color:var(--door);font-size:1.4rem;font-weight:700;letter-spacing:1px}
+  @media(max-width:760px){.locgrid{grid-template-columns:1fr}.hbtns .ghost{margin-left:0;margin-top:10px}}
+</style>
+</head>
+<body>
+<div class="top">Owego &amp; Newark Valley · 24/7 access · prorated billing · 10% student / 5% veteran discount</div>
+
+<div class="nav">
+  <div class="wrap">
+    <div class="brand">
+      <span class="mark"></span>
+      <span class="nm">ABC Storage Inc<small>SELF STORAGE · OWEGO, NY</small></span>
+    </div>
+    <a class="call" href="tel:6072210360">Call or text (607) 221-0360</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>The right-size unit,<br><span>off Route 38.</span></h1>
+    <p>Five unit sizes, a wide drive-up lane, and a local owner who answers the phone — pick your size and reserve it the same day.</p>
+    <div class="hbtns">
+      <a class="go" href="#sizes">See sizes &amp; prices</a>
+      <a class="ghost" href="#location">Get directions</a>
+    </div>
+    <div class="hstats">
+      <div><b>5</b><span>UNIT SIZES</span></div>
+      <div><b>24/7</b><span>GATE ACCESS</span></div>
+      <div><b>$0</b><span>TERMINATION FEES</span></div>
+      <div><b>Owner</b><span>OPERATED, NOT A CHAIN</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="sizes">
+  <div class="wrap">
+    <div class="h2c">
+      <p class="eye">Pick your size</p>
+      <h2>How much space do you need?</h2>
+      <p>Not sure what fits? Here's the quick rule of thumb. Prices are prorated — come any day of the month and only pay for the days you use.</p>
+    </div>
+    <div class="sizes">
+      <div class="size">
+        <div class="cap"><div class="dim">5×5</div><div class="nm">Closet</div></div>
+        <div class="body">
+          <p class="fits">Boxes, totes, seasonal décor, a few small furniture pieces — about a hall closet's worth.</p>
+          <div class="price"><span class="ph">$ /mo</span> <small>CONFIRM</small></div>
+          <a href="tel:6072210360">Reserve this size</a>
+        </div>
+      </div>
+      <div class="size">
+        <div class="cap"><div class="dim">5×10</div><div class="nm">Small</div></div>
+        <div class="body">
+          <p class="fits">A studio's worth — mattress set, dresser, boxes, mower or motorcycle.</p>
+          <div class="price"><span class="ph">$ /mo</span> <small>CONFIRM</small></div>
+          <a href="tel:6072210360">Reserve this size</a>
+        </div>
+      </div>
+      <div class="size">
+        <div class="cap"><div class="dim">10×10</div><div class="nm">Medium</div></div>
+        <div class="body">
+          <p class="fits">One to two rooms of furniture — a college apartment or a small move.</p>
+          <div class="price"><span class="ph">$ /mo</span> <small>CONFIRM</small></div>
+          <a href="tel:6072210360">Reserve this size</a>
+        </div>
+      </div>
+      <div class="size">
+        <div class="cap"><div class="dim">10×15</div><div class="nm">Large</div></div>
+        <div class="body">
+          <p class="fits">A two- to three-bedroom home, business inventory, or a vehicle plus boxes.</p>
+          <div class="price"><span class="ph">$ /mo</span> <small>CONFIRM</small></div>
+          <a href="tel:6072210360">Reserve this size</a>
+        </div>
+      </div>
+      <div class="size">
+        <div class="cap"><div class="dim">10×20</div><div class="nm">X-Large</div></div>
+        <div class="body">
+          <p class="fits">A full house, a contractor's gear, or a car/boat with room to spare.</p>
+          <div class="price"><span class="ph">$ /mo</span> <small>CONFIRM</small></div>
+          <a href="tel:6072210360">Reserve this size</a>
+        </div>
+      </div>
+    </div>
+    <p class="sizenote"><span class="ph">PLACEHOLDER</span> exact unit dimensions and current monthly rates to be confirmed by the owner before publishing. Ask about the 10% student and 5% veteran discounts.</p>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <div class="h2c">
+      <p class="eye">Why renters pick ABC</p>
+      <h2>Storage without the runaround</h2>
+    </div>
+    <div class="whygrid">
+      <div class="card"><div class="ic">↻</div><h3>Prorated</h3><p>Move in any day of the month and pay only for the days you use — no rounding up to a full month.</p></div>
+      <div class="card"><div class="ic">⛟</div><h3>Drive right up</h3><p>A large driveway and easy in, easy out — pull your truck up to the unit door and load.</p></div>
+      <div class="card"><div class="ic">%</div><h3>Local discounts</h3><p>10% off for students with a valid ID, 5% off for veterans — on top of low local rates.</p></div>
+      <div class="card"><div class="ic">☏</div><h3>A real person</h3><p>Owner-operated, so the person you call or text is the person who runs the yard. No call center.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="who">
+  <div class="wrap">
+    <div class="h2c">
+      <p class="eye">Who stores here</p>
+      <h2>Space for the in-between</h2>
+      <p>Between Owego and Newark Valley, centrally located for Candor, Apalachin, Nichols, Maine, Berkshire, and the Binghamton, Ithaca and Cornell areas.</p>
+    </div>
+    <div class="whorow">
+      <span class="tag"><b>Moving?</b> Hold your home between closings</span>
+      <span class="tag"><b>Student?</b> Store over the summer</span>
+      <span class="tag"><b>Business?</b> Overflow &amp; seasonal inventory</span>
+      <span class="tag"><b>Toys?</b> Bike, mower, seasonal gear</span>
+    </div>
+  </div>
+</section>
+
+<section id="location" class="loc">
+  <div class="wrap">
+    <div class="h2c"><h2>Find us on Route 38</h2></div>
+    <div class="locgrid">
+      <div>
+        <p class="addr">4262 Route 38, Owego, NY 13827</p>
+        <ul>
+          <li><b>Access:</b> Available 24/7</li>
+          <li><b>Reserve:</b> Call or text (607) 221-0360</li>
+          <li><b>Storage:</b> Commercial &amp; residential</li>
+          <li><b>Centrally located:</b> minutes from Newark Valley, Candor, Apalachin &amp; Owego</li>
+        </ul>
+        <p style="margin-top:18px"><a href="tel:6072210360" style="background:var(--door);color:#fff;text-decoration:none;font-weight:700;padding:12px 24px;border-radius:6px;display:inline-block">Call or text to reserve ›</a></p>
+      </div>
+      <div class="mapbox"><span><span class="ph">PLACEHOLDER</span> embed Google Map to 4262 Route 38, Owego before publishing</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="end">
+  <div class="wrap">
+    <h2>Reserve your unit today</h2>
+    <p>Tell us what you're storing and we'll point you to the right size. Same-day move-in when a unit's open.</p>
+    <a href="tel:6072210360">Call or text (607) 221-0360</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cond">ABC STORAGE INC</div>
+    <p style="margin:6px 0">4262 Route 38, Owego, NY 13827 · (607) 221-0360 · Self storage for Owego, Newark Valley &amp; Tioga County</p>
+    <p style="margin-top:10px;font-size:.78rem;color:#728495">Preview concept prepared by Onyx Rise Media for review. Unit dimensions, current rates and the map embed to be confirmed by the owner before publishing.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Timberking Northeast — Custom Sawing &amp; TimberKing Sawmills, Keeseville NY</title>
+<meta name="description" content="Timberking Northeast in Keeseville, NY: bring your logs and get them milled into lumber, beams and live-edge slabs — plus authorized TimberKing portable sawmill sales, service and demos for the North Country. Run by Bill Mitchel since 2010.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bark:#3a2a1c; --bark-d:#28190f; --amber:#c47a25; --amber-d:#a5631a; --kiln:#e0b06a;
+    --steel:#4a5157; --steel-d:#33383d; --cream:#f3ece0; --paper:#f7f1e7; --ink:#2a2118; --gray:#6a5f52;
+    --blade:#e2622a; --white:#fff; --line:#ddd0bb;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Roboto',sans-serif;color:var(--ink);background:var(--paper);line-height:1.62}
+  h1,h2,h3,.disp{font-family:'Oswald',sans-serif;line-height:1.08;text-transform:uppercase;letter-spacing:.01em}
+  a{color:inherit}
+  .wrap{max-width:1070px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--blade);color:#fff;font-weight:700;padding:14px 30px;border-radius:3px;
+    text-decoration:none;transition:transform .15s,background .15s;font-size:.98rem;font-family:'Oswald';text-transform:uppercase;letter-spacing:.06em}
+  .btn:hover{transform:translateY(-2px);background:#c9531f}
+  .btn.amber{background:var(--amber)}
+  .btn.amber:hover{background:var(--amber-d)}
+  .btn.ghost{background:transparent;border:2px solid rgba(243,236,224,.55);color:var(--cream)}
+  .btn.ghost:hover{background:rgba(243,236,224,.12)}
+
+  .topbar{background:var(--bark-d);color:#c8b498;font-size:.9rem}
+  .topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;padding:8px 22px}
+  .topbar b{color:var(--kiln)}
+
+  header.nav{background:var(--bark);color:var(--cream);position:sticky;top:0;z-index:20;border-bottom:3px solid var(--amber)}
+  header.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:13px 22px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand .mark{width:46px;height:46px;border-radius:4px;background:linear-gradient(150deg,#c47a25,#3a2a1c);display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Oswald';font-weight:700;font-size:1.2rem}
+  .brand b{font-family:'Oswald';font-size:1.3rem;font-weight:700;letter-spacing:.02em}
+  .brand span{display:block;font-family:'Roboto';font-size:.62rem;letter-spacing:.2em;color:var(--kiln);text-transform:uppercase;font-weight:500;margin-top:1px}
+  nav.links{display:flex;gap:22px;font-weight:600;font-size:.9rem;font-family:'Oswald';text-transform:uppercase;letter-spacing:.03em}
+  nav.links a{text-decoration:none}
+  nav.links a:hover{color:var(--kiln)}
+  @media(max-width:880px){nav.links{display:none}}
+
+  .hero{color:var(--cream);padding:94px 0 80px;
+    background:
+     linear-gradient(rgba(40,25,15,.8),rgba(40,25,15,.86)),
+     repeating-linear-gradient(90deg,rgba(196,122,37,.05) 0 3px,transparent 3px 12px),
+     linear-gradient(160deg,#3a2a1c,#4a5157);}
+  .hero .kick{color:var(--kiln);font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:.78rem;margin-bottom:16px;font-family:'Roboto'}
+  .hero h1{font-size:clamp(2.3rem,5.4vw,4rem);max-width:17ch}
+  .hero h1 em{font-style:normal;color:var(--amber)}
+  .hero p.lead{margin:22px 0 30px;font-size:1.2rem;max-width:54ch;color:#e6dccb;font-family:'Roboto'}
+  .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero .facts{display:flex;gap:34px;flex-wrap:wrap;margin-top:46px;border-top:1px solid rgba(243,236,224,.2);padding-top:24px}
+  .hero .facts div b{font-family:'Oswald';font-size:1.8rem;color:var(--kiln);display:block;line-height:1}
+  .hero .facts div span{font-size:.82rem;color:#d6c9b6;font-family:'Roboto'}
+
+  section{padding:64px 0}
+  .eyebrow{color:var(--amber-d);font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:.76rem;margin-bottom:10px;font-family:'Roboto'}
+  h2.big{font-size:clamp(2rem,4.2vw,2.9rem);margin-bottom:12px;color:var(--bark)}
+  .lead2{font-size:1.1rem;color:var(--gray);max-width:62ch}
+
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
+  @media(max-width:880px){.two{grid-template-columns:1fr}}
+  .lane{border-radius:8px;padding:32px 28px;border:1px solid var(--line)}
+  .lane.saw{background:var(--bark);color:var(--cream)}
+  .lane.buy{background:var(--white)}
+  .lane h3{font-size:1.6rem;margin-bottom:6px}
+  .lane.saw h3{color:var(--kiln)}
+  .lane.buy h3{color:var(--bark)}
+  .lane p.t{font-size:1rem;margin-bottom:16px}
+  .lane.saw p.t{color:#e0d4c1}
+  .lane.buy p.t{color:var(--gray)}
+  .lane ul{list-style:none;font-family:'Roboto'}
+  .lane ul li{padding:8px 0 8px 26px;position:relative;font-size:.96rem}
+  .lane ul li:before{content:"";position:absolute;left:0;top:15px;width:12px;height:12px;background:var(--blade);transform:rotate(45deg)}
+  .lane.saw ul li{border-bottom:1px solid #4a382785}
+  .lane.buy ul li{border-bottom:1px solid var(--line)}
+  .lane .foot{margin-top:18px}
+
+  .how{background:var(--cream)}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:34px}
+  @media(max-width:880px){.steps{grid-template-columns:1fr 1fr}}
+  .steps .s{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:24px 20px}
+  .steps .s .n{font-family:'Oswald';font-size:2rem;color:var(--amber);line-height:1}
+  .steps .s h3{font-size:1.15rem;margin:6px 0 6px;color:var(--bark);text-transform:none}
+  .steps .s p{font-size:.9rem;color:var(--gray)}
+
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:32px}
+  @media(max-width:880px){.gallery{grid-template-columns:1fr 1fr}}
+  .gallery .tile{aspect-ratio:4/3;border-radius:6px;background:linear-gradient(150deg,#3a2a1c,#c47a25);display:flex;align-items:center;justify-content:center;color:rgba(243,236,224,.65);font-size:.8rem;letter-spacing:.05em;text-align:center;padding:10px;border:1px solid var(--line);font-family:'Roboto'}
+  .gallery .tile:nth-child(even){background:linear-gradient(150deg,#4a5157,#28190f)}
+  .cap{margin-top:12px;font-size:.82rem;color:var(--gray);font-style:italic}
+
+  .about{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  @media(max-width:880px){.about{grid-template-columns:1fr}}
+  .about .img{background:linear-gradient(160deg,#3a2a1c,#4a5157);border-radius:8px;min-height:280px;border:1px solid var(--line)}
+  .about blockquote{font-family:'Oswald';font-size:1.5rem;color:var(--bark);line-height:1.25;margin:6px 0 14px;text-transform:none}
+  .badge{display:inline-block;background:var(--kiln);color:var(--bark-d);font-family:'Oswald';font-size:.8rem;font-weight:600;padding:6px 14px;border-radius:3px;letter-spacing:.06em;margin:4px 6px 0 0}
+
+  .cta-band{background:linear-gradient(160deg,#4a5157,#28190f);color:var(--cream);text-align:center}
+  .cta-band h2{color:var(--kiln);font-size:clamp(2rem,4vw,2.8rem)}
+  .cta-band p{max-width:54ch;margin:14px auto 24px;color:#ddd0bd;font-size:1.1rem;font-family:'Roboto'}
+  .cta-band .ph{font-family:'Oswald';font-size:2rem;color:var(--kiln)}
+  .cta-band .row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;align-items:center}
+
+  footer{background:var(--bark-d);color:#a8967d;font-size:.9rem;padding:36px 0;font-family:'Roboto'}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+  footer b{color:var(--cream);font-family:'Oswald';font-size:1.15rem}
+  .ban{background:var(--amber);color:#241505;text-align:center;font-size:.9rem;padding:9px 14px;font-weight:500;font-family:'Roboto'}
+</style>
+</head>
+<body>
+
+<div class="ban">Got logs on the ground? Bring them to the yard and leave with lumber — or mill them where they lie.</div>
+
+<div class="topbar"><div class="wrap">
+  <span>350 Soper Rd, Keeseville, NY · Serving the AuSable &amp; Champlain valleys</span>
+  <span>Bill Mitchel · <b>(518) 834-2051</b></span>
+</div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">
+    <div class="mark">TK</div>
+    <div><b>Timberking Northeast</b><span>Custom Sawing · TimberKing Dealer</span></div>
+  </div>
+  <nav class="links">
+    <a href="#saw">Custom Sawing</a>
+    <a href="#buy">Buy a Mill</a>
+    <a href="#how">Bring Your Logs</a>
+    <a href="#gallery">The Cut</a>
+    <a href="#quote">Get a Quote</a>
+  </nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="kick">Keeseville, New York · Sawing since 2010</div>
+  <h1>Turn your logs into <em>lumber</em> — without paying freight on a board.</h1>
+  <p class="lead">Custom milling for North Country landowners, builders and woodworkers — dimensional lumber, beams and live-edge slabs — plus authorized TimberKing sawmill sales and service. Bill runs the same mills he sells.</p>
+  <div class="cta">
+    <a class="btn" href="#quote">Get a sawing quote</a>
+    <a class="btn ghost" href="#buy">Shop TimberKing mills</a>
+  </div>
+  <div class="facts">
+    <div><b>Since 2010</b><span>Northeast TimberKing dealer</span></div>
+    <div><b>Your log</b><span>Milled to your dimensions</span></div>
+    <div><b>Slabs to beams</b><span>Live-edge, timbers, boards</span></div>
+  </div>
+</div></section>
+
+<section id="saw"><div class="wrap">
+  <div class="eyebrow">Two Ways We Work</div>
+  <h2 class="big">Mill your wood, or buy the mill</h2>
+  <p class="lead2">Most folks who find us want one of two things. Tell us which you are and we'll get straight to it.</p>
+  <div class="two">
+    <div class="lane saw" id="saw2">
+      <h3>Custom Sawing</h3>
+      <p class="t">You've got logs — standing timber, blowdown, a yard tree worth saving. We turn them into usable wood.</p>
+      <ul>
+        <li>Dimensional lumber cut to your sizes</li>
+        <li>Beams &amp; timbers for barns, camps and timber frames</li>
+        <li>Live-edge slabs for tables, mantels and bar tops</li>
+        <li>Mill at our Keeseville yard, or on-site at your property</li>
+        <li>Softwood &amp; hardwood — ask about your species</li>
+      </ul>
+      <p style="font-size:.85rem;color:#cdbfa9;margin-top:6px">Sawing is priced by the job (board footage, log size, setup). Call for a quote — pricing confirmed with Bill.</p>
+      <div class="foot"><a class="btn amber" href="#quote">Book a milling date</a></div>
+    </div>
+    <div class="lane buy" id="buy">
+      <h3>Buy a TimberKing</h3>
+      <p class="t">Ready to mill your own? We're the Northeast TimberKing dealer — sales, setup and service you can drive to.</p>
+      <ul>
+        <li>New TimberKing band &amp; swing mills</li>
+        <li>Help matching a model to your logs &amp; budget</li>
+        <li>Local service and parts — not a 1-800 number three states away</li>
+        <li>See a mill run before you buy</li>
+        <li>Blades, accessories and setup advice</li>
+      </ul>
+      <p style="font-size:.85rem;color:var(--gray);margin-top:6px">Mills are a real investment — we'll talk through what actually fits what you're cutting.</p>
+      <div class="foot"><a class="btn" href="#quote">Ask about a demo</a></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="how" id="how"><div class="wrap">
+  <div class="eyebrow">Bring Your Logs</div>
+  <h2 class="big">How custom sawing works</h2>
+  <p class="lead2">Never had logs milled before? It's simpler than you think.</p>
+  <div class="steps">
+    <div class="s"><div class="n">1</div><h3>Tell us what you've got</h3><p>Species, rough log count and size, and what you want out of it — boards, beams or slabs.</p></div>
+    <div class="s"><div class="n">2</div><h3>Here or there</h3><p>Haul the logs to the Keeseville yard, or we bring the mill to your property for bigger jobs.</p></div>
+    <div class="s"><div class="n">3</div><h3>Cut to your spec</h3><p>We saw to the dimensions you need, stacking and stickering as we go.</p></div>
+    <div class="s"><div class="n">4</div><h3>Stack &amp; dry</h3><p>Leave with your lumber and simple advice on air-drying it right before you build.</p></div>
+  </div>
+</div></section>
+
+<section id="gallery"><div class="wrap">
+  <div class="eyebrow">The Cut</div>
+  <h2 class="big">Slabs, beams and boards off the mill</h2>
+  <p class="lead2">A look at what comes off the deck. Full build log lives on Facebook &amp; Instagram.</p>
+  <div class="gallery">
+    <div class="tile">Live-edge<br>slab</div>
+    <div class="tile">Fresh-sawn<br>beams</div>
+    <div class="tile">Stacked &amp;<br>stickered lumber</div>
+    <div class="tile">Mill in<br>the cut</div>
+  </div>
+  <p class="cap">Placeholder gallery — replace with Timberking Northeast's own mill &amp; lumber photos when the preview is approved.</p>
+</div></section>
+
+<section class="how" id="about"><div class="wrap about">
+  <div class="img"></div>
+  <div>
+    <div class="eyebrow">About</div>
+    <blockquote>"I run the same mills I sell — so when I quote your logs, I know exactly what they'll give you."</blockquote>
+    <p style="color:var(--gray)">Bill Mitchel started Timberking Northeast in Keeseville in 2010 and has been sawing and selling TimberKing mills across the North Country ever since. Two sides, one yard: mill your wood for you, or set you up to mill your own — with local hands on the machine either way.</p>
+    <div style="margin-top:14px">
+      <span class="badge">Authorized TimberKing Dealer</span>
+      <span class="badge">Since 2010</span>
+      <span class="badge">Custom &amp; On-Site Sawing</span>
+    </div>
+  </div>
+</div></section>
+
+<section class="cta-band" id="quote"><div class="wrap">
+  <h2>Get a sawing quote or mill demo</h2>
+  <p>Give Bill a call with your logs (species, size, how many) or the mill you're considering. Quick, straight answers — no runaround.</p>
+  <div class="row">
+    <span class="ph">(518) 834-2051</span>
+    <a class="btn" href="#">Send your job details</a>
+  </div>
+  <p style="margin-top:18px;font-size:.9rem;color:#c3b49c">350 Soper Rd, Keeseville, NY 12944 · Facebook &amp; Instagram: @timberkingnortheast</p>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b>Timberking Northeast</b><br>Custom sawing &amp; TimberKing sales · Keeseville, NY</div>
+  <div>350 Soper Rd, Keeseville, NY 12944<br>Bill Mitchel · (518) 834-2051</div>
+  <div>Serving the AuSable &amp; Champlain valleys<br>FB/IG: @timberkingnortheast</div>
+</div></footer>
+
+</body>
+</html>

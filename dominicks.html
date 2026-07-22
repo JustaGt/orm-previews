@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dominick's Restaurant — Arthur Avenue, Bronx</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --burgundy:#5b1414; --burgundy-deep:#3d0d0d; --cream:#f5ecd9; --gold:#c79a3e;
+    --ink:#2a1a16; --paper:#faf4e6;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3,.serif{font-family:'Playfair Display',serif}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  a{color:inherit}
+  /* top bar */
+  .topbar{background:var(--burgundy-deep);color:var(--cream);font-size:.85rem;letter-spacing:.04em}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:8px 24px;flex-wrap:wrap;gap:6px}
+  .topbar a{color:var(--gold);text-decoration:none;font-weight:600}
+  /* hero */
+  .hero{background:
+      linear-gradient(rgba(40,10,10,.78),rgba(40,10,10,.86)),
+      repeating-linear-gradient(45deg,#6b1818 0 28px,#5b1414 28px 56px);
+    color:var(--cream);text-align:center;padding:90px 24px 100px;position:relative}
+  .badge{display:inline-block;border:1px solid var(--gold);color:var(--gold);
+    border-radius:2px;padding:6px 16px;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;margin-bottom:26px}
+  .hero h1{font-size:clamp(2.6rem,7vw,4.8rem);line-height:1.05;font-weight:800}
+  .hero .est{font-style:italic;color:var(--gold);font-size:1.3rem;margin:14px 0 8px}
+  .hero p{max-width:620px;margin:18px auto 34px;font-size:1.15rem;color:#f0e3cc}
+  .btn{display:inline-block;background:var(--gold);color:#2a1a16;font-weight:700;
+    text-decoration:none;padding:15px 30px;border-radius:2px;letter-spacing:.04em;
+    text-transform:uppercase;font-size:.92rem;border:2px solid var(--gold);transition:.2s}
+  .btn:hover{background:transparent;color:var(--gold)}
+  .btn.ghost{background:transparent;color:var(--cream);border-color:var(--cream);margin-left:10px}
+  .btn.ghost:hover{background:var(--cream);color:var(--burgundy)}
+  .hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  /* section */
+  section{padding:74px 0}
+  .eyebrow{color:var(--gold);font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:.8rem;margin-bottom:12px}
+  h2.title{font-size:clamp(2rem,4.5vw,2.9rem);color:var(--burgundy);margin-bottom:8px;line-height:1.1}
+  .lead{font-size:1.12rem;max-width:680px;margin-bottom:10px}
+  /* how it works */
+  .howit{background:var(--burgundy);color:var(--cream)}
+  .howit h2.title{color:var(--cream)}
+  .howit .eyebrow{color:var(--gold)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px}
+  .card{background:rgba(255,255,255,.05);border:1px solid rgba(199,154,62,.4);
+    border-radius:4px;padding:30px 26px}
+  .card .num{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--gold);margin-bottom:8px}
+  .card h3{font-size:1.25rem;margin-bottom:8px}
+  .card p{color:#ecdcc2;font-size:.98rem}
+  /* story split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .photo{background:linear-gradient(135deg,#7a2020,#3d0d0d);border-radius:6px;min-height:340px;
+    display:flex;align-items:center;justify-content:center;color:rgba(245,236,217,.5);
+    font-style:italic;text-align:center;padding:24px;border:1px solid rgba(199,154,62,.35)}
+  .story p{margin-bottom:16px;font-size:1.06rem}
+  /* travel-for grid */
+  .grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px}
+  .dish{background:var(--cream);border-left:4px solid var(--gold);padding:22px 24px;border-radius:0 4px 4px 0}
+  .dish h3{color:var(--burgundy);font-size:1.2rem;margin-bottom:4px}
+  /* reviews */
+  .reviews{background:var(--burgundy-deep);color:var(--cream)}
+  .reviews h2.title{color:var(--cream)}
+  .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px}
+  .quote{background:rgba(255,255,255,.04);border:1px solid rgba(199,154,62,.3);padding:26px;border-radius:4px}
+  .stars{color:var(--gold);letter-spacing:2px;margin-bottom:10px}
+  .quote p{font-style:italic;color:#f0e3cc}
+  .quote .ph{display:block;margin-top:14px;font-style:normal;color:var(--gold);font-size:.85rem;letter-spacing:.05em}
+  /* visit + form */
+  .visit{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  .info-row{display:flex;gap:14px;margin-bottom:20px;align-items:flex-start}
+  .info-row .ic{width:38px;height:38px;flex:0 0 38px;border-radius:50%;background:var(--burgundy);
+    color:var(--gold);display:flex;align-items:center;justify-content:center;font-weight:700}
+  .info-row h4{color:var(--burgundy);font-size:1.05rem}
+  .note{background:#fbe7c9;border:1px solid var(--gold);color:#6b4b14;padding:14px 18px;border-radius:4px;font-weight:600;margin-top:8px}
+  form label{display:block;font-weight:600;margin:14px 0 6px;font-size:.92rem}
+  form input,form textarea{width:100%;padding:12px 14px;border:1px solid #d9c9a3;border-radius:4px;
+    font-family:inherit;font-size:1rem;background:#fffdf7}
+  form button{margin-top:20px;width:100%;cursor:pointer}
+  .formcard{background:var(--cream);padding:34px;border-radius:6px;border:1px solid #e2d3ad}
+  /* footer */
+  footer{background:#2a0808;color:#c9b48a;text-align:center;padding:40px 24px;font-size:.9rem}
+  footer .serif{color:var(--gold);font-size:1.4rem;display:block;margin-bottom:8px}
+  .preview-tag{background:var(--gold);color:#2a1a16;text-align:center;padding:7px;font-size:.8rem;font-weight:700;letter-spacing:.05em}
+  @media(max-width:780px){
+    .cards,.rgrid{grid-template-columns:1fr}
+    .split,.visit,.grid2{grid-template-columns:1fr;gap:28px}
+    .btn.ghost{margin-left:0}
+  }
+</style>
+</head>
+<body>
+<div class="preview-tag">PREVIEW CONCEPT — prepared by Onyx Rise Media for Dominick's Restaurant</div>
+
+<div class="topbar"><div class="wrap">
+  <span>2335 Arthur Ave, Bronx · Cash only</span>
+  <span>Call ahead: <a href="tel:17187332807">(718) 733-2807</a></span>
+</div></div>
+
+<header class="hero">
+  <span class="badge">Arthur Avenue · The Bronx</span>
+  <h1>Dominick's</h1>
+  <div class="est">Family-style. Since 1962.</div>
+  <p>No menus. No fuss. You sit down, the waiter tells you what's good tonight, and the table fills up. Three generations of Bronx families have done it this way.</p>
+  <div class="hero-cta">
+    <a class="btn" href="#visit">Get Directions</a>
+    <a class="btn ghost" href="tel:17187332807">Call the Restaurant</a>
+  </div>
+</header>
+
+<section class="howit">
+  <div class="wrap">
+    <div class="eyebrow">Before you come in</div>
+    <h2 class="title">How a meal at Dominick's works</h2>
+    <p class="lead" style="color:#ecdcc2">First time? Here's the only briefing you need.</p>
+    <div class="cards">
+      <div class="card"><div class="num">01</div><h3>There's no menu</h3><p>Tell your waiter what you're in the mood for — veal, seafood, a pasta — and they'll steer you. Trust them.</p></div>
+      <div class="card"><div class="num">02</div><h3>Come hungry, come together</h3><p>Portions are built for sharing at long, communal tables. Bring the family or a hungry crew.</p></div>
+      <div class="card"><div class="num">03</div><h3>Cash only</h3><p>No cards, no check with prices. The waiter tallies it up at the end. Hit an ATM before you arrive.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split">
+    <div class="photo">[ Photo: the dining room, long tables, waiters mid-service ]</div>
+    <div class="story">
+      <div class="eyebrow">Since 1962</div>
+      <h2 class="title">A Bronx table worth the trip</h2>
+      <p>Dominick's has sat on Arthur Avenue for over sixty years, in the heart of the Bronx's Little Italy. Nothing about it has been modernized for the sake of it — and that's exactly why people keep coming back.</p>
+      <p>It's the kind of place you take your parents, then years later take your own kids. The recipes haven't changed. Neither has the welcome.</p>
+      <a class="btn" href="#visit" style="background:var(--burgundy);color:var(--cream);border-color:var(--burgundy)">Plan your visit</a>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--cream)">
+  <div class="wrap">
+    <div class="eyebrow">What people make the trip for</div>
+    <h2 class="title">The dishes that built the reputation</h2>
+    <div class="grid2">
+      <div class="dish"><h3>Veal & chicken classics</h3><p>The Parmigiana, the Francese, the Marsala — done the way they've been done for decades.</p></div>
+      <div class="dish"><h3>Seafood over linguine</h3><p>Garlicky, generous, and meant to be shared down the table.</p></div>
+      <div class="dish"><h3>House pastas</h3><p>Big bowls of red-sauce comfort that arrive without ceremony and disappear fast.</p></div>
+      <div class="dish"><h3>Whatever's good tonight</h3><p>Ask the waiter. The off-menu call is usually the best one you'll make all night.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <div class="eyebrow">From 499+ reviews</div>
+    <h2 class="title">What diners say</h2>
+    <div class="rgrid">
+      <div class="quote"><div class="stars">★★★★★</div><p>"No menus, you just tell them what you want. An institution — exactly how the Bronx is supposed to feel."</p><span class="ph">Review placeholder — pull live</span></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"Been coming here since I was a kid. Now I bring my own. Nothing has changed and I hope it never does."</p><span class="ph">Review placeholder — pull live</span></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"Portions are massive, the waiters are characters, and the food is the real deal. Bring cash."</p><span class="ph">Review placeholder — pull live</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap visit">
+    <div>
+      <div class="eyebrow">Visit</div>
+      <h2 class="title">Find us on Arthur Avenue</h2>
+      <div class="info-row"><div class="ic">📍</div><div><h4>Address</h4>2335 Arthur Ave, Bronx, NY 10458</div></div>
+      <div class="info-row"><div class="ic">🕒</div><div><h4>Hours</h4>Thu–Sat 12–9pm · Sun 12–8pm · Closed Mon–Wed</div></div>
+      <div class="info-row"><div class="ic">☎</div><div><h4>Phone</h4><a href="tel:17187332807">(718) 733-2807</a></div></div>
+      <div class="note">💵 Cash only — there's an ATM nearby, but come prepared.</div>
+    </div>
+    <div class="formcard">
+      <h3 class="serif" style="color:var(--burgundy);font-size:1.5rem;margin-bottom:6px">Planning a group?</h3>
+      <p style="font-size:.96rem">Big party or a special occasion? Send a note and we'll get back to you.</p>
+      <form onsubmit="event.preventDefault();this.style.display='none';document.getElementById('thx-d').style.display='block';">
+        <label>Name</label><input required placeholder="Your name">
+        <label>Phone</label><input required placeholder="(___) ___-____">
+        <label>Date & party size</label><input placeholder="e.g. Sat, 8 people">
+        <label>Anything we should know?</label><textarea rows="3" placeholder="Occasion, seating, dietary notes"></textarea>
+        <button class="btn" type="submit">Send Request</button>
+      </form>
+      <div id="thx-d" style="display:none"><p class="note">Thanks — we'll be in touch. (Demo form; connects to the Onyx Rise Media CRM on build.)</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="serif">Dominick's Restaurant</span>
+  2335 Arthur Ave, Bronx, NY 10458 · (718) 733-2807 · Cash only<br>
+  <span style="font-size:.8rem;opacity:.7">Preview concept by Onyx Rise Media · not the official site</span>
+</footer>
+</body>
+</html>

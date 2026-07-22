@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Young Warriors Boxing · Middletown, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#15233b;--navy-d:#0d172a;--red:#d83a34;--steel:#cfd3da;--ink:#1a2233;--paper:#f4f5f7;--soft:#5a6477}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Work Sans',sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;font-weight:400}
+  h1,h2,h3,.head{font-family:'Anton',sans-serif;font-weight:400;line-height:1.02;letter-spacing:.5px;text-transform:uppercase}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+
+  nav{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:3px solid var(--red)}
+  .navin{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{font-family:'Anton',sans-serif;font-size:1.5rem;color:#fff;letter-spacing:1px;text-transform:uppercase}
+  .brand span{color:var(--red)}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{font-size:.84rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;color:var(--steel)}
+  .navlinks a:hover{color:#fff}
+  .btn{display:inline-block;background:var(--red);color:#fff;padding:13px 26px;font-family:'Work Sans';font-weight:700;font-size:.82rem;letter-spacing:1.5px;text-transform:uppercase;border:none;cursor:pointer;transition:.2s;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%)}
+  .btn:hover{background:#b92e29}
+  .btn-out{background:transparent;border:2px solid #fff;color:#fff;clip-path:none}
+  .btn-out:hover{background:#fff;color:var(--navy)}
+
+  /* full-bleed hero photo + left headline */
+  .hero{position:relative;min-height:88vh;display:flex;align-items:center;background:linear-gradient(100deg,rgba(13,23,42,.94) 30%,rgba(21,35,59,.6) 70%),url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:var(--navy)}
+  .hero .wrap{width:100%}
+  .hbox{max-width:680px;color:#fff}
+  .kicker{display:inline-block;background:var(--red);color:#fff;padding:6px 16px;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:22px}
+  .hero h1{font-size:clamp(3rem,8vw,6rem);color:#fff;margin-bottom:20px}
+  .hero h1 em{color:var(--red);font-style:normal}
+  .hero p{font-size:1.18rem;color:#d4d9e2;max-width:48ch;margin-bottom:30px}
+  .ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .relocate{display:inline-block;margin-top:26px;font-size:.82rem;letter-spacing:1px;color:var(--steel);border-left:3px solid var(--red);padding-left:14px}
+
+  /* stat band */
+  .statband{background:var(--red);color:#fff}
+  .statband .wrap{display:flex;justify-content:space-around;flex-wrap:wrap;padding:34px 28px;gap:20px;text-align:center}
+  .stat b{font-family:'Anton',sans-serif;font-size:2.6rem;display:block;line-height:1}
+  .stat span{font-size:.82rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:600}
+
+  .section{padding:74px 0}
+  .eyebrow{font-family:'Anton';color:var(--red);font-size:1rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+  .section h2{font-size:clamp(2.4rem,5vw,3.6rem);color:var(--navy)}
+  .section h2 em{color:var(--red);font-style:normal}
+
+  /* 3-col cards */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px}
+  .card{background:var(--navy);color:#fff;padding:32px 28px;border-bottom:4px solid var(--red)}
+  .card .ic{width:48px;height:48px;background:var(--red);display:flex;align-items:center;justify-content:center;font-family:'Anton';font-size:1.4rem;margin-bottom:18px}
+  .card h3{font-size:1.6rem;color:#fff;margin-bottom:10px}
+  .card p{color:#aeb6c6;font-size:.96rem;margin-bottom:14px}
+  .card .pr{font-family:'Anton';color:var(--red);font-size:1.3rem}
+
+  /* why us */
+  .why{background:var(--navy);color:#fff}
+  .why .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .why .eyebrow{color:var(--red)}
+  .why h2{color:#fff}
+  .why h2 em{color:var(--red)}
+  .why p{color:#aeb6c6;margin-top:16px}
+  .why .pic{min-height:340px;background:linear-gradient(rgba(216,58,52,.2),rgba(13,23,42,.55)),url('https://images.unsplash.com/photo-1552196563-55cd4e45efb3?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:var(--navy-d);border:4px solid var(--red)}
+
+  /* gallery */
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:34px}
+  .gallery div{height:220px;background-size:cover;background-position:center}
+  .y1{background:linear-gradient(rgba(13,23,42,.35),rgba(216,58,52,.3)),url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=1400&q=80');background-color:var(--navy)}
+  .y2{background:linear-gradient(rgba(13,23,42,.4),rgba(13,23,42,.4)),url('https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&w=1400&q=80');background-color:var(--navy)}
+  .y3{background:linear-gradient(rgba(216,58,52,.3),rgba(13,23,42,.4)),url('https://images.unsplash.com/photo-1588286840104-8957b019727f?auto=format&fit=crop&w=1400&q=80');background-color:var(--red)}
+  .y4{background:linear-gradient(rgba(13,23,42,.4),rgba(13,23,42,.4)),url('https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1400&q=80');background-color:var(--navy)}
+
+  /* split contact */
+  .contact{display:grid;grid-template-columns:1fr 1fr;gap:0;border:3px solid var(--navy)}
+  .contact .left{background:var(--navy);color:#fff;padding:48px 42px}
+  .contact .left .eyebrow{color:var(--red)}
+  .contact .left h2{color:#fff;font-size:2.4rem;margin-bottom:16px}
+  .contact .left p{color:#aeb6c6;margin-bottom:8px}
+  .contact .left .lbl{color:var(--red);font-family:'Anton';font-size:.95rem;letter-spacing:1.5px;text-transform:uppercase;margin-top:18px}
+  .contact .right{padding:48px 42px;background:#fff}
+  label{display:block;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;margin:14px 0 6px;color:var(--navy)}
+  input,textarea{width:100%;padding:12px 14px;border:2px solid #dfe3ea;border-radius:0;font-family:inherit;font-size:1rem;background:var(--paper)}
+  input:focus,textarea:focus{outline:none;border-color:var(--red)}
+  .thanks{display:none;border-left:4px solid var(--red);padding:24px;background:var(--paper)}
+  .thanks.show{display:block}
+
+  footer{background:var(--navy-d);color:var(--steel);text-align:center;padding:42px 0;font-size:.86rem;letter-spacing:1px}
+  footer .fb{font-family:'Anton';color:#fff;font-size:1.2rem;letter-spacing:1px;margin-bottom:8px}
+
+  @media(max-width:860px){
+    .navlinks a:not(.btn){display:none}
+    .cards{grid-template-columns:1fr}
+    .why .wrap,.contact{grid-template-columns:1fr}
+    .gallery{grid-template-columns:1fr 1fr}
+    .why .pic{min-height:240px;order:-1}
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap navin">
+    <a href="#top" class="brand">Young Warriors <span>Boxing</span></a>
+    <div class="navlinks">
+      <a href="#programs">Programs</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn">Get on the list</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hbox">
+      <span class="kicker">Middletown · Orange County</span>
+      <h1>Discipline first. <em>Power follows.</em></h1>
+      <p>Coach Francis Santiago runs a youth boxing academy built on showing up, working hard, and earning respect — in the ring and everywhere else. Real coaching, real mentorship, for kids who need both.</p>
+      <div class="ctas">
+        <a href="#contact" class="btn">Reserve a spot</a>
+        <a href="#programs" class="btn btn-out">See the programs</a>
+      </div>
+      <span class="relocate">We're relocating to a new home in Middletown — get on the list for opening day.</span>
+    </div>
+  </div>
+</header>
+
+<div class="statband">
+  <div class="wrap">
+    <div class="stat"><b>8–17</b><span>Ages we coach</span></div>
+    <div class="stat"><b>1-on-1</b><span>Mentorship, not just drills</span></div>
+    <div class="stat"><b>Middletown</b><span>Built for Orange County kids</span></div>
+  </div>
+</div>
+
+<section class="section wrap" id="programs">
+  <div class="eyebrow">What we run</div>
+  <h2>The <em>programs</em></h2>
+  <div class="cards">
+    <div class="card">
+      <div class="ic">1</div>
+      <h3>Youth Fundamentals</h3>
+      <p>Stance, footwork, and the basics done right. Conditioning that builds confidence, not just muscle. Ages 8–12.</p>
+      <span class="pr">$80 / month</span>
+    </div>
+    <div class="card">
+      <div class="ic">2</div>
+      <h3>Teen Boxing</h3>
+      <p>Sharper technique, bag and pad work, and the focus to control it. For teens ready to put in the hours. Ages 13–17.</p>
+      <span class="pr">$95 / month</span>
+    </div>
+    <div class="card">
+      <div class="ic">3</div>
+      <h3>Mentorship Track</h3>
+      <p>Coaching that goes past the gym — accountability, goals, and a coach in your corner on and off the canvas.</p>
+      <span class="pr">Ask Coach Francis</span>
+    </div>
+  </div>
+</section>
+
+<section class="why section" id="why">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Why Young Warriors</div>
+      <h2>More than a <em>gym.</em></h2>
+      <p>Francis didn't start this to crank out trophies. He started it because a kid with somewhere to be after school, a coach who notices when something's off, and a goal to chase tends to stay on track.</p>
+      <p>Every young boxer here learns the same thing first: you earn what you get. The footwork and the right hook come after the discipline does. That's the Middletown way we coach it.</p>
+    </div>
+    <div class="pic" role="img" aria-label="Young boxer training under coaching"></div>
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="eyebrow">In the gym</div>
+  <h2 style="margin-bottom:6px">On the <em>bags</em></h2>
+  <div class="gallery">
+    <div class="y1" role="img" aria-label="Boxing footwork drills"></div>
+    <div class="y2" role="img" aria-label="Pad work with coach"></div>
+    <div class="y3" role="img" aria-label="Young boxers conditioning"></div>
+    <div class="y4" role="img" aria-label="Focused training session"></div>
+  </div>
+</section>
+
+<section class="section wrap" id="contact">
+  <div class="contact">
+    <div class="left">
+      <div class="eyebrow">Find us</div>
+      <h2>Get on the list</h2>
+      <p>We're setting up our new Middletown home. Drop your info and we'll reach out with opening dates, schedules, and your first session.</p>
+      <span class="lbl">Location</span>
+      <p>47 Academy Ave, Middletown, NY <span style="color:#7c879c;font-size:.86rem">(relocating)</span></p>
+      <span class="lbl">Coach</span>
+      <p>Francis Santiago</p>
+    </div>
+    <div class="right">
+      <form onsubmit="ywDone(event)">
+        <label for="ywp">Parent / guardian name</label>
+        <input id="ywp" placeholder="Your name" required>
+        <label for="ywe">Email</label>
+        <input id="ywe" type="email" placeholder="you@email.com" required>
+        <label for="ywa">Boxer's age</label>
+        <input id="ywa" placeholder="e.g. 11">
+        <label for="ywm">Tell us a little</label>
+        <textarea id="ywm" rows="3" placeholder="Brand new to boxing, looking for after-school structure, wants to compete…"></textarea>
+        <br><br><button type="submit" class="btn">Send to the gym</button>
+      </form>
+      <div class="thanks" id="ywThanks">
+        <h3 style="font-family:'Anton';color:var(--navy);font-size:1.5rem;text-transform:uppercase">You're on the list.</h3>
+        <p style="color:var(--soft);margin-top:6px">Coach Francis will reach out with opening dates and schedules as soon as the new gym is ready. Keep your hands up.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fb">Young Warriors Boxing · Middletown, NY</div>
+  Website preview by Onyx Rise Media
+</footer>
+
+<script>
+function ywDone(e){e.preventDefault();document.querySelector('#contact form').style.display='none';document.getElementById('ywThanks').classList.add('show');}
+</script>
+</body>
+</html>

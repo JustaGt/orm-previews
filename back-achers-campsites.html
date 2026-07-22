@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Back-Achers Campsites — Private Seneca Lake Camping &amp; Cottages | Himrod, NY</title>
+<style>
+  :root{
+    --lake:#1f6f7a; --lake2:#175863; --pine:#2f4a3e; --coral:#e8704f; --coral2:#d2573a;
+    --sun:#f2b84b; --cream:#fbf4e6; --sky:#eaf4f3; --ink:#243a37; --line:#ddcfb6; --paper:#fdf8ee;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.62}
+  h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.16}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .util{background:var(--lake2);color:#cfe6e8;font-size:.9rem}
+  .util .wrap{display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:space-between;align-items:center;padding:8px 22px}
+  .util strong{color:#fff}
+  nav{background:var(--lake);position:sticky;top:0;z-index:20}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:13px 22px}
+  .brand{color:#fff;font-family:Georgia,serif;font-weight:700;font-size:1.24rem;letter-spacing:.01em}
+  .brand span{color:var(--sun)}
+  .links{display:flex;gap:20px}
+  .links a{color:#d8ecee;text-decoration:none;font-size:.93rem;font-weight:700;font-family:"Segoe UI",sans-serif}
+  .links a:hover{color:#fff}
+  .callbtn{background:var(--coral);color:#fff;padding:10px 18px;border-radius:40px;text-decoration:none;font-weight:800;font-size:.9rem;font-family:"Segoe UI",sans-serif}
+  .callbtn:hover{background:var(--coral2)}
+  .hero{position:relative;color:#fff;
+    background:
+      linear-gradient(rgba(18,52,58,.66),rgba(20,60,66,.5)),
+      linear-gradient(120deg,#2a8a93 0%,#1f6f7a 50%,#2f4a3e 100%);
+    padding:96px 0 86px}
+  .tag{display:inline-block;background:var(--sun);color:#3a2a08;font-family:"Segoe UI",sans-serif;font-weight:800;font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;padding:6px 14px;border-radius:30px}
+  .hero h1{font-size:2.9rem;max-width:17ch;margin-top:16px}
+  .hero .sub{font-size:1.2rem;margin-top:18px;max-width:52ch;color:#eaf6f5;font-family:"Segoe UI",sans-serif}
+  .hero .cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:14px 28px;border-radius:40px;text-decoration:none;font-weight:800;font-family:"Segoe UI",sans-serif}
+  .btn-a{background:var(--coral);color:#fff}.btn-a:hover{background:var(--coral2)}
+  .btn-b{background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.6)}.btn-b:hover{background:rgba(255,255,255,.26)}
+  .season{background:var(--sun);color:#3a2a08;padding:14px 0;font-weight:800;font-family:"Segoe UI",sans-serif}
+  .season .wrap{display:flex;flex-wrap:wrap;gap:8px 36px;justify-content:center;text-align:center}
+  section{padding:62px 0}
+  .eyebrow{color:var(--lake2);font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:.8rem;font-family:"Segoe UI",sans-serif}
+  h2{font-size:2rem;margin:8px 0 12px;color:var(--pine)}
+  .lead{max-width:62ch;color:#3c544c;font-size:1.06rem;font-family:"Segoe UI",sans-serif}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:30px}
+  .stay{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:26px}
+  .stay h3{font-family:Georgia,serif;font-size:1.4rem;color:var(--lake2);margin-bottom:8px}
+  .stay p{font-family:"Segoe UI",sans-serif;color:#4d5b52;font-size:.98rem}
+  .stay .ph{font-size:.74rem;color:#8a9087}
+  .stay ul{list-style:none;margin-top:12px}
+  .stay li{font-family:"Segoe UI",sans-serif;padding:6px 0 6px 24px;position:relative;color:#3c544c;font-size:.97rem}
+  .stay li:before{content:"●";position:absolute;left:2px;top:6px;color:var(--coral);font-size:.7rem}
+  .amen{background:var(--pine);color:#e7f0ea}
+  .amen h2{color:#fff}.amen .lead{color:#cfe0d6}
+  .agrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
+  .a{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:18px;text-align:center;font-family:"Segoe UI",sans-serif}
+  .a h3{font-family:"Segoe UI",sans-serif;font-size:.98rem;color:#fff;margin-bottom:4px}
+  .a p{font-size:.84rem;color:#cfe0d6}
+  .unique .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+  .frontpanel{background:var(--lake);color:#eaf6f5;border-radius:14px;padding:28px}
+  .frontpanel h3{font-family:Georgia,serif;color:#fff;font-size:1.4rem;margin-bottom:10px}
+  .frontpanel p{font-family:"Segoe UI",sans-serif;color:#d8ecee}
+  ul.checks{list-style:none;margin-top:14px}
+  ul.checks li{font-family:"Segoe UI",sans-serif;padding:8px 0 8px 28px;position:relative;font-size:1.02rem;color:#33514a}
+  ul.checks li:before{content:"⌁";position:absolute;left:0;top:6px;color:var(--coral);font-weight:900}
+  .contact{background:var(--lake2)}
+  .contact h2{color:#fff}.contact .eyebrow{color:var(--sun)}
+  .cbox{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:26px}
+  .cinfo{color:#d8ecee;font-family:"Segoe UI",sans-serif}.cinfo p{margin:10px 0;font-size:1.04rem}
+  .cinfo b{color:#fff}.cinfo a{color:var(--sun);font-weight:700;text-decoration:none}
+  form{background:#fff;border-radius:14px;padding:24px}
+  form label{display:block;font-family:"Segoe UI",sans-serif;font-size:.83rem;font-weight:800;margin:12px 0 5px;color:var(--pine)}
+  form input,form textarea,form select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:8px;font-family:inherit;font-size:.95rem;background:#fdfbf6}
+  form button{margin-top:18px;width:100%;background:var(--coral);color:#fff;border:0;padding:14px;border-radius:40px;font-weight:800;font-size:1rem;cursor:pointer;font-family:"Segoe UI",sans-serif}
+  form button:hover{background:var(--coral2)}
+  footer{background:#16302c;color:#9fb6ad;font-size:.9rem;padding:24px 0;font-family:"Segoe UI",sans-serif}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+  @media(max-width:900px){
+    .links{display:none}
+    .hero h1{font-size:2.1rem}
+    .two,.unique .wrap,.cbox{grid-template-columns:1fr}
+    .agrid{grid-template-columns:1fr 1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="util"><div class="wrap">
+  <span>Private lake frontage on Seneca · On the Finger Lakes Wine Trail · Open May 15 – Oct 15</span>
+  <span><strong>607-243-7926</strong> · 2830 Jared Rd, Himrod, NY</span>
+</div></div>
+
+<nav><div class="wrap">
+  <div class="brand">Back-Achers <span>Campsites</span></div>
+  <div class="links">
+    <a href="#cottages">Cottages</a>
+    <a href="#sites">Sites</a>
+    <a href="#amenities">On Site</a>
+    <a href="#why">Why Here</a>
+    <a href="#contact">Request Dates</a>
+  </div>
+  <a class="callbtn" href="tel:16072437926">Call the Camp</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="tag">The only private campground on Seneca Lake</span>
+  <h1>Camp right on the water — private Seneca Lake frontage.</h1>
+  <p class="sub">A quiet, family-run campground on the west shore with our own private lake frontage, two waterfront cottages with a dock, and RV and tent sites a short walk from the swim area. Five miles from the wine trail, a world away from the highway.</p>
+  <div class="cta">
+    <a class="btn btn-a" href="#contact">Request Your Dates</a>
+    <a class="btn btn-b" href="#cottages">See Cottages &amp; Sites</a>
+  </div>
+</div></header>
+
+<div class="season"><div class="wrap">
+  <span>Open May 15 – October 15</span><span>Private lake frontage</span><span>Cottages · RV · Tent</span><span>Boat hoist &amp; rentals on site</span>
+</div></div>
+
+<section id="cottages"><div class="wrap">
+  <span class="eyebrow">Where you'll stay</span>
+  <h2>Two ways to wake up on Seneca Lake</h2>
+  <p class="lead">Whether you want a cottage with a bed and a dock or a site to pitch under the trees, you're steps from your own stretch of shoreline — not a field a drive away from the water.</p>
+  <div class="two" id="sites">
+    <div class="stay">
+      <h3>Lakefront Cottages</h3>
+      <p>Two rental cottages right on the water, each with a private dock for your own use. Tie up your boat, swim off the dock, and settle in for the week.</p>
+      <ul>
+        <li>Private dock with each cottage</li>
+        <li>Steps from the lake and swim area</li>
+        <li>Great for families and longer stays</li>
+      </ul>
+      <p class="ph" style="margin-top:10px">Cottage layouts, sleeping capacity &amp; weekly rates confirmed on request — placeholder until provided.</p>
+    </div>
+    <div class="stay">
+      <h3>RV &amp; Tent Sites</h3>
+      <p>Shaded and open sites for RVs and tents in a secluded, quiet setting on the west side of Seneca. Bring the camper or just a tent and a cooler.</p>
+      <ul>
+        <li>RV sites &amp; tent sites</li>
+        <li>Bath house with free hot showers</li>
+        <li>Firewood, ice &amp; propane on site</li>
+      </ul>
+      <p class="ph" style="margin-top:10px">Site types, hookups &amp; nightly rates confirmed on request — placeholder until provided.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="amenities" class="amen"><div class="wrap">
+  <span class="eyebrow" style="color:var(--sun)">On the grounds</span>
+  <h2>Everything close, nothing fussy</h2>
+  <p class="lead">The kind of camp where the kids can roam, the swimming's right there, and you don't have to drive off for firewood or a hot shower.</p>
+  <div class="agrid">
+    <div class="a"><h3>Private Swim Area</h3><p>Your own stretch of Seneca shoreline.</p></div>
+    <div class="a"><h3>Boat Hoist &amp; Rentals</h3><p>Boat hoist plus rowboat &amp; paddleboat rentals.</p></div>
+    <div class="a"><h3>Bath House</h3><p>Free hot showers on site.</p></div>
+    <div class="a"><h3>Nature Trails</h3><p>Quiet walking trails through the grounds.</p></div>
+    <div class="a"><h3>Firewood Delivery</h3><p>Firewood available, delivery to your site.</p></div>
+    <div class="a"><h3>Ice &amp; Propane</h3><p>Camp basics without leaving.</p></div>
+    <div class="a"><h3>Private Docks</h3><p>Cottage docks for your own boat.</p></div>
+    <div class="a"><h3>Secluded Setting</h3><p>Off the highway, on the wine trail.</p></div>
+  </div>
+</div></section>
+
+<section id="why" class="unique"><div class="wrap">
+  <div>
+    <span class="eyebrow">What makes it different</span>
+    <h2>Actual lake frontage — not "near the lake"</h2>
+    <p class="lead">Plenty of Finger Lakes campgrounds put "Seneca Lake" in the name. Back-Achers is the one private campground that's genuinely on it, with frontage that's yours to swim and dock from. That's the whole reason regulars come back summer after summer.</p>
+    <ul class="checks">
+      <li>The only private campground on Seneca Lake with private frontage</li>
+      <li>Cottages with their own docks</li>
+      <li>Five miles from the Finger Lakes Wine Trail</li>
+      <li>A family-run, vintage-camping feel</li>
+    </ul>
+  </div>
+  <div class="frontpanel">
+    <h3>Planning a summer week?</h3>
+    <p>Weekends and the prime weeks of summer fill up. Send the dates you're hoping for and the size of your group, and we'll let you know what cottages and sites are open before they're gone.</p>
+  </div>
+</section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <span class="eyebrow">Reserve</span>
+  <h2>Request your dates</h2>
+  <div class="cbox">
+    <div class="cinfo">
+      <p>Tell us when you'd like to come and what you're after — a cottage, an RV site, or a tent spot — and we'll get back to you with availability and rates. A quick call works too.</p>
+      <p><b>Phone:</b> <a href="tel:16072437926">607-243-7926</a></p>
+      <p><b>Where:</b> 2830 Jared Rd, Himrod, NY 14842 — west shore of Seneca Lake</p>
+      <p><b>Season:</b> Open May 15 – October 15</p>
+      <p><b>Reservations:</b> Booking for the season opens January 1</p>
+    </div>
+    <form onsubmit="return false">
+      <label>Name</label><input type="text" placeholder="Your name">
+      <label>Phone or email</label><input type="text" placeholder="Best way to reach you">
+      <label>What are you looking for?</label>
+      <select>
+        <option>Lakefront cottage</option>
+        <option>RV site</option>
+        <option>Tent site</option>
+        <option>Not sure yet — what's available?</option>
+      </select>
+      <label>Dates</label><input type="text" placeholder="Arrival & departure (or the week you want)">
+      <label>Your group</label>
+      <textarea rows="3" placeholder="How many people, any kids/pets, and anything else we should know."></textarea>
+      <button type="submit">Request Availability</button>
+    </form>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>Back-Achers Campsites &amp; Cottage Rentals · 2830 Jared Rd, Himrod, NY 14842 · 607-243-7926</span>
+  <span>Private Seneca Lake frontage · Cottages · RV &amp; tent · Open May 15 – Oct 15</span>
+</div></footer>
+
+</body>
+</html>

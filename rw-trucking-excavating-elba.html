@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R &amp; W Trucking &amp; Excavating — Elba, NY · Aggregate Hauling &amp; Site Work Since 1968</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed:wght@500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --earth:#4a3a28; --earth2:#33281b; --gravel:#6b7178; --gravel2:#565c62; --yellow:#f2b600; --yellow2:#ffca2b;
+  --ink:#20211f; --paper:#f5f3ef; --line:#e0dbd1; --dark:#22262a;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Roboto',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+h1,h2,h3{font-family:'Roboto Condensed',sans-serif;line-height:1.08;text-transform:uppercase}
+.display{font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.01em;font-weight:400}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}
+.topbar{background:var(--dark);color:#c9ccc7;font-size:.86rem}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:7px 22px;flex-wrap:wrap;gap:6px}
+.topbar b{color:var(--yellow2)}
+nav{background:var(--earth);color:#fff;position:sticky;top:0;z-index:40;border-bottom:4px solid var(--yellow)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 22px}
+.brand{font-family:'Anton';font-size:1.55rem;letter-spacing:.02em;display:flex;flex-direction:column;line-height:1}
+.brand small{font-family:'Roboto Condensed';font-size:.6rem;letter-spacing:.2em;color:#d8c7ad;font-weight:700;margin-top:5px}
+.nlinks{display:flex;gap:22px;font-family:'Roboto Condensed';font-weight:700;text-transform:uppercase;font-size:1rem;color:#e2d6c4}
+.nlinks a:hover{color:var(--yellow2)}
+.ncta{background:var(--yellow);color:#241a02;padding:9px 18px;border-radius:4px;font-family:'Roboto Condensed';font-weight:700;font-size:.98rem}
+.ncta:hover{background:var(--yellow2)}
+@media(max-width:860px){.nlinks{display:none}}
+.hero{position:relative;color:#fff;padding:76px 0 62px;
+  background:linear-gradient(115deg,rgba(51,40,27,.94),rgba(34,26,17,.82)),
+  repeating-linear-gradient(135deg,#4a3a28 0 26px,#3f3122 26px 52px)}
+.hero .stripe{display:inline-block;background:var(--yellow);color:#241a02;font-family:'Roboto Condensed';font-weight:700;letter-spacing:.14em;font-size:.86rem;padding:6px 14px;border-radius:3px;margin-bottom:16px}
+.hero h1{font-size:4rem;max-width:16ch;margin-bottom:16px}
+.hero h1 em{color:var(--yellow2);font-style:normal}
+.hero p{font-size:1.16rem;color:#e2d8ca;max-width:52ch;margin-bottom:26px;font-family:'Roboto'}
+.hbtns{display:flex;gap:13px;flex-wrap:wrap}
+.b1{background:var(--yellow);color:#241a02;padding:15px 28px;border-radius:5px;font-family:'Roboto Condensed';font-weight:700;font-size:1.15rem}
+.b1:hover{background:var(--yellow2)}
+.b2{border:2px solid #8a7a63;color:#fff;padding:14px 26px;border-radius:5px;font-family:'Roboto Condensed';font-weight:700;font-size:1.08rem}
+.b2:hover{border-color:var(--yellow2);color:var(--yellow2)}
+.stats{display:flex;gap:32px;margin-top:32px;flex-wrap:wrap}
+.stats b{font-family:'Anton';font-size:2rem;color:var(--yellow2);display:block;line-height:1}
+.stats span{font-size:.88rem;color:#d0c4b2;font-family:'Roboto'}
+@media(max-width:600px){.hero h1{font-size:2.7rem}}
+section{padding:60px 0}
+.eyebrow{color:var(--earth);font-family:'Roboto Condensed';font-weight:700;letter-spacing:.13em;text-transform:uppercase;font-size:.92rem;margin-bottom:8px}
+.stitle{font-size:2.5rem;color:var(--earth2);margin-bottom:10px}
+.lead{color:#5a5346;max-width:62ch;margin-bottom:32px;font-size:1.04rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.card{border-radius:12px;padding:32px;color:#fff}
+.card.haul{background:linear-gradient(155deg,var(--gravel),#484d52)}
+.card.dig{background:linear-gradient(155deg,var(--earth),#2b2116)}
+.card h3{font-size:1.8rem;margin-bottom:6px}
+.card .sub{font-size:.92rem;opacity:.85;margin-bottom:16px;font-family:'Roboto'}
+.card ul{list-style:none}
+.card li{padding:8px 0 8px 26px;position:relative;border-bottom:1px solid rgba(255,255,255,.14);font-weight:500;font-family:'Roboto'}
+.card li:last-child{border-bottom:none}
+.card li::before{content:"▪";position:absolute;left:0;color:var(--yellow2);font-size:1.2rem;top:5px}
+@media(max-width:760px){.two{grid-template-columns:1fr}}
+.materials{background:var(--earth2);color:#e6dccb}
+.materials .stitle{color:#fff}
+.materials .lead{color:#c7b8a2}
+.matrow{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.matrow span{background:#3d2f20;border:1px solid #56412c;color:#f0e4cf;font-family:'Roboto Condensed';font-weight:700;letter-spacing:.03em;padding:10px 18px;border-radius:6px;font-size:1rem}
+.since{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.since .wrap{display:grid;grid-template-columns:.9fr 1.4fr;gap:36px;align-items:center}
+.bignum{font-family:'Anton';font-size:6rem;color:var(--yellow);line-height:.9}
+.since h2{font-size:2.2rem;color:var(--earth2);margin-bottom:12px}
+.since p{color:#514a3d;margin-bottom:12px}
+@media(max-width:760px){.since .wrap{grid-template-columns:1fr}}
+.contact{background:linear-gradient(150deg,var(--dark),#2c3136);color:#d4d8d2}
+.contact .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:36px;align-items:start}
+.contact h2{color:#fff;font-size:2.2rem;margin-bottom:12px}
+.contact .info p{margin-bottom:9px;color:#b7bcb5}
+.contact .info b{color:var(--yellow2)}
+.formbox{background:#fff;color:var(--ink);border-radius:12px;padding:28px}
+.formbox h3{font-family:'Roboto Condensed';color:var(--earth2);font-size:1.5rem;margin-bottom:6px;text-transform:uppercase}
+.formbox p.sm{font-size:.9rem;color:#5a5346;margin-bottom:14px;font-family:'Roboto'}
+label{display:block;font-size:.78rem;font-weight:700;color:var(--earth);margin-bottom:5px;text-transform:uppercase;letter-spacing:.03em;font-family:'Roboto Condensed'}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid #d3ccbc;border-radius:6px;font-family:'Roboto';font-size:.95rem;background:#fafaf7}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gravel)}
+.frow2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fbtn{margin-top:15px;background:var(--yellow);color:#241a02;border:none;padding:14px 22px;border-radius:6px;font-family:'Roboto Condensed';font-weight:700;font-size:1.15rem;cursor:pointer;width:100%;text-transform:uppercase}
+.fbtn:hover{background:var(--yellow2)}
+@media(max-width:820px){.contact .wrap{grid-template-columns:1fr}.frow2{grid-template-columns:1fr}}
+footer{background:var(--dark);color:#9aa09b;padding:38px 0 20px}
+footer .cols{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:26px}
+footer h4{color:#fff;font-family:'Roboto Condensed';font-size:1.2rem;letter-spacing:.03em;margin-bottom:10px;text-transform:uppercase}
+footer a:hover{color:var(--yellow2)}
+.copy{border-top:1px solid #333a3f;margin-top:22px;padding-top:14px;font-size:.8rem;color:#727872}
+@media(max-width:720px){footer .cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Elba, NY · Hauling &amp; excavation since <b>1968</b></span>
+  <span>Call to schedule a load: <b>(585) 757-9327</b></span>
+</div></div>
+
+<nav><div class="wrap">
+  <span class="brand">R &amp; W TRUCKING &amp; EXCAVATING<small>ELBA, NY · SINCE 1968</small></span>
+  <div class="nlinks">
+    <a href="#work">Hauling</a>
+    <a href="#work">Excavation</a>
+    <a href="#area">Where We Work</a>
+    <a href="#contact">Request a Load</a>
+  </div>
+  <a href="#contact" class="ncta">Request a Load</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="stripe">AGGREGATE HAULING · EXCAVATION · SITE WORK</div>
+  <h1>Stone, fill and dirt — <em>moved right, since 1968.</em></h1>
+  <p>A Genesee County trucking and excavation outfit that's been hauling material and digging jobsites for over half a century. Tri-axles, end-dumps, and the local know-how to get it there.</p>
+  <div class="hbtns">
+    <a href="#contact" class="b1">Request a Load</a>
+    <a href="#work" class="b2">What We Do</a>
+  </div>
+  <div class="stats">
+    <div><b>1968</b><span>Family-run since</span></div>
+    <div><b>55+ yrs</b><span>Hauling &amp; excavating</span></div>
+    <div><b>Local</b><span>Elba &amp; Genesee County</span></div>
+  </div>
+</div></header>
+
+<section id="work"><div class="wrap">
+  <div class="eyebrow">What We Do</div>
+  <h2 class="stitle">Trucks and machines, one call</h2>
+  <p class="lead">Need material delivered, or need a site dug and prepped? R &amp; W runs both sides — so you're not chasing a hauler and an excavator separately.</p>
+  <div class="two">
+    <div class="card haul">
+      <h3>Aggregate &amp; Material Hauling</h3>
+      <div class="sub">Tri-axles &amp; end-dump trailers</div>
+      <ul>
+        <li>Stone, gravel &amp; crushed aggregate</li>
+        <li>Topsoil, fill &amp; sand</li>
+        <li>Bulk material to your jobsite or farm</li>
+        <li>Contractor &amp; multi-load hauling</li>
+      </ul>
+    </div>
+    <div class="card dig">
+      <h3>Excavation &amp; Site Work</h3>
+      <div class="sub">Dig, grade, prep</div>
+      <ul>
+        <li>Excavation &amp; trenching</li>
+        <li>Site preparation &amp; grading</li>
+        <li>Digouts, fill &amp; backfill</li>
+        <li>General truck repair on our own fleet</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="materials"><div class="wrap">
+  <div class="eyebrow" style="color:var(--yellow2)">Material We Move</div>
+  <h2 class="stitle">Tell us the material, we'll bring the trucks</h2>
+  <p class="lead">If it's loose, heavy and has to get from a pit or pile to a jobsite, it's what we do all day.</p>
+  <div class="matrow">
+    <span>Crushed Stone</span><span>Gravel</span><span>Run-of-Bank</span><span>Topsoil</span>
+    <span>Fill Dirt</span><span>Sand</span><span>Screened Loam</span><span>Millings</span>
+  </div>
+</div></section>
+
+<section class="since" id="about"><div class="wrap">
+  <div style="text-align:center">
+    <div class="bignum">'68</div>
+    <p style="font-family:'Roboto Condensed';font-weight:700;color:var(--earth);letter-spacing:.06em;text-transform:uppercase">In business since 1968</p>
+  </div>
+  <div>
+    <div class="eyebrow">Half a Century Local</div>
+    <h2>The trucks your grandfather called</h2>
+    <p>R &amp; W has been running out of Elba since 1968 — more than fifty years of hauling stone, moving dirt and prepping sites across Genesee County. That's not a slogan; it's the same phone number contractors and farmers have used for decades.</p>
+    <p>What we've never had is an easy way for a new contractor to find us, see what we haul, and line up a load without a cold call. This is that.</p>
+  </div>
+</div></section>
+
+<section id="area" style="background:var(--paper)"><div class="wrap">
+  <div class="eyebrow">Where We Work</div>
+  <h2 class="stitle">Based in Elba, working the county</h2>
+  <p class="lead">We run out of Drake Street in Elba and haul across Genesee County and the towns around it — Batavia, Oakfield, Byron, Bergen, Le Roy and the muck.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:10px">
+    <span style="background:#fff;border:1px solid var(--line);color:var(--earth2);font-family:'Roboto Condensed';font-weight:700;padding:8px 15px;border-radius:20px">Elba</span>
+    <span style="background:#fff;border:1px solid var(--line);color:var(--earth2);font-family:'Roboto Condensed';font-weight:700;padding:8px 15px;border-radius:20px">Batavia</span>
+    <span style="background:#fff;border:1px solid var(--line);color:var(--earth2);font-family:'Roboto Condensed';font-weight:700;padding:8px 15px;border-radius:20px">Oakfield</span>
+    <span style="background:#fff;border:1px solid var(--line);color:var(--earth2);font-family:'Roboto Condensed';font-weight:700;padding:8px 15px;border-radius:20px">Byron</span>
+    <span style="background:#fff;border:1px solid var(--line);color:var(--earth2);font-family:'Roboto Condensed';font-weight:700;padding:8px 15px;border-radius:20px">Bergen</span>
+    <span style="background:#fff;border:1px solid var(--line);color:var(--earth2);font-family:'Roboto Condensed';font-weight:700;padding:8px 15px;border-radius:20px">Le Roy</span>
+    <span style="background:#fff;border:1px solid var(--line);color:var(--earth2);font-family:'Roboto Condensed';font-weight:700;padding:8px 15px;border-radius:20px">Stafford</span>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div class="info">
+    <div class="eyebrow" style="color:var(--yellow2)">Line Up a Load</div>
+    <h2>Tell us what to move</h2>
+    <p style="color:#b7bcb5;max-width:44ch;margin-bottom:20px">Give us the material, roughly how much, and where it's going. We'll call you back to schedule and price it.</p>
+    <p><b>Phone:</b> (585) 757-9327</p>
+    <p><b>Yard:</b> 4386 Drake St, Elba, NY 14058</p>
+    <p style="margin-top:14px;color:#8f958e;font-size:.9rem">Hauling · excavation · site work · Genesee County.</p>
+  </div>
+  <div class="formbox">
+    <h3>Request a Load / Quote</h3>
+    <p class="sm">For a big job, note the timeline and we'll plan the trucks.</p>
+    <form onsubmit="return false">
+      <div class="frow2">
+        <div><label>Name / Company</label><input type="text" placeholder="You or your company"></div>
+        <div><label>Phone</label><input type="tel" placeholder="(585) 000-0000"></div>
+      </div>
+      <div class="frow2" style="margin-top:12px">
+        <div><label>Need</label><select><option>Material hauling / delivery</option><option>Excavation / site work</option><option>Both</option></select></div>
+        <div><label>Material</label><select><option>Crushed stone</option><option>Gravel</option><option>Topsoil</option><option>Fill</option><option>Sand</option><option>Other / not sure</option></select></div>
+      </div>
+      <div class="frow2" style="margin-top:12px">
+        <div><label>Approx. quantity</label><input type="text" placeholder="e.g. 6 tri-axle loads"></div>
+        <div><label>Job town</label><input type="text" placeholder="e.g. Oakfield"></div>
+      </div>
+      <div style="margin-top:12px"><label>Details</label><textarea rows="2" placeholder="e.g. need #2 crusher run delivered to a new pole-barn pad by month's end"></textarea></div>
+      <button class="fbtn">Send Request</button>
+    </form>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div>
+      <h4>R &amp; W Trucking &amp; Excavating, Inc.</h4>
+      <p>Aggregate &amp; material hauling, excavation and site work across Genesee County. Elba, NY — since 1968.</p>
+      <p style="font-family:'Anton';font-size:1.7rem;color:#fff;margin-top:10px">(585) 757-9327</p>
+    </div>
+    <div>
+      <h4>Yard</h4>
+      <p>4386 Drake St<br>Elba, NY 14058<br>Genesee County</p>
+    </div>
+    <div>
+      <h4>Menu</h4>
+      <p><a href="#work">Hauling</a><br><a href="#work">Excavation</a><br><a href="#area">Where we work</a><br><a href="#contact">Request a load</a></p>
+    </div>
+  </div>
+  <div class="copy">© 2026 R &amp; W Trucking &amp; Excavating, Inc. · Elba, NY · Preview concept prepared by Onyx Rise Media.</div>
+</div></footer>
+
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oyster Bay Boat Shop — Trade-Only Sailboat Hardware, Rigging &amp; Fabrication</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --graphite:#1c1f24; --steel:#2f353d; --wire:#d8dce1; --paper:#f4f5f7;
+    --ink:#14171b; --mute:#6b7480; --line:#e0e3e8; --flag:#0a6bd8; --amber:#d97706;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6;-webkit-text-size-adjust:100%}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+  .mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+
+  .tradebar{background:var(--graphite);color:#a9b3bf;font-size:.78rem;padding:8px 0}
+  .tradebar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .tradebar b{color:#fff}
+
+  header{border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:20}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:18px;flex-wrap:wrap}
+  .logo{font-weight:800;font-size:1.12rem;letter-spacing:-.3px;line-height:1.15}
+  .logo span{display:block;font-size:.66rem;letter-spacing:2.4px;color:var(--mute);font-weight:600;text-transform:uppercase}
+  nav ul{display:flex;gap:22px;list-style:none;font-size:.92rem;font-weight:600;flex-wrap:wrap;align-items:center}
+  nav a{color:var(--steel);text-decoration:none}
+  .login{background:var(--graphite);color:#fff!important;padding:9px 16px;border-radius:4px}
+
+  .hero{background:var(--paper);border-bottom:1px solid var(--line);padding:56px 0}
+  .hgrid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:start}
+  h1{font-size:clamp(1.9rem,4.2vw,2.85rem);line-height:1.12;letter-spacing:-1px;font-weight:800}
+  .sub{margin-top:16px;font-size:1.08rem;color:var(--steel);max-width:52ch}
+  .motto{margin-top:20px;border-left:4px solid var(--flag);padding:6px 0 6px 14px;font-weight:600;color:var(--graphite)}
+  .facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+  .fact{background:#fff;border:1px solid var(--line);border-radius:4px;padding:9px 12px;font-size:.82rem;font-weight:600;color:var(--steel)}
+
+  /* parts lookup */
+  .lookup{background:#fff;border:1px solid var(--line);border-radius:6px;padding:24px;box-shadow:0 8px 26px rgba(20,23,27,.06)}
+  .lookup h3{font-size:1.05rem;font-weight:700}
+  .lookup p{font-size:.88rem;color:var(--mute);margin-top:4px}
+  .searchrow{display:flex;gap:8px;margin-top:14px}
+  input,select,textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:4px;font-family:inherit;font-size:.94rem;background:#fff}
+  .searchrow button{background:var(--flag);color:#fff;border:0;border-radius:4px;padding:0 20px;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap}
+  .hint{margin-top:12px;font-size:.82rem;color:var(--mute)}
+  .hint b{color:var(--ink)}
+  .stock{margin-top:16px;border-top:1px dashed var(--line);padding-top:14px;font-size:.84rem;color:var(--mute)}
+  .stock ul{list-style:none;display:grid;gap:6px;margin-top:8px}
+  .stock li{display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace}
+  .in{color:#15803d;font-weight:600}
+  .low{color:var(--amber);font-weight:600}
+
+  section{padding:60px 0}
+  .kick{font-size:.72rem;letter-spacing:2.6px;font-weight:700;color:var(--flag);text-transform:uppercase}
+  h2{font-size:clamp(1.55rem,3vw,2.1rem);letter-spacing:-.6px;margin-top:8px;font-weight:800}
+  .lead{color:var(--steel);max-width:66ch;margin-top:10px}
+
+  .four{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}
+  .cell{border:1px solid var(--line);border-radius:6px;padding:22px}
+  .cell h3{font-size:1rem;font-weight:700}
+  .cell p{font-size:.9rem;color:var(--mute);margin-top:6px}
+  .cell .num{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--flag);font-weight:600}
+
+  .fab{background:var(--graphite);color:#fff}
+  .fab h2{color:#fff}
+  .fabgrid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .fab p{color:#aeb7c2}
+  .fab ul{margin-top:16px;list-style:none;display:grid;gap:10px}
+  .fab li{padding-left:20px;position:relative;color:#dfe4ea;font-size:.96rem}
+  .fab li:before{content:"→";position:absolute;left:0;color:var(--flag);font-weight:700}
+  .quotebox{background:#252a31;border:1px solid #363d47;border-radius:6px;padding:24px}
+  .quotebox label{font-size:.72rem;letter-spacing:1.6px;text-transform:uppercase;color:#8892a0;font-weight:700;display:block;margin-bottom:6px}
+  .quotebox input,.quotebox textarea,.quotebox select{background:#1c2127;border-color:#3a424c;color:#fff;margin-bottom:12px}
+  .quotebox button{width:100%;background:var(--flag);color:#fff;border:0;padding:13px;border-radius:4px;font-weight:700;cursor:pointer;font-family:inherit;font-size:.98rem}
+
+  .story{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .storygrid{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+  .timeline{list-style:none;display:grid;gap:16px}
+  .timeline li{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:start}
+  .yr{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--flag);font-size:.9rem;padding-top:2px}
+  .timeline p{font-size:.95rem;color:var(--steel)}
+
+  .findbox{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:26px}
+  .findbox div{border:1px solid var(--line);border-radius:6px;padding:20px}
+  .findbox h4{font-size:.95rem;font-weight:700}
+  .findbox p{font-size:.92rem;color:var(--mute);margin-top:6px}
+
+  footer{background:var(--graphite);color:#8892a0;padding:40px 0;font-size:.88rem}
+  .fg{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px}
+  footer strong{color:#fff;display:block;margin-bottom:8px;font-size:.8rem;letter-spacing:1.6px;text-transform:uppercase}
+  footer a{color:#8892a0}
+  .disc{border-top:1px solid #2e343d;margin-top:26px;padding-top:14px;font-size:.75rem;color:#5c6673}
+
+  @media(max-width:900px){
+    .hgrid,.four,.fabgrid,.storygrid,.findbox,.fg{grid-template-columns:1fr}
+    .four{grid-template-columns:1fr 1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="tradebar">
+  <div class="wrap">
+    <span><b>Trade only.</b> We don't sell to the public — our dealers do.</span>
+    <span class="mono">Mon–Fri 9:00–5:00 EST &nbsp;·&nbsp; 516-674-8008</span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">Oyster Bay Boat Shop<span>Sailboat hardware · rigging · fabrication</span></div>
+    <nav>
+      <ul>
+        <li><a href="#lookup">Parts</a></li>
+        <li><a href="#catalogs">Catalogs</a></li>
+        <li><a href="#fab">Fabrication</a></li>
+        <li><a href="#story">Since 1968</a></li>
+        <li><a href="#find">Contact</a></li>
+        <li><a href="#lookup" class="login">Dealer login</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap hgrid">
+    <div>
+      <h1>The rigging part your customer needs is probably on our shelf.</h1>
+      <p class="sub">A trade-only supplier of sailboat hardware, rigging and running gear since 1968 — stocking the fittings that riggers, boatyards and chandleries can't get anywhere in the Northeast on a Tuesday.</p>
+      <div class="motto">"We don't sell to the public. Our customers do." — the shop's rule since 1980.</div>
+      <div class="facts">
+        <span class="fact">Est. 1968 · Miller family</span>
+        <span class="fact">Dealer accounts only</span>
+        <span class="fact">In-house machine shop</span>
+        <span class="fact">One-off part fabrication</span>
+      </div>
+    </div>
+
+    <div class="lookup" id="lookup">
+      <h3>Check stock before you promise a date</h3>
+      <p>Search by part number, class or manufacturer. Live on-hand quantity, dealer price, order in one click.</p>
+      <div class="searchrow">
+        <input placeholder="e.g. 'Harken 32mm car' or a part #">
+        <button>Check</button>
+      </div>
+      <div class="hint">Don't see it? <b>Send Bam an email</b> — we probably have it, or we can tell you exactly who does.</div>
+      <div class="stock">
+        Sample of what a dealer sees when logged in:
+        <ul>
+          <li><span>Turnbuckle, 1/4" jaw-jaw</span><span class="in">18 on hand</span></li>
+          <li><span>Wire terminal, swage eye 5/32"</span><span class="in">40 on hand</span></li>
+          <li><span>Mainsheet block, 57mm ratchet</span><span class="low">3 — reorder</span></li>
+        </ul>
+        <p style="margin-top:10px"><em>Placeholder rows — real inventory pulled from the existing OIS system.</em></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="catalogs">
+  <div class="wrap">
+    <div class="kick">What we stock</div>
+    <h2>Four counters, one account</h2>
+    <p class="lead">Everything below ships against your dealer account with dealer pricing. No consumer cart, no retail price confusion, no competing with the shops we supply.</p>
+    <div class="four">
+      <div class="cell">
+        <div class="num">01</div>
+        <h3>Standing rigging</h3>
+        <p>Wire, rod terminals, swage and mechanical fittings, turnbuckles, toggles, chainplate hardware.</p>
+      </div>
+      <div class="cell">
+        <div class="num">02</div>
+        <h3>Running rigging &amp; deck gear</h3>
+        <p>Blocks, cars, travelers, clutches, winches and the small fittings that hold a refit up for two weeks.</p>
+      </div>
+      <div class="cell">
+        <div class="num">03</div>
+        <h3>Part books &amp; catalogs</h3>
+        <p>Manufacturer part books kept current so your rigger can quote from a real number, not a guess.</p>
+      </div>
+      <div class="cell">
+        <div class="num">04</div>
+        <h3>Performance sailing parts</h3>
+        <p>The one-design and go-fast side of the business, kept separate so the racing gear doesn't bury the yard gear.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="fab" class="fab">
+  <div class="wrap fabgrid">
+    <div>
+      <div class="kick">Machine shop</div>
+      <h2>Send us the broken one. Get back a better one.</h2>
+      <p>The part that fails on a 1979 masthead is not in anybody's catalog. Our shop makes the one-off — a chainplate, a bracket, a bail, a replacement casting — by people who understand sailboat systems, not by a job shop guessing from a photo.</p>
+      <ul>
+        <li>One-off part fabrication and repair</li>
+        <li>Obsolete hardware reproduced from a sample</li>
+        <li>Custom brackets and mounts for a refit</li>
+        <li>Quoted in days, not "we'll see"</li>
+      </ul>
+    </div>
+    <div class="quotebox">
+      <label for="acct">Dealer / yard name</label>
+      <input id="acct" placeholder="Your shop">
+      <label for="what">What broke</label>
+      <select id="what">
+        <option>Chainplate / structural fitting</option>
+        <option>Masthead or spar hardware</option>
+        <option>Obsolete part — reproduce from sample</option>
+        <option>Custom bracket / mount</option>
+        <option>Something else</option>
+      </select>
+      <label for="det">Boat, part and deadline</label>
+      <textarea id="det" rows="3" placeholder="e.g. Tartan 37, port upper chainplate, needed before splash on the 12th"></textarea>
+      <button>Request a fabrication quote</button>
+    </div>
+  </div>
+</section>
+
+<section id="story" class="story">
+  <div class="wrap storygrid">
+    <div>
+      <div class="kick">Since 1968</div>
+      <h2>Started by Jim and Beegie Miller. Still run by the family.</h2>
+      <p class="lead">Fifty-plus years supplying the people who actually put boats back in the water — and a decision in 1980 that we've never walked back.</p>
+    </div>
+    <div>
+      <ul class="timeline">
+        <li><span class="yr">1968</span><p>Jim and Beegie Miller open the Oyster Bay Boat Shop.</p></li>
+        <li><span class="yr">1980</span><p>The retail doors close for good. From then on the shop supplies the trade only — "we don't sell to the public, our customers do."</p></li>
+        <li><span class="yr">2001</span><p>Founder Jim Miller passes away. His friends and competitors from a hundred regattas still call with stories.</p></li>
+        <li><span class="yr">2002</span><p>The shop moves to a bigger space — high ceilings, deep inventory, a rigging bench, a forklift, and neighbors who bring fabrication into the business.</p></li>
+        <li><span class="yr">Today</span><p>Hardware, rigging, part books, performance gear and a machine shop, on one dealer account.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="find">
+  <div class="wrap">
+    <div class="kick">Contact</div>
+    <h2>One address, one phone, one inbox</h2>
+    <div class="findbox">
+      <div>
+        <h4>Shop</h4>
+        <p>1 Elm Street, Suite A<br>Locust Valley, NY 11560</p>
+        <p style="margin-top:8px"><em>Placeholder — confirm which address is current for will-call and freight.</em></p>
+      </div>
+      <div>
+        <h4>Phone</h4>
+        <p class="mono">516-674-8008</p>
+        <p>Monday to Friday, 9:00–5:00 EST.</p>
+      </div>
+      <div>
+        <h4>Email</h4>
+        <p><a href="mailto:sales@oysterbayboatshop.com">sales@oysterbayboatshop.com</a></p>
+        <p>Part numbers, stock checks, fabrication samples.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fg">
+    <div>
+      <strong>Oyster Bay Boat Shop</strong>
+      1 Elm Street, Suite A, Locust Valley, NY 11560<br>
+      516-674-8008 · <a href="mailto:sales@oysterbayboatshop.com">sales@oysterbayboatshop.com</a><br>
+      Trade accounts only.
+    </div>
+    <div>
+      <strong>Parts</strong>
+      Inventory &amp; stock check<br>Part books<br>Performance sailing parts<br>Dealer login
+    </div>
+    <div>
+      <strong>Shop</strong>
+      Fabrication<br>Rigging bench<br>Since 1968
+    </div>
+  </div>
+  <div class="wrap disc">Concept page prepared for Oyster Bay Boat Shop by Onyx Rise Media. Not a live site. Inventory rows are illustrative placeholders; the address shown is the one printed on the current contact page and needs confirming.</div>
+</footer>
+
+</body>
+</html>

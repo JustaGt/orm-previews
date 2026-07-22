@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oh La La Brow Bar & Lash Studio — Queens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,500&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--plum:#5a2147;--berry:#c2477f;--blush:#ffe1ec;--peachy:#ffd9c2;--cream:#fff6f3;--ink:#33222c;}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Poppins',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  h1,h2,h3,.serif{font-family:'Fraunces',serif;font-weight:600}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  a{color:inherit}
+  .preview-tag{background:var(--plum);color:#fff;text-align:center;padding:7px;font-size:.78rem;letter-spacing:.05em}
+  nav{position:sticky;top:0;z-index:10;background:rgba(255,246,243,.92);backdrop-filter:blur(8px);border-bottom:1px solid #ffd9e4}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 24px}
+  nav .logo{font-family:'Fraunces';font-size:1.4rem;color:var(--plum)}
+  nav .logo span{font-style:italic;color:var(--berry)}
+  .bookbtn{background:var(--berry);color:#fff;text-decoration:none;padding:11px 22px;border-radius:40px;font-weight:600;font-size:.9rem}
+  .hero{padding:70px 24px 80px;background:
+     radial-gradient(circle at 85% 12%,var(--blush),transparent 48%),
+     radial-gradient(circle at 8% 92%,var(--peachy),transparent 45%),var(--cream)}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}
+  .pill{display:inline-block;background:#fff;border:1px solid #ffd2e0;border-radius:40px;padding:7px 16px;font-size:.82rem;font-weight:600;margin-bottom:22px}
+  .pill span{color:var(--berry)}
+  .hero h1{font-size:clamp(2.8rem,6.5vw,4.5rem);line-height:1.02}
+  .hero h1 em{font-style:italic;color:var(--berry)}
+  .hero p{font-size:1.12rem;margin:18px 0 30px;max-width:450px;color:#6b4e5e}
+  .btn{display:inline-block;text-decoration:none;font-weight:600;padding:14px 28px;border-radius:40px;transition:.2s}
+  .btn.d{background:var(--plum);color:#fff}.btn.d:hover{transform:translateY(-2px)}
+  .btn.o{border:2px solid var(--plum);color:var(--plum);margin-left:10px}
+  .hero-art{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .swatch{border-radius:18px;min-height:140px;display:flex;align-items:flex-end;padding:14px;color:#fff;font-weight:600;font-size:.85rem}
+  .a1{background:linear-gradient(150deg,#ff90b6,#c2477f);grid-row:span 2}
+  .a2{background:linear-gradient(150deg,#ffb59a,#ff8e6e)}
+  .a3{background:linear-gradient(150deg,#d59cff,#9b6bd6)}
+  section{padding:72px 0}
+  .eyebrow{color:var(--berry);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem;margin-bottom:10px}
+  h2.title{font-size:clamp(2rem,4.5vw,2.9rem);color:var(--plum);line-height:1.08;margin-bottom:8px}
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:34px}
+  .tile{aspect-ratio:3/4;border-radius:16px;display:flex;align-items:flex-end;padding:12px;color:rgba(255,255,255,.9);font-size:.78rem;font-weight:600}
+  .g1{background:linear-gradient(160deg,#ff90b6,#c2477f)}.g2{background:linear-gradient(160deg,#ffb59a,#ff8e6e)}
+  .g3{background:linear-gradient(160deg,#d59cff,#9b6bd6)}.g4{background:linear-gradient(160deg,#ff9ecb,#c2477f)}
+  .gal-note{text-align:center;margin-top:16px;color:#a8889a;font-size:.9rem}
+  .services{background:#fff}
+  .sgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 40px;margin-top:34px}
+  .srow{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px dashed #f3d9e4;padding:15px 0}
+  .srow h3{font-family:'Poppins';font-weight:600;font-size:1.05rem}
+  .srow .desc{color:#a8889a;font-size:.88rem;font-weight:400}
+  .srow .price{font-family:'Fraunces';font-weight:600;color:var(--berry);font-size:1.2rem;white-space:nowrap;padding-left:16px}
+  .price-note{margin-top:20px;font-size:.85rem;color:#a8889a}
+  .why{background:var(--blush)}
+  .why .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .wcard{background:#fff;border-radius:20px;padding:28px;text-align:center}
+  .wcard .ic{font-size:1.6rem;margin-bottom:8px}
+  .wcard h3{font-family:'Poppins';font-weight:600;font-size:1.05rem;margin-bottom:4px}
+  .wcard p{color:#6b4e5e;font-size:.92rem}
+  .book .wrap{display:grid;grid-template-columns:1fr 1fr;gap:46px}
+  .formcard{background:var(--plum);color:#fff;border-radius:24px;padding:36px}
+  form label{display:block;font-weight:500;margin:14px 0 6px;font-size:.9rem}
+  form input,form select{width:100%;padding:13px 15px;border:none;border-radius:12px;font-family:inherit;font-size:1rem}
+  .info-row{display:flex;gap:12px;margin-bottom:16px;align-items:center}
+  .info-row .ic{width:40px;height:40px;border-radius:50%;background:var(--blush);display:flex;align-items:center;justify-content:center}
+  footer{background:var(--ink);color:#d8c2cd;text-align:center;padding:42px 24px}
+  footer .logo{font-family:'Fraunces';color:#fff;font-size:1.5rem;display:block;margin-bottom:6px}
+  footer .logo span{font-style:italic;color:var(--berry)}
+  @media(max-width:800px){.hero .wrap,.book .wrap{grid-template-columns:1fr;gap:32px}.gal{grid-template-columns:repeat(2,1fr)}.sgrid,.why .wrap{grid-template-columns:1fr}.btn.o{margin-left:0}}
+</style>
+</head>
+<body>
+<div class="preview-tag">PREVIEW CONCEPT — prepared by Onyx Rise Media for Oh La La Brow Bar & Lash Studio</div>
+<nav><div class="wrap">
+  <span class="logo">Oh La La <span>Studio</span></span>
+  <a class="bookbtn" href="#book">Book now</a>
+</div></nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="pill">⭐ Brow &amp; lash bar · <span>Queens</span></span>
+      <h1>Brows on point. Lashes that <em>pop</em>.</h1>
+      <p>The brow and lash bar your feed already loves — now with prices and one-tap booking. See the work and grab a slot.</p>
+      <div>
+        <a class="btn d" href="#book">Book an appointment</a>
+        <a class="btn o" href="#gallery">See the work</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="swatch a1">Volume lashes</div>
+      <div class="swatch a2">Brow lam</div>
+      <div class="swatch a3">Lash lift</div>
+    </div>
+  </div>
+</header>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="eyebrow">The work</div>
+    <h2 class="title">Straight from the chair</h2>
+    <div class="gal">
+      <div class="tile g1">Volume set</div><div class="tile g2">Brow lam</div><div class="tile g3">Lash lift</div><div class="tile g4">Hybrid</div>
+    </div>
+    <p class="gal-note">↪ Live build pulls the latest looks from Instagram automatically.</p>
+  </div>
+</section>
+
+<section class="services">
+  <div class="wrap">
+    <div class="eyebrow">Menu</div>
+    <h2 class="title">Services &amp; pricing</h2>
+    <div class="sgrid">
+      <div>
+        <div class="srow"><div><h3>Classic Lashes</h3><div class="desc">Natural, weightless</div></div><span class="price">$85+</span></div>
+        <div class="srow"><div><h3>Hybrid Lashes</h3><div class="desc">Texture + volume</div></div><span class="price">$105+</span></div>
+        <div class="srow"><div><h3>Volume Lashes</h3><div class="desc">Full and fluffy</div></div><span class="price">$125+</span></div>
+        <div class="srow"><div><h3>Lash Fill</h3><div class="desc">Every 2–3 weeks</div></div><span class="price">$50+</span></div>
+      </div>
+      <div>
+        <div class="srow"><div><h3>Lash Lift & Tint</h3><div class="desc">Your lashes, lifted</div></div><span class="price">$70</span></div>
+        <div class="srow"><div><h3>Brow Lamination</h3><div class="desc">Set, brushed-up brows</div></div><span class="price">$60</span></div>
+        <div class="srow"><div><h3>Brow Shape & Tint</h3><div class="desc">Mapped & defined</div></div><span class="price">$30</span></div>
+        <div class="srow"><div><h3>Lash Removal</h3><div class="desc">Gentle, safe</div></div><span class="price">$20</span></div>
+      </div>
+    </div>
+    <p class="price-note">Pricing shown as starting points — final menu confirmed with the studio on build.</p>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <div class="wcard"><div class="ic">♡</div><h3>Looks your feed loves</h3><p>The work that fills the gallery is the work you'll walk out with.</p></div>
+    <div class="wcard"><div class="ic">✦</div><h3>Clean & gentle</h3><p>Careful application, fresh tools, comfy chair, easy aftercare.</p></div>
+    <div class="wcard"><div class="ic">⚡</div><h3>One-tap booking</h3><p>No DMs back and forth — pick a time and you're set.</p></div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Book</div>
+      <h2 class="title">Grab your slot</h2>
+      <p style="margin-bottom:24px;color:#6b4e5e">Book online or tap to call. New clients & event looks welcome.</p>
+      <div class="info-row"><span class="ic">📍</span><span>Queens, NY — full address on the live site</span></div>
+      <div class="info-row"><span class="ic">🕒</span><span>Tue–Sun by appointment</span></div>
+      <div class="info-row"><span class="ic">📷</span><span>@ohlala — DM or book online</span></div>
+      <a class="btn d" href="#" style="margin-top:6px">Book online</a>
+      <a class="btn o" href="#">Tap to call</a>
+    </div>
+    <div class="formcard">
+      <h3 class="serif" style="font-size:1.6rem;margin-bottom:6px">Request a time</h3>
+      <form onsubmit="event.preventDefault();this.style.display='none';document.getElementById('thx-o').style.display='block';">
+        <label>Name</label><input required placeholder="Your name">
+        <label>Phone</label><input required placeholder="(___) ___-____">
+        <label>Service</label>
+        <select><option>Classic Lashes</option><option>Hybrid Lashes</option><option>Volume Lashes</option><option>Lash Fill</option><option>Lash Lift & Tint</option><option>Brow Lamination</option><option>Brow Shape & Tint</option></select>
+        <label>Preferred day/time</label><input placeholder="e.g. Sun afternoon">
+        <button class="btn" type="submit" style="margin-top:18px;width:100%;background:var(--berry);color:#fff">Request appointment</button>
+      </form>
+      <div id="thx-o" style="display:none">Yay! We'll confirm by text. <span style="font-size:.8rem;opacity:.8">(Demo form; connects to the Onyx Rise Media CRM on build.)</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="logo">Oh La La <span>Studio</span></span>
+  Brow Bar & Lash Studio · Queens, NY<br>
+  <span style="font-size:.8rem;opacity:.7">Preview concept by Onyx Rise Media · not the official site</span>
+</footer>
+</body>
+</html>

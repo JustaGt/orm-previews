@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grand View Motel — Whiteface Mountain Views, Wilmington NY | Book Direct</title>
+<meta name="description" content="Grand View Motel in Wilmington, NY — family-owned for 35+ years at the base of Whiteface Mountain. Heated pool, mountain views, renovated rooms. Your basecamp for skiing, the Flume bike trails, AuSable fly fishing and Lake Placid. Book direct.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --peak:#254a63; --peak-d:#183446; --sky:#3f7ea3; --ice:#8fc0d8;
+    --pine:#2e5641; --cream:#f4efe4; --paper:#f8f5ee; --ink:#1e2b33; --gray:#586570;
+    --gold:#e0a53f; --gold-d:#c88c26; --white:#fff; --line:#dfe6e6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--paper);line-height:1.62}
+  h1,h2,h3,.disp{font-family:'Poppins',sans-serif;line-height:1.12}
+  a{color:inherit}
+  .wrap{max-width:1070px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--gold);color:#20140a;font-weight:700;padding:14px 30px;border-radius:6px;
+    text-decoration:none;transition:transform .15s,background .15s;font-size:1rem}
+  .btn:hover{transform:translateY(-2px);background:var(--gold-d)}
+  .btn.solid{background:var(--peak);color:#fff}
+  .btn.solid:hover{background:var(--peak-d)}
+  .btn.ghost{background:transparent;border:2px solid rgba(255,255,255,.6);color:#fff}
+  .btn.ghost:hover{background:rgba(255,255,255,.12)}
+
+  .topbar{background:var(--peak-d);color:#bcd4e0;font-size:.9rem}
+  .topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;padding:8px 22px}
+  .topbar b{color:var(--ice)}
+
+  header.nav{background:var(--peak);color:#fff;position:sticky;top:0;z-index:20;border-bottom:3px solid var(--gold)}
+  header.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:13px 22px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand .mark{width:46px;height:46px;border-radius:8px;background:linear-gradient(150deg,#8fc0d8,#254a63);display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Poppins';font-weight:700;font-size:1.15rem}
+  .brand b{font-family:'Poppins';font-size:1.26rem;font-weight:700}
+  .brand span{display:block;font-family:'Source Sans 3';font-size:.64rem;letter-spacing:.2em;color:var(--ice);text-transform:uppercase;font-weight:600;margin-top:1px}
+  nav.links{display:flex;gap:22px;font-weight:600;font-size:.95rem}
+  nav.links a{text-decoration:none}
+  nav.links a:hover{color:var(--ice)}
+  @media(max-width:880px){nav.links{display:none}}
+
+  .hero{position:relative;color:#fff;padding:96px 0 84px;
+    background:
+     linear-gradient(rgba(24,52,70,.72),rgba(24,52,70,.82)),
+     linear-gradient(180deg,#3f7ea3 0%,#254a63 55%,#2e5641 100%);}
+  .hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:120px;
+    background:linear-gradient(135deg,transparent 46%,rgba(143,192,216,.25) 47%,transparent 48%),
+              linear-gradient(-135deg,transparent 44%,rgba(244,239,228,.18) 45%,transparent 46%);}
+  .hero .wrap{position:relative;z-index:2}
+  .hero .kick{color:var(--ice);font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:.78rem;margin-bottom:16px}
+  .hero h1{font-size:clamp(2.2rem,5.2vw,3.9rem);max-width:19ch}
+  .hero h1 em{font-style:normal;color:var(--gold)}
+  .hero p.lead{margin:22px 0 30px;font-size:1.2rem;max-width:54ch;color:#e4eef2}
+  .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero .facts{display:flex;gap:34px;flex-wrap:wrap;margin-top:46px;border-top:1px solid rgba(255,255,255,.22);padding-top:24px}
+  .hero .facts div b{font-family:'Poppins';font-size:1.7rem;color:var(--gold);display:block;line-height:1}
+  .hero .facts div span{font-size:.83rem;color:#d3e2e8}
+
+  section{padding:64px 0}
+  .eyebrow{color:var(--sky);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:.76rem;margin-bottom:10px}
+  h2.big{font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:12px;color:var(--peak)}
+  .lead2{font-size:1.1rem;color:var(--gray);max-width:62ch}
+
+  .rooms{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:34px}
+  @media(max-width:880px){.rooms{grid-template-columns:1fr}}
+  .rooms .r{background:var(--white);border:1px solid var(--line);border-radius:8px;overflow:hidden;transition:transform .15s,box-shadow .15s}
+  .rooms .r:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(37,74,99,.13)}
+  .rooms .r .ph{height:150px;background:linear-gradient(150deg,#3f7ea3,#2e5641);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);font-size:.8rem;letter-spacing:.06em}
+  .rooms .r:nth-child(2) .ph{background:linear-gradient(150deg,#254a63,#8fc0d8)}
+  .rooms .r:nth-child(3) .ph{background:linear-gradient(150deg,#2e5641,#3f7ea3)}
+  .rooms .r .body{padding:22px}
+  .rooms .r h3{font-size:1.25rem;color:var(--peak);margin-bottom:6px}
+  .rooms .r p{font-size:.94rem;color:var(--gray)}
+  .rooms .r .rate{margin-top:12px;font-weight:700;color:var(--pine);font-size:.95rem}
+
+  .amen{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+  .amen span{background:var(--cream);border:1px solid var(--line);border-radius:30px;padding:9px 18px;font-size:.92rem;font-weight:600;color:var(--peak)}
+
+  .base{background:var(--peak);color:#fff}
+  .base .eyebrow{color:var(--ice)}
+  .base h2{color:#fff}
+  .base .lead2{color:#d5e4ea}
+  .dist{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:34px}
+  @media(max-width:880px){.dist{grid-template-columns:repeat(2,1fr)}}
+  .dist .d{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:22px}
+  .dist .d b{font-family:'Poppins';font-size:1.6rem;color:var(--gold);display:block;line-height:1.05}
+  .dist .d h3{font-size:1.06rem;margin:8px 0 4px;color:#fff;font-weight:600}
+  .dist .d p{font-size:.86rem;color:#cfe0e7}
+
+  .story{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center}
+  @media(max-width:880px){.story{grid-template-columns:1fr}}
+  .story .img{background:linear-gradient(160deg,#254a63,#8fc0d8);border-radius:10px;min-height:300px;border:1px solid var(--line)}
+  .story blockquote{font-family:'Poppins';font-size:1.4rem;color:var(--peak);line-height:1.3;font-weight:600;margin:6px 0 14px}
+
+  .cta-band{background:linear-gradient(160deg,#2e5641,#254a63);color:#fff;text-align:center}
+  .cta-band h2{color:#fff;font-size:clamp(2rem,4vw,2.8rem)}
+  .cta-band p{max-width:52ch;margin:14px auto 24px;color:#d5e4ea;font-size:1.1rem}
+  .cta-band .ph{font-family:'Poppins';font-size:1.9rem;color:var(--gold);font-weight:700}
+  .cta-band .row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;align-items:center}
+
+  footer{background:var(--peak-d);color:#9ab6c3;font-size:.9rem;padding:36px 0}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+  footer b{color:#fff;font-family:'Poppins';font-size:1.1rem}
+  .ban{background:var(--gold);color:#20140a;text-align:center;font-size:.9rem;padding:9px 14px;font-weight:600}
+</style>
+</head>
+<body>
+
+<div class="ban">Book direct with the family and skip the booking-site fees — same rooms, better rate.</div>
+
+<div class="topbar"><div class="wrap">
+  <span>5941 NYS Route 86, Wilmington, NY · At the base of Whiteface Mountain</span>
+  <span>Reservations <b>(518) 946-2209</b></span>
+</div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">
+    <div class="mark">GV</div>
+    <div><b>Grand View Motel</b><span>Wilmington, NY · Since the 1980s</span></div>
+  </div>
+  <nav class="links">
+    <a href="#rooms">Rooms</a>
+    <a href="#amen">The Property</a>
+    <a href="#base">Basecamp</a>
+    <a href="#story">Our Family</a>
+    <a href="#book">Check Availability</a>
+  </nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="kick">Whiteface Region · Wilmington, New York</div>
+  <h1>Wake up to <em>Whiteface</em> — right from your front door.</h1>
+  <p class="lead">A family-run motel five minutes from the mountain, with a heated pool, renovated rooms and honest rates. Quieter than Lake Placid, closer to the trails, and you'll book with an actual owner.</p>
+  <div class="cta">
+    <a class="btn" href="#book">Check availability</a>
+    <a class="btn ghost" href="#rooms">See the rooms</a>
+  </div>
+  <div class="facts">
+    <div><b>35+ yrs</b><span>Same family, same care</span></div>
+    <div><b>5 min</b><span>To Whiteface Mountain</span></div>
+    <div><b>Heated</b><span>Outdoor pool &amp; playground</span></div>
+  </div>
+</div></section>
+
+<section id="rooms"><div class="wrap">
+  <div class="eyebrow">Rooms &amp; Rates</div>
+  <h2 class="big">Clean, renovated, and priced for a real trip</h2>
+  <p class="lead2">Standard, queen and adjoining rooms — good for a solo angler, a couple chasing snow, or a family that needs two rooms side by side. Free parking right at your door.</p>
+  <div class="rooms">
+    <div class="r"><div class="ph">Standard room photo</div><div class="body"><h3>Standard Room</h3><p>Comfortable one- or two-bed room, recently renovated, with the essentials done right.</p><div class="rate">Rates vary by season — confirm current pricing</div></div></div>
+    <div class="r"><div class="ph">Queen room photo</div><div class="body"><h3>Queen Room</h3><p>A little more space to spread out after a day on the mountain or the river.</p><div class="rate">Rates vary by season — confirm current pricing</div></div></div>
+    <div class="r"><div class="ph">Adjoining rooms photo</div><div class="body"><h3>Adjoining Rooms</h3><p>Two rooms with a connecting door — the family/friends setup that Lake Placid hotels charge a premium for.</p><div class="rate">Rates vary by season — confirm current pricing</div></div></div>
+  </div>
+  <p style="margin-top:14px;font-size:.85rem;color:var(--gray);font-style:italic">Room rates are seasonal — final pricing confirmed at booking. Placeholder photos to be replaced with the motel's own room and mountain-view images.</p>
+</div></section>
+
+<section id="amen" style="background:var(--cream)"><div class="wrap">
+  <div class="eyebrow">The Property</div>
+  <h2 class="big">A heated pool, a real view, and room to breathe</h2>
+  <p class="lead2">Everything you want after a day out — and a few things the big hotels charge extra for.</p>
+  <div class="amen">
+    <span>Heated outdoor pool</span>
+    <span>Direct Whiteface Mtn views</span>
+    <span>Picnic area &amp; grills</span>
+    <span>Children's playground</span>
+    <span>Free door-side parking</span>
+    <span>AAA / AARP / senior discounts</span>
+    <span>Midweek rates</span>
+    <span>Owner on-site</span>
+  </div>
+</div></section>
+
+<section class="base" id="base"><div class="wrap">
+  <div class="eyebrow">Your Whiteface Basecamp</div>
+  <h2 class="big" style="color:#fff">Everything worth doing is minutes away</h2>
+  <p class="lead2">Wilmington sits right where the ski season, the bike season and the fishing season overlap. From your room:</p>
+  <div class="dist">
+    <div class="d"><b>5 min</b><h3>Whiteface Mountain</h3><p>Ski &amp; ride in winter; the Veterans' Memorial Highway &amp; gondola in summer.</p></div>
+    <div class="d"><b>On Rte 86</b><h3>Flume Trails</h3><p>Wilmington's mountain-bike network, steps from the AuSable.</p></div>
+    <div class="d"><b>Walk over</b><h3>West Branch AuSable</h3><p>One of the East's great trout rivers — wade right from town.</p></div>
+    <div class="d"><b>~15 min</b><h3>Lake Placid</h3><p>Olympic village dining and events without Lake Placid lodging prices.</p></div>
+  </div>
+</div></section>
+
+<section id="story"><div class="wrap story">
+  <div class="img"></div>
+  <div>
+    <div class="eyebrow">Our Family</div>
+    <blockquote>Thirty-five years in, you still get the front desk that knows the mountain.</blockquote>
+    <p style="color:var(--gray)">The Grand View has been run by the same family for over three decades. That means when you call, you're talking to someone who can tell you whether the snow's holding on the mountain, where the trout are hitting, and which room has the view you want. We've watched guests' kids grow up and come back with their own — and we'd rather earn your booking directly than hand a cut to a booking site.</p>
+    <div style="margin-top:18px"><a class="btn solid" href="#book">Plan your stay</a></div>
+  </div>
+</div></section>
+
+<section class="cta-band" id="book"><div class="wrap">
+  <h2>Check availability &amp; book direct</h2>
+  <p>Tell us your dates and how many rooms — we'll confirm availability, the best current rate, and any midweek or member discount you qualify for.</p>
+  <div class="row">
+    <span class="ph">(518) 946-2209</span>
+    <a class="btn" href="#">Request your dates</a>
+  </div>
+  <p style="margin-top:18px;font-size:.9rem;color:#b9cdd6">grandviewmotel@frontiernet.net · 5941 NYS Route 86, Wilmington, NY 12997</p>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b>Grand View Motel</b><br>Family-owned · Wilmington, New York</div>
+  <div>5941 NYS Route 86, Wilmington, NY 12997<br>(518) 946-2209 · grandviewmotel@frontiernet.net</div>
+  <div>At the base of Whiteface Mountain<br>Ski · Bike · Fish · Lake Placid</div>
+</div></footer>
+
+</body>
+</html>

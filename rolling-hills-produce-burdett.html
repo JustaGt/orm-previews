@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rolling Hills Produce — Burdett, NY · Farm Stand on the Seneca Lake Wine Trail</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --leaf:#3f7a3a; --leaf2:#54973f; --tomato:#c6432c; --tomato2:#dd5a3f; --gold:#e8a92b; --plum:#7a3556;
+  --ink:#2c2a20; --paper:#fbf6ea; --card:#fffdf6; --line:#e9dfc7; --cream:#f3ead2;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito Sans',sans-serif;color:var(--ink);background:var(--paper);line-height:1.64}
+h1,h2,h3{font-family:'Fraunces',serif;line-height:1.12}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}
+.topbar{background:var(--leaf);color:#e7f2df;font-size:.86rem}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:8px 22px;flex-wrap:wrap;gap:6px}
+.topbar b{color:#fff2c9}
+nav{background:var(--card);color:var(--ink);position:sticky;top:0;z-index:40;border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(0,0,0,.05)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 22px}
+.brand{font-family:'Fraunces';font-weight:800;font-size:1.5rem;color:var(--leaf);display:flex;flex-direction:column;line-height:1}
+.brand small{font-family:'Nunito Sans';font-size:.58rem;letter-spacing:.18em;color:var(--tomato);font-weight:700;margin-top:5px;text-transform:uppercase}
+.nlinks{display:flex;gap:22px;font-weight:700;font-size:.96rem;color:#5b5540}
+.nlinks a:hover{color:var(--tomato)}
+.ncta{background:var(--tomato);color:#fff;padding:9px 18px;border-radius:30px;font-weight:700;font-size:.9rem}
+.ncta:hover{background:var(--tomato2)}
+@media(max-width:880px){.nlinks{display:none}}
+/* season banner */
+.season{background:var(--gold);color:#4a3410;text-align:center;font-weight:700;padding:9px 12px;font-size:.95rem}
+.hero{position:relative;color:#fff;padding:80px 0 66px;
+  background:linear-gradient(120deg,rgba(63,122,58,.94),rgba(84,151,63,.7)),
+  radial-gradient(circle at 80% 20%,rgba(232,169,43,.5),transparent 55%),
+  linear-gradient(180deg,#3f7a3a,#356a31)}
+.hero .eye{color:#fff2c9;font-weight:700;letter-spacing:.14em;font-size:.85rem;margin-bottom:14px;text-transform:uppercase}
+.hero h1{font-size:3.5rem;max-width:16ch;margin-bottom:18px;font-weight:800}
+.hero h1 em{color:#ffe08a;font-style:italic}
+.hero p{font-size:1.17rem;color:#eaf5e4;max-width:54ch;margin-bottom:26px}
+.hbtns{display:flex;gap:13px;flex-wrap:wrap}
+.b1{background:var(--tomato);color:#fff;padding:15px 28px;border-radius:30px;font-weight:700;font-size:1.06rem}
+.b1:hover{background:var(--tomato2)}
+.b2{background:#fff;color:var(--leaf);padding:15px 28px;border-radius:30px;font-weight:700;font-size:1.06rem}
+.b2:hover{background:#fff2c9}
+.hcards{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+.hc{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:12px 18px}
+.hc b{display:block;font-family:'Fraunces';font-size:1.15rem;color:#fff}
+.hc span{font-size:.8rem;color:#dcefd4}
+@media(max-width:600px){.hero h1{font-size:2.4rem}}
+section{padding:60px 0}
+.eyebrow{color:var(--tomato);font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:.85rem;margin-bottom:9px}
+.stitle{font-size:2.35rem;color:var(--leaf);margin-bottom:10px;font-weight:800}
+.lead{color:#5c5540;max-width:64ch;margin-bottom:32px;font-size:1.05rem}
+/* season grid */
+.seasongrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.sg{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 18px;text-align:center}
+.sg .ic{font-size:2rem;margin-bottom:8px}
+.sg h4{font-family:'Fraunces';font-size:1.12rem;color:var(--leaf);margin-bottom:3px}
+.sg span{font-size:.82rem;color:#7a6f52}
+@media(max-width:820px){.seasongrid{grid-template-columns:1fr 1fr}}
+/* local shelf */
+.shelf{background:var(--cream)}
+.shelfgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center}
+.shelf h2{font-size:2.15rem;color:var(--plum);margin-bottom:12px;font-weight:800}
+.shelf p{color:#5c5540;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chip{background:#fff;border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-weight:700;color:var(--plum);font-size:.9rem}
+.chip.star{background:var(--plum);color:#fff;border-color:var(--plum)}
+.icecard{background:linear-gradient(155deg,var(--plum),#5a2740);color:#fff;border-radius:16px;padding:30px;text-align:center}
+.icecard .big{font-family:'Fraunces';font-size:1.6rem;margin-bottom:6px}
+.icecard p{color:#f0dbe7;font-size:.95rem}
+@media(max-width:760px){.shelfgrid{grid-template-columns:1fr}}
+/* plants */
+.plants{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.plantrow{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.pcard{border-radius:14px;padding:30px;color:#fff}
+.pcard.spring{background:linear-gradient(155deg,var(--leaf2),#3c7135)}
+.pcard.bake{background:linear-gradient(155deg,var(--tomato),#a83824)}
+.pcard h3{font-size:1.55rem;color:#fff;margin-bottom:8px}
+.pcard ul{list-style:none;margin-top:10px}
+.pcard li{padding:6px 0 6px 22px;position:relative;font-size:.95rem;border-bottom:1px solid rgba(255,255,255,.16)}
+.pcard li:last-child{border-bottom:none}
+.pcard li::before{content:"❋";position:absolute;left:0;color:#fff2c9}
+@media(max-width:700px){.plantrow{grid-template-columns:1fr}}
+/* visit */
+.visit{background:linear-gradient(160deg,#eef3e6,#e4edd7)}
+.visit .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:36px;align-items:start}
+.visit h2{color:var(--leaf);font-size:2.15rem;margin-bottom:12px;font-weight:800}
+.visit .info p{margin-bottom:9px;color:#4f4a37}
+.visit .info b{color:var(--tomato)}
+.hourbox{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px}
+.hourbox h3{font-family:'Fraunces';color:var(--leaf);font-size:1.4rem;margin-bottom:14px}
+.hrow{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed var(--line);font-size:.98rem}
+.hrow:last-child{border-bottom:none}
+.hrow b{color:var(--plum)}
+.hclosed{background:var(--cream);border-radius:10px;padding:12px 14px;margin-top:14px;font-size:.9rem;color:#7a6f52;text-align:center}
+.callbtn{display:block;text-align:center;margin-top:16px;background:var(--tomato);color:#fff;padding:14px;border-radius:10px;font-weight:800;font-family:'Fraunces';font-size:1.1rem}
+.callbtn:hover{background:var(--tomato2)}
+@media(max-width:820px){.visit .wrap{grid-template-columns:1fr}}
+footer{background:#2c3a26;color:#a9b89f;padding:38px 0 20px}
+footer .cols{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:26px}
+footer h4{color:#fff;font-family:'Fraunces';font-size:1.1rem;margin-bottom:10px}
+footer a:hover{color:#fff2c9}
+.copy{border-top:1px solid #43512d;margin-top:22px;padding-top:14px;font-size:.8rem;color:#7d8c72}
+@media(max-width:720px){footer .cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Burdett, NY · Route 79, between the Seneca Lake Wine Trail &amp; the National Forest</span>
+  <span>Call the stand: <b>(607) 546-2259</b></span>
+</div></div>
+
+<div class="season">🌽 Open for the season · May through October · call ahead for today's hours &amp; what's ripe</div>
+
+<nav><div class="wrap">
+  <span class="brand">ROLLING HILLS PRODUCE<small>Family Farm Stand · Burdett, NY · Since 2006</small></span>
+  <div class="nlinks">
+    <a href="#season">What's In Season</a>
+    <a href="#shelf">Local Goods</a>
+    <a href="#plants">Plants &amp; Pies</a>
+    <a href="#visit">Hours &amp; Directions</a>
+  </div>
+  <a href="#visit" class="ncta">Plan Your Visit</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="eye">SEASONAL PRODUCE · GREENHOUSE · LOCAL FINGER LAKES GOODS</div>
+  <h1>The farm stand worth <em>pulling over for.</em></h1>
+  <p>A family stand on Route 79 in Burdett since 2006 — sweet corn and tomatoes in season, greenhouse annuals in spring, homemade pies, and a shelf full of Finger Lakes honey, maple, cheese and Cayuga Creamery ice cream. Right on the wine-trail loop.</p>
+  <div class="hbtns">
+    <a href="#visit" class="b1">Hours &amp; Directions</a>
+    <a href="#shelf" class="b2">See What We Carry</a>
+  </div>
+  <div class="hcards">
+    <div class="hc"><b>Since 2006</b><span>Buck &amp; Bert Donahue</span></div>
+    <div class="hc"><b>May–October</b><span>Seasonal hours</span></div>
+    <div class="hc"><b>On Route 79</b><span>Wine-trail corridor, Burdett</span></div>
+  </div>
+</div></header>
+
+<section id="season"><div class="wrap">
+  <div class="eyebrow">What's In Season</div>
+  <h2 class="stitle">Picked local, sold the same week</h2>
+  <p class="lead">What's on the tables changes right through the season — which is exactly why it's worth a quick call before you drive out. Here's the rhythm of a Finger Lakes summer at the stand.</p>
+  <div class="seasongrid">
+    <div class="sg"><div class="ic">🍓</div><h4>Late Spring</h4><span>First greens, rhubarb, greenhouse plants</span></div>
+    <div class="sg"><div class="ic">🌽</div><h4>High Summer</h4><span>Sweet corn, tomatoes, berries, squash</span></div>
+    <div class="sg"><div class="ic">🍎</div><h4>Early Fall</h4><span>Apples, pumpkins, cider &amp; hard squash</span></div>
+    <div class="sg"><div class="ic">🥧</div><h4>All Season</h4><span>Homemade pies &amp; baked goods</span></div>
+  </div>
+</div></section>
+
+<section class="shelf" id="shelf"><div class="wrap">
+  <div class="shelfgrid">
+    <div>
+      <div class="eyebrow">The Local Shelf</div>
+      <h2>More than produce — a Finger Lakes pantry</h2>
+      <p>Half the reason people stop is the shelf of local goods behind the produce: things made by neighbors, gathered in one roadside spot so wine-trail visitors can take a piece of the Finger Lakes home.</p>
+      <div class="chips">
+        <span class="chip star">Cayuga Creamery ice cream</span>
+        <span class="chip">Local honey</span>
+        <span class="chip">Maple syrup</span>
+        <span class="chip">Cheese</span>
+        <span class="chip">Grape juice</span>
+        <span class="chip">Local meats</span>
+        <span class="chip">Coffee</span>
+        <span class="chip">Crafts</span>
+      </div>
+    </div>
+    <div class="icecard">
+      <div class="big">🍦 Cayuga Creamery</div>
+      <p>Hand-dipped local ice cream at the stand — the kind of stop that turns a produce run into the highlight of a wine-trail afternoon.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="plants" id="plants"><div class="wrap">
+  <div class="eyebrow">Spring &amp; the Bake Table</div>
+  <h2 class="stitle">Two reasons to come early and often</h2>
+  <p class="lead">Before the produce season peaks, the greenhouse fills the stand with plants — and all season the bake table keeps the pies coming.</p>
+  <div class="plantrow">
+    <div class="pcard spring">
+      <h3>🌱 Greenhouse Plants</h3>
+      <p>Spring at Rolling Hills means flats of annuals and perennials for the garden and porch.</p>
+      <ul>
+        <li>Annuals for beds &amp; containers</li>
+        <li>Perennials for the garden</li>
+        <li>Started early for a Finger Lakes spring</li>
+      </ul>
+    </div>
+    <div class="pcard bake">
+      <h3>🥧 Homemade Pies &amp; Baked Goods</h3>
+      <p>Made in-house and set out fresh — the reason a lot of regulars swing by whether or not they need vegetables.</p>
+      <ul>
+        <li>Fruit pies in season</li>
+        <li>Fresh-baked goods</li>
+        <li>Great for a cottage weekend or a gift</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <div class="info">
+    <div class="eyebrow">Plan Your Visit</div>
+    <h2>Find us on Route 79 in Burdett</h2>
+    <p style="color:#4f4a37;max-width:44ch;margin-bottom:18px">We're a seasonal stand, so hours shift with the harvest. The surest way to catch us open with what you want is a quick phone call.</p>
+    <p><b>Phone:</b> (607) 546-2259</p>
+    <p><b>Address:</b> 4756 State Route 79, Burdett, NY 14818</p>
+    <p><b>Near:</b> Route 79 &amp; Donahues Cabin Dr</p>
+    <p><b>Family-owned by:</b> Buck &amp; Elberta "Bert" Donahue, since 2006</p>
+    <p style="margin-top:12px;color:#8a7f60;font-size:.9rem">Between the Seneca Lake Wine Trail and the Finger Lakes National Forest — an easy stop on the loop.</p>
+  </div>
+  <div class="hourbox">
+    <h3>Season Hours</h3>
+    <div class="hrow"><span>Monday – Friday</span><b>10 – 6</b></div>
+    <div class="hrow"><span>Saturday</span><b>9 – 5</b></div>
+    <div class="hrow"><span>Sunday</span><b>10 – 4</b></div>
+    <div class="hclosed">Open <b>May through the end of October</b>. Hours can shift with the weather and the harvest — call ahead late or early in the season.</div>
+    <a href="tel:6075462259" class="callbtn">Call for Today's Hours &amp; What's Ripe</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div>
+      <h4>Rolling Hills Produce</h4>
+      <p>A family farm stand on Route 79 in Burdett since 2006 — seasonal produce, greenhouse plants, homemade pies and a shelf of local Finger Lakes goods including Cayuga Creamery ice cream.</p>
+      <p style="font-family:'Fraunces';font-weight:800;font-size:1.5rem;color:#fff;margin-top:10px">(607) 546-2259</p>
+    </div>
+    <div>
+      <h4>Visit</h4>
+      <p>4756 State Route 79<br>Burdett, NY 14818<br>Schuyler County</p>
+    </div>
+    <div>
+      <h4>At the Stand</h4>
+      <p><a href="#season">What's in season</a><br><a href="#shelf">Local goods</a><br><a href="#plants">Plants &amp; pies</a><br><a href="#visit">Hours &amp; directions</a></p>
+    </div>
+  </div>
+  <div class="copy">© 2026 Rolling Hills Produce · Burdett, NY · Seasonal hours shown are from public listings — confirm before your visit · Preview concept prepared by Onyx Rise Media.</div>
+</div></footer>
+
+</body>
+</html>

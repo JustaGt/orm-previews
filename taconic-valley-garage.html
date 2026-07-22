@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taconic Valley Garage — Auto Repair on Route 22, Berlin NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#22262a;--steel:#3d4750;--orange:#e8641b;--paper:#f4f3ef;--line:#d8d5cd}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+h1,h2,h3{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.02em}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+header{background:var(--ink);color:#fff;padding:14px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.brand{font-family:'Oswald',sans-serif;font-size:1.15rem;letter-spacing:.06em;text-transform:uppercase}
+.brand span{color:var(--orange)}
+header a.call{background:var(--orange);color:#fff;text-decoration:none;font-weight:600;padding:9px 18px;border-radius:4px}
+.hero{background:linear-gradient(160deg,var(--steel),var(--ink));color:#fff;padding:72px 0 64px}
+.hero .kicker{color:var(--orange);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem}
+.hero h1{font-size:clamp(2rem,5.5vw,3.4rem);line-height:1.08;margin:14px 0 18px;max-width:19ch}
+.hero p{max-width:56ch;color:#cfd4d8;font-size:1.08rem}
+.hero .cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:600;padding:13px 26px;border-radius:4px}
+.btn.solid{background:var(--orange);color:#fff}
+.btn.ghost{border:2px solid #fff;color:#fff}
+.strip{background:var(--orange);color:#fff;padding:10px 0;font-weight:600;text-align:center}
+section{padding:60px 0}
+.sec-h{font-size:1.7rem;margin-bottom:8px}
+.sec-sub{color:#5a6068;max-width:62ch;margin-bottom:32px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--orange);padding:24px;border-radius:6px}
+.card h3{font-size:1.05rem;margin-bottom:8px}
+.card p{font-size:.95rem;color:#4a4f55}
+.why{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.why .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px}
+.why h3{color:var(--orange);font-size:1rem;margin-bottom:6px}
+.owner{background:var(--ink);color:#fff}
+.owner blockquote{font-size:1.2rem;max-width:60ch;border-left:4px solid var(--orange);padding-left:20px;font-style:italic;color:#e5e8ea}
+.owner cite{display:block;margin-top:14px;font-style:normal;color:var(--orange);font-weight:600}
+.towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.towns span{background:#fff;border:1px solid var(--line);padding:7px 14px;border-radius:20px;font-size:.9rem}
+.note{font-size:.82rem;color:#8a8f96;margin-top:16px}
+.contact{background:#fff;border-top:1px solid var(--line)}
+.contact .box{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.contact h3{font-size:1rem;margin-bottom:6px;color:var(--steel)}
+.contact a{color:var(--orange);font-weight:600;text-decoration:none;font-size:1.2rem}
+form .row{margin-bottom:12px}
+input,textarea{width:100%;padding:11px;border:1px solid var(--line);border-radius:4px;font-family:inherit;font-size:.95rem}
+textarea{min-height:90px}
+form .btn{border:none;cursor:pointer;font-size:1rem}
+footer{background:var(--ink);color:#9aa1a8;font-size:.85rem;padding:22px 0;text-align:center}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">Taconic Valley <span>Garage</span></div>
+    <a class="call" href="tel:+15186582280">(518) 658-2280</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="kicker">Route 22 · Berlin, New York</div>
+    <h1>The valley's garage — so your car never has to leave it.</h1>
+    <p>The nearest dealership service desk is a 45-minute tow from Berlin. Taconic Valley Garage handles repairs, springs &amp; suspension, and parts right on Route 22 — with the owner in the bay, not behind a service counter.</p>
+    <div class="cta">
+      <a class="btn solid" href="tel:+15186582280">Call the shop</a>
+      <a class="btn ghost" href="#request">Describe your problem</a>
+    </div>
+  </div>
+</section>
+
+<div class="strip">18372 State Route 22, Berlin NY 12022 — between Petersburgh and Stephentown</div>
+
+<section>
+  <div class="wrap">
+    <h2 class="sec-h">What the shop handles</h2>
+    <p class="sec-sub">General repair for cars, pickups, and the plow trucks that keep this valley moving in January.</p>
+    <div class="grid3">
+      <div class="card"><h3>General auto repair</h3><p>Diagnostics, brakes, exhaust, cooling, electrical, and the check-engine light you've been ignoring since Cherry Plain. Straight answers on what's urgent and what can wait a paycheck.</p></div>
+      <div class="card"><h3>Springs &amp; suspension</h3><p>Frost heaves on 22 and the dirt roads off it are hard on front ends. Springs, shocks, struts, and steering components — a listed specialty of this shop, done without the trip to Albany.</p></div>
+      <div class="card"><h3>Parts &amp; supplies</h3><p>Common parts sourced and stocked locally, so a repair that should take a day takes a day. Bring your own part? Ask — the answer is a conversation, not a policy.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <h2 class="sec-h">Why the valley keeps its cars local</h2>
+    <p class="sec-sub">Berlin sits a half-hour from everywhere. That math changes what a garage means here.</p>
+    <div class="cols">
+      <div><h3>No 45-minute tow</h3><p>Troy is 22 miles over the mountain; Bennington is 20. A local bay means small problems get fixed before they strand you on the Petersburgh Pass.</p></div>
+      <div><h3>One owner, one standard</h3><p>Chris Yerton's name is on the work. You talk to the person who turned the wrenches — not a service writer reading a screen.</p></div>
+      <div><h3>Commuters kept moving</h3><p>Most of the valley drives 30+ minutes to work. Tell us your schedule and we'll work the repair around it, not the other way around.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="owner">
+  <div class="wrap">
+    <blockquote>"Out here a car isn't a convenience — it's how you get to work, to school, to the doctor. We fix it like that's true."
+    <cite>— Chris Yerton, owner <span style="color:#9aa1a8;font-weight:400">(placeholder quote — confirm wording with owner before publish)</span></cite></blockquote>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="sec-h">Serving the Taconic Valley</h2>
+    <div class="towns">
+      <span>Berlin</span><span>Petersburgh</span><span>Stephentown</span><span>Cherry Plain</span><span>Grafton</span><span>Hoosick Falls</span><span>Pownal VT</span><span>Williamstown MA</span>
+    </div>
+    <p class="note">★ 4.5-star average from local drivers (aggregator-listed — verify count before publish). Hours to be confirmed with the shop.</p>
+  </div>
+</section>
+
+<section class="contact" id="request">
+  <div class="wrap">
+    <h2 class="sec-h">Get on the schedule</h2>
+    <p class="sec-sub">Call, or send what the car is doing and when you can drop it off.</p>
+    <div class="box">
+      <div>
+        <h3>Phone</h3><a href="tel:+15186582280">(518) 658-2280</a>
+        <h3 style="margin-top:22px">Address</h3><p>18372 State Route 22<br>Berlin, NY 12022</p>
+        <h3 style="margin-top:22px">Hours</h3><p>[Placeholder — confirm with shop]</p>
+      </div>
+      <form>
+        <div class="row"><input type="text" placeholder="Name"></div>
+        <div class="row"><input type="tel" placeholder="Phone"></div>
+        <div class="row"><input type="text" placeholder="Year / make / model"></div>
+        <div class="row"><textarea placeholder="What's it doing? (noise, light, leak...)"></textarea></div>
+        <button class="btn solid" type="submit">Send to the shop</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">Taconic Valley Garage · 18372 State Route 22, Berlin NY 12022 · (518) 658-2280</div></footer>
+</body>
+</html>

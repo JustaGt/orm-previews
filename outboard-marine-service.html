@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Outboard Marine Service — Re-Power, Service &amp; Storage · Bay Shore NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0b1f38; --navy-2:#123253; --ice:#eef3f8; --white:#fff;
+  --red:#c8102e; --grey:#5d6b7a; --line:#d3dde7;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"IBM Plex Sans",system-ui,sans-serif;color:#12222f;background:var(--white);font-size:17px;line-height:1.6}
+h1,h2,h3,.cond{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;line-height:1.05;letter-spacing:.01em;font-weight:700}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+
+.top{background:var(--navy);color:#cddbe9;font-size:14px}
+.top .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;padding:9px 0}
+header{background:var(--white);border-bottom:3px solid var(--navy)}
+.nav{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;padding:16px 0}
+.brand{font-family:"Barlow Condensed";font-size:27px;color:var(--navy);letter-spacing:.02em}
+.brand em{font-style:normal;color:var(--red)}
+.brand small{display:block;font-family:"IBM Plex Sans";font-size:11.5px;letter-spacing:.19em;color:var(--grey);text-transform:uppercase}
+.callbtn{background:var(--navy);color:#fff;text-decoration:none;font-family:"Barlow Condensed";font-size:22px;padding:10px 22px}
+
+.hero{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:70px 0}
+.hero h1{font-size:clamp(34px,6vw,58px);max-width:17ch}
+.hero .kick{font-family:"Barlow Condensed";letter-spacing:.15em;color:#7fb3e0;font-size:16px;margin-bottom:12px}
+.hero p{max-width:54ch;margin-top:18px;color:#d3e2f1;font-size:clamp(16.5px,2.2vw,20px)}
+.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-family:"Barlow Condensed";font-size:21px;padding:14px 30px;margin-top:26px}
+.btn:hover{background:#a20d25}
+.btn.alt{background:transparent;border:2px solid #7fb3e0;color:#dcebf8;margin-left:10px}
+
+.strip{background:var(--ice);border-bottom:1px solid var(--line)}
+.strip .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0}
+.strip div{padding:22px 18px;border-right:1px solid var(--line)}
+.strip b{font-family:"Barlow Condensed";font-size:25px;color:var(--navy);display:block}
+.strip span{font-size:14px;color:var(--grey)}
+
+section{padding:58px 0}
+.eye{font-family:"Barlow Condensed";letter-spacing:.16em;color:var(--red);font-size:15px;margin-bottom:8px}
+h2{font-size:clamp(26px,4vw,38px);color:var(--navy);margin-bottom:12px}
+.lead{max-width:63ch;color:#3c4c5a}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:30px}
+.card{border:1px solid var(--line);border-top:5px solid var(--navy);padding:26px}
+.card.red{border-top-color:var(--red)}
+.card h3{font-size:22px;color:var(--navy);margin-bottom:10px}
+.card ul{margin:12px 0 0 18px;font-size:16px;color:#3c4c5a}
+.card li{margin-bottom:7px}
+
+.haul{background:var(--navy);color:#fff}
+.haul .lead{color:#c8dcee}
+.haul .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:26px;margin-top:28px}
+.haul .grid b{font-family:"Barlow Condensed";font-size:21px;color:#7fb3e0;display:block;margin-bottom:6px}
+.haul .grid p{font-size:15.5px;color:#cddbe9}
+
+table{width:100%;border-collapse:collapse;margin-top:26px;font-size:16px}
+th,td{text-align:left;padding:13px 14px;border-bottom:1px solid var(--line)}
+th{font-family:"Barlow Condensed";font-size:17px;letter-spacing:.05em;color:var(--navy);background:var(--ice)}
+td.svc{font-weight:600}
+
+form{background:var(--ice);border:1px solid var(--line);padding:30px;margin-top:26px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+label{display:block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);font-weight:600;margin:14px 0 5px}
+input,select,textarea{width:100%;padding:12px;border:1px solid var(--line);font:inherit;font-size:16px;background:#fff}
+textarea{min-height:96px;resize:vertical}
+.hint{font-size:14px;color:var(--grey);margin-top:14px}
+
+.since{background:var(--ice)}
+footer{background:var(--navy);color:#a9c1d6;padding:42px 0;font-size:15px}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:26px}
+footer b{display:block;color:#fff;font-family:"Barlow Condensed";font-size:19px;margin-bottom:8px;letter-spacing:.04em}
+footer a{color:#9fd0f5}
+.note{font-size:12.5px;color:#70889d;margin-top:26px}
+@media(max-width:760px){.two,.row,.row3{grid-template-columns:1fr}.hero{padding:50px 0}.btn.alt{margin-left:0;display:block;text-align:center}}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap"><span>24 Cottage Ave, Bay Shore — on the water, next to Bay Shore Marina</span><span>Full-line Suzuki Marine dealer</span></div></div>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">OUTBOARD <em>MARINE</em> SERVICE<small>Bay Shore, New York · Est. 1964</small></div>
+    <a class="callbtn" href="tel:16316653885">631-665-3885</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="kick">RE-POWER · SERVICE · STORAGE</div>
+    <h1>The hull is fine. It's the engine that's finished.</h1>
+    <p>Re-powering a good boat is usually cheaper than replacing it — but only if somebody tells you honestly what your transom, your rigging and your budget can actually take. Send us the four numbers below and we'll price it properly.</p>
+    <a class="btn" href="#quote">Get a re-power quote</a>
+    <a class="btn alt" href="tel:16316653885">Call the shop</a>
+  </div>
+</div>
+
+<div class="strip">
+  <div class="wrap">
+    <div><b>1964</b><span>Serving the South Shore since</span></div>
+    <div><b>On the water</b><span>We haul out at our own bulkhead</span></div>
+    <div><b>Suzuki</b><span>Full-line dealer &amp; re-power centre</span></div>
+    <div><b>All brands</b><span>Service on all major engines</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="eye">The decision</div>
+    <h2>Re-power, rebuild, or walk away</h2>
+    <p class="lead">There is no single right answer, and any shop that gives you one before looking at the boat is guessing. Here is roughly how we think about it when you call.</p>
+    <div class="two">
+      <div class="card">
+        <h3>Re-power usually makes sense when</h3>
+        <ul>
+          <li>The hull, stringers and transom are sound.</li>
+          <li>You like the boat and the layout suits how you actually fish or cruise.</li>
+          <li>The current engine is a high-hour two-stroke or a sterndrive facing a major job.</li>
+          <li>Fuel burn and noise have become the reason you go out less.</li>
+        </ul>
+      </div>
+      <div class="card red">
+        <h3>It may not be worth it when</h3>
+        <ul>
+          <li>The transom is soft or the stringers have taken water.</li>
+          <li>The rigging, controls and gauges would all have to be replaced too.</li>
+          <li>The boat's weight capacity won't carry a modern four-stroke of the size you want.</li>
+          <li>You were already planning to change boats within two seasons.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="haul">
+  <div class="wrap">
+    <div class="eye" style="color:#7fb3e0">Why the address matters</div>
+    <h2 style="color:#fff">We're on the water, not down the road from it</h2>
+    <p class="lead">Most engine shops on this side of the bay are trailer-in. If your boat lives in a slip, that means arranging a haul, a trailer and a yard before anyone has even looked at the problem. We sit on the water beside Bay Shore Marina, so the boat comes to us the way it already floats.</p>
+    <div class="grid">
+      <div><b>Haul out here</b><p>Our own waterfront means we can pull boats other shops have to send elsewhere.</p></div>
+      <div><b>Fewer handoffs</b><p>One yard for the haul, the diagnosis, the work and the launch.</p></div>
+      <div><b>In-season repairs</b><p>Breakdowns in July do not have to cost you the rest of July.</p></div>
+      <div><b>Storage on site</b><p>The boat can stay for the winter after the work is done, without another move.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eye">Everything else we do</div>
+    <h2>Service, restoration and winter work</h2>
+    <table>
+      <tr><th>Service</th><th>What it covers</th></tr>
+      <tr><td class="svc">Suzuki re-power</td><td>New outboards in all sizes, rigging, controls, gauges and props, fitted and tested.</td></tr>
+      <tr><td class="svc">Mercruiser &amp; sterndrive</td><td>Service and re-power on inboard/outboard packages.</td></tr>
+      <tr><td class="svc">Engine service</td><td>Scheduled maintenance, diagnostics, water pumps, lower units, fuel systems.</td></tr>
+      <tr><td class="svc">Boat restoration</td><td>Bringing a sound older hull back to working condition.</td></tr>
+      <tr><td class="svc">Haul out &amp; launch</td><td>At our own waterfront facility.</td></tr>
+      <tr><td class="svc">Winter storage</td><td>Seasonal storage — call for current availability and rates.</td></tr>
+      <tr><td class="svc">Parts</td><td>Suzuki Marine parts, over the counter.</td></tr>
+    </table>
+    <p class="hint">Rates and storage availability change by season and are confirmed by phone — this page does not quote prices it cannot stand behind.</p>
+  </div>
+</section>
+
+<section id="quote">
+  <div class="wrap">
+    <div class="eye">Re-power &amp; service quote</div>
+    <h2>Four facts and we can price it</h2>
+    <p class="lead">Make, model, year and what's on the transom now. That is the difference between a real number and "bring it down and we'll see."</p>
+    <form onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';">
+      <div class="row">
+        <div><label for="n">Name</label><input id="n" required></div>
+        <div><label for="p">Phone</label><input id="p" type="tel" required></div>
+      </div>
+      <label for="e">Email</label><input id="e" type="email" required>
+      <div class="row3">
+        <div><label for="mk">Boat make</label><input id="mk" placeholder="e.g. Grady-White"></div>
+        <div><label for="md">Model &amp; length</label><input id="md" placeholder="e.g. 208 Adventure, 20 ft"></div>
+        <div><label for="yr">Year</label><input id="yr" placeholder="e.g. 2003"></div>
+      </div>
+      <div class="row3">
+        <div><label for="eng">Current engine</label><input id="eng" placeholder="Make, hp, approx. year"></div>
+        <div><label for="hrs">Approx. hours</label><input id="hrs" placeholder="If known"></div>
+        <div><label for="sh">Shaft length</label><select id="sh"><option>20" (short)</option><option>25" (long)</option><option>30" (extra long)</option><option>Not sure</option></select></div>
+      </div>
+      <div class="row">
+        <div><label for="wh">Where is the boat now?</label><select id="wh"><option>In a slip on the Great South Bay</option><option>On a trailer</option><option>On a lift at my house</option><option>Stored ashore</option></select></div>
+        <div><label for="ln">What are you after?</label><select id="ln"><option>New Suzuki re-power</option><option>Sterndrive service or re-power</option><option>Engine repair / diagnosis</option><option>Winter storage &amp; shrink wrap</option><option>Not sure — need advice</option></select></div>
+      </div>
+      <label for="ms">Anything else we should know</label>
+      <textarea id="ms" placeholder="Symptoms, what the last shop said, whether you're keeping the boat long term…"></textarea>
+      <p class="hint">We'll come back with a real number or an honest reason why the boat should be seen first.</p>
+      <button class="btn" type="submit">Send it to the shop</button>
+      <p class="ok" style="display:none;margin-top:16px;color:#1f6b3a;font-weight:600">Got it — we'll price this and call you back.</p>
+    </form>
+  </div>
+</section>
+
+<section class="since">
+  <div class="wrap">
+    <div class="eye">Since 1964</div>
+    <h2>Same corner of Bay Shore, six decades on</h2>
+    <p class="lead">Outboard Marine Service has been fixing and storing boats beside the Bay Shore Marina since 1964. The engines changed — carburetted two-strokes gave way to fuel-injected four-strokes, and now to re-powers we rig from scratch. The reason people keep coming back down Cottage Avenue has not.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div><b>Outboard Marine Service Inc.</b>24 Cottage Avenue<br>Bay Shore, NY 11706<br>Next to Bay Shore Marina</div>
+      <div><b>Contact</b><a href="tel:16316653885" style="font-family:'Barlow Condensed';font-size:27px;color:#fff;text-decoration:none;display:block">631-665-3885</a><a href="mailto:Outboardmarine@aol.com">Outboardmarine@aol.com</a></div>
+      <div><b>Hours</b>Open today 8:30am – 5:00pm<br><span style="font-size:13px">Full weekly hours to be confirmed</span></div>
+      <div><b>Dealer</b>Full-line Suzuki Marine dealer<br>Suzuki &amp; Mercruiser re-power centre<br>Service on all major brands</div>
+    </div>
+    <p class="note">Concept page prepared by Onyx Rise Media for review. Founding year shown as 1964 per the current site heading — the existing site's body copy says "over 65 years," which disagrees; please confirm which is correct. Hours, storage rates and any review figures are placeholders pending confirmation.</p>
+  </div>
+</footer>
+
+</body>
+</html>

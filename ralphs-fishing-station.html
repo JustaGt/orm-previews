@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ralph's Fishing Station &amp; Marina — Mount Sinai Harbor, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0e2233; --navy-2:#16344c; --deck:#3f4d55;
+    --plank:#c9c2b6; --sand:#f3efe8; --paper:#ffffff;
+    --sun:#e8622a; --sun-dark:#c44e1d; --foam:#8fb8c9;
+    --line:rgba(255,255,255,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Source Sans 3',system-ui,sans-serif;color:var(--navy);background:var(--sand);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.ttl{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.05}
+  .wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+  a{color:inherit}
+
+  /* ---- top bar ---- */
+  .topbar{background:var(--navy);color:#dfe8ee;font-size:.82rem;padding:8px 0}
+  .topbar .wrap{display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between;align-items:center}
+  .topbar b{color:#fff;font-weight:600}
+  .vhf{background:var(--sun);color:#fff;padding:2px 8px;border-radius:3px;font-weight:700;letter-spacing:.04em}
+
+  /* ---- hero ---- */
+  header.hero{
+    position:relative;background:
+      linear-gradient(180deg,rgba(14,34,51,.86) 0%,rgba(14,34,51,.72) 45%,rgba(14,34,51,.94) 100%),
+      repeating-linear-gradient(90deg,#1b3b52 0 38px,#17364c 38px 76px);
+    color:#fff;padding:64px 0 0;overflow:hidden;
+  }
+  header.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:70px;
+    background:repeating-linear-gradient(90deg,rgba(0,0,0,.22) 0 6px,transparent 6px 34px);opacity:.5}
+  .est{font-family:'Oswald';font-size:.8rem;letter-spacing:.28em;color:var(--foam);margin-bottom:14px}
+  h1{font-size:clamp(2.1rem,6.2vw,3.9rem);font-weight:700;max-width:16ch}
+  h1 em{font-style:normal;color:var(--sun)}
+  .sub{font-size:clamp(1.02rem,2.3vw,1.2rem);color:#cfdde6;margin-top:18px;max-width:52ch}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 40px}
+  .btn{display:inline-block;font-family:'Oswald';text-transform:uppercase;letter-spacing:.05em;
+    padding:15px 26px;border-radius:3px;text-decoration:none;font-size:.98rem;font-weight:600;transition:.15s}
+  .btn-p{background:var(--sun);color:#fff;box-shadow:0 4px 0 var(--sun-dark)}
+  .btn-p:hover{transform:translateY(2px);box-shadow:0 2px 0 var(--sun-dark)}
+  .btn-s{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.45)}
+  .btn-s:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+
+  /* ---- harbor strip (replaces the broken weather page) ---- */
+  .harbor{position:relative;z-index:2;background:var(--navy-2);border-top:3px solid var(--sun);
+    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-bottom:-1px}
+  .hcell{background:var(--navy-2);padding:18px 16px;border-right:1px solid var(--line)}
+  .hcell:last-child{border-right:0}
+  .hcell .k{font-family:'Oswald';font-size:.7rem;letter-spacing:.16em;color:var(--foam);display:block;margin-bottom:5px}
+  .hcell .v{font-family:'Oswald';font-size:1.16rem;color:#fff;font-weight:600}
+  .hcell .n{font-size:.78rem;color:#9fb6c4;display:block;margin-top:2px}
+  .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#4ec07a;margin-right:6px}
+
+  /* ---- sections ---- */
+  section{padding:64px 0}
+  .eyebrow{font-family:'Oswald';font-size:.75rem;letter-spacing:.2em;color:var(--sun);margin-bottom:10px}
+  h2{font-size:clamp(1.5rem,3.6vw,2.1rem);font-weight:600;margin-bottom:10px}
+  .lede{color:#4a5b67;max-width:62ch;margin-bottom:34px}
+
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:var(--paper);border:1px solid #ddd6ca;border-top:4px solid var(--navy);padding:26px 22px}
+  .card h3{font-size:1.1rem;margin-bottom:10px}
+  .card ul{list-style:none;font-size:.94rem;color:#42535f}
+  .card li{padding:5px 0 5px 18px;position:relative;border-bottom:1px dashed #e6e0d5}
+  .card li:last-child{border-bottom:0}
+  .card li:before{content:"";position:absolute;left:0;top:14px;width:7px;height:7px;background:var(--sun);border-radius:1px}
+  .price-note{font-size:.82rem;color:#7d8891;margin-top:14px;font-style:italic}
+
+  /* ---- deck / kitchen band ---- */
+  .deckband{background:var(--deck);color:#fff;
+    background-image:linear-gradient(180deg,rgba(63,77,85,.94),rgba(30,40,47,.96))}
+  .deckband .lede{color:#cbd6dc}
+  .deck-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:start}
+  .lineup{background:rgba(0,0,0,.24);border-left:4px solid var(--sun);padding:22px 24px}
+  .lineup .row{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:.95rem}
+  .lineup .row:last-child{border-bottom:0}
+  .lineup .day{font-family:'Oswald';letter-spacing:.06em;color:#fff}
+  .lineup .who{color:#a9bcc7}
+  .ph{display:inline-block;background:rgba(232,98,42,.2);border:1px dashed var(--sun);color:#ffcdb8;
+    font-size:.74rem;padding:1px 7px;border-radius:3px;letter-spacing:.04em}
+
+  /* ---- service shop ---- */
+  .shop{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+  .badge{display:inline-block;border:2px solid var(--navy);padding:7px 14px;font-family:'Oswald';
+    font-size:.82rem;letter-spacing:.1em;margin-bottom:18px}
+  .shoplist{columns:2;column-gap:26px;font-size:.96rem;color:#42535f}
+  .shoplist span{display:block;padding:6px 0;break-inside:avoid;border-bottom:1px dashed #ddd6ca}
+
+  /* ---- history ---- */
+  .story{background:var(--navy);color:#dbe6ed}
+  .story h2{color:#fff}
+  .timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:30px}
+  .tl{border-top:2px solid var(--sun);padding-top:16px}
+  .tl .yr{font-family:'Oswald';font-size:1.9rem;color:var(--sun);font-weight:700}
+  .tl p{font-size:.94rem;color:#b6c8d4;margin-top:6px}
+
+  /* ---- contact ---- */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .hours{background:var(--paper);border:1px solid #ddd6ca;padding:26px}
+  .hours table{width:100%;border-collapse:collapse;font-size:.95rem}
+  .hours td{padding:9px 0;border-bottom:1px dashed #e6e0d5}
+  .hours td:last-child{text-align:right;font-family:'Oswald';letter-spacing:.03em}
+  .hours tr:last-child td{border-bottom:0}
+  .hours h3{font-size:1rem;margin-bottom:12px}
+  .hours .seasonal{margin-top:22px;padding-top:18px;border-top:2px solid var(--navy)}
+  .form label{display:block;font-family:'Oswald';font-size:.76rem;letter-spacing:.12em;margin:14px 0 6px}
+  .form input,.form select,.form textarea{width:100%;padding:12px;border:1px solid #c8c0b3;
+    background:#fff;font-family:inherit;font-size:.95rem;border-radius:2px}
+  .form textarea{min-height:88px;resize:vertical}
+  .form .btn-p{border:0;cursor:pointer;margin-top:20px;width:100%}
+
+  footer{background:#08161f;color:#7f95a3;padding:34px 0;font-size:.88rem}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+  footer b{color:#fff}
+
+  @media(max-width:860px){
+    .grid3,.deck-grid,.shop,.contact-grid,.timeline{grid-template-columns:1fr}
+    .harbor{grid-template-columns:1fr 1fr}
+    .hcell:nth-child(2){border-right:0}
+    .shoplist{columns:1}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>250 Harbor Beach Road · Mount Sinai Harbor, NY 11766</span>
+    <span><b>631-473-6655</b> &nbsp;·&nbsp; <span class="vhf">VHF 67</span></span>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="est">Mount Sinai Harbor · Since 1961</div>
+    <h1>Slip, launch, fuel and bait — and a <em>burger on the deck</em> when you come back in.</h1>
+    <p class="sub">A working fishing station on the North Shore, run by the same family for three generations. Full mechanical shop, gas and diesel on the dock, launch taxi to your mooring, and a kitchen that's open seven days.</p>
+    <div class="cta-row">
+      <a class="btn btn-p" href="#slip">Check slip &amp; mooring availability</a>
+      <a class="btn btn-s" href="#shop">Talk to the service shop</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="harbor">
+      <div class="hcell">
+        <span class="k">STORE</span>
+        <span class="v">Summer 7am–7pm</span>
+        <span class="n">Mon–Fri · Sat–Sun from 6am</span>
+      </div>
+      <div class="hcell">
+        <span class="k">FUEL DOCK</span>
+        <span class="v">Gas · Diesel</span>
+        <span class="n">ValvTect · 93 octane</span>
+      </div>
+      <div class="hcell">
+        <span class="k">LAUNCH TAXI</span>
+        <span class="v">Seasonal</span>
+        <span class="n">May 15 – Oct 15</span>
+      </div>
+      <div class="hcell">
+        <span class="k">ON THE DECK</span>
+        <span class="v">Live music Fri–Sun</span>
+        <span class="n">Weather permitting</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="slip">
+  <div class="wrap">
+    <div class="eyebrow">Keeping your boat here</div>
+    <h2>Four ways to keep a boat at Ralph's</h2>
+    <p class="lede">Tell us the length, the draft and the season you want, and we'll tell you what's open. Slips on this harbor go early — the honest answer in July is usually a waitlist for next season plus whatever a transient cancellation opens up.</p>
+    <div class="grid3">
+      <div class="card">
+        <h3>Seasonal slips</h3>
+        <ul>
+          <li>30 &amp; 50 amp electric</li>
+          <li>Walk to the fuel dock and the store</li>
+          <li>Parking on the peninsula</li>
+          <li>Pump-out on site</li>
+        </ul>
+        <p class="price-note">Rates by boat length — call for this season's slip sheet. [Rate table to be supplied]</p>
+      </div>
+      <div class="card">
+        <h3>Moorings &amp; launch taxi</h3>
+        <ul>
+          <li>Daily, weekly and seasonal moorings</li>
+          <li>Launch taxi May 15 – Oct 15</li>
+          <li>Sun–Thu to 10pm · Fri–Sat to midnight</li>
+          <li>Hail us on VHF 67</li>
+        </ul>
+        <p class="price-note">Mooring rates on request. [Rate table to be supplied]</p>
+      </div>
+      <div class="card">
+        <h3>High &amp; dry / dry-land</h3>
+        <ul>
+          <li>Trailerable powerboats</li>
+          <li>In and out on request</li>
+          <li>No bottom growth, no bottom paint bill</li>
+        </ul>
+        <p class="price-note">Ask about turnaround times in peak season.</p>
+      </div>
+    </div>
+    <div class="grid3" style="margin-top:22px">
+      <div class="card" style="grid-column:1/-1;border-top-color:var(--sun)">
+        <h3>Hauling &amp; winter storage</h3>
+        <ul>
+          <li>Haul-out, power wash, shrink wrap and block</li>
+          <li>Winterizing — engines, systems, freshwater</li>
+          <li>Spring commissioning and bottom paint before splash</li>
+          <li>Booked in the fall; the yard fills before the first freeze</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="shop" style="background:var(--paper);border-top:1px solid #e2dbcf;border-bottom:1px solid #e2dbcf">
+  <div class="wrap">
+    <div class="shop">
+      <div>
+        <div class="eyebrow">The service shop</div>
+        <span class="badge">Volvo Penta Dealer</span>
+        <h2>Mechanics who work on the same water you break down on</h2>
+        <p class="lede" style="margin-bottom:20px">Ask for Mike, the service manager. Tell him the make, the year, the engine and what it's doing — the more you can say up front, the sooner he can tell you whether it's a Saturday fix or a haul-out.</p>
+        <a class="btn btn-p" href="#contact" style="box-shadow:0 4px 0 var(--sun-dark)">Send the shop your engine details</a>
+      </div>
+      <div>
+        <div class="shoplist">
+          <span>Tune-ups</span>
+          <span>Repowers</span>
+          <span>Bottom paint</span>
+          <span>Winterizing</span>
+          <span>Installations</span>
+          <span>Parts &amp; accessories</span>
+          <span>Volvo Penta service</span>
+          <span>Haul-out &amp; block</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Bait, tackle &amp; the store</div>
+    <h2>Open at 6am on a Saturday, because that's when you leave</h2>
+    <p class="lede">Frozen, fresh and live bait. Hooks, lures, rods and reels. Marine supplies, ice and the convenience store — so you don't have to make a second stop on the way to the ramp.</p>
+    <div class="grid3">
+      <div class="card">
+        <h3>What's biting</h3>
+        <ul>
+          <li>Striped bass</li>
+          <li>Fluke</li>
+          <li>Porgies</li>
+          <li>Blackfish (fall)</li>
+        </ul>
+        <p class="price-note">Call the store for this week's live bait stock before you drive over.</p>
+      </div>
+      <div class="card">
+        <h3>Before you go out</h3>
+        <ul>
+          <li>NYS saltwater fishing registry</li>
+          <li>Current size &amp; bag limits (DEC)</li>
+          <li>Limits change — check the season</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Also at the counter</h3>
+        <ul>
+          <li>Ice</li>
+          <li>Marine supplies</li>
+          <li>Snacks, drinks, coffee</li>
+          <li>Fuel dock account</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="deckband">
+  <div class="wrap">
+    <div class="eyebrow">The deck</div>
+    <h2>You don't need a boat to sit down at Ralph's</h2>
+    <p class="lede">Breakfast, lunch and dinner seven days. Friday through Sunday there's a band on the deck and the sun goes down over the harbor. Buy a beer, put your feet up, stay a while.</p>
+    <div class="deck-grid">
+      <div class="lineup">
+        <div class="row"><span class="day">Friday</span><span class="who"><span class="ph">band TBC</span></span></div>
+        <div class="row"><span class="day">Saturday</span><span class="who"><span class="ph">band TBC</span></span></div>
+        <div class="row"><span class="day">Sunday</span><span class="who"><span class="ph">band TBC</span></span></div>
+        <div class="row"><span class="day">Kitchen</span><span class="who">Breakfast · Lunch · Dinner, 7 days</span></div>
+      </div>
+      <div>
+        <p style="color:#cbd6dc;font-size:.95rem">Right now the only place the weekend lineup gets posted is Facebook — which means anyone without an account can't see who's playing. This block is the fix: the lineup, the kitchen hours and the rain call, published where everyone can read them.</p>
+        <p style="color:#cbd6dc;font-size:.95rem;margin-top:14px">Live music can get cancelled for weather. Call ahead if the sky looks wrong.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap">
+    <div class="eyebrow">Since 1961</div>
+    <h2>Ralph and Barbara started with rowboats and a few moorings</h2>
+    <p class="lede">The peninsula the marina sits on today wasn't much more than sand and one tree when the family moved to the north side of the harbor. Everything on it since then, they built.</p>
+    <div class="timeline">
+      <div class="tl">
+        <div class="yr">1961</div>
+        <p>Ralph and Barbara Davenport open a small marina on the south end of Mount Sinai Harbor, renting rowboats and a handful of moorings.</p>
+      </div>
+      <div class="tl">
+        <div class="yr">1977</div>
+        <p>The move to the north side of the harbor — a sandy peninsula with a single tree on the end of it.</p>
+      </div>
+      <div class="tl">
+        <div class="yr">Today</div>
+        <p>Still run by Ralph and Barbara's children and grandchildren. Full service yard, fuel dock, kitchen and a deck full of people on a Friday night.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Find us</div>
+    <h2>One set of hours, one phone number, one email</h2>
+    <p class="lede">Right now Ralph's hours are published two different ways in two different places. Here they are once.</p>
+    <div class="contact-grid">
+      <div class="hours">
+        <h3>Store hours</h3>
+        <table>
+          <tr><td>Summer · Mon–Fri</td><td>7:00am – 7:00pm</td></tr>
+          <tr><td>Summer · Sat–Sun</td><td>6:00am – 7:00pm</td></tr>
+        </table>
+        <div class="seasonal">
+          <h3>Winter hours</h3>
+          <table>
+            <tr><td>Tue–Sat</td><td>8:00am – 5:00pm</td></tr>
+            <tr><td>Sun &amp; Mon</td><td>Closed</td></tr>
+          </table>
+          <p class="price-note">[CONFIRM: a second set of hours currently circulating shows Mon–Sat 8–5 and Sun 8–4. One of these is out of date — tell us which and we'll publish only that one.]</p>
+        </div>
+        <div class="seasonal">
+          <h3>Launch taxi · May 15 – Oct 15</h3>
+          <table>
+            <tr><td>Sun–Thu</td><td>7:00am – 10:00pm</td></tr>
+            <tr><td>Friday</td><td>7:00am – midnight</td></tr>
+            <tr><td>Saturday</td><td>6:00am – midnight</td></tr>
+          </table>
+        </div>
+      </div>
+      <div>
+        <form class="form" onsubmit="return false;">
+          <label for="n">Name</label>
+          <input id="n" type="text" placeholder="Your name">
+          <label for="e">Email</label>
+          <input id="e" type="email" placeholder="you@example.com">
+          <label for="w">What do you need?</label>
+          <select id="w">
+            <option>Seasonal slip</option>
+            <option>Mooring</option>
+            <option>High &amp; dry / dry-land</option>
+            <option>Hauling or winter storage</option>
+            <option>Service shop — engine work</option>
+            <option>Question about the kitchen or the deck</option>
+          </select>
+          <label for="b">Boat — length, draft, engine</label>
+          <input id="b" type="text" placeholder="e.g. 26ft, 2.5ft draft, Volvo Penta 5.7">
+          <label for="m">Anything else</label>
+          <textarea id="m" placeholder="Dates you need, what the engine is doing, etc."></textarea>
+          <button class="btn btn-p">Send it to the marina</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <b>Ralph's Fishing Station &amp; Marina</b><br>
+      250 Harbor Beach Road, Mount Sinai, NY 11766
+    </div>
+    <div>
+      <b>631-473-6655</b> · VHF Channel 67<br>
+      Serving Mount Sinai Harbor since 1961
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

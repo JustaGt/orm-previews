@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S &amp; S Tractor Parts — Crawler Parts &amp; Track Press Service Since 1980 | Marcellus, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--steel:#2b2f33;--iron:#43484d;--yellow:#f2b705;--paper:#f4f4f2;--rust:#b3541e;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Barlow',sans-serif;color:var(--steel);background:var(--paper);line-height:1.6;}
+  h1,h2,h3,.btn,.stripe{font-family:'Barlow Condensed',sans-serif;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px;}
+  .hazard{background:repeating-linear-gradient(45deg,var(--yellow),var(--yellow) 14px,var(--steel) 14px,var(--steel) 28px);height:8px;}
+  header{background:var(--steel);color:#fff;padding:14px 0;position:sticky;top:0;z-index:60;}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;}
+  .brand{font-family:'Barlow Condensed';font-weight:800;font-size:1.5rem;letter-spacing:.04em;}
+  .brand b{color:var(--yellow);}
+  .hdr-phone{background:var(--yellow);color:var(--steel);font-weight:800;font-family:'Barlow Condensed';font-size:1.15rem;padding:9px 20px;text-decoration:none;border-radius:3px;}
+  .hero{background:linear-gradient(120deg,var(--steel) 0%,var(--iron) 100%);color:#fff;padding:76px 0 66px;}
+  .kicker{color:var(--yellow);font-family:'Barlow Condensed';font-weight:800;letter-spacing:.18em;text-transform:uppercase;font-size:.95rem;}
+  .hero h1{font-size:clamp(2.2rem,5.5vw,3.9rem);font-weight:800;line-height:1.05;text-transform:uppercase;max-width:20ch;margin:14px 0 18px;}
+  .hero p{max-width:60ch;font-size:1.15rem;color:#d4d6d8;margin-bottom:30px;}
+  .btn{display:inline-block;background:var(--yellow);color:var(--steel);font-weight:800;font-size:1.2rem;letter-spacing:.03em;text-transform:uppercase;padding:15px 32px;text-decoration:none;border-radius:3px;}
+  .btn.dark{background:transparent;color:#fff;border:2px solid var(--yellow);margin-left:12px;}
+  .stripe{background:var(--yellow);color:var(--steel);font-weight:800;text-transform:uppercase;letter-spacing:.08em;text-align:center;padding:13px 16px;font-size:1.05rem;}
+  section{padding:64px 0;}
+  h2{font-family:'Barlow Condensed';font-size:clamp(1.7rem,3.6vw,2.6rem);font-weight:800;text-transform:uppercase;margin-bottom:12px;}
+  .lead{color:#565b60;max-width:64ch;margin-bottom:36px;font-size:1.05rem;}
+  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;}
+  .svc{background:#fff;border:1px solid #dcdcd8;border-top:5px solid var(--yellow);padding:26px;}
+  .svc h3{font-size:1.35rem;text-transform:uppercase;margin-bottom:8px;}
+  .svc p{font-size:.98rem;color:#4b5054;}
+  .svc .badge{display:inline-block;background:var(--rust);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.1em;padding:3px 9px;border-radius:2px;margin-bottom:10px;text-transform:uppercase;font-family:'Barlow';}
+  .downtime{background:var(--rust);color:#fff;}
+  .downtime h2{color:#fff;}
+  .downtime .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;}
+  .downtime .cell{background:rgba(0,0,0,.16);padding:24px;border-radius:4px;font-size:1rem;}
+  .downtime .cell strong{font-family:'Barlow Condensed';font-size:1.3rem;text-transform:uppercase;display:block;margin-bottom:6px;color:#ffd98a;}
+  .request{background:var(--steel);color:#fff;}
+  .request .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:start;}
+  .request h2{color:var(--yellow);}
+  .request p{color:#c9ccce;}
+  form{display:grid;gap:12px;background:#fff;padding:28px;border-radius:6px;border-top:6px solid var(--yellow);}
+  input,select,textarea{padding:13px;border:1px solid #c6c8c4;border-radius:4px;font-family:inherit;font-size:1rem;width:100%;}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  button{background:var(--steel);color:var(--yellow);border:none;padding:16px;font-family:'Barlow Condensed';font-weight:800;font-size:1.25rem;text-transform:uppercase;letter-spacing:.05em;border-radius:4px;cursor:pointer;}
+  .since{background:#fff;}
+  .since .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;}
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .stat{background:var(--paper);border:1px solid #dcdcd8;padding:22px;text-align:center;}
+  .stat strong{font-family:'Barlow Condensed';font-size:2.3rem;font-weight:800;color:var(--rust);display:block;line-height:1;}
+  .stat span{font-size:.88rem;color:#565b60;text-transform:uppercase;letter-spacing:.06em;}
+  .industries{text-align:center;}
+  .industries .tags{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px;}
+  .industries .tags span{background:var(--steel);color:#fff;padding:8px 18px;font-family:'Barlow Condensed';font-weight:600;letter-spacing:.05em;text-transform:uppercase;font-size:.95rem;border-radius:2px;}
+  .contact{background:var(--iron);color:#fff;}
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  .contact h2{color:var(--yellow);}
+  .contact a.big{font-family:'Barlow Condensed';font-weight:800;font-size:2.1rem;color:#fff;text-decoration:none;display:block;margin:8px 0 20px;}
+  .hourbox{background:rgba(0,0,0,.22);padding:24px;border-radius:4px;}
+  .hourbox td{padding:8px 6px;border-bottom:1px solid #565b60;font-size:.98rem;}
+  .hourbox td:last-child{text-align:right;font-weight:600;color:var(--yellow);}
+  .note{font-size:.8rem;color:#9aa0a5;font-style:italic;}
+  footer{background:var(--steel);color:#8b9095;text-align:center;padding:26px 0;font-size:.88rem;}
+  @media(max-width:800px){.request .wrap,.since .wrap,.contact .wrap{grid-template-columns:1fr;}.btn.dark{margin-left:0;margin-top:10px;}.two{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<div class="hazard"></div>
+<header>
+  <div class="wrap">
+    <div class="brand">S &amp; S <b>TRACTOR PARTS</b> INC.</div>
+    <a class="hdr-phone" href="tel:3156731075">(315) 673-1075</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="kicker">Marcellus, NY · Est. 1980 · New &amp; Used Crawler Parts</span>
+    <h1>A dozer that won't move doesn't earn.</h1>
+    <p>S &amp; S Tractor Parts has stocked new and used crawler machine parts, pressed tracks, and rebuilt heavy iron on Station Lane for 46 years. When the undercarriage lets go, call the counter that speaks pins, bushings and rollers.</p>
+    <a class="btn" href="#parts">Send a Parts Request</a>
+    <a class="btn dark" href="tel:3156731075">Call the Counter</a>
+  </div>
+</section>
+
+<div class="stripe">Track press service · New &amp; used crawler parts · Rebuild &amp; repair welding · Equipment repair</div>
+
+<section>
+  <div class="wrap">
+    <h2>What comes through the shop</h2>
+    <p class="lead">Four listed specialties, one address — a 20-person operation that's been taking heavy equipment apart and putting it back to work since 1980.</p>
+    <div class="services">
+      <div class="svc"><span class="badge">Rare specialty</span><h3>Track Press Service</h3><p>Pin-and-bushing work and track pressing done locally — the service that otherwise means a dealer appointment and dealer lead times.</p></div>
+      <div class="svc"><h3>New &amp; Used Crawler Parts</h3><p>Undercarriage and crawler machine parts, new or serviceable used — a second option when a new-only dealer quote doesn't pencil out.</p></div>
+      <div class="svc"><h3>Rebuild &amp; Repair Welding</h3><p>Build-up and repair welding on worn components — rebuild what's rebuildable instead of replacing everything.</p></div>
+      <div class="svc"><h3>Construction Equipment Repair</h3><p>Repair work on the machines themselves, backed by the parts shelf on the same property.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="downtime">
+  <div class="wrap">
+    <h2>Downtime math is simple</h2>
+    <div class="row">
+      <div class="cell"><strong>The job waits</strong>Every day a crawler sits with a thrown track, the schedule slips and the crew stands around a dead machine.</div>
+      <div class="cell"><strong>Dealers quote new-only</strong>One price, one lead time, take it or leave it. A used or rebuilt option can cut the number dramatically — if you know who stocks it.</div>
+      <div class="cell"><strong>One call checks both</strong>S &amp; S quotes new and used against the same failure. Send the make, model and serial — get an answer, not a runaround.</div>
+    </div>
+  </div>
+</section>
+
+<section class="request" id="parts">
+  <div class="wrap">
+    <div>
+      <h2>Send your serial number</h2>
+      <p>Type it from the cab. Make, model, serial, and what let go — the counter comes back with availability and price. Faster than calling around blind, and it works after hours.</p>
+      <p style="margin-top:14px;" class="note">Form is the concept's conversion engine — wired to email/CRM in build.</p>
+    </div>
+    <form>
+      <div class="two">
+        <input type="text" placeholder="Name">
+        <input type="tel" placeholder="Phone">
+      </div>
+      <div class="two">
+        <input type="text" placeholder="Machine make (Cat, Deere, Case…)">
+        <input type="text" placeholder="Model &amp; serial no.">
+      </div>
+      <select><option>What do you need?</option><option>Undercarriage / track parts</option><option>Track press service</option><option>Rebuild / repair welding</option><option>Equipment repair</option><option>Other part</option></select>
+      <textarea rows="3" placeholder="Describe the part or the failure"></textarea>
+      <button type="button">Request Availability &amp; Price</button>
+    </form>
+  </div>
+</section>
+
+<section class="since">
+  <div class="wrap">
+    <div>
+      <h2>Forty-six years on Station Lane</h2>
+      <p class="lead" style="margin-bottom:0;">S &amp; S Tractor Parts, Inc. has worked the same specialty from the same Marcellus address since 1980 — not a broker with a phone line, but a shop with inventory, a press, welders and a counter you can walk up to. Saturday morning hours, because iron doesn't break on a weekday schedule.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><strong>1980</strong><span>Established</span></div>
+      <div class="stat"><strong>46</strong><span>Years in the specialty</span></div>
+      <div class="stat"><strong>~20</strong><span>People on the property*</span></div>
+      <div class="stat"><strong>Sat</strong><span>Morning hours 9–12*</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="industries">
+  <div class="wrap">
+    <h2>Who calls this counter</h2>
+    <div class="tags">
+      <span>Excavation contractors</span><span>Site work &amp; paving</span><span>Farms</span><span>Loggers</span><span>Municipal highway depts</span><span>Equipment rebuilders</span>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <div>
+      <h2>Talk to the counter</h2>
+      <a class="big" href="tel:3156731075">(315) 673-1075</a>
+      2500 Station Lane, Marcellus, NY 13108<br><br>
+      <span class="note">Map embed here in build. *Hours &amp; headcount are directory-listed — confirm with shop before publish.</span>
+    </div>
+    <div class="hourbox">
+      <table style="width:100%;border-collapse:collapse;">
+        <tr><td>Monday – Friday</td><td>8:00 – 5:00</td></tr>
+        <tr><td>Saturday</td><td>9:00 – 12:00</td></tr>
+        <tr><td>Sunday</td><td>Closed</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">S &amp; S Tractor Parts, Inc. · 2500 Station Ln, Marcellus, NY 13108 · (315) 673-1075 · Since 1980</div>
+</footer>
+<div class="hazard"></div>
+
+</body>
+</html>

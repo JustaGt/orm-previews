@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>J.S. Hight &amp; Sons Fine Wines &amp; Spirits · 58 Albany St, Cazenovia, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--wine:#5e1a26;--deepwine:#43121b;--gold:#c9a45c;--cream:#f9f4ea;--blush:#f0e6d6;--ink:#312326;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Karla',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px;}
+/* HERO */
+header{background:var(--wine);color:var(--cream);text-align:center;padding:66px 0 58px;position:relative;}
+header::before,header::after{content:"";position:absolute;left:0;right:0;height:6px;background:repeating-linear-gradient(90deg,var(--gold) 0 18px,transparent 18px 36px);}
+header::before{top:10px;}header::after{bottom:10px;}
+.est{font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);}
+header h1{font-size:clamp(2.2rem,5.4vw,3.6rem);line-height:1.1;margin:14px auto 12px;max-width:16ch;}
+header .sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:#ecdcc3;}
+.hours-strip{margin-top:26px;display:inline-block;border:1px solid var(--gold);padding:10px 26px;border-radius:30px;font-size:.92rem;letter-spacing:.06em;}
+/* PROMISE */
+.promise{padding:60px 0;text-align:center;}
+.promise h2{font-size:2rem;max-width:26ch;margin:0 auto 14px;}
+.promise p{max-width:60ch;margin:0 auto;font-size:1.05rem;}
+.rule{width:70px;height:3px;background:var(--gold);margin:22px auto 0;}
+/* SHELVES */
+.shelves{background:var(--blush);padding:60px 0;}
+.kick{font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:#8f6a34;font-weight:700;}
+.shelves h2,.judy h2,.week h2,.find h2{font-size:1.9rem;margin:8px 0 24px;}
+.shelfgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.shelf{background:#fff;border-radius:8px;padding:30px;border-top:4px solid var(--wine);}
+.shelf h3{font-size:1.35rem;color:var(--wine);margin-bottom:10px;}
+.shelf p{font-size:.98rem;}
+/* JUDY */
+.judy{padding:62px 0;}
+.judygrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center;}
+.quotecard{background:var(--wine);color:var(--cream);border-radius:10px;padding:34px;position:relative;}
+.quotecard::before{content:"“";font-family:'Cormorant Garamond',serif;font-size:5rem;color:var(--gold);position:absolute;top:-6px;left:18px;}
+.quotecard p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.25rem;line-height:1.5;margin-top:14px;}
+.quotecard small{display:block;margin-top:14px;color:#d9c294;font-size:.85rem;letter-spacing:.06em;}
+.judy ul{list-style:none;margin-top:16px;}
+.judy li{padding:9px 0 9px 30px;position:relative;font-size:1rem;}
+.judy li::before{content:"❦";position:absolute;left:0;color:var(--wine);}
+/* WEEK */
+.week{background:var(--deepwine);color:var(--cream);padding:60px 0;}
+.week .kick{color:var(--gold);}
+.arrivals{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:8px;}
+.arr{border:1px solid #7a3a48;border-radius:8px;padding:22px;}
+.arr h3{color:var(--gold);font-size:1.15rem;margin-bottom:6px;}
+.arr p{font-size:.93rem;color:#ecdcc3;}
+.note{margin-top:18px;font-size:.85rem;color:#cfa3ad;font-style:italic;}
+/* FIND */
+.find{padding:62px 0;}
+.findgrid{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+.findcard{background:#fff;border:1px solid #e5d8c2;border-radius:8px;padding:30px;}
+.findcard h3{font-size:1.25rem;color:var(--wine);margin-bottom:12px;}
+.findcard table{width:100%;border-collapse:collapse;font-size:.97rem;}
+.findcard td{padding:7px 0;border-bottom:1px dashed #e0d2ba;}
+.findcard td:last-child{text-align:right;font-weight:500;}
+.tel{display:inline-block;margin-top:16px;background:var(--wine);color:var(--cream);padding:12px 26px;border-radius:5px;text-decoration:none;font-weight:700;}
+footer{background:#2e0d14;color:#b58f96;text-align:center;padding:24px 0;font-size:.87rem;}
+@media(max-width:740px){.shelfgrid,.judygrid,.findgrid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header>
+  <span class="est">58 Albany Street · In the heart of the village</span>
+  <h1>J.S. Hight &amp; Sons</h1>
+  <p class="sub">Fine wines &amp; spirits, Cazenovia, New York</p>
+  <div class="hours-strip">Tue – Sat · 11 AM – 7 PM · (315) 815-4389</div>
+</header>
+
+<section class="promise">
+  <div class="wrap">
+    <h2>Extraordinary wines at everyday prices.</h2>
+    <p>That's the whole idea. A village shop where the $17 bottle has been tasted, vetted, and picked over hundreds of others — so you don't have to gamble at the grocery store or drive to Syracuse for something interesting.</p>
+    <div class="rule"></div>
+  </div>
+</section>
+
+<section class="shelves">
+  <div class="wrap">
+    <span class="kick">On the shelves</span>
+    <h2>Two things, chosen carefully.</h2>
+    <div class="shelfgrid">
+      <div class="shelf">
+        <h3>Wines that punch above their price</h3>
+        <p>Old-world standbys, small producers, and the bottle for tonight's dinner on the lake. Tell us the menu or the mood — walking out with the right one takes five minutes.</p>
+      </div>
+      <div class="shelf">
+        <h3>Small-batch liquors &amp; spirits</h3>
+        <p>The specialty of the house: limited-run bourbons, craft gins, and spirits you won't see in a chain store — many from New York distillers. If something rare comes through CNY, it tends to land here first.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="judy">
+  <div class="wrap judygrid">
+    <div class="quotecard">
+      <p>Great spot to get some unique high quality wines without spending a fortune. The owner has definitely done some homework.</p>
+      <small>YELP REVIEW · shop rated 100% recommended on Facebook (14 reviews)</small>
+    </div>
+    <div>
+      <span class="kick">Ask Judy</span>
+      <h2>Walk in with an occasion. Walk out with the bottle.</h2>
+      <ul>
+        <li>Dinner-party host gift? Say the cuisine, get a match.</li>
+        <li>Wedding or shower cases — priced by the case, chosen by hand.</li>
+        <li>A birthday bourbon for someone who "has everything."</li>
+        <li>Call ahead and we'll set your pick aside at the counter.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="week">
+  <div class="wrap">
+    <span class="kick">This week in the shop</span>
+    <h2>New arrivals, small batches, and what Judy just opened.</h2>
+    <div class="arrivals">
+      <div class="arr"><h3>Just landed</h3><p>[Placeholder — this week's new arrivals go here. Updated by the shop.]</p></div>
+      <div class="arr"><h3>Small-batch spotlight</h3><p>[Placeholder — featured NY distiller or limited-run spirit.]</p></div>
+      <div class="arr"><h3>Under $20 and worth it</h3><p>[Placeholder — Judy's current everyday-price favorite.]</p></div>
+    </div>
+    <p class="note">Sample section — items shown are placeholders until the shop supplies current picks.</p>
+  </div>
+</section>
+
+<section class="find">
+  <div class="wrap">
+    <span class="kick">Find us</span>
+    <h2>On Albany Street, where the village walks.</h2>
+    <div class="findgrid">
+      <div class="findcard">
+        <h3>Hours</h3>
+        <table>
+          <tr><td>Tuesday – Saturday</td><td>11 AM – 7 PM</td></tr>
+          <tr><td>Sunday &amp; Monday</td><td>Closed</td></tr>
+        </table>
+        <a class="tel" href="tel:13158154389">Call (315) 815-4389</a>
+      </div>
+      <div class="findcard">
+        <h3>58 Albany Street, Cazenovia</h3>
+        <p style="font-size:.97rem;">A few doors from the shops and restaurants of the village center — an easy stop during Dining Week, the Christmas Walk, or any Saturday on the lake. Street parking on Albany St.</p>
+        <p style="font-size:.9rem;margin-top:12px;color:#7c6a52;">Woman-owned · Independent · Cazenovia Chamber member</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>J.S. Hight &amp; Sons Fine Wines &amp; Spirits · 58 Albany St, Cazenovia, NY 13035 · (315) 815-4389 · Tue–Sat 11–7 · Please drink responsibly.</footer>
+
+</body>
+</html>

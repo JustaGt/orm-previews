@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunset Cottages — Beachfront Cottages on Oneida Lake Since 1934 · Sylvan Beach, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --dusk:#c75b39; --rose:#e08a5c; --gold:#f2b95c; --lake:#1d3a52; --lake-d:#132839;
+  --cream:#faf4ea; --trim:#fdfbf6; --ink:#2a2620; --warmgray:#6d6155; --line:#e8ddcd;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Karla',sans-serif;color:var(--ink);background:var(--cream);line-height:1.7}
+h1,h2,h3{font-family:'Fraunces',serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+/* hero */
+header{background:linear-gradient(180deg,var(--lake) 0%,#41546a 34%,var(--dusk) 72%,var(--gold) 105%);color:#fff;padding:58px 0 0;text-align:center;position:relative}
+.brand{font-family:'Fraunces',serif;letter-spacing:.24em;text-transform:uppercase;font-size:.95rem;color:var(--gold)}
+header h1{font-size:clamp(2.1rem,5.4vw,3.6rem);font-weight:600;margin:20px auto 0;max-width:760px;line-height:1.12}
+header .sub{max-width:560px;margin:20px auto 34px;font-size:1.1rem;color:#fbeadf}
+.cta{display:inline-block;background:var(--trim);color:var(--dusk);font-weight:700;padding:15px 32px;border-radius:40px;text-decoration:none;font-size:1rem;letter-spacing:.02em}
+.since{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;margin:40px auto 0;padding:18px 22px 56px;font-size:.9rem;color:#fdeede}
+.since b{display:block;font-family:'Fraunces',serif;font-size:1.35rem;color:var(--gold)}
+.wave{display:block;width:100%;height:54px;background:var(--cream);clip-path:ellipse(58% 100% at 50% 100%)}
+/* intro */
+section{padding:58px 0}
+.kicker{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--dusk);margin-bottom:10px}
+h2.title{font-size:clamp(1.5rem,3.4vw,2.3rem);color:var(--lake);font-weight:600;margin-bottom:14px}
+.lead{color:var(--warmgray);max-width:620px}
+.intro .split{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+@media(max-width:780px){.intro .split{grid-template-columns:1fr}}
+.postcard{background:var(--trim);border:1px solid var(--line);border-radius:6px;padding:30px 28px;box-shadow:4px 4px 0 var(--line);font-size:.98rem;color:var(--warmgray)}
+.postcard .stamp{float:right;border:2px dashed var(--rose);color:var(--dusk);font-family:'Fraunces',serif;font-size:.75rem;padding:8px 10px;border-radius:4px;transform:rotate(4deg);margin-left:12px;text-align:center}
+.postcard p+p{margin-top:12px}
+/* cottages */
+.cottages{background:var(--lake);color:#e9eef3}
+.cottages h2.title{color:#fff}
+.cottages .lead{color:#c2cfda}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:32px}
+.cott{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:24px 22px}
+.cott .bd{font-family:'Fraunces',serif;font-size:1.6rem;color:var(--gold)}
+.cott h3{font-size:1rem;color:#fff;margin:4px 0 10px}
+.cott p{font-size:.9rem;color:#c2cfda}
+.inclblock{margin-top:30px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:22px 24px;font-size:.92rem;color:#d7e0e8}
+.inclblock b{color:var(--gold)}
+/* walk */
+.walk .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:30px}
+.step{background:var(--trim);border:1px solid var(--line);border-radius:8px;padding:22px;position:relative}
+.step .min{position:absolute;top:-12px;right:14px;background:var(--dusk);color:#fff;font-weight:700;font-size:.72rem;border-radius:20px;padding:4px 11px;letter-spacing:.05em}
+.step h3{color:var(--lake);font-size:1.02rem;margin-bottom:6px}
+.step p{font-size:.9rem;color:var(--warmgray)}
+/* sunset strip */
+.sunset{background:linear-gradient(180deg,var(--dusk),var(--rose) 60%,var(--gold));color:#fff;text-align:center;padding:64px 0}
+.sunset h2{font-family:'Fraunces',serif;font-size:clamp(1.5rem,3.6vw,2.4rem);font-weight:600;max-width:680px;margin:0 auto}
+.sunset p{max-width:560px;margin:16px auto 0;color:#fdf1e3}
+/* heritage */
+.heritage .timeline{border-left:3px solid var(--rose);margin:30px 0 0 8px;padding-left:26px}
+.tl{margin-bottom:24px;position:relative}
+.tl:before{content:"";position:absolute;left:-33px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--dusk)}
+.tl b{font-family:'Fraunces',serif;color:var(--lake);font-size:1.05rem;display:block}
+.tl p{font-size:.94rem;color:var(--warmgray)}
+/* contact */
+.contact{background:var(--lake-d);color:#fff}
+.contact h2.title{color:#fff}
+.contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+@media(max-width:780px){.contact .grid{grid-template-columns:1fr}}
+.contact form{background:var(--trim);border-radius:10px;padding:26px;color:var(--ink)}
+.contact label{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--warmgray);display:block;margin:12px 0 4px}
+.contact input,.contact select,.contact textarea{width:100%;padding:11px;border:1px solid var(--line);border-radius:6px;font-family:inherit;font-size:.95rem;background:var(--cream)}
+.contact button{margin-top:18px;width:100%;background:var(--dusk);border:none;color:#fff;font-weight:700;font-size:1rem;padding:14px;border-radius:40px;cursor:pointer}
+.contact .info p{margin-bottom:14px;color:#d5dde5}
+.contact .info a{color:var(--gold);font-weight:700;text-decoration:none}
+.contact .note{font-size:.84rem;color:#aeb9c4;margin-top:14px}
+footer{background:#0d1b28;color:#7f8ea0;font-size:.84rem;padding:22px 0;text-align:center}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">Sunset Cottages · Sylvan Beach</div>
+    <h1>The same beach. The same sunset. Your family's cottage since 1934.</h1>
+    <p class="sub">Beachfront cottages right on the sand of Oneida Lake — a short walk from the midway, the canal, and Eddie's — kept by three generations of the Stewart family.</p>
+    <a class="cta" href="#stay">Request Your Week</a>
+    <div class="since">
+      <div><b>1934</b>first summer</div>
+      <div><b>1–4 BR</b>cottage sizes</div>
+      <div><b>On the sand</b>beachfront, west-facing</div>
+    </div>
+  </div>
+  <span class="wave"></span>
+</header>
+
+<section class="intro"><div class="wrap">
+  <div class="split">
+    <div>
+      <div class="kicker">Welcome Back</div>
+      <h2 class="title">Some families have rented the same week for decades. There's a reason.</h2>
+      <p class="lead">Sylvan Beach is the kind of place people return to — the sandy public beach, the old-fashioned amusement-park midway, dinner at Eddie's. Sunset Cottages puts you at the center of all of it, in a fully furnished cottage with the lake outside your door and the best sunset in Central New York painted across it every night.</p>
+    </div>
+    <div class="postcard">
+      <div class="stamp">SYLVAN<br>BEACH<br>N.Y.</div>
+      <p><b>“Famed for friendliness.”</b> That's how New York State's own tourism listing describes us — and it's the family rule that's held since Eddie and Fifi Stewart's first summer here.</p>
+      <p>Weekly and monthly stays, with a three-night minimum. Grills and picnic tables outside, heat and A/C inside, and the beach twenty steps away.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="cottages"><div class="wrap">
+  <div class="kicker" style="color:var(--gold)">The Cottages</div>
+  <h2 class="title">Pick the size that fits your crowd.</h2>
+  <p class="lead">Every cottage is fully furnished with a kitchen and bath, cable TV, free Wi-Fi, and heat and air conditioning.</p>
+  <div class="cgrid">
+    <div class="cott"><div class="bd">1 BR</div><h3>For Two</h3><p>A beach weekend for a couple — mornings on the sand, evenings on the midway.</p></div>
+    <div class="cott"><div class="bd">2 BR</div><h3>Small Family</h3><p>Room for the kids, steps from the water, picnic table out front for corn-on-the-cob nights.</p></div>
+    <div class="cott"><div class="bd">3 BR</div><h3>The Full Crew</h3><p>Grandparents welcome. Enough beds that nobody draws the couch.</p></div>
+    <div class="cott"><div class="bd">4 BR</div><h3>The Reunion</h3><p>The whole family under one roof for the week — the way Sylvan Beach summers used to work, and still do.</p></div>
+  </div>
+  <div class="inclblock"><b>Every stay includes:</b> fully equipped kitchen · cable TV · free Wi-Fi · heat &amp; A/C · barbecue grills · picnic tables · free parking for one car · weekly &amp; monthly rentals · 3-night minimum. <i>[Unit count and per-cottage layouts: placeholder — confirm final list with the Stewart family before publishing.]</i></div>
+</div></section>
+
+<section class="walk"><div class="wrap">
+  <div class="kicker">Out the Screen Door</div>
+  <h2 class="title">Park the car Friday. You won't need it again until Sunday.</h2>
+  <div class="steps">
+    <div class="step"><span class="min">0 MIN</span><h3>The Beach</h3><p>You're on it. The sandy public beach of Oneida Lake runs right past the cottages.</p></div>
+    <div class="step"><span class="min">STROLL</span><h3>The Midway</h3><p>Sylvan Beach's classic amusement-park midway — rides, games, fried dough — an easy walk up the shore.</p></div>
+    <div class="step"><span class="min">STROLL</span><h3>The Canal</h3><p>Watch the boats come through where the Erie Canal meets the lake.</p></div>
+    <div class="step"><span class="min">WALK</span><h3>Dinner at Eddie's</h3><p>The other Stewart family institution, serving Sylvan Beach since the same summer of 1934.</p></div>
+  </div>
+</div></section>
+
+<div class="sunset">
+  <div class="wrap">
+    <h2>The lake faces west. Every clear evening ends in a show.</h2>
+    <p>Oneida Lake's east shore means the sun goes down over open water, right in front of your cottage. Bring a chair down to the sand — it's the only reservation you won't need.</p>
+  </div>
+</div>
+
+<section class="heritage"><div class="wrap">
+  <div class="kicker">Three Generations</div>
+  <h2 class="title">A Sylvan Beach story that starts with a hot dog stand.</h2>
+  <div class="timeline">
+    <div class="tl"><b>1934</b><p>Eddie Stewart Sr. and his wife Fifi come to Sylvan Beach for the sunshine and the water — opening what becomes Eddie's Restaurant, and beginning the family's nine decades on this shore.</p></div>
+    <div class="tl"><b>The cottages</b><p>The family restores historic Sylvan Beach cottages and adds newly built units, so the families who grew up here can keep coming back — now as Sunset Cottages.</p></div>
+    <div class="tl"><b>Today</b><p>Three generations later, the Stewarts still keep the cottages the way regulars remember them — and first-timers become regulars.</p></div>
+  </div>
+</div></section>
+
+<section class="contact" id="stay"><div class="wrap">
+  <div class="kicker" style="color:var(--gold)">Plan Your Stay</div>
+  <h2 class="title">Ask about your week before it's spoken for.</h2>
+  <div class="grid">
+    <form onsubmit="return false">
+      <label>Your name</label><input type="text" placeholder="First and last name">
+      <label>Phone or email</label><input type="text" placeholder="Best way to reach you">
+      <label>Cottage size</label>
+      <select><option>1 bedroom</option><option>2 bedroom</option><option>3 bedroom</option><option>4 bedroom</option><option>Not sure yet</option></select>
+      <label>Dates you're hoping for</label><input type="text" placeholder="e.g., second week of August">
+      <label>Notes</label><textarea rows="3" placeholder="Returning guest? Tell us which cottage you had."></textarea>
+      <button type="submit">Send Availability Request</button>
+    </form>
+    <div class="info">
+      <p><b>Call the office:</b> <a href="tel:13157624093">(315) 762-4093</a> — weekly and monthly stays, three-night minimum.</p>
+      <p><b>Where:</b> Park Avenue, Sylvan Beach, NY 13157 — right on the beach. <i>[Street number placeholder — listings show both 611 and 801 Park Ave; confirm before publishing.]</i></p>
+      <p class="note">Summer weeks — especially around Canal Fest and Pirates Weekend — book far ahead. Returning families often reserve next year's week on the way out.</p>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Sunset Cottages · Park Ave, Sylvan Beach, NY 13157 · (315) 762-4093 · Website preview by Onyx Rise Media</div></footer>
+
+</body>
+</html>

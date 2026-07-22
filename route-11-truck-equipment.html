@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Route 11 Truck &amp; Equipment — 24/7 Heavy-Duty Towing, Truck &amp; Trailer Repair | Canton, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--steel:#1b2026;--panel:#242b33;--amber:#f5a623;--amber-dk:#c97f00;--bone:#f2efe9;--grey:#9aa4ae;--red:#d64b2f}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Barlow',sans-serif;background:var(--steel);color:var(--bone);line-height:1.6}
+h1,h2,h3{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.03em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+/* emergency band */
+.eband{background:var(--amber);color:#1b1509;padding:10px 0;position:sticky;top:0;z-index:50}
+.eband .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px}
+.eband b{font-family:'Barlow Condensed';font-size:1.05rem;text-transform:uppercase;letter-spacing:.05em}
+.eband a{background:#1b1509;color:var(--amber);text-decoration:none;font-weight:700;padding:6px 16px;border-radius:4px;font-size:1.05rem}
+/* hero */
+header{background:linear-gradient(160deg,#12161b 0%,#1b2026 55%,#26313c 100%);padding:64px 0 56px;border-bottom:4px solid var(--amber)}
+.kicker{color:var(--amber);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem}
+h1{font-size:clamp(2.3rem,6vw,3.9rem);line-height:1.03;margin:12px 0 16px}
+h1 span{color:var(--amber)}
+.sub{color:var(--grey);max-width:640px;font-size:1.08rem}
+.cta-row{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;border-radius:5px;text-decoration:none;font-weight:700;font-family:'Barlow Condensed';font-size:1.15rem;text-transform:uppercase;letter-spacing:.05em}
+.btn-a{background:var(--amber);color:#1b1509}
+.btn-o{border:2px solid var(--grey);color:var(--bone)}
+.strip{display:flex;gap:22px;margin-top:36px;flex-wrap:wrap}
+.strip div{border-left:3px solid var(--amber);padding-left:12px}
+.strip b{font-family:'Barlow Condensed';font-size:1.5rem;display:block}
+.strip span{color:var(--grey);font-size:.85rem;text-transform:uppercase;letter-spacing:.06em}
+/* sections */
+section{padding:58px 0}
+.sect-k{color:var(--amber);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem}
+h2{font-size:clamp(1.7rem,4vw,2.5rem);margin:8px 0 22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{background:var(--panel);border-radius:8px;padding:22px;border-top:3px solid var(--amber-dk)}
+.card h3{font-size:1.25rem;margin-bottom:8px;color:var(--amber)}
+.card p{color:var(--grey);font-size:.95rem}
+.card ul{list-style:none;margin-top:8px}
+.card li{color:var(--bone);font-size:.92rem;padding:3px 0 3px 18px;position:relative}
+.card li:before{content:"▸";position:absolute;left:0;color:var(--amber)}
+/* towing */
+.tow{background:#12161b}
+.tow-flex{display:flex;gap:32px;flex-wrap:wrap;align-items:center}
+.tow-flex>div{flex:1 1 320px}
+.bignum{font-family:'Barlow Condensed';font-size:clamp(2rem,5vw,3rem);color:var(--amber);font-weight:800}
+.tow p{color:var(--grey)}
+.towns{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.towns span{background:var(--panel);padding:5px 12px;border-radius:3px;font-size:.85rem;color:var(--bone)}
+/* story */
+.story{background:var(--panel)}
+.tl{border-left:2px solid var(--amber-dk);margin-top:10px}
+.tl div{padding:10px 0 10px 20px;position:relative}
+.tl div:before{content:"";position:absolute;left:-6px;top:18px;width:10px;height:10px;background:var(--amber);border-radius:50%}
+.tl b{color:var(--amber)}
+.tl p{color:var(--grey);font-size:.95rem}
+/* team */
+.team .card{border-top-color:var(--amber)}
+.team small{color:var(--grey);display:block;margin-bottom:4px;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem}
+.team a{color:var(--amber);text-decoration:none;font-size:.92rem}
+/* form */
+.contact{background:#12161b;border-top:4px solid var(--amber)}
+.contact .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px}
+form label{display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--grey);margin:14px 0 4px}
+form input,form select,form textarea{width:100%;padding:11px;background:var(--panel);border:1px solid #39434e;border-radius:4px;color:var(--bone);font-family:'Barlow'}
+form button{margin-top:18px;width:100%;padding:14px;background:var(--amber);border:none;border-radius:5px;font-weight:700;font-family:'Barlow Condensed';font-size:1.15rem;text-transform:uppercase;letter-spacing:.05em;color:#1b1509;cursor:pointer}
+.info p{margin-bottom:10px;color:var(--grey)}
+.info b{color:var(--bone)}
+footer{padding:26px 0;border-top:1px solid #2d353e;color:var(--grey);font-size:.85rem;text-align:center}
+</style>
+</head>
+<body>
+
+<div class="eband"><div class="wrap">
+<b>Truck down? 24/7 heavy wrecker &amp; recovery</b>
+<a href="tel:13158161944">Call (315) 816-1944</a>
+</div></div>
+
+<header><div class="wrap">
+<p class="kicker">Canton, NY · On the US-11 spine since 1995</p>
+<h1>The North Country's <span>heavy-duty</span> shop, parts counter &amp; wrecker line</h1>
+<p class="sub">Truck &amp; trailer repair, diesel and gas engines, hydraulics, custom body fabrication, fleet maintenance and 24/7 heavy towing — one yard at 6085 US Highway-11, halfway between everywhere on the corridor.</p>
+<div class="cta-row">
+<a class="btn btn-a" href="#quote">Request Fleet / Repair Quote</a>
+<a class="btn btn-o" href="tel:13153790571">Shop Line: (315) 379-0571</a>
+</div>
+<div class="strip">
+<div><b>1995</b><span>founded May 8</span></div>
+<div><b>24/7</b><span>wrecker dispatch</span></div>
+<div><b>2004</b><span>Small Business Hall of Fame</span></div>
+<div><b>NYS + DOT</b><span>inspections</span></div>
+</div>
+</div></header>
+
+<section id="services"><div class="wrap">
+<p class="sect-k">Sales &amp; Service</p>
+<h2>Everything a working truck needs, under one roof</h2>
+<div class="grid">
+<div class="card"><h3>Truck &amp; Trailer Repair</h3><p>Full-service shop for commercial vehicles of every weight class.</p><ul><li>Gas &amp; diesel engine repair</li><li>Hydraulics, pumps &amp; PTOs</li><li>Custom body fabrication</li></ul></div>
+<div class="card"><h3>On-Site &amp; Mobile</h3><p>We come to the breakdown so the load keeps its schedule.</p><ul><li>On-site repairs</li><li>Roadside assistance</li><li>Tire mount &amp; balance</li></ul></div>
+<div class="card"><h3>Fleet Programs</h3><p>Scheduled maintenance that cuts downtime instead of budgets.</p><ul><li>Fleet service &amp; maintenance</li><li>Total wheel alignment — truck &amp; trailer</li></ul></div>
+<div class="card"><h3>Inspections &amp; Compliance</h3><p>Stay legal on New York roads without the runaround.</p><ul><li>Heavy NYS inspection</li><li>DOT inspections</li></ul></div>
+<div class="card"><h3>Equipment Installation</h3><p>Liftgates, plows, spreaders, tarping systems — installed right.</p><ul><li>Tommy Gate · Hiniker · Smith Spreaders</li><li>Beau-Roc · Roll-Rite · Timbren · Gincor</li></ul></div>
+<div class="card"><h3>Parts Counter</h3><p>Light, medium &amp; heavy-duty parts, Mon–Fri 8–5.</p><ul><li>Interstate Batteries dealer</li><li>Call ahead — we'll have it pulled</li></ul></div>
+</div>
+</div></section>
+
+<section class="tow"><div class="wrap tow-flex">
+<div>
+<p class="sect-k">Towing &amp; Recovery</p>
+<h2>When it's on its side at 2 AM, we're the call</h2>
+<p>Heavy-duty wreckers, recovery gear and operators who know every mile of the corridor. Local drivers and dispatchers have kept our number taped to the dash for 30 years.</p>
+<p class="bignum">(315) 816-1944</p>
+</div>
+<div>
+<p style="color:var(--bone);font-weight:600;margin-bottom:4px">Corridor we cover:</p>
+<div class="towns"><span>Canton</span><span>Potsdam</span><span>Ogdensburg</span><span>Massena</span><span>Gouverneur</span><span>Malone</span><span>Norwood</span><span>Norfolk</span><span>Brasher Falls</span><span>+ surrounding</span></div>
+<p style="margin-top:16px">Nearest comparable heavy shops are Watertown or Plattsburgh — more than an hour out. We're on US-11, in the middle of the county.</p>
+</div>
+</div></section>
+
+<section class="story"><div class="wrap">
+<p class="sect-k">Our Story</p>
+<h2>Thirty years on Route 11</h2>
+<div class="tl">
+<div><b>1995</b><p>Founded May 8 as a sole proprietorship on US-11 in Canton.</p></div>
+<div><b>2000</b><p>Incorporated — and named SBDC Small Business Growth of the Year.</p></div>
+<div><b>2004</b><p>Inducted into the Small Business Hall of Fame in Albany.</p></div>
+<div><b>Today</b><p>Parts, service, fabrication, fleet programs and 24/7 recovery — plus Colton Glass, serving commercial and residential glass from the same facility.</p></div>
+</div>
+</div></section>
+
+<section class="team"><div class="wrap">
+<p class="sect-k">Talk to a person</p>
+<h2>Real staff, direct lines</h2>
+<div class="grid">
+<div class="card"><small>Office Manager</small><h3>Charleen Bates</h3><a href="mailto:Charlie@rt11truck.com">Charlie@rt11truck.com</a></div>
+<div class="card"><small>General Manager</small><h3>Ken Chambers</h3><a href="mailto:Ken@rt11truck.com">Ken@rt11truck.com</a></div>
+<div class="card"><small>Parts Manager</small><h3>Logan Golden</h3><a href="mailto:Rt11Parts@rt11truck.com">Rt11Parts@rt11truck.com</a></div>
+<div class="card"><small>Service Writer</small><h3>Amanda Varney</h3><a href="mailto:Service@rt11truck.com">Service@rt11truck.com</a></div>
+</div>
+</div></section>
+
+<section class="contact" id="quote"><div class="wrap grid2">
+<div class="info">
+<p class="sect-k">Visit or call</p>
+<h2>Route 11 Truck &amp; Equipment</h2>
+<p><b>6085 US Highway-11, Canton, NY 13617</b></p>
+<p><b>Shop:</b> (315) 379-0571 · <b>Toll-free:</b> 800-245-9773 · <b>Fax:</b> (315) 379-1238</p>
+<p><b>Emergency wrecker:</b> (315) 816-1944 — 24/7</p>
+<p><b>Parts:</b> Mon–Fri 8–5 · <b>Service:</b> Mon–Fri 7–5 · Closed weekends (wrecker always on)</p>
+</div>
+<div>
+<h3 style="font-size:1.3rem;margin-bottom:4px;color:var(--amber)">Request a quote or fleet program</h3>
+<form>
+<label>Name</label><input type="text" placeholder="Your name">
+<label>Phone</label><input type="tel" placeholder="(315) 555-0000">
+<label>What do you need?</label>
+<select><option>Truck / trailer repair</option><option>Fleet maintenance program</option><option>Equipment installation</option><option>NYS / DOT inspection</option><option>Parts inquiry</option><option>Custom fabrication</option></select>
+<label>Details</label><textarea rows="4" placeholder="Unit, issue, timeline…"></textarea>
+<button type="submit">Send to the Service Desk</button>
+</form>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+Route 11 Truck &amp; Equipment Sales &amp; Service Inc. · 6085 US Highway-11, Canton, NY 13617 · (315) 379-0571<br>
+Concept preview prepared by Onyx Rise Media.
+</div></footer>
+
+</body>
+</html>

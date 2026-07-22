@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Becker Landscape LLC — Hardscape &amp; Garden Design, Cambridge NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--slate:#3d4a46;--slate-deep:#28322f;--moss:#7a8b6f;--cream:#f5f2ea;--sand:#e9e2d2;--rust:#b4622d}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--slate-deep);line-height:1.65}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.15}
+/* nav */
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+nav .logo{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:700;color:var(--slate-deep)}
+nav .logo span{color:var(--moss)}
+nav a.call{color:var(--slate-deep);text-decoration:none;font-weight:600;border-bottom:2px solid var(--rust)}
+/* hero */
+.hero{background:linear-gradient(160deg,var(--slate) 0%,var(--slate-deep) 100%);color:var(--cream);padding:80px 0 90px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-40px;width:420px;height:420px;border:1px solid rgba(245,242,234,.14);border-radius:38% 62% 55% 45%/48% 42% 58% 52%}
+.hero::before{content:"";position:absolute;right:-40px;bottom:-140px;width:340px;height:340px;border:1px solid rgba(122,139,111,.35);border-radius:52% 48% 40% 60%/55% 60% 40% 45%}
+.hero .kicker{color:var(--moss)}
+.hero h1{font-size:clamp(2.2rem,5.2vw,3.7rem);max-width:20ch;margin:12px 0 20px}
+.hero p{max-width:56ch;font-size:1.12rem;color:#d8d4c6}
+.btn{display:inline-block;margin-top:30px;background:var(--rust);color:#fff;text-decoration:none;padding:15px 32px;border-radius:3px;font-weight:600;letter-spacing:.02em}
+.btn.line{background:transparent;border:1px solid var(--cream);margin-left:14px}
+.kicker{text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;font-weight:600;color:var(--rust)}
+section{padding:66px 0}
+h2{font-size:clamp(1.7rem,3.6vw,2.5rem);margin:10px 0 30px}
+/* flagstone grid */
+.stones{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.stone{background:#fff;border:1px solid var(--sand);border-radius:14px;padding:26px;box-shadow:0 1px 0 var(--sand)}
+.stone h3{font-size:1.3rem;margin-bottom:8px;color:var(--slate)}
+.stone p{font-size:.94rem;color:#55605c}
+.stone:nth-child(1){grid-column:span 4}
+.stone:nth-child(2){grid-column:span 2}
+.stone:nth-child(3){grid-column:span 2}
+.stone:nth-child(4){grid-column:span 2}
+.stone:nth-child(5){grid-column:span 2}
+@media(max-width:760px){.stone{grid-column:span 6 !important}.btn.line{margin-left:0}}
+/* process */
+.process{background:var(--sand)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;counter-reset:step}
+.step{background:var(--cream);border-radius:10px;padding:28px;position:relative;counter-increment:step}
+.step::before{content:counter(step,decimal-leading-zero);font-family:'Cormorant Garamond',serif;font-size:2.6rem;color:var(--moss);display:block;margin-bottom:6px}
+.step b{display:block;margin-bottom:6px;color:var(--slate-deep)}
+.step p{font-size:.94rem;color:#55605c}
+/* garden band */
+.garden{background:var(--slate);color:var(--cream)}
+.garden h2{color:var(--cream)}
+.garden p{max-width:60ch;color:#d8d4c6}
+.garden em{color:var(--moss);font-style:normal;font-weight:600}
+/* about + area */
+.twocol{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:start}
+@media(max-width:760px){.twocol{grid-template-columns:1fr}}
+.area{background:#fff;border:1px solid var(--sand);border-radius:14px;padding:26px}
+.area ul{list-style:none;margin-top:8px}
+.area li{padding:8px 0 8px 24px;position:relative;border-bottom:1px solid var(--sand);font-size:.95rem}
+.area li::before{content:"◆";position:absolute;left:0;color:var(--moss);font-size:.7rem;top:13px}
+/* form */
+.contact{background:var(--slate-deep);color:var(--cream)}
+.contact h2{color:var(--cream)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:720px;margin-top:10px}
+form input,form textarea{padding:14px;border-radius:4px;border:1px solid #4d5a55;background:#33403c;color:var(--cream);font-family:inherit;font-size:.95rem}
+form textarea{grid-column:span 2;min-height:110px}
+form input::placeholder,form textarea::placeholder{color:#9aa8a2}
+form button{grid-column:span 2;background:var(--rust);border:0;color:#fff;padding:16px;border-radius:4px;font-size:1rem;font-weight:600;cursor:pointer}
+@media(max-width:600px){form{grid-template-columns:1fr}form textarea,form button{grid-column:span 1}}
+footer{background:var(--slate-deep);color:#8fa098;border-top:1px solid #3d4a46;text-align:center;padding:22px;font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="wrap"><nav><span class="logo">Becker <span>Landscape</span></span><a class="call" href="tel:+15186773132">(518) 677-3132</a></nav></div>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="kicker">Cambridge, NY · Hardscape &amp; Garden Design · Family-run 20+ years</span>
+    <h1>Stone set right the first time, in the valley you can see it from.</h1>
+    <p>Becker Landscape designs and builds paver and natural-stone patios, walkways, retaining walls, firepits, and waterfalls for homes from Cambridge to the Vermont line. One family crew, from the first site walk to the last swept joint.</p>
+    <a class="btn" href="#consult">Request a design consultation</a>
+    <a class="btn line" href="#work">See what we build</a>
+  </div>
+</div>
+
+<section id="work">
+  <div class="wrap">
+    <span class="kicker">The stonework</span>
+    <h2>Built to hold through Washington County winters</h2>
+    <div class="stones">
+      <div class="stone"><h3>Patios &amp; outdoor rooms</h3><p>Paver and natural-stone patios pitched, based, and edged so frost heave doesn't undo them — sized for the way your family actually sits, cooks, and gathers.</p></div>
+      <div class="stone"><h3>Walkways</h3><p>Paths that follow the land instead of fighting it.</p></div>
+      <div class="stone"><h3>Retaining walls</h3><p>Working walls that manage a slope and still look like they belong.</p></div>
+      <div class="stone"><h3>Firepits</h3><p>A ring of stone that turns October into a season you sit outside in.</p></div>
+      <div class="stone"><h3>Waterfalls &amp; features</h3><p>Recirculating falls tucked into plantings, not perched on them.</p></div>
+    </div>
+    <p style="margin-top:20px;font-size:.9rem;color:#55605c"><em>[PLACEHOLDER: project photo gallery — to be supplied by the Beckers before launch]</em></p>
+  </div>
+</section>
+
+<div class="process">
+  <section>
+    <div class="wrap">
+      <span class="kicker">How a project runs</span>
+      <h2>Three visits between an idea and a finished patio</h2>
+      <div class="steps">
+        <div class="step"><b>Walk the site</b><p>We look at grade, drainage, sun, and sightlines with you — the details that decide whether stone lasts here.</p></div>
+        <div class="step"><b>Design it on paper</b><p>A layout and materials plan matched to your house and budget. Garden design and hardscape planned together, not bolted on.</p></div>
+        <div class="step"><b>Build it once</b><p>Proper excavation and base work before anything pretty happens. That's the part you never see and always feel.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="garden">
+  <section>
+    <div class="wrap">
+      <span class="kicker">More than stone</span>
+      <h2>Gardens designed with the hardscape, not after it</h2>
+      <p>Most patios get planted as an afterthought. Ours are designed as one picture: beds shaped to soften walls, plantings chosen for this valley's zone and deer pressure, stone and green planned in the same drawing. <em>That's the difference a design-build family shop makes.</em></p>
+    </div>
+  </section>
+</div>
+
+<section>
+  <div class="wrap twocol">
+    <div>
+      <span class="kicker">About</span>
+      <h2>The Becker crew, Ashgrove Road</h2>
+      <p>Becker Landscape LLC is a family business based on Ashgrove Road in Cambridge with more than twenty years in hardscape and garden design. Small crew, owner on site, and a habit of being easy to reach — because in a valley this size, the last job is always the reference for the next one.</p>
+      <p style="margin-top:14px">A note for searchers: we're <b>Becker Landscape of Cambridge, NY</b> — not the similarly named property-maintenance outfits elsewhere in the Capital Region. If you meant the folks on Ashgrove Road, you're in the right place.</p>
+    </div>
+    <div class="area">
+      <span class="kicker">Where we work</span>
+      <ul>
+        <li>Cambridge &amp; White Creek</li>
+        <li>Salem &amp; Shushan</li>
+        <li>Greenwich &amp; Easton</li>
+        <li>Hoosick Falls &amp; Eagle Bridge</li>
+        <li>Arlington &amp; Bennington, VT line</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="contact" id="consult">
+  <section>
+    <div class="wrap">
+      <span class="kicker">Start the conversation</span>
+      <h2>Request a design consultation</h2>
+      <form>
+        <input type="text" placeholder="Name" required>
+        <input type="tel" placeholder="Phone" required>
+        <input type="email" placeholder="Email" style="grid-column:span 2">
+        <textarea placeholder="Tell us about your site — patio, wall, walkway, water feature?"></textarea>
+        <button type="submit">Send it to the Beckers</button>
+      </form>
+      <p style="margin-top:18px;font-size:.95rem">Or call <a href="tel:+15186773132" style="color:#e0b48e">(518) 677-3132</a> · beckerlandscapesllc@gmail.com</p>
+    </div>
+  </section>
+</div>
+
+<footer>Becker Landscape LLC · 671 Ashgrove Road, Cambridge, NY 12816 · Website concept preview by Onyx Rise Media</footer>
+</body>
+</html>

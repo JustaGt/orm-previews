@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nedrow Saddlery — Saddles, Tack &amp; Harness Since 1974 | Nedrow, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{--leather:#6b4423;--dkbrown:#3b2a1a;--cream:#faf5ec;--parch:#f0e6d4;--green:#3e5636;--brass:#b08d3f;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Lato',sans-serif;color:var(--dkbrown);background:var(--cream);line-height:1.65;}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 20px;}
+  header{background:var(--cream);border-bottom:3px double var(--leather);padding:16px 0;position:sticky;top:0;z-index:40;}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+  .wordmark{font-family:'Playfair Display';font-weight:800;font-size:1.35rem;color:var(--leather);}
+  .wordmark small{display:block;font-family:'Lato';font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--brass);font-weight:700;}
+  .hdr-call{font-weight:700;color:var(--green);text-decoration:none;border:2px solid var(--green);padding:9px 18px;border-radius:3px;}
+  .hero{background:linear-gradient(180deg,var(--dkbrown) 0%,#54391f 100%);color:var(--cream);padding:80px 0 70px;text-align:center;}
+  .est{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--brass);font-weight:700;}
+  .hero h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:800;line-height:1.15;margin:16px auto 0;max-width:20ch;}
+  .hero .rule{width:70px;height:2px;background:var(--brass);margin:26px auto;}
+  .hero p{max-width:58ch;margin:0 auto 32px;font-size:1.13rem;color:#e9decb;}
+  .btn{display:inline-block;background:var(--brass);color:var(--dkbrown);font-weight:700;padding:14px 30px;border-radius:3px;text-decoration:none;letter-spacing:.04em;}
+  .btn.line{background:transparent;color:var(--cream);border:2px solid var(--brass);margin-left:10px;}
+  .openbar{background:var(--green);color:#f2eddc;text-align:center;padding:12px 16px;font-size:.95rem;letter-spacing:.03em;}
+  section{padding:66px 0;}
+  h2{font-size:clamp(1.5rem,3.4vw,2.3rem);font-weight:800;color:var(--leather);margin-bottom:14px;}
+  .lead{color:#5f4d38;max-width:62ch;margin-bottom:34px;font-size:1.04rem;}
+  .stock{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;}
+  .shelf{background:#fff;border:1px solid #e2d5bc;border-top:4px solid var(--brass);padding:26px;border-radius:4px;}
+  .shelf h3{color:var(--green);font-size:1.15rem;margin-bottom:8px;}
+  .shelf p{font-size:.96rem;color:#54452f;}
+  .fit{background:var(--parch);}
+  .fit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;}
+  .fit blockquote{font-family:'Playfair Display';font-size:1.45rem;line-height:1.4;color:var(--leather);border-left:4px solid var(--brass);padding-left:22px;}
+  .heritage{background:var(--dkbrown);color:var(--cream);}
+  .heritage h2{color:var(--brass);}
+  .heritage .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px;margin-top:26px;}
+  .heritage .col strong{font-family:'Playfair Display';font-size:2rem;color:var(--brass);display:block;}
+  .heritage .col span{color:#d9cbb2;font-size:.96rem;}
+  .country{text-align:center;}
+  .country .barns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:20px;}
+  .country .barns span{background:#fff;border:1px solid #ddcfb4;padding:8px 18px;border-radius:99px;font-size:.9rem;font-weight:700;color:var(--green);}
+  .visit{background:var(--parch);}
+  .visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  .hours{background:#fff;border:1px solid #e2d5bc;border-radius:4px;padding:28px;}
+  .hours table{width:100%;border-collapse:collapse;font-size:.98rem;}
+  .hours td{padding:9px 4px;border-bottom:1px solid #eee3cd;}
+  .hours td:last-child{text-align:right;font-weight:700;color:var(--green);}
+  .call-big{display:block;font-family:'Playfair Display';font-weight:800;font-size:1.9rem;color:var(--leather);text-decoration:none;margin:10px 0 20px;}
+  .note{font-size:.8rem;font-style:italic;color:#96845f;}
+  footer{background:var(--dkbrown);color:#b7a488;text-align:center;padding:26px 0;font-size:.88rem;}
+  @media(max-width:760px){.fit .wrap,.visit .wrap{grid-template-columns:1fr;}.btn.line{margin-left:0;margin-top:10px;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="wordmark">Nedrow Saddlery<small>Est. 1974 · Route 11, Nedrow NY</small></div>
+    <a class="hdr-call" href="tel:3154922902">(315) 492-2902</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="est">Fifty-two years in the trade</div>
+    <h1>Never buy a saddle you haven't held.</h1>
+    <div class="rule"></div>
+    <p>Nedrow Saddlery has kept a working tack counter on South Salina Street since 1974 — saddles, harness and horse equipment you can put your hands on, with advice measured in decades, ten minutes south of Syracuse.</p>
+    <a class="btn" href="#visit">Plan Your Visit</a>
+    <a class="btn line" href="tel:3154922902">Call About an Item</a>
+  </div>
+</section>
+
+<div class="openbar">Tue–Fri 12–6 · Sat 9–4 · Closed Sun &amp; Mon — call ahead for stock questions: (315) 492-2902</div>
+
+<section>
+  <div class="wrap">
+    <h2>Behind the counter</h2>
+    <p class="lead">Mail-order tack arrives in a box and fits whatever it fits. A shop counter lets you check the leather, the tree and the stitching before a dollar changes hands. [Product lines below are category-level — final list to be confirmed with the shop.]</p>
+    <div class="stock">
+      <div class="shelf"><h3>Saddles</h3><p>English and Western — handled, inspected and compared in person, not guessed at from a product photo.</p></div>
+      <div class="shelf"><h3>Tack &amp; Bridlework</h3><p>Bridles, bits, reins, halters and leads — the everyday leather and hardware a barn actually wears out.</p></div>
+      <div class="shelf"><h3>Harness</h3><p>A listed harness specialty for driving and draft owners — a category most surviving tack retailers dropped years ago.</p></div>
+      <div class="shelf"><h3>Horse Equipment</h3><p>Grooming, stable and turnout gear for the working barn. Ask what's on the shelf this week.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="fit">
+  <div class="wrap">
+    <div>
+      <h2>Fit first. Fifty years of it.</h2>
+      <p class="lead" style="margin-bottom:0;">An ill-fitting saddle costs more than money — it costs the horse's back and the rider's confidence. Advice at this counter comes from five decades of horses coming through Central New York: what fits, what lasts, and what isn't worth buying twice.</p>
+    </div>
+    <blockquote>The cheapest tack is the piece you only had to buy once.</blockquote>
+  </div>
+</section>
+
+<section class="heritage">
+  <div class="wrap">
+    <h2>A half-century on Route 11</h2>
+    <p style="color:#d9cbb2;max-width:60ch;">Nedrow Saddlery opened its doors in 1974. Tack shops have vanished from Central New York one by one — the big mail-order houses came and went too. The counter at 6500 South Salina Street is still here.</p>
+    <div class="cols">
+      <div class="col"><strong>1974</strong><span>Year the shop opened</span></div>
+      <div class="col"><strong>52</strong><span>Years serving CNY horse owners</span></div>
+      <div class="col"><strong>10 min</strong><span>South of downtown Syracuse on Rte 11</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="country">
+  <div class="wrap">
+    <h2>Horse country is all around this shop</h2>
+    <p class="lead" style="margin:0 auto 6px;max-width:62ch;">Boarding, lesson and show barns fill the hills from Skaneateles to Tully. The tack counter that serves them sits right in the middle.</p>
+    <div class="barns">
+      <span>Nedrow</span><span>Marcellus</span><span>Skaneateles</span><span>LaFayette</span><span>Tully</span><span>Onondaga Hill</span><span>Jamesville</span><span>Camillus</span>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div>
+      <h2>Visit the counter</h2>
+      <p class="lead" style="margin-bottom:8px;">6500 S Salina St, Nedrow, NY 13120 — on Route 11, ten minutes south of Syracuse, easy on/off I-81.</p>
+      <a class="call-big" href="tel:3154922902">(315) 492-2902</a>
+      <p class="note">Map embed here in build. Hours below are directory-listed — confirm with shop before publish.</p>
+    </div>
+    <div class="hours">
+      <h3 style="font-family:'Playfair Display';color:var(--leather);margin-bottom:12px;">Shop Hours</h3>
+      <table>
+        <tr><td>Monday</td><td>Closed</td></tr>
+        <tr><td>Tuesday – Friday</td><td>12:00 – 6:00</td></tr>
+        <tr><td>Saturday</td><td>9:00 – 4:00</td></tr>
+        <tr><td>Sunday</td><td>Closed</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Nedrow Saddlery · 6500 S Salina St, Nedrow, NY 13120 · (315) 492-2902 · Est. 1974</div>
+</footer>
+
+</body>
+</html>

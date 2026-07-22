@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lamplit Farm — Horse-Drawn Sleigh &amp; Carriage Rides · Chittenango, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--night:#1b2432;--dusk:#2c3a52;--lantern:#e8a54b;--flame:#f4c778;--cream:#f6efe3;--ink:#2a2620;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;}
+h1,h2,h3{font-family:'Playfair Display',serif;}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px;}
+/* HERO */
+header{background:linear-gradient(180deg,var(--night) 0%,var(--dusk) 78%,#4a3f33 100%);color:var(--cream);padding:64px 0 78px;position:relative;overflow:hidden;}
+header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;background:radial-gradient(ellipse at 50% 130%,rgba(232,165,75,.45),transparent 70%);}
+.badge{display:inline-block;border:1px solid var(--lantern);color:var(--flame);padding:5px 14px;border-radius:20px;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:22px;}
+header h1{font-size:clamp(2.1rem,5vw,3.4rem);font-weight:700;max-width:17ch;line-height:1.15;}
+header p.lede{max-width:52ch;margin:18px 0 30px;font-size:1.12rem;color:#e4dccd;}
+.cta{display:inline-block;background:var(--lantern);color:var(--night);font-weight:600;padding:14px 30px;border-radius:6px;text-decoration:none;font-size:1.05rem;}
+.cta.ghost{background:transparent;border:1px solid var(--flame);color:var(--flame);margin-left:12px;}
+/* HORSES */
+.horses{padding:64px 0;}
+.horses h2,.rides h2,.venue h2,.roster h2,.book h2{font-size:2rem;margin-bottom:8px;}
+.kicker{color:#8a6a35;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;font-weight:600;}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-top:28px;}
+.horse{background:#fff;border-radius:10px;padding:26px 22px;border-top:4px solid var(--lantern);box-shadow:0 2px 10px rgba(27,36,50,.08);}
+.horse h3{font-size:1.3rem;}
+.horse span{font-size:.82rem;color:#8a6a35;letter-spacing:.08em;text-transform:uppercase;}
+.horse p{font-size:.95rem;margin-top:8px;}
+/* RIDES */
+.rides{background:var(--night);color:var(--cream);padding:64px 0;}
+.rides .kicker{color:var(--flame);}
+.ridegrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:28px;}
+.ride{border:1px solid #3d4d6b;border-radius:10px;padding:24px;}
+.ride h3{color:var(--flame);font-size:1.15rem;margin-bottom:8px;}
+.ride p{font-size:.95rem;color:#d8d0c0;}
+/* VENUE */
+.venue{padding:64px 0;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;}
+.venue .panel{background:#fff;border-radius:10px;padding:30px;box-shadow:0 2px 10px rgba(27,36,50,.08);}
+.venue ul{list-style:none;margin-top:14px;}
+.venue li{padding:8px 0 8px 26px;position:relative;font-size:.98rem;}
+.venue li::before{content:"✦";position:absolute;left:0;color:var(--lantern);}
+/* ROSTER */
+.roster{background:#efe6d4;padding:56px 0;}
+.roster ul{margin-top:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;list-style:none;}
+.roster li{background:#fff;border-left:4px solid var(--lantern);padding:14px 18px;border-radius:0 8px 8px 0;font-size:.96rem;}
+/* BOOKING */
+.book{background:linear-gradient(180deg,var(--dusk),var(--night));color:var(--cream);padding:66px 0;}
+.bookgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;margin-top:26px;}
+.book form{display:grid;gap:12px;}
+.book input,.book select,.book textarea{padding:12px 14px;border-radius:6px;border:1px solid #4a5b7d;background:#243048;color:var(--cream);font-family:inherit;font-size:.97rem;}
+.book textarea{min-height:90px;}
+.book button{background:var(--lantern);border:none;color:var(--night);font-weight:600;padding:14px;border-radius:6px;font-size:1.02rem;cursor:pointer;}
+.phonebox{border:1px solid var(--lantern);border-radius:10px;padding:28px;height:fit-content;}
+.phonebox a.tel{color:var(--flame);font-family:'Playfair Display',serif;font-size:1.7rem;text-decoration:none;display:block;margin:10px 0;}
+footer{background:#141a26;color:#9aa3b5;text-align:center;padding:26px 0;font-size:.88rem;}
+@media(max-width:760px){.venue,.bookgrid{grid-template-columns:1fr;}.cta.ghost{margin-left:0;margin-top:10px;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="badge">Chittenango, New York · By reservation</span>
+    <h1>Four Belgian drafts. One lantern-lit hill over Chittenango Creek.</h1>
+    <p class="lede">Lamplit Farm brings horse-drawn sleigh, carriage, and wagon rides to your wedding, your downtown, or our second-generation farm — the same teams you've seen at the Colgate Inn and Hanover Square.</p>
+    <a class="cta" href="#book">Check a date</a>
+    <a class="cta ghost" href="tel:13154273942">Call Woody · (315) 427-3942</a>
+  </div>
+</header>
+
+<section class="horses">
+  <div class="wrap">
+    <span class="kicker">The team</span>
+    <h2>You'll be pulled by somebody with a name.</h2>
+    <div class="team">
+      <div class="horse"><h3>Desi &amp; Hannah</h3><span>Belgian mares</span><p>Our matched pair — they start the hay season each July and lead December's downtown wagon runs.</p></div>
+      <div class="horse"><h3>Henry &amp; Chuck</h3><span>Belgian geldings</span><p>The crowd favorites at Caz Summerfest and the Hamilton holiday rides. Fresh haircuts before every event.</p></div>
+      <div class="horse"><h3>Goldy &amp; Winona</h3><span>Visiting companions</span><p>Gentle enough for nursing-home visits — they've greeted residents at Crouse Community Center in person.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="rides">
+  <div class="wrap">
+    <span class="kicker">Rides &amp; occasions</span>
+    <h2>From flat-bed sleigh to fringed surrey.</h2>
+    <div class="ridegrid">
+      <div class="ride"><h3>Winter sleigh rides</h3><p>Half-hour runs behind the Belgians on trails overlooking the Chittenango Creek valley — with the wood stove waiting in the pavilion.</p></div>
+      <div class="ride"><h3>Weddings</h3><p>The surrey with the fringed top for your exit, or a wagon to move the whole party between barn and ceremony. We come to your venue.</p></div>
+      <div class="ride"><h3>Hayrides &amp; parties</h3><p>Informal wagons with bench seats for birthdays, fall gatherings, and family reunions — at the farm or your place.</p></div>
+      <div class="ride"><h3>Downtowns &amp; events</h3><p>Chambers of commerce and downtown committees book us for holiday strolls and festivals. Pick-up loops, timed runs, we've done it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap venue">
+  <div>
+    <span class="kicker">Ride here or ride there</span>
+    <h2>Your venue, or the farm on Carey Hill.</h2>
+    <p style="margin-top:12px;">Every booking is priced individually — by distance, time, and what you have in mind. Rides at the farm come with views that reach the Oneida Lake basin and, on the clearest days, Lake Ontario.</p>
+  </div>
+  <div class="panel">
+    <strong>On-farm rides include the three-season pavilion:</strong>
+    <ul>
+      <li>Wood stove going for cold-weather rides</li>
+      <li>Handicapped-accessible bathroom</li>
+      <li>Refrigerator &amp; picnic tables for your party</li>
+      <li>Room to linger before and after your ride</li>
+    </ul>
+  </div>
+</section>
+
+<section class="roster">
+  <div class="wrap">
+    <span class="kicker">Where you've ridden with us</span>
+    <h2>The event roster speaks for itself.</h2>
+    <ul>
+      <li>Hamilton Chamber of Commerce — holiday rides from the Colgate Inn</li>
+      <li>Downtown Committee of Syracuse — wagon rides at Hanover Square</li>
+      <li>Caz Summerfest — carriage rides at Lakeland Park</li>
+      <li>Lorenzo State Historic Site — Ponies &amp; Pumpkin Spice, Community Day</li>
+      <li>Weddings at CNY barn venues, including Barnes Barn in North Brookfield</li>
+    </ul>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <span class="kicker">Check a date</span>
+    <h2>Every ride is scheduled personally. Start here.</h2>
+    <div class="bookgrid">
+      <form>
+        <input type="text" placeholder="Your name" required>
+        <input type="tel" placeholder="Phone (Woody will call you back)" required>
+        <input type="date">
+        <select><option>What's the occasion?</option><option>Wedding</option><option>Sleigh ride</option><option>Hayride / party</option><option>Community or downtown event</option><option>Something else</option></select>
+        <textarea placeholder="Your venue or ours? Roughly how many riders?"></textarea>
+        <button type="submit">Request this date</button>
+      </form>
+      <div class="phonebox">
+        <strong>Rather just talk it through?</strong>
+        <a class="tel" href="tel:13154273942">(315) 427-3942</a>
+        <p style="font-size:.94rem;color:#cfc7b6;">All scheduling is done personally by phone — the form simply saves your date in line while Woody's out with the horses. Rides are by reservation only.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>Lamplit Farm · 2483 Carey Hill Rd, Chittenango, NY 13037 · (315) 427-3942 · Rides by reservation only</footer>
+
+</body>
+</html>

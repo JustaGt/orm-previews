@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--
+NICHE IDENTITY BRIEF — Walter C. Sykes Store ("Sykes General Store")
+Business type: Long-running family country general store + hardware, Stephentown NY (Rensselaer Co., on Rte 43 near the MA/Berkshires line). Directory-listed as general store / hardware.
+Target customers: Local Stephentown/Berlin/Hancock-MA residents (everyday goods, hardware, hunting/fishing supplies); plus travelers on Rte 43 heading to/from the Berkshires, Jiminy Peak, and Grafton/Cherry Plain state parks.
+Local market: Tiny rural crossroads with no big-box nearby; the store is the practical stop for a forgotten part, propane, bait, groceries, or gear.
+Emotional tone: Warm, plainspoken, been-here-forever, genuinely useful — a community anchor, not kitschy.
+Visual style: Vintage general-store — barn red, cream, forest green, hand-painted-sign feel.
+Pain points: No website means nobody outside town knows the hours, what departments it has, or that it's open at all; travelers pass it by; can't confirm "do they carry X" without driving there.
+Desires (customer): Know it's open, know what's stocked, know it's on the way.
+Trust signals: Decades in the same spot, family name, community reputation.
+Conversion goal: Drive-in foot traffic — hours + "what you'll find" + directions/map, and phone for "do you have it."
+Sections needed: Hero + hours/directions, departments (what you'll find), on-your-way local relevance, about the family store, find-us/contact.
+Cliches to avoid: banned ORM list; do NOT invent specific departments, brands, deli menus, or hours — mark specifics as owner-confirm placeholders.
+What makes it unique: It's the last practical stop before the state line / the mountains — a real country store that just needs to be findable. Honest placeholders keep it accurate since exact stock/hours are unverified.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sykes General Store — Country Store &amp; Hardware in Stephentown, NY on Route 43</title>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700;800&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --barn:#8f2f27; --barn-d:#6d221c; --forest:#2f5a3f; --forest-d:#224330;
+  --cream:#f7f0e2; --paper:#fbf6ec; --gold:#d9a441; --ink:#2c2620; --soft:#6a6055;
+  --line:#e6dcc7; --white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Karla',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,.nm,.eyebrow{font-family:'Bitter',serif}
+a{color:inherit}
+.note{background:#efe6d3;border-bottom:1px solid #e0d3b8;color:#7a6640;font-size:.8rem;text-align:center;padding:10px}
+.top{background:var(--forest-d);color:#cfe0d3;font-size:.84rem}
+.top .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;padding:8px 24px}
+.top b{color:#fff}
+.bar{background:var(--barn)}
+.bar .wrap{display:flex;justify-content:space-between;align-items:center;padding:15px 24px;flex-wrap:wrap;gap:10px}
+.brand{display:flex;align-items:center;gap:13px;color:#fff}
+.mark{width:48px;height:48px;border-radius:50%;background:var(--cream);color:var(--barn);display:flex;align-items:center;justify-content:center;font-family:'Bitter';font-weight:800;font-size:1.5rem;border:3px solid var(--gold)}
+.brand .nm{font-size:1.34rem;font-weight:800;line-height:1}
+.brand .nm small{display:block;font-family:'Karla';font-size:.58rem;letter-spacing:2.4px;color:#f0cfa0;font-weight:600;margin-top:5px}
+.nav{display:flex;gap:20px;align-items:center;font-size:.9rem}
+.nav a{text-decoration:none;color:#f3dcd0}.nav a:hover{color:#fff}
+.nav .cta{background:var(--gold);color:#3a2a08;padding:10px 18px;border-radius:6px;font-weight:700}
+.hero{background:linear-gradient(150deg,var(--forest) 0%,var(--forest-d) 100%);color:#fff;padding:74px 0 68px;position:relative}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:10px;background:repeating-linear-gradient(45deg,var(--barn) 0 16px,var(--cream) 16px 32px)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:38px;align-items:center}
+.hero .kick{display:inline-block;background:rgba(217,164,65,.22);color:var(--gold);font-size:.76rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;padding:7px 14px;border-radius:20px;margin-bottom:18px}
+.hero h1{font-size:2.95rem;line-height:1.05;font-weight:800;margin-bottom:16px}
+.hero h1 em{color:var(--gold);font-style:normal}
+.hero p{font-size:1.1rem;color:#d3e2d7;max-width:520px}
+.hero .row{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:7px;font-size:.94rem}
+.btn-g{background:var(--gold);color:#3a2a08}.btn-g:hover{background:#c58f30}
+.btn-w{background:#fff;color:var(--forest-d)}.btn-w:hover{background:var(--cream)}
+.hours{background:var(--cream);color:var(--ink);border:1px solid rgba(255,255,255,.3);border-radius:14px;padding:26px}
+.hours h3{font-family:'Bitter';font-size:1.05rem;margin-bottom:12px;color:var(--barn-d)}
+.hours .r{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed var(--line);font-size:.93rem}
+.hours .r:last-child{border:none}
+.hours .r b{color:var(--forest-d)}
+.hours .ph{font-size:.74rem;color:#a08a55;margin-top:10px}
+.trust{background:var(--white);border-bottom:1px solid var(--line)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:24px;text-align:center}
+.trust .t b{display:block;font-family:'Bitter';font-size:1.4rem;color:var(--barn);font-weight:800}
+.trust .t span{font-size:.84rem;color:var(--soft)}
+section{padding:62px 0}
+.eyebrow{font-size:.78rem;letter-spacing:3px;text-transform:uppercase;color:var(--barn);font-weight:700;margin-bottom:10px}
+h2{font-size:2.2rem;color:var(--forest-d);line-height:1.12;margin-bottom:12px;font-weight:800}
+.lead{color:var(--soft);max-width:660px;font-size:1.03rem;margin-bottom:34px}
+.dept{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.d{background:#fff;border:1px solid var(--line);border-radius:11px;padding:24px;transition:.2s}
+.d:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(143,47,39,.1)}
+.d .ic{font-size:1.8rem;margin-bottom:8px}
+.d h3{font-family:'Bitter';color:var(--barn-d);font-size:1.12rem;margin-bottom:5px}
+.d p{color:var(--soft);font-size:.9rem}
+.d .ph{display:block;font-size:.72rem;color:#b0985f;margin-top:8px;font-style:italic}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.split .box{background:var(--forest);color:#e7f0e8;border-radius:14px;padding:34px}
+.split .box h2{color:#fff;font-size:1.85rem}
+.split .box p{color:#cfe0d3;margin-bottom:12px}
+.split .box .mini{display:flex;gap:12px;align-items:center;margin-top:14px;font-size:.94rem}
+.split .box .mini span{background:rgba(255,255,255,.12);padding:8px 12px;border-radius:8px}
+.about h2{color:var(--barn-d)}
+.about p{color:#443c31;font-size:1.04rem;max-width:640px}
+.map{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:36px;text-align:center}
+.map .addr{font-family:'Bitter';font-size:1.3rem;color:var(--forest-d);margin:6px 0}
+.map .towns{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-top:18px}
+.map .towns span{background:#fff;border:1px solid var(--line);color:var(--barn);padding:7px 14px;border-radius:18px;font-size:.88rem;font-weight:600}
+.cta{background:var(--barn);color:#fff;text-align:center;padding:72px 0}
+.cta h2{color:#fff;font-size:2.25rem;max-width:680px;margin:0 auto 14px}
+.cta p{color:#f3dcd0;max-width:540px;margin:0 auto 22px;font-size:1.04rem}
+.cta .phone{font-family:'Bitter';font-size:1.9rem;font-weight:800;color:var(--gold);margin-top:16px}
+.foot{background:#3a1a16;color:#c9a89f;padding:30px 0;font-size:.86rem}
+.foot .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media(max-width:820px){
+  .nav{display:none}
+  .hero .wrap,.trust .wrap,.dept,.split{grid-template-columns:1fr}
+  .hero h1{font-size:2.2rem}h2{font-size:1.8rem}
+  .split .box,.map{padding:26px}
+}
+</style>
+</head>
+<body>
+<div class="note">Preview concept prepared by Onyx Rise Media for Walter C. Sykes Store — not the store's live website. Hours, departments, and photos shown are placeholders pending the owner's own details.</div>
+<div class="top"><div class="wrap">
+  <div>📍 392 State Route 43, Stephentown, NY 12168</div>
+  <div>🛣 <b>Your stop on the way to the Berkshires</b></div>
+</div></div>
+<header class="bar"><div class="wrap">
+  <div class="brand">
+    <div class="mark">S</div>
+    <div class="nm">Sykes General Store<small>STEPHENTOWN, NY · SINCE THE OLD DAYS</small></div>
+  </div>
+  <nav class="nav">
+    <a href="#find">What You'll Find</a>
+    <a href="#road">On Your Way</a>
+    <a href="#about">About</a>
+    <a href="#visit" class="cta">Hours &amp; Directions</a>
+  </nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="kick">Country store &amp; hardware · Route 43 · Stephentown</span>
+    <h1>The corner where Stephentown grabs <em>whatever it needs</em>.</h1>
+    <p>Hardware, everyday goods, and the odds and ends you'd otherwise drive half an hour for — under one roof at the crossroads on Route 43. If you're not sure we've got it, call and ask.</p>
+    <div class="row">
+      <a href="#visit" class="btn btn-g">Hours &amp; directions</a>
+      <a href="#find" class="btn btn-w">What we carry</a>
+    </div>
+  </div>
+  <div class="hours">
+    <h3>🕗 Store hours</h3>
+    <div class="r"><span>Monday – Friday</span><b>Hours to confirm</b></div>
+    <div class="r"><span>Saturday</span><b>Hours to confirm</b></div>
+    <div class="r"><span>Sunday</span><b>Hours to confirm</b></div>
+    <p class="ph">Placeholder — real hours to be filled in from the owner. Call (518) 733-5491 to confirm.</p>
+  </div>
+</div></section>
+
+<div class="trust"><div class="wrap">
+  <div class="t"><b>Rte 43</b><span>Stephentown crossroads</span></div>
+  <div class="t"><b>Local</b><span>Family-run country store</span></div>
+  <div class="t"><b>Hardware</b><span>+ everyday essentials</span></div>
+  <div class="t"><b>1 stop</b><span>Before the state line</span></div>
+</div></div>
+
+<section id="find"><div class="wrap">
+  <div class="eyebrow">Under one roof</div>
+  <h2>What you'll find inside</h2>
+  <p class="lead">A real country store carries a little of everything. Here's the kind of thing folks run in for — final department list to be set from the owner's own inventory.</p>
+  <div class="dept">
+    <div class="d"><div class="ic">🔧</div><h3>Hardware &amp; Fasteners</h3><p>The nuts, bolts, fittings, and small parts that save you a trip to town mid-project.</p><span class="ph">confirm departments with owner</span></div>
+    <div class="d"><div class="ic">🧰</div><h3>Home &amp; Repair</h3><p>Basics for around the house and the barn — the "I just need one" run.</p><span class="ph">confirm departments with owner</span></div>
+    <div class="d"><div class="ic">🛒</div><h3>Everyday Groceries</h3><p>Pantry staples, cold drinks, and the forgotten-something on the way home.</p><span class="ph">confirm departments with owner</span></div>
+    <div class="d"><div class="ic">🎣</div><h3>Outdoors &amp; Seasonal</h3><p>Seasonal gear for the folks headed to the lakes, the trails, and the woods nearby.</p><span class="ph">confirm departments with owner</span></div>
+    <div class="d"><div class="ic">🔥</div><h3>Propane &amp; Fuel Odds</h3><p>The refill or the part you need to keep the weekend going.</p><span class="ph">confirm — verify if offered</span></div>
+    <div class="d"><div class="ic">📮</div><h3>Local Corner</h3><p>The everyday counter of a store that's been the town's meeting spot for generations.</p><span class="ph">confirm departments with owner</span></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="split">
+    <div>
+      <div class="eyebrow">Passing through?</div>
+      <h2 style="color:var(--barn-d)">The last practical stop before the mountains</h2>
+      <p class="lead">Route 43 carries a steady stream of travelers between the Capital Region and the Berkshires — Jiminy Peak, Hancock, and the state parks around Grafton and Cherry Plain. If you're loading up for the cabin or realizing you forgot something on the drive, this is the corner to pull into.</p>
+    </div>
+    <div class="box">
+      <h2>Easy to find, easy to pull into</h2>
+      <p>Right on Route 43 in the heart of Stephentown — quick in, quick out, and someone behind the counter who knows the area.</p>
+      <div class="mini"><span>🏔 Near Jiminy Peak</span><span>🌲 Near Grafton &amp; Cherry Plain</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="about" id="about"><div class="wrap">
+  <div class="eyebrow">About the store</div>
+  <h2>A Stephentown fixture for generations</h2>
+  <p>The Sykes name has been over the door in Stephentown for a long time — the kind of family store where you can grab a part, a gallon of milk, and a straight answer in the same trip. This page exists to make it findable: so neighbors and travelers alike can see the hours, know what's stocked, and know the lights are on before they pull in. <em>(Store history and specifics to be confirmed with the owner.)</em></p>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="map">
+    <div class="eyebrow" style="text-align:center">Find us</div>
+    <div class="addr">392 State Route 43 · Stephentown, NY 12168</div>
+    <p style="color:var(--soft)">On Route 43 in Stephentown — serving the surrounding towns and the Route 43 corridor.</p>
+    <div class="towns">
+      <span>Stephentown</span><span>Berlin</span><span>New Lebanon</span><span>Nassau</span><span>Hancock, MA</span><span>Grafton</span>
+    </div>
+  </div>
+</div></section>
+
+<section class="cta" id="visit"><div class="wrap">
+  <div class="eyebrow" style="color:var(--gold)">Come on in</div>
+  <h2>Not sure we've got it? Give a call first.</h2>
+  <p>One quick call saves you the drive. Ask about hours, what's in stock, or whether we can set something aside for you.</p>
+  <a href="#" class="btn btn-g">Get directions</a>
+  <div class="phone">(518) 733-5491</div>
+</div></section>
+
+<footer class="foot"><div class="wrap">
+  <div><strong>Walter C. Sykes Store</strong> · 392 State Route 43, Stephentown, NY 12168 · (518) 733-5491</div>
+  <div>Country store · Hardware · Everyday goods · On Route 43</div>
+</div></footer>
+</body>
+</html>

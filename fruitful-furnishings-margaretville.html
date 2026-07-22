@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fruitful Furnishings &amp; Gary Mead Gallery — Custom Sawing, Kiln Drying &amp; Commissioned Furniture · Margaretville NY</title>
+<meta name="description" content="Sawmill, dimension mill and dry kiln on Southside Road, Margaretville NY. Custom sawing, planing and kiln drying of your own logs since 1979, plus commissioned furniture and the Gary Mead Gallery of one-of-a-kind wood compositions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --walnut:#4a3524; --walnut-d:#2e2016; --bark:#6b503a;
+  --ember:#b5732c; --ember-d:#95591c;
+  --maple:#f3ece0; --shav:#faf6ee; --ink:#211a13; --gray:#6d6154; --line:#e2d8c8;
+  --sap:#8b9b6e;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--shav);line-height:1.72;font-weight:400}
+h1,h2,h3,.disp{font-family:'Cormorant Garamond',serif;line-height:1.14;font-weight:600}
+a{color:inherit}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+.narrow{max-width:760px}
+.btn{display:inline-block;background:var(--walnut);color:var(--maple);font-family:'Jost';font-weight:500;padding:14px 32px;border-radius:1px;text-decoration:none;font-size:.94rem;letter-spacing:.11em;text-transform:uppercase;transition:background .18s}
+.btn:hover{background:var(--walnut-d)}
+.btn.ember{background:var(--ember)}
+.btn.ember:hover{background:var(--ember-d)}
+.btn.hollow{background:transparent;border:1px solid rgba(243,236,224,.5);color:var(--maple)}
+.btn.hollow:hover{background:rgba(243,236,224,.12)}
+.btn.dark{background:transparent;border:1px solid var(--walnut);color:var(--walnut)}
+.btn.dark:hover{background:var(--walnut);color:var(--maple)}
+
+header.nav{background:var(--shav);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:30}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:18px 24px}
+.brand{text-decoration:none}
+.brand b{font-family:'Cormorant Garamond';font-size:1.6rem;font-weight:600;display:block;letter-spacing:.01em}
+.brand span{font-size:.63rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gray);font-weight:500}
+nav.links{display:flex;gap:30px;font-size:.85rem;letter-spacing:.13em;text-transform:uppercase;font-weight:400}
+nav.links a{text-decoration:none;color:var(--gray)}
+nav.links a:hover{color:var(--ember)}
+@media(max-width:980px){nav.links{display:none}}
+
+.hero{background:var(--walnut-d);color:var(--maple);padding:112px 0 96px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;opacity:.5;
+  background:
+   radial-gradient(ellipse 900px 300px at 78% 45%,rgba(181,115,44,.22),transparent 70%),
+   repeating-radial-gradient(circle at 78% 45%,transparent 0 26px,rgba(243,236,224,.045) 26px 28px)}
+.hero .wrap{position:relative;z-index:2}
+.hero .kick{color:var(--ember);letter-spacing:.3em;text-transform:uppercase;font-size:.72rem;margin-bottom:26px;font-weight:500}
+.hero h1{font-size:clamp(2.5rem,6vw,4.6rem);max-width:16ch;font-weight:500}
+.hero h1 em{font-style:italic;color:var(--ember)}
+.hero p.lead{margin:28px 0 36px;font-size:1.16rem;max-width:52ch;color:#ddd0bd;font-weight:300}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero .est{margin-top:56px;padding-top:26px;border-top:1px solid rgba(243,236,224,.22);display:flex;gap:46px;flex-wrap:wrap;font-size:.88rem;color:#bfae97;letter-spacing:.05em}
+.hero .est b{display:block;font-family:'Cormorant Garamond';font-size:1.8rem;color:var(--maple);font-weight:600;letter-spacing:0}
+
+section{padding:96px 0}
+.sec-head{max-width:60ch;margin-bottom:52px}
+.eyebrow{color:var(--ember);letter-spacing:.26em;text-transform:uppercase;font-size:.71rem;margin-bottom:16px;font-weight:500}
+.sec-head h2{font-size:clamp(1.9rem,4.2vw,3rem);font-weight:500}
+.sec-head p{margin-top:18px;color:var(--gray);font-size:1.06rem;font-weight:300}
+.maplebg{background:var(--maple)}
+
+/* two paths */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line)}
+@media(max-width:780px){.split{grid-template-columns:1fr}}
+.split .s{padding:42px 38px}
+.split .s + .s{border-left:1px solid var(--line)}
+@media(max-width:780px){.split .s + .s{border-left:0;border-top:1px solid var(--line)}}
+.split .s .n{font-family:'Cormorant Garamond';font-size:2.6rem;color:var(--ember);line-height:1;margin-bottom:14px}
+.split .s h3{font-size:1.7rem;margin-bottom:12px;font-weight:500}
+.split .s p{color:var(--gray);font-size:1rem;font-weight:300;margin-bottom:22px}
+
+/* process */
+.steps{counter-reset:st}
+.step{display:grid;grid-template-columns:88px 1fr;gap:28px;padding:30px 0;border-bottom:1px solid var(--line)}
+@media(max-width:640px){.step{grid-template-columns:1fr;gap:8px}}
+.step:last-child{border-bottom:0}
+.step .num{counter-increment:st;font-family:'Cormorant Garamond';font-size:3rem;color:var(--line);line-height:.9;font-weight:600}
+.step .num:before{content:"0" counter(st)}
+.step h4{font-family:'Cormorant Garamond';font-size:1.5rem;margin-bottom:8px;font-weight:600}
+.step p{color:var(--gray);font-size:1rem;font-weight:300}
+.step .when{display:inline-block;margin-top:10px;background:var(--maple);border:1px solid var(--line);color:var(--bark);font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;padding:4px 11px}
+
+/* species */
+.species{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.species .sp{background:var(--shav);padding:28px 26px}
+.species .sp .swatch{width:44px;height:44px;border-radius:50%;margin-bottom:16px;position:relative;overflow:hidden}
+.species .sp .swatch:after{content:"";position:absolute;inset:0;background:repeating-radial-gradient(circle at 50% 50%,transparent 0 3px,rgba(0,0,0,.12) 3px 4px)}
+.species .sp h4{font-family:'Cormorant Garamond';font-size:1.4rem;margin-bottom:8px;font-weight:600}
+.species .sp p{font-size:.95rem;color:var(--gray);font-weight:300}
+
+/* kiln */
+.kiln{background:var(--walnut);color:var(--maple)}
+.kiln .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+@media(max-width:880px){.kiln .wrap{grid-template-columns:1fr}}
+.kiln .eyebrow{color:var(--ember)}
+.kiln h2{color:var(--maple);font-size:clamp(1.9rem,4vw,2.9rem);margin-bottom:22px;font-weight:500}
+.kiln p{color:#ddd0bd;font-size:1.06rem;font-weight:300;margin-bottom:16px}
+.kiln .facts{border:1px solid rgba(243,236,224,.24);padding:32px}
+.kiln .facts h4{font-family:'Cormorant Garamond';color:var(--ember);font-size:1.35rem;margin-bottom:16px;font-weight:600}
+.kiln .facts dl{font-size:.97rem}
+.kiln .facts dt{color:var(--maple);font-weight:500;margin-top:14px;letter-spacing:.03em}
+.kiln .facts dd{color:#bfae97;font-weight:300}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:20px}
+.gal .g{background:var(--maple);border:1px solid var(--line);padding:0;overflow:hidden}
+.gal .g .plate{height:168px;position:relative}
+.gal .g .plate:after{content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(93deg,transparent 0 9px,rgba(0,0,0,.09) 9px 11px),
+             repeating-linear-gradient(87deg,transparent 0 26px,rgba(255,255,255,.14) 26px 29px)}
+.gal .g .cap{padding:18px 20px}
+.gal .g h4{font-family:'Cormorant Garamond';font-size:1.3rem;margin-bottom:5px;font-weight:600}
+.gal .g p{font-size:.9rem;color:var(--gray);font-weight:300}
+.plc{display:inline-block;background:#f0e2c6;color:#7d5a17;font-size:.68rem;font-weight:500;padding:2px 8px;letter-spacing:.09em;text-transform:uppercase;margin-top:8px}
+
+/* about */
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+@media(max-width:860px){.about{grid-template-columns:1fr}}
+.about .tl{border-left:2px solid var(--line);padding-left:28px}
+.about .tl .e{padding-bottom:26px;position:relative}
+.about .tl .e:before{content:"";position:absolute;left:-35px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--ember);border:3px solid var(--shav)}
+.about .tl .e b{font-family:'Cormorant Garamond';font-size:1.45rem;display:block;font-weight:600}
+.about .tl .e p{color:var(--gray);font-size:.99rem;font-weight:300}
+
+/* contact */
+.contact{background:var(--maple)}
+.contact .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:52px}
+@media(max-width:880px){.contact .wrap{grid-template-columns:1fr}}
+.contact h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:18px;font-weight:500}
+.contact p.sub{color:var(--gray);margin-bottom:26px;font-weight:300;font-size:1.05rem}
+.contact .info{line-height:2.1;font-size:1rem;color:var(--gray);font-weight:300}
+.contact .info b{color:var(--ink);font-weight:500}
+form{background:var(--shav);border:1px solid var(--line);padding:30px}
+form h3{font-family:'Cormorant Garamond';font-size:1.6rem;margin-bottom:8px;font-weight:600}
+form .fh{color:var(--gray);font-size:.94rem;font-weight:300;margin-bottom:14px}
+.tabs{display:flex;gap:0;margin-bottom:20px;border:1px solid var(--line)}
+.tabs button{flex:1;background:transparent;border:0;padding:12px 10px;font-family:'Jost';font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;color:var(--gray)}
+.tabs button.on{background:var(--walnut);color:var(--maple)}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:520px){.f2{grid-template-columns:1fr}}
+form label{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);margin:14px 0 6px;font-weight:500}
+form input,form select,form textarea{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:0;font-family:'Jost';font-size:.97rem;background:#fff;color:var(--ink);font-weight:300}
+form textarea{min-height:92px;resize:vertical}
+form .btn{width:100%;margin-top:22px;border:0;cursor:pointer;text-align:center;font-family:'Jost'}
+.fine{font-size:.78rem;color:var(--gray);margin-top:12px;text-align:center;font-weight:300}
+.hide{display:none}
+
+footer{background:var(--walnut-d);color:#a4917b;padding:52px 0 30px;font-size:.93rem;font-weight:300}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(214px,1fr));gap:34px;margin-bottom:32px}
+footer h4{font-family:'Cormorant Garamond';color:var(--maple);font-size:1.3rem;margin-bottom:12px;font-weight:600}
+footer a{color:var(--ember);text-decoration:none}
+footer a:hover{text-decoration:underline}
+footer .bar{border-top:1px solid #43301f;padding-top:20px;font-size:.83rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:9px}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <b>Fruitful Furnishings</b>
+      <span>Sawmill · Dry Kiln · Gary Mead Gallery · Est. 1979</span>
+    </a>
+    <nav class="links">
+      <a href="#milling">Custom Milling</a>
+      <a href="#species">Species</a>
+      <a href="#kiln">The Kiln</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About Gary</a>
+      <a href="#contact">Visit</a>
+    </nav>
+    <a class="btn dark" href="#contact">Mill My Logs</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="kick">Southside Road · Margaretville, New York</div>
+    <h1>Your tree came down. <em>It doesn't have to become firewood.</em></h1>
+    <p class="lead">A sawmill, a dimension mill and a dry kiln on one site in the Catskills — so the walnut that fell in your field in March can be a table in your dining room next year. Bring the log. We'll saw it, dry it, and if you like, build from it.</p>
+    <div class="cta">
+      <a class="btn ember" href="#contact">Send us your logs</a>
+      <a class="btn hollow" href="#gallery">See the gallery</a>
+    </div>
+    <div class="est">
+      <div><b>1979</b>Woodworking shop opened</div>
+      <div><b>1989</b>Sawmill added</div>
+      <div><b>3</b>Mills on one site</div>
+      <div><b>47</b>Years in the Catskills</div>
+    </div>
+  </div>
+</section>
+
+<section id="milling">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Two ways to work with us</div>
+      <h2>One is a service. One is a commission. Most people only know about the second.</h2>
+      <p>Landowners across Delaware County lose good hardwood every winter because nobody told them there is a mill fifteen minutes away that will saw and dry their own logs.</p>
+    </div>
+    <div class="split">
+      <div class="s">
+        <div class="n">I.</div>
+        <h3>Custom sawing, planing &amp; kiln drying</h3>
+        <p>You own the wood. We mill it. Rough-sawn boards, dimension parts, planed stock — kiln dried and stacked, ready for your builder, your cabinetmaker or your own shop. This is the service almost nobody knows exists.</p>
+        <a class="btn dark" href="#contact">Get a milling quote</a>
+      </div>
+      <div class="s">
+        <div class="n">II.</div>
+        <h3>Commissioned pieces &amp; the gallery</h3>
+        <p>Forty-seven years of fine woodworking, and a gallery at the mill site showing one-of-a-kind compositions. A table from the maple that shaded the house. A piece from a tree with a story attached to it.</p>
+        <a class="btn dark" href="#gallery">See what's in the gallery</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="maplebg">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">How custom milling works</div>
+      <h2>Log to lumber, start to finish</h2>
+      <p>The most common reason a landowner doesn't call a sawmill is that they have no idea what the process involves or how long it takes. Here it is, plainly. Timelines shown are typical and confirmed case by case.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num"></div>
+        <div>
+          <h4>Tell us what you have</h4>
+          <p>Species if you know it, rough diameter, length, and how many. A photo of the butt end tells us most of what we need. If you don't know what it is, send the picture — identifying Catskill hardwood is the easy part.</p>
+          <span class="when">Same week</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num"></div>
+        <div>
+          <h4>Getting the log to the mill</h4>
+          <p>Some people bring logs on a trailer. Some need help. We'll tell you honestly whether the log is worth the trip — a log full of fence wire or rot is not, and you should hear that before you pay for a haul.</p>
+          <span class="when">By arrangement</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num"></div>
+        <div>
+          <h4>Sawing to your plan</h4>
+          <p>Thickness, quartersawn or flat, live edge kept or trimmed. What you're building determines how the log gets opened, and that decision can't be undone — so we make it with you, not for you.</p>
+          <span class="when">Scheduled</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num"></div>
+        <div>
+          <h4>Air drying, then the kiln</h4>
+          <p>Freshly sawn boards are stickered and air dried, then finished in the dry kiln to a stable interior moisture content. Skipping this is why homemade slabs cup and split two years after they're built into something.</p>
+          <span class="when">Months, not days</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num"></div>
+        <div>
+          <h4>Dimension milling &amp; planing</h4>
+          <p>Dried stock can be planed and cut to dimension parts, ready to hand to a cabinetmaker or work in your own shop.</p>
+          <span class="when">On request</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num"></div>
+        <div>
+          <h4>Or leave it with us</h4>
+          <p>If you'd rather the wood came back as furniture than as boards, that's the other half of the shop. The commission starts here, with lumber you already own.</p>
+          <span class="when">By design</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="species">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Catskill species</div>
+      <h2>What your tree will actually behave like</h2>
+      <p>Gary spent years on local radio talking through one Catskill species at a time — black walnut, black cherry, black locust, tulip poplar, white cedar, aspen. That series is a decade of knowledge no competitor can copy, and it belongs on this website as the reason a landowner calls here first.</p>
+    </div>
+    <div class="species">
+      <div class="sp"><div class="swatch" style="background:#4a3524"></div><h4>Black Walnut</h4><p>The one everybody hopes they have. Dark heartwood, pale sap, and a value gap between "milled properly" and "cut for firewood" that is measured in thousands.</p></div>
+      <div class="sp"><div class="swatch" style="background:#8a4b2a"></div><h4>Black Cherry</h4><p>Comes off the saw pale and darkens for years afterward. The piece you build will not be the colour it is the day you finish it.</p></div>
+      <div class="sp"><div class="swatch" style="background:#9a7b3c"></div><h4>Black Locust</h4><p>Rot resistant to the point of stubbornness. Wasted indoors — this is outdoor wood: posts, sills, decking that outlives the person who laid it.</p></div>
+      <div class="sp"><div class="swatch" style="background:#b6b184"></div><h4>Tulip Poplar</h4><p>Big, straight, light and stable. Underrated for painted work and secondary parts, and there is a great deal of it in these hills.</p></div>
+      <div class="sp"><div class="swatch" style="background:#cdb191"></div><h4>White Cedar</h4><p>Light, aromatic, weather tolerant. Traditional for anything that lives outside or stores clothing.</p></div>
+      <div class="sp"><div class="swatch" style="background:#ded3bb"></div><h4>Aspen &amp; Poplar</h4><p>Soft, pale, quick growing. Not a trophy log — but it has honest uses, and knowing which is which saves everyone a wasted afternoon.</p></div>
+    </div>
+    <p style="margin-top:22px;color:var(--gray);font-size:.94rem;font-weight:300;max-width:70ch">Species notes above are drawn from the themes of Gary's radio series; final wording to be written with him so it carries his own voice rather than a paraphrase.</p>
+  </div>
+</section>
+
+<section class="kiln" id="kiln">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">The dry kiln</div>
+      <h2>The step that decides whether your table survives its first winter</h2>
+      <p>A board straight off a sawmill is full of water. Build with it and it will move — cupping, checking, pulling joints apart in a heated house. Drying is not an upsell; it is the difference between lumber and firewood with square edges.</p>
+      <p>Air drying gets the wood most of the way. The kiln takes it the rest, to a moisture content that will hold steady in a Catskills house that runs a woodstove all January.</p>
+    </div>
+    <div class="facts">
+      <h4>What to expect</h4>
+      <dl>
+        <dt>Air drying first</dt>
+        <dd>Stickered and stacked with airflow — roughly a year per inch of thickness as a rule of thumb.</dd>
+        <dt>Then the kiln</dt>
+        <dd>Brings interior moisture down to a stable level for indoor furniture and finishes the job properly.</dd>
+        <dt>Why not skip it</dt>
+        <dd>Wet stock built into furniture is the single most common reason a slab table fails.</dd>
+        <dt>Storage</dt>
+        <dd>Stock can wait here while it dries — you don't need a barn to start the process.</dd>
+        <dt>Cost</dt>
+        <dd>Quoted by board foot and species after we see the logs. Published rates to be confirmed with Gary.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="maplebg" id="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Gary Mead Gallery</div>
+      <h2>One-of-a-kind compositions, at the mill site</h2>
+      <p>The gallery sits where the wood is cut, which is unusual and worth saying — visitors can see the log pile, the kiln and the finished piece in the same visit. Images below are placeholders for photography of actual work.</p>
+    </div>
+    <div class="gal">
+      <div class="g"><div class="plate" style="background:linear-gradient(105deg,#5a3f28,#8a5f38)"></div><div class="cap"><h4>Wood compositions</h4><p>Sculptural work built from single pieces with unusual grain, burl or figure.</p><span class="plc">photo placeholder</span></div></div>
+      <div class="g"><div class="plate" style="background:linear-gradient(105deg,#7c4c2a,#b07a45)"></div><div class="cap"><h4>Commissioned tables</h4><p>Built from a client's own tree where the provenance is the point.</p><span class="plc">photo placeholder</span></div></div>
+      <div class="g"><div class="plate" style="background:linear-gradient(105deg,#8e6c3c,#cbab73)"></div><div class="cap"><h4>Casework &amp; cabinetry</h4><p>Fine furniture work in the tradition the shop opened with in 1979.</p><span class="plc">photo placeholder</span></div></div>
+      <div class="g"><div class="plate" style="background:linear-gradient(105deg,#3f3324,#6f5c3f)"></div><div class="cap"><h4>Kiln-dried stock</h4><p>Local hardwood available to builders and cabinetmakers by the board foot.</p><span class="plc">photo placeholder</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="about">
+      <div>
+        <div class="eyebrow">About</div>
+        <h2 style="font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:500;margin-bottom:18px">Gary Mead</h2>
+        <p style="color:var(--gray);font-weight:300;font-size:1.05rem">Raised on a dairy farm in New Kingston, a few miles from where the mill stands. Left farming in 1979 for a woodworking shop, and never left the valley. Everything on this site — the saw, the dimension mill, the kiln, the gallery — was added one piece at a time over forty-seven years.</p>
+      </div>
+      <div class="tl">
+        <div class="e"><b>Raised in New Kingston</b><p>A Delaware County dairy farm, in the heart of the Catskills. Farming didn't take. The woods did.</p></div>
+        <div class="e"><b>1979 — Fruitful Furnishings opens</b><p>A custom furniture shop, built on commissioned fine woodworking.</p></div>
+        <div class="e"><b>Within ten years — the sawmill</b><p>Added to produce dimension parts and, in time, to saw for customers who wanted furniture made from their own trees.</p></div>
+        <div class="e"><b>The dry kiln follows</b><p>Completing the chain: standing tree to finished, stable, buildable lumber, all on one site.</p></div>
+        <div class="e"><b>Catskill Trees on the radio</b><p>A running series on the region's species — walnut, cherry, locust, poplar, cedar, aspen — that made Gary the local authority on what grows here.</p></div>
+        <div class="e"><b>The Gary Mead Gallery</b><p>Opened at the mill site to show one-of-a-kind compositions where the wood was cut.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Come up Southside Road</h2>
+      <p class="sub">Two different conversations, so two different forms. Tell us which one you're here for and you'll get a real answer rather than a general enquiry reply.</p>
+      <div class="info">
+        <b>Fruitful Furnishings &amp; Gary Mead Gallery</b><br>
+        1289 Southside Road<br>
+        Margaretville, NY 12455<br><br>
+        <b>Phone:</b> (845) 586-3638<br>
+        <b>Email:</b> GaryMeadGallery@gmail.com<br>
+        <b>Gallery visits:</b> hours to be confirmed — the finished page publishes real hours or an appointment link, since "call first" loses visitors.
+      </div>
+      <p style="margin-top:24px;color:var(--gray);font-size:.88rem;font-weight:300">Note for Sandro: gary-mead.com currently resolves but returns an empty page body on fetch — no visible content or markup. Confirm in a browser before the outreach email goes out, in case it is a script-only page that our fetcher can't render.</p>
+    </div>
+    <form onsubmit="event.preventDefault();this.querySelector('button.btn').textContent='Sent — Gary will be in touch';">
+      <h3>Get in touch</h3>
+      <div class="fh">Which are you here for?</div>
+      <div class="tabs">
+        <button type="button" class="on" onclick="document.getElementById('mlog').classList.remove('hide');document.getElementById('mcom').classList.add('hide');this.classList.add('on');this.nextElementSibling.classList.remove('on');">Mill my logs</button>
+        <button type="button" onclick="document.getElementById('mcom').classList.remove('hide');document.getElementById('mlog').classList.add('hide');this.classList.add('on');this.previousElementSibling.classList.remove('on');">Commission / visit</button>
+      </div>
+      <div class="f2">
+        <div><label for="n">Name</label><input id="n" type="text" placeholder="First and last"></div>
+        <div><label for="p">Phone</label><input id="p" type="tel" placeholder="(845) 000-0000"></div>
+      </div>
+      <label for="e">Email</label><input id="e" type="email" placeholder="you@email.com">
+
+      <div id="mlog">
+        <div class="f2">
+          <div><label for="sp">Species (if known)</label>
+            <select id="sp"><option>Black walnut</option><option>Black cherry</option><option>Black locust</option><option>Tulip poplar</option><option>White cedar</option><option>Maple</option><option>Ash</option><option>Oak</option><option>Not sure — I'll send a photo</option></select>
+          </div>
+          <div><label for="ct">How many logs?</label><input id="ct" type="text" placeholder="e.g. 3"></div>
+        </div>
+        <label for="dim">Rough diameter &amp; length</label><input id="dim" type="text" placeholder="e.g. about 26 inches across, cut to 9 ft">
+        <label for="lm">What do you want made from it?</label>
+        <textarea id="lm" placeholder="e.g. a walnut came down by the barn in the spring — I'd like enough dried stock for a dining table and two benches"></textarea>
+      </div>
+
+      <div id="mcom" class="hide">
+        <label for="cw">What did you have in mind?</label>
+        <select id="cw"><option>A commissioned piece</option><option>Visiting the gallery</option><option>Buying kiln-dried stock</option><option>Something else</option></select>
+        <label for="cm">Tell us about it</label>
+        <textarea id="cm" placeholder="e.g. we'd like a dining table from the maple that came out of our yard in New Kingston — hoping to visit the gallery first"></textarea>
+      </div>
+
+      <button class="btn ember" type="submit">Send message</button>
+      <div class="fine">Demonstration form — this preview does not store or transmit anything.</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Fruitful Furnishings</h4>
+        <p>1289 Southside Road<br>Margaretville, NY 12455</p>
+        <p style="margin-top:12px"><a href="tel:18455863638">(845) 586-3638</a><br><a href="mailto:GaryMeadGallery@gmail.com">GaryMeadGallery@gmail.com</a></p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <p>Custom sawing<br>Planing &amp; dimension milling<br>Kiln drying<br>Commissioned furniture<br>Kiln-dried local hardwood</p>
+      </div>
+      <div>
+        <h4>On site</h4>
+        <p>Sawmill<br>Dimension mill<br>Dry kiln<br>Gary Mead Gallery</p>
+      </div>
+      <div>
+        <h4>Serving</h4>
+        <p>Margaretville, New Kingston, Arkville, Andes, Roxbury, Halcottsville, Fleischmanns and the Central Catskills</p>
+      </div>
+    </div>
+    <div class="bar">
+      <span>Concept preview prepared by Onyx Rise Media.</span>
+      <span>Est. 1979 · Gallery imagery and pricing shown as placeholders.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

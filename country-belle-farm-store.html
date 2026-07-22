@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Country Belle Farm Store — Silver Springs & Perry, NY | Local Meat, Eggs, Milk & Produce</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf5e9; --cream2:#f4ead4; --butter:#f3c64b; --butter-d:#e0ab1f;
+    --barn:#b23a2e; --barn-d:#8f2c22; --meadow:#5a7d3c; --meadow-d:#46632d; --ink:#33301f;
+    --soft:#6e6a4f; --line:#e3d6b8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Nunito Sans',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+  h1,h2,h3,.disp{font-family:'Fraunces',Georgia,serif}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  /* announce */
+  .announce{background:var(--meadow);color:#fdf6e3;text-align:center;padding:8px;font-size:.9rem;font-weight:600;letter-spacing:.3px}
+  /* nav */
+  .nav{background:var(--cream);border-bottom:2px solid var(--line);padding:14px 0}
+  .nav .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  .brand{font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:var(--barn);display:flex;align-items:center;gap:10px}
+  .brand .mark{width:34px;height:34px;border-radius:50%;background:var(--butter);display:inline-flex;align-items:center;justify-content:center;font-size:1.1rem;border:2px solid var(--barn)}
+  .nav a.call{background:var(--barn);color:#fff;text-decoration:none;font-weight:700;padding:9px 18px;border-radius:30px;font-size:.92rem}
+  /* hero */
+  .hero{background:radial-gradient(circle at 80% 18%,rgba(243,198,75,.35),transparent 45%),var(--cream2);
+    padding:66px 0 60px;position:relative;overflow:hidden}
+  .hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:34px;
+    background:repeating-linear-gradient(90deg,var(--barn) 0 38px,#fff 38px 76px);opacity:.9}
+  .hero .wrap{position:relative;z-index:2}
+  .pill{display:inline-block;background:#fff;border:2px solid var(--butter-d);color:var(--barn);font-weight:700;
+    font-size:.8rem;letter-spacing:1px;padding:5px 14px;border-radius:30px;text-transform:uppercase}
+  .hero h1{font-size:clamp(2.3rem,5.6vw,3.8rem);font-weight:600;margin:18px 0 6px;color:var(--ink);line-height:1.04}
+  .hero h1 em{font-style:italic;color:var(--meadow-d)}
+  .hero p{font-size:1.18rem;max-width:560px;color:#54503a;margin-bottom:26px}
+  .btn{display:inline-block;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:30px;font-size:1rem}
+  .btn.barn{background:var(--barn);color:#fff;border-bottom:3px solid var(--barn-d)}
+  .btn.out{background:transparent;border:2px solid var(--meadow);color:var(--meadow-d);margin-left:8px}
+  /* carry */
+  section{padding:62px 0}
+  .head{text-align:center;max-width:620px;margin:0 auto}
+  .eyebrow{color:var(--meadow-d);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.82rem}
+  h2{font-size:clamp(1.8rem,4.2vw,2.7rem);font-weight:600;margin:8px 0 10px}
+  .head p{color:var(--soft);font-size:1.08rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:16px;margin-top:38px}
+  .item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 18px;text-align:center}
+  .item .ic{width:52px;height:52px;border-radius:50%;background:var(--cream2);display:flex;align-items:center;justify-content:center;
+    margin:0 auto 12px;font-size:1.5rem;border:2px solid var(--butter)}
+  .item h3{font-size:1.12rem;font-weight:600;margin-bottom:4px}
+  .item p{font-size:.9rem;color:var(--soft)}
+  /* makers band */
+  .makers{background:var(--meadow);color:#fbf5e9}
+  .makers h2{color:#fff}
+  .makers .head p{color:#e4eed4}
+  .mrow{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:30px}
+  .chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);border-radius:30px;padding:9px 18px;font-weight:600;font-size:.95rem}
+  .makers .ph-note{text-align:center;margin-top:22px;font-size:.85rem;color:#dbe7c8}
+  /* locations */
+  .loc{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:38px}
+  .store{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .store .cap{padding:14px 22px;color:#fff;font-family:'Fraunces',serif;font-weight:600;font-size:1.25rem}
+  .store.silver .cap{background:var(--barn)}
+  .store.perry .cap{background:var(--meadow-d)}
+  .store .body{padding:22px}
+  .store .body p{margin-bottom:7px}
+  .store .addr{font-size:1.05rem;font-weight:700;color:var(--ink)}
+  .store .hrs{font-size:.95rem;color:var(--soft)}
+  .ph{background:#fff3cf;color:#7a5a00;font-size:.72rem;padding:2px 7px;border-radius:4px;font-weight:700}
+  /* story */
+  .story{background:var(--cream2);text-align:center}
+  .story p{max-width:680px;margin:14px auto 0;font-size:1.12rem;color:#4f4b35}
+  /* cta */
+  .endcta{background:var(--barn);color:#fff;text-align:center}
+  .endcta h2{color:#fff}
+  .endcta a{display:inline-block;background:#fff;color:var(--barn);font-weight:700;text-decoration:none;
+    padding:14px 30px;border-radius:30px;margin-top:18px;font-size:1.05rem}
+  footer{background:#3a3622;color:#d8cfa9;text-align:center;padding:34px 0;font-size:.9rem}
+  footer .disp{color:var(--butter);font-size:1.25rem;margin-bottom:6px}
+  @media(max-width:720px){.loc{grid-template-columns:1fr}.btn.out{margin-left:0;margin-top:10px}}
+</style>
+</head>
+<body>
+<div class="announce">Two ways to shop local in Wyoming County — our Silver Springs farm store and our market in downtown Perry</div>
+
+<div class="nav">
+  <div class="wrap">
+    <div class="brand"><span class="mark">🐄</span> Country Belle Farm Store</div>
+    <a class="call" href="tel:5852332210">(585) 233-2210</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="pill">Family farm store · Silver Springs + Perry</span>
+    <h1>Local meat, eggs and milk —<br><em>and your neighbors' best</em>, under one roof.</h1>
+    <p>Farm-fresh meats, eggs, milk, produce and baked goods from our family and other Wyoming County makers — minutes from Silver Lake.</p>
+    <a class="btn barn" href="#carry">See what we carry</a>
+    <a class="btn out" href="#locations">Find both stores</a>
+  </div>
+</header>
+
+<section id="carry">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">On our shelves</p>
+      <h2>One stop for the farm-fresh staples</h2>
+      <p>Skip the chain run. Stock the basics here and pick up something from a neighbor's farm while you're at it.</p>
+    </div>
+    <div class="grid">
+      <div class="item"><div class="ic">🥩</div><h3>Farm-fresh meat</h3><p>Local beef, pork and more, kept in the cooler.</p></div>
+      <div class="item"><div class="ic">🥚</div><h3>Eggs</h3><p>Fresh from the farm — never far from the nest.</p></div>
+      <div class="item"><div class="ic">🥛</div><h3>Milk</h3><p>Local milk from Wyoming County's dairy country.</p></div>
+      <div class="item"><div class="ic">🥬</div><h3>Produce</h3><p>Seasonal fruit and vegetables as they come in.</p></div>
+      <div class="item"><div class="ic">🍞</div><h3>Baked goods</h3><p>Fresh breads and treats from local kitchens.</p></div>
+      <div class="item"><div class="ic">🍯</div><h3>Local makers</h3><p>Honey, preserves and more from area producers.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="makers">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow" style="color:#dcebc6">Stocked by your neighbors</p>
+      <h2>We carry the makers down the road</h2>
+      <p>Part farm store, part showcase for the people growing and making things across Wyoming County.</p>
+    </div>
+    <div class="mrow">
+      <span class="chip">Local beef &amp; pork</span>
+      <span class="chip">Farm eggs</span>
+      <span class="chip">Wyoming Co. dairy</span>
+      <span class="chip">Honey &amp; maple</span>
+      <span class="chip">Baked goods</span>
+      <span class="chip">Seasonal produce</span>
+    </div>
+    <p class="ph-note"><span class="ph">PLACEHOLDER</span> swap in the real names of the local makers/farms you carry before publishing.</p>
+  </div>
+</section>
+
+<section id="locations">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Two locations</p>
+      <h2>Find the right Country Belle for your trip</h2>
+      <p>One out by Silver Lake, one in the Village of Perry. Here's where to go and when.</p>
+    </div>
+    <div class="loc">
+      <div class="store silver">
+        <div class="cap">Silver Springs · the farm store</div>
+        <div class="body">
+          <p class="addr">6694 Abbott Road, Silver Springs, NY 14550</p>
+          <p class="hrs"><span class="ph">PLACEHOLDER</span> store days &amp; hours — confirm before publishing.</p>
+          <p style="margin-top:8px;font-size:.95rem;color:var(--soft)">Just off the Silver Lake loop — easy to fold into a lake or Letchworth day.</p>
+          <p style="margin-top:10px"><a href="tel:5852332210" style="color:var(--barn);font-weight:700;text-decoration:none">Call (585) 233-2210 ›</a></p>
+        </div>
+      </div>
+      <div class="store perry">
+        <div class="cap">Perry · the downtown market</div>
+        <div class="body">
+          <p class="addr"><span class="ph">PLACEHOLDER</span> downtown Perry market address</p>
+          <p class="hrs"><span class="ph">PLACEHOLDER</span> market days &amp; hours — confirm before publishing.</p>
+          <p style="margin-top:8px;font-size:.95rem;color:var(--soft)">Right in the village — handy for a quick local grab between errands.</p>
+          <p style="margin-top:10px"><a href="https://www.instagram.com/countrybellefarmmarket" style="color:var(--meadow-d);font-weight:700;text-decoration:none">See it on Instagram ›</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap">
+    <p class="eyebrow">Why we opened</p>
+    <h2>A farm store the way it ought to be</h2>
+    <p>Country Belle started so the meat, eggs, milk and produce raised right here could be bought right here — alongside the breads, honey and goods our neighbors make. Friendly faces, fair prices, and food you can trace to a farm down the road.</p>
+  </div>
+</section>
+
+<section class="endcta">
+  <div class="wrap" style="text-align:center">
+    <h2>Stop in this week</h2>
+    <p style="max-width:520px;margin:10px auto 0;color:#ffe3d8">Call ahead to check what's fresh, or just swing by on your way to the lake.</p>
+    <a href="tel:5852332210">Call (585) 233-2210</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="disp">Country Belle Farm Store</div>
+    <p>6694 Abbott Road, Silver Springs, NY 14550 · (585) 233-2210 · Also in downtown Perry</p>
+    <p style="margin-top:10px;font-size:.78rem;color:#9a9069">Preview concept prepared by Onyx Rise Media for review. Hours, the Perry address and the maker list to be confirmed by the owner.</p>
+  </div>
+</footer>
+</body>
+</html>

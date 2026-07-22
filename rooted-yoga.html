@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rooted Yoga · Wappingers Falls & Poughkeepsie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--forest:#2f4a3c;--forest-d:#223729;--terra:#c8714e;--oat:#f3eee3;--ink:#27302a;--soft:#5d6a60;--line:#ded6c4}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--oat);line-height:1.7;font-weight:300}
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.12}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+
+  nav{position:sticky;top:0;z-index:50;background:rgba(243,238,227,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .navin{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:600;color:var(--forest);letter-spacing:.5px}
+  .navlinks{display:flex;gap:28px;align-items:center}
+  .navlinks a{font-size:.88rem;letter-spacing:.4px;color:var(--soft)}
+  .btn{display:inline-block;background:var(--forest);color:var(--oat);padding:11px 24px;border-radius:4px;font-size:.86rem;letter-spacing:.5px;transition:.2s;border:none;cursor:pointer}
+  .btn:hover{background:var(--forest-d)}
+  .btn-terra{background:var(--terra)}.btn-terra:hover{background:#b15f3f}
+  .btn-out{background:transparent;border:1px solid var(--forest);color:var(--forest)}
+  .btn-out:hover{background:var(--forest);color:var(--oat)}
+
+  /* centered hero w/ monogram */
+  .hero{text-align:center;padding:90px 0 72px}
+  .mono{width:90px;height:90px;border-radius:50%;border:1px solid var(--terra);display:flex;align-items:center;justify-content:center;margin:0 auto 28px;font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--terra)}
+  .kicker{text-transform:uppercase;letter-spacing:3.5px;font-size:.76rem;color:var(--terra);margin-bottom:20px}
+  .hero h1{font-size:clamp(3rem,7vw,5rem);font-weight:500;max-width:16ch;margin:0 auto 22px;letter-spacing:-.5px}
+  .hero p{font-size:1.14rem;max-width:54ch;margin:0 auto 30px;color:var(--soft)}
+  .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .badge{display:inline-flex;align-items:center;gap:8px;margin-top:26px;font-size:.84rem;letter-spacing:1px;text-transform:uppercase;color:var(--forest)}
+  .badge::before{content:"★";color:var(--terra)}
+
+  .section{padding:66px 0}
+  .eyebrow{text-transform:uppercase;letter-spacing:2.5px;font-size:.74rem;color:var(--terra);margin-bottom:10px}
+  .section h2{font-size:clamp(2.2rem,4.5vw,3.2rem);font-weight:500;margin-bottom:6px}
+
+  /* menu w/ dotted leaders */
+  .menu{margin-top:30px}
+  .item{display:flex;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line)}
+  .item .nm{font-family:'Cormorant Garamond',serif;font-size:1.55rem;color:var(--forest);white-space:nowrap}
+  .item .ds{font-size:.92rem;color:var(--soft);padding:0 12px}
+  .leader{flex:1;border-bottom:1px dotted #c8bfa9;transform:translateY(-5px)}
+  .item .pr{font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--terra);white-space:nowrap}
+
+  /* split feature */
+  .feature{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+  .feature .img{min-height:420px;background:linear-gradient(rgba(47,74,60,.3),rgba(34,55,41,.5)),url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:var(--forest)}
+  .feature .txt{padding:50px 46px;background:#fff}
+  .feature .txt h3{font-size:2.1rem;margin-bottom:16px;color:var(--forest)}
+  .feature .txt p{margin-bottom:14px;color:var(--soft)}
+  .twoloc{display:flex;gap:24px;margin-top:18px}
+  .twoloc div{flex:1}
+  .twoloc b{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--terra);display:block}
+  .twoloc span{font-size:.9rem;color:var(--soft)}
+
+  /* image strip */
+  .strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:6px}
+  .strip div{height:200px;background-size:cover;background-position:center;border-radius:6px}
+  .t1{background:linear-gradient(rgba(47,74,60,.15),rgba(34,55,41,.3)),url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=1400&q=80');background-color:var(--forest)}
+  .t2{background:linear-gradient(rgba(200,113,78,.18),rgba(177,95,63,.3)),url('https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&w=1400&q=80');background-color:var(--terra)}
+  .t3{background:linear-gradient(rgba(47,74,60,.18),rgba(34,55,41,.3)),url('https://images.unsplash.com/photo-1552196563-55cd4e45efb3?auto=format&fit=crop&w=1400&q=80');background-color:var(--forest)}
+  .t4{background:linear-gradient(rgba(200,113,78,.18),rgba(177,95,63,.3)),url('https://images.unsplash.com/photo-1588286840104-8957b019727f?auto=format&fit=crop&w=1400&q=80');background-color:var(--terra)}
+
+  /* contact panel */
+  .panel{background:var(--forest-d);color:var(--oat);border-radius:10px;padding:54px 48px}
+  .panel .eyebrow{color:var(--terra)}
+  .panel h2{color:var(--oat)}
+  .pgrid{display:grid;grid-template-columns:1fr 1fr;gap:42px;margin-top:24px}
+  .panel label{display:block;font-size:.78rem;letter-spacing:1px;text-transform:uppercase;margin:14px 0 6px;color:#bcc8bd}
+  .panel input,.panel textarea{width:100%;padding:11px 14px;border:1px solid #44604f;background:#2a4135;color:var(--oat);border-radius:6px;font-family:inherit;font-size:.95rem}
+  .panel input::placeholder,.panel textarea::placeholder{color:#9fb0a3}
+  .panel .info p{margin-bottom:8px;color:#e3e7df}
+  .panel .info .lbl{color:var(--terra);font-size:.76rem;letter-spacing:1.5px;text-transform:uppercase;margin-top:16px;display:block}
+  .thanks{display:none;background:#2a4135;border-radius:8px;padding:28px;margin-top:14px}
+  .thanks.show{display:block}
+
+  footer{text-align:center;padding:46px 0;font-size:.84rem;color:var(--soft);border-top:1px solid var(--line);margin-top:60px}
+
+  @media(max-width:860px){
+    .navlinks a:not(.btn){display:none}
+    .feature{grid-template-columns:1fr}.feature .img{min-height:260px}
+    .pgrid{grid-template-columns:1fr;gap:28px}
+    .strip{grid-template-columns:1fr 1fr}
+    .item{flex-wrap:wrap}.item .ds{flex-basis:100%;padding:6px 0 0}.leader{display:none}
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap navin">
+    <a href="#top" class="brand">Rooted Yoga</a>
+    <div class="navlinks">
+      <a href="#classes">Classes</a>
+      <a href="#about">Studios</a>
+      <a href="#training">Teacher Training</a>
+      <a href="#visit" class="btn">Book a class</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero wrap" id="top">
+  <div class="mono">R</div>
+  <div class="kicker">Wappingers Falls & Poughkeepsie</div>
+  <h1>Built on breath, grown over years.</h1>
+  <p>An award-winning Hudson Valley studio with two homes and one philosophy: a strong, honest practice that meets you where you are — heated vinyasa, slow yin, and the training to teach it yourself.</p>
+  <div class="ctas">
+    <a href="#visit" class="btn">Reserve a class</a>
+    <a href="#classes" class="btn btn-out">View schedule</a>
+  </div>
+  <div class="badge">Award-winning Hudson Valley studio</div>
+</header>
+
+<section class="section wrap" id="classes">
+  <div class="eyebrow">Practice with us</div>
+  <h2>Classes</h2>
+  <div class="menu">
+    <div class="item">
+      <span class="nm">Heated Vinyasa</span>
+      <span class="ds">A strong, sweaty flow in a warm room. Build heat, find focus.</span>
+      <span class="leader"></span><span class="pr">$22</span>
+    </div>
+    <div class="item">
+      <span class="nm">Slow Flow Vinyasa</span>
+      <span class="ds">Unheated, deliberate movement linked to breath. Great all-rounder.</span>
+      <span class="leader"></span><span class="pr">$20</span>
+    </div>
+    <div class="item">
+      <span class="nm">Yin & Deep Stretch</span>
+      <span class="ds">Long-held floor poses for the connective tissue. Quiet and grounding.</span>
+      <span class="leader"></span><span class="pr">$20</span>
+    </div>
+    <div class="item">
+      <span class="nm">Foundations</span>
+      <span class="ds">New to it all? A patient, unheated class to learn the building blocks.</span>
+      <span class="leader"></span><span class="pr">$18</span>
+    </div>
+    <div class="item">
+      <span class="nm">Unlimited Monthly</span>
+      <span class="ds">Every class, both studios, as often as you like.</span>
+      <span class="leader"></span><span class="pr">$129</span>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" id="about">
+  <div class="feature">
+    <div class="img" role="img" aria-label="Practitioners in a warm yoga studio"></div>
+    <div class="txt">
+      <div class="eyebrow">Two studios, one practice</div>
+      <h3>Roots that run deep in the valley.</h3>
+      <p>Rooted Yoga has been a fixture of the mid-Hudson scene long enough to earn the awards on the wall — and the regulars who've practiced here for years.</p>
+      <p>Two locations mean you can catch a heated morning flow near home and a yin class across town on the way back. Same teachers, same standard, two front doors.</p>
+      <div class="twoloc">
+        <div><b>Wappingers Falls</b><span>Heated vinyasa & yin</span></div>
+        <div><b>Poughkeepsie</b><span>Slow flow & foundations</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" id="training">
+  <div class="eyebrow">Go deeper</div>
+  <h2 style="margin-bottom:14px">Teacher training</h2>
+  <p style="max-width:60ch;color:var(--soft);margin-bottom:8px">Ready to teach, or just to understand your practice from the inside out? Rooted's 200-hour training runs in cohorts at the Wappingers Falls studio — anatomy, sequencing, philosophy, and real teaching hours with mentorship. Ask about the next start date.</p>
+  <a href="#visit" class="btn btn-terra" style="margin-top:14px">Ask about teacher training</a>
+</section>
+
+<section class="section wrap">
+  <div class="eyebrow">Inside Rooted</div>
+  <h2 style="margin-bottom:20px">The studios</h2>
+  <div class="strip">
+    <div class="t1" role="img" aria-label="Vinyasa flow class"></div>
+    <div class="t2" role="img" aria-label="Yin floor practice"></div>
+    <div class="t3" role="img" aria-label="Group standing pose"></div>
+    <div class="t4" role="img" aria-label="Quiet seated breathing"></div>
+  </div>
+</section>
+
+<section class="section wrap" id="visit">
+  <div class="panel">
+    <div class="eyebrow">Get started</div>
+    <h2>Book your first class</h2>
+    <div class="pgrid">
+      <form onsubmit="ryDone(event)">
+        <label for="ryn">Name</label>
+        <input id="ryn" placeholder="Your name" required>
+        <label for="rye">Email</label>
+        <input id="rye" type="email" placeholder="you@email.com" required>
+        <label for="ryl">Which studio?</label>
+        <input id="ryl" placeholder="Wappingers Falls or Poughkeepsie">
+        <label for="rym">What are you after?</label>
+        <textarea id="rym" rows="3" placeholder="Heated flow, gentle yin, teacher training info…"></textarea>
+        <br><br><button type="submit" class="btn btn-terra">Send & book</button>
+      </form>
+      <div class="info">
+        <span class="lbl">Email</span>
+        <p><a href="mailto:rootedyogawappingers@gmail.com">rootedyogawappingers@gmail.com</a></p>
+        <span class="lbl">Locations</span>
+        <p>Wappingers Falls, NY</p>
+        <p>Poughkeepsie, NY</p>
+        <span class="lbl">First class</span>
+        <p>Arrive 10 minutes early. Mats available if you need one.</p>
+      </div>
+    </div>
+    <div class="thanks" id="ryThanks">
+      <h3 style="color:var(--oat);font-size:1.6rem">Thank you — we've got it.</h3>
+      <p style="color:#e3e7df">We'll email you back with class times at both studios and what to bring for your first practice.</p>
+    </div>
+  </div>
+</section>
+
+<footer>Website preview by Onyx Rise Media</footer>
+
+<script>
+function ryDone(e){e.preventDefault();document.querySelector('#visit form').style.display='none';document.getElementById('ryThanks').classList.add('show');}
+</script>
+</body>
+</html>

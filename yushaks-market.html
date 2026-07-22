@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yushak's Market — Butcher &amp; Grocery, Shushan NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--kraft:#e8d9bf;--kraft-dark:#d9c49e;--ink:#2e2119;--case-red:#8f2416;--cream:#faf4e8;--twine:#a58a5f}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Serif 4',Georgia,serif;background:var(--kraft);color:var(--ink);line-height:1.6}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.pricecard b{font-family:'Alfa Slab One',serif;font-weight:400}
+.twine{border:0;border-top:3px dashed var(--twine);margin:0}
+/* top bar */
+.bar{background:var(--case-red);color:var(--cream);padding:10px 0;font-size:.95rem;text-align:center}
+.bar a{color:var(--cream);font-weight:600;text-decoration:none}
+/* hero */
+header{background:repeating-linear-gradient(-45deg,var(--kraft),var(--kraft) 26px,var(--kraft-dark) 26px,var(--kraft-dark) 28px);padding:64px 0 48px}
+.stamp{display:inline-block;border:3px solid var(--case-red);color:var(--case-red);padding:5px 14px;border-radius:4px;transform:rotate(-2deg);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;margin-bottom:22px}
+header h1{font-size:clamp(2.1rem,5.4vw,3.6rem);line-height:1.12;max-width:19ch}
+header p.sub{font-size:1.2rem;max-width:52ch;margin:18px 0 28px}
+.cta{display:inline-block;background:var(--case-red);color:var(--cream);text-decoration:none;padding:15px 30px;border-radius:6px;font-size:1.05rem;font-weight:600;box-shadow:4px 4px 0 var(--ink)}
+.cta.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink);box-shadow:none;margin-left:12px}
+.hourstrip{margin-top:34px;background:var(--cream);border:2px solid var(--ink);border-radius:8px;display:inline-flex;gap:26px;flex-wrap:wrap;padding:12px 22px;font-size:.98rem}
+.hourstrip span b{color:var(--case-red)}
+/* counter grid */
+section{padding:58px 0}
+.kicker{color:var(--case-red);text-transform:uppercase;letter-spacing:.14em;font-weight:600;font-size:.82rem}
+h2{font-size:clamp(1.5rem,3.4vw,2.2rem);margin:8px 0 26px}
+.counter{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.pricecard{background:var(--cream);border:2px solid var(--ink);border-radius:8px;padding:22px;position:relative}
+.pricecard::before{content:"";position:absolute;top:-9px;left:50%;transform:translateX(-50%);width:70px;height:16px;background:rgba(165,138,95,.55);border-radius:2px}
+.pricecard b{display:block;font-size:1.06rem;margin-bottom:8px}
+.pricecard p{font-size:.95rem}
+/* sausage band */
+.band{background:var(--case-red);color:var(--cream)}
+.band h2{color:var(--cream)}
+.band .kicker{color:#f2c9a8}
+.band p{max-width:62ch}
+.band .note{font-style:italic;font-size:.9rem;margin-top:14px;color:#f2c9a8}
+/* drive section */
+.drive ul{list-style:none;margin-top:6px}
+.drive li{padding:12px 0 12px 34px;position:relative;border-bottom:1px dashed var(--twine);max-width:62ch}
+.drive li::before{content:"✂";position:absolute;left:0;color:var(--case-red)}
+/* reviews */
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.rev{background:var(--cream);border-left:6px solid var(--case-red);padding:20px;border-radius:0 8px 8px 0}
+.rev small{display:block;margin-top:10px;color:#6d5a44}
+/* find + contact */
+.find{background:var(--ink);color:var(--kraft)}
+.find h2{color:var(--kraft)}
+.find .kicker{color:#d8a06b}
+.findgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px}
+.findgrid a{color:#f2c9a8}
+.callbox{background:var(--case-red);border-radius:10px;padding:26px;text-align:center}
+.callbox a.big{color:var(--cream);font-family:'Alfa Slab One',serif;font-size:1.5rem;text-decoration:none;display:block;margin:8px 0}
+footer{background:var(--ink);color:#b9a488;text-align:center;padding:20px;font-size:.85rem;border-top:3px dashed var(--twine)}
+@media(max-width:600px){.cta.ghost{margin-left:0;margin-top:10px}}
+</style>
+</head>
+<body>
+<div class="bar">Custom cuts &amp; holiday sausage orders — call <a href="tel:+15188547519">(518) 854-7519</a></div>
+
+<header>
+  <div class="wrap">
+    <div class="stamp">Shushan, New York · 80-some years &amp; counting*</div>
+    <h1>A real butcher counter, eighty-some years deep in the Battenkill valley.</h1>
+    <p class="sub">Yushak's is the market Shushan runs on: hand-cut meats, house-made sausage, a proper deli, and the groceries that save you the twenty-minute drive to a supermarket.</p>
+    <a class="cta" href="tel:+15188547519">Call the counter</a>
+    <a class="cta ghost" href="#find">Hours &amp; directions</a>
+    <div class="hourstrip"><span><b>Open daily</b> 9am–6pm</span><span><b>Phone orders</b> welcome</span><span><b>Main St</b>, Shushan</span></div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">The counter</span>
+    <h2>Ask for it the way you actually want it</h2>
+    <div class="counter">
+      <div class="pricecard"><b>Hand-cut meats</b><p>Steaks, roasts, and chops cut to your thickness while you wait — not shrink-wrapped last Tuesday.</p></div>
+      <div class="pricecard"><b>House sausage</b><p>The custom sausages regulars talk about — ask what's in the case this week or order your own batch.</p></div>
+      <div class="pricecard"><b>Deli sandwiches</b><p>Sliced-to-order deli and sandwiches worth the stop between Salem and the Vermont line.</p></div>
+      <div class="pricecard"><b>Village grocery</b><p>Staples, produce, and the forgotten dinner ingredient — without leaving the hamlet.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <section>
+    <div class="wrap">
+      <span class="kicker">The house specialty</span>
+      <h2>Sausage made in the back, sold over the counter</h2>
+      <p>Customers call Yushak's sausage some of the best in the region — and the varieties change, so the only reliable menu is the one behind the glass. Call ahead for holiday orders, bulk batches, or a flavor you had once and can't stop thinking about.</p>
+      <p class="note">Weekly case list posted here once the site goes live — [PLACEHOLDER: current sausage &amp; specials list from the Yushaks].</p>
+    </div>
+  </section>
+</div>
+
+<section class="drive">
+  <div class="wrap">
+    <span class="kicker">Worth the drive</span>
+    <h2>Why the parking lot has Vermont plates</h2>
+    <ul>
+      <li>Fifteen minutes from Arlington and the covered bridge — the closest full meat counter to the upper Battenkill.</li>
+      <li>Anglers stock coolers here before a day on the river; farm families order freezer beef cuts by phone.</li>
+      <li>One family name over the door for more than eight decades — the third-generation kind of place supermarkets can't copy.</li>
+    </ul>
+  </div>
+</section>
+
+<hr class="twine">
+
+<section>
+  <div class="wrap">
+    <span class="kicker">What customers say</span>
+    <h2>4.9 stars across 50+ local reviews</h2>
+    <div class="reviews">
+      <div class="rev">Called "absolutely one of the best meat markets in the region," with custom sausages you won't find elsewhere.<small>— paraphrased from public Facebook reviews</small></div>
+      <div class="rev">"An old-fashioned market with the most attentive service" — the kind of counter where they know your usual order.<small>— paraphrased from public reviews</small></div>
+      <div class="rev">Short version from one regular: a "damn good butcher."<small>— paraphrased from public Facebook reviews</small></div>
+    </div>
+  </div>
+</section>
+
+<div class="find" id="find">
+  <section>
+    <div class="wrap">
+      <span class="kicker">Find the market</span>
+      <h2>On Main Street in Shushan</h2>
+      <div class="findgrid">
+        <div><p><b>Address</b><br>3 Main St, Shushan, NY 12873<br><em>[CONFIRM: chamber directory lists 1042 County Route 61]</em></p><p style="margin-top:14px"><b>Open daily</b> 9am–6pm</p></div>
+        <div><p><b>Follow the case</b><br>Weekly specials and sausage drops post to <a href="https://www.instagram.com/yushaksmarket/">Instagram @yushaksmarket</a> and Facebook.</p></div>
+        <div class="callbox"><span class="kicker" style="color:#f2c9a8">Order by phone</span><a class="big" href="tel:+15188547519">(518) 854-7519</a><p>Custom cuts, holiday hams, sausage batches — say when you're coming and it'll be wrapped.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>Yushak's Market · Shushan, NY · *founding year to be confirmed with the family — "over 80 years" per Cambridge Valley Chamber of Commerce. Website concept preview by Onyx Rise Media.</footer>
+</body>
+</html>

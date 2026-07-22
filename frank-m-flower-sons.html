@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frank M. Flower &amp; Sons — Oyster Bay Shellfish Since 1887</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Spectral:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0e2436; --navy2:#16344b; --deep:#0a1b29; --brass:#bd9450; --brass-d:#9a7637;
+  --shell:#f3ecdd; --shell2:#e7dcc6; --foam:#dfeaee; --ink:#13212b; --paper:#f7f2e7; --line:#ddd2bb;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Spectral',serif;color:var(--ink);background:var(--paper);line-height:1.7}
+.disp{font-family:'Playfair Display',serif}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+.btn{display:inline-block;background:var(--brass);color:#1a1205;font-weight:600;text-decoration:none;padding:13px 28px;letter-spacing:.5px;border-radius:1px;transition:.14s;border:1px solid var(--brass-d)}
+.btn:hover{background:var(--brass-d);color:#fff}
+.btn.out{background:transparent;color:var(--shell);border:1px solid var(--brass)}
+.btn.out:hover{background:var(--brass);color:#1a1205}
+
+nav{background:var(--deep);border-bottom:1px solid #1d3a52}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{color:var(--shell);line-height:1.1}
+.brand b{font-family:'Playfair Display',serif;font-size:1.32rem;display:block;letter-spacing:.5px}
+.brand small{color:var(--brass);font-size:.62rem;letter-spacing:4px;text-transform:uppercase}
+.navlinks{display:flex;gap:28px;color:#cdd9df;font-size:.95rem;letter-spacing:.3px}
+.navlinks a{text-decoration:none}.navlinks a:hover{color:var(--brass)}
+@media(max-width:860px){.navlinks{display:none}}
+
+.hero{position:relative;color:var(--shell);text-align:center;padding:108px 0 116px;
+  background:
+   radial-gradient(120% 90% at 50% -10%,rgba(189,148,80,.16),transparent 60%),
+   linear-gradient(180deg,#16344b 0%,#0e2436 60%,#0a1b29 100%)}
+.seal{width:108px;height:108px;border:2px solid var(--brass);border-radius:50%;margin:0 auto 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--brass);font-family:'Playfair Display',serif}
+.seal b{font-size:1.7rem;line-height:1}
+.seal span{font-size:.56rem;letter-spacing:3px;text-transform:uppercase;margin-top:4px;color:#d8c39a}
+.hero h1{font-family:'Playfair Display',serif;font-weight:800;font-size:3.2rem;line-height:1.08;max-width:18ch;margin:0 auto}
+.hero .sub{font-size:1.25rem;max-width:54ch;margin:18px auto 28px;color:#e3dccb}
+.hero .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+@media(max-width:600px){.hero h1{font-size:2.2rem}}
+
+.rule{background:var(--brass);color:#1a1205;text-align:center;font-family:'Playfair Display',serif;letter-spacing:3px;text-transform:uppercase;font-size:.82rem;padding:12px 0}
+
+section{padding:78px 0}
+.shead{text-align:center;max-width:60ch;margin:0 auto 42px}
+.shead .k{color:var(--brass-d);letter-spacing:4px;text-transform:uppercase;font-size:.74rem}
+.shead h2{font-family:'Playfair Display',serif;font-size:2.4rem;margin:8px 0 6px}
+.shead p{color:#4f5b62}
+
+.story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+@media(max-width:860px){.story .wrap{grid-template-columns:1fr}}
+.story .k{color:var(--brass-d);letter-spacing:4px;text-transform:uppercase;font-size:.74rem}
+.story h2{font-family:'Playfair Display',serif;font-size:2.3rem;margin:8px 0 14px;line-height:1.12}
+.story p{color:#33424c;margin-bottom:14px}
+.story .plate{background:var(--navy);color:var(--shell);padding:34px;border:1px solid #1d3a52;border-radius:2px}
+.story .plate .yr{font-family:'Playfair Display',serif;font-size:3.4rem;color:var(--brass)}
+.story .plate .yr span{font-size:1rem;letter-spacing:2px;text-transform:uppercase;color:#cdd9df;display:block;margin-top:-6px}
+.story .plate ul{list-style:none;margin-top:18px}
+.story .plate li{padding:10px 0;border-bottom:1px solid #1d3a52;display:flex;justify-content:space-between;gap:14px;color:#dfe7ec}
+.story .plate li:last-child{border-bottom:0}
+.story .plate li b{color:var(--brass);font-family:'Playfair Display',serif}
+
+.harvest{background:var(--shell2)}
+.harvest .two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:760px){.harvest .two{grid-template-columns:1fr}}
+.h{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--navy);border-radius:2px;padding:30px}
+.h .ic{font-size:2.3rem}
+.h h3{font-family:'Playfair Display',serif;font-size:1.55rem;margin:8px 0 8px}
+.h p{color:#4a5660}
+.h .tag{display:inline-block;margin-top:14px;color:var(--brass-d);letter-spacing:2px;text-transform:uppercase;font-size:.72rem}
+
+.grounds{background:var(--navy);color:var(--shell)}
+.grounds .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center}
+@media(max-width:860px){.grounds .wrap{grid-template-columns:1fr}}
+.grounds .k{color:var(--brass);letter-spacing:4px;text-transform:uppercase;font-size:.74rem}
+.grounds h2{font-family:'Playfair Display',serif;font-size:2.2rem;margin:8px 0 14px}
+.grounds p{color:#cfdae0;margin-bottom:13px}
+.grounds .card{background:linear-gradient(160deg,#16344b,#0a1b29);border:1px solid #20405a;border-radius:2px;padding:30px;text-align:center}
+.grounds .card .pin{font-size:2.3rem}
+.grounds .card b{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--brass);display:block;margin-top:8px}
+.grounds .card .l{color:#cfdae0;margin-top:10px;font-size:.95rem}
+
+.order{text-align:center;background:
+  radial-gradient(120% 100% at 50% 0,rgba(189,148,80,.12),transparent 60%),var(--deep);color:var(--shell)}
+.order h2{font-family:'Playfair Display',serif;font-size:2.5rem}
+.order p{color:#cfdae0;max-width:52ch;margin:14px auto 24px}
+.order .phone{font-family:'Playfair Display',serif;font-size:2.1rem;color:var(--brass)}
+.order .addr{color:#bcc8cf;margin-top:8px}
+.order .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.note{font-size:.8rem;color:#8595a0;font-style:italic;margin-top:30px}
+
+footer{background:#081521;color:#7f909b;text-align:center;padding:28px 0;font-size:.9rem}
+footer b{font-family:'Playfair Display',serif;color:var(--brass)}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="brand"><b>Frank M. Flower &amp; Sons</b><small>Oyster Bay · est. 1887</small></div>
+  <div class="navlinks">
+    <a href="#story">Our Story</a>
+    <a href="#harvest">Clams &amp; Oysters</a>
+    <a href="#grounds">The Grounds</a>
+    <a href="#order">Wholesale</a>
+  </div>
+  <a href="#order" class="btn">Wholesale orders</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="seal"><b>1887</b><span>Shellfishmen</span></div>
+  <h1>The last shellfish dredgers on Long Island.</h1>
+  <p class="sub">Five generations working the grounds of Oyster Bay Harbor — clams and oysters dredged the same waters since 1887.</p>
+  <div class="cta-row">
+    <a href="#order" class="btn">Order wholesale</a>
+    <a href="#story" class="btn out">Read the story</a>
+  </div>
+</div></header>
+
+<div class="rule">Family shellfishmen · Oyster Bay, New York · since 1887</div>
+
+<section class="story" id="story"><div class="wrap">
+  <div>
+    <div class="k">A working waterfront name</div>
+    <h2>When the town is named Oyster Bay, the oysters had better be real.</h2>
+    <p>Frank M. Flower &amp; Sons has dredged the leased grounds of Oyster Bay and Mill Neck Creek since 1887 — through booms, busts, storms and seasons that closed every other outfit around them.</p>
+    <p>Today they are the last commercial oyster- and clam-dredging company left on Long Island. The dredge boats still go out. The family still runs it.</p>
+    <p>That's not a tagline. It's a hundred and thirty-odd years of the same family pulling shellfish from the same bay.</p>
+  </div>
+  <div class="plate">
+    <div class="yr">1887<span>Founding year</span></div>
+    <ul>
+      <li>Founded <b>Mill Neck / Oyster Bay</b></li>
+      <li>Generations at it <b>5+</b></li>
+      <li>Dredging companies left on LI <b>1</b></li>
+      <li>Harvest <b>Clams · Oysters</b></li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="harvest" id="harvest"><div class="wrap">
+  <div class="shead">
+    <div class="k">From the grounds</div>
+    <h2>What comes up in the dredge</h2>
+    <p>Two shellfish, one harbor, generations of knowing exactly where they grow best.</p>
+  </div>
+  <div class="two">
+    <div class="h">
+      <div class="ic">🦪</div>
+      <h3>Oyster Bay oysters</h3>
+      <p>Cup-deep oysters off leased beds the family has worked for over a century — the briny, full-bodied kind a raw bar lists by name. Seeded and dredged the way Oyster Bay has always done it.</p>
+      <span class="tag">Wholesale by the bag &amp; count</span>
+    </div>
+    <div class="h">
+      <div class="ic">🐚</div>
+      <h3>Hard clams</h3>
+      <p>Littlenecks, cherrystones and chowders dredged from the same grounds — the steady backbone of the harvest that's kept the boats running since the 1880s.</p>
+      <span class="tag">Graded &amp; sold by the count</span>
+    </div>
+  </div>
+</div></section>
+
+<section class="grounds" id="grounds"><div class="wrap">
+  <div>
+    <div class="k">The grounds</div>
+    <h2>Leased beds the family has worked for generations</h2>
+    <p>The shellfish hatchery sat on the Bayville side; the seeding beds spread across the Oyster Bay side of the bridge. It's a working operation tied to specific water — not a label slapped on someone else's product.</p>
+    <p>For buyers, that's the whole point: provenance you can name, from a company that's still the real thing.</p>
+  </div>
+  <div class="card">
+    <div class="pin">⚓</div>
+    <b>Oyster Bay Harbor</b>
+    <div class="l">2 Bayview Ave, Oyster Bay, NY 11771<br>Grounds across Oyster Bay &amp; Mill Neck Creek</div>
+  </div>
+</div></section>
+
+<section class="order" id="order"><div class="wrap">
+  <h2>Buying for a raw bar, market or table?</h2>
+  <p>Restaurants, distributors and markets — call to talk product, counts and standing orders straight from the last dredgers on the Island.</p>
+  <div class="phone">📞 (516) 922-4410</div>
+  <div class="addr">2 Bayview Ave, Oyster Bay, NY 11771</div>
+  <div class="cta-row">
+    <a href="tel:5169224410" class="btn">Call about wholesale</a>
+    <a href="#story" class="btn out">Our story</a>
+  </div>
+  <p class="note">Product availability, counts and pricing shown here as placeholders — to be confirmed with the company before the page goes live.</p>
+</div></section>
+
+<footer>
+  <b>Frank M. Flower &amp; Sons, Inc.</b><br>
+  Oyster Bay, New York · (516) 922-4410 · Shellfishmen since 1887
+</footer>
+
+</body>
+</html>

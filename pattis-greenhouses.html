@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patti's Greenhouses — Vail Mills, NY · Locally Grown Annuals, Hanging Baskets &amp; Veg Starts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --leaf:#3f6b3f; --leaf-d:#2f5230; --leaf-l:#6fa06a; --sprout:#8bbf6f;
+  --terra:#c8643c; --terra-d:#a94e2c; --bloom:#e08a9a;
+  --cream:#f7f3e8; --card:#fffdf7; --ink:#33402d; --slate:#6b7560; --line:#e3dcc8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito Sans',sans-serif;color:var(--ink);background:var(--cream);line-height:1.62}
+h1,h2,h3,.serif{font-family:'Fraunces',serif}
+.wrap{max-width:1070px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+.btn{display:inline-block;background:var(--terra);color:#fff;font-weight:700;text-decoration:none;padding:13px 27px;font-size:.98rem;border-radius:30px;transition:.13s;font-family:'Nunito Sans'}
+.btn:hover{background:var(--terra-d)}
+.btn.ghost{background:transparent;color:#fff;border:1.5px solid #ffffff77}
+.btn.ghost:hover{background:#ffffff22;border-color:#fff}
+.btn.leaf{background:var(--leaf)}
+.btn.leaf:hover{background:var(--leaf-d)}
+
+nav{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand b{font-family:'Fraunces';font-weight:700;color:var(--leaf-d);font-size:1.4rem;display:block;line-height:1}
+.brand small{color:var(--terra);font-size:.64rem;letter-spacing:2.5px;text-transform:uppercase;font-weight:700}
+.navlinks{display:flex;gap:24px;color:var(--slate);font-weight:600;font-size:.9rem}
+.navlinks a{text-decoration:none}.navlinks a:hover{color:var(--leaf)}
+.navphone{color:var(--leaf-d);font-weight:700;font-size:1rem}
+@media(max-width:900px){.navlinks{display:none}}
+
+.hero{position:relative;color:#fff;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:0;
+  background:
+   linear-gradient(135deg,rgba(35,66,38,.86),rgba(63,107,63,.7)),
+   radial-gradient(circle at 80% 120%,rgba(224,138,154,.4),transparent 50%),
+   linear-gradient(160deg,#3f6b3f,#2c4a2d)}
+.hero .wrap{position:relative;z-index:1;padding:88px 22px 92px}
+.tag{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:#fff;background:var(--terra);border-radius:30px;padding:7px 16px;font-size:.74rem;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:22px}
+.hero h1{font-family:'Fraunces';font-weight:700;font-size:3.5rem;line-height:1.04;max-width:18ch}
+.hero h1 span{color:#ffd9b0;font-style:italic}
+.hero p{font-size:1.18rem;max-width:53ch;margin:20px 0 28px;color:#eef2e6}
+.cta-row{display:flex;gap:13px;flex-wrap:wrap}
+@media(max-width:600px){.hero h1{font-size:2.4rem}}
+
+.season{background:var(--sprout)}
+.season .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#7aae5f}
+@media(max-width:720px){.season .wrap{grid-template-columns:1fr 1fr}}
+.season .s{background:var(--sprout);padding:22px 16px;text-align:center}
+.season .s b{font-family:'Fraunces';color:#23381f;font-size:1.18rem;display:block;font-weight:600}
+.season .s span{color:#365c2c;font-size:.74rem;letter-spacing:.4px;font-weight:600}
+
+section{padding:78px 0}
+.shead{margin-bottom:36px;max-width:64ch}
+.shead .k{color:var(--terra-d);letter-spacing:3px;text-transform:uppercase;font-size:.78rem;font-weight:700}
+.shead h2{font-family:'Fraunces';font-weight:700;font-size:2.45rem;color:var(--leaf-d);margin-top:7px;line-height:1.06}
+.shead p{color:var(--slate);margin-top:11px;font-size:1.03rem}
+
+.grow .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+@media(max-width:760px){.grow .grid{grid-template-columns:1fr}}
+.gcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px 26px;transition:.14s}
+.gcard:hover{box-shadow:0 10px 26px rgba(47,82,48,.1);transform:translateY(-2px)}
+.gcard .em{font-family:'Fraunces';font-weight:700;color:var(--terra);font-size:.95rem;letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px}
+.gcard h3{font-family:'Fraunces';font-size:1.4rem;color:var(--leaf-d);margin-bottom:7px}
+.gcard p{color:var(--slate);font-size:.96rem}
+
+.calendar{background:#eef2e2}
+.calendar .shead h2{color:var(--leaf-d)}
+.months{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:760px){.months{grid-template-columns:1fr}}
+.mcard{background:#fff;border:1px solid var(--line);border-left:5px solid var(--bloom);border-radius:10px;padding:22px 24px}
+.mcard h3{font-family:'Fraunces';font-size:1.25rem;color:var(--leaf-d);margin-bottom:5px}
+.mcard h3 small{font-family:'Nunito Sans';color:var(--terra);font-weight:700;font-size:.74rem;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:3px}
+.mcard p{color:var(--slate);font-size:.94rem}
+.calnote{font-size:.83rem;color:var(--slate);font-style:italic;margin-top:15px}
+
+.local{background:var(--leaf-d);color:#eaf2e3}
+.local .wrap{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+@media(max-width:820px){.local .wrap{grid-template-columns:1fr}}
+.local h2{font-family:'Fraunces';font-weight:700;font-size:2.15rem;color:#fff}
+.local p{color:#cfe0c6;margin:13px 0}
+.local .pts{display:grid;gap:13px;margin-top:6px}
+.lp{display:flex;gap:13px;align-items:flex-start}
+.lp .d{min-width:11px;height:11px;border-radius:50%;background:var(--bloom);margin-top:7px}
+.lp b{font-family:'Fraunces';color:#fff;display:block;font-size:1.05rem}
+.lp span{color:#bcd0b2;font-size:.93rem}
+
+.visit{background:var(--terra)}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;color:#fff}
+@media(max-width:820px){.visit .wrap{grid-template-columns:1fr}}
+.visit h2{font-family:'Fraunces';font-weight:700;font-size:2.4rem;color:#fff}
+.visit p{color:#ffe6d6;margin:13px 0 18px}
+.visit .li{color:#fff;font-size:.95rem;margin-bottom:9px;padding-left:20px;position:relative}
+.visit .li::before{content:"❀";position:absolute;left:0;color:#ffd9b0;font-size:.85rem}
+.vbox{background:#fffdf7;color:var(--ink);border-radius:14px;padding:30px;box-shadow:0 12px 30px rgba(0,0,0,.16)}
+.vbox .row{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid var(--line);font-size:.97rem}
+.vbox .row:last-of-type{border:0}
+.vbox .row span{color:var(--slate);font-weight:600;font-size:.82rem;letter-spacing:.6px;text-transform:uppercase;padding-top:3px}
+.vbox .row b{font-family:'Fraunces';color:var(--leaf-d);text-align:right;font-size:1.05rem}
+.vbox .cta-row{margin-top:20px}
+
+footer{background:#26371f;color:#a9bd9d;text-align:center;padding:28px 0;font-size:.86rem}
+footer b{font-family:'Fraunces';color:#fff;font-size:1.1rem}
+footer .sm{margin-top:7px;color:#7c9070;font-size:.78rem}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="brand"><b>Patti's Greenhouses</b><small>Vail Mills, NY · Grower</small></div>
+  <div class="navlinks">
+    <a href="#grow">What We Grow</a>
+    <a href="#calendar">In Season Now</a>
+    <a href="#local">Locally Grown</a>
+    <a href="#visit">Visit Us</a>
+  </div>
+  <a href="tel:5188835311" class="navphone">518‑883‑5311</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="tag">Open May &amp; June · Top of Vail Mill hill</div>
+  <h1>Spring plants grown right here, <span>not trucked in.</span></h1>
+  <p>Annuals, hanging baskets, vegetable starts, perennials and herbs — raised in our own greenhouses on Route 30 and ready the day you plant. Eight weeks a year, full benches, healthy stock.</p>
+  <div class="cta-row">
+    <a href="#calendar" class="btn">See what's ready now</a>
+    <a href="#visit" class="btn ghost">Hours &amp; directions</a>
+  </div>
+</div></header>
+
+<div class="season"><div class="wrap">
+  <div class="s"><b>Annuals</b><span>Flats &amp; color packs</span></div>
+  <div class="s"><b>Hanging baskets</b><span>Grown full &amp; ready</span></div>
+  <div class="s"><b>Veg starts</b><span>Tomatoes, peppers &amp; more</span></div>
+  <div class="s"><b>Perennials &amp; herbs</b><span>That come back</span></div>
+</div></div>
+
+<section id="grow" class="grow"><div class="wrap">
+  <div class="shead">
+    <div class="k">What we grow</div>
+    <h2>Benches full of plants we started ourselves</h2>
+    <p>We're a grower, not just a shelf — most of what you'll find here was seeded and raised in our own greenhouses, so it's healthy, hardened off, and used to the weather it's going home to.</p>
+  </div>
+  <div class="grid">
+    <div class="gcard">
+      <div class="em">Flowering</div>
+      <h3>Annuals &amp; Hanging Baskets</h3>
+      <p>Petunias, geraniums, impatiens, marigolds and more — by the flat for the flower bed, or grown-out hanging baskets ready for the porch. Mother's Day and Memorial Day favorites every year.</p>
+    </div>
+    <div class="gcard">
+      <div class="em">For the garden</div>
+      <h3>Vegetable &amp; Herb Starts</h3>
+      <p>Tomatoes, peppers, cucumbers, squash and the herbs that go with them — strong transplants that get your garden weeks ahead of seed, grown for this growing zone.</p>
+    </div>
+    <div class="gcard">
+      <div class="em">Comes back</div>
+      <h3>Perennials</h3>
+      <p>Plants that return year after year for the border and the bed — a foundation you put in once and enjoy every season after.</p>
+    </div>
+    <div class="gcard">
+      <div class="em">Around the yard</div>
+      <h3>Flowering Shrubbery</h3>
+      <p>Flowering shrubs to anchor the landscaping and bring color where annuals can't reach — ask what's looking good when you stop in.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="calendar" class="calendar"><div class="wrap">
+  <div class="shead">
+    <div class="k">In season now</div>
+    <h2>What's ready, week by week</h2>
+    <p>Our season is short — here's the rough rhythm of what fills the benches. Call ahead if you're after something specific and we'll tell you what's looking its best.</p>
+  </div>
+  <div class="months">
+    <div class="mcard"><h3><small>Early May</small>Cool-season color &amp; pansies</h3><p>The first flats of hardy annuals and pansies, early herbs, and baskets starting to fill in. Good time to get ahead.</p></div>
+    <div class="mcard"><h3><small>Mother's Day · Mid May</small>Hanging baskets peak</h3><p>Grown-out hanging baskets and flowering annuals at their fullest — our busiest, best-stocked stretch of the year.</p></div>
+    <div class="mcard"><h3><small>Late May · Memorial Day</small>Veg starts &amp; planters</h3><p>Tomato, pepper and vegetable transplants ready for the garden, plus annuals for cemetery planters and beds.</p></div>
+    <div class="mcard"><h3><small>June</small>Fill-ins &amp; perennials</h3><p>Replacements, perennials, herbs and whatever's still going strong before the season winds down. Worth a last trip up the hill.</p></div>
+  </div>
+  <p class="calnote">Seasonal guide shown as a starting layout — we'll set it to Patti's real weekly availability.</p>
+</div></section>
+
+<section id="local" class="local"><div class="wrap">
+  <div>
+    <h2>Why a local greenhouse beats the big-box rack</h2>
+    <p>The flat that's been sitting under a store awning for two weeks isn't the same as one that came off our bench this morning. Here's the difference you can see when you plant it.</p>
+  </div>
+  <div class="pts">
+    <div class="lp"><div class="d"></div><div><b>We grew it</b><span>Seeded and raised in our own greenhouses — not shipped in half-stressed on a truck.</span></div></div>
+    <div class="lp"><div class="d"></div><div><b>Used to our weather</b><span>Hardened off for this zone, so it transplants without the shock.</span></div></div>
+    <div class="lp"><div class="d"></div><div><b>Someone who knows the plants</b><span>Ask what does well in shade, what the deer leave alone — you'll get a real answer.</span></div></div>
+    <div class="lp"><div class="d"></div><div><b>A spring tradition</b><span>The greenhouse families around here have come to every May. Worth the drive up Vail Mill hill.</span></div></div>
+  </div>
+</div></section>
+
+<section id="visit" class="visit"><div class="wrap">
+  <div>
+    <h2>Come up the hill this spring.</h2>
+    <p>We're open a short season — roughly May through June. Stop in while the benches are full, or call ahead and we'll tell you what's ready before you make the drive.</p>
+    <div class="li">8 miles north of Amsterdam Thruway Exit 27</div>
+    <div class="li">Right at the top of Vail Mill hill on Route 30</div>
+    <div class="li">Call ahead for specific plants or big orders</div>
+  </div>
+  <div class="vbox">
+    <div class="row"><span>Find us</span><b>3844 State Hwy 30<br>(Vail Mills), Amsterdam, NY 12010</b></div>
+    <div class="row"><span>Season</span><b>May – June</b></div>
+    <div class="row"><span>Hours</span><b>Mon–Fri 10–5<br>Sat &amp; Sun 10–3*</b></div>
+    <div class="row"><span>Call</span><b>518‑883‑5311</b></div>
+    <div class="cta-row">
+      <a href="tel:5188835311" class="btn leaf">Call the greenhouse</a>
+      <a href="https://www.google.com/maps?q=3844+State+Highway+30,+Amsterdam,+NY+12010" class="btn">Get directions</a>
+    </div>
+  </div>
+</div></section>
+
+<footer>
+  <b>Patti's Greenhouses, L.L.C.</b><br>
+  3844 State Highway 30 (Vail Mills), Amsterdam, NY 12010 · 518‑883‑5311 · Locally grown annuals · Hanging baskets · Vegetable starts · Perennials &amp; herbs
+  <div class="sm">Seasonal garden center &amp; grower · Open May–June · Fulton County, NY · *Confirm current hours</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crane Home Services — Property Care &amp; Caretaking in Warrensburg, NY</title>
+<meta name="description" content="Women-owned property care in Warrensburg, NY. Painting, pressure washing, staining, debris removal, snow removal, landscaping, concrete and year-round property management for camps and homes across Warren County.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pine:#22402f; --pine-dk:#152a1f; --pine-lt:#33604a;
+    --rust:#b4552b; --rust-dk:#8f4220;
+    --cream:#faf6ee; --card:#fff; --ink:#1e2a23; --grey:#5e6d64; --line:#e2dbcd;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Karla',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:'Bitter',Georgia,serif;font-weight:700;line-height:1.14}
+
+  .alert{background:var(--pine-dk);color:#cfe0d5;font-size:.83rem;text-align:center;padding:9px 20px}
+  .alert b{color:#fff}
+
+  nav{background:var(--cream);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:40}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;gap:18px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink)}
+  .leaf{width:40px;height:40px;background:var(--pine);border-radius:50%;display:grid;place-items:center}
+  .leaf svg{width:21px;height:21px;stroke:#e9c9a5;fill:none;stroke-width:1.7}
+  .brand b{font-family:'Bitter';font-size:1.18rem;display:block;line-height:1.15}
+  .brand span{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
+  .nl{display:flex;gap:24px;flex-wrap:wrap}
+  .nl a{color:var(--pine);text-decoration:none;font-weight:600;font-size:.92rem}
+  .nl a:hover{color:var(--rust)}
+  .btn{display:inline-block;background:var(--rust);color:#fff;font-weight:700;padding:12px 22px;border-radius:30px;text-decoration:none;font-size:.92rem;border:none;cursor:pointer}
+  .btn:hover{background:var(--rust-dk)}
+  .btn-p{background:var(--pine)}
+  .btn-p:hover{background:var(--pine-lt)}
+  .btn-o{background:transparent;color:var(--pine);border:1.5px solid var(--pine)}
+  .btn-o:hover{background:rgba(34,64,47,.07)}
+
+  header.hero{padding:76px 0 80px;background:
+     radial-gradient(circle at 88% 12%,rgba(180,85,43,.09) 0 30%,transparent 31%),
+     var(--cream)}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:center}
+  .pill{display:inline-block;background:#eaf0eb;border:1px solid #cfdfd4;color:var(--pine);font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border-radius:30px;margin-bottom:20px}
+  h1{font-size:3.15rem;margin-bottom:18px}
+  h1 u{text-decoration:none;color:var(--rust)}
+  .lead{font-size:1.13rem;color:var(--grey);margin-bottom:28px;max-width:35em}
+  .hbtns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px}
+  .trust{display:flex;gap:10px;flex-wrap:wrap}
+  .chip{background:#fff;border:1px solid var(--line);border-radius:20px;padding:7px 15px;font-size:.83rem;font-weight:600;color:var(--pine)}
+
+  .photo{background:var(--pine);border-radius:6px;padding:34px;color:#fff;box-shadow:0 18px 44px rgba(21,42,31,.22)}
+  .photo h3{font-size:1.55rem;margin-bottom:8px;color:#fff}
+  .photo p{color:#b8ccbf;font-size:.96rem;margin-bottom:20px}
+  .photo ul{list-style:none}
+  .photo li{padding:11px 0 11px 26px;position:relative;border-bottom:1px solid rgba(255,255,255,.12);font-size:.96rem}
+  .photo li:last-child{border:none}
+  .photo li:before{content:"✓";position:absolute;left:0;color:#e9a06e;font-weight:700}
+
+  section{padding:76px 0}
+  .head{max-width:44em;margin-bottom:42px}
+  .k{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--rust);font-weight:700;margin-bottom:9px}
+  .head h2{font-size:2.35rem;margin-bottom:12px}
+  .head p{color:var(--grey);font-size:1.04rem}
+
+  /* seasons */
+  .seasons{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .s{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--cream);display:flex;flex-direction:column}
+  .s .cap{padding:14px 18px;color:#fff;font-family:'Bitter';font-weight:700;font-size:1.15rem;display:flex;justify-content:space-between;align-items:center}
+  .s.sp .cap{background:#4e7a52}
+  .s.su .cap{background:#7a8f3a}
+  .s.fa .cap{background:#b4552b}
+  .s.wi .cap{background:#2f5468}
+  .s .cap span{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;opacity:.85;font-family:'Karla'}
+  .s .body{padding:20px 18px;flex:1}
+  .s ul{list-style:none}
+  .s li{font-size:.92rem;color:var(--grey);padding:6px 0 6px 17px;position:relative}
+  .s li:before{content:"·";position:absolute;left:4px;color:var(--rust);font-weight:700;font-size:1.2rem;line-height:1}
+
+  /* services */
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+  .svc{background:var(--cream);padding:26px 24px}
+  .svc:hover{background:#fff}
+  .svc h3{font-size:1.2rem;margin-bottom:6px;color:var(--pine)}
+  .svc p{font-size:.93rem;color:var(--grey)}
+
+  /* absentee */
+  .abs{background:var(--pine);color:#fff}
+  .abs .head h2{color:#fff}
+  .abs .head p{color:#b0c6b8}
+  .abs .k{color:#e9a06e}
+  .abs-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .abs-grid p{color:#c2d5c8;margin-bottom:15px}
+  .quote{border-left:3px solid var(--rust);padding:6px 0 6px 20px;font-family:'Bitter';font-size:1.3rem;color:#fff;line-height:1.4;margin:22px 0}
+  .box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:6px;padding:28px}
+  .box h3{font-size:1.35rem;margin-bottom:14px;color:#fff}
+  .box .r{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+  .box .r:last-child{border:none}
+  .box .r b{flex:0 0 96px;color:#e9a06e;font-size:.82rem;text-transform:uppercase;letter-spacing:.07em;padding-top:2px}
+  .box .r span{color:#c8dace;font-size:.94rem}
+
+  /* emergency */
+  .emg{background:var(--rust);color:#fff;text-align:center}
+  .emg h2{font-size:2.2rem;color:#fff;margin-bottom:10px}
+  .emg p{color:#fbe3d6;max-width:38em;margin:0 auto 22px;font-size:1.05rem}
+  .emg .btn{background:#fff;color:var(--rust-dk)}
+  .emg .btn:hover{background:#fdeee6}
+
+  /* quote */
+  .quotes{background:var(--cream)}
+  .qgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px}
+  .qform{background:#fff;border:1px solid var(--line);border-radius:6px;padding:30px;box-shadow:0 12px 34px rgba(34,64,47,.07)}
+  .qform h3{font-size:1.55rem;margin-bottom:6px}
+  .qform .s2{color:var(--grey);font-size:.93rem;margin-bottom:18px}
+  label{display:block;font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--pine);margin-bottom:5px}
+  input,select,textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:4px;font:inherit;margin-bottom:14px;background:#fcfaf6}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--rust);border-color:var(--rust)}
+  .qform .btn{width:100%;text-align:center;padding:14px}
+  .clist{list-style:none}
+  .clist li{padding:16px 0;border-bottom:1px solid var(--line)}
+  .clist li b{display:block;font-size:.74rem;letter-spacing:.11em;text-transform:uppercase;color:var(--grey);margin-bottom:3px}
+  .clist li span,.clist li a{font-size:1.05rem;color:var(--pine);font-weight:700;text-decoration:none}
+  .clist a:hover{color:var(--rust)}
+  .ph{background:#fdf1e9;border:1px dashed var(--rust);color:#8a4520;font-size:.82rem;padding:10px 14px;border-radius:4px;margin-top:16px}
+
+  footer{background:var(--pine-dk);color:#8faa9a;padding:34px 0;font-size:.86rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  @media(max-width:920px){
+    .hero-grid,.abs-grid,.qgrid{grid-template-columns:1fr;gap:34px}
+    .sgrid,.svc-grid{grid-template-columns:1fr}
+    h1{font-size:2.35rem}
+    .head h2{font-size:1.9rem}
+    .nl{display:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="alert">Storm damage or a frozen pipe at the camp? <b>24/7 emergency call-out — 518-955-9071</b></div>
+
+<nav><div class="wrap">
+  <a class="brand" href="#">
+    <span class="leaf"><svg viewBox="0 0 24 24"><path d="M12 3l7 6v11H5V9z"/><path d="M9 20v-6h6v6"/></svg></span>
+    <span><b>Crane Home Services</b><span>Warrensburg, NY · Women-owned</span></span>
+  </a>
+  <div class="nl">
+    <a href="#seasons">The Year</a>
+    <a href="#services">What We Do</a>
+    <a href="#caretaking">Caretaking</a>
+    <a href="#quote">Get a Quote</a>
+  </div>
+  <a class="btn" href="#quote">Request a quote</a>
+</div></nav>
+
+<header class="hero"><div class="wrap hero-grid">
+  <div>
+    <span class="pill">Serving Warrensburg &amp; Warren County</span>
+    <h1>Somebody has to walk the property in <u>February</u>.</h1>
+    <p class="lead">Most of the houses around here sit empty for part of the year — camps, second homes, places whose owners are three hours south. Crane Home Services is who keeps an eye on them, and who handles the painting, the pressure washing, the plow route and the pile of brush when the season turns.</p>
+    <div class="hbtns">
+      <a class="btn" href="#quote">Tell us about your property</a>
+      <a class="btn btn-o" href="#services">See the service list</a>
+    </div>
+    <div class="trust">
+      <span class="chip">Women-owned &amp; operated</span>
+      <span class="chip">Fully insured</span>
+      <span class="chip">24/7 emergency</span>
+      <span class="chip">No job too small</span>
+    </div>
+  </div>
+  <div class="photo">
+    <h3>One number, the whole property</h3>
+    <p>The reason people keep us is simple — they stop keeping a list of five different guys.</p>
+    <ul>
+      <li>Painting, staining &amp; exterior finishes</li>
+      <li>Pressure washing — siding, decks, walkways</li>
+      <li>Landscaping &amp; lawn care</li>
+      <li>Snow removal through the whole winter</li>
+      <li>Debris &amp; brush removal</li>
+      <li>Concrete: foundations, stairs, sidewalks</li>
+      <li>Ongoing property management</li>
+    </ul>
+  </div>
+</div></header>
+
+<section class="seasons" id="seasons"><div class="wrap">
+  <div class="head">
+    <div class="k">The year on an Adirondack property</div>
+    <h2>Four seasons, four different lists</h2>
+    <p>A house in Warrensburg doesn't need the same thing in April that it needs in November. This is roughly how a year of care looks — pick the pieces you want.</p>
+  </div>
+  <div class="sgrid">
+    <div class="s sp">
+      <div class="cap">Spring <span>Open up</span></div>
+      <div class="body"><ul>
+        <li>Walk the property after the melt</li>
+        <li>Pressure wash siding, decks and walkways</li>
+        <li>Clear winter blowdown and brush</li>
+        <li>Lawn back into shape</li>
+        <li>Repaint what the winter took off</li>
+      </ul></div>
+    </div>
+    <div class="s su">
+      <div class="cap">Summer <span>Keep it up</span></div>
+      <div class="body"><ul>
+        <li>Mowing and grounds on a schedule</li>
+        <li>Deck staining and sealing</li>
+        <li>Exterior painting while it's dry</li>
+        <li>Small repairs before they grow</li>
+        <li>Get it presentable before guests arrive</li>
+      </ul></div>
+    </div>
+    <div class="s fa">
+      <div class="cap">Fall <span>Close down</span></div>
+      <div class="body"><ul>
+        <li>Leaves, gutters and debris hauled out</li>
+        <li>Furniture in, everything battened down</li>
+        <li>Last look before the place goes quiet</li>
+        <li>Concrete and stair repair before frost</li>
+        <li>Plow route agreed for the winter</li>
+      </ul></div>
+    </div>
+    <div class="s wi">
+      <div class="cap">Winter <span>Watch it</span></div>
+      <div class="body"><ul>
+        <li>Snow removal — driveway and walks</li>
+        <li>Roof and load checked after big storms</li>
+        <li>Property checks while you're away</li>
+        <li>Emergency call-out, any hour</li>
+        <li>Photos sent so you can actually see it</li>
+      </ul></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <div class="head">
+    <div class="k">What we do</div>
+    <h2>Everything on the outside, and plenty on the inside</h2>
+    <p>Residential and commercial. Fully insured. Jobs of every size, including the minor repairs people put off until they turn into major ones.</p>
+  </div>
+  <div class="svc-grid">
+    <div class="svc"><h3>Painting &amp; staining</h3><p>Interior and exterior. A fresh coat on a camp that's been graying since the last owner.</p></div>
+    <div class="svc"><h3>Pressure washing</h3><p>Siding, decks, patios, walkways. The difference between a tired house and a cared-for one.</p></div>
+    <div class="svc"><h3>Handyman &amp; repairs</h3><p>The sticking door, the rotted board, the loose rail. Call us for the small stuff on purpose.</p></div>
+    <div class="svc"><h3>Landscaping &amp; lawn care</h3><p>Mowing, cleanups, grounds kept on a schedule so you're not doing it on your one weekend up.</p></div>
+    <div class="svc"><h3>Snow removal</h3><p>Driveways and walks all winter. Warren County snow is not a one-storm problem.</p></div>
+    <div class="svc"><h3>Debris removal</h3><p>Brush, storm damage, the garage that's been filling up since 2019. It leaves in our truck.</p></div>
+    <div class="svc"><h3>Concrete</h3><p>Foundation repair, stairs, sidewalks — the work that keeps an old house standing straight.</p></div>
+    <div class="svc"><h3>Property management</h3><p>Ongoing care for owners who aren't here. Regular checks, one point of contact, no surprises.</p></div>
+    <div class="svc"><h3>24/7 emergency</h3><p>A tree through the porch, a pipe let go, a roof under two feet of snow. We answer.</p></div>
+  </div>
+</div></section>
+
+<section class="abs" id="caretaking"><div class="wrap">
+  <div class="head">
+    <div class="k">For owners who aren't here</div>
+    <h2>The camp you love is empty forty weeks a year</h2>
+    <p>That's the honest math on most of the properties between Warrensburg, Chestertown and the lakes. Everything that goes wrong, goes wrong while nobody is looking.</p>
+  </div>
+  <div class="abs-grid">
+    <div>
+      <p>A pipe doesn't announce itself. A gutter fills, backs up under the shingles and rots the sheathing over two winters. Snow builds on a low roof. A downed limb sits on the deck rail until spring, when it's a deck rail replacement instead of a five-minute job.</p>
+      <div class="quote">You don't need someone up here every week. You need someone up here at the right times, who tells you the truth about what they found.</div>
+      <p>That's the arrangement we run for absentee owners: scheduled checks, honest photos, and one call before anything gets spent. If it's fine, we tell you it's fine.</p>
+    </div>
+    <div class="box">
+      <h3>How a caretaking arrangement works</h3>
+      <div class="r"><b>Walk-through</b><span>We come see the property with you, or on video if you're not local.</span></div>
+      <div class="r"><b>The plan</b><span>We agree what gets checked, how often, and what we're allowed to just handle.</span></div>
+      <div class="r"><b>Reports</b><span>Photos and a plain-language note after every visit.</span></div>
+      <div class="r"><b>Approval</b><span>Anything beyond the agreed scope gets a call first. Always.</span></div>
+      <div class="r"><b>Emergencies</b><span>Storm, freeze, break-in — we're 24/7 and we're twenty minutes away.</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="emg"><div class="wrap">
+  <h2>It's after hours and something's wrong at the house</h2>
+  <p>Frozen pipe, tree down, roof loaded, water where water shouldn't be. Call the number. Somebody local picks up.</p>
+  <a class="btn" href="tel:5189559071">Call 518-955-9071</a>
+</div></section>
+
+<section class="quotes" id="quote"><div class="wrap">
+  <div class="head">
+    <div class="k">Get a quote</div>
+    <h2>Tell us about the property</h2>
+    <p>The more you tell us, the more useful the number is. We'd rather ask a question now than surprise you later.</p>
+  </div>
+  <div class="qgrid">
+    <div>
+      <ul class="clist">
+        <li><b>Owner</b><span>Tara Thrasher-Tyler</span></li>
+        <li><b>Phone (24/7)</b><a href="tel:5189559071">(518) 955-9071</a></li>
+        <li><b>Email</b><a href="mailto:Tara@CraneHomeServices.com">Tara@CraneHomeServices.com</a></li>
+        <li><b>Based at</b><span>567 South Johnsburg Road<br>Warrensburg, NY 12885</span></li>
+        <li><b>Service area</b><span>Warrensburg, Chestertown, Lake George, Thurman, Bolton &amp; surrounding Warren County</span></li>
+      </ul>
+      <div class="ph">Placeholder: review counts and the "15+ years of experience" claim are drawn from third-party listings — the owner should confirm the exact wording before this page goes live.</div>
+    </div>
+    <div class="qform">
+      <h3>Request a quote</h3>
+      <p class="s2">We read every one of these. If it's urgent, please call instead.</p>
+      <form onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Sent — we\'ll get back to you';">
+        <label for="q1">Are you here year-round?</label>
+        <select id="q1">
+          <option>Year-round resident</option>
+          <option>Seasonal / camp owner — here part of the year</option>
+          <option>Owner out of the area — property sits empty</option>
+          <option>Commercial property</option>
+        </select>
+        <label for="q2">What do you need?</label>
+        <select id="q2">
+          <option>Ongoing property management / caretaking</option>
+          <option>Snow removal for the winter</option>
+          <option>Painting or staining</option>
+          <option>Pressure washing</option>
+          <option>Landscaping / lawn care</option>
+          <option>Debris or brush removal</option>
+          <option>Concrete work</option>
+          <option>Repairs / handyman</option>
+          <option>Something else</option>
+        </select>
+        <label for="q3">Name</label><input id="q3" type="text">
+        <label for="q4">Phone or email</label><input id="q4" type="text">
+        <label for="q5">Tell us about the property</label>
+        <textarea id="q5" rows="3" placeholder="Where it is, what it needs, when you're next up"></textarea>
+        <button class="btn" type="submit">Send request</button>
+      </form>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>Crane Home Services LLC · Warrensburg, NY · (518) 955-9071</span>
+  <span>Women-owned &amp; operated · Fully insured · 24/7 emergency service</span>
+</div></footer>
+
+</body>
+</html>

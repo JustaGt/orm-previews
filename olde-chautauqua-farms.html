@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!--
+NICHE IDENTITY BRIEF — Olde Chautauqua Farms (Portland, NY)  [ORM prospect #154]
+Business type: Family u-pick fruit farm + roadside stand in the Lake Erie Concord grape belt. U-pick sweet & tart cherries and asparagus; short seasonal windows.
+Target customers: Local families, Buffalo/Erie/Jamestown day-trippers, home canners & bakers, Route 20 grape-belt & winery tourists.
+Local market: 6645 West Main Rd, Portland NY 14769 — Lake Erie shore, minutes from Route 20 wineries (21 Brix, Johnson Estate). Asparagus ~May-June, cherries ~mid-June-July.
+Emotional tone: warm, seasonal, honest, "picked this morning," small-family-farm.
+Visual style: orchard green + cherry red + cream; chalkboard "what's ripe" feel; hand-picked, not corporate.
+Pain points: Can't tell if the farm is open today or if cherries are ripe; hours swing with weather/crop; the only source is scattered Facebook posts; no address/map/price at a glance; people drive out and it's closed.
+Desires: Know TODAY's ripeness + hours before driving; price per pound; what to bring; directions; when each crop opens.
+Trust signals: real family on West Main Rd, Cornell Cooperative Extension "Chautauqua Grown" listing, honest per-pound pricing, heart of the pick-your-own grape belt.
+Conversion goal: get people to check today's status & call ahead, and join a "cherries are ready" text/email alert list.
+Sections: live "what's ripe now" hero; crop calendar; how u-pick works; pricing; directions/map; ripe-alert signup; about; grape-belt day-trip tie-in; contact.
+Cliches to avoid: banned ORM list; also "farm-fresh goodness", "pick of the season", generic orchard filler.
+Unique to niche: the entire value is TIMING — a plain "are we open / what's ripe today" board plus a ripe-alert list that fixes the exact Facebook-buried problem, wrapped into the Route 20 grape-belt day trip.
+NOTE: cherry price ($2.50/lb) and hours are labeled 2025-season placeholders — confirm current before publishing.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Olde Chautauqua Farms — U-Pick Cherries & Asparagus | Portland, NY</title>
+<style>
+  :root{
+    --orchard:#2f5233; --orchard-dk:#22391f; --cherry:#a4243b; --cherry-dk:#7c1a2c;
+    --cream:#f7f3e8; --wheat:#efe4c9; --ink:#26241f; --muted:#6b675c; --line:#e0d6bd;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  h1,h2,h3{font-family:Georgia,'Times New Roman',serif;line-height:1.15}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  /* top bar */
+  .bar{background:var(--orchard-dk);color:#f4efe0;font-size:.9rem}
+  .bar .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;align-items:center;padding:9px 22px}
+  .bar b{color:#fff}
+  /* status board */
+  .board{background:var(--cherry);color:#fff;text-align:center;padding:12px 22px;font-weight:600;letter-spacing:.2px}
+  .board .dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:#7be495;margin-right:8px;vertical-align:middle;box-shadow:0 0 0 4px rgba(123,228,149,.25)}
+  /* hero */
+  .hero{background:linear-gradient(rgba(34,57,31,.72),rgba(34,57,31,.72)),radial-gradient(circle at 30% 20%,#4a7c40,#2f5233);color:#fff;padding:64px 0 58px}
+  .hero .wrap{max-width:900px}
+  .kicker{text-transform:uppercase;letter-spacing:2.5px;font-size:.78rem;color:#e7d9b0;font-weight:700}
+  .hero h1{font-size:2.9rem;margin:14px 0 12px}
+  .hero p.lede{font-size:1.22rem;max-width:640px;color:#f1ecdc}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+  .btn{display:inline-block;padding:14px 26px;border-radius:6px;font-weight:700;text-decoration:none;font-size:1.02rem}
+  .btn-cherry{background:var(--cherry);color:#fff}
+  .btn-cream{background:var(--cream);color:var(--orchard-dk)}
+  .btn-ghost{border:2px solid #f1ecdc;color:#fff}
+  /* what's ripe now */
+  .now{background:var(--wheat);padding:40px 0;border-bottom:1px solid var(--line)}
+  .now h2{color:var(--orchard);font-size:1.7rem;margin-bottom:6px}
+  .now .sub{color:var(--muted);margin-bottom:22px}
+  .crops{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+  .crop{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+  .crop .tag{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;padding:3px 9px;border-radius:20px}
+  .tag-open{background:#e6f4e2;color:#2f5233}
+  .tag-soon{background:#fdeede;color:#9a6a12}
+  .tag-done{background:#efe9e9;color:#8a8380}
+  .crop h3{font-size:1.2rem;margin:12px 0 4px;color:var(--ink)}
+  .crop .win{font-size:.9rem;color:var(--muted)}
+  .crop .price{margin-top:10px;font-weight:700;color:var(--cherry)}
+  /* section */
+  section.pad{padding:52px 0}
+  h2.big{font-size:2rem;color:var(--orchard);margin-bottom:8px;text-align:center}
+  .lead-c{text-align:center;color:var(--muted);max-width:640px;margin:0 auto 34px}
+  /* how it works */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+  .step{position:relative;padding:22px;background:#fff;border-radius:10px;border:1px solid var(--line)}
+  .step .n{width:38px;height:38px;border-radius:50%;background:var(--orchard);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:Georgia,serif;margin-bottom:12px}
+  .step h3{font-size:1.12rem;margin-bottom:6px}
+  .step p{font-size:.96rem;color:var(--muted)}
+  /* alert band */
+  .alert{background:var(--orchard);color:#fff}
+  .alert .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center;padding:48px 22px}
+  .alert h2{font-size:1.9rem;margin-bottom:10px}
+  .alert p{color:#e4ecdf}
+  .form{background:var(--orchard-dk);padding:22px;border-radius:12px}
+  .form label{display:block;font-size:.82rem;text-transform:uppercase;letter-spacing:1px;color:#c9d8c2;margin:10px 0 5px}
+  .form input{width:100%;padding:12px 14px;border:none;border-radius:6px;font-size:1rem}
+  .form .btn{margin-top:16px;width:100%;text-align:center;border:none;cursor:pointer}
+  .form small{display:block;color:#a9bda2;margin-top:10px;font-size:.78rem}
+  /* daytrip */
+  .daytrip{background:var(--wheat)}
+  .daytrip .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+  .daytrip .card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px}
+  .daytrip h3{color:var(--orchard);font-size:1.12rem;margin-bottom:6px}
+  .daytrip p{font-size:.95rem;color:var(--muted)}
+  /* visit / map */
+  .visit .cols{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+  .visit h2{color:var(--orchard);font-size:1.8rem;margin-bottom:14px}
+  .info li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);display:flex;gap:12px}
+  .info li b{min-width:96px;color:var(--orchard)}
+  .mapbox{background:#dfe7d8;border:1px solid var(--line);border-radius:12px;min-height:280px;display:flex;align-items:center;justify-content:center;text-align:center;color:#5c6b52;padding:24px}
+  /* footer */
+  footer{background:var(--orchard-dk);color:#d8e0d0;padding:34px 0;text-align:center;font-size:.9rem}
+  footer b{color:#fff}
+  .ph{font-style:italic;color:#9a6a12;font-size:.82rem}
+  @media(max-width:760px){
+    .hero h1{font-size:2.15rem}
+    .alert .wrap,.visit .cols{grid-template-columns:1fr}
+    .bar .wrap{justify-content:center;text-align:center}
+  }
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap">
+  <span>6645 West Main Rd, Portland NY &middot; on the Route&nbsp;20 grape belt</span>
+  <span>Call the barn: <b>(716)&nbsp;792-9440</b></span>
+</div></div>
+
+<div class="board"><span class="dot"></span> Picking now: sweet cherries are on &middot; asparagus winding down &middot; <b>call before you drive out — ripeness changes daily</b></div>
+
+<header class="hero"><div class="wrap">
+  <div class="kicker">Portland, NY &middot; Chautauqua County</div>
+  <h1>Know what&rsquo;s ripe today before you make the drive.</h1>
+  <p class="lede">We&rsquo;re a small family u-pick on West Main Road. Sweet and tart cherries in summer, asparagus in spring &mdash; picked by you, priced by the pound, and only good for the couple of weeks each crop is actually ready. Check the board, then come out.</p>
+  <div class="cta-row">
+    <a class="btn btn-cherry" href="#alert">Text me when cherries are ready</a>
+    <a class="btn btn-ghost" href="tel:17167929440">Call today&rsquo;s picking line</a>
+  </div>
+</div></header>
+
+<section class="now"><div class="wrap">
+  <h2>What&rsquo;s ready right now</h2>
+  <p class="sub">Updated as the crop comes in. When it&rsquo;s picked out, this board says so &mdash; no wasted trips.</p>
+  <div class="crops">
+    <div class="crop">
+      <span class="tag tag-open">Picking now</span>
+      <h3>Sweet cherries</h3>
+      <div class="win">Season: mid-June into July</div>
+      <div class="price">$2.50 / lb <span class="ph">(2025 price — confirm)</span></div>
+    </div>
+    <div class="crop">
+      <span class="tag tag-open">A few left</span>
+      <h3>Tart / pie cherries</h3>
+      <div class="win">Season: late June into July</div>
+      <div class="price">$2.50 / lb <span class="ph">(2025 price — confirm)</span></div>
+    </div>
+    <div class="crop">
+      <span class="tag tag-soon">Winding down</span>
+      <h3>Asparagus</h3>
+      <div class="win">Season: May into June</div>
+      <div class="price">Ask at the stand</div>
+    </div>
+    <div class="crop">
+      <span class="tag tag-done">Done for now</span>
+      <h3>Off-season</h3>
+      <div class="win">We rest the trees &mdash; join the alert list and we&rsquo;ll wave you back next spring.</div>
+    </div>
+  </div>
+</div></section>
+
+<section class="pad"><div class="wrap">
+  <h2 class="big">How picking works here</h2>
+  <p class="lead-c">First time out? It&rsquo;s simple, it&rsquo;s cash-or-check, and the kids are welcome in the rows.</p>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><h3>Check the board or call</h3><p>See what&rsquo;s ripe today and whether we&rsquo;re open. Weather and the crop set the hours &mdash; a quick call saves the trip.</p></div>
+    <div class="step"><div class="n">2</div><h3>Bring containers &amp; cash</h3><p>Buckets, bags, or an ice-cream pail all work. We take cash and check at the stand. Wear closed shoes for the rows.</p></div>
+    <div class="step"><div class="n">3</div><h3>Pick your own</h3><p>We&rsquo;ll point you to the trees that are picking best that morning. Pick as much or as little as you like.</p></div>
+    <div class="step"><div class="n">4</div><h3>Weigh &amp; pay</h3><p>Priced by the pound at the stand. Can&rsquo;t stay to pick? We keep some already-picked out front while it lasts.</p></div>
+  </div>
+</div></section>
+
+<section class="alert" id="alert"><div class="wrap">
+  <div>
+    <h2>Get the &ldquo;cherries are ready&rdquo; text</h2>
+    <p>The whole trick with cherries is timing &mdash; they&rsquo;re only perfect for about ten days. Drop your name below and we&rsquo;ll message you the morning each crop opens and when it&rsquo;s about to picked out, so you never miss the window or drive out for nothing.</p>
+  </div>
+  <form class="form" onsubmit="return false">
+    <label for="n">Name</label>
+    <input id="n" type="text" placeholder="First name">
+    <label for="p">Cell (for the ripe alert)</label>
+    <input id="p" type="tel" placeholder="(716) 000-0000">
+    <label for="e">Email (optional)</label>
+    <input id="e" type="email" placeholder="you@email.com">
+    <button class="btn btn-cherry">Add me to the list</button>
+    <small>Just crop updates from the farm. No spam, and we never share your number.</small>
+  </form>
+</div></section>
+
+<section class="pad daytrip"><div class="wrap">
+  <h2 class="big">Make a morning of it on the grape belt</h2>
+  <p class="lead-c">We sit right on the Route 20 corridor between the lake and the wineries &mdash; an easy stop on a Chautauqua-Lake-Erie day.</p>
+  <div class="cols">
+    <div class="card"><h3>Come early</h3><p>Cherries pick best in the cool of the morning and the rows are quiet. Bring the kids before the day heats up.</p></div>
+    <div class="card"><h3>Pair it with the wineries</h3><p>You&rsquo;re minutes from the Lake Erie wine trail. Pick a few pounds of cherries, then work your way down Route 20.</p></div>
+    <div class="card"><h3>Freeze &amp; bake later</h3><p>Pit and freeze what you pick, or turn the tart cherries into pie. Ask us how the canners in the area put theirs up.</p></div>
+  </div>
+</div></section>
+
+<section class="pad visit"><div class="wrap">
+  <div class="cols">
+    <div>
+      <h2>Come find us</h2>
+      <ul class="info">
+        <li><b>Address</b><span>6645 West Main Road, Portland, NY 14769</span></li>
+        <li><b>Picking line</b><span>(716) 792-9440 &mdash; call for today&rsquo;s ripeness &amp; hours</span></li>
+        <li><b>Season</b><span>Asparagus May&ndash;June &middot; Cherries mid-June&ndash;July</span></li>
+        <li><b>Pay</b><span>Cash &amp; check at the stand</span></li>
+        <li><b>Good to know</b><span>Listed with Cornell Cooperative Extension&rsquo;s &ldquo;Chautauqua Grown.&rdquo; Family-run, kids welcome.</span></li>
+      </ul>
+      <a class="btn btn-cherry" href="tel:17167929440" style="margin-top:8px">Call the farm</a>
+    </div>
+    <div class="mapbox">Map of 6645 West Main Rd, Portland NY goes here &mdash; one tap to directions from Route 20.</div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <b>Olde Chautauqua Farms</b> &middot; 6645 West Main Rd, Portland NY 14769 &middot; (716) 792-9440<br>
+  U-pick cherries &amp; asparagus in the heart of the Lake Erie grape belt.
+</div></footer>
+
+</body>
+</html>

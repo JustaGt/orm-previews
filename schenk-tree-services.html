@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schenk Tree Services — Clymer, NY · Tree Removal, Trimming &amp; Storm Cleanup in Chautauqua County</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#1f4630; --forest-d:#163322; --moss:#3f7a4e; --leaf:#5ea36a;
+  --bark:#5a4a36; --bark-d:#43372735; --amber:#e0a23a;
+  --cream:#f4f6ef; --paper:#f9fbf5; --ink:#1d241d; --line:#dde6d6; --grey:#4d564b;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito Sans',sans-serif;color:var(--ink);background:var(--paper);line-height:1.62}
+h1,h2,h3,.disp{font-family:'Zilla Slab',serif}
+.wrap{max-width:1090px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+.btn{display:inline-block;background:var(--amber);color:#2c2207;font-weight:700;text-decoration:none;padding:14px 28px;border-radius:30px;font-size:1rem;transition:.14s}
+.btn:hover{background:#cf9023}
+.btn.green{background:var(--moss);color:#fff;border-radius:30px}
+.btn.green:hover{background:var(--forest)}
+.btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55);border-radius:30px}
+.btn.ghost:hover{border-color:#fff}
+
+nav{background:var(--forest-d);position:sticky;top:0;z-index:30}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand b{font-family:'Zilla Slab';font-weight:700;color:#fff;font-size:1.3rem;display:block;line-height:1}
+.brand small{color:var(--leaf);font-size:.66rem;letter-spacing:2.5px;text-transform:uppercase}
+.navlinks{display:flex;gap:26px;color:#c8d8c4;font-weight:600;font-size:.92rem}
+.navlinks a{text-decoration:none}.navlinks a:hover{color:#fff}
+.navcall{color:#fff;font-weight:700;font-size:1rem;text-decoration:none}
+@media(max-width:880px){.navlinks{display:none}}
+
+.hero{position:relative;background:
+  linear-gradient(180deg,rgba(22,51,34,.9),rgba(31,70,48,.82)),
+  repeating-linear-gradient(115deg,rgba(255,255,255,.03) 0 2px,transparent 2px 22px);
+  background-color:var(--forest);color:#fff;padding:84px 0 74px}
+.hero .wrap{max-width:940px}
+.tag{display:inline-flex;align-items:center;gap:9px;background:rgba(224,162,58,.16);border:1px solid rgba(224,162,58,.4);color:#f1d59a;padding:7px 15px;border-radius:30px;font-size:.82rem;font-weight:700;letter-spacing:.5px}
+h1{font-size:3rem;line-height:1.07;margin:18px 0 14px;font-weight:700;max-width:19ch}
+.hero p.sub{font-size:1.18rem;max-width:55ch;color:#eaf2e6;margin-bottom:26px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero .since{margin-top:20px;color:#bcd0b6;font-size:.95rem}
+@media(max-width:560px){h1{font-size:2.25rem}}
+
+.urg{background:var(--amber);color:#322505}
+.urg .wrap{display:flex;align-items:center;gap:14px;justify-content:center;flex-wrap:wrap;padding:13px 22px;font-weight:700;font-size:.98rem;text-align:center}
+
+section{padding:60px 0}
+.eyebrow{color:var(--moss);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.8rem}
+h2{font-size:2.05rem;font-weight:700;margin:6px 0 10px;line-height:1.13}
+.lead{font-size:1.1rem;color:var(--grey);max-width:62ch}
+
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}
+.scard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px 22px}
+.scard .ic{width:44px;height:44px;border-radius:50%;background:var(--cream);border:2px solid var(--leaf);display:flex;align-items:center;justify-content:center;font-family:'Zilla Slab';font-weight:700;color:var(--forest);margin-bottom:12px}
+.scard:nth-child(2) .ic{border-color:var(--bark)}
+.scard:nth-child(3) .ic{border-color:var(--amber)}
+.scard:nth-child(4) .ic{border-color:var(--moss)}
+.scard h3{font-size:1.16rem;margin-bottom:6px;color:var(--forest)}
+.scard p{font-size:.97rem;color:var(--grey)}
+@media(max-width:820px){.svc{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){.svc{grid-template-columns:1fr}}
+
+.when{background:var(--forest);color:#fff}
+.when h2{color:#fff}
+.when .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center}
+.cues{list-style:none;margin-top:6px}
+.cues li{padding:11px 0 11px 30px;position:relative;border-bottom:1px solid rgba(255,255,255,.12);color:#e7f0e3}
+.cues li::before{content:"⚠";position:absolute;left:0;color:var(--amber)}
+.cues li:last-child{border-bottom:0}
+@media(max-width:740px){.when .wrap{grid-template-columns:1fr}}
+
+.steps-sec{background:var(--cream)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;border-bottom:4px solid var(--moss)}
+.step b{font-family:'Zilla Slab';color:var(--moss);font-size:1.5rem}
+.step h3{font-size:1.08rem;margin:6px 0;color:var(--forest)}
+.step p{font-size:.96rem;color:var(--grey)}
+@media(max-width:740px){.steps{grid-template-columns:1fr}}
+
+.about .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:40px}
+.card{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:26px}
+.card b{color:var(--forest)}
+.towns{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
+.towns span{background:#fff;border:1px solid var(--line);border-left:4px solid var(--leaf);padding:7px 13px;border-radius:5px;font-weight:700;font-size:.92rem;color:var(--forest)}
+@media(max-width:740px){.about .wrap{grid-template-columns:1fr}}
+
+.assess{background:var(--bark);color:#fff;padding:62px 0}
+.assess .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:42px;align-items:start}
+.assess h2{color:#fff}
+.abig{font-family:'Zilla Slab';font-size:1.9rem;margin:10px 0}
+.abig a{color:#fff;text-decoration:none}
+.anote{color:#ece2d2;font-size:.96rem}
+.aform{background:#fff;border-radius:12px;padding:26px;color:var(--ink)}
+.aform label{display:block;font-weight:700;font-size:.85rem;margin:11px 0 5px;color:var(--forest)}
+.aform input,.aform select,.aform textarea{width:100%;border:1px solid var(--line);border-radius:7px;padding:11px;font-family:inherit;font-size:.95rem;background:var(--paper)}
+.aform textarea{min-height:78px;resize:vertical}
+.aform .btn{width:100%;margin-top:15px;border:0;cursor:pointer;text-align:center}
+@media(max-width:760px){.assess .wrap{grid-template-columns:1fr}}
+
+footer{background:var(--forest-d);color:#b9cdb4;padding:28px 0;font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer b{color:#fff;font-family:'Zilla Slab'}
+.ph{color:var(--amber);font-style:italic}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="brand"><b>Schenk Tree Services</b><small>Clymer, New York</small></div>
+  <div class="navlinks">
+    <a href="#services">Services</a>
+    <a href="#when">When to Call</a>
+    <a href="#how">How It Works</a>
+    <a href="#assess">Free Assessment</a>
+  </div>
+  <a class="navcall" href="tel:+17163554383">716-355-4383</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="tag">Tree removal &amp; trimming · since 2013</span>
+  <h1>When a big tree is leaning the wrong way, call someone who's dropped a thousand of them.</h1>
+  <p class="sub">Schenk Tree Services handles hazardous removals, trimming, and storm cleanup across the wooded hill towns of southwestern Chautauqua County. Local crew, the right rigging, trees brought down without taking the garage with them.</p>
+  <div class="cta">
+    <a class="btn" href="#assess">Request a tree assessment</a>
+    <a class="btn ghost" href="tel:+17163554383">Call 716-355-4383</a>
+  </div>
+  <div class="since">Based in Clymer · serving Sherman, Findley Lake, French Creek, Panama &amp; nearby</div>
+</div></header>
+
+<div class="urg"><div class="wrap">
+  <span>⚡ Storm came through? Limb down or a tree on the line?</span><span>Call 716-355-4383 — we'll get out to look.</span>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <span class="eyebrow">What we do</span>
+  <h2>Removal, trimming, and the cleanup after</h2>
+  <p class="lead">Most calls are one of two kinds: a tree that's become a hazard and needs to come down, or healthy trees that need shaping back off the house, the wires, or the driveway.</p>
+  <div class="svc">
+    <div class="scard"><div class="ic">✁</div><h3>Hazardous removal</h3><p>Dead, leaning, split, or storm-damaged trees taken down in sections near houses, lines, and outbuildings — controlled, not crashed.</p></div>
+    <div class="scard"><div class="ic">✂</div><h3>Trimming &amp; pruning</h3><p>Crown thinning, deadwood, and limbs cleared off roofs, driveways, and power drops to keep healthy trees from becoming the next problem.</p></div>
+    <div class="scard"><div class="ic">⛆</div><h3>Storm cleanup</h3><p>After lake-effect and summer storms — downed trees, hung limbs, and blocked drives cleared so you can get back to normal.</p></div>
+    <div class="scard"><div class="ic">◇</div><h3>Lot &amp; view clearing</h3><p>Select clearing for lake views, building sites, and overgrown edges, leaving the trees you want and taking the ones you don't.</p></div>
+  </div>
+  <p style="margin-top:18px;color:var(--grey);font-size:.95rem">Stump grinding and brush handling can be arranged as part of a job — ask when you call.</p>
+</div></section>
+
+<section id="when" class="when"><div class="wrap">
+  <div>
+    <span class="eyebrow" style="color:var(--leaf)">Don't wait it out</span>
+    <h2>Signs a tree needs a look now</h2>
+    <p class="lead" style="color:#dcecd6">A tree that's been quietly dying is the one that comes down in the next big wind. If you're seeing any of these, it's worth a free assessment.</p>
+  </div>
+  <ul class="cues">
+    <li>A noticeable lean that's gotten worse, especially toward the house</li>
+    <li>Big dead limbs, or bark falling off the trunk</li>
+    <li>Cracks or a split where the trunk forks</li>
+    <li>Roots heaving or soil lifting on one side after wind</li>
+    <li>Limbs touching the roof, the service line, or the driveway</li>
+    <li>Storm damage you're not sure is safe to leave</li>
+  </ul>
+</div></section>
+
+<section id="how" class="steps-sec"><div class="wrap">
+  <span class="eyebrow">Simple and clear</span>
+  <h2>How an assessment works</h2>
+  <div class="steps">
+    <div class="step"><b>1</b><h3>You reach out</h3><p>Call or send the form with the tree, the town, and a photo if you have one. Storm calls get priority.</p></div>
+    <div class="step"><b>2</b><h3>We look &amp; quote</h3><p>We come assess the tree, the drop zone, and the access, and give you a clear price for the work.</p></div>
+    <div class="step"><b>3</b><h3>Down &amp; cleaned up</h3><p>We bring it down safely, cut it up, and clear the debris — your yard left usable, not a mess.</p></div>
+  </div>
+</div></section>
+
+<section class="about"><div class="wrap">
+  <div>
+    <span class="eyebrow">Who you're calling</span>
+    <h2>A local crew that knows these hills</h2>
+    <p class="lead">Schenk Tree Services has worked Chautauqua County since 2013, run by Ben Schenk out of Clymer. The hill country near the PA line is full of big old hardwoods — and the storms that take them down. We know how they fall and how to put them where they won't do damage.</p>
+    <div class="towns">
+      <span>Clymer</span><span>Sherman</span><span>Findley Lake</span><span>French Creek</span>
+      <span>Panama</span><span>Mina</span><span>Ripley</span><span>Westfield</span>
+    </div>
+    <p style="margin-top:14px;color:var(--grey);font-size:.95rem"><b>Insurance:</b> confirm current coverage details directly with Schenk Tree Services before work begins — this is the first thing a careful homeowner should ask, and the answer belongs on this page once verified.</p>
+  </div>
+  <div class="card">
+    <b style="font-size:1.05rem">Schenk Tree Services</b><br>
+    1798 Bush Rd<br>Clymer, NY 14724<br><br>
+    <b>Phone:</b> <a href="tel:+17163554383" style="color:var(--moss);font-weight:700;text-decoration:none">716-355-4383</a><br>
+    <span style="font-size:.9rem;color:var(--grey)">Owner: Ben Schenk · serving Chautauqua County since 2013</span><br><br>
+    <span class="ph" style="font-size:.88rem">[Email not listed publicly — add a contact email here once confirmed.]</span>
+  </div>
+</div></section>
+
+<section id="assess" class="assess"><div class="wrap">
+  <div>
+    <h2>Request a free tree assessment</h2>
+    <p class="anote" style="margin-top:8px;max-width:42ch">Tell us what you're looking at. For a tree that's already down or on a line, call first — we move those up the list.</p>
+    <div class="abig"><a href="tel:+17163554383">716-355-4383</a></div>
+    <div class="anote">Clymer, NY · serving the southwest Chautauqua hill towns</div>
+  </div>
+  <form class="aform" onsubmit="return false">
+    <label>Name</label><input type="text" placeholder="Your name">
+    <label>Phone</label><input type="tel" placeholder="Best number to reach you">
+    <label>Town</label><input type="text" placeholder="e.g. Clymer, Sherman, Findley Lake">
+    <label>What's going on?</label>
+    <select><option>Tree removal</option><option>Trimming / pruning</option><option>Storm damage / emergency</option><option>Lot or view clearing</option><option>Not sure — need a look</option></select>
+    <label>Details</label><textarea placeholder="How many trees, how close to the house, any storm damage"></textarea>
+    <button class="btn green">Request assessment</button>
+  </form>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b>Schenk Tree Services</b> · Clymer, NY · 716-355-4383</div>
+  <div>Removal · Trimming · Storm cleanup · Lot clearing</div>
+</div></footer>
+
+</body>
+</html>

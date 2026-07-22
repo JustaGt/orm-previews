@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ellicottville Kitchen Equipment — Rebuilt Dishmachines &amp; Hard-to-Find Parts | Salamanca, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --steel:#20282c; --steel2:#2e393f; --teal:#006065; --teal-lt:#0d8b90;
+    --zinc:#eceeef; --line:#c9cfd2; --ink:#161c1f; --grey:#5f6b70; --hot:#e2571f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'IBM Plex Sans',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  .mono{font-family:'IBM Plex Mono',monospace}
+
+  /* utility bar */
+  .util{background:var(--steel);color:#b9c3c7;font-size:13px}
+  .util .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:9px 22px}
+  .util b{color:#fff}
+
+  /* triage hero */
+  header{background:var(--steel2);color:#fff;padding:56px 0 0;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.02) 0 12px,transparent 12px 24px)}
+  .badge{display:inline-block;border:1px solid var(--teal-lt);color:#7fd6da;font-size:12px;font-weight:600;letter-spacing:.12em;
+         text-transform:uppercase;padding:5px 10px;border-radius:2px}
+  h1{font-size:48px;line-height:1.05;margin:16px 0 12px;font-weight:700;max-width:18ch}
+  h1 span{color:#7fd6da}
+  header p{color:#c3cccf;font-size:18px;max-width:58ch}
+  .triage{background:#fff;color:var(--ink);border-radius:6px 6px 0 0;margin-top:38px;padding:26px;box-shadow:0 -2px 0 var(--hot) inset}
+  .triage h2{font-size:19px;margin-bottom:4px}
+  .triage p{color:var(--grey);font-size:14px;margin-bottom:16px}
+  .tri-row{display:grid;grid-template-columns:1.1fr 1.1fr 1.4fr auto;gap:12px}
+  .tri-row label{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--grey);margin-bottom:5px}
+  .tri-row input,.tri-row select{width:100%;padding:11px;border:1px solid var(--line);border-radius:3px;font:inherit;background:var(--zinc)}
+  .tri-row button{align-self:end;background:var(--hot);color:#fff;border:0;padding:12px 20px;border-radius:3px;font-weight:700;cursor:pointer;white-space:nowrap}
+
+  section{padding:60px 0;border-bottom:1px solid var(--line)}
+  .eyebrow{font-family:'IBM Plex Mono';font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+  h2.big{font-size:34px;margin:8px 0 10px;font-weight:700}
+  .lede{color:var(--grey);max-width:62ch;margin-bottom:30px}
+
+  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .box{border:1px solid var(--line);border-top:4px solid var(--teal);padding:24px;border-radius:0 0 5px 5px;background:#fff}
+  .box h3{font-size:20px;margin-bottom:8px}
+  .box p{font-size:15px;color:var(--grey)}
+  .box .num{font-family:'IBM Plex Mono';font-size:12px;color:var(--teal-lt);letter-spacing:.1em}
+
+  /* rebuild table */
+  .rebuild{background:var(--zinc)}
+  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);font-size:15px}
+  th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line)}
+  th{background:var(--steel);color:#fff;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+  td.mono{font-family:'IBM Plex Mono';font-size:14px}
+  tr:last-child td{border-bottom:0}
+  .pricenote{margin-top:12px;font-size:13px;color:var(--grey)}
+
+  /* parts strip */
+  .parts-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .parts-list span{font-family:'IBM Plex Mono';font-size:13px;background:#fff;border:1px solid var(--line);padding:7px 12px;border-radius:2px}
+
+  .two{display:grid;grid-template-columns:1.2fr 1fr;gap:34px;align-items:start}
+  .facts{border:1px solid var(--line);border-radius:5px;overflow:hidden}
+  .facts div{display:flex;justify-content:space-between;gap:14px;padding:13px 16px;border-bottom:1px solid var(--line);font-size:15px}
+  .facts div:last-child{border-bottom:0}
+  .facts strong{font-family:'IBM Plex Mono';font-size:13px;color:var(--grey);letter-spacing:.06em;text-transform:uppercase}
+
+  .cta-band{background:var(--teal);color:#fff;text-align:center;padding:54px 0;border:0}
+  .cta-band h2{font-size:32px;margin-bottom:10px}
+  .cta-band p{color:#c8ecee;max-width:52ch;margin:0 auto 22px}
+  .cta-band a{display:inline-block;background:#fff;color:var(--teal);padding:15px 30px;border-radius:3px;font-weight:700;text-decoration:none}
+
+  footer{background:var(--steel);color:#8f9a9f;padding:26px 0;font-size:13px}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+  @media(max-width:900px){
+    h1{font-size:34px}
+    .tri-row,.three,.two{grid-template-columns:1fr}
+    section{padding:42px 0}
+  }
+</style>
+</head>
+<body>
+
+<div class="util"><div class="wrap">
+  <span>Rebuilt institutional dishmachines · vintage parts · service — WNY &amp; NW Pennsylvania</span>
+  <span>Shop: Salamanca, NY · <b>1-800-707-7278</b></span>
+</div></div>
+
+<header>
+  <div class="wrap">
+    <span class="badge">Rebuilding dishmachines since 1989</span>
+    <h1>The machine is down and the part is <span>"no longer available."</span></h1>
+    <p>That's the call we take. EKE keeps shelves of parts the manufacturers stopped making, rebuilds institutional dishmachines from the frame up, and gets kitchens across Western New York and Northwest PA back on the rack.</p>
+
+    <div class="triage">
+      <h2>Tell us the machine. We'll tell you if we have it.</h2>
+      <p>Model plate is usually inside the door or on the back panel. If you can't find it, call and describe the machine — we've seen most of them.</p>
+      <form class="tri-row" onsubmit="return false">
+        <div><label>Manufacturer</label>
+          <select><option>Hobart</option><option>Champion</option><option>Jackson</option><option>Insinger</option><option>Stero</option><option>Other / not sure</option></select>
+        </div>
+        <div><label>Model number</label><input class="mono" placeholder="e.g. AM-14, C44A, CMA-180"></div>
+        <div><label>What's it doing?</label><input placeholder="No fill, no heat, tripping, worn rack rails…"></div>
+        <div><button>Check parts</button></div>
+      </form>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">// three ways we get you running</span>
+    <h2 class="big">Parts, rebuilds, and a service truck</h2>
+    <p class="lede">A restaurant can't wait six weeks for a factory backorder, and a school kitchen can't spend $30,000 on a new flight machine in July. EKE exists in the gap between those two problems.</p>
+    <div class="three">
+      <div class="box">
+        <div class="num">01 / PARTS</div>
+        <h3>Vintage &amp; discontinued parts</h3>
+        <p>Decades of inventory for older machines the OEMs have written off — organized by machine type and manufacturer, priced well under what an OEM equivalent costs when one exists at all.</p>
+      </div>
+      <div class="box">
+        <div class="num">02 / REBUILDS</div>
+        <h3>Certified pre-owned dishmachines</h3>
+        <p>Stripped to the last nut and wire, rebuilt on stainless frames with new electrical controls and stainless upgrades to the mechanical wear points. Undercounter through flight-type.</p>
+      </div>
+      <div class="box">
+        <div class="num">03 / SERVICE</div>
+        <h3>Repair, chemicals &amp; support</h3>
+        <p>Industrial, commercial and restaurant kitchen repair across WNY and NW Pennsylvania, plus the detergent and rinse chemicals to keep the machine passing a health inspection.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rebuild">
+  <div class="wrap">
+    <span class="eyebrow">// the rebuild, step by step</span>
+    <h2 class="big">What "certified pre-owned" means on our floor</h2>
+    <p class="lede">Not a wipe-down and a new decal. Every machine goes through the same sequence before it leaves Elm Street.</p>
+    <table>
+      <tr><th style="width:90px">Stage</th><th>What happens</th><th style="width:220px">Why it matters to your kitchen</th></tr>
+      <tr><td class="mono">01</td><td>Complete disassembly — down to the last nut and wire</td><td>Nothing worn gets buried inside a "reconditioned" cabinet</td></tr>
+      <tr><td class="mono">02</td><td>Rebuilt on a stainless steel frame</td><td>The part that rots first on a wet machine no longer rots</td></tr>
+      <tr><td class="mono">03</td><td>Essentially new electrical controls fitted</td><td>Fewer nuisance faults, cleaner diagnosis when something does trip</td></tr>
+      <tr><td class="mono">04</td><td>Mechanical wear components upgraded to stainless</td><td>Longer service intervals than the machine had when new</td></tr>
+      <tr><td class="mono">05</td><td>Run and checked before it ships</td><td>It washes on arrival, not after a week of visits</td></tr>
+    </table>
+    <p class="pricenote"><strong>Cost:</strong> an EKE rebuild is priced at roughly 50% of the list price of a comparable new machine. Exact quote depends on model and configuration — placeholder until confirmed with the shop.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">// who calls us</span>
+    <h2 class="big">Kitchens that can't go a shift without a rack</h2>
+    <p class="lede">Independent restaurants, taverns and ski-town kitchens through the Ellicottville corridor; school, college and institutional dish rooms; plus industrial customers who need an aqueous parts washer built to fit a small footprint rather than bought off a page.</p>
+    <div class="parts-list">
+      <span>undercounter</span><span>door-type</span><span>conveyor / rack</span><span>flight-type</span>
+      <span>booster heaters</span><span>wash &amp; rinse arms</span><span>control packs</span><span>pumps &amp; motors</span>
+      <span>rack rails</span><span>detergent &amp; rinse chemicals</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="two">
+      <div>
+        <span class="eyebrow">// find us</span>
+        <h2 class="big">The shop is in Salamanca. The name is older than the address.</h2>
+        <p class="lede">EKE started in Ellicottville in 1989 and kept the name. The rebuild floor and the parts shelves are at 150 Elm Street in Salamanca — visitors welcome during business hours, and the toll-free line reaches the bench.</p>
+        <a class="mono" href="tel:8007077278" style="font-size:24px;color:var(--teal);font-weight:600;text-decoration:none">1-800-707-7278</a>
+      </div>
+      <div class="facts">
+        <div><strong>Shop</strong><span>150 Elm St, Salamanca, NY 14779</span></div>
+        <div><strong>Mail</strong><span>PO Box 1549, Ellicottville, NY 14731</span></div>
+        <div><strong>Hours</strong><span>9:00am – 5:00pm</span></div>
+        <div><strong>Phone</strong><span>1-800-707-7278</span></div>
+        <div><strong>Rebuilding since</strong><span>1989</span></div>
+        <div><strong>Coverage</strong><span>Western NY &amp; NW Pennsylvania</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="wrap">
+    <h2>Send us the model number before you buy new.</h2>
+    <p>Most of the time the part exists, the machine has years left, and the quote is a fraction of a replacement.</p>
+    <a href="tel:8007077278">Call 1-800-707-7278</a>
+  </div>
+</div>
+
+<footer><div class="wrap">
+  <span>Ellicottville Kitchen Equipment · Salamanca, NY · Rebuilt dishmachines &amp; industrial aqueous washers</span>
+  <span>Concept preview prepared by Onyx Rise Media</span>
+</div></footer>
+
+</body>
+</html>

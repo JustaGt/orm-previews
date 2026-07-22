@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hampton Dive Center — Learn to Dive &amp; Explore Long Island's Wrecks</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Mulish:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --abyss:#03212e; --deep:#063a4f; --teal:#0a8aa6; --aqua:#21c0c9;
+    --coral:#ff6a5a; --sand:#f3ede1; --foam:#eafafa; --ink:#08252f; --paper:#f4f8f9;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Mulish',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+  h1,h2,h3,.pop{font-family:'Poppins',sans-serif}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  /* nav */
+  nav{position:sticky;top:0;z-index:20;background:rgba(3,33,46,.95);backdrop-filter:blur(6px);color:#fff}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:13px 22px;flex-wrap:wrap;gap:8px}
+  .logo{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.2rem;letter-spacing:.5px}
+  .logo span{color:var(--aqua)}
+  .navlinks{display:flex;gap:20px;font-size:.9rem;font-weight:600}
+  .navlinks a{color:#cfeef2;text-decoration:none}
+  .nbtn{background:var(--coral);color:#fff;padding:9px 18px;border-radius:30px;text-decoration:none;font-weight:700;font-size:.88rem}
+  /* hero */
+  header.hero{background:linear-gradient(180deg,var(--deep) 0%,var(--abyss) 100%);color:#fff;position:relative;overflow:hidden;text-align:center}
+  .bubbles span{position:absolute;bottom:-40px;border-radius:50%;background:rgba(33,192,201,.18);animation:rise 12s linear infinite}
+  @keyframes rise{to{transform:translateY(-115vh)}}
+  header .wrap{padding:78px 22px 90px;position:relative;z-index:2}
+  .tag{display:inline-block;background:rgba(33,192,201,.18);border:1px solid var(--aqua);color:var(--aqua);font-weight:700;font-size:.74rem;letter-spacing:2px;text-transform:uppercase;padding:7px 16px;border-radius:30px}
+  header h1{font-size:3.2rem;font-weight:800;line-height:1.02;margin:20px 0 14px}
+  header h1 span{color:var(--aqua)}
+  header p{font-size:1.2rem;max-width:620px;margin:0 auto;color:#cfe9ee}
+  .doors{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:720px;margin:34px auto 0}
+  .door{background:rgba(255,255,255,.06);border:1px solid rgba(33,192,201,.4);border-radius:16px;padding:24px;text-align:left}
+  .door h3{font-size:1.25rem;margin-bottom:6px;color:#fff}
+  .door p{font-size:.92rem;color:#bfe1e7;margin-bottom:14px}
+  .door a{display:inline-block;font-weight:700;text-decoration:none;padding:10px 18px;border-radius:30px;font-size:.9rem}
+  .d1 a{background:var(--coral);color:#fff}
+  .d2 a{background:var(--aqua);color:var(--abyss)}
+  .wavebot{display:block;width:100%;position:absolute;bottom:-1px;left:0;z-index:1}
+  /* sections */
+  section{padding:62px 0}
+  .lab{color:var(--teal);font-weight:700;letter-spacing:2px;font-size:.76rem;text-transform:uppercase;text-align:center}
+  h2{font-size:2.2rem;text-align:center;color:var(--abyss);margin:6px 0 8px}
+  .sub{text-align:center;color:#4a6470;max-width:640px;margin:0 auto 34px}
+  /* path */
+  .path{display:flex;gap:0;flex-wrap:wrap;justify-content:center;counter-reset:step}
+  .pstep{flex:1;min-width:150px;text-align:center;padding:20px 14px;position:relative}
+  .pstep .dot{width:48px;height:48px;border-radius:50%;background:var(--teal);color:#fff;font-family:'Poppins';font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.15rem}
+  .pstep h3{font-size:1.05rem;color:var(--abyss);margin-bottom:4px}
+  .pstep p{font-size:.86rem;color:#566f7a}
+  .pstep:not(:last-child)::after{content:"";position:absolute;top:44px;right:-0;width:100%;height:2px;background:linear-gradient(90deg,var(--teal),transparent);z-index:-1}
+  /* local diving */
+  .local{background:linear-gradient(160deg,var(--abyss),var(--deep));color:#fff}
+  .local h2{color:#fff}.local .sub{color:#b6d8de}
+  .lcards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .lc{background:rgba(255,255,255,.05);border:1px solid rgba(33,192,201,.3);border-radius:14px;padding:24px}
+  .lc h3{color:var(--aqua);font-size:1.18rem;margin-bottom:7px}
+  .lc p{font-size:.93rem;color:#c3dee3}
+  /* gear/travel split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .panel{border-radius:16px;padding:30px;color:#fff}
+  .panel.gear{background:linear-gradient(135deg,#0a8aa6,#063a4f)}
+  .panel.travel{background:linear-gradient(135deg,#ff6a5a,#c0392b)}
+  .panel h3{font-size:1.5rem;margin-bottom:8px}
+  .panel ul{list-style:none;margin:12px 0 18px}
+  .panel li{padding:6px 0 6px 24px;position:relative;font-size:.95rem;color:#fdf2ef}
+  .panel li::before{content:"➜";position:absolute;left:0;opacity:.8}
+  .panel a{display:inline-block;background:#fff;color:var(--abyss);padding:10px 20px;border-radius:30px;text-decoration:none;font-weight:700;font-size:.9rem}
+  /* why */
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .why .w{background:#fff;border:1px solid #dfeaec;border-radius:14px;padding:24px;text-align:center}
+  .why .w b{display:block;font-family:'Poppins';font-size:1.05rem;color:var(--abyss);margin-bottom:5px}
+  .why .w p{font-size:.9rem;color:#566f7a}
+  /* contact */
+  .contact{background:var(--abyss);color:#fff;text-align:center}
+  .contact h2{color:#fff}
+  .contact .big{font-family:'Poppins';font-size:2rem;color:var(--aqua);font-weight:800;margin:6px 0}
+  .cbtns{margin-top:22px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .cbtns a{text-decoration:none;font-weight:700;padding:13px 26px;border-radius:30px}
+  .cbtns .p{background:var(--coral);color:#fff}
+  .cbtns .s{background:transparent;border:1.5px solid var(--aqua);color:var(--aqua)}
+  .info{margin-top:24px;color:#a9cbd2;font-size:.95rem}
+  footer{background:#021820;color:#7fa3ac;padding:26px 0;font-size:.86rem;text-align:center}
+  @media(max-width:760px){
+    header h1{font-size:2.3rem}
+    .doors,.lcards,.split,.why-grid{grid-template-columns:1fr}
+    .pstep:not(:last-child)::after{display:none}
+  }
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="logo">Hampton <span>Dive Center</span></div>
+  <div class="navlinks">
+    <a href="#path">Learn</a><a href="#local">Dive Local</a><a href="#explore">Gear &amp; Travel</a>
+  </div>
+  <a class="nbtn" href="#contact">Book / Visit</a>
+</div></div>
+
+<header class="hero">
+  <div class="bubbles">
+    <span style="left:10%;width:14px;height:14px;animation-delay:0s"></span>
+    <span style="left:30%;width:9px;height:9px;animation-delay:3s"></span>
+    <span style="left:55%;width:18px;height:18px;animation-delay:1.5s"></span>
+    <span style="left:75%;width:11px;height:11px;animation-delay:5s"></span>
+    <span style="left:88%;width:7px;height:7px;animation-delay:2.5s"></span>
+  </div>
+  <div class="wrap">
+    <span class="tag">Riverhead &middot; Gateway to the East End</span>
+    <h1>The world beneath<br>the surface starts <span>here.</span></h1>
+    <p>Long Island's family-owned dive center — from your very first breath underwater to the wrecks off our own coast and trips around the world.</p>
+    <div class="doors">
+      <div class="door d1">
+        <h3>Never dived before?</h3>
+        <p>Try Scuba in a pool, then earn your Open Water certification with instructors who've taught the East End for years.</p>
+        <a href="#path">Start as a new diver</a>
+      </div>
+      <div class="door d2">
+        <h3>Already certified?</h3>
+        <p>Join a guided local dive, our wreck-diving club, or grab gear, fills and service before your next trip.</p>
+        <a href="#local">Dive with us</a>
+      </div>
+    </div>
+  </div>
+  <svg class="wavebot" viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,50 C220,90 420,10 720,40 C1010,68 1220,18 1440,46 L1440,80 L0,80 Z" fill="#f4f8f9"/></svg>
+</header>
+
+<section id="path">
+  <div class="wrap">
+    <div class="lab">Your path from beginner to diver</div>
+    <h2>It's closer than you think</h2>
+    <p class="sub">You don't need to be an athlete or own any gear. You need a pool, an instructor, and an afternoon. Here's the road most of our divers take.</p>
+    <div class="path">
+      <div class="pstep"><div class="dot">1</div><h3>Try Scuba</h3><p>Breathe underwater for the first time in a pool — no commitment, just to see if you love it.</p></div>
+      <div class="pstep"><div class="dot">2</div><h3>Open Water</h3><p>Your first real certification — dive anywhere in the world to 60 ft.</p></div>
+      <div class="pstep"><div class="dot">3</div><h3>Advanced</h3><p>Deeper dives, navigation, night and wreck skills for our local waters.</p></div>
+      <div class="pstep"><div class="dot">4</div><h3>Rescue &amp; Pro</h3><p>Rescue diver, divemaster and instructor paths when you're ready to lead.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="local" id="local">
+  <div class="wrap">
+    <div class="lab" style="color:var(--aqua)">Right off our coast</div>
+    <h2>Dive Long Island's Wreck Valley</h2>
+    <p class="sub">Some of the best wreck diving on the East Coast is in our backyard — you don't have to fly anywhere to find something worth descending for.</p>
+    <div class="lcards">
+      <div class="lc"><h3>Shore dives</h3><p>Easy-access entries to build skills and log dives close to home, perfect after a refresher.</p></div>
+      <div class="lc"><h3>Guided wreck dives</h3><p>Charter out to Long Island's legendary wrecks with divers who know the sites and the conditions.</p></div>
+      <div class="lc"><h3>The dive club</h3><p>A community of local divers — regular club dives, shared boats, and people to log dives with all season.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="explore">
+  <div class="wrap">
+    <div class="lab">Gear up &amp; get out there</div>
+    <h2>A full shop and a passport</h2>
+    <p class="sub">Everything you need to dive locally — and the trips to use it somewhere warm.</p>
+    <div class="split">
+      <div class="panel gear">
+        <h3>Gear &amp; Service</h3>
+        <ul>
+          <li>Rental gear for class, travel or a single dive</li>
+          <li>Retail — masks, fins, computers, exposure suits</li>
+          <li>On-site service department &amp; tank fills</li>
+        </ul>
+        <a href="#contact">Ask about gear</a>
+      </div>
+      <div class="panel travel">
+        <h3>Dive Travel</h3>
+        <ul>
+          <li>Group trips to the Maldives, Belize &amp; Grenada</li>
+          <li>Reef-conservation and bucket-list destinations</li>
+          <li>Travel with people you already dive with</li>
+        </ul>
+        <a href="#contact">See upcoming trips</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <div class="lab">Why divers start here</div>
+    <h2>Family-owned, East End rooted</h2>
+    <div class="why-grid" style="margin-top:22px">
+      <div class="w"><b>Decades on the East End</b><p>A fixture of the Long Island diving community, not a pop-up.</p></div>
+      <div class="w"><b>Patient instructors</b><p>First-timers and kids welcome — we've taught a lot of nervous beginners into confident divers.</p></div>
+      <div class="w"><b>Local + global</b><p>Wreck Valley one weekend, a tropical reef the next — all booked in one place.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="lab" style="color:var(--aqua)">Book or visit</div>
+    <h2>Let's get you in the water</h2>
+    <p class="sub" style="color:#b6d8de">Call the shop to sign up for Try Scuba, ask about certifications, or reserve a spot on a local dive or trip.</p>
+    <div class="big">631-727-7578</div>
+    <div class="cbtns">
+      <a class="p" href="tel:6317277578">Call the shop</a>
+      <a class="s" href="#path">Start with Try Scuba</a>
+    </div>
+    <div class="info">
+      369 Route 24, Riverhead, NY 11901<br>
+      Family owned &amp; operated &middot; PADI courses, local dives &amp; dive travel
+    </div>
+  </div>
+</section>
+
+<footer>
+  Hampton Dive Center &middot; 369 Route 24, Riverhead, NY 11901 &middot; 631-727-7578<br>
+  <span style="opacity:.7">Preview concept prepared by Onyx Rise Media for review. Not the live site.</span>
+</footer>
+
+</body>
+</html>

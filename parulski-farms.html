@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parulski Farms — Grass-Fed Beef &amp; Pastured Poultry · Bath, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --barn:#8f2f27; --barn-d:#6f221c; --pasture:#3f5f3a; --pasture-l:#6d8a56;
+    --cream:#f7f1e4; --wheat:#e7d8b8; --wood:#7a5a3a; --ink:#2c2620; --line:#e0d3ba;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Karla',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+  h1,h2,h3{font-family:'Bitter',serif}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+  .eyebrow{font-family:'Karla';text-transform:uppercase;letter-spacing:.14em;font-size:.8rem;font-weight:700}
+  /* nav */
+  .nav{background:var(--barn);color:#fff}
+  .nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:12px 22px;flex-wrap:wrap;gap:10px}
+  .brand{font-family:'Bitter';font-weight:700;font-size:1.15rem;letter-spacing:.02em}
+  .nav a.call{color:#fff;text-decoration:none;font-weight:700;border:1.5px solid #f3c9c4;padding:7px 14px;border-radius:30px;font-size:.9rem}
+  /* hero split */
+  .hero{background:
+     linear-gradient(0deg,rgba(63,95,58,.05),rgba(63,95,58,.05)),
+     var(--cream)}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;padding:56px 22px}
+  .hero .eyebrow{color:var(--barn)}
+  .hero h1{font-size:clamp(2rem,4.6vw,3.1rem);line-height:1.08;margin:12px 0 16px;color:var(--barn-d)}
+  .hero p{font-size:1.14rem;color:#463d31;max-width:46ch}
+  .hero .cta{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{font-family:'Karla';font-weight:700;text-decoration:none;padding:13px 22px;border-radius:4px;font-size:1rem;display:inline-block}
+  .btn-barn{background:var(--barn);color:#fff}.btn-barn:hover{background:var(--barn-d)}
+  .btn-out{border:2px solid var(--pasture);color:var(--pasture)}.btn-out:hover{background:rgba(63,95,58,.08)}
+  .hero-card{background:var(--pasture);color:#f2f6ea;border-radius:10px;padding:26px;box-shadow:0 14px 34px rgba(63,95,58,.28)}
+  .hero-card h3{font-size:1.25rem;margin-bottom:6px;color:#fff}
+  .hero-card .hours{font-size:2rem;font-family:'Bitter';font-weight:700;margin:6px 0}
+  .hero-card p{font-size:.96rem;color:#d9e6cd}
+  .hero-card .pill{display:inline-block;background:#fff;color:var(--pasture);font-weight:700;
+     font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:20px;margin-bottom:14px}
+  /* promise ribbon */
+  .ribbon{background:var(--wood);color:#f7ecd8;text-align:center;padding:14px 0;font-family:'Bitter';font-size:1.05rem}
+  .ribbon b{color:#ffdf9e}
+  /* raise */
+  section{padding:58px 0}
+  .sec-title{text-align:center;max-width:60ch;margin:0 auto 34px}
+  .sec-title .eyebrow{color:var(--pasture)}
+  .sec-title h2{font-size:clamp(1.6rem,3.6vw,2.3rem);color:var(--barn-d);margin:8px 0 10px}
+  .sec-title p{color:#5a4f40}
+  .raise{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+  .animal{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .animal .top{height:8px;background:var(--pasture)}
+  .animal .body{padding:20px}
+  .animal h3{color:var(--barn-d);font-size:1.2rem;margin-bottom:6px}
+  .animal p{font-size:.95rem;color:#524839}
+  .animal .diet{display:inline-block;margin-top:12px;font-size:.78rem;font-weight:700;letter-spacing:.05em;
+     text-transform:uppercase;color:var(--pasture);background:#eef2e6;padding:4px 10px;border-radius:20px}
+  /* store + processing two-up */
+  .twoup{background:#f0e7d3}
+  .twoup .wrap{display:grid;grid-template-columns:1fr 1fr;gap:26px;padding:56px 22px}
+  .panel{background:#fff;border:1px solid var(--line);border-radius:10px;padding:28px}
+  .panel h3{color:var(--barn-d);font-size:1.4rem;margin-bottom:10px}
+  .panel .lead{font-weight:600}
+  .panel ul{list-style:none;margin:14px 0 0}
+  .panel li{padding:8px 0 8px 26px;position:relative;border-bottom:1px dashed var(--line);font-size:.97rem}
+  .panel li::before{content:"✔";position:absolute;left:0;color:var(--pasture);font-weight:700}
+  .panel .note{font-size:.84rem;color:#8a7a5f;margin-top:12px;font-style:italic}
+  /* transparency */
+  .how .wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+  .how .quote{font-family:'Bitter';font-size:1.5rem;line-height:1.4;color:var(--barn-d)}
+  .how .quote span{color:var(--pasture)}
+  .how p{color:#4f4636;margin-top:14px}
+  /* visit */
+  .visit{background:var(--pasture);color:#f2f6ea}
+  .visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:36px;padding:60px 22px;align-items:center}
+  .visit h2{color:#fff;font-size:clamp(1.6rem,3.4vw,2.2rem);margin-bottom:12px}
+  .visit .addr{font-size:1.1rem;color:#e2edd6}
+  .visit a{color:#ffdf9e;font-weight:700;text-decoration:none}
+  .visit .big{font-family:'Bitter';font-size:1.8rem;color:#fff;display:block;margin:8px 0}
+  form{display:grid;gap:11px;background:#f7f1e4;padding:22px;border-radius:10px}
+  form h3{color:var(--barn-d)}
+  input,select,textarea{font-family:inherit;padding:11px 13px;border:1px solid var(--line);border-radius:5px;font-size:1rem;color:var(--ink)}
+  form button{border:none;cursor:pointer}
+  footer{background:var(--barn-d);color:#f0c9c4;text-align:center;font-size:.85rem;padding:20px}
+  @media(max-width:760px){.hero .wrap,.twoup .wrap,.how .wrap,.visit .wrap{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="wrap">
+  <span class="brand">Parulski Farms · Bath, NY</span>
+  <a class="call" href="tel:16072817565">Farm store: (607) 281-7565</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div>
+    <div class="eyebrow">South tip of Keuka Lake · Bath, NY</div>
+    <h1>Beef and poultry raised on our forage — start to finish.</h1>
+    <p>Our beef is born, bred, and raised on this 400-acre farm on grass, hay, and haylage we grow here. The turkeys and chickens run the pasture; the hogs are fed grain we harvest ourselves. No hormones. No antibiotics. Ever.</p>
+    <div class="cta">
+      <a class="btn btn-barn" href="#reserve">Reserve a beef share</a>
+      <a class="btn btn-out" href="#store">Visit the farm store</a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <span class="pill">Farm store · open year round</span>
+    <h3>Come see where your food comes from</h3>
+    <div class="hours">8am – 7pm</div>
+    <p>Open daily, year round — best to call ahead so someone's at the counter for you. 7438 County Route 113, Bath.</p>
+  </div>
+</div></header>
+
+<div class="ribbon">Raised here · harvested here · <b>no hormones, no antibiotics</b> · cut to your order</div>
+
+<section id="raise"><div class="wrap">
+  <div class="sec-title">
+    <div class="eyebrow">What we raise</div>
+    <h2>Four things, done one way</h2>
+    <p>We keep the list short so we can raise all of it right — on pasture and on feed grown on the same ground.</p>
+  </div>
+  <div class="raise">
+    <div class="animal"><div class="top"></div><div class="body"><h3>Grass-fed beef</h3><p>Born, bred, and finished here on pasture grass, dry hay, and haylage grown and harvested on the farm.</p><span class="diet">Quarter · half · whole</span></div></div>
+    <div class="animal"><div class="top"></div><div class="body"><h3>Pastured turkey</h3><p>Free-ranged on open pasture — a real bird for the holiday table, raised outdoors, not in a barn.</p><span class="diet">Seasonal · reserve early</span></div></div>
+    <div class="animal"><div class="top"></div><div class="body"><h3>Pastured chicken</h3><p>Meat chickens raised out on grass, moved to fresh pasture — clean-tasting birds from a farm you can walk.</p><span class="diet">By the bird · by the case</span></div></div>
+    <div class="animal"><div class="top"></div><div class="body"><h3>Farm-fed pork</h3><p>Hogs raised on grain we grow and harvest here. Cut and wrapped the way you want it.</p><span class="diet">Half · whole hog</span></div></div>
+  </div>
+</div></section>
+
+<div class="twoup" id="store"><div class="wrap">
+  <div class="panel">
+    <h3>The farm store</h3>
+    <p class="lead">Open year round, 8am to 7pm — and it's the same family that raised the animals behind the counter.</p>
+    <ul>
+      <li>Beef, poultry, and pork from our own herds and flocks</li>
+      <li>Other local products from around the Finger Lakes</li>
+      <li>Quarter, half, and whole beef shares — reserve ahead of a harvest date</li>
+      <li>Call ahead and we'll have your order pulled and ready</li>
+    </ul>
+    <p class="note">Share pricing and current availability change by season — call the farm to confirm before you drive out.</p>
+  </div>
+  <div class="panel">
+    <h3>Custom &amp; deer processing</h3>
+    <p class="lead">A working cut-and-wrap floor — for your own animals and for the deer you bring in each fall.</p>
+    <ul>
+      <li>Custom cut-and-wrap for farm beef, pork, and poultry</li>
+      <li>Deer processing in season — a New York State–listed deer processor</li>
+      <li>Cut to your order: steaks, roasts, ground, and specialty cuts</li>
+      <li>Local drop-off, no long haul across the county</li>
+    </ul>
+    <p class="note">Deer season hours and drop-off details are set each fall — call to confirm the current schedule.</p>
+  </div>
+</div></div>
+
+<section class="how"><div class="wrap">
+  <div>
+    <div class="eyebrow" style="color:var(--pasture)">Why buy it here</div>
+    <p class="quote">"You can come and see <span>exactly where your food is sourced.</span> That's the whole point of the farm."</p>
+    <p>The beef is finished on forage we grew a field over. The turkeys and chickens are out on pasture where you can watch them. Nothing about how the meat is raised is a mystery — you're welcome to walk the ground it came from.</p>
+  </div>
+  <div>
+    <div class="panel" style="border-left:6px solid var(--barn)">
+      <h3 style="font-size:1.15rem">Our standing rule</h3>
+      <p style="font-weight:700;color:var(--barn-d);font-size:1.05rem;margin:6px 0">No hormones. No antibiotics. On every animal we raise.</p>
+      <p style="color:#524839">Healthy food the community can count on — that's the number-one goal of the farm, and it hasn't changed.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="visit" id="reserve"><div class="wrap">
+  <div>
+    <div class="eyebrow" style="color:#ffdf9e">Visit &amp; reserve</div>
+    <h2>Plan a visit — or hold your share.</h2>
+    <p class="addr">7438 County Route 113<br>Bath, NY 14810<br>South tip of Keuka Lake</p>
+    <a class="big" href="tel:16072817565">(607) 281-7565</a>
+    <p style="color:#d9e6cd">Farm store open daily 8am–7pm year round — please call ahead.</p>
+  </div>
+  <form onsubmit="return false">
+    <h3>Reserve a share or ask a question</h3>
+    <input type="text" placeholder="Your name" required>
+    <input type="tel" placeholder="Phone" required>
+    <select>
+      <option>What are you after?</option>
+      <option>Quarter / half / whole beef share</option>
+      <option>Pastured turkey (seasonal)</option>
+      <option>Chicken or pork</option>
+      <option>Deer processing (in season)</option>
+      <option>Just a farm-store visit</option>
+    </select>
+    <textarea rows="3" placeholder="Anything we should know?"></textarea>
+    <button class="btn btn-barn" type="submit">Send to the farm</button>
+  </form>
+</div></section>
+
+<footer>Parulski Farms · 7438 County Route 113, Bath, NY 14810 · (607) 281-7565 — preview concept by Onyx Rise Media</footer>
+
+</body>
+</html>

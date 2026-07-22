@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Burden Lake Marine — Boat Storage, Service & Dock Delivery | Averill Park, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --deep:#0f2a3d; --water:#17475f; --steel:#4d6a7a; --sand:#e8dfcd;
+    --dock:#b07a3c; --paper:#f7f4ee; --ink:#12212b; --line:#d7cfc0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Source Sans 3',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3,.cond{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.05}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  header{background:var(--deep);color:#fff;position:sticky;top:0;z-index:20}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+  .logo{font-family:'Barlow Condensed';font-size:26px;font-weight:700;letter-spacing:.06em}
+  .logo span{color:var(--sand);display:block;font-size:11px;letter-spacing:.22em;font-weight:600}
+  .callbtn{background:var(--dock);color:#fff;text-decoration:none;font-weight:700;padding:10px 16px;border-radius:3px;font-family:'Barlow Condensed';font-size:19px;letter-spacing:.04em}
+  .hero{background:linear-gradient(180deg,var(--water) 0%,var(--deep) 100%);color:#fff;padding:74px 0 66px;position:relative;overflow:hidden}
+  .hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:70px;background:repeating-linear-gradient(90deg,rgba(232,223,205,.10) 0 6px,transparent 6px 14px)}
+  .hero h1{font-size:clamp(36px,5.4vw,60px);max-width:15ch}
+  .hero p.lede{margin-top:18px;font-size:20px;max-width:52ch;color:#d9e5ec}
+  .lakes{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px}
+  .lakes span{border:1px solid rgba(255,255,255,.35);padding:5px 11px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+  .cta-row{margin-top:30px;display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-block;text-decoration:none;font-family:'Barlow Condensed';font-size:21px;font-weight:700;padding:14px 26px;border-radius:3px;letter-spacing:.04em}
+  .btn-a{background:var(--sand);color:var(--deep)}
+  .btn-b{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55)}
+  section{padding:62px 0}
+  .kicker{color:var(--dock);font-weight:700;letter-spacing:.18em;font-size:12px;text-transform:uppercase;margin-bottom:8px}
+  h2{font-size:clamp(28px,3.6vw,40px);margin-bottom:10px}
+  .sub{color:#4a5a64;max-width:60ch;margin-bottom:32px}
+  .grid{display:grid;gap:18px}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g2{grid-template-columns:1.05fr .95fr}
+  .card{background:#fff;border:1px solid var(--line);border-radius:4px;padding:22px}
+  .card h3{font-size:21px;margin-bottom:6px;color:var(--deep)}
+  .card p{font-size:15px;color:#4a5a64}
+  .season{background:var(--deep);color:#fff}
+  .season .sub{color:#b7c8d2}
+  .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:2px solid var(--steel);margin-top:26px}
+  .stage{padding:22px 16px 0;border-right:1px solid rgba(255,255,255,.15);position:relative}
+  .stage:last-child{border-right:0}
+  .stage:before{content:"";position:absolute;top:-8px;left:0;width:14px;height:14px;background:var(--dock);border-radius:50%}
+  .stage h4{font-family:'Barlow Condensed';font-size:20px;text-transform:uppercase;color:var(--sand)}
+  .stage span{display:block;font-size:12px;letter-spacing:.14em;color:#93aab7;margin-bottom:6px;text-transform:uppercase}
+  .stage p{font-size:14px;color:#c8d6de}
+  .steps{counter-reset:s;display:grid;gap:14px;margin-top:8px}
+  .step{display:flex;gap:16px;align-items:flex-start}
+  .step:before{counter-increment:s;content:counter(s);flex:0 0 40px;height:40px;background:var(--water);color:#fff;font-family:'Barlow Condensed';font-size:22px;display:flex;align-items:center;justify-content:center;border-radius:50%}
+  .quote{background:var(--sand);border-left:5px solid var(--dock);padding:26px;font-size:19px;font-style:italic;color:#2c3d47}
+  .placeholder{background:#fff6e2;border:1px dashed #c99a4e;color:#7a5518;font-size:13px;padding:10px 14px;border-radius:3px;margin-top:14px}
+  form{background:#fff;border:1px solid var(--line);border-radius:4px;padding:26px}
+  label{display:block;font-weight:600;font-size:14px;margin:12px 0 5px}
+  input,select,textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:3px;font:inherit;background:#fdfcfa}
+  .half{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  button{margin-top:18px;width:100%;background:var(--dock);color:#fff;border:0;padding:15px;font-family:'Barlow Condensed';font-size:22px;letter-spacing:.05em;text-transform:uppercase;border-radius:3px;cursor:pointer}
+  .contact-facts p{margin-bottom:14px}
+  .contact-facts strong{display:block;font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:.1em;font-size:13px;color:var(--steel)}
+  footer{background:var(--deep);color:#93aab7;padding:30px 0;font-size:14px}
+  footer a{color:var(--sand)}
+  @media(max-width:860px){.g3,.g2,.timeline,.half{grid-template-columns:1fr}.stage{border-right:0;border-bottom:1px solid rgba(255,255,255,.15);padding-bottom:18px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <div class="logo">Burden Lake Marine<span>Averill Park, New York</span></div>
+    <a class="callbtn" href="tel:5184231331">(518) 423-1331</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>We pick the boat up, we put it back on your dock</h1>
+    <p class="lede">Indoor and outdoor storage, spring prep, shrink wrap, acid washes and insured transport — for the people who keep a boat on a lake with no public marina.</p>
+    <div class="lakes"><span>Burden Lake</span><span>Crooked Lake</span><span>Glass Lake</span><span>Crystal Lake</span></div>
+    <div class="cta-row">
+      <a class="btn btn-a" href="#book">Reserve a winter storage spot</a>
+      <a class="btn btn-b" href="#services">See what we handle</a>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="kicker">What we do</div>
+    <h2>One yard, a quarter mile from the water</h2>
+    <p class="sub">The lakes off Route 43 have docks and boathouses but no full-service marina. That is the job Burden Lake Marine does: we hold the boat, we ready it, and we run it to your dock.</p>
+    <div class="grid g3">
+      <div class="card"><h3>Dock delivery & removal</h3><p>Your boat goes in when the ice is out and comes off before it freezes — you never hitch a trailer.</p></div>
+      <div class="card"><h3>Indoor & outdoor storage</h3><p>Winter storage for boats and cars, plus summer trailer storage so the trailer is not parked on your lawn all season.</p></div>
+      <div class="card"><h3>Spring prep & checkover</h3><p>Cleanup, systems check, and a boat that starts the first weekend instead of the third.</p></div>
+      <div class="card"><h3>Shrink wrapping</h3><p>Wrapped tight for a Rensselaer County winter, ventilated so it comes out dry.</p></div>
+      <div class="card"><h3>Acid wash & hull cleaning</h3><p>Waterline stain and lake scum off the hull before it sets for another year.</p></div>
+      <div class="card"><h3>Routine service & insured transport</h3><p>Maintenance in the yard and licensed, insured hauling anywhere in the Capital Region.</p></div>
+    </div>
+    <div class="placeholder">Placeholder: exact storage rates, wrap pricing and yard capacity to be filled in from your numbers — nothing here is invented.</div>
+  </div>
+</section>
+
+<section class="season">
+  <div class="wrap">
+    <div class="kicker" style="color:var(--sand)">The boat year</div>
+    <h2>Four dates, and we handle all of them</h2>
+    <p class="sub">Most lake owners only think about us twice a year — and both times it is already late. This page books the whole calendar in one pass.</p>
+    <div class="timeline">
+      <div class="stage"><span>April</span><h4>Prep & Launch</h4><p>Checkover, cleanup, and delivery to your dock for opening weekend.</p></div>
+      <div class="stage"><span>May–Sept</span><h4>In-season service</h4><p>Something goes wrong midsummer, we come get it.</p></div>
+      <div class="stage"><span>October</span><h4>Haul-out & wash</h4><p>Off the dock, acid wash, systems drained.</p></div>
+      <div class="stage"><span>Nov–March</span><h4>Wrap & store</h4><p>Shrink wrap and indoor or outdoor storage until April.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap grid g2" style="align-items:start">
+    <div>
+      <div class="kicker">How storage works</div>
+      <h2>Three steps and the boat is out of your hands</h2>
+      <div class="steps">
+        <div class="step"><div><h3 style="font-size:20px">Tell us the boat and the lake</h3><p>Length, type, and which dock it sits on. Thirty seconds on the form below.</p></div></div>
+        <div class="step"><div><h3 style="font-size:20px">We schedule the pickup</h3><p>We come to the water. You do not tow, back down a ramp, or find a helper.</p></div></div>
+        <div class="step"><div><h3 style="font-size:20px">It comes back ready</h3><p>Washed, wrapped, stored, prepped — and on your dock the day you asked for.</p></div></div>
+      </div>
+      <div class="quote" style="margin-top:26px">"We take the burden out of boating."</div>
+      <p style="font-size:13px;color:#7b8890;margin-top:8px">Your own line — kept, because it already says the thing.</p>
+    </div>
+    <div id="book">
+      <form onsubmit="event.preventDefault();this.innerHTML='<h3 style=&quot;font-family:Barlow Condensed;text-transform:uppercase;color:#0f2a3d&quot;>Got it — we&rsquo;ll call you back.</h3><p>Burden Lake Marine will reach out at the number you gave us.</p>';">
+        <h3 style="font-size:24px;color:var(--deep)">Request storage or service</h3>
+        <p style="font-size:14px;color:#4a5a64">Goes straight to the yard — no call needed to get started.</p>
+        <div class="half">
+          <div><label>Name</label><input required></div>
+          <div><label>Phone</label><input required type="tel"></div>
+        </div>
+        <label>Email</label><input type="email">
+        <label>Which lake is the boat on?</label>
+        <select><option>Burden Lake</option><option>Crooked Lake</option><option>Glass Lake</option><option>Crystal Lake</option><option>Other / Capital Region</option></select>
+        <div class="half">
+          <div><label>Boat length</label><input placeholder="e.g. 19 ft"></div>
+          <div><label>What do you need?</label><select><option>Winter storage</option><option>Shrink wrap</option><option>Spring prep & launch</option><option>Haul-out</option><option>Dock delivery / removal</option><option>Service or repair</option><option>Transport</option></select></div>
+        </div>
+        <label>Anything we should know?</label><textarea rows="3" placeholder="Hard-to-reach dock, trailer needs storing too, etc."></textarea>
+        <button>Send it to the yard</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;border-top:1px solid var(--line)">
+  <div class="wrap grid g2">
+    <div class="contact-facts">
+      <div class="kicker">Find us</div>
+      <h2>Averill Park, off First Dyke Road</h2>
+      <p><strong>Yard</strong>21 Arlene Court, Averill Park, NY 12018</p>
+      <p><strong>Phone</strong><a href="tel:5184231331" style="color:var(--water);font-size:22px;font-weight:600">(518) 423-1331</a></p>
+      <p><strong>Email</strong><a href="mailto:BurdenLakeMarine@gmail.com" style="color:var(--water)">BurdenLakeMarine@gmail.com</a></p>
+      <p><strong>Mail</strong>105 Gardner Hill Road, East Nassau, NY 12062</p>
+      <div class="placeholder">Placeholder: yard hours and seasonal cut-off dates to be added — they appear nowhere online today, which is why people call to ask.</div>
+    </div>
+    <div class="card" style="background:var(--sand);border-color:var(--dock)">
+      <h3>Serving the Capital Region</h3>
+      <p style="margin-bottom:10px">Averill Park · Sand Lake · West Sand Lake · Poestenkill · Nassau · East Nassau · Stephentown · Wynantskill · Troy and out to the Hudson.</p>
+      <p>Boat and auto storage, launch service, and insured transport — one call, whichever lake you are on.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Burden Lake Marine · 21 Arlene Court, Averill Park, NY 12018 · <a href="tel:5184231331">(518) 423-1331</a> · <a href="mailto:BurdenLakeMarine@gmail.com">BurdenLakeMarine@gmail.com</a>
+    <div style="margin-top:8px;font-size:12px">Website concept prepared by Onyx Rise Media for review. Not a live site.</div>
+  </div>
+</footer>
+</body>
+</html>

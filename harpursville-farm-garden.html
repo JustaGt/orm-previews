@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harpursville Farm &amp; Garden — Feed, Pet &amp; Garden Supply on Maple Street</title>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Public+Sans:wght@400;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root{--red:#8f2d1e;--red-dark:#6e2014;--wheat:#e9d9ac;--cream:#f7f1e2;--ink:#2c241b;--kraft:#c9a86e;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Public Sans',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px;}
+  .topbar{background:var(--red-dark);color:var(--wheat);font-size:.9rem;padding:.5rem 0;text-align:center;}
+  .topbar strong{color:#fff;}
+  header{background:var(--red);color:#fff;padding:.9rem 0;}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.6rem;}
+  .logo{font-family:'Alfa Slab One',serif;font-size:1.25rem;letter-spacing:.5px;}
+  .logo span{color:var(--wheat);}
+  .call-btn{background:var(--wheat);color:var(--red-dark);font-weight:700;padding:.55rem 1.1rem;border-radius:4px;text-decoration:none;}
+  .hero{background:repeating-linear-gradient(90deg,var(--red) 0 14px,var(--red-dark) 14px 28px);color:#fff;padding:4rem 0 4.5rem;}
+  .hero-inner{background:rgba(44,26,17,.55);border:2px solid var(--wheat);border-radius:8px;padding:2.5rem;max-width:720px;}
+  .hero h1{font-family:'Alfa Slab One',serif;font-size:clamp(1.8rem,4.5vw,2.9rem);line-height:1.15;margin-bottom:1rem;}
+  .hero h1 em{color:var(--wheat);font-style:normal;}
+  .hero p{font-size:1.1rem;max-width:56ch;margin-bottom:1.5rem;}
+  .btn{display:inline-block;background:var(--wheat);color:var(--red-dark);font-weight:700;padding:.8rem 1.6rem;border-radius:4px;text-decoration:none;margin-right:.7rem;}
+  .btn.ghost{background:transparent;color:var(--wheat);border:2px solid var(--wheat);}
+  section{padding:3.5rem 0;}
+  .kicker{font-family:'Caveat',cursive;font-size:1.5rem;color:var(--red);}
+  h2{font-family:'Alfa Slab One',serif;font-size:clamp(1.4rem,3vw,2rem);margin-bottom:1.6rem;}
+  .depts{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem;}
+  .crate{background:#fff;border:2px solid var(--kraft);border-radius:6px;padding:1.5rem;position:relative;}
+  .crate::before{content:attr(data-tag);position:absolute;top:-14px;left:14px;background:var(--red);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.25rem .7rem;border-radius:3px;}
+  .crate h3{font-size:1.1rem;margin:.4rem 0 .6rem;color:var(--red-dark);}
+  .crate ul{list-style:none;font-size:.95rem;}
+  .crate li{padding:.28rem 0;border-bottom:1px dashed var(--kraft);}
+  .crate li:last-child{border-bottom:0;}
+  .board{background:var(--ink);color:var(--cream);border-radius:8px;padding:2.2rem;border:6px solid var(--kraft);}
+  .board h2{color:var(--wheat);}
+  .board p{max-width:66ch;}
+  .board .note{font-family:'Caveat',cursive;font-size:1.35rem;color:var(--wheat);margin-top:1rem;}
+  .review{background:#fff;border-left:6px solid var(--red);padding:1.8rem;border-radius:0 6px 6px 0;max-width:680px;}
+  .review blockquote{font-size:1.12rem;font-style:italic;margin-bottom:.8rem;}
+  .review cite{font-weight:700;font-style:normal;color:var(--red-dark);}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;}
+  @media(max-width:720px){.split{grid-template-columns:1fr;}}
+  .hours-card{background:#fff;border:2px solid var(--kraft);border-radius:6px;padding:1.6rem;}
+  .hours-card table{width:100%;border-collapse:collapse;}
+  .hours-card td{padding:.45rem 0;border-bottom:1px dashed var(--kraft);font-size:.98rem;}
+  .hours-card td:last-child{text-align:right;font-weight:600;}
+  .footer-cta{background:var(--red);color:#fff;text-align:center;padding:3.5rem 0;}
+  .footer-cta h2{color:#fff;}
+  .footer-cta .phone{font-family:'Alfa Slab One',serif;font-size:clamp(1.6rem,4vw,2.4rem);color:var(--wheat);display:block;margin:.8rem 0 1.4rem;text-decoration:none;}
+  footer{background:var(--red-dark);color:var(--wheat);font-size:.85rem;text-align:center;padding:1.1rem 0;}
+  .ph{outline:2px dashed #b8860b;outline-offset:2px;font-size:.8rem;}
+</style>
+</head>
+<body>
+<div class="topbar">75 Maple St, Harpursville &nbsp;•&nbsp; <strong>(607) 693-1461</strong> &nbsp;•&nbsp; Mon–Fri 9–6 · Sat 9–2</div>
+<header>
+  <div class="wrap">
+    <div class="logo">Harpursville <span>Farm &amp; Garden</span></div>
+    <a class="call-btn" href="tel:6076931461">Call the store</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <h1>Feed for the barn, the coop, and the dog by the door — <em>right here in Harpursville.</em></h1>
+      <p>Thirty-three years on Maple Street, one aisle over from the Route 79 bridge. Livestock feed, pet food, and garden supply without the 25-minute drive to a Binghamton box store — and if we don't have your brand on the shelf, ask. We can usually order it in.</p>
+      <a class="btn" href="tel:6076931461">Call ahead — we'll set it aside</a>
+      <a class="btn ghost" href="#visit">Hours &amp; directions</a>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">What's in the store</span>
+    <h2>Three departments, one counter</h2>
+    <div class="depts">
+      <div class="crate" data-tag="Livestock">
+        <h3>Feed room</h3>
+        <ul>
+          <li>Horse, goat &amp; sheep feed</li>
+          <li>Poultry — layer, starter, scratch</li>
+          <li>Cattle &amp; swine rations</li>
+          <li>Bedding, minerals &amp; salt blocks</li>
+        </ul>
+      </div>
+      <div class="crate" data-tag="Pets">
+        <h3>Dogs, cats &amp; small animals</h3>
+        <ul>
+          <li>Dog &amp; cat food by the bag</li>
+          <li>Zymox ear &amp; skin care — stocking dealer</li>
+          <li>Rabbit, bird &amp; small-animal feed</li>
+          <li>Flea, tick &amp; wormer basics</li>
+        </ul>
+      </div>
+      <div class="crate" data-tag="Garden">
+        <h3>Garden &amp; yard</h3>
+        <ul>
+          <li>Seed &amp; vegetable starts in season</li>
+          <li>Fertilizer &amp; lime</li>
+          <li>Fencing odds and ends</li>
+          <li>Bird seed year-round</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:1rem;font-size:.85rem;"><span class="ph">[PLACEHOLDER — department lists to be confirmed with the store; Zymox stocking-dealer status from the Zymox dealer locator]</span></p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="board">
+      <h2>Can't find a brand? Say so.</h2>
+      <p>A small store can chase down a special order faster than a chain can restock a shelf. Tell us the brand and bag size you're after — feed, supplement, or pet food — and we'll tell you straight whether we can get it and when it'll be on the counter.</p>
+      <p class="note">— ask for Leah at the register <span class="ph">[owner name per customer review — confirm]</span></p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <span class="kicker">From a customer</span>
+    <div class="review">
+      <blockquote>"For a small feed store, in a small town, they carry everything you would need for your pets to your livestock. The owner, Leah, cares about her customers and your feed needs. I highly recommend this feed store."</blockquote>
+      <cite>— Brenda M., Yellow Pages review</cite>
+    </div>
+  </div>
+</section>
+
+<section id="visit" style="padding-top:0;">
+  <div class="wrap split">
+    <div>
+      <span class="kicker">Worth the stop</span>
+      <h2>Why the hamlet feed store wins</h2>
+      <p>You're not hunting an employee across a warehouse — the person weighing your order knows which feeds the horses on your road are already on. Switching a picky animal? We'll talk it through before you buy a 50-lb bag you can't return.</p>
+      <p style="margin-top:.8rem;">Serving Harpursville, Nineveh, Ouaquaga, Windsor, Afton and the Route 79 valley.</p>
+    </div>
+    <div class="hours-card">
+      <h2 style="font-size:1.2rem;">Hours &amp; address</h2>
+      <table>
+        <tr><td>Monday – Friday</td><td>9:00 – 6:00</td></tr>
+        <tr><td>Saturday</td><td>9:00 – 2:00</td></tr>
+        <tr><td>Sunday</td><td>Closed</td></tr>
+      </table>
+      <p style="margin-top:1rem;">75 Maple St, Harpursville, NY 13787<br>Phone &amp; fax: (607) 693-1461</p>
+      <p style="margin-top:.6rem;font-size:.85rem;"><span class="ph">[hours per directory listing — confirm]</span></p>
+    </div>
+  </div>
+</section>
+
+<div class="footer-cta">
+  <div class="wrap">
+    <h2>Need feed set aside before Saturday?</h2>
+    <a class="phone" href="tel:6076931461">(607) 693-1461</a>
+    <a class="btn" href="tel:6076931461">Call the store</a>
+  </div>
+</div>
+<footer>Harpursville Farm &amp; Garden · 75 Maple St, Harpursville, NY 13787 · (607) 693-1461</footer>
+</body>
+</html>

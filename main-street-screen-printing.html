@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Main Street Screen Print &amp; Embroidery — Team Gear, Work Shirts &amp; Free Online Team Stores | Center Moriches, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14213d;--red:#d62828;--paper:#ffffff;--bone:#f6f4ef;--steel:#4a5568;--mint:#2a9d8f;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',Arial,sans-serif;color:var(--ink);background:var(--bone);line-height:1.6;}
+h1,h2,h3,.hd{font-family:'Barlow Condensed',Arial,sans-serif;text-transform:uppercase;letter-spacing:.5px;}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px;}
+/* halftone accent */
+.dots{background-image:radial-gradient(var(--ink) 1.1px,transparent 1.1px);background-size:9px 9px;opacity:.12;position:absolute;inset:0;pointer-events:none;}
+/* header */
+header{background:var(--paper);border-bottom:4px solid var(--ink);padding:.9rem 0;position:sticky;top:0;z-index:60;}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.logo{font-family:'Barlow Condensed';font-weight:800;font-size:1.5rem;text-transform:uppercase;line-height:1;}
+.logo span{color:var(--red);}
+.logo small{display:block;font-family:'Inter';font-weight:600;font-size:.65rem;letter-spacing:2.5px;color:var(--steel);text-transform:uppercase;}
+.cta{background:var(--red);color:#fff;font-family:'Barlow Condensed';font-weight:800;text-transform:uppercase;font-size:1.05rem;letter-spacing:1px;padding:.6rem 1.4rem;text-decoration:none;border-radius:4px;}
+.cta:hover{background:#b41f1f;}
+/* hero */
+.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden;padding:4.2rem 0 4.6rem;}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:2.5rem;align-items:center;}
+.kick{display:inline-block;background:var(--red);color:#fff;font-family:'Barlow Condensed';font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:.8rem;padding:.25rem .7rem;margin-bottom:1rem;transform:rotate(-1.5deg);}
+.hero h1{font-size:clamp(2.3rem,5.5vw,3.7rem);font-weight:800;line-height:.98;}
+.hero h1 em{color:#ffd166;font-style:normal;}
+.hero p{margin-top:1.1rem;color:#c4cbe0;max-width:32rem;font-size:1.05rem;}
+.hero .btns{margin-top:1.8rem;display:flex;gap:.8rem;flex-wrap:wrap;}
+.btn2{border:2px solid #fff;color:#fff;font-family:'Barlow Condensed';font-weight:800;text-transform:uppercase;letter-spacing:1px;font-size:1.05rem;padding:.6rem 1.4rem;text-decoration:none;border-radius:4px;}
+.shirt-card{background:#fff;color:var(--ink);border-radius:10px;padding:1.6rem;box-shadow:0 20px 40px rgba(0,0,0,.4);transform:rotate(1.2deg);}
+.shirt-card h3{font-size:1.25rem;margin-bottom:.8rem;}
+.shirt-card ul{list-style:none;}
+.shirt-card li{padding:.55rem 0;border-bottom:1px dashed #d8d3c6;font-size:.92rem;display:flex;justify-content:space-between;gap:1rem;}
+.shirt-card li b{font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:.5px;}
+.shirt-card li span{color:var(--steel);}
+.shirt-card footer{margin-top:.9rem;font-size:.75rem;color:var(--steel);}
+/* methods */
+section{padding:3.8rem 0;position:relative;}
+h2{font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:800;line-height:1.05;}
+.rule{width:64px;height:6px;background:var(--red);margin:.8rem 0 1rem;}
+.lede{color:var(--steel);max-width:46rem;margin-bottom:2rem;}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
+.m-card{background:var(--paper);border:2px solid var(--ink);border-radius:8px;padding:1.5rem;box-shadow:6px 6px 0 var(--ink);}
+.m-card h3{font-size:1.3rem;margin-bottom:.4rem;}
+.m-card .best{display:inline-block;background:var(--bone);border:1px solid #d8d3c6;font-size:.72rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--steel);padding:.2rem .55rem;border-radius:99px;margin-bottom:.7rem;}
+.m-card p{font-size:.92rem;color:var(--steel);}
+/* webstore */
+.store{background:var(--mint);color:#fff;}
+.store h2{color:#fff;}
+.store .rule{background:var(--ink);}
+.store .lede{color:#e8f5f3;}
+.store .wrap{position:relative;}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;counter-reset:st;}
+.step{background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.4);border-radius:8px;padding:1.2rem;}
+.step::before{counter-increment:st;content:counter(st,decimal-leading-zero);font-family:'Barlow Condensed';font-weight:800;font-size:1.9rem;color:#ffd166;display:block;line-height:1;margin-bottom:.4rem;}
+.step h3{font-size:1.05rem;margin-bottom:.3rem;}
+.step p{font-size:.85rem;color:#e8f5f3;}
+.store .note{margin-top:1.6rem;background:var(--ink);display:inline-block;padding:.8rem 1.2rem;border-radius:6px;font-size:.92rem;}
+/* proof */
+.proof .grid3{grid-template-columns:repeat(3,1fr);}
+.proof .m-card{box-shadow:none;border-style:dashed;text-align:center;}
+.proof .m-card b{font-family:'Barlow Condensed';font-size:1.15rem;text-transform:uppercase;display:block;margin-bottom:.3rem;}
+/* how */
+.how ol{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;counter-reset:hw;}
+.how li{background:var(--paper);border-radius:8px;padding:1.3rem;border:1px solid #e2ddd0;counter-increment:hw;}
+.how li::before{content:"Step " counter(hw);font-family:'Barlow Condensed';font-weight:800;text-transform:uppercase;color:var(--red);display:block;margin-bottom:.3rem;letter-spacing:1px;}
+.how li b{display:block;margin-bottom:.25rem;}
+.how li p{font-size:.85rem;color:var(--steel);}
+/* quote */
+.quote{background:var(--ink);color:#fff;}
+.quote h2{color:#fff;}
+.quote .lede{color:#c4cbe0;}
+.quote .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem;position:relative;}
+.qform{background:#fff;border-radius:10px;padding:1.7rem;color:var(--ink);}
+.qform label{display:block;font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:1px;color:var(--steel);margin:.8rem 0 .25rem;}
+.qform input,.qform select,.qform textarea{width:100%;padding:.6rem .7rem;border:1.5px solid #d5d0c3;border-radius:5px;font-size:.98rem;font-family:inherit;}
+.qform button{width:100%;margin-top:1.1rem;background:var(--red);color:#fff;font-family:'Barlow Condensed';font-weight:800;text-transform:uppercase;letter-spacing:1px;font-size:1.15rem;padding:.8rem;border:none;border-radius:5px;cursor:pointer;}
+.quote ul{list-style:none;margin-top:1.2rem;}
+.quote li{margin-bottom:.9rem;color:#c4cbe0;}
+.quote li b{color:#ffd166;font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:1.5px;display:block;font-size:.8rem;}
+.quote a{color:#fff;}
+footer.site{background:#0c1428;color:#7b87a6;font-size:.8rem;padding:1.2rem 0;text-align:center;}
+@media(max-width:840px){.hero .wrap,.quote .wrap{grid-template-columns:1fr;}.grid3,.steps,.how ol{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header><div class="wrap">
+<div class="logo">Main Street <span>Screen Print</span> &amp; Embroidery<small>348 Main Street · Center Moriches · Since 2013</small></div>
+<a class="cta" href="tel:16314009400">Get a Quote — (631) 400-9400</a>
+</div></header>
+
+<section class="hero"><div class="dots"></div><div class="wrap">
+<div>
+<span class="kick">Printed on Main Street, not shipped from who-knows-where</span>
+<h1>Your team's gear, <em>inked in</em> Center Moriches.</h1>
+<p>Screen printing, embroidery, and heat transfers for Suffolk's leagues, schools, crews, and businesses — from a family shop that's been pulling squeegees on Main Street since 2013. Bring us a logo on a napkin; leave with a proof by [X business days — confirm].</p>
+<div class="btns">
+<a class="cta" href="#quote">Start My Quote</a>
+<a class="btn2" href="#store">Free Team Stores</a>
+</div>
+</div>
+<div class="shirt-card">
+<h3>What we print every week</h3>
+<ul>
+<li><b>Team jerseys &amp; spiritwear</b><span>leagues · schools · dance</span></li>
+<li><b>Crew &amp; company shirts</b><span>trades · landscapers · marinas</span></li>
+<li><b>Embroidered caps &amp; polos</b><span>logos that outlast the job</span></li>
+<li><b>Fundraiser &amp; event tees</b><span>runs, fairs, benefits</span></li>
+<li><b>Heat-transfer names &amp; numbers</b><span>one-offs done right</span></li>
+</ul>
+<footer>Blanks from the catalogs we actually stock through — SanMar, alphabroder, S&amp;S Activewear, Boxercraft, Charles River, Augusta.</footer>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<h2>Three ways to put your name on a shirt</h2>
+<div class="rule"></div>
+<p class="lede">We'll tell you straight which method your job actually needs — that's the advantage of talking to the person who runs the press.</p>
+<div class="grid3">
+<div class="m-card"><h3>Screen Printing</h3><span class="best">Best for: 12+ pieces, bold art</span><p>Ink laid through a real screen, cured to survive a season of practices and a hundred washes. The per-shirt price drops fast as quantity climbs — ask where your order's break points are.</p></div>
+<div class="m-card"><h3>Embroidery</h3><span class="best">Best for: polos, caps, workwear</span><p>Stitched logos read "established business" on a chest or a cap like nothing else. We digitize your art once, then run it on anything from beanies to jackets.</p></div>
+<div class="m-card"><h3>Heat Transfer</h3><span class="best">Best for: names, numbers, small runs</span><p>Player names, single replacement shirts, personalization on top of printed stock. The right tool for the jobs screen printing is wrong for — and we'll say so.</p></div>
+</div>
+</div></section>
+
+<section class="store" id="store"><div class="wrap">
+<h2>The team store that ends the size-collection spreadsheet</h2>
+<div class="rule"></div>
+<p class="lede">We build your team, school, or company a free online store. Parents and staff order and pay themselves — you just set the deadline and pick up the boxes.</p>
+<div class="steps">
+<div class="step"><h3>Send the logo</h3><p>We mock up your gear lineup — tees, hoodies, caps, whatever fits your group.</p></div>
+<div class="step"><h3>We open your store</h3><p>A private order page for your group, with sizes, colors, and pricing shown up front.</p></div>
+<div class="step"><h3>Everyone orders</h3><p>No cash envelopes, no size spreadsheet, no chasing the one dad who never answers.</p></div>
+<div class="step"><h3>One delivery</h3><p>Store closes, we print the whole run at once, orders arrive sorted by player/employee.</p></div>
+</div>
+<div class="note">We already run live stores for groups like <b>Stony Brook Medicine</b> and <b>SUNY Plattsburgh men's &amp; women's soccer</b> — plus local academies and clubs. (Store names as linked from our current storefront.)</div>
+</div></section>
+
+<section class="proof"><div class="wrap">
+<h2>A Main Street shop with campus-size clients</h2>
+<div class="rule"></div>
+<p class="lede">Family owned and operated since 2013. Quick turnarounds and quality goods are the whole pitch — here's who trusts us with theirs.</p>
+<div class="grid3">
+<div class="m-card"><b>Stony Brook Medicine</b>staff apparel webstore</div>
+<div class="m-card"><b>SUNY Plattsburgh Soccer</b>men's &amp; women's team stores</div>
+<div class="m-card"><b>Local studios &amp; dojos</b>dance academies · martial arts · youth clubs</div>
+</div>
+</div></section>
+
+<section class="how"><div class="wrap">
+<h2>From napkin sketch to pickup day</h2>
+<div class="rule"></div>
+<ol>
+<li><b>Tell us the job</b><p>Quantity, garment, colors, deadline. Phone, form, or walk in the front door.</p></li>
+<li><b>Approve your proof</b><p>You see exactly what prints before ink touches fabric. Tweaks are part of the deal.</p></li>
+<li><b>We print &amp; stitch</b><p>Standard turnaround is [X–X business days — confirm with Mike]; tell us your drop-dead date and we'll be honest about it.</p></li>
+<li><b>Pick up on Main St</b><p>Or arrange delivery for large team orders. [Delivery terms — confirm.]</p></li>
+</ol>
+</div></section>
+
+<section class="quote" id="quote"><div class="dots"></div><div class="wrap">
+<div>
+<h2>Get your quote before practice ends</h2>
+<p class="lede">Send the basics and we'll come back with a real number and a real date — from the shop, not a call center.</p>
+<ul>
+<li><b>Visit</b>348 Main Street, Center Moriches, NY 11934</li>
+<li><b>Call</b><a href="tel:16314009400">(631) 400-9400</a></li>
+<li><b>Follow</b>@mainstreetscreenprinting — see this week's runs</li>
+</ul>
+</div>
+<div class="qform">
+<label>Name</label><input type="text" placeholder="Your name">
+<label>What do you need?</label><select><option>Team jerseys / spiritwear</option><option>Company or crew shirts</option><option>Embroidered polos / caps</option><option>Event or fundraiser tees</option><option>Online team store</option><option>Something else</option></select>
+<label>Quantity (rough is fine)</label><input type="text" placeholder="e.g. 30 shirts + 15 hoodies">
+<label>Need it by</label><input type="text" placeholder="e.g. Aug 15 tournament">
+<label>Your art / notes</label><textarea rows="3" placeholder="Attach or describe your logo — napkin sketches welcome"></textarea>
+<button>Send My Quote Request</button>
+</div>
+</div></section>
+
+<footer class="site"><div class="wrap">Main Street Screen Printing &amp; Embroidery · 348 Main Street, Center Moriches, NY 11934 · (631) 400-9400 · Family owned &amp; operated since 2013</div></footer>
+
+</body>
+</html>

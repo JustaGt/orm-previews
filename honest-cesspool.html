@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Honest Cesspool Company — Cesspool & Septic Service, Sayville NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#10263a; --navy-d:#0a1a29; --teal:#1a94a8; --teal-d:#127586;
+    --clean:#eaf6f8; --amber:#f4a12b; --ink:#16232e; --muted:#51636f;
+    --line:#dbe5ea; --bg:#f5f9fa; --white:#fff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--bg);line-height:1.62}
+  h1,h2,h3,.eyebrow,.btn,.step-n{font-family:'Barlow Condensed',sans-serif;letter-spacing:.02em}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  /* utility bar */
+  .util{background:var(--navy-d);color:#cfe0e8;font-size:.9rem}
+  .util .wrap{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 22px;flex-wrap:wrap}
+  .util b{color:#fff}
+  .util a.call{color:var(--amber);font-weight:700;text-decoration:none;font-size:1.05rem;font-family:'Barlow Condensed'}
+  /* header */
+  header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:20;box-shadow:0 2px 14px rgba(0,0,0,.18)}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;padding:13px 22px;gap:14px}
+  .logo{display:flex;align-items:center;gap:11px}
+  .logo .mark{width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,var(--teal),var(--teal-d));
+    display:grid;place-items:center;font-family:'Barlow Condensed';font-weight:700;color:#fff;font-size:1.35rem}
+  .logo .txt b{font-family:'Barlow Condensed';font-size:1.28rem;font-weight:700;display:block;line-height:1;letter-spacing:.03em}
+  .logo .txt span{font-size:.72rem;color:#9fc4d0;letter-spacing:.14em;text-transform:uppercase}
+  .nav a{color:#d6e6ec;text-decoration:none;font-weight:600;font-size:.94rem;margin-left:22px}
+  .nav a:hover{color:#fff}
+  .nav{display:flex;align-items:center}
+  .nav .btn{margin-left:22px}
+  .btn{display:inline-block;font-weight:700;font-size:1.02rem;text-transform:uppercase;
+    padding:12px 22px;border-radius:6px;text-decoration:none;text-align:center}
+  .btn-amber{background:var(--amber);color:#3a2600}
+  .btn-amber:hover{background:#ffb544}
+  .btn-teal{background:var(--teal);color:#fff}
+  .btn-teal:hover{background:var(--teal-d)}
+  .btn-ghost{border:2px solid rgba(255,255,255,.5);color:#fff}
+  .btn-ghost:hover{border-color:#fff}
+  @media(max-width:760px){.nav a:not(.btn){display:none}}
+  /* hero */
+  .hero{position:relative;color:#eaf6f8;overflow:hidden;
+    background:linear-gradient(155deg,var(--navy) 0%,var(--navy-d) 55%,#0d3346 100%)}
+  .hero::before{content:"";position:absolute;inset:0;opacity:.16;
+    background:radial-gradient(circle at 82% 18%,var(--teal) 0,transparent 42%)}
+  .hero .wrap{position:relative;z-index:2;padding:70px 22px 78px;display:grid;grid-template-columns:1.35fr .95fr;gap:40px;align-items:center}
+  .eyebrow{color:#67c6d6;font-weight:700;font-size:1.05rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.02;color:#fff;max-width:15ch;font-weight:700}
+  .hero h1 em{font-style:normal;color:var(--amber)}
+  .hero p.sub{font-size:1.16rem;color:#d3e6ec;max-width:46ch;margin:20px 0 28px}
+  .cta-row{display:flex;gap:13px;flex-wrap:wrap}
+  .assure{margin-top:26px;display:flex;gap:22px;flex-wrap:wrap;font-size:.92rem;color:#bcd6df}
+  .assure b{color:#fff;font-family:'Barlow Condensed';font-size:1.05rem;letter-spacing:.03em}
+  /* price-promise card */
+  .promise{background:#fff;color:var(--ink);border-radius:14px;padding:26px 24px;box-shadow:0 22px 50px rgba(4,20,32,.4)}
+  .promise .tag{display:inline-block;background:var(--clean);color:var(--teal-d);font-weight:700;font-size:.74rem;
+    letter-spacing:.1em;text-transform:uppercase;padding:5px 11px;border-radius:20px;margin-bottom:14px}
+  .promise h3{font-family:'Barlow Condensed';font-size:1.55rem;color:var(--navy);line-height:1.06;margin-bottom:10px}
+  .promise p{font-size:.98rem;color:var(--muted);margin-bottom:16px}
+  .promise ul{list-style:none;display:grid;gap:9px}
+  .promise li{display:flex;gap:10px;align-items:flex-start;font-size:.96rem}
+  .promise li::before{content:"✓";color:var(--teal);font-weight:800;margin-top:1px}
+  .rating{display:flex;align-items:center;gap:9px;margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}
+  .stars{color:var(--amber);letter-spacing:2px;font-size:1.05rem}
+  @media(max-width:840px){.hero .wrap{grid-template-columns:1fr;gap:30px}}
+  /* strip */
+  .strip{background:var(--teal);color:#eafcff}
+  .strip .wrap{display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:center;padding:15px 22px;font-family:'Barlow Condensed';font-size:1.06rem;letter-spacing:.03em}
+  .strip span{display:flex;align-items:center;gap:8px}
+  .strip b{color:#fff}
+  /* sections */
+  section{padding:66px 0}
+  .head{max-width:62ch;margin:0 auto 40px;text-align:center}
+  .head .eyebrow{color:var(--teal-d)}
+  .head h2{font-size:clamp(1.7rem,3.7vw,2.5rem);color:var(--navy);margin:6px 0 12px;line-height:1.08;font-weight:700}
+  .head p{color:var(--muted);font-size:1.05rem}
+  /* services */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+  .svc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;transition:.15s;border-top:4px solid var(--teal)}
+  .svc:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(16,38,58,.12)}
+  .svc .ic{width:44px;height:44px;border-radius:10px;background:var(--clean);display:grid;place-items:center;font-size:1.4rem;margin-bottom:14px}
+  .svc h3{font-size:1.28rem;color:var(--navy);margin-bottom:7px;font-weight:600}
+  .svc p{font-size:.96rem;color:var(--muted)}
+  /* how it works */
+  .how{background:var(--navy);color:#e7f2f6}
+  .how .head h2{color:#fff}.how .head .eyebrow{color:#67c6d6}.how .head p{color:#bcd6df}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s}
+  .step{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:26px 22px;position:relative}
+  .step-n{font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1}
+  .step h3{font-size:1.3rem;color:#fff;margin:8px 0 8px;font-weight:600}
+  .step p{font-size:.96rem;color:#c3d8e0}
+  @media(max-width:760px){.steps{grid-template-columns:1fr}}
+  /* honest / why */
+  .why .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .why .card{background:#fff;border:1px solid var(--line);border-left:5px solid var(--amber);border-radius:12px;padding:24px}
+  .why h2{font-size:clamp(1.6rem,3.4vw,2.3rem);color:var(--navy);margin-bottom:14px;line-height:1.1;font-weight:700}
+  .why p{color:var(--muted);margin-bottom:14px}
+  .why .card h3{font-family:'Barlow Condensed';font-size:1.35rem;color:var(--navy);margin-bottom:6px}
+  .why .card p{font-size:.96rem;margin:0}
+  .why .card + .card{margin-top:14px}
+  @media(max-width:820px){.why .wrap{grid-template-columns:1fr;gap:26px}}
+  /* area */
+  .area{background:var(--clean)}
+  .area .towns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:820px;margin:0 auto}
+  .area .towns span{background:#fff;border:1px solid var(--line);border-radius:22px;padding:8px 16px;font-weight:600;color:var(--navy);font-size:.94rem}
+  .note{text-align:center;color:var(--muted);font-size:.9rem;margin-top:20px}
+  /* reviews */
+  .rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
+  .rev{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px}
+  .rev .stars{font-size:1.1rem}
+  .rev p{font-size:.97rem;color:var(--muted);font-style:italic;margin:10px 0 14px}
+  .rev .ph{color:var(--teal-d);font-weight:600;font-size:.8rem;background:var(--clean);display:inline-block;padding:3px 9px;border-radius:6px}
+  .rev cite{font-style:normal;font-weight:600;color:var(--navy);font-size:.92rem;display:block;margin-top:12px}
+  /* contact */
+  .contact{background:linear-gradient(155deg,var(--navy-d),#0d3346);color:#eaf6f8}
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .contact h2{font-size:clamp(1.8rem,3.8vw,2.6rem);color:#fff;line-height:1.06;margin-bottom:12px;font-weight:700}
+  .contact p{color:#c8dde4;margin-bottom:22px;max-width:44ch}
+  .big-call{display:inline-flex;align-items:center;gap:12px;background:var(--amber);color:#3a2600;font-family:'Barlow Condensed';
+    font-size:1.7rem;font-weight:700;padding:15px 28px;border-radius:10px;text-decoration:none}
+  .big-call:hover{background:#ffb544}
+  .cbox{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:26px}
+  .field{margin-bottom:14px}
+  .field label{display:block;font-size:.82rem;color:#9fc4d0;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;font-weight:600}
+  .field input,.field textarea{width:100%;padding:12px 14px;border-radius:8px;border:1px solid rgba(255,255,255,.2);
+    background:rgba(255,255,255,.95);font-family:inherit;font-size:.98rem;color:var(--ink)}
+  .field textarea{min-height:82px;resize:vertical}
+  .cbox .btn{width:100%;border:none;cursor:pointer;font-size:1.1rem}
+  @media(max-width:820px){.contact .wrap{grid-template-columns:1fr;gap:28px}}
+  /* footer */
+  footer{background:#08151f;color:#8fabb8;font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:26px 22px}
+  footer b{color:#fff;font-family:'Barlow Condensed';font-size:1.05rem;letter-spacing:.03em}
+  footer a{color:var(--amber);text-decoration:none}
+</style>
+</head>
+<body>
+  <div class="util"><div class="wrap">
+    <span>Sayville, NY · Serving the South Shore of Suffolk County</span>
+    <span>Cesspool emergency? <a class="call" href="tel:16313382272">(631) 338-2272</a></span>
+  </div></div>
+
+  <header><div class="wrap">
+    <div class="logo">
+      <div class="mark">H</div>
+      <div class="txt"><b>The Honest Cesspool Co.</b><span>Sayville · Suffolk County</span></div>
+    </div>
+    <nav class="nav">
+      <a href="#services">Services</a>
+      <a href="#how">How it works</a>
+      <a href="#area">Service area</a>
+      <a class="btn btn-amber" href="tel:16313382272">Call (631) 338-2272</a>
+    </nav>
+  </div></header>
+
+  <section class="hero"><div class="wrap">
+    <div>
+      <div class="eyebrow">Cesspool &amp; Septic Service · Sayville</div>
+      <h1>You hear the price <em>before</em> we lift a lid.</h1>
+      <p class="sub">Cesspool pumping, drywells and line cleaning for South-Shore homes — done by a Sayville crew that tells you what's wrong in plain English and quotes it up front. No surprise number at the end.</p>
+      <div class="cta-row">
+        <a class="btn btn-amber" href="tel:16313382272">Call (631) 338-2272</a>
+        <a class="btn btn-ghost" href="#contact">Request a quote</a>
+      </div>
+      <div class="assure">
+        <span><b>Free estimates</b><br>on every job</span>
+        <span><b>Emergency service</b><br>slow drains &amp; backups</span>
+        <span><b>Local</b><br>Sayville-based crew</span>
+      </div>
+    </div>
+    <div class="promise">
+      <span class="tag">The honest promise</span>
+      <h3>What "honest" actually means here</h3>
+      <p>Two things drive people crazy about this trade. We took both off the table:</p>
+      <ul>
+        <li>You get the price <b>before</b> the work starts — not a bigger number once the truck is in your yard.</li>
+        <li>We tell you whether it's a routine pump-out or an actual problem — and we say so even when it's the cheaper answer.</li>
+      </ul>
+      <div class="rating">
+        <span class="stars">★★★★★</span>
+        <span>Rated 5.0 on Angi &amp; HomeAdvisor · recommended by the Sayville Chamber</span>
+      </div>
+    </div>
+  </div></section>
+
+  <div class="strip"><div class="wrap">
+    <span>🚽 <b>Cesspool pump-outs</b></span>
+    <span>💧 <b>Drywells &amp; drainage</b></span>
+    <span>🧹 <b>Line &amp; drain cleaning</b></span>
+    <span>🏠 <b>Real-estate inspections</b></span>
+    <span>⏱ <b>Emergency backups</b></span>
+  </div></div>
+
+  <section id="services"><div class="wrap">
+    <div class="head">
+      <div class="eyebrow">What we handle</div>
+      <h2>Everything below the lawn, one number to call</h2>
+      <p>On Long Island's sandy soil almost every older home runs on a cesspool or drywell — not town sewer. Here's what a Sayville homeowner actually needs done.</p>
+    </div>
+    <div class="grid">
+      <div class="svc"><div class="ic">🚽</div><h3>Cesspool pumping</h3><p>Routine pump-outs and cleanouts to keep the system flowing before it backs up into the house. We check the ring and structure while we're in there.</p></div>
+      <div class="svc"><div class="ic">💧</div><h3>Drywells &amp; drainage</h3><p>Overflow drywells, roof-runoff pits and yard drainage that's stopped taking water — pumped, cleaned, and assessed for whether it needs more than a pump.</p></div>
+      <div class="svc"><div class="ic">🧹</div><h3>Line &amp; drain cleaning</h3><p>Sluggish or clogged main lines cleared, so the whole system drains the way it should instead of just buying you a week.</p></div>
+      <div class="svc"><div class="ic">⏱</div><h3>Emergency service</h3><p>Slow drains, gurgling toilets, a wet spot in the yard — the calls that can't wait. Tell us what you're seeing and we'll get to you.</p></div>
+      <div class="svc"><div class="ic">🏠</div><h3>Real-estate inspections</h3><p>Buying or selling a South-Shore home? We locate, open, and report on the cesspool so the deal doesn't stall on an unknown system.</p></div>
+      <div class="svc"><div class="ic">🔎</div><h3>Straight answers</h3><p>Not sure if it's the cesspool, a drywell, or just a clog? We'll tell you which — before anyone starts quoting a full replacement.</p></div>
+    </div>
+  </div></section>
+
+  <section class="how" id="how"><div class="wrap">
+    <div class="head">
+      <div class="eyebrow">How a service call works</div>
+      <h2>No mystery, no surprise bill</h2>
+      <p>Three steps, and you know the cost before we start digging.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="step-n">1</div><h3>Tell us what's happening</h3><p>Call and describe it — slow drain, backup, overdue pump-out, or a home sale. We ask a few questions and set up a visit, same-day when it's an emergency.</p></div>
+      <div class="step"><div class="step-n">2</div><h3>We look &amp; quote up front</h3><p>We locate and open the system, show you what's going on, and give you the price <b>before</b> the work — a pump-out or the real fix, whichever it actually is.</p></div>
+      <div class="step"><div class="step-n">3</div><h3>Done clean, done right</h3><p>We do the work, leave the yard the way we found it, and tell you when it'll be due next — so the next visit isn't an emergency.</p></div>
+    </div>
+  </div></section>
+
+  <section class="why"><div class="wrap">
+    <div>
+      <h2>Most people don't know what's under their yard — until it's a problem</h2>
+      <p>That's exactly when a homeowner is most likely to get overcharged: no idea what a cesspool is worth pumping, no way to tell a routine job from a scare tactic, and a company they've never met standing in the driveway.</p>
+      <p>We built this company around fixing that. The name isn't a slogan — it's the whole business model: tell people the truth about their system, quote it before we touch it, and do honest work so they call us back and tell their neighbor.</p>
+      <a class="btn btn-teal" href="tel:16313382272" style="margin-top:6px">Talk to us · (631) 338-2272</a>
+    </div>
+    <div>
+      <div class="card"><h3>Cesspool vs. septic vs. drywell</h3><p>Different systems, different fixes. We explain which one you actually have and what it needs — instead of quoting the most expensive option by default.</p></div>
+      <div class="card"><h3>Price before the work</h3><p>You approve a number before we dig. If we find something bigger once it's open, we stop and talk — we don't just keep going and hand you the bill.</p></div>
+      <div class="card"><h3>Free estimates</h3><p>Getting a straight answer shouldn't cost you. Estimates are free, and we'll tell you if you don't need us yet.</p></div>
+    </div>
+  </div></section>
+
+  <section class="area" id="area"><div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Service area</div>
+      <h2>Based in Sayville, out to the whole South Shore</h2>
+      <p>If you're on the Great South Bay side of Suffolk, we're likely a short drive away.</p>
+    </div>
+    <div class="towns">
+      <span>Sayville</span><span>West Sayville</span><span>Bayport</span><span>Blue Point</span>
+      <span>Oakdale</span><span>Bohemia</span><span>Holbrook</span><span>Patchogue</span>
+      <span>Holtsville</span><span>Ronkonkoma</span><span>Islip</span><span>Great River</span>
+    </div>
+    <p class="note">Not on the list? Call — if we cover your street we'll tell you straight.</p>
+  </div></section>
+
+  <section><div class="wrap">
+    <div class="head">
+      <div class="eyebrow">What neighbors say</div>
+      <h2>5.0 across Angi &amp; HomeAdvisor</h2>
+      <p>Real reviews live on Angi, HomeAdvisor and Nextdoor. Verified quotes will be placed here at build — nothing is invented below.</p>
+    </div>
+    <div class="rev-grid">
+      <div class="rev"><span class="stars">★★★★★</span><span class="ph">Review placeholder — pull from Angi</span><p>"[Verified 5-star Angi review to be inserted at build.]"</p><cite>— Angi verified customer, Sayville area</cite></div>
+      <div class="rev"><span class="stars">★★★★★</span><span class="ph">Review placeholder — pull from HomeAdvisor</span><p>"[Verified 5-star HomeAdvisor review to be inserted at build.]"</p><cite>— HomeAdvisor verified customer</cite></div>
+      <div class="rev"><span class="stars">★★★★★</span><span class="ph">Chamber recommendation</span><p>"[Sayville Chamber recommendation quote to be inserted at build.]"</p><cite>— via Sayville Chamber of Commerce</cite></div>
+    </div>
+  </div></section>
+
+  <section class="contact" id="contact"><div class="wrap">
+    <div>
+      <h2>Slow drain? Backup? Overdue pump-out?</h2>
+      <p>Call and describe what's going on — we'll set up a visit and give you the price before any work starts. Emergencies handled the same day when we can.</p>
+      <a class="big-call" href="tel:16313382272">📞 (631) 338-2272</a>
+      <p style="margin-top:18px;font-size:.9rem;color:#9fc4d0">Sayville, NY · Find us on Instagram <b style="color:#fff">@thehonestcesspoolco</b></p>
+    </div>
+    <form class="cbox" onsubmit="return false">
+      <div class="field"><label>Name</label><input type="text" placeholder="Your name"></div>
+      <div class="field"><label>Phone</label><input type="tel" placeholder="Best number to reach you"></div>
+      <div class="field"><label>What's going on?</label><textarea placeholder="e.g. toilets draining slow, overdue pump-out, wet spot in the yard, home inspection…"></textarea></div>
+      <button class="btn btn-amber">Request my free estimate</button>
+    </form>
+  </div></section>
+
+  <footer><div class="wrap">
+    <div><b>The Honest Cesspool Company, LLC</b><br>Cesspool &amp; septic service · Sayville, NY 11782</div>
+    <div>Call/text: <a href="tel:16313382272">(631) 338-2272</a><br>Instagram: @thehonestcesspoolco</div>
+    <div style="color:#5f7d8a">Free estimates · Emergency service<br>Serving the South Shore of Suffolk County</div>
+  </div></footer>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Warique — Peruvian Restaurant, Jackson Heights</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--terra:#b8472e;--terra-deep:#7d2c1c;--teal:#157a78;--cream:#fdf6ea;--cream2:#fbf3e6;--ink:#2c1c16;--gold:#e0a13c;}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Mukta',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+  h1,h2,h3,.serif{font-family:'Fraunces',serif;font-weight:600}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  a{color:inherit}
+  .preview-tag{background:var(--terra-deep);color:#fde9d2;text-align:center;padding:7px;font-size:.78rem;letter-spacing:.05em}
+  nav{position:sticky;top:0;z-index:10;background:rgba(125,44,28,.97);backdrop-filter:blur(5px);color:#fde9d2}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 24px}
+  nav .logo{font-family:'Fraunces';font-size:1.5rem;letter-spacing:.04em;color:#fff}
+  nav .logo span{color:var(--gold)}
+  .resv{background:var(--gold);color:#3a1c10;text-decoration:none;padding:9px 18px;border-radius:3px;font-weight:700;font-size:.92rem}
+  .hero{background:linear-gradient(rgba(70,22,12,.72),rgba(70,22,12,.8)),
+     radial-gradient(circle at 75% 20%,#c8553a,#7d2c1c 75%);color:#fde9d2;text-align:center;padding:96px 24px 108px}
+  .kicker{display:inline-block;border:1px solid var(--gold);color:var(--gold);padding:6px 16px;border-radius:2px;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;margin-bottom:24px}
+  .hero h1{font-size:clamp(3rem,8vw,5.4rem);line-height:1;color:#fff}
+  .hero p{max-width:560px;margin:18px auto 32px;font-size:1.18rem;color:#fadfc4}
+  .btn{display:inline-block;text-decoration:none;font-weight:700;padding:15px 30px;border-radius:3px;transition:.2s;font-size:.95rem}
+  .btn.g{background:var(--gold);color:#3a1c10}.btn.g:hover{background:#edb255}
+  .btn.o{border:2px solid #fde9d2;color:#fde9d2;margin-left:10px}.btn.o:hover{background:#fde9d2;color:var(--terra-deep)}
+  section{padding:78px 0}
+  .eyebrow{color:var(--teal);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:.78rem;margin-bottom:10px}
+  h2.title{font-size:clamp(2.1rem,4.8vw,3rem);color:var(--terra-deep);margin-bottom:10px;line-height:1.06}
+  .dishes{background:#fff}
+  .dgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
+  .dish{background:var(--cream);border-radius:8px;overflow:hidden;border:1px solid #efe0c8}
+  .dish .img{height:150px;background:linear-gradient(150deg,#c8553a,#7d2c1c);display:flex;align-items:flex-end;padding:12px;color:rgba(255,255,255,.55);font-style:italic;font-size:.82rem}
+  .dish.t .img{background:linear-gradient(150deg,#1d908d,#0e5a58)}
+  .dish .b{padding:18px 20px}
+  .dish h3{color:var(--terra-deep);font-size:1.25rem;margin-bottom:4px}
+  .dish p{color:#6a5347;font-size:.95rem}
+  .story{background:var(--terra-deep);color:#fde9d2}
+  .story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .story h2.title{color:#fff}
+  .photo{min-height:320px;border-radius:8px;background:linear-gradient(150deg,#1d908d,#0e5a58);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);font-style:italic;text-align:center;padding:24px}
+  .story p{margin-bottom:16px;font-size:1.06rem;color:#f6dcc0}
+  .reviews{text-align:center}
+  .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px;text-align:left}
+  .quote{background:#fff;border:1px solid #efe0c8;border-radius:8px;padding:26px}
+  .stars{color:var(--gold);letter-spacing:2px;margin-bottom:10px}
+  .quote p{font-style:italic;color:#43271b}
+  .quote .ph{display:block;margin-top:12px;font-style:normal;color:var(--teal);font-size:.8rem;font-weight:600}
+  .reserve{background:#fff}
+  .reserve .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  .info-row{display:flex;gap:12px;margin-bottom:18px;align-items:center}
+  .info-row .ic{color:var(--terra);width:24px}
+  form label{display:block;font-weight:600;margin:14px 0 6px;font-size:.92rem}
+  form input,form textarea{width:100%;padding:12px 14px;border:1px solid #e3d4bd;border-radius:5px;font-family:inherit;font-size:1rem;background:var(--cream2)}
+  .formcard{background:var(--cream);border:1px solid #efe0c8;border-radius:10px;padding:34px}
+  footer{background:#3a1c10;color:#d8b99d;text-align:center;padding:42px 24px}
+  footer .logo{font-family:'Fraunces';color:var(--gold);font-size:1.6rem;display:block;margin-bottom:8px}
+  @media(max-width:800px){.dgrid,.rgrid,.story .wrap,.reserve .wrap{grid-template-columns:1fr;gap:26px}.btn.o{margin-left:0}}
+</style>
+</head>
+<body>
+<div class="preview-tag">PREVIEW CONCEPT — prepared by Onyx Rise Media for Warique</div>
+<nav><div class="wrap">
+  <span class="logo">Wari<span>que</span></span>
+  <a class="resv" href="#reserve">Reserve a table</a>
+</div></nav>
+
+<header class="hero">
+  <span class="kicker">Peruvian Kitchen · Jackson Heights</span>
+  <h1>Warique</h1>
+  <p>A small Peruvian kitchen on 37th Avenue, cooking the dishes Lima grandmothers actually make. A handful of tables, big plates, and a welcome that feels like family.</p>
+  <div>
+    <a class="btn g" href="#reserve">Reserve a Table</a>
+    <a class="btn o" href="#menu">See the dishes</a>
+  </div>
+</header>
+
+<section class="dishes" id="menu">
+  <div class="wrap">
+    <div class="eyebrow">What to order</div>
+    <h2 class="title">The dishes people come back for</h2>
+    <div class="dgrid">
+      <div class="dish"><div class="img">[ Ceviche photo ]</div><div class="b"><h3>Ceviche Clásico</h3><p>Fresh fish cured in leche de tigre, red onion, sweet potato, choclo.</p></div></div>
+      <div class="dish t"><div class="img">[ Lomo saltado photo ]</div><div class="b"><h3>Lomo Saltado</h3><p>Wok-seared beef, onion and tomato over fries and rice. The classic.</p></div></div>
+      <div class="dish"><div class="img">[ Ají de gallina photo ]</div><div class="b"><h3>Ají de Gallina</h3><p>Shredded chicken in a creamy, gently spiced yellow-pepper sauce.</p></div></div>
+      <div class="dish t"><div class="img">[ Anticuchos photo ]</div><div class="b"><h3>Anticuchos</h3><p>Char-grilled skewers, smoky and tender, the way the street carts do it.</p></div></div>
+      <div class="dish"><div class="img">[ Arroz con mariscos ]</div><div class="b"><h3>Arroz con Mariscos</h3><p>Seafood rice, generous and full of flavor — meant to be shared.</p></div></div>
+      <div class="dish t"><div class="img">[ Picarones photo ]</div><div class="b"><h3>Picarones</h3><p>Warm squash-and-sweet-potato doughnuts in chancaca syrup.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap">
+    <div class="photo">[ Photo: the small dining room / the kitchen ]</div>
+    <div>
+      <div class="eyebrow" style="color:var(--gold)">The kitchen</div>
+      <h2 class="title">Cooked like home, not a chain</h2>
+      <p>Warique means "the hidden gem" — the little neighborhood spot locals keep to themselves. That's exactly what this is: a tight, honest Peruvian kitchen in the heart of Jackson Heights.</p>
+      <p>The menu is small on purpose so every plate comes out right. Come hungry, bring people, and let us feed you the way we'd feed family.</p>
+      <a class="btn g" href="#reserve">Book your table</a>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <div class="eyebrow">From 78 reviews</div>
+    <h2 class="title">What guests say</h2>
+    <div class="rgrid">
+      <div class="quote"><div class="stars">★★★★★</div><p>"The ceviche is the real deal and the lomo saltado is perfect. A true hidden gem in Jackson Heights."</p><span class="ph">Review placeholder — pull live</span></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"Small, family-run, and every dish tasted homemade. We'll be back."</p><span class="ph">Review placeholder — pull live</span></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"Authentic Peruvian without the trip to Lima. Book ahead — it's tiny and fills up."</p><span class="ph">Review placeholder — pull live</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="reserve" id="reserve">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Reserve & visit</div>
+      <h2 class="title">Book a table at Warique</h2>
+      <p style="margin-bottom:24px">Tables are limited, so weekends fill up. Call us or send a request and we'll confirm.</p>
+      <div class="info-row"><span class="ic">📍</span><span>90-04 37th Ave, Jackson Heights, NY 11372</span></div>
+      <div class="info-row"><span class="ic">☎</span><span><a href="tel:17184409949">(718) 440-9949</a></span></div>
+      <div class="info-row"><span class="ic">✉</span><span>wariquerestaurant@gmail.com</span></div>
+      <a class="btn g" href="tel:17184409949" style="margin-top:8px">Call to reserve</a>
+    </div>
+    <div class="formcard">
+      <h3 class="serif" style="color:var(--terra-deep);font-size:1.5rem;margin-bottom:6px">Request a table</h3>
+      <form onsubmit="event.preventDefault();this.style.display='none';document.getElementById('thx-w').style.display='block';">
+        <label>Name</label><input required placeholder="Your name">
+        <label>Phone</label><input required placeholder="(___) ___-____">
+        <label>Date, time & guests</label><input placeholder="e.g. Sat 7pm, 4 guests">
+        <label>Anything we should know?</label><textarea rows="3" placeholder="Occasion, seating, dietary notes"></textarea>
+        <button class="btn g" type="submit" style="margin-top:18px;width:100%">Send request</button>
+      </form>
+      <div id="thx-w" style="display:none;color:var(--teal);font-weight:600">¡Gracias! We'll confirm shortly. <span style="font-weight:400;font-size:.8rem">(Demo form; connects to the Onyx Rise Media CRM on build.)</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="logo">Warique</span>
+  90-04 37th Ave, Jackson Heights · (718) 440-9949<br>
+  <span style="font-size:.8rem;opacity:.7">Preview concept by Onyx Rise Media · not the official site</span>
+</footer>
+</body>
+</html>

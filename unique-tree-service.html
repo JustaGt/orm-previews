@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unique Tree Service — Tree Removal &amp; Pruning Since 1969, Palatine Bridge NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{--bark:#3d2f23;--moss:#5c6b46;--moss-dk:#46523400;--cream:#f7f3ea;--paper:#efe8d8;--rust:#a3552e;--ink:#2b241c;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Lora',serif;color:var(--ink);background:var(--cream);line-height:1.7;}
+  h1,h2,h3{font-family:'Playfair Display',serif;color:var(--bark);line-height:1.15;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px;}
+  /* hero */
+  .hero{background:var(--bark);color:var(--cream);padding:80px 0 64px;position:relative;}
+  .est{display:inline-block;border:1px solid var(--rust);color:#e8c9ae;padding:6px 18px;border-radius:2px;letter-spacing:.18em;text-transform:uppercase;font-size:.78rem;}
+  .hero h1{color:var(--cream);font-size:clamp(2.1rem,4.8vw,3.3rem);margin:20px 0 16px;max-width:15em;}
+  .hero p{color:#d9cfbd;max-width:35em;font-size:1.08rem;}
+  .cta{display:inline-block;background:var(--rust);color:#fff;font-family:'Lora',serif;font-weight:600;padding:15px 32px;border-radius:2px;text-decoration:none;margin-top:26px;}
+  .cta:hover{background:#84421f;}
+  /* rings timeline */
+  .rings{padding:68px 0;background:var(--paper);border-bottom:1px solid #ddd3bd;}
+  .rings .wrap{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center;}
+  .rings svg{width:230px;height:230px;}
+  .rings h2{font-size:1.9rem;margin-bottom:16px;}
+  .tl{list-style:none;}
+  .tl li{padding:10px 0 10px 26px;position:relative;border-left:2px solid var(--moss);margin-left:6px;}
+  .tl li::before{content:"";position:absolute;left:-7px;top:18px;width:12px;height:12px;border-radius:50%;background:var(--rust);}
+  .tl b{font-family:'Playfair Display',serif;color:var(--bark);}
+  .tl span{display:block;color:#6a6050;font-size:.95rem;}
+  /* services */
+  .services{padding:68px 0;}
+  h2.sec{font-size:1.9rem;margin-bottom:10px;}
+  .lede{color:#6a6050;max-width:44em;margin-bottom:30px;}
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;}
+  .svc{background:#fff;border:1px solid #e2d9c4;border-radius:3px;padding:26px;border-top:4px solid var(--moss);}
+  .svc h3{font-size:1.12rem;margin-bottom:8px;}
+  .svc p{color:#6a6050;font-size:.96rem;}
+  /* walkthrough */
+  .walk{background:var(--moss);color:#fff;padding:64px 0;}
+  .walk h2{color:var(--cream);font-size:1.9rem;margin-bottom:30px;}
+  .walk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px;}
+  .w-step{background:rgba(247,243,234,.09);border:1px solid rgba(247,243,234,.25);border-radius:3px;padding:22px;}
+  .w-step b{font-family:'Playfair Display',serif;font-size:1.08rem;display:block;margin-bottom:8px;color:var(--cream);}
+  .w-step p{color:#e6e2d4;font-size:.94rem;}
+  /* farm band */
+  .farm{padding:68px 0;}
+  .farm .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:center;}
+  .farm p{color:#5d5546;margin-bottom:12px;}
+  .farm-card{background:var(--bark);color:var(--cream);border-radius:3px;padding:30px;}
+  .farm-card h3{color:var(--cream);font-size:1.2rem;margin-bottom:12px;}
+  .farm-card ul{list-style:none;}
+  .farm-card li{padding:8px 0 8px 24px;position:relative;color:#d9cfbd;font-size:.95rem;border-bottom:1px dashed rgba(217,207,189,.25);}
+  .farm-card li:last-child{border-bottom:none;}
+  .farm-card li::before{content:"›";position:absolute;left:4px;color:var(--rust);font-weight:700;}
+  /* contact */
+  .contact{background:var(--paper);padding:68px 0;border-top:1px solid #ddd3bd;}
+  .contact .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;}
+  .towns{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0;}
+  .towns span{background:#fff;border:1px solid #e2d9c4;border-radius:20px;padding:5px 14px;font-size:.9rem;color:#5d5546;}
+  .card{background:#fff;border:1px solid #e2d9c4;border-top:5px solid var(--rust);border-radius:3px;padding:30px;}
+  .card h3{font-size:1.3rem;margin-bottom:10px;}
+  .card .phone{font-family:'Playfair Display',serif;font-size:1.9rem;color:var(--bark);text-decoration:none;display:block;margin:8px 0 14px;}
+  .card p{font-size:.95rem;color:#6a6050;margin-bottom:8px;}
+  footer{background:var(--bark);color:#b9ac96;padding:26px 0;font-size:.88rem;}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+  @media(max-width:840px){.rings .wrap{grid-template-columns:1fr;justify-items:center;}.farm .wrap{grid-template-columns:1fr;}.contact .wrap{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="est">In the trees since 1969</span>
+    <h1>The big old maple over your roof needs someone who's done this a few thousand times.</h1>
+    <p>Unique Tree Service is Jane and Willard "Doc" Davis's crew out of Palatine Bridge — taking down, trimming, and cleaning up the tallest problems in Montgomery County yards, farms, and fence lines for over five decades of combined trade history.</p>
+    <a class="cta" href="#contact">Get a Free Look at Your Tree</a>
+  </div>
+</section>
+
+<section class="rings">
+  <div class="wrap">
+    <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="120" cy="120" r="112" fill="#efe8d8" stroke="#3d2f23" stroke-width="3"/>
+      <circle cx="120" cy="120" r="94" fill="none" stroke="#5c6b46" stroke-width="2" opacity=".7"/>
+      <circle cx="120" cy="120" r="76" fill="none" stroke="#3d2f23" stroke-width="1.5" opacity=".6"/>
+      <circle cx="120" cy="120" r="59" fill="none" stroke="#5c6b46" stroke-width="2" opacity=".7"/>
+      <circle cx="120" cy="120" r="43" fill="none" stroke="#3d2f23" stroke-width="1.5" opacity=".6"/>
+      <circle cx="120" cy="120" r="28" fill="none" stroke="#a3552e" stroke-width="2"/>
+      <circle cx="120" cy="120" r="14" fill="none" stroke="#3d2f23" stroke-width="1.5" opacity=".6"/>
+      <circle cx="120" cy="120" r="4" fill="#a3552e"/>
+      <text x="120" y="20" text-anchor="middle" font-family="Lora" font-size="11" fill="#6a6050">every ring, a season worked</text>
+    </svg>
+    <div>
+      <h2>Count the rings</h2>
+      <ul class="tl">
+        <li><b>1969</b><span>The trade begins — the first trees come down safely.</span></li>
+        <li><b>1996</b><span>Unique Tree Service puts down roots in Palatine Bridge; incorporated the following year.</span></li>
+        <li><b>Today</b><span>Same family, same hills — Jane &amp; Doc Davis still answer the phone themselves.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="wrap">
+    <h2 class="sec">What we take care of</h2>
+    <p class="lede">From a single storm-cracked limb to clearing a whole overgrown lane — one call covers the tree, the brush, and the cleanup.</p>
+    <div class="svc-grid">
+      <div class="svc"><h3>Tree Removal</h3><p>Full takedowns of dead, dying, or dangerously placed trees — including the big ones leaning over houses, barns, and wires that other crews pass on.</p></div>
+      <div class="svc"><h3>Pruning &amp; Trimming</h3><p>Deadwood out, crowns thinned, limbs lifted off roofs and drives — keeping the healthy trees healthy and the falling branches off your shingles.</p></div>
+      <div class="svc"><h3>Storm Damage Response</h3><p>When the ice or the wind gets there first: hung limbs brought down safely, driveways reopened, roofs cleared.</p></div>
+      <div class="svc"><h3>Stump &amp; Brush Cleanup</h3><p>The job isn't done at the trunk. Stumps ground down and brush hauled off, so what's left is lawn — not evidence.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="walk">
+  <div class="wrap">
+    <h2>What happens when the crew shows up</h2>
+    <div class="walk-grid">
+      <div class="w-step"><b>The look</b><p>Doc walks the tree with you — what's dead, what's dropping, what it will take. You get a straight quote on the spot.</p></div>
+      <div class="w-step"><b>The plan</b><p>Rigging and drop zones worked out before a saw starts — house, wires, garden, and fence accounted for.</p></div>
+      <div class="w-step"><b>The work</b><p>Piece by piece if it's tight, whole if it's clear — decades of judgment about which is which.</p></div>
+      <div class="w-step"><b>The cleanup</b><p>Wood cut and stacked or hauled, brush chipped, lawn raked. The tree is gone; the mess doesn't move in.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="farm">
+  <div class="wrap">
+    <div>
+      <h2 class="sec">Farm &amp; fence-line work</h2>
+      <p>Montgomery County trees don't just shade houses — they swallow fence lines, lean over lanes, and shade out crop edges. We've spent decades on ag properties around Palatine Bridge and know the difference between yard work and farm work.</p>
+      <p>Hedgerows opened, field edges pushed back, lanes cleared to full equipment height — scheduled around your season, not ours.</p>
+    </div>
+    <div class="farm-card">
+      <h3>For the working property</h3>
+      <ul>
+        <li>Fence-line and hedgerow clearing</li>
+        <li>Equipment-lane and field-edge openings</li>
+        <li>Pasture-edge hazard trees removed</li>
+        <li>Storm-blocked farm lanes reopened</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2 class="sec">Where we work</h2>
+      <p class="lede">Based on Staley Road in Palatine Bridge, working both sides of the Mohawk:</p>
+      <div class="towns">
+        <span>Palatine Bridge</span><span>Canajoharie</span><span>Fort Plain</span><span>Nelliston</span><span>St. Johnsville</span><span>Fonda</span><span>Stone Arabia</span><span>Sprakers</span>
+      </div>
+      <p class="lede">Worried about a tree? A phone description and a couple of photos are usually enough to tell you whether it can wait until fall or shouldn't wait until Friday.</p>
+    </div>
+    <div class="card">
+      <h3>Talk to Jane or Doc</h3>
+      <a class="phone" href="tel:5186735604">(518) 673-5604</a>
+      <p>[PLACEHOLDER — confirm primary phone; directories also list (518) 332-7808]</p>
+      <p><strong>Unique Tree Service, LLC</strong><br>11 Staley Rd / PO Box 164<br>Palatine Bridge, NY 13428</p>
+      <p>Free quotes · [PLACEHOLDER — confirm insurance details before publish]</p>
+      <a class="cta" href="tel:5186735604">Call for a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Unique Tree Service, LLC · Palatine Bridge, NY</span>
+    <span>Removal · pruning · storm work · stumps · fence lines</span>
+  </div>
+</footer>
+
+</body>
+</html>

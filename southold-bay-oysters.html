@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Southold Bay Oysters — North Fork, NY · Raw Bars, Shuck Parties, Farm Tours &amp; Southold Shindig Oysters</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bay:#143a44; --bay-d:#0d272e; --teal:#23636f; --brack:#5e7d54;
+  --pearl:#f4efe4; --shell:#e7ddc8; --sand:#cbb489; --brass:#c69a4e;
+  --ink:#1f2a2c; --slate:#5a6b6c; --line:#d8d0bd; --card:#fffdf6;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Mulish',sans-serif;color:var(--ink);background:var(--pearl);line-height:1.65}
+h1,h2,h3,.serif{font-family:'Fraunces',serif}
+.wrap{max-width:1080px;margin:0 auto;padding:0 23px}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-block;background:var(--brass);color:#26201a;font-weight:700;letter-spacing:.6px;font-size:.92rem;padding:14px 28px;border-radius:30px;transition:.14s}
+.btn:hover{background:#b3873b}
+.btn.teal{background:var(--teal);color:#fff}
+.btn.teal:hover{background:#1b4f59}
+.btn.line{background:transparent;border:1.5px solid #ffffff70;color:#fff}
+.btn.line:hover{background:#ffffff18}
+
+nav{background:var(--bay-d)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand b{font-family:'Fraunces';font-weight:600;color:#fff;font-size:1.35rem;display:block;line-height:1}
+.brand small{color:var(--sand);font-size:.6rem;letter-spacing:2.5px;text-transform:uppercase}
+.navlinks{display:flex;gap:24px;color:#cdd9d6;font-size:.86rem;font-weight:600}
+.navlinks a:hover{color:var(--sand)}
+.navphone{color:#fff;font-weight:700;font-size:1rem}
+@media(max-width:880px){.navlinks{display:none}}
+
+.hero{position:relative;color:#f4efe4;overflow:hidden;background:var(--bay)}
+.hero::before{content:"";position:absolute;inset:0;
+  background:
+   radial-gradient(120% 90% at 80% 0,rgba(35,99,111,.55),transparent 60%),
+   linear-gradient(100deg,rgba(13,39,46,.94) 0 46%,rgba(20,58,68,.66)),
+   linear-gradient(180deg,#1a4651,#0d272e)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:64px;
+  background:radial-gradient(circle at 12px -6px,var(--pearl) 13px,transparent 14px);background-size:34px 34px;opacity:.95}
+.hero .wrap{position:relative;z-index:1;padding:84px 23px 104px}
+.kick{display:inline-flex;align-items:center;gap:9px;font-size:.74rem;letter-spacing:2.5px;text-transform:uppercase;color:#f0e6d2;background:#00000033;border:1px solid var(--brass);border-radius:30px;padding:6px 16px;margin-bottom:22px}
+.kick::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--brass)}
+.hero h1{font-family:'Fraunces';font-weight:600;font-size:3.7rem;line-height:1.03;max-width:18ch}
+.hero h1 em{font-style:italic;color:var(--sand)}
+.hero p{font-size:1.18rem;max-width:55ch;margin:20px 0 28px;color:#e2ddce}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:600px){.hero h1{font-size:2.5rem}}
+
+section{padding:76px 0}
+.shead{max-width:62ch}
+.shead.ctr{text-align:center;margin-left:auto;margin-right:auto}
+.shead .k{font-size:.8rem;letter-spacing:3px;text-transform:uppercase;color:var(--teal);font-weight:700}
+.shead h2{font-family:'Fraunces';font-weight:600;font-size:2.6rem;color:var(--bay);margin-top:7px;line-height:1.05}
+.shead p{color:var(--slate);margin-top:10px;font-size:1.05rem}
+
+/* four ways */
+.ways .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:36px}
+@media(max-width:760px){.ways .grid{grid-template-columns:1fr}}
+.wcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:30px 28px;position:relative;transition:.14s}
+.wcard:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(13,39,46,.1)}
+.wcard.lead{border:2px solid var(--brass);background:linear-gradient(180deg,#fffdf6,#fbf4e4)}
+.wcard .pin{font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;color:var(--teal)}
+.wcard.lead .pin{color:#a9781f}
+.wcard h3{font-family:'Fraunces';font-weight:600;font-size:1.55rem;color:var(--bay);margin:5px 0 8px}
+.wcard p{color:var(--slate);font-size:.97rem;margin-bottom:14px}
+.wcard .go{font-weight:700;font-size:.9rem;color:var(--teal);letter-spacing:.5px}
+.wcard.lead .go{color:#a9781f}
+.ribbon{position:absolute;top:18px;right:-1px;background:var(--brass);color:#26201a;font-size:.66rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 13px;border-radius:20px 0 0 20px}
+
+/* merroir */
+.mer{background:var(--bay);color:#e7ddc8}
+.mer .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:46px;align-items:center}
+@media(max-width:820px){.mer .wrap{grid-template-columns:1fr}}
+.oyster{aspect-ratio:1/1;border-radius:50%;
+  background:radial-gradient(circle at 38% 34%,#f2ead6,#cdbf9e 55%,#7d7257 100%);
+  border:10px solid #0e2c33;box-shadow:0 0 0 2px #2a5b66,inset 0 6px 24px rgba(0,0,0,.3);
+  display:flex;align-items:center;justify-content:center;max-width:330px;margin:0 auto;position:relative}
+.oyster .pearl{width:40%;height:40%;border-radius:50%;background:radial-gradient(circle at 36% 32%,#fff,#d9cdb0 70%,#a89a78);box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.mer .k{color:var(--sand);font-size:.8rem;letter-spacing:3px;text-transform:uppercase;font-weight:700}
+.mer h2{font-family:'Fraunces';font-weight:600;font-size:2.4rem;color:#fff;margin:6px 0 12px;line-height:1.07}
+.mer p{color:#d4cdba;font-size:1.04rem;margin-bottom:16px}
+.notes{display:flex;flex-wrap:wrap;gap:9px}
+.notes span{font-size:.82rem;font-weight:600;background:#ffffff14;border:1px solid #ffffff33;color:#f0e8d6;border-radius:20px;padding:6px 14px}
+
+/* trust */
+.trust{background:var(--shell)}
+.trust .wrap{text-align:center}
+.badges{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:26px}
+.badge{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 22px;min-width:150px}
+.badge b{display:block;font-family:'Fraunces';font-weight:600;color:var(--bay);font-size:1.05rem}
+.badge span{font-size:.78rem;color:var(--slate)}
+
+/* book */
+.book{background:var(--bay-d);color:#dfe6e4}
+.book .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center}
+@media(max-width:820px){.book .wrap{grid-template-columns:1fr}}
+.book h2{font-family:'Fraunces';font-weight:600;font-size:2.6rem;color:#fff;line-height:1.06}
+.book p{color:#bdcac7;margin:13px 0 18px}
+.book .li{padding-left:23px;position:relative;color:#dceae6;font-size:.96rem;margin-bottom:9px}
+.book .li::before{content:"❍";position:absolute;left:0;color:var(--brass);font-size:.8rem;top:3px}
+.bbox{background:#10333b;border:1px solid #245560;border-radius:12px;padding:30px}
+.bbox .r{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid #245560}
+.bbox .r:last-of-type{border:0}
+.bbox .r span{color:#8fb0b1;font-size:.78rem;letter-spacing:1.2px;text-transform:uppercase;padding-top:3px}
+.bbox .r b{font-family:'Fraunces';color:#fff;text-align:right;font-size:1.18rem;font-weight:600}
+.bbox .cta-row{margin-top:18px}
+
+footer{background:#0a1e23;color:#7fa0a1;text-align:center;padding:30px 0;font-size:.9rem}
+footer b{font-family:'Fraunces';color:#fff;font-size:1.15rem}
+footer .sm{margin-top:7px;color:#5c7a7b;font-size:.8rem}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="brand"><b>Southold Bay Oysters</b><small>North Fork · Southold Shindig</small></div>
+  <div class="navlinks">
+    <a href="#ways">Get Oysters</a>
+    <a href="#mer">The Shindig</a>
+    <a href="#trust">Our Farm</a>
+    <a href="#book">Book a Raw Bar</a>
+  </div>
+  <a href="tel:9146023339" class="navphone">914‑602‑3339</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="kick">Grown in Southold Bay · North Fork, NY</div>
+  <h1>Southold Shindig oysters — <em>raised in the bay, shucked at your table.</em></h1>
+  <p>A working North Fork oyster farm with a raw bar that travels. Book a shuck party for the wedding, pull up to the farm stand, take a tour of the racks, or have them shipped — same oyster, four ways to get it.</p>
+  <div class="cta-row">
+    <a href="#book" class="btn">Book a raw bar for your event</a>
+    <a href="#ways" class="btn line">Other ways to get them</a>
+  </div>
+</div></header>
+
+<section id="ways" class="ways"><div class="wrap">
+  <div class="shead ctr">
+    <div class="k">Four ways, one farm</div>
+    <h2>However you want them, they start in Southold Bay</h2>
+    <p>Most folks find us for a party on the half shell — but the farm stand, the tours and nationwide shipping pull from the same racks.</p>
+  </div>
+  <div class="grid">
+    <div class="wcard lead">
+      <div class="ribbon">Most booked</div>
+      <div class="pin">Events &amp; weddings</div>
+      <h3>Raw Bar &amp; Shuck Parties</h3>
+      <p>We bring the ice, the shuckers and the Shindigs to your event — backyard wedding, tasting on the lawn, or a North Fork celebration. Tell us the date and the headcount.</p>
+      <div class="go">Reserve your date →</div>
+    </div>
+    <div class="wcard">
+      <div class="pin">On the North Fork</div>
+      <h3>Farm Stand</h3>
+      <p>Swing by the stand on North Bayview for oysters straight off the farm — by the dozen, the bag, or however many the cookout calls for.</p>
+      <div class="go">See stand hours →</div>
+    </div>
+    <div class="wcard">
+      <div class="pin">On the water</div>
+      <h3>Farm Tours</h3>
+      <p>Walk the operation, see how a Shindig goes from seed to shell, and taste them right where they're grown. Great for groups and visitors to the fork.</p>
+      <div class="go">Reserve a tour →</div>
+    </div>
+    <div class="wcard">
+      <div class="pin">Anywhere in the country</div>
+      <h3>Shipped to Your Door</h3>
+      <p>Send Southold Bay home with you or to someone's doorstep — packed cold and shipped from the North Fork through our online shop.</p>
+      <div class="go">Order online →</div>
+    </div>
+  </div>
+</div></section>
+
+<section id="mer" class="mer"><div class="wrap">
+  <div class="oyster"><div class="pearl"></div></div>
+  <div>
+    <div class="k">The merroir</div>
+    <h2>What a Southold Shindig tastes like</h2>
+    <p>Grown in the cold, clean salt of Southold Bay, the Shindig comes up with a deep cup, a clean snap of brine, and a finish that tastes like the place it's from. The bay does the work; we just pull them at the right moment.</p>
+    <div class="notes">
+      <span>Full salinity</span><span>Deep cup</span><span>Clean, crisp finish</span><span>Southold Bay merroir</span>
+    </div>
+  </div>
+</div></section>
+
+<section id="trust" class="trust"><div class="wrap">
+  <div class="shead ctr">
+    <div class="k">A certified North Fork farm</div>
+    <h2>Grown, certified, and part of the working bay</h2>
+    <p>We farm under New York's aquaculture programs and stand with the growers who keep these waters working.</p>
+  </div>
+  <div class="badges">
+    <div class="badge"><b>NYS Grown &amp; Certified</b><span>State-certified shellfish</span></div>
+    <div class="badge"><b>LIOGA</b><span>LI Oyster Growers Assn.</span></div>
+    <div class="badge"><b>LI Farm Bureau</b><span>Member farm</span></div>
+    <div class="badge"><b>SPAT · Cornell</b><span>Southold aquaculture program</span></div>
+    <div class="badge"><b>Noank Cooperative</b><span>Aquaculture co-op</span></div>
+  </div>
+</div></section>
+
+<section id="book" class="book"><div class="wrap">
+  <div>
+    <h2>Booking a raw bar? Give us the date.</h2>
+    <p>The half-shell setup books up fast through the North Fork summer. Send your date, your headcount and where you're celebrating, and we'll come back with a package and an oyster count.</p>
+    <div class="li">Raw bars &amp; shuck parties for weddings and events</div>
+    <div class="li">Farm tours and group tastings by reservation</div>
+    <div class="li">Farm stand on North Bayview &amp; nationwide shipping</div>
+  </div>
+  <div class="bbox">
+    <div class="r"><span>Call / text</span><b>914‑602‑3339</b></div>
+    <div class="r"><span>Farm &amp; stand</span><b>10273 N. Bayview Rd<br>Southold, NY 11971</b></div>
+    <div class="r"><span>Email</span><b>add at build</b></div>
+    <div class="cta-row">
+      <a href="tel:9146023339" class="btn">Reserve a raw bar</a>
+      <a href="#ways" class="btn teal">Other ways to buy</a>
+    </div>
+  </div>
+</div></section>
+
+<footer>
+  <b>Southold Bay Oysters</b><br>
+  10273 N. Bayview Rd, Southold, NY 11971 · 914‑602‑3339 · Raw bars · Shuck parties · Farm tours · Farm stand · Shipped nationwide
+  <div class="sm">Southold Shindig oysters — grown &amp; NYS-certified in Southold Bay on the North Fork of Long Island</div>
+</footer>
+
+</body>
+</html>

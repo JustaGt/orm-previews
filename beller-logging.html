@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beller Logging — Standing Timber Buyer &amp; Land Clearing Since 1987 | Carthage, NY</title>
+<meta name="description" content="Selling standing timber in northern NY? Beller Logging has bought timber, select-cut woodlots and cleared land in Jefferson, Lewis and St. Lawrence counties since 1987. Ask Gary to walk your woodlot.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#1e3b2a;--moss:#4a6b4f;--bark:#6b4f35;--cream:#f7f4ec;--wheat:#e9e2cf;--ink:#26302a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+h1,h2,h3{font-family:'Lora',serif;color:var(--forest);line-height:1.18}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+nav{background:var(--forest);color:#fff}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:'Lora',serif;font-weight:700;font-size:1.25rem;color:#fff}
+.logo small{display:block;font-family:'Source Sans 3',sans-serif;font-weight:400;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:#c9d6c3}
+nav a{color:#fff;text-decoration:none;font-weight:700;background:var(--bark);padding:.5rem 1rem;border-radius:5px;font-size:.9rem}
+.hero{background:linear-gradient(rgba(20,38,26,.55),rgba(20,38,26,.8)),var(--moss);color:#fff;padding:5rem 0}
+.hero .wrap{max-width:800px}
+.hero .est{display:inline-block;border:1px solid #ffffff59;border-radius:999px;padding:.3rem 1rem;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase}
+.hero h1{color:#fff;font-size:clamp(2rem,5vw,3.1rem);margin:1rem 0}
+.hero p{font-size:1.12rem;color:#e4ead9;max-width:33em}
+.hero .btns{margin-top:1.8rem;display:flex;gap:.9rem;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:.85rem 1.5rem;border-radius:6px}
+.btn-bark{background:var(--bark);color:#fff}
+.btn-line{border:1.5px solid #fff;color:#fff}
+section{padding:3.6rem 0}
+.eyebrow{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--bark);font-weight:700}
+h2{font-size:clamp(1.5rem,3.4vw,2.1rem);margin:.5rem 0 1rem}
+.sale{background:#fff}
+.sale-steps{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-top:1.8rem}
+.s-step{background:var(--cream);border:1px solid var(--wheat);border-radius:10px;padding:1.5rem 1.2rem 1.2rem;position:relative}
+.s-step::before{counter-increment:s;content:counter(s);position:absolute;top:-16px;left:16px;background:var(--forest);color:#fff;font-family:'Lora',serif;font-weight:700;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.s-step h3{font-size:1.05rem;margin-bottom:.4rem}
+.s-step p{font-size:.9rem;color:#48544c}
+.promise{margin-top:1.6rem;background:var(--wheat);border-left:5px solid var(--forest);border-radius:0 8px 8px 0;padding:1.2rem 1.4rem;font-size:.98rem}
+.work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:1.6rem}
+.work{background:#fff;border:1px solid var(--wheat);border-radius:10px;padding:1.5rem}
+.work h3{font-size:1.1rem;margin-bottom:.45rem}
+.work p{font-size:.93rem;color:#48544c}
+.about{background:var(--forest);color:#dfe7d6}
+.about h2,.about h3{color:#fff}
+.about .eyebrow{color:#d9b98a}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2.2rem;align-items:center}
+.photo{background:#33513c;border:1px solid #4a6b4f;border-radius:10px;min-height:250px;display:flex;align-items:center;justify-content:center;color:#a9bfa0;font-size:.85rem;text-align:center;padding:1rem}
+.facts{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.3rem}
+.facts div{border:1px solid #4a6b4f;border-radius:8px;padding:.8rem 1.1rem;font-size:.85rem}
+.facts strong{display:block;font-family:'Lora',serif;font-size:1.2rem;color:#d9b98a}
+.side{background:#fff}
+.side .work-grid{grid-template-columns:1fr 1fr}
+.walk{background:var(--wheat)}
+.walk form{background:#fff;border:1px solid #d8cfb4;border-radius:12px;padding:2rem;max-width:640px;margin:1.6rem auto 0}
+.walk label{display:block;font-weight:700;color:var(--forest);font-size:.88rem;margin:.9rem 0 .3rem}
+.walk input,.walk textarea,.walk select{width:100%;padding:.7rem;border:1px solid #c9bfa2;border-radius:6px;font:inherit}
+.walk button{margin-top:1.3rem;width:100%;background:var(--forest);color:#fff;border:none;border-radius:6px;padding:.95rem;font-weight:700;font-size:1rem;cursor:pointer}
+.walk .alt{text-align:center;font-size:.88rem;margin-top:.9rem;color:#5a6156}
+footer{background:var(--forest);color:#c9d6c3;font-size:.88rem;padding:2rem 0}
+footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+@media(max-width:820px){.sale-steps{grid-template-columns:1fr 1fr}.about-grid,.work-grid,.side .work-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.sale-steps{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<div class="logo">Beller Logging<small>Carthage, New York · Est. 1987</small></div>
+<a href="tel:13154934670">(315) 493-4670</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+<span class="est">Buying standing timber for 39 years</span>
+<h1>Thinking about selling your timber? Walk the woodlot with us first.</h1>
+<p>A timber sale is a once-a-decade decision, and it shouldn't feel like a gamble. Beller Logging has bought standing timber and select-cut woodlots across Jefferson, Lewis and St. Lawrence counties since 1987 — and we'd rather explain the whole process on your land than pressure you over the phone.</p>
+<div class="btns">
+<a class="btn btn-bark" href="#walk">Request a woodlot walk</a>
+<a class="btn btn-line" href="#sale">How a timber sale works</a>
+</div>
+</div></header>
+
+<section class="sale" id="sale"><div class="wrap">
+<div class="eyebrow">No mysteries, no fine print</div>
+<h2>How a standing-timber sale actually works</h2>
+<p>Most landowners only sell timber a few times in their lives — so here's the process, in plain order, before anyone signs anything.</p>
+<div class="sale-steps">
+<div class="s-step"><h3>Walk</h3><p>Gary walks the stand with you — what's mature, what's worth money now, and what should keep growing for the next sale.</p></div>
+<div class="s-step"><h3>Mark</h3><p>Trees for harvest get marked so you can see exactly what a select cut takes — and everything it leaves standing.</p></div>
+<div class="s-step"><h3>Offer</h3><p>You get a real offer based on the marked tally. Take your time with it; compare it if you like.</p></div>
+<div class="s-step"><h3>Harvest</h3><p>The job is cut and skidded with the next 20 years of your woods in mind — landings tidied, trails graded when the work is done.</p></div>
+</div>
+<div class="promise"><strong>The select-cut promise:</strong> a properly bought woodlot should be worth selling again in 15–20 years. If a buyer talks only about this cut and never about the next one, keep looking.</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="eyebrow">One crew, start to finish</div>
+<h2>Land work that usually takes three contractors</h2>
+<div class="work-grid">
+<div class="work"><h3>Land clearing</h3><p>Building sites, fields and lots cleared — timber value recovered from the clearing instead of burned in a pile.</p></div>
+<div class="work"><h3>Select cutting</h3><p>Improvement harvests that take the mature and leave the growing — the difference between logging a woodlot and stripping one.</p></div>
+<div class="work"><h3>Grading &amp; driveways</h3><p>Once the land is clear we grade it and cut the driveway in — the same crew that cleared it, finishing the job.</p></div>
+<div class="work"><h3>Topsoil &amp; sand</h3><p>Screened topsoil and sand delivered for the site work that follows a clearing.</p></div>
+</div>
+</div></section>
+
+<section class="about"><div class="wrap">
+<div class="about-grid">
+<div>
+<div class="eyebrow">Who you're dealing with</div>
+<h2>Gary Beller — same name on the truck since 1987.</h2>
+<p>Beller Logging is a family LLC out of Beech Ridge Road in Carthage, working the Tug Hill and Black River timber country. No brokers, no out-of-state buyer chain — the person who walks your woodlot is the person whose name is on the business.</p>
+<div class="facts">
+<div><strong>1987</strong>buying timber since</div>
+<div><strong>39 yrs</strong>working northern NY woods</div>
+<div><strong>BBB</strong>profile on file since 2003</div>
+</div>
+</div>
+<div class="photo">[Photo: Gary at the landing — skidder, log pile, marked stand behind]</div>
+</div>
+</div></section>
+
+<section class="side"><div class="wrap">
+<div class="eyebrow">From the same woods</div>
+<h2>Maple syrup &amp; firewood logs</h2>
+<div class="work-grid">
+<div class="work"><h3>Maple syrup</h3><p>Made here in Carthage — the sweet side of a logging family's sugarbush. Ask what's on hand this season.</p></div>
+<div class="work"><h3>Firewood logs</h3><p>Log-length firewood loads for folks who split their own — call ahead, quantities depend on what's coming off current jobs.</p></div>
+</div>
+</div></section>
+
+<section class="walk" id="walk"><div class="wrap">
+<div style="text-align:center;max-width:580px;margin:0 auto">
+<div class="eyebrow">No cost, no obligation</div>
+<h2>Ask Gary to walk your woodlot</h2>
+<p>Tell us roughly where the land is and what you're thinking — timber sale, clearing, or just wondering what the stand is worth.</p>
+</div>
+<form>
+<label for="name">Name</label><input id="name" type="text" placeholder="Your name">
+<label for="phone">Phone</label><input id="phone" type="tel" placeholder="Best number — we're often in the cab, we'll call back">
+<label for="town">Town / county of the property</label><input id="town" type="text" placeholder="e.g., Croghan, Lewis County">
+<label for="acres">Rough acreage</label><input id="acres" type="text" placeholder="e.g., about 60 acres, mostly hardwood">
+<label for="goal">What are you hoping to do?</label><textarea id="goal" rows="3" placeholder="Sell some timber / clear a building site / put in a driveway…"></textarea>
+<button type="submit">Send it to Gary</button>
+<p class="alt">Or call <a href="tel:13154934670" style="color:var(--forest);font-weight:700">(315) 493-4670</a> — leave a message if the saws are running.</p>
+</form>
+</div></section>
+
+<footer><div class="wrap">
+<div>Beller Logging · 4798 Beech Ridge Rd, Carthage, NY 13619</div>
+<div>(315) 493-4670 · Est. 1987</div>
+</div></footer>
+</body>
+</html>

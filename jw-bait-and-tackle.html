@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JW Bait &amp; Tackle — Bait, Tackle, Breakfast &amp; Lunch · Union Springs, NY on Cayuga Lake</title>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#0e3a3f;--teal-2:#14545b;--fog:#e9eef0;--red:#d94f30;--sand:#f4efe4;--white:#fff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Public Sans',sans-serif;background:var(--fog);color:var(--teal);line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+h1,h2,h3,.signtype{font-family:'Alfa Slab One',serif;font-weight:400}
+/* top strip */
+.strip{background:var(--red);color:var(--white);text-align:center;font-size:.9rem;font-weight:600;padding:8px 14px}
+/* split hero */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:480px}
+.half{padding:70px 8% 60px;display:flex;flex-direction:column;justify-content:center}
+.half.bait{background:var(--teal);color:var(--white)}
+.half.grill{background:var(--sand);color:var(--teal)}
+.half .tag{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700;margin-bottom:14px}
+.half.bait .tag{color:#8fd0c8}.half.grill .tag{color:var(--red)}
+.half h1{font-size:clamp(1.5rem,3.2vw,2.3rem);line-height:1.2}
+.half p{margin-top:14px;max-width:44ch}
+.midbadge{position:relative}
+.midbadge span{position:absolute;left:50%;top:-30px;transform:translateX(-50%);background:var(--red);color:#fff;border-radius:50%;width:104px;height:104px;display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Alfa Slab One';font-size:.82rem;line-height:1.2;box-shadow:0 4px 14px rgba(0,0,0,.25);z-index:3;padding:10px}
+.name-bar{background:var(--white);border-bottom:4px solid var(--teal)}
+.name-bar .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:16px;flex-wrap:wrap;gap:8px}
+.name-bar .signtype{font-size:1.35rem}
+.name-bar .loc{font-size:.9rem;font-weight:600;color:var(--teal-2)}
+.callbtn{background:var(--teal);color:#fff;text-decoration:none;padding:11px 20px;font-weight:700;font-size:.95rem}
+.callbtn:hover{background:var(--red)}
+/* cooler board */
+.board{padding:64px 0}
+.board h2{font-size:1.5rem;margin-bottom:6px}
+.board .sub{max-width:62ch;margin-bottom:26px}
+.cooler{background:var(--teal);color:var(--white);padding:34px 30px;border-radius:6px;border:6px solid var(--teal-2)}
+.cooler h3{color:#8fd0c8;font-size:1rem;letter-spacing:.12em;margin-bottom:18px}
+.stockrow{display:flex;justify-content:space-between;border-bottom:1px dashed #2e6b6a;padding:10px 2px;font-weight:600;flex-wrap:wrap;gap:4px}
+.stockrow .st{color:#8fd0c8;font-weight:700}
+.cooler .ph{margin-top:16px;font-size:.82rem;color:#9fb9b6}
+/* menu card */
+.menu{background:var(--sand);padding:64px 0}
+.menucard{background:var(--white);max-width:660px;margin:26px auto 0;padding:38px 34px;box-shadow:0 6px 0 rgba(14,58,63,.18);border-top:8px solid var(--red)}
+.menucard h3{text-align:center;font-size:1.2rem;margin-bottom:20px}
+.mitem{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px dotted #cfc6b2}
+.mitem b{font-weight:700}
+.mitem span{color:#7a746a;font-size:.92rem;text-align:right}
+.menu .note{text-align:center;font-size:.85rem;color:#7a746a;margin-top:16px}
+/* launch strip */
+.launch{background:var(--teal-2);color:var(--white);padding:52px 0}
+.launch h2{font-size:1.4rem;margin-bottom:10px}
+.launch p{max-width:64ch}
+.launch .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:26px}
+.step{border:1px solid #3e7d82;padding:20px 18px}
+.step b{display:block;font-family:'Alfa Slab One';font-size:.95rem;margin-bottom:6px;color:#8fd0c8}
+/* reviews */
+.rev{padding:64px 0}
+.revgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:24px}
+.rcard{background:var(--white);padding:26px 22px;border-left:6px solid var(--red)}
+.rcard p{font-style:italic}
+.rcard cite{display:block;margin-top:10px;font-style:normal;font-size:.85rem;color:#7a746a}
+.stars{color:var(--red);letter-spacing:2px;margin-bottom:16px;font-weight:700}
+/* footer cta */
+.bottom{background:var(--teal);color:var(--white);padding:56px 0;text-align:center}
+.bottom h2{font-size:1.6rem;max-width:24ch;margin:0 auto}
+.bottom .cta-row{margin-top:24px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.bottom .callbtn{background:var(--red)}
+.bottom .alt{border:2px solid #8fd0c8;color:#8fd0c8;text-decoration:none;padding:11px 20px;font-weight:700}
+footer{background:#092528;color:#8fb4b0;font-size:.85rem;text-align:center;padding:18px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.midbadge span{display:none}}
+</style>
+</head>
+<body>
+
+<div class="strip">One counter. Two lines: anglers on the left, breakfast on the right. 145 Cayuga St, Union Springs.</div>
+
+<div class="name-bar"><div class="wrap">
+  <span class="signtype">JW BAIT &amp; TACKLE</span>
+  <span class="loc">Union Springs, NY · East shore, Cayuga Lake</span>
+  <a class="callbtn" href="tel:+13152098832">(315) 209-8832</a>
+</div></div>
+
+<section class="hero">
+  <div class="half bait">
+    <div class="tag">The bait side</div>
+    <h1>Bait's in the cooler before the lake wakes up.</h1>
+    <p>Full-service bait and tackle a block from the water — live bait, terminal tackle, and straight answers about what Cayuga's bass are hitting this week.</p>
+  </div>
+  <div class="half grill midbadge">
+    <span>OPEN<br>EARLY</span>
+    <div class="tag">The griddle side</div>
+    <h1>Coffee's on. Soup's homemade.</h1>
+    <p>Breakfast and lunch made by the two hardest-working people in Union Springs — sandwiches, homemade soups, and a hot plate whether you're fishing or not.</p>
+  </div>
+</section>
+
+<section class="board"><div class="wrap">
+  <h2>What's in the cooler this week</h2>
+  <p class="sub">Call before you drive — we'll tell you exactly what's stocked and what the lake's been giving up.</p>
+  <div class="cooler">
+    <h3>LIVE BAIT BOARD</h3>
+    <div class="stockrow"><span>[PLACEHOLDER — bait type]</span><span class="st">[stocked/out]</span></div>
+    <div class="stockrow"><span>[PLACEHOLDER — bait type]</span><span class="st">[stocked/out]</span></div>
+    <div class="stockrow"><span>[PLACEHOLDER — bait type]</span><span class="st">[stocked/out]</span></div>
+    <p class="ph">Placeholder board — fill with JW's real live-bait lineup before publishing. Kept current by a 30-second weekly edit.</p>
+  </div>
+</div></section>
+
+<section class="menu"><div class="wrap">
+  <h2 style="text-align:center">The counter menu</h2>
+  <div class="menucard">
+    <h3>REGULARS' FAVORITES</h3>
+    <div class="mitem"><b>Homemade soups</b><span>reviewers' repeat order — rotating pots</span></div>
+    <div class="mitem"><b>Sandwiches</b><span>"wide selection, quality" — per customer reviews</span></div>
+    <div class="mitem"><b>Hot breakfast</b><span>served from open</span></div>
+  </div>
+  <p class="note">Dishes above are drawn from public customer reviews; confirm the printed menu and prices with JW before publishing. [PLACEHOLDER — full menu + prices]</p>
+</div></section>
+
+<section class="launch"><div class="wrap">
+  <h2>From the launch to the counter in two minutes</h2>
+  <p>145 Cayuga Street sits a block off the east-shore water in Union Springs village — between Hibiscus Harbor and the village launch, on the Cayuga Lake Scenic Byway.</p>
+  <div class="steps">
+    <div class="step"><b>BEFORE YOU LAUNCH</b>Grab bait, ice, and breakfast in one stop.</div>
+    <div class="step"><b>MID-DAY</b>Come off the water for lunch — the soup pot's still on until close.</div>
+    <div class="step"><b>NOT FISHING?</b>The counter feeds plenty of people who never touch a rod.</div>
+  </div>
+</div></section>
+
+<section class="rev"><div class="wrap">
+  <h2>What the regulars say</h2>
+  <div class="stars">★★★★★ 4.8 average across 12 public reviews</div>
+  <div class="revgrid">
+    <div class="rcard"><p>"The most hardworking couple in the area — a wide selection of quality soups and sandwiches."</p><cite>Public customer review (paraphrased), chamberofcommerce.com</cite></div>
+    <div class="rcard"><p>"A broad selection of bait for the outstanding bass fishing here on Cayuga Lake."</p><cite>Public customer review (paraphrased), chamberofcommerce.com</cite></div>
+  </div>
+</div></section>
+
+<section class="bottom">
+  <h2>One call answers both questions: what's biting, and what's for lunch.</h2>
+  <div class="cta-row">
+    <a class="callbtn" href="tel:+13152098832">Call (315) 209-8832</a>
+    <a class="alt" href="https://maps.google.com/?q=145+Cayuga+St+Union+Springs+NY" rel="noopener">Get directions</a>
+  </div>
+</section>
+
+<footer>JW Bait &amp; Tackle · JW Marine Services LLC · 145 Cayuga St, Union Springs, NY 13160 · (315) 209-8832</footer>
+
+</body>
+</html>

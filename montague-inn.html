@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Montague Inn — Rooms, Prime Rib &amp; Fuel on the Tug Hill Trails · Since 1972</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--pine:#1e3a2f;--pine-d:#142921;--cream:#f7f3ea;--amber:#d99a3d;--brown:#5b4632;--mut:#7d8a82}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Source Sans 3',sans-serif;background:var(--cream);color:#2a2a26;line-height:1.65}
+  h1,h2,h3{font-family:'Fraunces',serif;color:var(--pine)}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  header{background:var(--pine);color:var(--cream)}
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+  .brand{font-family:'Fraunces',serif;font-weight:700;font-size:1.45rem;color:var(--cream)}
+  .brand small{display:block;font-family:'Source Sans 3';font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
+  .call{background:var(--amber);color:var(--pine-d);text-decoration:none;font-weight:700;padding:10px 18px;border-radius:3px}
+  .hero{background:linear-gradient(180deg,var(--pine) 0%,var(--pine-d) 100%);color:var(--cream);padding:76px 0 64px;text-align:center}
+  .kick{color:var(--amber);letter-spacing:.18em;text-transform:uppercase;font-size:.78rem;font-weight:700}
+  .hero h1{color:var(--cream);font-size:clamp(2.2rem,5.4vw,3.5rem);line-height:1.08;margin:14px auto 18px;max-width:800px}
+  .hero p{max-width:600px;margin:0 auto;color:#cfdcd4;font-size:1.06rem}
+  .cta-row{margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;padding:14px 28px;border-radius:3px;font-weight:700;text-decoration:none}
+  .btn.amber{background:var(--amber);color:var(--pine-d)}
+  .btn.line{border:2px solid var(--amber);color:var(--amber)}
+  .facts{display:flex;flex-wrap:wrap;background:var(--cream);border-bottom:1px solid #e3dccb}
+  .facts div{flex:1 1 190px;padding:20px;text-align:center;border-right:1px solid #e3dccb;font-size:.88rem;color:var(--brown)}
+  .facts b{display:block;font-family:'Fraunces';font-size:1.2rem;color:var(--pine)}
+  section{padding:64px 0}
+  h2{font-size:2rem;margin-bottom:10px}
+  .sub{color:#5c6660;max-width:640px;margin-bottom:34px}
+  .rooms{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+  .room{background:#fff;border:1px solid #e3dccb;border-radius:6px;overflow:hidden}
+  .room .ph{height:130px;background:linear-gradient(135deg,#2f4a3d,#1e3a2f);display:flex;align-items:center;justify-content:center;color:var(--amber);font-family:'Fraunces';font-size:.95rem}
+  .room .bd{padding:20px}
+  .room h3{font-size:1.15rem;margin-bottom:6px}
+  .room p{font-size:.92rem;color:#5c6660}
+  .menu{background:var(--pine);color:var(--cream);border-radius:8px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:32px}
+  @media(max-width:720px){.menu{grid-template-columns:1fr}}
+  .menu h3{color:var(--amber);font-size:1.3rem;margin-bottom:12px}
+  .menu li{list-style:none;padding:9px 0;border-bottom:1px solid rgba(247,243,234,.14);font-size:.98rem}
+  .menu li b{color:#fff}
+  .menu li span{color:#b9c8bf;font-size:.85rem;display:block}
+  .weekend{border-left:4px solid var(--amber);background:#fff;border-radius:0 6px 6px 0;overflow:hidden}
+  .weekend .step{display:flex;gap:18px;padding:20px 24px;border-bottom:1px solid #eee7d6}
+  .weekend .step:last-child{border:none}
+  .weekend .t{font-family:'Fraunces';color:var(--amber);font-weight:700;min-width:90px}
+  .weekend p{color:#4c554f;font-size:.95rem}
+  .book{background:var(--pine-d);color:var(--cream)}
+  .book h2{color:var(--cream)}
+  .book .grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:26px}
+  @media(max-width:720px){.book .grid{grid-template-columns:1fr}}
+  .book li{list-style:none;padding:9px 0;border-bottom:1px solid rgba(247,243,234,.14);color:#cfdcd4}
+  .book li b{color:#fff}
+  label{display:block;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:#9fb3a8;margin-bottom:5px}
+  input,select,textarea{width:100%;padding:12px;background:#0f211a;border:1px solid #2c4a3c;border-radius:4px;color:var(--cream);font-family:'Source Sans 3';margin-bottom:14px}
+  footer{background:var(--pine-d);color:#9fb3a8;padding:24px 0;font-size:.85rem;border-top:1px solid #2c4a3c}
+  .note{font-size:.78rem;color:#8a9a90;margin-top:8px}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <div class="brand">Montague Inn<small>Tug Hill · est. 1972</small></div>
+  <a class="call" href="tel:13153762078">(315) 376-2078</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <p class="kick">Corner of Sears Pond Rd &amp; Rector Rd · Montague, Tug Hill</p>
+  <h1>Fourteen warm rooms, a prime rib kitchen and a fuel pump — right where the trails cross.</h1>
+  <p>The Montague Inn has fed and sheltered Tug Hill riders since 1972. Sleep on the trail system, eat a real dinner, gas up at first light and ride out the driveway.</p>
+  <div class="cta-row">
+    <a class="btn amber" href="#book">Request a room</a>
+    <a class="btn line" href="#eat">See the kitchen</a>
+  </div>
+</div></section>
+
+<div class="wrap facts">
+  <div><b>Since 1972</b>same crossroads, 50+ winters</div>
+  <div><b>14 motel rooms</b>private baths · wifi · ROKU TV</div>
+  <div><b>Full bar &amp; kitchen</b>lunch and dinner</div>
+  <div><b>Fuel on site</b>sleds &amp; ATVs, steps from your door</div>
+</div>
+
+<section id="stay"><div class="wrap">
+  <h2>Stay on the Hill, not an hour from it</h2>
+  <p class="sub">When the lake-effect bands set up, the riders who booked Montague are already here — everyone else is white-knuckling Route 12. All rooms have private bathrooms, wifi and ROKU TV; continental breakfast included, hot breakfast Saturday and Sunday.</p>
+  <div class="rooms">
+    <div class="room"><div class="ph">[Room photo]</div><div class="bd"><h3>Standard rooms</h3><p>Warm, clean and steps from your sled. Trailer parking outside your door.</p></div></div>
+    <div class="room"><div class="ph">[Group photo]</div><div class="bd"><h3>Group weekends</h3><p>Fourteen units — book the block early for January and February; winter weekends go first.</p></div></div>
+    <div class="room"><div class="ph">[Carriage House photo]</div><div class="bd"><h3>Carriage House</h3><p>Additional building on the property. (Note: wifi limited in Carriage House.)</p></div></div>
+  </div>
+</div></section>
+
+<section id="eat" style="padding-top:0"><div class="wrap">
+  <div class="menu">
+    <div>
+      <h3>From the kitchen</h3>
+      <ul>
+        <li><b>Prime rib</b><span>the Saturday-night reason people drive up the Hill</span></li>
+        <li><b>Boom boom wings</b><span>after-ride order at the bar</span></li>
+        <li><b>Fresh haddock</b><span>Friday fish, done right</span></li>
+        <li><b>Burgers &amp; munchies</b><span>full menu, lunch through dinner</span></li>
+      </ul>
+      <p class="note">[Menu items compiled from press coverage and rider reviews — confirm current menu before publish]</p>
+    </div>
+    <div>
+      <h3>The full bar</h3>
+      <ul>
+        <li><b>All legal beverages</b><span>warm-up rounds encouraged</span></li>
+        <li><b>Winter: open 7 days</b><span>"as soon as snow flies" — built around the riding season</span></li>
+        <li><b>Off-season</b><span>lunch &amp; dinner Wed–Sat from 11, Sun noon–6 [confirm]</span></li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <h2>How the weekend runs</h2>
+  <p class="sub">Group leaders plan whole trips around this corner. Here's the itinerary regulars already know:</p>
+  <div class="weekend">
+    <div class="step"><div class="t">Friday 6pm</div><p>Pull the trailers in, check into your block of rooms, dinner and a round at the bar while the groomers work.</p></div>
+    <div class="step"><div class="t">Saturday 7am</div><p>Hot breakfast, fuel every sled at the on-site pump, ride out the driveway onto the trail network — no truck required.</p></div>
+    <div class="step"><div class="t">Saturday 7pm</div><p>Back with frozen faces. Prime rib, wings, stories getting taller by the hour.</p></div>
+    <div class="step"><div class="t">Sunday</div><p>Breakfast, top off the tanks, one last loop before the drive home.</p></div>
+  </div>
+</div></section>
+
+<section class="book" id="book"><div class="wrap">
+  <h2>Book your rooms</h2>
+  <div class="grid">
+    <div>
+      <ul>
+        <li><b>Phone:</b> (315) 376-2078</li>
+        <li><b>Address:</b> 6765 Sears Pond Rd, Lowville, NY 13367 (hamlet of Montague)</li>
+        <li><b>Winter:</b> open 7 days once the snow flies</li>
+        <li><b>Rates:</b> [Placeholder — confirm current room rates]</li>
+      </ul>
+      <p class="note">Trail map embed here: the Inn's position on the Tug Hill network, with fuel icon.</p>
+    </div>
+    <form>
+      <label>Name</label><input type="text" placeholder="Your name">
+      <label>Phone</label><input type="tel" placeholder="Best number">
+      <label>Dates &amp; party size</label><input type="text" placeholder="e.g., Jan 15–17, 6 riders, 3 rooms">
+      <label>Anything else?</label><textarea rows="3" placeholder="Trailer parking, group block, dinner reservation…"></textarea>
+      <a class="btn amber" href="#">Send room request</a>
+    </form>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span><b>Montague Inn</b> · 6765 Sears Pond Rd, Lowville, NY 13367 · (315) 376-2078 · Serving Tug Hill riders since October 19, 1972</span>
+</div></footer>
+</body>
+</html>

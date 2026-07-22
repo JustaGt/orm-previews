@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Holistic Chiropractic Center | Dr. Louis Granirer, DC | Kingston</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--green:#1f4d3a;--green-dk:#163828;--gold:#c9a24b;--cream:#f4f0e6;--ink:#22312a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;font-weight:300;}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:500;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:1060px;margin:0 auto;padding:0 26px;}
+.btn{display:inline-block;padding:13px 30px;font-weight:500;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;transition:.25s;}
+.btn-fill{background:var(--green);color:var(--cream);}.btn-fill:hover{background:var(--green-dk);}
+.btn-ghost{border:1px solid var(--green);color:var(--green);}.btn-ghost:hover{background:var(--green);color:var(--cream);}
+.kicker{color:var(--gold);letter-spacing:.3em;text-transform:uppercase;font-size:.72rem;font-weight:500;}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(244,240,230,.95);backdrop-filter:blur(8px);border-bottom:1px solid rgba(31,77,58,.16);}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:16px 26px;}
+.brand{display:flex;align-items:center;gap:13px;font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;}
+.leaf{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--gold);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:1.2rem;}
+.navlinks{display:flex;gap:28px;align-items:center;font-size:.82rem;letter-spacing:.04em;}
+.navlinks a.lnk:hover{color:var(--gold);}
+
+.hero{text-align:center;padding:100px 0 84px;background:radial-gradient(circle at 50% -10%,rgba(201,162,75,.22),transparent 55%);}
+.hero .bigleaf{width:78px;height:78px;border-radius:50%;border:2px solid var(--gold);color:var(--green);font-size:2rem;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;}
+.hero h1{font-size:3.4rem;line-height:1.08;max-width:780px;margin:14px auto 18px;font-weight:600;}
+.hero p.sub{max-width:600px;margin:0 auto 30px;font-size:1.08rem;color:#46554c;}
+.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.banner{background:var(--green);color:var(--cream);text-align:center;padding:16px;font-size:.86rem;letter-spacing:.1em;text-transform:uppercase;}
+.banner b{color:var(--gold);}
+.stats{display:flex;gap:54px;justify-content:center;margin-top:54px;flex-wrap:wrap;}
+.stat .n{font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--green);font-weight:600;}
+.stat .l{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#6a766e;}
+
+section{padding:84px 0;}
+.sec-head{text-align:center;max-width:620px;margin:0 auto 48px;}
+.sec-head h2{font-size:2.6rem;margin:10px 0;font-weight:600;}
+.sec-head p{color:#55635a;}
+
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center;}
+.split .img{min-height:430px;background:linear-gradient(rgba(22,56,40,.22),rgba(22,56,40,.34)),url('https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:var(--green-dk);}
+.split h2{font-size:2.3rem;margin:10px 0 14px;font-weight:600;}
+.split ul{list-style:none;margin-top:16px;}
+.split li{padding:11px 0;border-bottom:1px solid rgba(31,77,58,.14);font-size:.96rem;}
+.split li::before{content:"✦";color:var(--gold);margin-right:12px;}
+
+.menu{max-width:760px;margin:0 auto;}
+.mrow{padding:20px 0;border-bottom:1px solid rgba(31,77,58,.16);}
+.mrow .top{display:flex;align-items:baseline;}
+.mrow .name{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;}
+.mrow .dots{flex:1;border-bottom:1px dotted rgba(31,77,58,.4);margin:0 12px;transform:translateY(-6px);}
+.mrow .price{color:var(--gold);font-weight:500;letter-spacing:.05em;font-size:.82rem;text-transform:uppercase;}
+.mrow .desc{font-size:.92rem;color:#566359;margin-top:4px;}
+
+.cream-sec{background:#ece6d6;}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+.strip .g{height:210px;background-size:cover;background-position:center;background-color:var(--green-dk);}
+.g1{background-image:linear-gradient(rgba(22,56,40,.16),rgba(22,56,40,.32)),url('https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1400&q=80');}
+.g2{background-image:linear-gradient(rgba(22,56,40,.16),rgba(22,56,40,.32)),url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1400&q=80');}
+.g3{background-image:linear-gradient(rgba(22,56,40,.16),rgba(22,56,40,.32)),url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1400&q=80');}
+.g4{background-image:linear-gradient(rgba(22,56,40,.16),rgba(22,56,40,.32)),url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1400&q=80');}
+
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start;}
+.contact h2{font-size:2.4rem;margin-bottom:14px;font-weight:600;}
+.info p{margin-bottom:12px;color:#46554c;}
+.info .label{color:var(--gold);letter-spacing:.12em;text-transform:uppercase;font-size:.7rem;display:block;font-weight:500;}
+.hours{margin-top:18px;border-top:1px solid rgba(31,77,58,.16);padding-top:16px;}
+.hours div{display:flex;justify-content:space-between;padding:6px 0;font-size:.92rem;}
+form{background:#fff;border:1px solid rgba(31,77,58,.14);padding:34px;}
+form label{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin:13px 0 5px;}
+form input,form select,form textarea{width:100%;border:1px solid rgba(31,77,58,.22);background:var(--cream);padding:11px 13px;font-family:inherit;font-size:.92rem;}
+form button{margin-top:22px;width:100%;border:none;cursor:pointer;}
+.thanks{display:none;text-align:center;padding:36px 18px;}
+.thanks.show{display:block;}
+.thanks h3{color:var(--green);font-size:1.7rem;margin-bottom:8px;font-weight:600;}
+
+footer{background:var(--green-dk);color:var(--cream);text-align:center;padding:42px 20px;}
+footer .brand{justify-content:center;color:var(--cream);margin-bottom:8px;}
+footer p{opacity:.75;font-size:.85rem;}
+.orm{color:var(--gold);margin-top:12px;font-size:.74rem;letter-spacing:.1em;}
+
+@media(max-width:860px){
+.navlinks .lnk{display:none;}
+.hero h1{font-size:2.3rem;}
+.split,.contact{grid-template-columns:1fr;}
+.strip{grid-template-columns:1fr 1fr;}
+.split .img{min-height:280px;}
+.stats{gap:30px;}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap" style="padding:16px 0;">
+<div class="brand"><div class="leaf">❧</div>Holistic Chiropractic Center</div>
+<div class="navlinks">
+<a class="lnk" href="#approach">Approach</a>
+<a class="lnk" href="#services">Services</a>
+<a class="lnk" href="#visit">Visit</a>
+<a class="btn btn-fill" href="#visit">Free Consultation</a>
+</div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+<div class="bigleaf">❧</div>
+<span class="kicker">Dr. Louis Granirer, D.C. · Kingston, NY</span>
+<h1>Find the cause, not just the symptom.</h1>
+<p class="sub">Holistic chiropractic and applied kinesiology that look at the whole picture — structure, nerves, nutrition, and stress — to understand why your body hurts and help it heal from the root.</p>
+<div class="hero-ctas">
+<a class="btn btn-fill" href="#visit">Book Free Consultation</a>
+<a class="btn btn-ghost" href="#approach">Our Approach</a>
+</div>
+<div class="stats">
+<div class="stat"><div class="n">Root</div><div class="l">Cause focus</div></div>
+<div class="stat"><div class="n">Whole</div><div class="l">Body approach</div></div>
+<div class="stat"><div class="n">Free</div><div class="l">First consult</div></div>
+</div>
+</div></header>
+
+<div class="banner">New patients — your first consultation is <b>complimentary</b>. Call (845) 334-0853.</div>
+
+<section id="approach"><div class="wrap"><div class="split">
+<div class="img"></div>
+<div>
+<span class="kicker">The Holistic Approach</span>
+<h2>Listening to what the body is telling us</h2>
+<p style="color:#55635a;">Pain is rarely random. Using chiropractic and applied kinesiology, Dr. Granirer reads how your muscles, joints, and nervous system are working together — then addresses the underlying imbalance instead of chasing the ache from week to week.</p>
+<ul>
+<li>Applied kinesiology to find functional weak points</li>
+<li>Gentle structural correction, not force</li>
+<li>Attention to nutrition, posture, and daily stress</li>
+<li>A plan built around healing, not endless visits</li>
+</ul>
+</div>
+</div></div></section>
+
+<section id="services" class="cream-sec"><div class="wrap">
+<div class="sec-head"><span class="kicker">What We Offer</span><h2>Care that treats the whole person</h2><p>Your specific plan is set after your complimentary first consultation.</p></div>
+<div class="menu">
+<div class="mrow"><div class="top"><span class="name">Free Initial Consultation</span><span class="dots"></span><span class="price">No charge</span></div><div class="desc">A real conversation about your symptoms and goals before anything else.</div></div>
+<div class="mrow"><div class="top"><span class="name">Holistic Chiropractic Adjustment</span><span class="dots"></span><span class="price">Per visit</span></div><div class="desc">Gentle correction of spinal and joint restrictions.</div></div>
+<div class="mrow"><div class="top"><span class="name">Applied Kinesiology</span><span class="dots"></span><span class="price">Per visit</span></div><div class="desc">Muscle-testing to locate functional imbalances and guide care.</div></div>
+<div class="mrow"><div class="top"><span class="name">Nutritional &amp; Lifestyle Guidance</span><span class="dots"></span><span class="price">As needed</span></div><div class="desc">Practical support for the habits behind chronic complaints.</div></div>
+<div class="mrow"><div class="top"><span class="name">Root-Cause Care Plan</span><span class="dots"></span><span class="price">Tailored</span></div><div class="desc">A focused course of care aimed at lasting relief.</div></div>
+</div>
+</div></section>
+
+<section style="padding-bottom:0;"><div class="wrap">
+<div class="sec-head"><span class="kicker">The Center</span><h2>A calm space for healing</h2></div>
+<div class="strip"><div class="g g1"></div><div class="g g2"></div><div class="g g3"></div><div class="g g4"></div></div>
+</div></section>
+
+<section id="visit"><div class="wrap"><div class="contact">
+<div class="info">
+<span class="kicker">Visit Us</span>
+<h2>Start with a free consult</h2>
+<p>Reach out and we'll set up your complimentary first visit with Dr. Granirer.</p>
+<p><span class="label">Phone</span>(845) 334-0853</p>
+<p><span class="label">Location</span>Kingston, NY</p>
+<div class="hours">
+<div><span>Monday – Friday</span><span>By appointment</span></div>
+<div><span>Saturday</span><span>Limited hours</span></div>
+<div><span>Sunday</span><span>Closed</span></div>
+</div>
+</div>
+<div>
+<form id="hgform" onsubmit="event.preventDefault();document.getElementById('hgform').style.display='none';document.getElementById('hgthx').classList.add('show');">
+<label>Name</label><input required type="text" placeholder="Your name">
+<label>Phone</label><input required type="tel" placeholder="(845) 000-0000">
+<label>Primary concern</label>
+<select><option>Back / neck pain</option><option>Chronic / recurring issue</option><option>Headaches</option><option>Whole-body wellness</option><option>Not sure — want the free consult</option></select>
+<label>Tell us a little more</label><textarea rows="3" placeholder="How long has this been going on? What have you tried?"></textarea>
+<button class="btn btn-fill" type="submit">Request Free Consultation</button>
+</form>
+<div id="hgthx" class="thanks"><h3>Thank you.</h3><p style="color:#55635a;">Your request is in. We'll call (845) 334-0853 to schedule your complimentary consultation with Dr. Granirer.</p></div>
+</div>
+</div></div></section>
+
+<footer>
+<div class="brand" style="display:flex;"><div class="leaf" style="border-color:var(--gold);color:var(--gold);">❧</div><span style="color:var(--cream);">Holistic Chiropractic Center</span></div>
+<p>Dr. Louis Granirer, D.C. · Kingston, NY · (845) 334-0853</p>
+<p class="orm">Website preview by Onyx Rise Media</p>
+</footer>
+</body>
+</html>

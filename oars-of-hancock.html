@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OARS of Hancock — Canoe, Kayak, Tube & Paddleboard Rentals on the Upper Delaware River</title>
+<meta name="description" content="Rent canoes, kayaks, paddleboards and tubes on the Upper Delaware River in Hancock, NY. Paddles, life jackets and one-way shuttle included. Reserve your float date online.">
+<style>
+  :root{
+    --river:#127a9c; --deep:#0b3c52; --sky:#e8f6fb;
+    --sun:#f4b730; --paddle:#f06a2a; --foam:#ffffff; --ink:#0e2a35; --muted:#4f6b76; --line:#cfe6ee;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--foam);line-height:1.6}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  /* nav */
+  nav{background:var(--deep);color:#fff;position:sticky;top:0;z-index:30}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 22px;flex-wrap:wrap;gap:10px}
+  nav .logo{font-weight:800;font-size:1.15rem;letter-spacing:.02em}
+  nav .logo span{color:var(--sun)}
+  nav .links{display:flex;gap:18px;font-size:.9rem;flex-wrap:wrap}
+  nav .links a{color:#d8eef5;text-decoration:none}
+  nav .book{background:var(--paddle);color:#fff;padding:9px 16px;border-radius:30px;font-weight:800;text-decoration:none;font-size:.88rem}
+  /* hero */
+  .hero{background:linear-gradient(180deg,rgba(11,60,82,.30),rgba(11,60,82,.62)),
+        radial-gradient(circle at 70% 20%,#39a9c8,#127a9c 55%,#0b3c52);color:#fff;padding:70px 0 78px;position:relative;overflow:hidden}
+  .hero h1{font-size:2.7rem;line-height:1.1;max-width:16ch;margin-bottom:14px;text-shadow:0 2px 16px rgba(0,0,0,.25)}
+  .hero h1 span{color:var(--sun)}
+  .hero p{font-size:1.15rem;max-width:50ch;margin-bottom:26px;color:#eaf7fb}
+  .hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;border-radius:32px;padding:15px 28px;font-weight:800;text-decoration:none;font-size:1rem}
+  .btn-sun{background:var(--sun);color:#0b3c52}
+  .btn-out{border:2px solid #fff;color:#fff}
+  .wave{position:absolute;bottom:-1px;left:0;width:100%;line-height:0}
+  /* quickfacts */
+  .facts{background:var(--sun);color:#0b3c52;font-weight:700}
+  .facts .wrap{display:flex;justify-content:space-around;gap:16px;flex-wrap:wrap;padding:14px 22px;text-align:center;font-size:.92rem}
+  /* sections */
+  section{padding:58px 0}
+  .eyebrow{color:var(--river);font-weight:800;text-transform:uppercase;letter-spacing:.13em;font-size:.74rem;margin-bottom:10px}
+  h2{font-size:1.9rem;margin-bottom:8px}
+  .sub{color:var(--muted);max-width:60ch;margin-bottom:30px}
+  /* craft cards */
+  .crafts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+  .craft{background:var(--sky);border:1px solid var(--line);border-radius:14px;padding:24px;text-align:center}
+  .craft .ico{font-size:2.4rem;line-height:1}
+  .craft h3{font-size:1.2rem;margin:10px 0 4px}
+  .craft .price{color:var(--paddle);font-weight:800;font-size:1.05rem}
+  .craft p{font-size:.88rem;color:var(--muted);margin-top:8px}
+  .craft .pf{font-size:.7rem;color:#9aa;margin-top:6px;font-style:italic}
+  /* how */
+  .how{background:var(--deep);color:#fff;border-radius:16px;padding:36px 26px}
+  .how h2{color:#fff}
+  .hrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:22px;margin-top:24px}
+  .hstep{text-align:center}
+  .hstep .b{width:50px;height:50px;margin:0 auto 12px;border-radius:50%;background:var(--paddle);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.2rem}
+  .hstep h4{margin-bottom:6px}
+  .hstep p{font-size:.86rem;color:#bcd7e0}
+  /* conditions */
+  .cond{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+  .cond-card{background:var(--sky);border-left:5px solid var(--river);border-radius:0 14px 14px 0;padding:24px}
+  .rules{list-style:none;margin-top:10px}
+  .rules li{padding:7px 0 7px 26px;position:relative;font-size:.94rem}
+  .rules li:before{content:"●";color:var(--paddle);position:absolute;left:4px}
+  /* booking form */
+  .book-sec{background:linear-gradient(180deg,var(--sky),#fff)}
+  .bform{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:0 10px 30px rgba(11,60,82,.08)}
+  .fg{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+  label{font-size:.8rem;font-weight:700;display:block;margin-bottom:5px}
+  input,select{width:100%;border:1px solid var(--line);border-radius:8px;padding:12px;font-size:.95rem;font-family:inherit;background:var(--sky)}
+  .full{grid-column:1/-1}
+  .pf{font-size:.74rem;color:var(--paddle);margin-top:8px}
+  /* footer */
+  footer{background:var(--deep);color:#a9c8d4;padding:38px 0;font-size:.92rem}
+  footer a{color:#fff;text-decoration:none}
+  footer .fg{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  @media(max-width:760px){.hero h1{font-size:2rem}.cond{grid-template-columns:1fr}.fg{grid-template-columns:1fr}.nav .links{display:none}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="logo">OARS <span>of Hancock</span></div>
+  <div class="links">
+    <a href="#crafts">Rentals</a><a href="#how">How it works</a><a href="#conditions">River conditions</a><a href="#book">Reserve</a>
+  </div>
+  <a href="#book" class="book">Reserve a date</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <h1>Float the Upper Delaware. <span>We'll handle the boats and the shuttle.</span></h1>
+  <p>Canoes, kayaks, paddleboards and tubes on the river where the East and West Branches meet at Hancock, NY. Paddles, life jackets, a safety briefing and your one-way shuttle are included — you just float.</p>
+  <div class="ctas">
+    <a href="#book" class="btn btn-sun">Reserve your float</a>
+    <a href="#crafts" class="btn btn-out">See rentals &amp; rates</a>
+  </div>
+</div>
+<div class="wave"><svg viewBox="0 0 1440 80" preserveAspectRatio="none" width="100%" height="60"><path fill="#ffffff" d="M0,40 C240,80 480,0 720,30 C960,60 1200,10 1440,40 L1440,80 L0,80 Z"/></svg></div>
+</header>
+
+<div class="facts"><div class="wrap">
+  <span>🚐 One-way shuttle included</span>
+  <span>🦺 Paddles &amp; life jackets included</span>
+  <span>⏱️ 4-hour river trips</span>
+  <span>👨‍👩‍👧 Family &amp; big-group friendly</span>
+</div></div>
+
+<section id="crafts"><div class="wrap">
+  <div class="eyebrow">Rentals &amp; rates</div>
+  <h2>Pick your boat for the day</h2>
+  <p class="sub">Every rental includes paddles, life jackets, a trip orientation and a one-way shuttle where it applies. Group discounts kick in at 10 people.</p>
+  <div class="crafts">
+    <div class="craft"><div class="ico">🛶</div><h3>Canoe</h3><div class="price">Group 10+: $25 / person</div><p>Great for two paddlers plus a cooler. Stable and easy on the Upper Delaware's gentle stretches.</p><div class="pf">Solo/small-group rate — confirm on live site</div></div>
+    <div class="craft"><div class="ico">🚣</div><h3>Kayak</h3><div class="price">Group 10+: $25 / person</div><p>Single and tandem kayaks for paddlers who want to set their own pace down the river.</p><div class="pf">Solo/small-group rate — confirm on live site</div></div>
+    <div class="craft"><div class="ico">🏄</div><h3>Paddleboard</h3><div class="price">Group 10+: $25 / person</div><p>Stand-up boards for the calm, flat sections — a different way to see the valley.</p><div class="pf">Solo/small-group rate — confirm on live site</div></div>
+    <div class="craft"><div class="ico">🛟</div><h3>Tube</h3><div class="price">Group 10+: $10 / person</div><p>The lazy-river classic. Drop in, lean back, and let the current do the work.</p><div class="pf">Solo/small-group rate — confirm on live site</div></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0" id="how"><div class="wrap">
+  <div class="how">
+    <div class="eyebrow" style="color:var(--sun)">No texting back and forth</div>
+    <h2>How a day on the river works</h2>
+    <div class="hrow">
+      <div class="hstep"><div class="b">1</div><h4>Reserve a date</h4><p>Send your date, boats and headcount below. We confirm your spot — reservations are recommended for any size group.</p></div>
+      <div class="hstep"><div class="b">2</div><h4>Arrive &amp; gear up</h4><p>Check in from 10am (last launch 2:30pm). We fit life jackets, hand out paddles, and run the safety briefing.</p></div>
+      <div class="hstep"><div class="b">3</div><h4>We shuttle you</h4><p>One-way shuttle to your put-in where it applies — your car's waiting at the take-out.</p></div>
+      <div class="hstep"><div class="b">4</div><h4>Float &amp; finish</h4><p>Enjoy up to 4 hours on the water. All boats off the river by 6pm. That's it.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="conditions"><div class="wrap">
+  <div class="cond">
+    <div>
+      <div class="eyebrow">Before you book</div>
+      <h2>Know the river, know the rules</h2>
+      <p class="sub">A quick float-day rundown so your group shows up ready. River levels change daily — check the live flow before you come.</p>
+      <ul class="rules">
+        <li>Hours start at <b>10am</b>; last appointment is <b>2:30pm</b>.</li>
+        <li>Rentals run up to <b>4 hours</b> — all boats off the water by <b>6pm</b>.</li>
+        <li><b>Groups of 6+ must reserve.</b> Reservations recommended for everyone.</li>
+        <li><b>No charge for weather cancellations.</b></li>
+        <li>Overnight/camping floats available — just ask when you book.</li>
+      </ul>
+    </div>
+    <div class="cond-card">
+      <div class="eyebrow">Live river data</div>
+      <strong style="font-size:1.15rem;display:block;margin-bottom:8px">Real-time water flow &amp; temperature</strong>
+      <p style="color:var(--muted);font-size:.94rem;margin-bottom:14px">We post current USGS flows and temps so you can see how the river's running before you drive up.</p>
+      <a href="#book" class="btn btn-sun" style="padding:11px 20px;font-size:.9rem">Check conditions &amp; reserve</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="book-sec" id="book"><div class="wrap">
+  <div class="eyebrow">Reserve your float</div>
+  <h2>Pick a date — we'll confirm</h2>
+  <p class="sub">Fill this out and we'll lock in your boats and shuttle. Faster than texting, and you'll have it in writing.</p>
+  <div class="bform">
+    <form onsubmit="return false">
+      <div class="fg">
+        <div><label>Name</label><input type="text" placeholder="Your name"></div>
+        <div><label>Phone</label><input type="tel" placeholder="(000) 000-0000"></div>
+        <div><label>Float date</label><input type="date"></div>
+        <div><label>Craft</label><select><option>Canoe</option><option>Kayak</option><option>Paddleboard</option><option>Tube</option><option>Mixed group</option></select></div>
+        <div><label># of people</label><input type="number" min="1" placeholder="e.g. 6"></div>
+        <div><label>Arrival time</label><select><option>10:00 am</option><option>11:00 am</option><option>12:00 pm</option><option>1:00 pm</option><option>2:00 pm</option><option>2:30 pm (last)</option></select></div>
+        <div class="full"><label>Anything else? (camping, big group, questions)</label><input type="text" placeholder="Optional"></div>
+      </div>
+      <div style="margin-top:16px"><button class="btn btn-sun" type="submit">Request my reservation</button></div>
+      <div class="pf">// Demo form — connect to Sandro's GHL booking/reservation form on the live build.</div>
+    </form>
+  </div>
+</div></section>
+
+<footer><div class="wrap fg">
+  <div>
+    <strong style="color:#fff;font-size:1.1rem">OARS of Hancock</strong><br>
+    Outdoor Adventure Recreational Services<br>
+    41 South Pennsylvania Ave, Hancock, NY 13783<br>
+    <a href="tel:6072373078">(607) 237-3078</a>
+  </div>
+  <div style="text-align:right">
+    Canoe · Kayak · Paddleboard · Tube · Shuttle<br>
+    Upper Delaware River — East &amp; West Branch, Main Stem<br>
+    <span style="color:#f4b730">Reserve early in peak summer</span>
+  </div>
+</div></footer>
+
+</body>
+</html>

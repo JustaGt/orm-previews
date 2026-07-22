@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seven Nail & Spa — Newburgh, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0e0f10; --bg-2:#16181a; --card:#1b1e20; --jade:#37e0a8; --jade-d:#1fae7f;
+    --gold:#d8b878; --fog:#a7b0ad; --white:#f2f5f3; --line:#2a2e30;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;color:var(--white);background:var(--bg);line-height:1.7;font-weight:300}
+  h1,h2,h3,.disp{font-family:'Space Grotesk',sans-serif;font-weight:600;line-height:1.05;letter-spacing:-.01em}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 30px}
+  a{color:inherit;text-decoration:none}
+  .btn{display:inline-block;background:var(--jade);color:#06140e;font-weight:600;padding:14px 30px;border-radius:8px;font-family:'Space Grotesk';transition:.25s}
+  .btn:hover{background:var(--white);transform:translateY(-2px)}
+  .btn-out{background:transparent;border:1px solid var(--line);color:var(--white)}
+  .btn-out:hover{border-color:var(--jade);color:var(--jade)}
+  .tag{font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--jade);font-weight:500}
+
+  nav{position:sticky;top:0;z-index:40;background:rgba(14,15,16,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .logo{font-family:'Space Grotesk';font-weight:700;font-size:1.3rem;display:flex;align-items:center;gap:10px}
+  .logo .sev{width:34px;height:34px;border-radius:8px;background:var(--jade);color:#06140e;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+  .nl{display:flex;gap:30px;align-items:center}
+  .nl a{font-size:.9rem;color:var(--fog);font-weight:400}
+  .nl a:hover{color:var(--white)}
+  @media(max-width:860px){.nl a:not(.btn){display:none}}
+
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;padding:90px 30px}
+  .hero h1{font-size:clamp(2.8rem,6vw,5rem)}
+  .hero h1 b{color:var(--jade)}
+  .hero p{font-size:1.16rem;color:var(--fog);max-width:44ch;margin:22px 0 32px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-img{height:480px;border-radius:18px;background-size:cover;background-position:center;background-color:var(--bg-2);position:relative;background-image:linear-gradient(160deg,rgba(55,224,168,.12),transparent),url('https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=1000&q=80')}
+  .ghost7{position:absolute;font-family:'Space Grotesk';font-weight:700;font-size:30rem;line-height:1;color:#fff;opacity:.025;right:-30px;top:-90px;pointer-events:none}
+  @media(max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:34px}.hero-img{height:320px}}
+
+  section{padding:88px 0}
+  .center{text-align:center;max-width:60ch;margin:0 auto}
+  h2{font-size:clamp(2rem,4.4vw,3.1rem)}
+  h2 b{color:var(--jade)}
+  .sub{color:var(--fog);font-size:1.05rem;margin-top:12px}
+
+  /* services */
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px;transition:.25s}
+  .card:hover{border-color:var(--jade-d);transform:translateY(-5px)}
+  .card .no{font-family:'Space Grotesk';color:var(--jade);font-size:.85rem;letter-spacing:.1em}
+  .card h3{font-size:1.3rem;margin:10px 0 8px}
+  .card p{color:var(--fog);font-size:.94rem}
+  .card .pr{margin-top:16px;font-family:'Space Grotesk';font-weight:600;color:var(--gold);border-top:1px solid var(--line);padding-top:14px}
+  @media(max-width:860px){.svc-grid{grid-template-columns:1fr}}
+
+  /* seven reasons band */
+  .reasons{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .reasons .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .rlist{list-style:none;margin-top:18px}
+  .rlist li{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);align-items:center}
+  .rlist .b{font-family:'Space Grotesk';font-weight:700;color:var(--jade);min-width:28px}
+  .seven-badge{aspect-ratio:1;border-radius:20px;background:linear-gradient(145deg,var(--jade-d),#0c3a2b);display:flex;align-items:center;justify-content:center;border:1px solid var(--line)}
+  .seven-badge span{font-family:'Space Grotesk';font-weight:700;font-size:11rem;color:var(--white);text-shadow:0 0 60px rgba(55,224,168,.5)}
+  @media(max-width:860px){.reasons .wrap{grid-template-columns:1fr;gap:30px}.seven-badge{order:-1}}
+
+  /* gallery */
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:12px;margin-top:44px}
+  .gi{border-radius:12px;background-size:cover;background-position:center;background-color:var(--card)}
+  .gi.wide{grid-column:span 2}.gi.tall{grid-row:span 2}
+  .gi1{background-image:url('https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=800&q=80')}
+  .gi2{background-image:url('https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=800&q=80')}
+  .gi3{background-image:url('https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80')}
+  .gi4{background-image:url('https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80')}
+  .gi5{background-image:url('https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=80')}
+  @media(max-width:860px){.gal{grid-template-columns:1fr 1fr;grid-auto-rows:150px}}
+
+  /* visit */
+  .visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+  .vline{padding:16px 0;border-bottom:1px solid var(--line)}
+  .vline .k{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--jade);margin-bottom:3px}
+  .vline .v{font-size:1.15rem;font-family:'Space Grotesk';font-weight:500}
+  .hrs{list-style:none;margin-top:6px}
+  .hrs li{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line)}
+  .hrs b{font-family:'Space Grotesk'}
+  form{display:grid;gap:13px;margin-top:8px}
+  input,textarea{padding:13px 15px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--white);font-family:'Inter';font-size:.93rem}
+  input::placeholder,textarea::placeholder{color:#6f7875}
+  input:focus,textarea:focus{outline:none;border-color:var(--jade)}
+  @media(max-width:860px){.visit .wrap{grid-template-columns:1fr;gap:30px}}
+
+  footer{background:#0a0b0c;color:#6f7875;padding:38px 0;font-size:.82rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .pv{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo"><span class="sev">7</span>Seven Nail</div>
+    <div class="nl">
+      <a href="#svc">Services</a>
+      <a href="#reasons">Why Seven</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+      <a href="#visit" class="btn">Book</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="ghost7">7</div>
+  <div class="wrap">
+    <div>
+      <span class="tag">Route 17K · Newburgh, NY</span>
+      <h1 style="margin-top:16px">Lucky number for <b>flawless</b> nails.</h1>
+      <p>A sharp, modern nail studio off 17K. Clean lines, current trends, and gel that actually lasts the full two weeks.</p>
+      <div class="hero-actions">
+        <a href="#visit" class="btn">Book a Visit</a>
+        <a href="#svc" class="btn btn-out">View Services</a>
+      </div>
+    </div>
+    <div class="hero-img"></div>
+  </div>
+</header>
+
+<section id="svc">
+  <div class="wrap">
+    <div class="center">
+      <span class="tag">Services</span>
+      <h2>Pick your <b>set</b></h2>
+      <p class="sub">Straightforward menu, current techniques, fair prices.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="card"><div class="no">/ 01</div><h3>Gel Manicure</h3><p>High-gloss, chip-proof color built to outlast a two-week stretch.</p><div class="pr">from $35</div></div>
+      <div class="card"><div class="no">/ 02</div><h3>Acrylic Full Set</h3><p>Any length and shape — coffin, almond, square, stiletto.</p><div class="pr">from $42</div></div>
+      <div class="card"><div class="no">/ 03</div><h3>Gel-X Extensions</h3><p>Lightweight soft-gel tips for a natural, flexible feel.</p><div class="pr">from $55</div></div>
+      <div class="card"><div class="no">/ 04</div><h3>Dip Powder</h3><p>Durable color with no lamp — kind to nails that need a rest.</p><div class="pr">from $40</div></div>
+      <div class="card"><div class="no">/ 05</div><h3>Spa Pedicure</h3><p>Hot-stone, scrub, and massage in our reclining spa chairs.</p><div class="pr">from $45</div></div>
+      <div class="card"><div class="no">/ 06</div><h3>Nail Art</h3><p>Chrome, French, hand-painted detail — bring the inspo photo.</p><div class="pr">from $5</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="reasons" id="reasons">
+  <div class="wrap">
+    <div>
+      <span class="tag">Why Seven</span>
+      <h2 style="margin-top:12px">Seven reasons people <b>rebook</b></h2>
+      <ul class="rlist">
+        <li><span class="b">1</span><div>Tools sterilized and opened fresh in front of you</div></li>
+        <li><span class="b">2</span><div>Gel that lasts the full two weeks — or we fix it</div></li>
+        <li><span class="b">3</span><div>Trend-current techs who keep up with what's new</div></li>
+        <li><span class="b">4</span><div>Prices posted up front, no surprise add-ons</div></li>
+        <li><span class="b">5</span><div>Quick express options when you're tight on time</div></li>
+        <li><span class="b">6</span><div>Comfortable, modern space that doesn't feel rushed</div></li>
+        <li><span class="b">7</span><div>Walk-ins welcome, booking even easier</div></li>
+      </ul>
+    </div>
+    <div class="seven-badge"><span>7</span></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <span class="tag">Gallery</span>
+    <h2 style="margin-top:12px">Fresh off the <b>table</b></h2>
+    <div class="gal">
+      <div class="gi tall gi1"></div>
+      <div class="gi gi2"></div>
+      <div class="gi gi3"></div>
+      <div class="gi wide gi4"></div>
+      <div class="gi gi5"></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div>
+      <span class="tag">Visit</span>
+      <h2 style="margin-top:12px">Find <b>Seven</b></h2>
+      <div class="vline"><div class="k">Address</div><div class="v">52 NY-17K, Suite 223 #7, Newburgh, NY</div></div>
+      <div class="vline"><div class="k">Phone</div><div class="v">(845) 561-0074</div></div>
+      <ul class="hrs">
+        <li><span>Mon – Sat</span><b>9:30a – 7:30p</b></li>
+        <li><span>Sunday</span><b>10:00a – 5:00p</b></li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="font-size:1.6rem">Request a time</h3>
+      <p style="color:var(--fog);font-size:.93rem;margin-bottom:4px">We'll text you back to confirm.</p>
+      <form onsubmit="event.preventDefault();this.innerHTML='<p style=\'color:var(--jade);font-family:Space Grotesk;font-weight:600;font-size:1.2rem\'>Booked — we\'ll confirm by text shortly.</p>'">
+        <input type="text" placeholder="Name" required>
+        <input type="tel" placeholder="Phone" required>
+        <input type="text" placeholder="Service (e.g. gel-x full set)">
+        <textarea rows="3" placeholder="Preferred day & time"></textarea>
+        <button class="btn" type="submit">Request Booking</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Seven Nail & Spa · 52 NY-17K, Newburgh, NY</div>
+    <div class="pv">Website preview by Onyx Rise Media</div>
+  </div>
+</footer>
+
+</body>
+</html>

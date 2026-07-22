@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Between The Lakes Mini Storage — Boat, RV & Self Storage in Dundee, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --steel:#3c4a55; --steel-d:#2a343c; --gravel:#e9e4d8; --gravel-d:#d6cdb9;
+    --ink:#222a30; --line:#cfd4d8; --accent:#1f7a8c; --accent-d:#155b69;
+    --rust:#b4632b; --white:#fff; --muted:#5c6770;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6}
+  h1,h2,h3,.brand{font-family:'Oswald',sans-serif;letter-spacing:.5px}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--accent);color:#fff;font-weight:600;padding:14px 26px;border-radius:4px;font-family:'Oswald',sans-serif;letter-spacing:.6px;text-transform:uppercase;font-size:.95rem;transition:.15s}
+  .btn:hover{background:var(--accent-d)}
+  .btn.ghost{background:transparent;border:2px solid #fff}
+  .btn.ghost:hover{background:rgba(255,255,255,.12)}
+
+  /* top bar */
+  header{background:var(--steel-d);color:#fff;position:sticky;top:0;z-index:30}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 22px;max-width:1080px;margin:0 auto}
+  .brand{font-size:1.35rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:10px}
+  .brand small{display:block;font-family:'Inter';font-weight:500;letter-spacing:0;font-size:.62rem;color:var(--gravel-d);text-transform:uppercase}
+  .nav .ph{font-family:'Oswald';font-size:1.05rem;color:#fff}
+  .nav .ph span{color:var(--gravel-d);font-size:.7rem;display:block;text-transform:uppercase}
+
+  /* hero */
+  .hero{background:
+      linear-gradient(180deg,rgba(42,52,60,.86),rgba(42,52,60,.78)),
+      repeating-linear-gradient(45deg,#46535d 0 28px,#414e58 28px 56px);
+      color:#fff;padding:74px 0 64px}
+  .hero .tag{display:inline-block;background:var(--rust);color:#fff;font-family:'Oswald';text-transform:uppercase;font-size:.72rem;letter-spacing:1px;padding:5px 12px;border-radius:3px;margin-bottom:18px}
+  .hero h1{font-size:2.9rem;line-height:1.07;font-weight:700;margin-bottom:16px;max-width:16ch}
+  .hero p{font-size:1.12rem;max-width:48ch;color:#e7ebee;margin-bottom:26px}
+  .hero .row{display:flex;gap:14px;flex-wrap:wrap}
+  .locpin{margin-top:22px;font-size:.92rem;color:var(--gravel-d)}
+
+  /* fit strip */
+  .fits{background:var(--gravel);padding:26px 0}
+  .fits .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center}
+  .fits .f h3{font-size:1.5rem;color:var(--accent-d)}
+  .fits .f p{font-size:.85rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+
+  section{padding:60px 0}
+  .eyebrow{font-family:'Oswald';text-transform:uppercase;letter-spacing:1.5px;color:var(--accent-d);font-size:.8rem;margin-bottom:8px}
+  h2{font-size:2rem;margin-bottom:10px}
+  .lead{color:var(--muted);max-width:60ch;margin-bottom:34px}
+
+  /* size grid */
+  .sizes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{border:1px solid var(--line);border-radius:7px;overflow:hidden;background:#fff}
+  .card .top{background:var(--steel);color:#fff;padding:16px 18px;display:flex;align-items:baseline;justify-content:space-between}
+  .card .top .sz{font-family:'Oswald';font-size:1.4rem}
+  .card .top .pr{font-size:.85rem;color:var(--gravel-d)}
+  .card .body{padding:16px 18px}
+  .card .body strong{display:block;font-family:'Oswald';font-weight:600;margin-bottom:4px}
+  .card .body p{font-size:.92rem;color:var(--muted)}
+  .door{height:8px;background:repeating-linear-gradient(90deg,var(--gravel-d) 0 8px,var(--gravel) 8px 16px)}
+
+  /* two col outdoor */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .split .half{padding:34px}
+  .split .half:first-child{background:var(--steel-d);color:#fff}
+  .split .half h3{font-size:1.4rem;margin-bottom:10px}
+  .split .half ul{list-style:none;margin-top:14px}
+  .split .half li{padding:7px 0 7px 26px;position:relative;font-size:.95rem}
+  .split .half li:before{content:"";position:absolute;left:0;top:14px;width:12px;height:12px;background:var(--rust);border-radius:2px}
+  .split .half:first-child li{border-bottom:1px solid #44515b}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
+  .step{position:relative;padding-top:14px}
+  .step:before{counter-increment:s;content:counter(s);font-family:'Oswald';font-size:2.4rem;color:var(--gravel-d);font-weight:700;display:block;line-height:1}
+  .step h3{font-size:1.15rem;margin:6px 0 4px}
+  .step p{font-size:.94rem;color:var(--muted)}
+
+  /* info band */
+  .band{background:var(--steel-d);color:#fff}
+  .band .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+  .band .hours div{display:flex;justify-content:space-between;border-bottom:1px solid #44515b;padding:9px 0;font-size:.95rem}
+  .band .hours div span:last-child{color:var(--gravel-d)}
+
+  /* faq */
+  .faq details{border-bottom:1px solid var(--line);padding:14px 0}
+  .faq summary{font-family:'Oswald';font-weight:600;cursor:pointer;font-size:1.05rem}
+  .faq p{color:var(--muted);margin-top:8px;font-size:.95rem}
+
+  /* contact */
+  .contact{background:var(--gravel)}
+  .form{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:26px}
+  .form label{font-size:.78rem;font-family:'Oswald';text-transform:uppercase;letter-spacing:.6px;color:var(--muted)}
+  .form input,.form select,.form textarea{width:100%;padding:11px;border:1px solid var(--line);border-radius:5px;font-family:inherit;margin-top:4px}
+  .form .full{grid-column:1/3}
+  .ph-note{font-size:.78rem;color:var(--muted);font-style:italic}
+
+  footer{background:var(--steel-d);color:var(--gravel-d);padding:30px 0;font-size:.88rem}
+  footer a{color:#fff}
+
+  @media(max-width:820px){
+    .fits .grid{grid-template-columns:repeat(2,1fr)}
+    .sizes{grid-template-columns:1fr}
+    .split{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr}
+    .band .wrap{grid-template-columns:1fr}
+    .form{grid-template-columns:1fr}.form .full{grid-column:1}
+    .hero h1{font-size:2.2rem}.nav .ph span{display:none}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="brand">Between The Lakes<small>Mini Storage · Dundee, NY</small></div>
+    <a class="ph" href="tel:6072923397">(607) 292-3397<span>Call for availability</span></a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">Boat &amp; RV season is short — winter is long</span>
+    <h1>Dry, fenced storage on the ridge between Seneca and Keuka.</h1>
+    <p>Enclosed units and outdoor boat, camper, and vehicle parking on County Road 26 in Dundee — a few minutes from either lake. Local owner, month-to-month, no runaround.</p>
+    <div class="row">
+      <a class="btn" href="#reserve">Check availability</a>
+      <a class="btn ghost" href="#sizes">See sizes &amp; what fits</a>
+    </div>
+    <div class="locpin">📍 4905 County Road 26, Dundee, NY 14837 · between Seneca &amp; Keuka lakes</div>
+  </div>
+</section>
+
+<div class="fits">
+  <div class="wrap grid">
+    <div class="f"><h3>16'</h3><p>Fishing boat + trailer</p></div>
+    <div class="f"><h3>24'</h3><p>Pontoon on trailer</p></div>
+    <div class="f"><h3>30'+</h3><p>Travel trailer / camper</p></div>
+    <div class="f"><h3>Mo-to-Mo</h3><p>No long contract</p></div>
+  </div>
+</div>
+
+<section id="sizes">
+  <div class="wrap">
+    <div class="eyebrow">Enclosed units</div>
+    <h2>Pick the size that fits — not the one they're trying to upsell.</h2>
+    <p class="lead">Drive-up enclosed units for furniture, tools, inventory, and the boxes that don't fit in the lake house. Sizes below are typical; <em>call to confirm what's open right now.</em></p>
+    <div class="sizes">
+      <div class="card">
+        <div class="top"><span class="sz">5 × 10</span><span class="pr">approx. starting rate*</span></div>
+        <div class="door"></div>
+        <div class="body"><strong>The closet</strong><p>Seasonal gear, totes, a mower, paddleboards — a walk-in worth of stuff.</p></div>
+      </div>
+      <div class="card">
+        <div class="top"><span class="sz">10 × 10</span><span class="pr">approx. starting rate*</span></div>
+        <div class="door"></div>
+        <div class="body"><strong>The one-bedroom</strong><p>A room of furniture, appliances, or a contractor's tools and small inventory.</p></div>
+      </div>
+      <div class="card">
+        <div class="top"><span class="sz">10 × 20</span><span class="pr">approx. starting rate*</span></div>
+        <div class="door"></div>
+        <div class="body"><strong>The garage</strong><p>A houseful between moves, or a car/cycle plus shelving and bins.</p></div>
+      </div>
+    </div>
+    <p class="ph-note" style="margin-top:14px">*Rates are placeholders pending the owner's current pricing — to be confirmed before this page goes live.</p>
+  </div>
+</section>
+
+<section style="background:#f6f3ec">
+  <div class="wrap">
+    <div class="split">
+      <div class="half">
+        <h3>Outdoor boat, RV &amp; vehicle parking</h3>
+        <p>Park the pontoon, the camper, the project truck, or the utility trailer in a fenced yard for the off-season — and pull it out when the water warms up.</p>
+        <ul>
+          <li>Open spaces sized for boats on trailers, campers, and RVs</li>
+          <li>Fenced, gated yard with drive-through access</li>
+          <li>Seasonal (winterizing-to-spring) or year-round</li>
+          <li>Right between the lakes — short tow either direction</li>
+        </ul>
+      </div>
+      <div class="half">
+        <h3>Why people store here</h3>
+        <p style="color:var(--muted)">This corner of Yates County empties its boats and campers every fall and fills them back up every spring. Storing between Seneca and Keuka means your rig isn't an hour away when launch day comes.</p>
+        <ul style="margin-top:16px">
+          <li>Local owner who answers the phone</li>
+          <li>Month-to-month — leave when your season ends</li>
+          <li>Close to County Road 26 / Route 14A corridor</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">How it works</div>
+    <h2>Three steps, one phone call.</h2>
+    <div class="steps" style="margin-top:26px">
+      <div class="step"><h3>Tell us what you're storing</h3><p>Boat length, camper size, or how many rooms — we'll point you to the right unit or space.</p></div>
+      <div class="step"><h3>Reserve your spot</h3><p>We hold it with a quick call. No application marathon, no pressure.</p></div>
+      <div class="step"><h3>Move in</h3><p>Drive up, drop it off, lock it up. Pay month-to-month for as long as you need.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" style="color:var(--rust)">Access &amp; office hours</div>
+      <h2 style="color:#fff">Reach the owner directly.</h2>
+      <p style="color:var(--gravel-d);margin-top:10px">Office hours below are a placeholder — to be confirmed with the owner. Call or text <a href="tel:6072923397" style="color:#fff;font-weight:600">(607) 292-3397</a> and we'll line up a unit or a parking space and tell you exactly what's open.</p>
+    </div>
+    <div class="hours">
+      <div><span>Mon – Fri</span><span>by phone / appointment*</span></div>
+      <div><span>Saturday</span><span>by phone / appointment*</span></div>
+      <div><span>Sunday</span><span>Closed*</span></div>
+      <div><span>Gate access</span><span>per agreement*</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="faq">
+  <div class="wrap" style="max-width:820px">
+    <div class="eyebrow">Good to know</div>
+    <h2>Questions renters ask first.</h2>
+    <div style="margin-top:18px">
+      <details open><summary>Do you have space available right now?</summary><p>Availability changes with the season. Call (607) 292-3397 and we'll tell you what enclosed units and outdoor spaces are open today.</p></details>
+      <details><summary>Will my 24-ft pontoon (or camper) fit?</summary><p>Our outdoor spaces are sized for boats on trailers, campers, and RVs. Give us the length and we'll match you to a space.</p></details>
+      <details><summary>Is the yard fenced and secured?</summary><p>The yard is fenced and gated. Specific access details are confirmed when you reserve.</p></details>
+      <details><summary>Is there a long contract?</summary><p>No — storage is month-to-month. Keep it for the off-season or year-round, and stop when you no longer need it.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="reserve">
+  <div class="wrap">
+    <div class="eyebrow">Check availability</div>
+    <h2>Tell us what you need to store.</h2>
+    <p class="lead">Send the details and we'll call back with what's open and the rate — or just call <a href="tel:6072923397" style="color:var(--accent-d);font-weight:600">(607) 292-3397</a>.</p>
+    <form class="form" onsubmit="return false">
+      <div><label>Name</label><input type="text"></div>
+      <div><label>Phone</label><input type="tel"></div>
+      <div><label>What are you storing?</label>
+        <select><option>Enclosed unit</option><option>Boat / pontoon</option><option>Camper / RV</option><option>Vehicle / trailer</option><option>Not sure yet</option></select></div>
+      <div><label>Size / length</label><input type="text" placeholder="e.g. 24-ft pontoon"></div>
+      <div class="full"><label>Anything else?</label><textarea rows="3" placeholder="When you'd need it, how long..."></textarea></div>
+      <div class="full"><button class="btn" type="submit">Request availability</button></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <strong style="font-family:'Oswald';color:#fff;font-size:1.1rem">Between The Lakes Mini Storage</strong><br>
+    4905 County Road 26, Dundee, NY 14837 · <a href="tel:6072923397">(607) 292-3397</a><br>
+    <span style="font-size:.8rem">Boat, RV, vehicle &amp; self storage between Seneca and Keuka lakes. Hours and rates shown are placeholders to confirm before launch.</span>
+  </div>
+</footer>
+</body>
+</html>

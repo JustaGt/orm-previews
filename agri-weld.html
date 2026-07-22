@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agri-Weld LLC — Verona, NY · Metal Fabrication, Rolling, Plasma Cutting &amp; Mobile Welding</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0b1220; --panel:#101a2b; --panel2:#16233a; --line2:#22324d;
+  --blue:#2f6df6; --cyan:#3fd0e0; --cyan-d:#1aa7b8; --steel:#7f93b0;
+  --paper:#eef2f7; --white:#fff; --line:#d2dbe7; --slate:#4c5a70;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:#16202f;background:var(--paper);line-height:1.6}
+.mono{font-family:'IBM Plex Mono',monospace}
+h1,h2,h3,.disp{font-family:'Archivo',sans-serif}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+.btn{display:inline-block;background:var(--cyan);color:#05222a;font-weight:700;text-decoration:none;padding:13px 26px;font-family:'Archivo';letter-spacing:.3px;font-size:.98rem;border-radius:4px;transition:.13s}
+.btn:hover{background:var(--cyan-d);color:#fff}
+.btn.line{background:transparent;color:#dfe8f5;border:1px solid var(--line2)}
+.btn.line:hover{border-color:var(--cyan);color:var(--cyan)}
+.btn.blue{background:var(--blue);color:#fff}
+.btn.blue:hover{background:#1b54d8}
+
+.grid-bg{background:
+  linear-gradient(var(--ink),var(--ink)),
+  repeating-linear-gradient(0deg,transparent 0 31px,rgba(63,208,224,.05) 31px 32px),
+  repeating-linear-gradient(90deg,transparent 0 31px,rgba(63,208,224,.05) 31px 32px)}
+
+nav{background:var(--ink);border-bottom:1px solid var(--line2)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand b{font-family:'Archivo';font-weight:800;color:#fff;font-size:1.2rem;display:block;letter-spacing:.5px}
+.brand small{color:var(--cyan);font-size:.64rem;letter-spacing:3px;text-transform:uppercase;font-family:'IBM Plex Mono'}
+.navlinks{display:flex;gap:24px;color:#a9b7cd;font-family:'IBM Plex Mono';font-size:.82rem;letter-spacing:.5px}
+.navlinks a{text-decoration:none}.navlinks a:hover{color:var(--cyan)}
+@media(max-width:880px){.navlinks{display:none}}
+
+.hero{position:relative;color:#fff;overflow:hidden;
+  background:
+   radial-gradient(700px 300px at 85% 0,rgba(47,109,246,.28),transparent 60%),
+   linear-gradient(var(--ink),var(--ink)),
+   repeating-linear-gradient(0deg,transparent 0 31px,rgba(63,208,224,.05) 31px 32px),
+   repeating-linear-gradient(90deg,transparent 0 31px,rgba(63,208,224,.05) 31px 32px)}
+.hero .wrap{padding:78px 22px 86px}
+.hero .tag{display:inline-block;font-family:'IBM Plex Mono';color:var(--cyan);border:1px solid var(--line2);border-radius:4px;padding:5px 12px;font-size:.74rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:22px}
+.hero h1{font-family:'Archivo';font-weight:800;font-size:3.25rem;line-height:1.02;max-width:18ch;letter-spacing:-.5px}
+.hero h1 span{color:var(--cyan)}
+.hero p{font-size:1.16rem;max-width:56ch;margin:18px 0 26px;color:#bcc9dd}
+.hero .cta-row{display:flex;gap:13px;flex-wrap:wrap}
+@media(max-width:600px){.hero h1{font-size:2.25rem}}
+
+.spec{background:var(--panel);border-top:1px solid var(--line2);border-bottom:1px solid var(--line2)}
+.spec .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line2)}
+@media(max-width:700px){.spec .wrap{grid-template-columns:1fr 1fr}}
+.spec .c{background:var(--panel);padding:20px 18px}
+.spec .c b{font-family:'Archivo';color:#fff;font-size:1.5rem;display:block}
+.spec .c span{font-family:'IBM Plex Mono';color:var(--steel);font-size:.74rem;letter-spacing:1px;text-transform:uppercase}
+
+section{padding:74px 0}
+.shead .k{font-family:'IBM Plex Mono';color:var(--cyan-d);letter-spacing:2.5px;text-transform:uppercase;font-size:.78rem}
+.shead h2{font-family:'Archivo';font-weight:800;font-size:2.2rem;color:#0b1220;margin-top:6px;letter-spacing:-.4px;line-height:1.08}
+.shead p{color:var(--slate);max-width:62ch;margin-top:10px}
+.shead{margin-bottom:36px}
+
+.caps{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(max-width:760px){.caps{grid-template-columns:1fr}}
+.cap{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:24px;display:flex;gap:18px;position:relative}
+.cap .no{font-family:'IBM Plex Mono';color:var(--blue);font-weight:600;font-size:.8rem;border:1px solid var(--line);border-radius:4px;padding:3px 8px;height:fit-content}
+.cap h3{font-family:'Archivo';font-size:1.18rem;color:#0b1220;margin-bottom:5px}
+.cap p{color:var(--slate);font-size:.95rem}
+.cap .specline{font-family:'IBM Plex Mono';font-size:.78rem;color:var(--cyan-d);margin-top:8px}
+
+.materials{background:var(--ink);color:#fff}
+.materials .grid-bg{}
+.materials .wrap{position:relative}
+.materials .shead h2{color:#fff}.materials .shead p{color:#bcc9dd}.materials .shead .k{color:var(--cyan)}
+.mats{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.mat{font-family:'IBM Plex Mono';font-size:.86rem;background:var(--panel2);border:1px solid var(--line2);color:#dfe8f5;padding:10px 16px;border-radius:4px}
+.mat b{color:var(--cyan)}
+
+.serve .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:820px){.serve .grid{grid-template-columns:1fr}}
+.s{background:var(--white);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:6px;padding:24px}
+.s h3{font-family:'Archivo';font-size:1.1rem;margin-bottom:6px}
+.s p{color:var(--slate);font-size:.93rem}
+
+.owner{background:linear-gradient(180deg,#fff,var(--paper))}
+.owner .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+@media(max-width:860px){.owner .wrap{grid-template-columns:1fr}}
+.owner h2{font-family:'Archivo';font-weight:800;font-size:2rem;letter-spacing:-.4px;margin-bottom:12px}
+.owner p{color:var(--slate);margin-bottom:12px}
+.badges{display:flex;flex-direction:column;gap:12px}
+.badge{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:18px 20px;display:flex;gap:14px;align-items:center}
+.badge .ic{font-size:1.6rem}
+.badge b{font-family:'Archivo';display:block}
+.badge span{color:var(--slate);font-size:.88rem}
+
+.quote{background:var(--panel);color:#fff}
+.quote .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+@media(max-width:820px){.quote .wrap{grid-template-columns:1fr}}
+.quote h2{font-family:'Archivo';font-weight:800;font-size:2.15rem;color:#fff}
+.quote p{color:#bcc9dd;margin:12px 0 18px}
+.quote .li{font-family:'IBM Plex Mono';font-size:.86rem;color:#dfe8f5;margin-bottom:9px}
+.quote .li span{color:var(--cyan)}
+.qbox{background:var(--ink);border:1px solid var(--line2);border-radius:8px;padding:28px}
+.qbox .row{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line2);font-size:.95rem}
+.qbox .row:last-child{border:0}
+.qbox .row span{color:var(--steel)}.qbox .row b{font-family:'Archivo';color:#fff}
+.qbox .cta-row{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+.note{font-size:.8rem;color:var(--steel);font-style:italic;margin-top:22px;font-family:'IBM Plex Mono'}
+
+footer{background:var(--ink);color:var(--steel);text-align:center;padding:26px 0;font-size:.88rem}
+footer b{font-family:'Archivo';color:#dfe8f5;letter-spacing:.5px}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="brand"><b>AGRI-WELD LLC</b><small>Verona, NY · since 1998</small></div>
+  <div class="navlinks">
+    <a href="#caps">Capabilities</a>
+    <a href="#materials">Materials</a>
+    <a href="#serve">Who We Serve</a>
+    <a href="#quote">Request a Quote</a>
+  </div>
+  <a href="#quote" class="btn">Send a drawing</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="tag">Fabrication · Rolling · Shearing · Plasma · Mobile</div>
+  <h1>Send the drawing. <span>We'll cut, roll, weld and ship it.</span></h1>
+  <p>A Verona fab shop where the owner is on every job — metal fabrication, plate rolling, shearing &amp; punching and plasma cutting for the plants, contractors and farms between Rome and Oneida.</p>
+  <div class="cta-row">
+    <a href="#quote" class="btn">Request a quote</a>
+    <a href="#caps" class="btn line">View capabilities</a>
+  </div>
+</div></header>
+
+<div class="spec"><div class="wrap">
+  <div class="c"><b>1998</b><span>In business since</span></div>
+  <div class="c"><b>AWS</b><span>Society member</span></div>
+  <div class="c"><b>5-axis*</b><span>Plasma burn table</span></div>
+  <div class="c"><b>On site</b><span>Owner on every job</span></div>
+</div></div>
+
+<section id="caps"><div class="wrap">
+  <div class="shead">
+    <div class="k">Capabilities</div>
+    <h2>What the shop can run</h2>
+    <p>Buyers of fab work want to know what a shop can actually do before they call. Here it is — the processes, in plain terms, with the equipment behind them.</p>
+  </div>
+  <div class="caps">
+    <div class="cap"><div class="no">01</div><div><h3>Metal Fabrication</h3><p>Weldments and finished assemblies — or parts cut and prepped for your own crew to weld. Handrails, hoppers, catwalks, stairs and ladders built to print.</p><div class="specline">&gt; weldments · handrails · catwalks · stairs · ladders</div></div></div>
+    <div class="cap"><div class="no">02</div><div><h3>Plate &amp; Bar Rolling</h3><p>Aluminum, stainless and carbon-steel rolling done to spec — rings, curves and rolled sections handled with precision in-house.</p><div class="specline">&gt; aluminum · stainless · carbon steel</div></div></div>
+    <div class="cap"><div class="no">03</div><div><h3>Shearing &amp; Punching</h3><p>Need metal cut down or punched? The shop's set up and equipped to shear and punch your material without farming it out.</p><div class="specline">&gt; shear to size · punch · prep</div></div></div>
+    <div class="cap"><div class="no">04</div><div><h3>Plasma Burn Table</h3><p>Cut parts, brackets and profiles straight from your DXF on the plasma table — repeatable shapes, ready to fabricate.</p><div class="specline">&gt; DXF in · cut parts out</div></div></div>
+    <div class="cap"><div class="no">05</div><div><h3>Mobile Welding</h3><p>Some jobs can't come to the shop. Mobile capabilities mean the welder comes to your site for structural and repair work in place.</p><div class="specline">&gt; on-site · structural · repair</div></div></div>
+    <div class="cap"><div class="no">06</div><div><h3>Industrial Work</h3><p>Built for plant and contractor jobs — name-brand equipment (Lincoln, Miller, Pacemaker) and an AWS-member shop standing behind the weld.</p><div class="specline">&gt; Lincoln · Miller · Pacemaker</div></div></div>
+  </div>
+</div></section>
+
+<section class="materials grid-bg" id="materials"><div class="wrap">
+  <div class="shead">
+    <div class="k">Materials</div>
+    <h2>Three metals, worked start to finish</h2>
+    <p>Cut, rolled, sheared, punched and welded under one roof — so a job doesn't bounce between three vendors before it's done.</p>
+  </div>
+  <div class="mats">
+    <div class="mat"><b>Aluminum</b> — rolled · cut · welded</div>
+    <div class="mat"><b>Stainless steel</b> — rolled · sheared · fabricated</div>
+    <div class="mat"><b>Carbon steel</b> — plate · structural · punched</div>
+    <div class="mat">Plasma-cut profiles from your DXF</div>
+    <div class="mat">Weldments &amp; sub-assemblies</div>
+  </div>
+</div></section>
+
+<section class="serve" id="serve"><div class="wrap">
+  <div class="shead">
+    <div class="k">Who we serve</div>
+    <h2>The shops that keep Oneida County running</h2>
+  </div>
+  <div class="grid">
+    <div class="s"><h3>Industrial plants</h3><p>Catwalks, hoppers, guarding and structural pieces fabricated to spec and installed when needed.</p></div>
+    <div class="s"><h3>Contractors</h3><p>Handrails, stairs and one-off steel for the job site — cut, rolled and ready when the schedule says so.</p></div>
+    <div class="s"><h3>Farms &amp; equipment</h3><p>Repairs and custom fabrication for ag equipment and trailers — the kind of metalwork that can't wait for harvest.</p></div>
+  </div>
+</div></section>
+
+<section class="owner"><div class="wrap">
+  <div>
+    <div class="shead" style="margin-bottom:14px"><div class="k">Why Agri-Weld</div></div>
+    <h2>The owner is on the job — not just on the invoice</h2>
+    <p>Agri-Weld has fabricated for the Verona area since 1998. Owner Rob Roser is on every job site, which is why plants and contractors keep sending the next part back to the same shop.</p>
+    <p>That accountability — plus AWS membership and name-brand gear — is the whole pitch. You hand over a drawing; the man whose name is on the door makes sure it comes back right.</p>
+  </div>
+  <div class="badges">
+    <div class="badge"><div class="ic">👷</div><div><b>Owner on every job site</b><span>Rob Roser — accountable start to finish</span></div></div>
+    <div class="badge"><div class="ic">🛡️</div><div><b>American Welding Society member</b><span>Held to AWS welding standards</span></div></div>
+    <div class="badge"><div class="ic">🏭</div><div><b>Lincoln · Miller · Pacemaker</b><span>Name-brand equipment, maintained</span></div></div>
+  </div>
+</div></section>
+
+<section class="quote" id="quote"><div class="wrap">
+  <div>
+    <h2>Got a part? Send the print.</h2>
+    <p>Email a drawing, a DXF or a few photos with the material and quantity, and Agri-Weld will quote it. On-site job? Ask about mobile welding.</p>
+    <div class="li"><span>›</span> A sketch or DXF is enough to start</div>
+    <div class="li"><span>›</span> Tell us material, thickness and quantity</div>
+    <div class="li"><span>›</span> Mobile welding available for in-place work</div>
+  </div>
+  <div class="qbox">
+    <div class="row"><span>Shop phone</span><b>(315) 571-4440</b></div>
+    <div class="row"><span>Owner</span><b>Rob Roser</b></div>
+    <div class="row"><span>Address</span><b>5567 Smith Rd, Verona, NY 13478</b></div>
+    <div class="row"><span>Hours</span><b>Mon–Fri 7:00–4:30*</b></div>
+    <div class="cta-row">
+      <a href="tel:3155714440" class="btn">Call the shop</a>
+      <a href="#" class="btn blue">Request a quote</a>
+    </div>
+  </div>
+</div></section>
+
+<div style="background:var(--ink)"><div class="wrap"><p class="note" style="padding-bottom:18px">*Plasma-table axis count, exact capacities and hours shown as placeholders to confirm before the page goes live. A working quote form would replace the current site's form-only, placeholder-filled contact section.</p></div></div>
+
+<footer>
+  <b>AGRI-WELD LLC</b><br>
+  5567 Smith Rd, Verona, NY 13478 · (315) 571-4440 · Owner Rob Roser · Metal fabrication since 1998 · AWS member
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Bungalow Cottage — Lakefront Vacation Rental on Honeoye Lake, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--slate:#33465c;--dusk:#e8985a;--cream:#fbf6ee;--reed:#7d8c6f;--deep:#22303f;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito Sans',sans-serif;color:var(--slate);background:var(--cream);line-height:1.65}
+h1,h2,h3{font-family:'Lora',serif;line-height:1.2}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{background:var(--cream);border-bottom:1px solid #ecdfc9;position:sticky;top:0;z-index:40}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.brand{font-family:'Lora',serif;font-size:1.2rem;color:var(--deep)}
+.brand em{color:var(--dusk);font-style:normal}
+.nav a.cta{background:var(--dusk);color:#fff;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:800;font-size:.9rem}
+.hero{background:linear-gradient(180deg,rgba(34,48,63,.55),rgba(34,48,63,.75)),linear-gradient(200deg,#e8985a 0%,#8296ad 45%,#33465c 100%);color:#fff;padding:100px 0;text-align:center}
+.hero .pin{font-size:.8rem;letter-spacing:.25em;text-transform:uppercase;color:#f3cba4}
+.hero h1{font-size:clamp(2rem,5vw,3.3rem);margin:16px auto 0;max-width:18ch}
+.hero p{max-width:56ch;margin:20px auto 32px;font-size:1.06rem;color:#e9eef4}
+.btn{display:inline-block;background:var(--dusk);color:#fff;font-weight:800;padding:15px 30px;border-radius:10px;text-decoration:none}
+.facts{background:var(--deep);color:#cfd9e4;padding:0}
+.facts .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));text-align:center}
+.facts .f{padding:22px 10px;border-right:1px solid rgba(255,255,255,.08)}
+.facts b{display:block;font-family:'Lora',serif;font-size:1.5rem;color:#fff}
+section{padding:70px 0}
+h2{font-size:1.9rem;color:var(--deep)}
+.lead{max-width:64ch;margin-top:14px}
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;margin-top:36px}
+.ph{border-radius:16px;min-height:280px;background:linear-gradient(150deg,#8296ad,#33465c);display:flex;align-items:flex-end;padding:16px;color:#fff;font-size:.85rem;font-style:italic}
+.ph.sunset{background:linear-gradient(150deg,#e8985a,#a35f3f)}
+.ph.green{background:linear-gradient(150deg,#7d8c6f,#4c5a43)}
+ul.amen{margin:18px 0 0 0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}
+ul.amen li{padding-left:26px;position:relative;font-size:.97rem}
+ul.amen li::before{content:"✦";position:absolute;left:0;color:var(--dusk)}
+.season{background:#fff}
+.seasons{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:34px}
+.scard{border:1px solid #ecdfc9;border-radius:14px;padding:26px;background:var(--cream)}
+.scard h3{color:var(--reed);font-size:1.1rem;margin-bottom:8px}
+.around{background:var(--reed);color:#fff}
+.around h2{color:#fff}
+.spots{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:32px}
+.spot{background:rgba(255,255,255,.12);border-radius:12px;padding:20px}
+.spot h3{font-size:1.02rem;margin-bottom:6px;color:#f3e9d5}
+.spot p{font-size:.92rem;color:#eef2e9}
+.rates .box{margin-top:30px;background:#fff;border:2px dashed var(--dusk);border-radius:14px;padding:30px;text-align:center}
+.rates .box b{font-family:'Lora',serif;font-size:1.3rem;color:var(--deep)}
+.book{background:var(--deep);color:#fff}
+.book h2{color:#fff}
+.book .inner{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:10px}
+.book p{color:#c4d0dc}
+form{display:grid;gap:12px;margin-top:8px}
+input,select,textarea{padding:13px;border-radius:9px;border:none;font-family:inherit;font-size:.95rem;width:100%}
+form .btn{border:none;cursor:pointer}
+.faqs details{background:#fff;border:1px solid #ecdfc9;border-radius:12px;padding:18px 22px;margin-top:14px}
+.faqs summary{font-weight:800;cursor:pointer;color:var(--deep)}
+.faqs details p{margin-top:10px;font-size:.95rem}
+footer{background:#1a2531;color:#8fa1b4;text-align:center;padding:32px 20px;font-size:.88rem}
+@media(max-width:760px){.split,.book .inner{grid-template-columns:1fr}ul.amen{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">The <em>Bungalow</em> · Honeoye Cottages</div>
+    <a class="cta" href="#book">Check availability</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="pin">6161 Southwest Shores · Honeoye Lake · Finger Lakes, NY</div>
+    <h1>164 feet of Honeoye lakefront, and every inch of it is yours for the week</h1>
+    <p>A rebuilt two-bedroom cottage on a level acre at the quiet southwest end of Honeoye Lake — two docks, a floating swim dock, a paddle boat and kayaks waiting at the water, and the whole length of the lake in view from your morning coffee.</p>
+    <a class="btn" href="#book">Ask about your dates</a>
+  </div>
+</section>
+
+<div class="facts">
+  <div class="wrap row">
+    <div class="f"><b>2</b>bedrooms, rebuilt 2006</div>
+    <div class="f"><b>164 ft</b>private lake frontage</div>
+    <div class="f"><b>3</b>docks — incl. floating swim dock</div>
+    <div class="f"><b>4</b>seasons — heated for winter stays</div>
+  </div>
+</div>
+
+<section class="wrap">
+  <h2>The cottage</h2>
+  <p class="lead">The Bungalow was taken down to the studs in 2006 — new electric, insulation, appliances, and baseboard heat — so it's a true year-round cottage, not a drafty summer camp. Recent upgrades came straight from renter requests.</p>
+  <div class="split">
+    <div class="ph sunset">[photo: the Bungalow from the water's edge — replace with owner's shot]</div>
+    <div>
+      <ul class="amen">
+        <li>City of Rochester public water (since 2020) — no water jugs</li>
+        <li>Large-capacity A/C in the great room</li>
+        <li>YouTube TV on Roku — local channels included</li>
+        <li>Deck facing the lake + shaded picnic table</li>
+        <li>Fire pit at the shoreline</li>
+        <li>Parking for boats and trailers on a level acre</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" style="padding-top:0">
+  <h2>The waterfront</h2>
+  <div class="split">
+    <div>
+      <p class="lead">Two aluminum-framed, cedar-inlay docks make bringing your own boat easy — the NY State launch is nearly straight across the lake. No boat? Take out the five-person paddle boat or the two kayaks, both included, life jackets too. The floating dock sits over four and a half feet of water and is the first place the kids will swim to; its solar corner lights glow after dark.</p>
+      <p class="lead" style="margin-top:12px">Anglers: locals say the water off this shore is some of the best on a lake known for walleye, chain pickerel, and both bass. In summer you'll see boats parked out front — in January, ice tents.</p>
+    </div>
+    <div class="ph">[photo: docks + floating dock at dusk]</div>
+  </div>
+</section>
+
+<section class="season">
+  <div class="wrap">
+    <h2>Four honest seasons</h2>
+    <div class="seasons">
+      <div class="scard"><h3>Summer</h3><p>Swim off the floating dock, paddle the shoreline, lifeguarded sand at Sandy Bottom Park near town, bonfires at the pit.</p></div>
+      <div class="scard"><h3>Fall</h3><p>Bristol Hills color across the water; chairlift rides and zipline canopy tours at Bristol Mountain minutes away.</p></div>
+      <div class="scard"><h3>Winter</h3><p>Baseboard-heated and fully insulated. Ice fishing villages, ice boats, XC skiing at Harriet Hollister — and Hunt Hollow's slopes visible from the shore.</p></div>
+      <div class="scard"><h3>Spring</h3><p>Walleye season opens, herons return to the inlet marsh, and the lake is at its stillest before Memorial Day.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="around">
+  <div class="wrap">
+    <h2>Ten minutes from the dock</h2>
+    <div class="spots">
+      <div class="spot"><h3>Twisted Rail Brewing</h3><p>Craft beer and a restaurant right on the water at the marina.</p></div>
+      <div class="spot"><h3>Birdhouse Brewery</h3><p>Main Street's bustling taproom, a short drive up the lake.</p></div>
+      <div class="spot"><h3>Harriet Hollister Spencer Park</h3><p>The postcard view of the whole lake — drivable to the overlook in summer.</p></div>
+      <div class="spot"><h3>Sandy Bottom Park</h3><p>Sand beach, lifeguards, playground, tennis, and a creek nature trail for kids.</p></div>
+      <div class="spot"><h3>Bristol Mountain</h3><p>Skiing in winter; fall sky rides and ziplines the rest of the year.</p></div>
+      <div class="spot"><h3>Finger Lakes wine trails</h3><p>Seneca, Cayuga, and Keuka tasting rooms all within a day-trip loop.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="rates wrap">
+  <h2>Rates &amp; booking</h2>
+  <div class="box">
+    <b>[Weekly &amp; off-season rates — placeholder]</b>
+    <p style="margin-top:8px">Final pricing carried over from your current Bungalow page before launch. Online availability request below replaces the printable application as the first step.</p>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <h2>Check your week</h2>
+    <div class="inner">
+      <div>
+        <p>Tell us the dates you're considering and who's coming. We'll reply with availability and next steps — no printer required.</p>
+        <p style="margin-top:20px"><strong style="color:#fff">Call or text:</strong> (585) 281-3822<br><strong style="color:#fff">The Bungalow</strong> · 6161 Southwest Shores, Honeoye, NY 14471</p>
+      </div>
+      <form>
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <input type="date" aria-label="Arrival">
+          <input type="date" aria-label="Departure">
+        </div>
+        <select><option>Party size</option><option>1–2</option><option>3–4</option><option>5–6</option></select>
+        <textarea rows="3" placeholder="Bringing a boat? Pets? Questions?"></textarea>
+        <button class="btn" type="submit">Send availability request</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="faqs wrap">
+  <h2>Good to know</h2>
+  <details><summary>Is the owner on the property?</summary><p>Yes — the family cottage (built 2020) shares the acre, and renters have full use of the lawn, docks, and waterfront. It also means questions get answered fast.</p></details>
+  <details><summary>Can I rent a powerboat nearby?</summary><p>Trident Marine on East Lake Road rents by the hour or week, and the state launch is directly across the lake for your own trailer.</p></details>
+  <details><summary>Is winter really worth it?</summary><p>Between the ice-fishing villages, ice boats, and XC trails — and a warm, rebuilt cottage to come back to — winter weeks here book for a reason.</p></details>
+</section>
+
+<footer>The Bungalow Cottage · Honeoye Cottages · 6161 Southwest Shores, Honeoye, NY 14471 · (585) 281-3822 · facebook.com/HoneoyeCottages</footer>
+
+</body>
+</html>

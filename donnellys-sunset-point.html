@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donnelly's Sunset Point — Lakeside Cabins on Long Lake, NY</title>
+<meta name="description" content="Eleven cabins on 750 feet of Long Lake shoreline. Two private sand beaches, nightly campfires at the lean-to, and sunsets over Owls Head. May through Columbus Day. (518) 624-6551.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#1e3a2f;--pine-d:#142921;--water:#3e6f8e;--amber:#e0913c;--amber-d:#c47825;--cream:#faf6ee;--sand:#f0e7d6;--ink:#243530}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Karla',sans-serif;color:var(--ink);background:var(--cream);line-height:1.7}
+h1,h2,h3{font-family:'Fraunces',serif;line-height:1.2}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+header{background:var(--cream);padding:16px 0;border-bottom:1px solid #e3dac7}
+header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.logo{font-family:'Fraunces',serif;font-weight:600;font-size:1.2rem;color:var(--pine)}
+.logo small{display:block;font-family:'Karla',sans-serif;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber-d)}
+nav a{color:var(--pine);text-decoration:none;font-weight:500;font-size:.93rem;margin-left:18px}
+.hero{background:linear-gradient(180deg,var(--water) 0%,#2d5670 55%,var(--pine-d) 100%);color:#fff;text-align:center;padding:96px 20px 110px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;left:0;right:0;bottom:0;height:120px;background:radial-gradient(60% 100% at 50% 100%,rgba(224,145,60,.35),transparent 70%)}
+.hero .wrap{position:relative;z-index:1}
+.hero .est{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:#f3c98d}
+.hero h1{font-size:clamp(2rem,5.6vw,3.6rem);font-weight:600;margin:16px auto;max-width:20ch}
+.hero p{max-width:52ch;margin:0 auto;font-size:1.12rem;color:#dbe6ec}
+.hero .cta{margin-top:32px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{background:var(--amber);color:var(--pine-d);padding:14px 28px;border-radius:99px;font-weight:700;text-decoration:none}
+.btn.o{background:transparent;border:2px solid #ffffff66;color:#fff;font-weight:500}
+.notice{background:var(--pine);color:#efe8d8;text-align:center;padding:12px 20px;font-size:.95rem}
+section{padding:74px 0}
+.k{font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--amber-d);font-weight:700}
+h2{font-size:clamp(1.6rem,3.8vw,2.3rem);color:var(--pine);margin:8px 0 14px}
+.lede{max-width:60ch;color:#41544c}
+.cabins{background:var(--sand)}
+.cab-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px;margin-top:34px}
+.cab{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(30,58,47,.08)}
+.cab .ph{aspect-ratio:16/10;background:repeating-linear-gradient(120deg,#cfe0da 0 16px,#c2d6cf 16px 32px);display:flex;align-items:center;justify-content:center;color:#5b7a6e;font-size:.82rem;text-align:center;padding:10px}
+.cab .body{padding:22px}
+.cab h3{color:var(--pine);font-size:1.15rem;margin-bottom:6px}
+.cab p{font-size:.95rem;color:#4b5e56}
+.cab .meta{margin-top:12px;font-size:.83rem;color:var(--amber-d);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.point .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.point .ph{aspect-ratio:4/3;border-radius:10px;background:repeating-linear-gradient(120deg,#d8c9ad 0 16px,#cbbc9e 16px 32px);display:flex;align-items:center;justify-content:center;color:#7a6a4d;font-size:.82rem;text-align:center;padding:10px}
+.point ul{list-style:none;margin-top:18px}
+.point li{padding:10px 0 10px 30px;position:relative;border-bottom:1px dashed #ddd2ba}
+.point li:last-child{border:0}
+.point li::before{content:"◆";position:absolute;left:2px;color:var(--amber);font-size:.8rem;top:14px}
+.week{background:var(--pine-d);color:#e8e2d2}
+.week h2{color:#fff}
+.week .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:32px}
+.week .card{background:#1d3a2e;border:1px solid #2c4f40;border-radius:10px;padding:24px}
+.week .card h3{color:#f3c98d;font-size:1.02rem;margin-bottom:8px}
+.week .card p{font-size:.93rem;color:#c4cfc2}
+.rates{text-align:center}
+.rates .box{max-width:640px;margin:26px auto 0;background:#fff;border:1px solid #e3dac7;border-radius:12px;padding:34px}
+.rates .box p{color:#41544c}
+.contact{background:var(--sand)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+form .row{margin-bottom:14px}
+label{display:block;font-weight:700;font-size:.85rem;margin-bottom:5px;color:var(--pine)}
+input,textarea,select{width:100%;padding:12px;border-radius:8px;border:1px solid #d4c9b2;background:#fff;font-family:inherit;font-size:.95rem;color:var(--ink)}
+button{background:var(--pine);color:#fff;border:0;padding:14px 30px;border-radius:99px;font-weight:700;font-size:1rem;cursor:pointer;font-family:inherit}
+.cinfo a{color:var(--pine);font-weight:700}
+footer{background:var(--pine-d);color:#9db3a5;padding:26px 0;font-size:.87rem;text-align:center}
+@media(max-width:780px){.point .wrap,.contact .wrap{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo">Donnelly's Sunset Point<small>Long Lake · Adirondacks</small></div>
+    <nav>
+      <a href="#cabins">The Cabins</a>
+      <a href="#point">The Point</a>
+      <a href="#rates">Rates</a>
+      <a href="#book">Check Dates</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="est">987 Deerland Road · Long Lake, New York</p>
+    <h1>The sun sets over Owls Head. The campfire's already going.</h1>
+    <p>Eleven housekeeping cabins on four acres and 750 feet of Long Lake shoreline — two private sand beaches, a lean-to at the water's edge, and the kind of week your kids will still be talking about at Thanksgiving.</p>
+    <div class="cta">
+      <a class="btn" href="#book">Check dates for your week</a>
+      <a class="btn o" href="#cabins">See the cabins</a>
+    </div>
+  </div>
+</section>
+
+<div class="notice">Open early May through Columbus Day — July and August weeks book earliest.</div>
+
+<section class="cabins" id="cabins">
+  <div class="wrap">
+    <p class="k">The Cabins</p>
+    <h2>Eleven ways to stay on the Point</h2>
+    <p class="lede">Every rental has its own kitchen, heat, satellite TV, bathroom and a deck — several of them screened, all of them a short barefoot walk from the water.</p>
+    <div class="cab-grid">
+      <div class="cab">
+        <div class="ph">[Photo: one-bedroom cabin exterior with deck]</div>
+        <div class="body"><h3>One-Bedroom Cabins</h3><p>Right-sized for a couple or a small family — full kitchen, deck for morning coffee, and the lake through the trees.</p><p class="meta">Sleeps 2–4</p></div>
+      </div>
+      <div class="cab">
+        <div class="ph">[Photo: two-bedroom cabin with screened porch]</div>
+        <div class="body"><h3>Two-Bedroom Cabins</h3><p>Room for the whole crew, with screened decks on select cabins for bug-free evenings over a board game.</p><p class="meta">Sleeps 4–6</p></div>
+      </div>
+      <div class="cab">
+        <div class="ph">[Photo: the lake house]</div>
+        <div class="body"><h3>The House</h3><p>The big one — sleeps eight with two bathrooms, for reunions and the summers when everyone can finally make it.</p><p class="meta">Sleeps 8 · 2 baths</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="point" id="point">
+  <div class="wrap">
+    <div class="ph">[Photo: lean-to campfire at sunset, Owls Head across the lake]</div>
+    <div>
+      <p class="k">The Point</p>
+      <h2>750 feet of shoreline that's yours for the week</h2>
+      <ul>
+        <li><strong>Two private sand beaches</strong> — shallow, sandy entries where you can watch the kids from an Adirondack chair.</li>
+        <li><strong>The nightly campfire</strong> — at the waterside lean-to, facing dead west at Owls Head Mountain. Bring marshmallows; the sunset's included.</li>
+        <li><strong>Docks for your boat</strong> — tie up steps from your cabin and be fishing before breakfast.</li>
+        <li><strong>Four acres of room</strong> — space between cabins, not a parking lot with buildings on it.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="week">
+  <div class="wrap">
+    <p class="k">Beyond the Point</p>
+    <h2>A week on Long Lake writes its own itinerary</h2>
+    <div class="grid">
+      <div class="card"><h3>Fourteen miles of lake</h3><p>Kayak, canoe or SUP rentals in the village — paddle out of sight of a single building within twenty minutes.</p></div>
+      <div class="card"><h3>Hop a float plane</h3><p>Long Lake is one of the last places you can walk into town and take off from the water for a High Peaks flightseeing run.</p></div>
+      <div class="card"><h3>Mt. Sabattis, half a mile off</h3><p>Trails, tennis, pickleball and basketball just past the ice cream stand — the village is a short stroll from your deck.</p></div>
+      <div class="card"><h3>Basecamp for the High Peaks</h3><p>Day-hike a high peak or a family-friendly nature trail and be back for the campfire — Long Lake sits in the center of everything.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="rates" id="rates">
+  <div class="wrap">
+    <p class="k">Rates & Season</p>
+    <h2>Simple weekly and nightly rates</h2>
+    <div class="box">
+      <p>[Rates table — carry over current cabin-by-cabin rates from Michelle; placeholder pending confirmation]</p>
+      <p style="margin-top:14px">Season runs from the beginning of May until Columbus Day. Returning-family weeks go quickly — ask early about July and August.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="book">
+  <div class="wrap">
+    <div class="cinfo">
+      <p class="k">Check Dates</p>
+      <h2>Tell Michelle which week you're dreaming about</h2>
+      <p style="color:#41544c;margin-bottom:18px">Send your dates, group size and cabin preference — you'll get a real reply from the family that runs the Point, not a booking robot.</p>
+      <p style="font-size:1.15rem"><a href="tel:15186246551">(518) 624-6551</a><br><a href="mailto:sspdonnelly@frontier.com">sspdonnelly@frontier.com</a></p>
+      <p style="margin-top:16px;color:#5c6e64">987 Deerland Road, Long Lake, NY 12847</p>
+    </div>
+    <form>
+      <div class="row"><label for="nm">Name</label><input id="nm" type="text" name="name"></div>
+      <div class="row"><label for="em">Email</label><input id="em" type="email" name="email"></div>
+      <div class="row"><label for="dt">Preferred week / dates</label><input id="dt" type="text" name="dates" placeholder="e.g. week of July 18"></div>
+      <div class="row"><label for="gp">Group size & cabin preference</label><input id="gp" type="text" name="group" placeholder="e.g. 5 people — two-bedroom with screened deck"></div>
+      <div class="row"><label for="ms">Anything else?</label><textarea id="ms" rows="3" name="message"></textarea></div>
+      <button type="submit">Send availability request</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Donnelly's Sunset Point · 987 Deerland Road, Long Lake, NY · (518) 624-6551</div>
+</footer>
+
+</body>
+</html>

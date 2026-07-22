@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ferlo's Original Bakery — Rome NY's Family Bakery for Over a Century</title>
+<meta name="description" content="Ferlo's Original Bakery, 522 Floyd Ave, Rome NY. Scratch-made donuts, breads and rolls, tomato pie, halfmoons and football rolls from the same family for over 100 years. Call (315) 339-8874 to order ahead.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#faf5ec;--red:#b3372f;--espresso:#3d2c23;--gold:#c8963e;--line:#e8ddca}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Karla',sans-serif;color:var(--espresso);background:var(--cream);line-height:1.65}
+h1,h2,h3{font-family:'Libre Caslon Text',serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.topline{background:var(--red);color:#fff;text-align:center;font-size:.85rem;padding:7px 12px;letter-spacing:.04em}
+header{background:var(--cream);border-bottom:2px solid var(--red)}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;flex-wrap:wrap;gap:10px}
+.logo{font-family:'Libre Caslon Text',serif;font-weight:700;font-size:1.35rem;color:var(--red)}
+.logo small{display:block;font-family:'Karla',sans-serif;font-weight:600;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--espresso)}
+.nav a.call{background:var(--red);color:#fff;text-decoration:none;padding:10px 20px;border-radius:3px;font-weight:700}
+.hero{padding:74px 0 60px;text-align:center;background:
+  radial-gradient(circle at 20% 15%, rgba(200,150,62,.12), transparent 40%),
+  radial-gradient(circle at 85% 80%, rgba(179,55,47,.08), transparent 45%)}
+.est{display:inline-block;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:6px 18px;letter-spacing:.24em;text-transform:uppercase;font-size:.75rem;font-weight:700;color:var(--gold)}
+.hero h1{font-size:clamp(2rem,5vw,3.1rem);margin:20px auto 16px;max-width:760px;line-height:1.15;color:var(--espresso)}
+.hero h1 em{color:var(--red);font-style:normal}
+.hero p{max-width:600px;margin:0 auto;font-size:1.12rem}
+.cta-row{margin-top:26px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 26px;font-weight:700;text-decoration:none;border-radius:3px}
+.btn-red{background:var(--red);color:#fff}
+.btn-out{border:2px solid var(--red);color:var(--red)}
+.string{height:10px;background:repeating-linear-gradient(45deg,var(--red) 0 8px,#fff 8px 16px);opacity:.65}
+section{padding:60px 0}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 38px}
+.sec-head h2{font-size:1.9rem;color:var(--red);margin-bottom:10px}
+.classics{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.classic{background:#fff;border:1px solid var(--line);border-radius:8px;padding:26px;position:relative}
+.classic::before{content:"";position:absolute;top:0;left:22px;right:22px;height:4px;background:var(--gold);border-radius:0 0 4px 4px}
+.classic h3{font-size:1.15rem;margin-bottom:8px;color:var(--espresso)}
+.classic .tag{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red);font-weight:700}
+.daily{background:var(--espresso);color:#f4ead9}
+.daily h2{color:#fff}
+.daily .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+.daily .box{background:#4a382d;border-radius:8px;padding:26px}
+.daily .box h3{color:var(--gold);margin-bottom:8px}
+.story .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:44px;align-items:center}
+.story .ph{background:repeating-linear-gradient(45deg,#efe6d4 0 12px,#e9dcc4 12px 24px);border-radius:8px;height:280px;display:flex;align-items:center;justify-content:center;color:#a08d6b;font-style:italic;font-size:.85rem;text-align:center;padding:16px}
+.story h2{color:var(--red);font-size:1.9rem;margin-bottom:14px}
+.story p+p{margin-top:12px}
+.reviews{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.reviews .stars{color:var(--gold);font-size:1.4rem;letter-spacing:.2em}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:26px}
+.rev{background:var(--cream);border:1px solid var(--line);border-radius:8px;padding:22px;font-size:.98rem}
+.rev b{display:block;margin-top:10px;color:var(--red);font-size:.85rem}
+.order{background:var(--red);color:#fff}
+.order h2{color:#fff}
+.order .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:40px}
+.order p{color:#f6ddd8}
+form label{display:block;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;margin:13px 0 5px}
+form input,form select,form textarea{width:100%;padding:11px;border-radius:4px;border:0;font:inherit}
+form button{margin-top:18px;width:100%;background:var(--espresso);color:#fff;border:0;padding:14px;font-weight:700;font-size:1rem;border-radius:4px;cursor:pointer}
+.hours-find{background:var(--cream)}
+.hours-find .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.hours td{padding:6px 14px 6px 0;border-bottom:1px solid var(--line)}
+footer{background:var(--espresso);color:#cbb9a5;text-align:center;padding:28px 0;font-size:.9rem}
+@media(max-width:780px){.daily .wrap,.story .wrap,.order .wrap,.hours-find .wrap{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="topline">522 Floyd Ave, Rome, NY · Call ahead for trays &amp; special orders: (315) 339-8874</div>
+<header>
+  <div class="wrap nav">
+    <div class="logo">Ferlo's Original Bakery<small>Rome, New York</small></div>
+    <a class="call" href="tel:13153398874">(315) 339-8874</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="est">Family owned · over a century in Rome</span>
+    <h1>The bread your grandmother carried home came out of <em>these ovens</em></h1>
+    <p>Scratch-made donuts, breads and rolls, tomato pie and halfmoons — baked fresh every morning on Floyd Ave by the same family that started it all more than 100 years ago.</p>
+    <div class="cta-row">
+      <a class="btn btn-red" href="#order">Order Ahead</a>
+      <a class="btn btn-out" href="#hours">Hours &amp; Directions</a>
+    </div>
+  </div>
+</div>
+<div class="string"></div>
+
+<section id="classics">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>The Rome classics</h2>
+      <p>Some things you can only get right after a hundred years of practice.</p>
+    </div>
+    <div class="classics">
+      <div class="classic"><span class="tag">The signature</span><h3>Tomato pie</h3><p>Thick, room-temperature, sauce-forward — the way Utica-Rome tomato pie is supposed to be. Nothing on it that doesn't belong.</p></div>
+      <div class="classic"><span class="tag">The argument-settler</span><h3>Halfmoons</h3><p>Chocolate with a whisper of orange in the frosting — the detail regulars swear by and out-of-towners can't quite place.</p></div>
+      <div class="classic"><span class="tag">The local secret</span><h3>Football rolls</h3><p>The roll Rome grew up on. If you know, you know; if you don't, buy six and find out.</p></div>
+      <div class="classic"><span class="tag">The morning line</span><h3>Donuts</h3><p>Plain cake with maple frosting and chocolate drizzle has a following of its own. Fifty-plus years of 6 a.m. regulars can't be wrong.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="daily">
+  <div class="wrap">
+    <div>
+      <h2>Fresh every morning. Honest every afternoon.</h2>
+      <p style="margin-top:12px">Breads and rolls come out of the oven daily. And when the day winds down, yesterday's bake goes on the day-old rack at a deep discount — because a family bakery doesn't waste good bread, and neither should you.</p>
+    </div>
+    <div class="box">
+      <h3>Ordering for a crowd?</h3>
+      <p>Party trays, donuts by the dozen, rolls for your Sunday sauce — call a day ahead at (315) 339-8874 and it'll be boxed and waiting.</p>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap">
+    <div class="ph">photo: Carmen &amp; David Ferlo at the bakery goes here</div>
+    <div>
+      <h2>Four generations of flour on the floor</h2>
+      <p>Ferlo's was opened over a century ago by a father and his cousin, and it never left the family. Today, brothers <b>Carmen and David Ferlo</b> run the ovens their father ran before them — same recipes, same corner of Rome, same insistence that bread is baked, not manufactured.</p>
+      <p>Generations of Rome families have marked their lives in Ferlo's boxes: First Communion trays, Friday tomato pie, the halfmoons that ride shotgun home to college kids who moved away.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap" style="text-align:center">
+    <span class="stars">★★★★★</span>
+    <h2 style="color:var(--red);margin:8px 0 4px">4.8 stars across 165 ratings</h2>
+    <p>What the regulars say:</p>
+    <div class="rev-grid">
+      <div class="rev">"Their tomato pie and football rolls bring back memories of classic Italian baked goods."<b>— Restaurantji reviewer</b></div>
+      <div class="rev">"The plain cake donut with maple frosting and chocolate drizzle is a favorite."<b>— Restaurantji reviewer</b></div>
+      <div class="rev">"Staff like Andrea take care to box treats carefully, ensuring the halfmoons stay in perfect condition."<b>— Restaurantji reviewer</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="order" id="order">
+  <div class="wrap">
+    <div>
+      <h2>Order ahead</h2>
+      <p>Skip the morning line or lock in a tray for the weekend. Send your order and we'll call to confirm — or just phone the counter at <b>(315) 339-8874</b>.</p>
+    </div>
+    <form>
+      <label>Name</label><input type="text" placeholder="Your name">
+      <label>Phone</label><input type="text" placeholder="Best number to confirm your order">
+      <label>Pickup day</label><input type="text" placeholder="e.g. Saturday morning">
+      <label>Your order</label><textarea rows="3" placeholder="e.g. 1 tomato pie, 6 halfmoons, 2 dozen mixed donuts"></textarea>
+      <button type="button">Send Order Request</button>
+    </form>
+  </div>
+</section>
+
+<section class="hours-find" id="hours">
+  <div class="wrap">
+    <div>
+      <h2 style="color:var(--red);font-size:1.7rem;margin-bottom:12px">Hours</h2>
+      <table class="hours">
+        <tr><td>Monday – Saturday</td><td>7:00 am – 5:00 pm</td></tr>
+        <tr><td>Sunday</td><td>7:00 am – 2:00 pm</td></tr>
+      </table>
+      <p style="margin-top:10px;font-size:.85rem">[Hours per current directory listings — confirm with the bakery]</p>
+    </div>
+    <div>
+      <h2 style="color:var(--red);font-size:1.7rem;margin-bottom:12px">Find us</h2>
+      <p><b>522 Floyd Ave, Rome, NY 13440</b><br>Plenty of parking — come early on Saturdays, the donut case doesn't wait.</p>
+      <p style="margin-top:16px"><a class="btn btn-red" href="tel:13153398874">Call the Counter</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Ferlo's Original Bakery · 522 Floyd Ave, Rome, NY 13440 · (315) 339-8874 · Family owned for over a century</div>
+</footer>
+</body>
+</html>

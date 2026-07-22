@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oneida Lake Marina — Canastota, NY · Tahoe Pontoons, Lund Boats, Full-Service Marina on Oneida Lake</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#0c3b4a; --teal:#0e6e84; --teal2:#13889e; --aqua:#2bb6c9;
+  --sun:#ffc233; --sun-d:#f0a500; --sand:#f6efe1; --foam:#eef8fa;
+  --ink:#10262e; --slate:#4a6470; --paper:#f3f8f9; --white:#fff; --line:#d6e4e7;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--paper);line-height:1.62}
+h1,h2,h3,.disp{font-family:'Poppins',sans-serif}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+.btn{display:inline-block;background:var(--sun);color:#3a2b00;font-weight:700;text-decoration:none;padding:13px 28px;border-radius:40px;font-family:'Poppins',sans-serif;font-size:1rem;transition:.14s;box-shadow:0 4px 14px rgba(240,165,0,.32)}
+.btn:hover{background:var(--sun-d);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.65);box-shadow:none}
+.btn.ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.btn.teal{background:var(--teal);color:#fff;box-shadow:0 4px 14px rgba(14,110,132,.3)}
+.btn.teal:hover{background:var(--deep)}
+
+nav{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{line-height:1.05}
+.brand b{font-family:'Poppins';font-weight:800;font-size:1.22rem;color:var(--deep);display:block;letter-spacing:-.3px}
+.brand small{color:var(--teal2);font-size:.68rem;letter-spacing:2.5px;text-transform:uppercase;font-weight:600}
+.navlinks{display:flex;gap:26px;color:var(--slate);font-weight:600;font-size:.98rem}
+.navlinks a{text-decoration:none}.navlinks a:hover{color:var(--teal)}
+@media(max-width:900px){.navlinks{display:none}}
+
+.hero{position:relative;color:#fff;overflow:hidden;
+  background:
+   radial-gradient(900px 380px at 78% -10%,rgba(43,182,201,.55),transparent 60%),
+   linear-gradient(167deg,var(--teal) 0%,var(--deep) 70%)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:70px;
+  background:radial-gradient(120% 100% at 50% 0,transparent 49%,var(--paper) 50%)}
+.hero .wrap{position:relative;z-index:2;padding:84px 22px 104px}
+.hero .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);color:#eafcff;font-weight:600;font-size:.82rem;padding:6px 14px;border-radius:30px;margin-bottom:20px}
+.hero .pill b{color:var(--sun)}
+.hero h1{font-weight:800;font-size:3.35rem;line-height:1.04;max-width:16ch;letter-spacing:-.5px}
+.hero h1 span{color:var(--sun)}
+.hero p{font-size:1.2rem;max-width:54ch;margin:18px 0 28px;color:#d6eef2}
+.hero .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+@media(max-width:600px){.hero h1{font-size:2.3rem}.hero .wrap{padding:60px 22px 80px}}
+
+.awards{background:var(--deep);color:#fff}
+.awards .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;padding:18px 22px}
+.awards .a{display:flex;align-items:center;gap:10px;font-weight:600;font-size:.96rem;color:#cdeef4}
+.awards .a b{font-family:'Poppins';color:var(--sun);font-size:1.05rem}
+.awards .a .ic{font-size:1.3rem}
+
+section{padding:76px 0}
+.shead{max-width:60ch;margin-bottom:40px}
+.shead .k{color:var(--teal2);font-weight:700;letter-spacing:2.5px;text-transform:uppercase;font-size:.82rem}
+.shead h2{font-size:2.25rem;line-height:1.08;margin-top:6px;color:var(--deep);letter-spacing:-.4px}
+.shead p{color:var(--slate);margin-top:10px;font-size:1.06rem}
+
+.fleet{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:860px){.fleet{grid-template-columns:1fr}}
+.boat{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:26px;transition:.15s;border-top:4px solid var(--teal2)}
+.boat:hover{box-shadow:0 14px 34px rgba(12,59,74,.12);transform:translateY(-3px)}
+.boat .ic{font-size:2.1rem}
+.boat h3{font-size:1.25rem;margin:10px 0 6px;color:var(--deep)}
+.boat p{color:var(--slate);font-size:.97rem}
+.boat .tag{display:inline-block;margin-top:12px;background:var(--foam);color:var(--teal);font-weight:700;font-size:.78rem;padding:4px 12px;border-radius:20px}
+
+.serv{background:linear-gradient(180deg,var(--foam),#fff)}
+.serv .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+@media(max-width:880px){.serv .grid{grid-template-columns:1fr}}
+.serv ul{list-style:none;margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:500px){.serv ul{grid-template-columns:1fr}}
+.serv li{display:flex;gap:10px;align-items:flex-start;font-weight:600;color:var(--ink)}
+.serv li span{color:var(--teal2);font-size:1.1rem;line-height:1.4}
+.serv li small{display:block;font-weight:400;color:var(--slate);font-size:.86rem}
+.dockcard{background:var(--deep);color:#fff;border-radius:20px;padding:32px;position:relative;overflow:hidden}
+.dockcard::before{content:"⚓";position:absolute;right:-10px;bottom:-18px;font-size:8rem;opacity:.08}
+.dockcard h3{color:var(--sun);font-size:1.5rem;margin-bottom:6px}
+.dockcard p{color:#cfe6ec;font-size:.98rem;margin-bottom:18px}
+.dockcard .li{display:flex;gap:10px;margin-bottom:10px;color:#eafcff;font-weight:600}
+.dockcard .li span{color:var(--aqua)}
+
+.stats{background:var(--teal)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center;color:#fff}
+@media(max-width:700px){.stats .wrap{grid-template-columns:1fr 1fr}}
+.stats .st b{font-family:'Poppins';font-weight:800;font-size:2.3rem;color:var(--sun);display:block;line-height:1}
+.stats .st span{color:#d6eef2;font-size:.9rem;font-weight:600}
+
+.about .grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+@media(max-width:880px){.about .grid{grid-template-columns:1fr}}
+.mapcard{background:var(--white);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.mapcard .top{background:linear-gradient(150deg,var(--teal2),var(--deep));color:#fff;padding:26px}
+.mapcard .top b{font-family:'Poppins';font-size:1.15rem;display:block}
+.mapcard .top span{color:#cfe6ec;font-size:.92rem}
+.mapcard .body{padding:22px 26px}
+.mapcard .row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed var(--line);font-size:.95rem}
+.mapcard .row:last-child{border:0}
+.mapcard .row b{color:var(--deep)}
+
+.contact{background:var(--deep);color:#fff;text-align:center}
+.contact h2{font-size:2.3rem;color:#fff;letter-spacing:-.4px}
+.contact p{color:#cfe6ec;max-width:50ch;margin:12px auto 24px;font-size:1.08rem}
+.contact .row{display:flex;gap:34px;justify-content:center;flex-wrap:wrap;margin:20px 0 8px}
+.contact .row div b{font-family:'Poppins';color:var(--sun);font-size:1.32rem;display:block}
+.contact .row div span{color:#aacdd6;font-size:.86rem;text-transform:uppercase;letter-spacing:1px}
+.contact .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.note{font-size:.8rem;color:#7fa6b1;font-style:italic;margin-top:30px}
+
+footer{background:#082c37;color:#7fa6b1;text-align:center;padding:26px 0;font-size:.9rem}
+footer b{font-family:'Poppins';color:#cfe6ec}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="brand"><b>Oneida Lake Marina</b><small>Canastota · South Bay</small></div>
+  <div class="navlinks">
+    <a href="#fleet">On the Water</a>
+    <a href="#service">Service Yard</a>
+    <a href="#dock">Dockage &amp; Storage</a>
+    <a href="#contact">Visit Us</a>
+  </div>
+  <a href="#contact" class="btn">Call the marina</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="pill"><span>🏆</span> New York's <b>#1 Tahoe Pontoon dealer</b> — again in 2023</div>
+  <h1>Your summer on Oneida Lake <span>starts at South Bay.</span></h1>
+  <p>Pontoons, fishing boats and outboards in stock — plus a full-service yard, seasonal dockage and winter storage at the southeast corner of the lake, four miles from Sylvan Beach.</p>
+  <div class="cta-row">
+    <a href="#fleet" class="btn">See what's in stock</a>
+    <a href="#dock" class="btn ghost">Dockage &amp; storage</a>
+  </div>
+</div></header>
+
+<div class="awards"><div class="wrap">
+  <div class="a"><span class="ic">🏆</span><div><b>#1 in NY State</b> Tahoe Pontoons</div></div>
+  <div class="a"><span class="ic">🛥️</span><div><b>#1 in the Nation</b> 2009</div></div>
+  <div class="a"><span class="ic">🔧</span><div><b>3 certified</b> service techs</div></div>
+  <div class="a"><span class="ic">👪</span><div><b>Family owned</b> &amp; operated</div></div>
+</div></div>
+
+<section id="fleet"><div class="wrap">
+  <div class="shead">
+    <div class="k">On the water</div>
+    <h2>New boats, used boats, and the motors to move them</h2>
+    <p>A South Bay dealer that actually keeps inventory — pontoons for the family, Lunds for the walleye, and outboards from three of the names that matter on Oneida Lake.</p>
+  </div>
+  <div class="fleet">
+    <div class="boat"><div class="ic">⛴️</div><h3>Tahoe Pontoons</h3><p>The line that's made us New York's #1 Tahoe dealer year after year — family pontoons sized for a day on the lake.</p><span class="tag">New &amp; in stock</span></div>
+    <div class="boat"><div class="ic">🎣</div><h3>Lund Fishing Boats</h3><p>Purpose-built aluminum fishing rigs for Oneida Lake walleye, perch and bass — rigged the way you'd rig your own.</p><span class="tag">New models</span></div>
+    <div class="boat"><div class="ic">⚙️</div><h3>Honda · Yamaha · Mercury</h3><p>New and used outboards from all three, sold and serviced in-house — plus a stocked ships store for parts.</p><span class="tag">Sales &amp; service</span></div>
+    <div class="boat"><div class="ic">🛥️</div><h3>Pre-Owned Boats</h3><p>A rotating selection of used power boats and used motors, gone over by our own techs before they hit the lot.</p><span class="tag">Ask what's in</span></div>
+    <div class="boat"><div class="ic">🚚</div><h3>New &amp; Used Trailers</h3><p>Boat trailers in stock so your new rig leaves the yard ready to launch — no second stop, no waiting.</p><span class="tag">In stock</span></div>
+    <div class="boat"><div class="ic">🛒</div><h3>The Ships Store</h3><p>A large store full of new and used marine items — props, parts and the small stuff that ends a trip if you don't have it.</p><span class="tag">Open in season</span></div>
+  </div>
+</div></section>
+
+<section class="serv" id="service"><div class="wrap">
+  <div class="grid">
+    <div>
+      <div class="shead" style="margin-bottom:14px">
+        <div class="k">The service yard</div>
+        <h2>A real full-service marina — not just a sales lot</h2>
+        <p>Three full-time certified technicians and the gear to haul, step, launch and store, all on site in Canastota.</p>
+      </div>
+      <ul>
+        <li><span>🛠️</span><div>Certified techs<small>Three full-time, year-round</small></div></li>
+        <li><span>🏗️</span><div>Travel lift<small>Haul-out &amp; launch on site</small></div></li>
+        <li><span>⛵</span><div>Gin pole<small>Step your sailboat's mast</small></div></li>
+        <li><span>🚤</span><div>Launch ramp<small>In &amp; out of the water</small></div></li>
+        <li><span>🧰</span><div>Parts inventory<small>Large stock of new boat parts</small></div></li>
+        <li><span>🏠</span><div>Clubhouse<small>Restrooms, showers, kitchenette</small></div></li>
+      </ul>
+    </div>
+    <div class="dockcard">
+      <h3>One honest note up front</h3>
+      <p>We're a sales-and-service marina, so people ask: yes to dockage, storage and repairs — but we don't rent boats or jet skis. (The Cove in Sylvan Beach and Brewerton Boat Yard handle rentals.) Straight answers save everyone a phone call.</p>
+      <div class="li"><span>✔</span> Seasonal dockage</div>
+      <div class="li"><span>✔</span> Winter &amp; off-season storage</div>
+      <div class="li"><span>✔</span> Home of the Oneida Lake Sailing Club</div>
+      <div class="li"><span>✖</span> No boat or jet-ski rentals</div>
+    </div>
+  </div>
+</div></section>
+
+<section class="stats"><div class="wrap">
+  <div class="st"><b>19×</b><span>NY's #1 Tahoe dealer</span></div>
+  <div class="st"><b>3</b><span>Certified techs on hand</span></div>
+  <div class="st"><b>4 mi</b><span>From Sylvan Beach</span></div>
+  <div class="st"><b>30 mi</b><span>East of Syracuse</span></div>
+</div></section>
+
+<section class="about"><div class="wrap">
+  <div class="grid">
+    <div>
+      <div class="shead" style="margin-bottom:14px">
+        <div class="k">Where we are</div>
+        <h2>South Bay, the southeast corner of Oneida Lake</h2>
+        <p>On Route 31 in Canastota, a quarter-mile west of Route 13 — easy off I-90 (exit 34) or I-81. Two miles from Verona Beach State Park, four from the Sylvan Beach resort area.</p>
+      </div>
+      <p style="color:var(--slate)">Family owned and operated, and we work hard to make sure you enjoy the marina as much as we do. Come down or call — we'll tell you exactly what's on the lot and on the water.</p>
+    </div>
+    <div class="mapcard">
+      <div class="top"><b>Oneida Lake Marina</b><span>3713 State Route 31, Canastota, NY 13032</span></div>
+      <div class="body">
+        <div class="row"><span>Sales &amp; Service</span><b>(315) 697-4867</b></div>
+        <div class="row"><span>Ships store (winter)</span><b>Mon–Fri 8am–4pm</b></div>
+        <div class="row"><span>Email</span><b>oneidalakemarina@gmail.com</b></div>
+        <div class="row"><span>Registered</span><b>NYS boat dealer</b></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <h2>Planning a boat — or a season on the lake?</h2>
+  <p>Call or email and we'll tell you what's in stock, what's open for dockage, and how soon we can have you on the water.</p>
+  <div class="row">
+    <div><b>(315) 697-4867</b><span>Sales &amp; Service</span></div>
+    <div><b>oneidalakemarina@gmail.com</b><span>Email the marina</span></div>
+    <div><b>Route 31, Canastota</b><span>South Bay, Oneida Lake</span></div>
+  </div>
+  <div class="cta-row">
+    <a href="tel:3156974867" class="btn">Call the marina</a>
+    <a href="mailto:oneidalakemarina@gmail.com" class="btn teal">Email us</a>
+  </div>
+  <p class="note">Seasonal hours and current inventory shown as placeholders to confirm before the page goes live. (The current site's "email me" link is broken — this page wires it straight to the real address above.)</p>
+</div></section>
+
+<footer>
+  <b>ONEIDA LAKE MARINA, LLC</b><br>
+  3713 State Route 31, Canastota, NY 13032 · (315) 697-4867 · oneidalakemarina@gmail.com · Family owned on Oneida Lake
+</footer>
+
+</body>
+</html>

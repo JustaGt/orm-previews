@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stamford Farmers Cooperative — Grind &amp; Mix Feed Mill, Crop Center &amp; Farm Store · Stamford NY</title>
+<meta name="description" content="Member-owned since 1932. Custom and line-run feeds in 50 lb bags, 1000 lb totes or bulk. Custom fertilizer blending, two spray rigs, lime and fertilizer spreader rental. Farm, home, garden and pet retail on South Street, Stamford NY.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --barn:#8f2a20; --barn-d:#6d1e16; --field:#2f4a2c; --field-d:#213520;
+  --kraft:#e8dcc4; --kraft-d:#d6c6a4; --paper:#fbf8f1; --ink:#221f1a; --gray:#5f594f;
+  --gold:#c9922c; --white:#fff; --line:#ddd2b8; --black:#171512;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Lato',sans-serif;color:var(--ink);background:var(--paper);line-height:1.62}
+h1,h2,h3,h4,.disp{font-family:'Oswald',sans-serif;line-height:1.12;text-transform:uppercase;letter-spacing:.01em}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.btn{display:inline-block;background:var(--barn);color:#fff;font-family:'Oswald';font-weight:600;padding:13px 28px;border-radius:2px;text-decoration:none;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;transition:background .15s}
+.btn:hover{background:var(--barn-d)}
+.btn.green{background:var(--field)}
+.btn.green:hover{background:var(--field-d)}
+.btn.out{background:transparent;border:2px solid var(--kraft);color:var(--kraft)}
+.btn.out:hover{background:rgba(232,220,196,.15)}
+
+.tick{background:var(--black);color:var(--kraft-d);font-size:.87rem}
+.tick .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:8px 22px}
+.tick b{color:var(--gold)}
+
+header.nav{background:var(--field);color:#fff;position:sticky;top:0;z-index:30;border-bottom:4px solid var(--gold)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:11px 22px}
+.brand{display:flex;align-items:center;gap:13px;text-decoration:none}
+.brand .mark{width:50px;height:50px;border-radius:50%;background:var(--kraft);color:var(--field);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Oswald';font-weight:700;line-height:.95}
+.brand .mark .a{font-size:1.2rem}
+.brand .mark .b{font-size:.56rem;letter-spacing:.06em}
+.brand b{font-family:'Oswald';font-size:1.3rem;display:block;font-weight:600}
+.brand span{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:#adc3aa;font-weight:700;font-family:'Lato'}
+nav.links{display:flex;gap:23px;font-family:'Oswald';font-weight:500;font-size:.94rem;letter-spacing:.04em;text-transform:uppercase}
+nav.links a{text-decoration:none}
+nav.links a:hover{color:var(--gold)}
+@media(max-width:980px){nav.links{display:none}}
+
+/* dated season strip — the fix for the stale content problem */
+.dated{background:var(--gold);color:#3b2a08}
+.dated .wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:12px 22px;font-size:.97rem}
+.dated .stamp{background:#3b2a08;color:var(--gold);font-family:'Oswald';font-weight:600;padding:4px 11px;border-radius:2px;letter-spacing:.07em;font-size:.85rem;text-transform:uppercase}
+.dated b{font-weight:900}
+
+.hero{background:var(--field-d);color:#fff;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;opacity:.14;
+  background:repeating-linear-gradient(90deg,transparent 0 6px,rgba(255,255,255,.5) 6px 7px)}
+.hero .wrap{position:relative;z-index:2;padding-top:66px;padding-bottom:0}
+.hero .kick{color:var(--gold);font-family:'Oswald';letter-spacing:.2em;text-transform:uppercase;font-size:.8rem;margin-bottom:14px}
+.hero h1{font-size:clamp(2.2rem,5.2vw,3.9rem);max-width:19ch}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lead{margin:18px 0 8px;font-size:1.14rem;color:#cfdccd;max-width:56ch}
+/* split paths */
+.paths{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:44px;border-radius:4px 4px 0 0;overflow:hidden}
+@media(max-width:760px){.paths{grid-template-columns:1fr}}
+.paths .p{padding:32px 30px 36px}
+.paths .p.farm{background:var(--barn);color:#fff}
+.paths .p.store{background:var(--kraft);color:var(--ink)}
+.paths .p .tag{font-family:'Oswald';font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px;opacity:.85}
+.paths .p h2{font-size:1.75rem;margin-bottom:10px}
+.paths .p p{font-size:1rem;margin-bottom:18px}
+.paths .p.farm p{color:#f2d9d6}
+.paths .p.store p{color:var(--gray)}
+
+section{padding:72px 0}
+.sec-head{max-width:64ch;margin-bottom:36px}
+.eyebrow{color:var(--barn);font-family:'Oswald';font-weight:600;letter-spacing:.18em;text-transform:uppercase;font-size:.79rem;margin-bottom:10px}
+.sec-head h2{font-size:clamp(1.8rem,3.8vw,2.65rem)}
+.sec-head p{margin-top:12px;color:var(--gray);font-size:1.05rem;font-family:'Lato'}
+.kraftbg{background:var(--kraft)}
+
+/* feed tag table */
+.tagtable{background:var(--white);border:2px solid var(--black);border-radius:2px;overflow:hidden}
+.tagtable .head{background:var(--black);color:var(--kraft);padding:14px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.tagtable .head h3{font-size:1.35rem;color:#fff}
+.tagtable .head span{font-family:'Lato';font-size:.86rem;color:var(--kraft-d)}
+.row{display:grid;grid-template-columns:1.1fr 1.5fr 1fr;gap:0;border-bottom:1px solid var(--line)}
+@media(max-width:760px){.row{grid-template-columns:1fr}}
+.row:last-child{border-bottom:0}
+.row > div{padding:16px 20px;border-right:1px solid var(--line)}
+.row > div:last-child{border-right:0}
+.row.hdr{background:#f2ebdb;font-family:'Oswald';text-transform:uppercase;font-size:.82rem;letter-spacing:.1em;color:var(--gray)}
+.row b{font-family:'Oswald';font-size:1.08rem;display:block;text-transform:uppercase;letter-spacing:.02em}
+.row p{font-size:.95rem;color:var(--gray)}
+.pk{display:inline-block;background:var(--field);color:#fff;font-size:.73rem;font-family:'Oswald';letter-spacing:.06em;padding:3px 8px;border-radius:2px;margin:2px 3px 2px 0;text-transform:uppercase}
+
+/* crop center */
+.crop{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.crop .c{background:var(--white);border-top:5px solid var(--field);border:1px solid var(--line);border-top:5px solid var(--field);border-radius:2px;padding:24px}
+.crop .c h4{font-size:1.22rem;margin-bottom:9px;color:var(--field)}
+.crop .c p{font-size:.96rem;color:var(--gray)}
+.crop .c .num{font-family:'Oswald';font-size:2.1rem;color:var(--gold);line-height:1;margin-bottom:6px}
+
+/* retail departments */
+.depts{display:grid;grid-template-columns:repeat(auto-fit,minmax(178px,1fr));gap:14px}
+.depts .d{background:var(--white);border:1px solid var(--line);border-radius:2px;padding:18px;transition:border-color .15s}
+.depts .d:hover{border-color:var(--barn)}
+.depts .d h4{font-size:1.05rem;margin-bottom:5px}
+.depts .d p{font-size:.9rem;color:var(--gray)}
+
+/* spotlight */
+.spot{background:var(--barn);color:#fff}
+.spot .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:44px;align-items:center}
+@media(max-width:860px){.spot .wrap{grid-template-columns:1fr}}
+.spot .eyebrow{color:#f0c9a5}
+.spot h2{color:#fff;font-size:clamp(1.7rem,3.4vw,2.5rem);margin-bottom:16px}
+.spot p{color:#f2d9d6;font-size:1.05rem;margin-bottom:13px}
+.spot .qbox{background:rgba(0,0,0,.22);border-left:4px solid var(--gold);border-radius:0 3px 3px 0;padding:26px}
+.spot .qbox h4{color:var(--gold);font-size:1.15rem;margin-bottom:10px}
+.spot .qbox ul{list-style:none;font-family:'Lato';font-size:.98rem}
+.spot .qbox li{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.spot .qbox li:last-child{border-bottom:0}
+
+/* membership */
+.member{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:800px){.member{grid-template-columns:1fr}}
+.member .m{background:var(--white);border:1px solid var(--line);border-radius:2px;padding:28px}
+.member .m h3{font-size:1.5rem;margin-bottom:10px;color:var(--field)}
+.member .m p{color:var(--gray);font-size:.99rem}
+
+/* order form */
+.order{background:var(--black);color:#fff}
+.order .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px}
+@media(max-width:880px){.order .wrap{grid-template-columns:1fr}}
+.order h2{color:#fff;font-size:clamp(1.8rem,3.8vw,2.6rem);margin-bottom:14px}
+.order p.sub{color:var(--kraft-d);margin-bottom:22px}
+.order .info{font-family:'Lato';line-height:2;font-size:1rem;color:#cec5b1}
+.order .info b{color:var(--gold);font-family:'Oswald';letter-spacing:.04em}
+form{background:var(--white);border-radius:2px;padding:26px;color:var(--ink)}
+form h3{font-size:1.4rem;color:var(--field);margin-bottom:14px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+@media(max-width:520px){.f2{grid-template-columns:1fr}}
+form label{display:block;font-family:'Oswald';font-size:.8rem;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--gray);margin:12px 0 5px}
+form input,form select,form textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:2px;font-family:'Lato';font-size:.96rem;background:var(--paper);color:var(--ink)}
+form textarea{min-height:84px;resize:vertical}
+form .btn{width:100%;margin-top:18px;border:0;cursor:pointer;text-align:center}
+.fine{font-size:.8rem;color:var(--gray);margin-top:10px;text-align:center;font-family:'Lato'}
+
+footer{background:var(--field-d);color:#a9bda7;padding:44px 0 28px;font-size:.93rem;font-family:'Lato'}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(212px,1fr));gap:30px;margin-bottom:28px}
+footer h4{color:#fff;font-size:1.15rem;margin-bottom:10px}
+footer a{color:var(--gold);text-decoration:none}
+footer a:hover{text-decoration:underline}
+footer .bar{border-top:1px solid #2f4a2c;padding-top:17px;font-size:.84rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+</style>
+</head>
+<body>
+
+<div class="tick">
+  <div class="wrap">
+    <span>Member-owned since <b>1932</b> · Grind &amp; mix feed mill · Full-service crop center · Farm &amp; home store</span>
+    <span>6 South Street, Stamford NY · <b>(607) 652-7225</b></span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="mark"><span class="a">SFC</span><span class="b">1932</span></span>
+      <span><b>Stamford Farmers Cooperative</b><span>Eastern Delaware County, NY</span></span>
+    </a>
+    <nav class="links">
+      <a href="#mill">Feed Mill</a>
+      <a href="#crop">Crop Center</a>
+      <a href="#store">Farm Store</a>
+      <a href="#members">Members</a>
+      <a href="#order">Call-Ahead Order</a>
+    </nav>
+    <a class="btn" href="#order">Place an Order</a>
+  </div>
+</header>
+
+<div class="dated">
+  <div class="wrap">
+    <span class="stamp">Week of July 20</span>
+    <span><b>On the floor now:</b> second-cutting hay season — baler twine, net wrap and inoculant in stock. Fly control and mineral tubs moving fast. Spray rigs booking for post-harvest applications.</span>
+  </div>
+</div>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="kick">Stamford · Hobart · Harpersfield · Jefferson · Grand Gorge · Bloomville</div>
+    <h1>The mill can make <em>your</em> ration. A big-box store can't.</h1>
+    <p class="lead">Ninety-four years of grinding and mixing feed on South Street. Line-run and custom formulas in 50 lb bags, 1,000 lb totes or bulk, plus a crop center that blends fertilizer to your soil test and puts two spray rigs in your fields.</p>
+    <div class="paths">
+      <div class="p farm">
+        <div class="tag">For working farms</div>
+        <h2>Feed mill &amp; crop center</h2>
+        <p>Custom rations, bulk delivery, fertilizer blended to your test, chemical application, lime and spreader rental. Tell us the herd and the acres and we'll quote it.</p>
+        <a class="btn out" href="#mill">Farm services &amp; quotes</a>
+      </div>
+      <div class="p store">
+        <div class="tag">For everyone else</div>
+        <h2>The farm store</h2>
+        <p>Poultry and livestock feed, pet, equine, garden, footwear, home and heating, birding — and Jane's ice cream. Call ahead, we'll have it at the counter.</p>
+        <a class="btn green" href="#store">Shop departments</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="mill">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Grind &amp; Mix Feed Mill</div>
+      <h2>Read it like a feed tag: species, formula, package</h2>
+      <p>Farmers don't browse. They arrive knowing the species and the ration and need to know whether you can make it, in what package, and by when. This is the page that answers that in one screen.</p>
+    </div>
+    <div class="tagtable">
+      <div class="head">
+        <h3>Feeds we mill on South Street</h3>
+        <span>50 lb bag · 1,000 lb tote · bulk delivery</span>
+      </div>
+      <div class="row hdr"><div>Species</div><div>What we mill</div><div>Packaging</div></div>
+      <div class="row">
+        <div><b>Dairy</b><p>The mill's original business</p></div>
+        <div><p>Line-run dairy rations and custom formulas built to your forage test and production goals. Grain mixes, protein blends, mineral packages.</p></div>
+        <div><span class="pk">50 lb bag</span><span class="pk">1000 lb tote</span><span class="pk">Bulk</span></div>
+      </div>
+      <div class="row">
+        <div><b>Beef</b><p>Cow-calf through finish</p></div>
+        <div><p>Grower and finisher rations, creep feed, mineral. Custom mixes for graziers running on Delaware County pasture.</p></div>
+        <div><span class="pk">50 lb bag</span><span class="pk">1000 lb tote</span><span class="pk">Bulk</span></div>
+      </div>
+      <div class="row">
+        <div><b>Poultry</b><p>Layers &amp; meat birds</p></div>
+        <div><p>Chick starter, grower, layer ration, broiler finisher. Scaled for a backyard flock of six or a pastured batch of six hundred.</p></div>
+        <div><span class="pk">50 lb bag</span><span class="pk">1000 lb tote</span></div>
+      </div>
+      <div class="row">
+        <div><b>Swine, sheep &amp; goat</b><p>Small ruminant &amp; hog</p></div>
+        <div><p>Species-appropriate rations — including copper-safe sheep feed, which is the question people ask most and rarely get answered on a website.</p></div>
+        <div><span class="pk">50 lb bag</span><span class="pk">1000 lb tote</span></div>
+      </div>
+      <div class="row">
+        <div><b>Equine</b><p>Pleasure through performance</p></div>
+        <div><p>Pelleted and textured feeds, ration balancers, senior formulas. Custom blends for barns running a consistent program.</p></div>
+        <div><span class="pk">50 lb bag</span><span class="pk">1000 lb tote</span></div>
+      </div>
+    </div>
+    <p style="margin-top:18px;color:var(--gray);font-size:.95rem;max-width:74ch">Specific formulas, ingredient lists and lead times to be confirmed with the mill before publication — this table shows the structure, not final specifications.</p>
+  </div>
+</section>
+
+<section class="kraftbg" id="crop">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Crop Center</div>
+      <h2>Blended to your soil test, applied by our rigs</h2>
+      <p>The crop center is the part of the co-op that a chain store structurally cannot copy, and it's currently invisible online.</p>
+    </div>
+    <div class="crop">
+      <div class="c"><div class="num">2</div><h4>Spray rigs</h4><p>Two rigs available for chemical application across eastern Delaware County. Booked by the field, scheduled around your cutting.</p></div>
+      <div class="c"><div class="num">3</div><h4>Package sizes</h4><p>Custom fertilizer blends in 50 lb bags, 1,000 lb totes, or loaded into our spreaders for rent.</p></div>
+      <div class="c"><div class="num">Day</div><h4>Lime spreader rental</h4><p>Rented by the day so you can fit your own fields on your own schedule and your own weather window.</p></div>
+      <div class="c"><div class="num">Test</div><h4>Blended to the number</h4><p>Bring the soil test, get the blend. Tailor-made to the crop rather than whatever's stacked on a pallet.</p></div>
+    </div>
+    <div style="margin-top:28px"><a class="btn" href="#order">Request a crop-center quote</a></div>
+  </div>
+</section>
+
+<section id="store">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Farm &amp; Home Store</div>
+      <h2>Eleven departments on South Street</h2>
+      <p>Deeper inventory than the name suggests, and staff who can tell you which of two feeds is right — which is the whole reason to drive past the big box.</p>
+    </div>
+    <div class="depts">
+      <div class="d"><h4>Livestock</h4><p>Dairy, beef, swine, sheep, goat — feed, mineral, supplies.</p></div>
+      <div class="d"><h4>Poultry</h4><p>Feed for layers and meat birds, feeders, waterers, bedding.</p></div>
+      <div class="d"><h4>Equine</h4><p>Feed, supplements, tack basics, stable supplies.</p></div>
+      <div class="d"><h4>Pet</h4><p>Dog and cat food, treats, care items for the two- and four-legged.</p></div>
+      <div class="d"><h4>Homesteading</h4><p>Starting out on a few acres — the department for people going self-sufficient.</p></div>
+      <div class="d"><h4>Garden</h4><p>Seed, soil, fertilizer, tools, planters. Rookie or old pro.</p></div>
+      <div class="d"><h4>Footwear &amp; apparel</h4><p>Boots and workwear for whatever the season is doing.</p></div>
+      <div class="d"><h4>Home &amp; heating</h4><p>Stove supplies, household needs, seasonal heating goods.</p></div>
+      <div class="d"><h4>Birding</h4><p>Seed, suet and feeders for the yard.</p></div>
+      <div class="d"><h4>Beekeeping</h4><p>Hive starter kits for anyone thinking about making their own honey.</p></div>
+      <div class="d"><h4>Jane's ice cream</h4><p>Made in New York. Yes, it belongs on the website.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="spot">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Farmer spotlight</div>
+      <h2>The co-op already writes the best local farm content in the county. Nobody can find it.</h2>
+      <p>The existing Farmer Spotlight on Posthaven Farm in Hobart — eighth generation, registered Holsteins, the whole family named — is genuinely good writing that's buried at the bottom of a page.</p>
+      <p>Run one of these a month, put it on the front, and the co-op becomes the place eastern Delaware County reads about itself. That is the cheapest and most durable local search advantage available to a business like this.</p>
+    </div>
+    <div class="qbox">
+      <h4>What the spotlight series does</h4>
+      <ul>
+        <li>Gives every member farm a page that ranks for its own name</li>
+        <li>Gives the co-op fresh, dated content without inventing anything</li>
+        <li>Turns members into people who share the co-op's link</li>
+        <li>Documents a farming community that is genuinely shrinking</li>
+        <li>Costs a phone call and a camera, not an ad budget</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="kraftbg" id="members">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Membership</div>
+      <h2>Buy local by locals — and own a piece of the mill</h2>
+    </div>
+    <div class="member">
+      <div class="m">
+        <h3>Why members join</h3>
+        <p>A cooperative is owned by the farms it serves. Membership is what keeps a grind-and-mix mill running in a village of 1,200 people, and it's the difference between a supplier and a shared asset. The current site never explains how to become one — a short page and a form fixes that.</p>
+      </div>
+      <div class="m">
+        <h3>What it means in practice</h3>
+        <p>Member pricing, a voice in how the co-op is run, and a mill that stays open because the people using it own it. Specific membership terms, share structure and patronage details to be supplied by the co-op board before publication.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="order" id="order">
+  <div class="wrap">
+    <div>
+      <h2>Call-ahead orders, finally in writing</h2>
+      <p class="sub">The co-op already offers call-ahead ordering, payment by phone and delivery in some cases. Right now there's no way to start that online. This form does — it lands in the office with the species, the formula and the package size already written down.</p>
+      <div class="info">
+        <b>Stamford Farmers Cooperative</b><br>
+        6 South Street, Stamford, NY 12167<br>
+        <b>Phone:</b> (607) 652-7225<br>
+        <b>Monday–Friday:</b> 8:00 am – 5:00 pm<br>
+        <b>Saturday:</b> 8:00 am – 3:00 pm<br>
+        <b>Sunday:</b> Closed
+      </div>
+      <p style="margin-top:20px;color:#9c917c;font-size:.88rem">Note for Sandro: the current site prints the address two ways — "6 South Street" in the body and "6th South Street" in the footer — and publishes no email address anywhere. Confirm both before the page goes live.</p>
+    </div>
+    <form onsubmit="event.preventDefault();this.querySelector('button.btn').textContent='Sent — the office will confirm your order';">
+      <h3>Order &amp; quote request</h3>
+      <div class="f2">
+        <div><label for="n">Name / farm</label><input id="n" type="text" placeholder="Name or farm name"></div>
+        <div><label for="p">Phone</label><input id="p" type="tel" placeholder="(607) 000-0000"></div>
+      </div>
+      <label for="e">Email</label><input id="e" type="email" placeholder="you@email.com">
+      <label for="w">What do you need?</label>
+      <select id="w">
+        <option>Feed mill — line-run feed</option>
+        <option>Feed mill — custom ration quote</option>
+        <option>Crop center — fertilizer blend</option>
+        <option>Crop center — spray rig scheduling</option>
+        <option>Crop center — lime or spreader rental</option>
+        <option>Farm store — call-ahead order</option>
+        <option>Membership inquiry</option>
+      </select>
+      <div class="f2">
+        <div><label for="sp">Species / crop</label>
+          <select id="sp"><option>Dairy</option><option>Beef</option><option>Poultry</option><option>Swine</option><option>Sheep or goat</option><option>Equine</option><option>Field crop / hay</option><option>Not applicable</option></select>
+        </div>
+        <div><label for="pk">Package</label>
+          <select id="pk"><option>50 lb bags</option><option>1,000 lb totes</option><option>Bulk delivery</option><option>Not sure</option></select>
+        </div>
+      </div>
+      <label for="m">Quantity, formula, timing</label>
+      <textarea id="m" placeholder="e.g. 2 totes of the custom dairy mix we ran in June, plus 10 bags of chick starter — pickup Saturday morning"></textarea>
+      <button class="btn green" type="submit">Send order request</button>
+      <div class="fine">Demonstration form — this preview does not store or transmit anything.</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>Stamford Farmers Cooperative</h4>
+        <p>6 South Street<br>Stamford, NY 12167</p>
+        <p style="margin-top:10px"><a href="tel:16076527225">(607) 652-7225</a></p>
+      </div>
+      <div>
+        <h4>Farm services</h4>
+        <p>Grind &amp; mix feed mill<br>Custom rations<br>Fertilizer blending<br>Chemical application<br>Lime &amp; spreader rental</p>
+      </div>
+      <div>
+        <h4>Store departments</h4>
+        <p>Livestock · Poultry · Equine · Pet<br>Homesteading · Garden · Birding<br>Footwear · Home &amp; heating</p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Mon–Fri 8:00 am – 5:00 pm<br>Saturday 8:00 am – 3:00 pm<br>Sunday closed</p>
+      </div>
+    </div>
+    <div class="bar">
+      <span>Concept preview prepared by Onyx Rise Media.</span>
+      <span>Member-owned since 1932 · Feed lists and membership terms shown as structure pending co-op confirmation.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saratoga Lake Equestrian Center — Lessons, Boarding &amp; Summer Camp | Mechanicville, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --barn:#6b4a2b; --barn2:#8a6238; --hay:#e7c878; --meadow:#5f7d4f; --meadow2:#728f5e;
+    --sky:#cfe0e6; --cream:#fbf7ee; --ink:#3a3024; --soft:#736a59; --line:#e6dcc8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Nunito Sans',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  h1,h2,h3,.disp{font-family:'Fraunces',Georgia,serif;font-weight:600;letter-spacing:.2px}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  /* topbar */
+  .top{background:var(--barn);color:#fdf6e7;font-size:.92rem}
+  .top .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;align-items:center;padding:9px 22px}
+  .top b{color:var(--hay)}
+  /* hero */
+  .hero{position:relative;color:#fff;padding:78px 0 66px;
+     background:linear-gradient(180deg,rgba(60,46,28,.50),rgba(60,46,28,.66)),
+     linear-gradient(135deg,#8aa06f,#5f7d4f 55%,#496a52);}
+  .pill{display:inline-block;background:var(--hay);color:#4a3a16;font-weight:700;font-size:.8rem;
+     padding:5px 14px;border-radius:30px;letter-spacing:.5px;margin-bottom:16px}
+  .hero h1{font-size:3rem;line-height:1.04;max-width:16ch}
+  .hero p{font-size:1.2rem;max-width:48ch;margin:16px 0 4px;color:#f5efe2}
+  .hero .where{color:#e7e0cf;font-size:1rem;margin-top:8px}
+  .ctas{display:flex;flex-wrap:wrap;gap:13px;margin-top:26px}
+  .btn{display:inline-block;font-weight:700;text-decoration:none;padding:13px 24px;border-radius:30px;font-size:1rem}
+  .btn-hay{background:var(--hay);color:#4a3a16}
+  .btn-hay:hover{background:#f0d589}
+  .btn-line{border:2px solid #fff;color:#fff}
+  /* quick facts */
+  .facts{background:var(--cream)}
+  .facts .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:26px 22px;text-align:center}
+  .facts .n{font-family:'Fraunces';font-size:1.7rem;color:var(--meadow)}
+  .facts small{display:block;color:var(--soft);font-size:.86rem}
+  /* sections */
+  section.pad{padding:58px 0}
+  .eyebrow{color:var(--barn2);font-weight:700;text-transform:uppercase;letter-spacing:1.6px;font-size:.78rem}
+  h2.sec{font-size:2.1rem;margin:6px 0 10px;color:var(--barn)}
+  .sub{color:var(--soft);max-width:62ch;margin-bottom:28px;font-size:1.05rem}
+  .grid{display:grid;gap:18px}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g2{grid-template-columns:1fr 1fr}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;box-shadow:0 6px 18px rgba(107,74,43,.05)}
+  .card h3{color:var(--meadow);font-size:1.25rem;margin-bottom:8px}
+  .disc{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
+  .disc span{background:#eef3e7;color:#43603a;border-radius:30px;padding:6px 14px;font-size:.9rem;font-weight:600}
+  /* camp band */
+  .camp{background:linear-gradient(135deg,#6b4a2b,#8a6238);color:#fbf3e2}
+  .camp .wrap{padding:54px 22px}
+  .camp h2{color:#fff;font-size:2rem}
+  .camp .rows{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+  .camp .rows div{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);border-radius:10px;padding:18px}
+  .camp .rows h3{color:var(--hay);font-size:1.1rem;margin-bottom:6px}
+  .camp small{color:#ecd9b6}
+  /* farm split */
+  .farm .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}
+  .imgph{aspect-ratio:5/4;border-radius:14px;border:1px solid var(--line);
+     background:linear-gradient(135deg,#cfe0e6,#a9c4a0);display:flex;align-items:center;justify-content:center;
+     color:#4a5b46;font-family:'Fraunces';text-align:center;padding:20px}
+  .farm ul{list-style:none;margin-top:10px}
+  .farm li{padding:8px 0 8px 28px;position:relative;border-bottom:1px dashed var(--line)}
+  .farm li::before{content:"\1F40E";position:absolute;left:0}
+  /* contact */
+  .contact{background:#eef3e7}
+  .contact .wrap{padding:56px 22px;display:grid;grid-template-columns:1fr 1fr;gap:32px}
+  .contact h2{color:var(--barn)}
+  form{display:grid;gap:11px}
+  input,select,textarea{font-family:inherit;font-size:1rem;padding:12px 14px;border:1px solid var(--line);border-radius:8px;width:100%;background:#fff}
+  textarea{min-height:92px;resize:vertical}
+  .callbox{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}
+  .callbox a.ph{font-family:'Fraunces';font-size:1.8rem;color:var(--meadow);text-decoration:none;display:block;margin:4px 0}
+  .small{font-size:.86rem;color:var(--soft)}
+  footer{background:var(--barn);color:#e7d9c2;text-align:center;font-size:.86rem;padding:26px 22px}
+  @media(max-width:760px){
+    .hero h1{font-size:2.2rem}
+    .facts .wrap{grid-template-columns:1fr 1fr}
+    .g3,.g2,.camp .rows,.farm .wrap,.contact .wrap{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <span><b>Saratoga Lake Equestrian Center</b> · Mechanicville, NY</span>
+  <span>Lessons · Boarding · Summer Horse Camp — <b>(518) 788-1905</b></span>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <span class="pill">15 minutes from Saratoga Springs &amp; Clifton Park</span>
+  <h1>Come meet the horses — and Edie.</h1>
+  <p>A friendly place to take your first lesson, lease or ride a horse, and board where there's an indoor arena for the days the weather won't cooperate.</p>
+  <p class="where">467 Co Rd 75, Mechanicville, NY · 55 acres &amp; trails</p>
+  <div class="ctas">
+    <a href="#visit" class="btn btn-hay">Schedule a tour or first lesson</a>
+    <a href="tel:5187881905" class="btn btn-line">Call (518) 788-1905</a>
+  </div>
+</div></header>
+
+<div class="facts"><div class="wrap">
+  <div><div class="n">55</div><small>acres &amp; trails to ride</small></div>
+  <div><div class="n">Indoor</div><small>arena — ride rain or shine</small></div>
+  <div><div class="n">5+</div><small>disciplines taught</small></div>
+  <div><div class="n">Ages 5+</div><small>kids' summer camp</small></div>
+</div></div>
+
+<section class="pad"><div class="wrap">
+  <span class="eyebrow">Lessons &amp; riding</span>
+  <h2 class="sec">Learn with a certified instructor</h2>
+  <p class="sub">Edie, our certified instructor, teaches new and returning riders in a friendly, no-pressure atmosphere — kids and adults welcome. Take lessons, lease a horse, or just come ride.</p>
+  <div class="grid g3">
+    <div class="card"><h3>First-time riders</h3><p>Never been on a horse? Start with a tour, meet the horses, and take a lesson built for beginners of any age.</p></div>
+    <div class="card"><h3>Lease &amp; ride</h3><p>Riding regularly but not ready to own? Lease a horse and get consistent saddle time without the full commitment.</p></div>
+    <div class="card"><h3>Adult riders</h3><p>Coming back after years away or starting fresh — adults get the same friendly, patient instruction.</p></div>
+  </div>
+  <div class="disc">
+    <span>Western</span><span>English</span><span>Jumping</span><span>Dressage</span><span>Driving</span>
+  </div>
+</div></section>
+
+<div class="camp"><div class="wrap">
+  <span class="eyebrow" style="color:var(--hay)">For the kids</span>
+  <h2>Summer horse camp at the barn</h2>
+  <p style="max-width:54ch;color:#f1e3c6">Three camp sessions for young riders — mornings with the horses, hands-on and supervised. Spots fill, so it's worth asking early.</p>
+  <div class="rows">
+    <div><h3>Beginners, age 5+</h3><small>A gentle first introduction to horses and riding.</small></div>
+    <div><h3>Ages 7–15</h3><small>For kids ready for more time in and out of the saddle.</small></div>
+    <div><h3>Mon–Fri, 9am–12pm</h3><small>Half-day mornings through the summer.</small></div>
+  </div>
+  <p class="small" style="color:#ecd9b6;margin-top:16px">Contact the barn for this summer's session dates and openings.</p>
+</div></div>
+
+<section class="farm pad"><div class="wrap">
+  <div>
+    <span class="eyebrow">Boarding</span>
+    <h2 class="sec">A calm place to keep your horse</h2>
+    <p class="sub">Board where there's room to ride and an indoor arena for winter and wet days — minutes from Saratoga Springs and Clifton Park.</p>
+    <ul>
+      <li>55 acres with trails to ride out on</li>
+      <li>Indoor arena for year-round riding</li>
+      <li>Friendly, family atmosphere — not a high-pressure show barn</li>
+      <li>Schedule a tour to see the facility and meet the horses</li>
+    </ul>
+  </div>
+  <div class="imgph">[ Placeholder — add a real photo of the indoor arena, barn, or horses on the trail ]</div>
+</div></section>
+
+<section class="contact pad" id="visit"><div class="wrap">
+  <div>
+    <span class="eyebrow">Plan your visit</span>
+    <h2 class="sec">Request a tour, first lesson, or camp spot</h2>
+    <p class="sub" style="margin-bottom:18px">Tell us a little about who's riding and what you're after, and we'll get back to set up a time. Right now this all lives on Facebook — this form gives parents and new riders a real way to reach you.</p>
+    <div class="callbox">
+      <span class="small">Rather just call?</span>
+      <a class="ph" href="tel:5187881905">(518) 788-1905</a>
+      <span class="small">467 Co Rd 75, Mechanicville, NY 12118</span>
+    </div>
+  </div>
+  <div>
+    <form onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';">
+      <input type="text" placeholder="Your name" required>
+      <input type="text" placeholder="Phone or email" required>
+      <select>
+        <option>I'm interested in…</option>
+        <option>A first lesson</option>
+        <option>Lessons (riding already)</option>
+        <option>Summer horse camp</option>
+        <option>Boarding</option>
+        <option>Leasing a horse</option>
+        <option>A tour of the farm</option>
+      </select>
+      <input type="text" placeholder="Rider's age(s) — if it's for kids">
+      <textarea placeholder="Anything else? (experience level, preferred days, questions...)"></textarea>
+      <button class="btn btn-hay" type="submit" style="border:none;cursor:pointer">Send my request</button>
+      <span class="ok small" style="display:none;color:var(--meadow);font-weight:700">Thanks — we'll be in touch to set up a time.</span>
+    </form>
+  </div>
+</div></section>
+
+<footer>
+  Saratoga Lake Equestrian Center · 467 Co Rd 75, Mechanicville, NY 12118 · (518) 788-1905<br>
+  Riding lessons · horse boarding · summer camp — 15 minutes from Saratoga Springs.<br>
+  <span style="opacity:.65">Preview concept prepared by Onyx Rise Media — not the live site.</span>
+</footer>
+
+</body>
+</html>

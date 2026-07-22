@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Scoop of Whitney Point — Soft Serve &amp; Hard Scoop on Route 11</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--cherry:#c8384a;--cherry-deep:#9c2334;--cream:#fff7ea;--mint:#bfe3d0;--mint-deep:#2e6e52;--choc:#4a2c20;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--choc);line-height:1.6;}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 20px;}
+  .awning{height:16px;background:repeating-linear-gradient(90deg,var(--cherry) 0 34px,#fff 34px 68px);}
+  header{background:#fff;padding:.9rem 0;border-bottom:3px solid var(--cherry);}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.6rem;}
+  .logo{font-family:'Fredoka',sans-serif;font-weight:700;font-size:1.5rem;color:var(--cherry);}
+  .logo small{display:block;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mint-deep);font-weight:600;}
+  .open-pill{background:var(--mint);color:var(--mint-deep);font-weight:700;padding:.5rem 1.1rem;border-radius:30px;font-size:.9rem;}
+  .hero{text-align:center;padding:4rem 0 3.4rem;background:radial-gradient(circle at 50% 130%,var(--mint) 0%,var(--cream) 55%);}
+  .hero h1{font-family:'Fredoka',sans-serif;font-weight:700;font-size:clamp(2rem,5.2vw,3.3rem);color:var(--cherry-deep);line-height:1.12;max-width:22ch;margin:0 auto 1rem;}
+  .hero h1 span{color:var(--mint-deep);}
+  .hero p{max-width:58ch;margin:0 auto 1.6rem;font-size:1.12rem;}
+  .btn{display:inline-block;background:var(--cherry);color:#fff;font-family:'Fredoka',sans-serif;font-weight:600;padding:.85rem 1.8rem;border-radius:30px;text-decoration:none;margin:.25rem;}
+  .btn.alt{background:#fff;color:var(--cherry);border:2px solid var(--cherry);}
+  section{padding:3.4rem 0;}
+  h2{font-family:'Fredoka',sans-serif;font-weight:600;font-size:clamp(1.5rem,3.4vw,2.1rem);color:var(--cherry-deep);margin-bottom:1.4rem;text-align:center;}
+  .board{background:var(--choc);border-radius:14px;padding:2.4rem;color:var(--cream);max-width:760px;margin:0 auto;border:8px solid var(--cherry-deep);}
+  .board h2{color:#fff;text-align:left;}
+  .board h2 em{color:var(--mint);font-style:normal;}
+  .flavors{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.4rem 2rem;margin-top:1rem;}
+  .flavors div{display:flex;justify-content:space-between;border-bottom:2px dotted rgba(255,247,234,.35);padding:.45rem 0;font-size:1rem;}
+  .board .foot{margin-top:1.4rem;font-size:.9rem;color:var(--mint);}
+  .lineup{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.3rem;}
+  .card{background:#fff;border-radius:12px;padding:1.7rem;box-shadow:0 2px 8px rgba(74,44,32,.12);border-top:6px solid var(--mint-deep);}
+  .card h3{font-family:'Fredoka',sans-serif;font-weight:600;color:var(--cherry-deep);font-size:1.15rem;margin-bottom:.55rem;}
+  .card p{font-size:.96rem;}
+  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.3rem;}
+  .q{background:#fff;border-radius:12px;padding:1.6rem;position:relative;box-shadow:0 2px 8px rgba(74,44,32,.12);}
+  .q::before{content:"“";font-family:'Fredoka',sans-serif;font-size:3rem;color:var(--mint-deep);position:absolute;top:-2px;left:14px;}
+  .q p{font-size:.98rem;font-style:italic;padding-top:.9rem;}
+  .q span{display:block;margin-top:.7rem;font-weight:700;color:var(--cherry-deep);font-size:.88rem;}
+  .picnic{background:var(--mint);border-radius:14px;padding:2.4rem;text-align:center;}
+  .picnic h2{margin-bottom:.8rem;}
+  .picnic p{max-width:62ch;margin:0 auto;}
+  .visit{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;}
+  @media(max-width:700px){.visit{grid-template-columns:1fr;}}
+  .visit-card{background:#fff;border-radius:12px;padding:1.7rem;box-shadow:0 2px 8px rgba(74,44,32,.12);}
+  .visit-card h3{font-family:'Fredoka',sans-serif;color:var(--cherry-deep);margin-bottom:.7rem;}
+  .visit-card table{width:100%;border-collapse:collapse;}
+  .visit-card td{padding:.4rem 0;border-bottom:1px dashed #e3d5c2;font-size:.95rem;}
+  .visit-card td:last-child{text-align:right;font-weight:700;}
+  .cta{background:var(--cherry);color:#fff;text-align:center;padding:3.6rem 0;}
+  .cta h2{color:#fff;}
+  .cta .phone{font-family:'Fredoka',sans-serif;font-size:clamp(1.6rem,4vw,2.4rem);color:#fff;display:block;margin:.6rem 0 1.2rem;text-decoration:none;}
+  .cta .btn{background:#fff;color:var(--cherry);}
+  footer{background:var(--cherry-deep);color:#f3cdd3;font-size:.85rem;text-align:center;padding:1.1rem 0;}
+  .ph{outline:2px dashed #b8860b;outline-offset:2px;font-size:.8rem;}
+</style>
+</head>
+<body>
+<div class="awning"></div>
+<header>
+  <div class="wrap">
+    <div class="logo">The Scoop<small>Whitney Point, NY — on Route 11</small></div>
+    <div class="open-pill">Seasonal · open daily <span class="ph">[hours conflict across listings: 12–8 vs 12–9 — confirm]</span></div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>The window between you and <span>a black-raspberry twist</span> is on Main Street.</h1>
+    <p>Halfway between Binghamton and Cortland, one turn off the I-81 Whitney Point exit: a family-run stand with soft serve, hard-scoop flavors, sundaes buried in hot fudge — and a lot full of picnic tables where nobody hurries you.</p>
+    <a class="btn" href="#today">See today's flavors</a>
+    <a class="btn alt" href="#visit">Point me there</a>
+  </div>
+</div>
+
+<section id="today">
+  <div class="wrap">
+    <div class="board">
+      <h2>Today at the window <em>— updated by us, not a robot</em></h2>
+      <div class="flavors">
+        <div><span>Soft serve of the day</span><strong><span class="ph">[PLACEHOLDER]</span></strong></div>
+        <div><span>Twist</span><strong><span class="ph">[PLACEHOLDER]</span></strong></div>
+        <div><span>Hard scoop — new this week</span><strong><span class="ph">[PLACEHOLDER]</span></strong></div>
+        <div><span>Sundae special</span><strong><span class="ph">[PLACEHOLDER]</span></strong></div>
+      </div>
+      <p class="foot">Some listing sites publish our hours and phone number wrong. This board, the hours below, and (607) 692-3957 are the real thing.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <h2>The lineup</h2>
+    <div class="lineup">
+      <div class="card"><h3>Soft serve</h3><p>The reason people pull over. Rotating flavors beyond chocolate-vanilla — black raspberry and pumpkin both have a local following.</p></div>
+      <div class="card"><h3>Hard scoop</h3><p>Cabinet flavors for the cone traditionalists — kid-size to "should have brought napkins."</p></div>
+      <div class="card"><h3>Sundaes &amp; twists</h3><p>Hot fudge sundaes made properly — fudge to the bottom of the cup, not a drizzle on top.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <h2>What the reviews keep saying</h2>
+    <div class="quotes">
+      <div class="q"><p>Fantastic soft serve, friendly service, plenty of parking — and the prices don't sting.</p><span>— summarized from Yelp reviews</span></div>
+      <div class="q"><p>The hot fudge sundae with chocolate soft serve is the order.</p><span>— summarized from Yelp reviews</span></div>
+      <div class="q"><p>Best ice cream around, super friendly, family owned.</p><span>— summarized from customer reviews</span></div>
+    </div>
+    <p style="text-align:center;margin-top:1rem;font-size:.85rem;"><span class="ph">[pull-quotes are paraphrased from public reviews — swap in exact quotes with permission]</span></p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="picnic">
+      <h2>Stay for the picnic tables</h2>
+      <p>Coming off the reservoir, Dorchester Park, or a ballgame at the fairgrounds? The lot has room for the truck and the boat trailer, and the tables have room for the whole team. Cones travel badly — eat them here.</p>
+    </div>
+  </div>
+</section>
+
+<section id="visit" style="padding-top:0;">
+  <div class="wrap visit">
+    <div class="visit-card">
+      <h3>Find the stand</h3>
+      <p>Main St / US-11, Whitney Point, NY 13862<br>One turn off I-81, exit 8.</p>
+      <p style="margin-top:.7rem;font-weight:700;">(607) 692-3957</p>
+      <p style="margin-top:.6rem;font-size:.85rem;"><span class="ph">[street number to confirm]</span></p>
+    </div>
+    <div class="visit-card">
+      <h3>Season &amp; hours</h3>
+      <table>
+        <tr><td>Every day, in season</td><td>12:00 – 8:00 <span class="ph">[confirm]</span></td></tr>
+        <tr><td>Season</td><td><span class="ph">[opening/closing dates — confirm]</span></td></tr>
+      </table>
+      <p style="margin-top:.8rem;font-size:.92rem;">Flavor updates land here and on the stand's Facebook &amp; Instagram (@thewpscoop).</p>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>Checking if the pumpkin soft serve is on?</h2>
+    <a class="phone" href="tel:6076923957">(607) 692-3957</a>
+    <a class="btn" href="tel:6076923957">Call the window</a>
+  </div>
+</div>
+<footer>The Scoop · Main St (US-11), Whitney Point, NY 13862 · Family owned &amp; operated</footer>
+</body>
+</html>

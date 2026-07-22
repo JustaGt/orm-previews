@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peachey Excavating LLC — Site Work, Driveways &amp; Land Clearing, Canajoharie NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--umber:#5b4636;--clay:#a9744f;--steel:#41474e;--cream:#f6f1e8;--sand:#e8ddc9;--ink:#2c2620;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;}
+  h1,h2,h3{font-family:'Archivo Black',sans-serif;line-height:1.1;}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px;}
+  /* hero */
+  .hero{background:var(--umber);color:var(--cream);padding:76px 0 60px;border-bottom:8px solid var(--clay);}
+  .tag{display:inline-block;background:var(--clay);color:#fff;padding:4px 14px;border-radius:2px;font-weight:700;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;}
+  .hero h1{font-size:clamp(2rem,4.6vw,3.2rem);margin:18px 0;}
+  .hero p{max-width:36em;font-size:1.1rem;color:#e9e0d2;}
+  .cta{display:inline-block;background:var(--clay);color:#fff;font-weight:700;padding:15px 30px;border-radius:3px;text-decoration:none;margin-top:24px;font-size:1.02rem;}
+  .cta:hover{background:#8f5c3b;}
+  .hero-badges{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap;}
+  .badge{border:1px solid rgba(246,241,232,.4);padding:8px 16px;border-radius:3px;font-size:.88rem;color:#e9e0d2;}
+  /* services */
+  .services{padding:64px 0;}
+  h2.sec{font-size:1.9rem;margin-bottom:10px;color:var(--umber);}
+  .lede{color:#5d554a;max-width:44em;margin-bottom:30px;}
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;}
+  .svc{background:#fff;border:1px solid var(--sand);border-radius:4px;padding:24px;}
+  .svc h3{font-size:1.05rem;color:var(--umber);margin-bottom:8px;}
+  .svc p{color:#5d554a;font-size:.96rem;}
+  /* cross-section band */
+  .xsec{background:var(--steel);color:#fff;padding:64px 0;}
+  .xsec .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;}
+  .xsec h2{font-size:1.9rem;margin-bottom:14px;}
+  .xsec p{color:#ccd1d6;margin-bottom:12px;font-size:1rem;}
+  .layers{background:#fff;border-radius:6px;padding:24px;}
+  .layer{display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px dashed #d8d3ca;}
+  .layer:last-child{border-bottom:none;}
+  .swatch{width:54px;height:26px;border-radius:3px;flex-shrink:0;}
+  .layer b{color:var(--ink);font-size:.95rem;display:block;}
+  .layer span{color:#6a6157;font-size:.85rem;}
+  /* estimate steps */
+  .estimate{padding:64px 0;}
+  .est-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin-top:26px;}
+  .est{background:#fff;border-top:6px solid var(--clay);border-radius:4px;padding:24px;}
+  .est .n{font-family:'Archivo Black',sans-serif;color:var(--clay);font-size:2rem;}
+  .est h3{font-size:1.1rem;color:var(--umber);margin:6px 0;}
+  .est p{color:#5d554a;font-size:.95rem;}
+  /* trust */
+  .trust{background:var(--sand);padding:52px 0;}
+  .trust .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;text-align:center;}
+  .t-item h3{font-size:1.05rem;color:var(--umber);margin-bottom:6px;}
+  .t-item p{color:#6a6157;font-size:.92rem;}
+  /* contact */
+  .contact{padding:64px 0;}
+  .contact .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;}
+  .towns{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0;}
+  .towns span{background:#fff;border:1px solid var(--sand);border-radius:20px;padding:5px 14px;font-size:.9rem;color:#5d554a;}
+  form{background:#fff;border:1px solid var(--sand);border-top:6px solid var(--clay);border-radius:4px;padding:28px;}
+  form h3{font-family:'Archivo Black',sans-serif;color:var(--umber);font-size:1.2rem;margin-bottom:16px;}
+  label{display:block;font-weight:600;font-size:.9rem;margin:12px 0 4px;color:var(--ink);}
+  input,select,textarea{width:100%;padding:11px;border:1px solid #cfc7b8;border-radius:3px;font-family:inherit;font-size:.95rem;background:var(--cream);}
+  button{width:100%;background:var(--umber);color:#fff;font-weight:700;border:none;padding:15px;border-radius:3px;font-size:1.02rem;margin-top:18px;cursor:pointer;}
+  button:hover{background:var(--clay);}
+  .form-note{font-size:.82rem;color:#8a8175;margin-top:10px;}
+  footer{background:var(--umber);color:#d9cfc0;padding:26px 0;font-size:.88rem;}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+  @media(max-width:840px){.xsec .wrap{grid-template-columns:1fr;}.contact .wrap{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">Excavation · Canajoharie, NY</span>
+    <h1>Ground work done once, done right — from the first walk of the site.</h1>
+    <p>Peachey Excavating grades pads, cuts driveways, clears land, and moves earth across the Canajoharie hills. Owner Mahlon Peachey walks every job himself and gives you a firm number before a machine ever arrives.</p>
+    <a class="cta" href="#estimate">Request a Free On-Site Estimate</a>
+    <div class="hero-badges">
+      <span class="badge">BBB Accredited · A+ Rating</span>
+      <span class="badge">Nextdoor Neighborhood Favorite 2024</span>
+      <span class="badge">496 Conway Rd, Canajoharie</span>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="wrap">
+    <h2 class="sec">What the machines are here for</h2>
+    <p class="lede">One crew, one owner, and equipment sized for rural Montgomery County work — from a house pad to a quarter-mile lane.</p>
+    <div class="svc-grid">
+      <div class="svc"><h3>Driveways &amp; Lanes</h3><p>New cuts, regrades, and rescues of washboard gravel drives — built with the base and crown that survive a Mohawk Valley spring.</p></div>
+      <div class="svc"><h3>Foundation &amp; Pad Prep</h3><p>Dig-outs and compacted pads for homes, garages, and pole barns, graded to the builder's print and ready for the pour.</p></div>
+      <div class="svc"><h3>Land &amp; Underbrush Clearing</h3><p>Overgrown lots, fence lines, and building sites opened up — brush cleared, stumps out, usable ground left behind.</p></div>
+      <div class="svc"><h3>Grading &amp; Drainage</h3><p>Water is the enemy of every driveway and basement in these hills. Swales, ditching, and finish grading that send it where it belongs.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="xsec">
+  <div class="wrap">
+    <div>
+      <h2>Why a Peachey driveway doesn't wash out</h2>
+      <p>A driveway that lasts isn't about the stone you can see — it's about what's under it. Skip the base or the crown and you'll be paying for the same driveway again in two springs.</p>
+      <p>This is the part of the job you're actually buying. It's also the part cheap bids leave out.</p>
+    </div>
+    <div class="layers">
+      <div class="layer"><div class="swatch" style="background:#b8b2a6;"></div><div><b>Surface stone, crowned to shed water</b><span>The visible 2–3 inches — shaped so rain runs off, not down the middle</span></div></div>
+      <div class="layer"><div class="swatch" style="background:#8f8574;"></div><div><b>Compacted base course</b><span>The structure that carries your truck — where cut-rate jobs go thin</span></div></div>
+      <div class="layer"><div class="swatch" style="background:#6a6157;"></div><div><b>Fabric &amp; subgrade prep</b><span>Keeps the base from sinking into the clay these hills are made of</span></div></div>
+      <div class="layer"><div class="swatch" style="background:#41474e;"></div><div><b>Drainage: ditch, swale, or culvert</b><span>Planned on the walk-through, before the first bucket of dirt moves</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="estimate" id="estimate">
+  <div class="wrap">
+    <h2 class="sec">How an estimate works</h2>
+    <div class="est-steps">
+      <div class="est"><div class="n">1</div><h3>Walk the site</h3><p>Mahlon comes out, looks at the ground, the water, and the access — free, no obligation.</p></div>
+      <div class="est"><div class="n">2</div><h3>Firm number</h3><p>You get a clear scope and price for the work discussed. No mystery line items after the fact.</p></div>
+      <div class="est"><div class="n">3</div><h3>Scheduled &amp; done</h3><p>The machines show up when promised, and the site is left graded and tidy — not a mud field.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="t-item"><h3>BBB Accredited, A+ rated</h3><p>Accredited since 2022 and committed to the BBB's published standards — vet the company yourself before you call.</p></div>
+    <div class="t-item"><h3>Neighbors' pick</h3><p>Named a Nextdoor Neighborhood Favorite in 2024 by the people whose driveways and pads are already done.</p></div>
+    <div class="t-item"><h3>Owner on every job</h3><p>The person who priced your job is the person responsible for it. One name: Mahlon Peachey.</p></div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <div>
+      <h2 class="sec">Serving the hills around Canajoharie</h2>
+      <p class="lede">Based on Conway Road, working throughout western Montgomery County and the county lines beyond:</p>
+      <div class="towns">
+        <span>Canajoharie</span><span>Palatine Bridge</span><span>Fort Plain</span><span>Sprakers</span><span>Ames</span><span>Sharon Springs</span><span>Cherry Valley</span><span>Fonda</span>
+      </div>
+      <p class="lede">Building this year? Site-prep slots book ahead of the construction season — get the walk-through on the calendar early.</p>
+    </div>
+    <form>
+      <h3>Request your free estimate</h3>
+      <label for="name">Name</label>
+      <input id="name" type="text" placeholder="Your name">
+      <label for="phone">Phone</label>
+      <input id="phone" type="tel" placeholder="(518) 000-0000">
+      <label for="loc">Property location</label>
+      <input id="loc" type="text" placeholder="Town or road">
+      <label for="job">What needs doing?</label>
+      <select id="job">
+        <option>New or rebuilt driveway</option>
+        <option>Foundation / pad prep</option>
+        <option>Land or brush clearing</option>
+        <option>Grading / drainage</option>
+        <option>Something else</option>
+      </select>
+      <label for="msg">Anything else we should know?</label>
+      <textarea id="msg" rows="3" placeholder="Rough size, timing, access…"></textarea>
+      <button type="submit">Send Estimate Request</button>
+      <p class="form-note">Prefer to talk? Call <strong>(518) 646-1435</strong>. [PLACEHOLDER — confirm primary phone; directories also list (518) 250-7588]</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Peachey Excavating LLC · 496 Conway Rd, Canajoharie, NY 13317</span>
+    <span>Driveways · pads · clearing · grading · drainage</span>
+  </div>
+</footer>
+
+</body>
+</html>

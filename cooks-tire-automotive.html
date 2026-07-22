@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cook's Tire & Automotive Center — Tires, NYS Inspections & Repair in Wellsville NY Since 1936</title>
+<meta name="description" content="Tires, NYS inspections, brakes, diagnostics, RV repair, U-Haul rentals and self-storage at 3522 Andover Rd, Wellsville NY. Family-run since 1936. Call (585) 593-4130.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --coal:#1e2226; --steel:#2e353b; --smoke:#f2f0ec; --yellow:#f2b705; --rust:#b8452a; --line:#d8d3ca;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Barlow',sans-serif;color:var(--coal);background:var(--smoke);line-height:1.6}
+  h1,h2,h3{font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.02em;line-height:1.1}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  .tread{height:10px;background:repeating-linear-gradient(90deg,var(--yellow) 0 26px,var(--coal) 26px 40px)}
+  /* header */
+  header{background:var(--coal);color:#fff}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0;flex-wrap:wrap;gap:10px}
+  .logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.5rem;text-transform:uppercase}
+  .logo em{color:var(--yellow);font-style:normal}
+  .logo small{display:block;font-family:'Barlow',sans-serif;font-weight:400;font-size:.72rem;text-transform:none;letter-spacing:.08em;color:#aeb6bd}
+  .call{background:var(--yellow);color:var(--coal);padding:11px 20px;text-decoration:none;font-weight:700;border-radius:3px}
+  /* hero */
+  .hero{background:linear-gradient(180deg,var(--steel),var(--coal));color:#fff;padding:76px 0}
+  .badge{display:inline-flex;align-items:center;gap:10px;border:2px solid var(--yellow);color:var(--yellow);padding:6px 14px;font-weight:700;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:20px}
+  .hero h1{font-size:clamp(2.2rem,5.6vw,3.6rem);max-width:18ch;margin-bottom:16px}
+  .hero p{font-size:1.12rem;max-width:56ch;color:#cfd5da;margin-bottom:28px}
+  .btn{display:inline-block;background:var(--yellow);color:var(--coal);padding:14px 26px;text-decoration:none;font-weight:700;border-radius:3px}
+  .btn.line{background:transparent;color:#fff;border:2px solid #fff;margin-left:12px}
+  .hero .stats{display:flex;gap:38px;margin-top:44px;flex-wrap:wrap}
+  .stat b{font-family:'Barlow Condensed',sans-serif;font-size:2rem;color:var(--yellow);display:block}
+  .stat span{font-size:.85rem;color:#aeb6bd}
+  /* services */
+  section{padding:64px 0}
+  .sec-title{font-size:clamp(1.7rem,3.8vw,2.4rem);margin-bottom:8px}
+  .sec-title u{text-decoration:none;border-bottom:6px solid var(--yellow)}
+  .sec-sub{max-width:64ch;margin-bottom:34px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+  .svc{background:#fff;border:1px solid var(--line);border-top:5px solid var(--yellow);padding:22px}
+  .svc h3{font-size:1.12rem;margin-bottom:8px}
+  .svc p{font-size:.94rem;color:#4b5257}
+  /* one stop */
+  .onestop{background:var(--coal);color:#fff}
+  .onestop .sec-title u{border-color:var(--rust)}
+  .lots{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:30px}
+  .lot{background:var(--steel);padding:24px;border-left:5px solid var(--yellow)}
+  .lot h3{color:var(--yellow);font-size:1.1rem;margin-bottom:8px}
+  .lot p{font-size:.94rem;color:#cfd5da}
+  /* history */
+  .hist{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .hist .years{background:#fff;border:1px solid var(--line);padding:28px}
+  .hist .years div{display:flex;gap:16px;padding:12px 0;border-bottom:1px dashed var(--line);font-size:.95rem}
+  .hist .years b{font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;color:var(--rust);min-width:64px}
+  /* reviews */
+  .revs{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .score{display:flex;align-items:baseline;gap:14px;margin-bottom:26px}
+  .score b{font-family:'Barlow Condensed',sans-serif;font-size:3rem;color:var(--rust)}
+  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+  blockquote{background:var(--smoke);padding:20px;border-left:5px solid var(--rust);font-size:.98rem}
+  blockquote footer{margin-top:8px;font-size:.82rem;font-weight:700;color:#6a7076}
+  /* form */
+  .book{background:var(--steel);color:#fff}
+  form{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+  form input,form select,form textarea{padding:13px;border:none;border-radius:3px;font-family:inherit;font-size:.95rem;width:100%}
+  form textarea{grid-column:1/-1;min-height:90px}
+  form button{grid-column:1/-1;background:var(--yellow);color:var(--coal);border:none;padding:15px;font-weight:700;font-size:1rem;border-radius:3px;cursor:pointer}
+  .towns{margin-top:18px;font-size:.9rem;color:#cfd5da}
+  footer.site{background:var(--coal);color:#8d959c;padding:28px 0;font-size:.85rem;text-align:center}
+  @media(max-width:780px){
+    .hist{grid-template-columns:1fr}
+    form{grid-template-columns:1fr}
+    .btn.line{margin-left:0;margin-top:12px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">Cook's <em>Tire</em> & Automotive<small>3522 Andover Rd · Wellsville, NY · Since 1936</small></div>
+    <a class="call" href="tel:5855934130">(585) 593-4130</a>
+  </div>
+</header>
+<div class="tread"></div>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="badge">★ 90 Years on Andover Road</span>
+    <h1>Tires, stickers & straight answers — since 1936.</h1>
+    <p>Cook's has been putting Allegany County on good rubber for nine decades. Tires, NYS inspections, brakes and diagnostics for foreign and domestic — plus U-Haul rentals, self-storage and used cars, all on one lot.</p>
+    <a class="btn" href="#book">Request a Service Slot</a>
+    <a class="btn line" href="tel:5855934130">Call the Shop</a>
+    <div class="stats">
+      <div class="stat"><b>1936</b><span>year founded</span></div>
+      <div class="stat"><b>A+</b><span>BBB rating</span></div>
+      <div class="stat"><b>3-in-1</b><span>auto · U-Haul · storage</span></div>
+    </div>
+  </div>
+</section>
+<div class="tread"></div>
+
+<section>
+  <div class="wrap">
+    <h2 class="sec-title">Under the <u>hoist</u></h2>
+    <p class="sec-sub">Foreign and domestic, cars to RVs. One shop, one phone number, no runaround.</p>
+    <div class="grid">
+      <div class="svc"><h3>Tires</h3><p>Name-brand tires sized for snow-belt winters and back-road miles — mounted, balanced and rotated right here.</p></div>
+      <div class="svc"><h3>NYS Inspections</h3><p>A licensed NYS inspection station. Call ahead for a slot and get your sticker without losing half a day.</p></div>
+      <div class="svc"><h3>Brakes, Shocks & Steering</h3><p>Suspension work, power-steering repair, shocks and tune-ups — the stuff Rte 417 potholes are made for.</p></div>
+      <div class="svc"><h3>Diagnostics</h3><p>Check-engine light on? Diagnostic service that finds the actual problem before anybody starts replacing parts.</p></div>
+      <div class="svc"><h3>RV Repair</h3><p>Recreational-vehicle repair close to home — no haul to Olean or Hornell required.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="onestop">
+  <div class="wrap">
+    <h2 class="sec-title">One lot, <u>three errands</u></h2>
+    <div class="lots">
+      <div class="lot"><h3>U-Haul Rentals</h3><p>Moving across town or across the state — reserve your truck or trailer through the shop and pick it up on Andover Road.</p></div>
+      <div class="lot"><h3>Self-Storage</h3><p>Storage units right behind the shop. Ask about current availability when you call.</p></div>
+      <div class="lot"><h3>Used Cars</h3><p>Local used vehicles, checked over by the same mechanics who'll be servicing them after you buy.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap hist">
+    <div>
+      <h2 class="sec-title">Ninety years, <u>one family standard</u></h2>
+      <p style="margin-bottom:14px">Cook's opened in 1936 — before the interstate, before radial tires, before most of the shops that have come and gone on this road. Today Dan Coats and Darren Coats run it the same way it started: do the work right, charge a fair price, and be here next year.</p>
+      <p>That's how a tire shop ends up serving the grandkids of its first customers.</p>
+    </div>
+    <div class="years">
+      <div><b>1936</b><span>Cook's opens its doors in Wellsville.</span></div>
+      <div><b>1985</b><span>Incorporated as Cook's Tire & Automotive Center, Inc.</span></div>
+      <div><b>Today</b><span>Tires, inspections, U-Haul, storage and used cars — 90 years on.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="revs">
+  <div class="wrap">
+    <h2 class="sec-title">What drivers <u>say</u></h2>
+    <div class="score" style="margin-top:22px"><b>4.2★</b><span>from 68 reviews across tire-shop directories</span></div>
+    <div class="quotes">
+      <blockquote>"The workers are kind and always have been fair with me. Prices are cheap, work is great."<footer>— directory review</footer></blockquote>
+      <blockquote>"Great service, reasonable rates, and quality work."<footer>— directory review</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <h2 class="sec-title">Request a <u>slot</u></h2>
+    <p style="color:#cfd5da;max-width:60ch">Tell us what you need — an inspection, a tire quote, a brake check or a U-Haul — and we'll call you back to lock in a time.</p>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="tel" placeholder="Phone" required>
+      <select><option>NYS Inspection</option><option>Tire quote</option><option>Brakes / suspension</option><option>Diagnostics</option><option>RV repair</option><option>U-Haul rental</option><option>Storage unit</option></select>
+      <input type="text" placeholder="Vehicle year / make / model">
+      <textarea placeholder="Anything we should know?"></textarea>
+      <button type="submit">Send Request — We'll Call You Back</button>
+    </form>
+    <p class="towns">Serving Wellsville, Andover, Scio, Belmont, Alfred and Bolivar · Mon–Fri, call for Saturday availability</p>
+  </div>
+</section>
+
+<div class="tread"></div>
+<footer class="site">
+  <div class="wrap">Cook's Tire & Automotive Center, Inc. · 3522 Andover Rd, Wellsville, NY 14895 · (585) 593-4130 · fax (585) 593-3007</div>
+</footer>
+
+</body>
+</html>

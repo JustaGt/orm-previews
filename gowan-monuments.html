@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gowan Monuments — Headstones &amp; Engraving | Wayne County, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --granite:#3a3f3c; --granite-d:#2a2e2b; --slate:#565d58;
+  --sage:#7c8a72; --sage-d:#5f6c56;
+  --ivory:#f6f4ee; --paper:#fbfaf6; --line:#e0ddd3;
+  --ink:#2c302d; --soft:#6a6f69; --gold:#a99064;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+h1,h2,h3,.disp{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.12;letter-spacing:.2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-block;background:var(--sage-d);color:#fff;font-weight:600;padding:14px 28px;border-radius:3px;font-size:1rem;letter-spacing:.2px}
+.btn:hover{background:var(--granite)}
+.btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.55);color:#fff}
+/* top */
+.top{background:var(--granite-d);color:#d8d6cd;font-size:.9rem}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;padding:9px 22px;flex-wrap:wrap;gap:6px}
+.top b{color:#fff}
+.brand{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:#fff;letter-spacing:.5px}
+.brand span{color:var(--gold)}
+/* hero */
+.hero{background:linear-gradient(rgba(34,38,35,.78),rgba(34,38,35,.66)),
+  radial-gradient(circle at 70% 20%,#5a615b,#2c302d 70%);
+  color:#fff;padding:88px 0 80px}
+.hero .wrap{max-width:760px}
+.eyebrow{font-family:'Inter',sans-serif;letter-spacing:3px;text-transform:uppercase;font-size:.74rem;color:var(--gold);margin-bottom:18px}
+.hero h1{font-size:3.3rem;margin-bottom:18px}
+.hero p{font-size:1.2rem;color:#ece9e0;max-width:600px;margin-bottom:30px}
+.hero .row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.callbar{display:inline-flex;align-items:center;gap:10px;font-size:1.15rem;color:#fff;border:1.5px solid rgba(255,255,255,.4);padding:12px 20px;border-radius:3px}
+.callbar b{font-family:'Cormorant Garamond',serif;font-size:1.4rem}
+/* section */
+section{padding:62px 0}
+.sec-head{max-width:680px;margin:0 auto 42px;text-align:center}
+.sec-head .eyebrow{color:var(--sage-d)}
+.sec-head h2{font-size:2.3rem;color:var(--granite)}
+.sec-head p{color:var(--soft);margin-top:10px}
+/* services */
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:var(--ivory);border:1px solid var(--line);border-radius:5px;padding:26px 22px}
+.card h3{font-size:1.5rem;color:var(--granite);margin-bottom:8px}
+.card p{font-size:.95rem;color:var(--soft)}
+.card .mk{width:42px;height:3px;background:var(--gold);margin-bottom:16px}
+/* gallery */
+.gallery{background:var(--ivory)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.shot{aspect-ratio:4/3;border-radius:5px;background:linear-gradient(135deg,#6c736c,#3a3f3c);position:relative;overflow:hidden;display:flex;align-items:flex-end}
+.shot span{color:#fff;font-size:.9rem;padding:14px 16px;background:linear-gradient(0deg,rgba(0,0,0,.55),transparent);width:100%}
+.ph{font-family:'Inter',sans-serif;font-size:.7rem;letter-spacing:1px;text-transform:uppercase;color:#cfd3cb;position:absolute;top:12px;left:14px;opacity:.8}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:s}
+.step{position:relative;padding-left:8px}
+.step .n{font-family:'Cormorant Garamond',serif;font-size:2.6rem;color:var(--sage);line-height:1}
+.step h3{font-size:1.35rem;color:var(--granite);margin:6px 0}
+.step p{color:var(--soft);font-size:.96rem}
+/* testimonials */
+.quotes{background:var(--granite);color:#eceae1}
+.quotes .sec-head h2{color:#fff}
+.qgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.q{background:#333834;border:1px solid #454b45;border-radius:6px;padding:24px}
+.q p{font-size:.98rem;color:#dcdad0;font-style:italic}
+.q .who{margin-top:14px;font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--gold);font-style:normal}
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.contact h2{font-size:2.2rem;color:var(--granite);margin-bottom:12px}
+.contact p{color:var(--soft);margin-bottom:18px}
+.contact .big{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--sage-d);display:inline-block;margin-bottom:6px}
+.note{font-size:.85rem;color:var(--soft);margin-top:18px}
+form label{display:block;font-size:.85rem;color:var(--slate);margin:12px 0 5px;font-weight:600}
+form input,form textarea,form select{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:4px;font-family:inherit;font-size:.95rem;background:#fff}
+form .btn{border:none;cursor:pointer;margin-top:18px}
+/* footer */
+footer{background:var(--granite-d);color:#b9bbb2;font-size:.9rem;padding:30px 0}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:860px){
+  .svc{grid-template-columns:repeat(2,1fr)}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .steps,.qgrid{grid-template-columns:1fr}
+  .contact .wrap{grid-template-columns:1fr}
+  .hero h1{font-size:2.5rem}
+}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap"><span class="brand">Gowan <span>Monuments</span></span><span>Serving Wayne County, NY &nbsp;·&nbsp; <b>(585) 752-7178</b></span></div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">Headstones · Engraving · Stone Care · Pre-Planning</div>
+  <h1>A stone done right, by someone who sits with you to choose it.</h1>
+  <p>Mike and Brenda Gowan have shaped headstones and monuments for Wayne County families since 2012 — custom lettering, on-site engraving, and patient help through every decision.</p>
+  <div class="row">
+    <a class="btn" href="#contact">Ask for a quote</a>
+    <a class="callbar" href="tel:5857527178">Call <b>(585)&nbsp;752-7178</b></a>
+  </div>
+</div></header>
+
+<section>
+  <div class="sec-head"><div class="eyebrow">What we do</div><h2>Four ways we help</h2></div>
+  <div class="wrap svc">
+    <div class="card"><div class="mk"></div><h3>Monuments &amp; Headstones</h3><p>Upright stones, slants, and grass markers, cut and lettered to honor the person — not a catalog template.</p></div>
+    <div class="card"><div class="mk"></div><h3>On-Site Engraving</h3><p>Adding a date or inscription to a stone already set in the cemetery, done precisely on location.</p></div>
+    <div class="card"><div class="mk"></div><h3>Gentle Stone Cleaning</h3><p>Careful cleaning that lifts decades of weather and lichen without damaging older granite or marble.</p></div>
+    <div class="card"><div class="mk"></div><h3>Pre-Planning</h3><p>Settle the design and details ahead of time, so your family has one less thing to carry later.</p></div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="sec-head"><div class="eyebrow">Recent work</div><h2>Stones we've made</h2><p>Real photos of finished monuments go here — replace each placeholder with your own work.</p></div>
+  <div class="wrap grid">
+    <div class="shot"><span class="ph">your photo</span><span>Upright granite · custom rose etching</span></div>
+    <div class="shot"><span class="ph">your photo</span><span>Companion stone · shared inscription</span></div>
+    <div class="shot"><span class="ph">your photo</span><span>Slant marker · laser portrait</span></div>
+    <div class="shot"><span class="ph">your photo</span><span>On-site date added to existing stone</span></div>
+    <div class="shot"><span class="ph">your photo</span><span>Flat grass marker · bronze accent</span></div>
+    <div class="shot"><span class="ph">your photo</span><span>Cleaned 1920s marble headstone</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><div class="eyebrow">How it works</div><h2>Simple, and never rushed</h2></div>
+  <div class="wrap steps">
+    <div class="step"><div class="n">1</div><h3>Talk it through</h3><p>Call or send a note. We'll talk about the person, the cemetery's rules, and what you have in mind — no pressure to decide anything that day.</p></div>
+    <div class="step"><div class="n">2</div><h3>See the design</h3><p>We draw up the stone, lettering, and any artwork or photo etching, and adjust it until it feels right to you.</p></div>
+    <div class="step"><div class="n">3</div><h3>We handle the rest</h3><p>We coordinate with your funeral home or cemetery for delivery and installation, so the memorial is set without you chasing anyone.</p></div>
+  </div>
+</section>
+
+<section class="quotes">
+  <div class="sec-head"><div class="eyebrow" style="color:var(--gold)">In their words</div><h2>What families say</h2></div>
+  <div class="wrap qgrid">
+    <div class="q"><p>"Working with Mike at Gowan Monuments was great. He was knowledgeable and very helpful with designs. I ordered one for my uncle and one for my husband and I — both came out great."</p><div class="who">Lorie Abbott</div></div>
+    <div class="q"><p>"We had a great experience working with Mike and Brenda. They gave us many options and we're extremely pleased with the results. Many thanks!"</p><div class="who">Roger &amp; Elizabeth DeHond</div></div>
+    <div class="q"><p>"Mike is friendly and knowledgeable, with much-appreciated humor during an emotional time. He helped us choose a design to perfectly honor our parents. The finished headstone is beautiful."</p><div class="who">Paula Shultes</div></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Talk to Mike</h2>
+      <p>Tell us a little about who the stone is for and which cemetery, and we'll get back to you with options and a quote. There's no charge to ask.</p>
+      <a class="big" href="tel:5857527178">(585) 752-7178</a><br>
+      <span style="color:var(--soft)">Serving Wayne County &amp; the surrounding Finger Lakes towns</span>
+      <p class="note">Placeholder: add your shop address and hours here so families can find you and see when to call.</p>
+    </div>
+    <form onsubmit="return false">
+      <label>Name</label><input type="text">
+      <label>Phone</label><input type="tel">
+      <label>Email</label><input type="email">
+      <label>What do you need?</label>
+      <select><option>Monument or headstone</option><option>Adding a date / engraving on an existing stone</option><option>Stone cleaning</option><option>Pre-planning</option></select>
+      <label>Tell us a little more</label><textarea rows="4"></textarea>
+      <button class="btn">Send to Gowan Monuments</button>
+    </form>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>Gowan Monuments · Serving Wayne County, NY since 2012</span><span>(585) 752-7178</span></div></footer>
+
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3B Timber Company — Utility Poles, Mulch &amp; Firewood · Boonville, NY · We Buy Standing Timber</title>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bark:#3c2e1e; --bark2:#52402b; --pine:#2f5233; --pine2:#3d6b43; --pinelt:#5c9163;
+  --sand:#f4efe6; --sand2:#eae1d1; --clay:#b7642f; --ink:#221a10; --paper:#fbf9f4;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--paper);line-height:1.62}
+h1,h2,h3,.head{font-family:'Bitter',serif;line-height:1.14}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}
+/* top */
+.top{background:var(--bark);color:#f0e7d8;font-size:.83rem;padding:8px 0}
+.top .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.top b{color:#e7b77e}
+nav{background:var(--paper);border-bottom:2px solid var(--sand2);position:sticky;top:0;z-index:30}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
+.brand{display:flex;align-items:center;gap:10px}
+.mark{width:38px;height:38px;border-radius:50%;background:var(--pine);color:#fff;display:grid;place-items:center;font-family:'Bitter';font-weight:800;font-size:1rem}
+.brand b{font-family:'Bitter';font-size:1.25rem;color:var(--bark)}
+.brand span{display:block;font-size:.72rem;color:var(--pine);letter-spacing:.14em;text-transform:uppercase;margin-top:-2px}
+.nlinks{display:flex;gap:20px;font-size:.92rem;font-weight:600;color:var(--bark2)}
+.nlinks a:hover{color:var(--pine)}
+@media(max-width:800px){.nlinks{display:none}}
+/* hero */
+.hero{background:linear-gradient(160deg,var(--pine) 0%,var(--pine2) 60%,#2b4a30 100%);color:#f3efe6;padding:66px 0 60px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:-40px;width:340px;height:340px;border-radius:50%;background:rgba(255,255,255,.05)}
+.hero .kick{color:#cfe6d2;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;font-weight:600;margin-bottom:14px}
+.hero h1{font-size:2.9rem;max-width:20ch;margin-bottom:16px}
+.hero p{font-size:1.12rem;max-width:52ch;color:#e2ecdf}
+.est{margin-top:20px;display:inline-block;background:rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.18);padding:7px 16px;border-radius:30px;font-size:.85rem;letter-spacing:.03em}
+/* two doors */
+.doors{margin-top:-46px;position:relative;z-index:5;padding-bottom:20px}
+.doorgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.door{background:#fff;border-radius:12px;padding:30px;box-shadow:0 14px 34px rgba(60,46,30,.14);border-top:5px solid var(--pine)}
+.door.sell{border-top-color:var(--clay)}
+.door h2{font-size:1.55rem;margin-bottom:8px;color:var(--bark)}
+.door .who{font-size:.82rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--pine);margin-bottom:12px}
+.door.sell .who{color:var(--clay)}
+.door p{color:#5a4d3c;font-size:.98rem;margin-bottom:16px}
+.doorbtn{display:inline-block;background:var(--pine);color:#fff;padding:11px 20px;border-radius:6px;font-weight:700;font-size:.95rem}
+.door.sell .doorbtn{background:var(--clay)}
+.doorbtn:hover{filter:brightness(1.08)}
+@media(max-width:720px){.doorgrid{grid-template-columns:1fr}}
+/* section */
+section{padding:56px 0}
+.eyebrow{color:var(--pine);letter-spacing:.13em;text-transform:uppercase;font-size:.78rem;font-weight:700;margin-bottom:9px}
+.stitle{font-size:2rem;color:var(--bark);margin-bottom:8px}
+.lead{color:#5a4d3c;max-width:60ch;margin-bottom:30px}
+/* sell form */
+.sellsec{background:var(--sand)}
+.sellwrap{display:grid;grid-template-columns:1fr 1.05fr;gap:34px;align-items:start}
+.selltext ul{list-style:none;margin-top:14px}
+.selltext li{padding:8px 0 8px 28px;position:relative;color:#4c4030}
+.selltext li::before{content:"✓";position:absolute;left:0;color:var(--clay);font-weight:800}
+.formbox{background:#fff;border:1px solid var(--sand2);border-radius:12px;padding:26px}
+label{display:block;font-size:.8rem;font-weight:600;color:var(--bark2);margin-bottom:5px}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid #d8cdb9;border-radius:6px;font-family:inherit;font-size:.95rem;background:#fdfcf9}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--pine)}
+.frow2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fbtn{margin-top:14px;background:var(--clay);color:#fff;border:none;padding:13px 22px;border-radius:6px;font-weight:700;font-size:1rem;cursor:pointer;font-family:'Bitter'}
+.fbtn:hover{filter:brightness(1.06)}
+@media(max-width:760px){.sellwrap{grid-template-columns:1fr}.frow2{grid-template-columns:1fr}}
+/* products */
+.prodgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.prod{background:#fff;border:1px solid var(--sand2);border-radius:12px;overflow:hidden}
+.prod .cap{height:8px;background:var(--pine)}
+.prod.fire .cap{background:var(--clay)}
+.prod.mulch .cap{background:var(--bark2)}
+.prod .body{padding:22px}
+.prod h3{font-size:1.25rem;color:var(--bark);margin-bottom:8px}
+.prod p{font-size:.93rem;color:#5a4d3c;margin-bottom:12px}
+.chip{display:inline-block;background:var(--sand);border:1px solid var(--sand2);color:var(--pine);font-size:.78rem;font-weight:600;padding:4px 10px;border-radius:20px;margin:0 4px 6px 0}
+@media(max-width:760px){.prodgrid{grid-template-columns:1fr}}
+/* firewood math */
+.math{background:var(--pine);color:#eef4ec;border-radius:12px;padding:26px;margin-top:22px}
+.math h3{color:#fff;font-size:1.3rem;margin-bottom:6px}
+.mrow{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:.95rem}
+.mrow b{font-family:'Bitter'}
+.math .ph{font-size:.8rem;color:#bcd4bd;margin-top:12px}
+/* about */
+.about{background:var(--bark);color:#f0e7d8}
+.about .stitle{color:#fff}
+.about .eyebrow{color:#e7b77e}
+.about p{color:#ddd0bd;max-width:62ch}
+.stats{display:flex;gap:36px;margin-top:24px;flex-wrap:wrap}
+.stat b{font-family:'Bitter';font-size:2rem;color:#e7b77e;display:block}
+.stat span{font-size:.85rem;color:#c9bba6}
+/* footer */
+footer{background:#2a2013;color:#c9bba6;padding:40px 0 24px}
+footer .cols{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:24px}
+footer h4{color:#f0e7d8;font-family:'Bitter';margin-bottom:10px;font-size:1.02rem}
+footer a:hover{color:#fff}
+.fphone{font-family:'Bitter';font-size:1.3rem;color:#fff}
+.copy{border-top:1px solid #443421;margin-top:24px;padding-top:14px;font-size:.8rem;color:#8a7a62}
+@media(max-width:720px){footer .cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <span>8745 Industrial Drive · Boonville, NY 13309 · Tug Hill timber country</span>
+  <span><b>(315) 942-6580</b> · Mon–Fri 8:00–4:30</span>
+</div></div>
+
+<nav><div class="wrap">
+  <a href="#top" class="brand"><span class="mark">3B</span><span><b>3B Timber Company</b><span>Boonville, NY · Est. 1987</span></span></a>
+  <div class="nlinks">
+    <a href="#sell">Sell Your Timber</a>
+    <a href="#products">Firewood &amp; Mulch</a>
+    <a href="#poles">Treated Poles</a>
+    <a href="#about">About</a>
+  </div>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <div class="kick">Family-owned wood processing since 1987</div>
+  <h1>Three generations of turning standing timber into poles, mulch &amp; firewood.</h1>
+  <p>Whether you've got a woodlot to sell or a truckload of firewood to buy, you're in the right yard. Two different needs — so we built two clear paths below.</p>
+  <span class="est">Red-pine utility poles · organic mulch · split firewood · standing-timber buyers</span>
+</div></header>
+
+<div class="doors"><div class="wrap"><div class="doorgrid">
+  <div class="door sell" id="sell">
+    <div class="who">I own the trees</div>
+    <h2>Sell us your standing timber</h2>
+    <p>We buy red-pine poles, softwood and hardwood, and we've been pricing woodlots in this region since 1987. Tell us what you've got and we'll come look and give you a number.</p>
+    <a href="#sellform" class="doorbtn">Get my woodlot priced →</a>
+  </div>
+  <div class="door buy">
+    <div class="who">I need wood products</div>
+    <h2>Buy poles, mulch &amp; firewood</h2>
+    <p>Treated utility poles, colored red-pine-bark mulch by the yard, and split firewood with free delivery inside 20 miles of Boonville. See what's for sale.</p>
+    <a href="#products" class="doorbtn">See products &amp; firewood pricing →</a>
+  </div>
+</div></div></div>
+
+<section class="sellsec" id="sellform"><div class="wrap">
+  <div class="eyebrow">For landowners</div>
+  <h2 class="stitle">Have standing timber for sale?</h2>
+  <p class="lead">Selling timber shouldn't mean guessing. Send us the basics of your woodlot and we'll set up a walk-through and a fair price based on current standing-timber values — the same numbers we track every day.</p>
+  <div class="sellwrap">
+    <div class="selltext">
+      <p style="color:#4c4030">We're in the market year-round for:</p>
+      <ul>
+        <li>Red pine poles</li>
+        <li>Softwood — pine, spruce, hemlock</li>
+        <li>Hardwood stands</li>
+        <li>Pulpwood and lower-grade lots other buyers pass on</li>
+      </ul>
+      <p style="margin-top:14px;color:#4c4030">Brothers Mark &amp; Gary Bourgeois have been in the timber business since 1981 and know this region's woods. No pressure — just an honest look and a number.</p>
+    </div>
+    <div class="formbox">
+      <form onsubmit="return false">
+        <div class="frow2">
+          <div><label>Name</label><input type="text" placeholder="Your name"></div>
+          <div><label>Phone</label><input type="tel" placeholder="(315) 000-0000"></div>
+        </div>
+        <div style="margin-top:12px"><label>Where is the woodlot? (town / road)</label><input type="text" placeholder="e.g. Ava, off Hemlock Ridge Rd"></div>
+        <div class="frow2" style="margin-top:12px">
+          <div><label>Approx. acreage</label><input type="text" placeholder="e.g. 15 acres"></div>
+          <div><label>Mostly what?</label>
+            <select><option>Red pine</option><option>Mixed softwood</option><option>Hardwood</option><option>Not sure</option></select></div>
+        </div>
+        <div style="margin-top:12px"><label>Anything we should know</label><textarea rows="2" placeholder="Access, recent cuts, timeline…"></textarea></div>
+        <button class="fbtn">Request a woodlot walk-through</button>
+      </form>
+    </div>
+  </div>
+</div></section>
+
+<section id="products"><div class="wrap">
+  <div class="eyebrow">For buyers</div>
+  <h2 class="stitle">Firewood, mulch &amp; treated poles</h2>
+  <p class="lead">Manufactured right here in Boonville. Pricing below is shown as a template — confirm current-season rates before this page goes live.</p>
+  <div class="prodgrid">
+    <div class="prod fire" id="firewood">
+      <div class="cap"></div>
+      <div class="body">
+        <h3>Split Firewood</h3>
+        <p>16" or 18" split hardwood. Free delivery within 20 miles of Boonville. Minimum 6 face cord.</p>
+        <span class="chip">16" or 18"</span><span class="chip">Free delivery ≤20 mi</span><span class="chip">6 face cord min</span>
+      </div>
+    </div>
+    <div class="prod mulch">
+      <div class="cap"></div>
+      <div class="body">
+        <h3>Organic Mulch</h3>
+        <p>100% red-pine bark and wood fiber, finely ground and colored with an environmentally safe dye. Sold by the yard.</p>
+        <span class="chip">Red-pine bark</span><span class="chip">Colored</span><span class="chip">By the yard</span>
+      </div>
+    </div>
+    <div class="prod pole" id="poles">
+      <div class="cap"></div>
+      <div class="body">
+        <h3>Treated Utility Poles</h3>
+        <p>Red-pine poles, treated and ready for utility, agricultural and structural use. Ask for available lengths.</p>
+        <span class="chip">Red pine</span><span class="chip">Treated</span><span class="chip">Multiple lengths</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="math">
+    <h3>Firewood — how the cords work</h3>
+    <p style="color:#cfe1cf;font-size:.92rem;margin-bottom:8px">A quick reference so you can order the right amount. (Rates are placeholders — confirm before publishing.)</p>
+    <div class="mrow"><span>6 face cord (our minimum order)</span><b>$ —</b></div>
+    <div class="mrow"><span>Additional per face cord</span><b>$ —</b></div>
+    <div class="mrow"><span>Delivery within 20 miles of Boonville</span><b>Free</b></div>
+    <div class="mrow"><span>Beyond 20 miles</span><b>Call for a quote</b></div>
+    <p class="ph">To order, call (315) 942-6580 or use the form below — tell us your town so we can check the delivery radius.</p>
+  </div>
+</div></section>
+
+<section class="about" id="about"><div class="wrap">
+  <div class="eyebrow">Who you're dealing with</div>
+  <h2 class="stitle">A Boonville family in the timber business since 1981</h2>
+  <p>3B Timber Company was founded in 1987 by brothers Mark Bourgeois (President &amp; CEO) and Gary Bourgeois (Vice President), who'd already been working in timber since 1981. From a red-pine pole yard it grew to manufacture utility poles, mulch, pulpwood and firewood — all processed on Industrial Drive in Boonville. We stay current on forestry management and standing-timber prices so the number we give a landowner is a fair one.</p>
+  <div class="stats">
+    <div class="stat"><b>1987</b><span>Founded in Boonville</span></div>
+    <div class="stat"><b>40+ yrs</b><span>In timber since 1981</span></div>
+    <div class="stat"><b>4</b><span>Product lines under one roof</span></div>
+    <div class="stat"><b>20 mi</b><span>Free firewood delivery</span></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div>
+      <h4>3B Timber Company Inc.</h4>
+      <p>Family wood processing — poles, mulch, firewood &amp; standing-timber buying in Boonville, NY.</p>
+      <p class="fphone" style="margin-top:10px">(315) 942-6580</p>
+    </div>
+    <div>
+      <h4>Visit</h4>
+      <p>8745 Industrial Drive<br>PO Box 761<br>Boonville, NY 13309</p>
+      <p style="margin-top:8px">Mon–Fri 8:00–4:30</p>
+    </div>
+    <div>
+      <h4>Go to</h4>
+      <p><a href="#sell">Sell your timber</a><br>
+      <a href="#firewood">Firewood</a><br>
+      <a href="#products">Mulch</a><br>
+      <a href="#poles">Treated poles</a><br>
+      <a href="#about">About the family</a></p>
+    </div>
+  </div>
+  <div class="copy">© 2026 3B Timber Company Inc. · Boonville, NY · Preview concept prepared by Onyx Rise Media.</div>
+</div></footer>
+
+</body>
+</html>

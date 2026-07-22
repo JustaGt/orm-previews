@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>North Fork Welding &amp; Steel Supply — Greenport, NY · Fabrication, Hydraulics &amp; Marine Steel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --steel:#1c2024; --steel2:#262b30; --gun:#33393f; --plate:#3d444b;
+  --amber:#f2a516; --amber-d:#cf8806; --spark:#ef5b25; --hazard:#ffd24d;
+  --pale:#e8ebee; --ink:#15181b; --paper:#eef0f2; --white:#fff; --line:#cdd2d7;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Barlow',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+.cond{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.5px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+.btn{display:inline-block;background:var(--amber);color:#1a1404;font-weight:700;text-decoration:none;padding:13px 28px;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:1.5px;font-size:1.05rem;border-radius:2px;transition:.12s}
+.btn:hover{background:var(--hazard)}
+.btn.steel{background:var(--plate);color:#fff}
+.btn.steel:hover{background:#4d555d}
+
+.warn{height:8px;background:repeating-linear-gradient(45deg,var(--hazard) 0 18px,#1c2024 18px 36px)}
+
+nav{background:var(--steel)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{color:#fff;line-height:1.05}
+.brand b{font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;letter-spacing:1px;text-transform:uppercase;display:block}
+.brand small{color:var(--amber);font-size:.62rem;letter-spacing:3px;text-transform:uppercase}
+.navlinks{display:flex;gap:24px;color:#c4cace;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:1px;font-size:1rem}
+.navlinks a{text-decoration:none}.navlinks a:hover{color:var(--amber)}
+@media(max-width:880px){.navlinks{display:none}}
+
+.hero{position:relative;color:#fff;padding:92px 0 100px;
+  background:
+   linear-gradient(180deg,rgba(20,23,26,.78),rgba(20,23,26,.9)),
+   repeating-linear-gradient(90deg,#2a2f34 0 2px,#262b30 2px 6px),
+   linear-gradient(180deg,#33393f,#1c2024)}
+.hero .kick{display:inline-block;background:var(--spark);color:#fff;font-family:'Barlow Condensed',sans-serif;letter-spacing:2px;text-transform:uppercase;font-size:.78rem;padding:5px 12px;margin-bottom:18px}
+.hero h1{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-weight:700;font-size:3.5rem;line-height:.98;max-width:20ch}
+.hero h1 span{color:var(--amber)}
+.hero p{font-size:1.2rem;max-width:56ch;margin:18px 0 26px;color:#d7dbde}
+.hero .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+@media(max-width:600px){.hero h1{font-size:2.4rem}}
+
+.bar{background:var(--amber);color:#1a1404}
+.bar .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding:14px 22px;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:1px;font-size:1rem;font-weight:600}
+.bar b{font-weight:700}
+
+section{padding:74px 0}
+.shead{margin-bottom:38px}
+.shead .k{color:var(--spark);font-family:'Barlow Condensed',sans-serif;letter-spacing:3px;text-transform:uppercase;font-size:.85rem}
+.shead h2{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:2.3rem;line-height:1;margin-top:4px}
+.shead p{color:#56606a;max-width:64ch;margin-top:10px}
+
+.caps{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+@media(max-width:760px){.caps{grid-template-columns:1fr}}
+.cap{background:var(--steel);color:#fff;border-radius:2px;padding:26px 26px 24px;border-left:5px solid var(--amber);display:flex;gap:18px}
+.cap .ic{font-size:2rem;line-height:1}
+.cap h3{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:1.4rem;color:var(--amber)}
+.cap p{color:#cfd4d8;font-size:.97rem;margin-top:4px}
+
+.proof{background:var(--steel2)}
+.proof .shead h2,.proof .shead .k{color:#fff}
+.proof .shead .k{color:var(--amber)}
+.proof .shead p{color:#aeb6bd}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:880px){.gallery{grid-template-columns:1fr 1fr}}
+.g{aspect-ratio:1/1;border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;color:#fff;border:1px solid #3a4147;
+  background:repeating-linear-gradient(135deg,#30363c 0 10px,#2a2f34 10px 20px)}
+.g .ic{font-size:2.1rem}
+.g b{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.5px;font-size:1.02rem}
+.g small{color:#9aa2a9;font-size:.76rem;padding:0 10px}
+.proof .cap-note{color:#8b939b;font-size:.82rem;font-style:italic;margin-top:18px;text-align:center}
+
+.serve .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:880px){.serve .grid{grid-template-columns:1fr 1fr}}
+.s{background:#fff;border:1px solid var(--line);border-bottom:3px solid var(--spark);border-radius:2px;padding:24px;text-align:center}
+.s .ic{font-size:2rem}
+.s h3{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:1.12rem;margin:8px 0 4px}
+.s p{color:#56606a;font-size:.92rem}
+
+.cred{background:var(--steel);color:#fff}
+.cred .wrap{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+@media(max-width:860px){.cred .wrap{grid-template-columns:1fr}}
+.cred .k{color:var(--amber);font-family:'Barlow Condensed',sans-serif;letter-spacing:3px;text-transform:uppercase;font-size:.85rem}
+.cred h2{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:2.1rem;margin:6px 0 14px}
+.cred p{color:#cfd4d8;margin-bottom:12px}
+.cred .stats{display:flex;gap:14px;flex-wrap:wrap}
+.cred .stat{flex:1;min-width:120px;background:linear-gradient(160deg,#2f353b,#22272c);border:1px solid #3a4147;border-radius:2px;padding:20px;text-align:center}
+.cred .stat b{font-family:'Barlow Condensed',sans-serif;font-size:2.1rem;color:var(--amber);display:block}
+.cred .stat span{color:#aeb6bd;font-size:.85rem}
+
+.contact{background:var(--steel2);color:#fff;text-align:center}
+.contact h2{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:2.4rem}
+.contact p{color:#c0c7cd;max-width:52ch;margin:12px auto 22px}
+.contact .row{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;margin:18px 0 6px}
+.contact .row div b{font-family:'Barlow Condensed',sans-serif;color:var(--amber);font-size:1.5rem;display:block}
+.contact .row div span{color:#aeb6bd;font-size:.85rem;text-transform:uppercase;letter-spacing:1px}
+.contact .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.note{font-size:.8rem;color:#8b939b;font-style:italic;margin-top:28px}
+
+footer{background:#14171a;color:#868d93;text-align:center;padding:26px 0;font-size:.9rem}
+footer b{font-family:'Barlow Condensed',sans-serif;color:#c4cace;letter-spacing:1px}
+</style>
+</head>
+<body>
+
+<div class="warn"></div>
+<nav><div class="wrap">
+  <div class="brand"><b>North Fork Welding &amp; Steel</b><small>Greenport, NY · since the late '80s</small></div>
+  <div class="navlinks">
+    <a href="#caps">Capabilities</a>
+    <a href="#proof">The Work</a>
+    <a href="#serve">Who We Serve</a>
+    <a href="#contact">Send a Job</a>
+  </div>
+  <a href="#contact" class="btn">Send us a job</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="kick">Welding · Fabrication · Hydraulics · Steel</div>
+  <h1>Steel cut, welds laid, and the fleet <span>back out on the morning tide.</span></h1>
+  <p>The North Fork's working fab shop in Greenport — fabrication, on-site hydraulics, commercial fishing gear and a full material line for baymen, farmers and contractors who can't afford to be down.</p>
+  <div class="cta-row">
+    <a href="#contact" class="btn">Send us your job</a>
+    <a href="#caps" class="btn steel">What we do</a>
+  </div>
+</div></header>
+
+<div class="bar"><div class="wrap">
+  <span><b>35+ years</b> on Main Road</span>
+  <span><b>Steel · aluminum · stainless · plastic</b></span>
+  <span><b>Hydraulic hoses &amp; cylinders</b></span>
+  <span><b>631-477-0671</b></span>
+</div></div>
+
+<section id="caps"><div class="wrap">
+  <div class="shead">
+    <div class="k">Capabilities</div>
+    <h2>One shop, four reasons to call</h2>
+    <p>From a one-off bracket to a rebuilt dredge winch, it gets handled in-house in Greenport — so you're not shipping parts off the Island and waiting a week.</p>
+  </div>
+  <div class="caps">
+    <div class="cap"><div class="ic">🔧</div><div><h3>Welding &amp; Fabrication</h3><p>Custom fab and repair in steel, aluminum, stainless and plastic — brackets, frames, rails, repairs and one-off industrial pieces built to spec.</p></div></div>
+    <div class="cap"><div class="ic">🛢️</div><div><h3>Hydraulics</h3><p>Hoses made while you wait and cylinders repaired on site — the difference between a half-day down and a half-week.</p></div></div>
+    <div class="cap"><div class="ic">⚓</div><div><h3>Commercial Fishing Gear</h3><p>Winches, dredges and deck gear for the Greenport fleet — built, fixed and reinforced by people who know the boats.</p></div></div>
+    <div class="cap"><div class="ic">🏗️</div><div><h3>Steel Supply &amp; Hardware</h3><p>A full line of stock metal plus the welding supplies and hardware to finish the job — pick up here instead of making two stops.</p></div></div>
+  </div>
+</div></section>
+
+<section class="proof" id="proof"><div class="wrap">
+  <div class="shead">
+    <div class="k">The work</div>
+    <h2>You sell welds by showing welds</h2>
+    <p>A fab shop earns the next job on the last one. This is where real shots of fabricated gear, rebuilt hydraulics and finished steel work go — the proof a captain or farmer wants before they hand you the job.</p>
+  </div>
+  <div class="gallery">
+    <div class="g"><div class="ic">⚙️</div><b>Rebuilt winch</b><small>Deck gear back in service</small></div>
+    <div class="g"><div class="ic">🛢️</div><b>Hydraulic cylinder</b><small>Repaired on site</small></div>
+    <div class="g"><div class="ic">🔩</div><b>Custom fabrication</b><small>Built to spec</small></div>
+    <div class="g"><div class="ic">🚜</div><b>Ag &amp; trailer repair</b><small>Welded &amp; reinforced</small></div>
+  </div>
+  <p class="cap-note">Placeholder gallery — to be swapped for real shop photos before the page goes live.</p>
+</div></section>
+
+<section class="serve" id="serve"><div class="wrap">
+  <div class="shead">
+    <div class="k">Who we serve</div>
+    <h2>The people who keep the fork running</h2>
+  </div>
+  <div class="grid">
+    <div class="s"><div class="ic">🎣</div><h3>Baymen &amp; draggers</h3><p>Greenport's commercial fleet — gear built and fixed fast.</p></div>
+    <div class="s"><div class="ic">🌾</div><h3>Farms &amp; vineyards</h3><p>North Fork ag equipment welded and back in the field.</p></div>
+    <div class="s"><div class="ic">🛠️</div><h3>Contractors</h3><p>Excavation and trade crews needing steel and repairs today.</p></div>
+    <div class="s"><div class="ic">⛵</div><h3>Marine trades</h3><p>Boatyards and marinas needing custom metal on the water.</p></div>
+  </div>
+</div></section>
+
+<section class="cred"><div class="wrap">
+  <div>
+    <div class="k">Why this shop</div>
+    <h2>Three and a half decades of getting it done</h2>
+    <p>North Fork Welding &amp; Steel Supply has been the shop you call when something has to be fabricated, repaired or stocked right now — not next week, not off-Island.</p>
+    <p>That's how you stay the one shop a captain trusts with a winch and a farmer trusts with a loader bucket.</p>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>35+</b><span>Years in Greenport</span></div>
+    <div class="stat"><b>4</b><span>Metals worked</span></div>
+    <div class="stat"><b>1</b><span>Stop for fab + supply</span></div>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <h2>Got a job? Send it over.</h2>
+  <p>Drop us the specs, a sketch or a few photos and we'll quote it. Hydraulic line down or gear off the boat? Call the shop.</p>
+  <div class="row">
+    <div><b>631-477-0671</b><span>Shop phone</span></div>
+    <div><b>sales@nfwss.net</b><span>Email the shop</span></div>
+    <div><b>68230 Main Rd</b><span>Greenport, NY 11944</span></div>
+  </div>
+  <div class="cta-row">
+    <a href="tel:6314770671" class="btn">Call the shop</a>
+    <a href="mailto:sales@nfwss.net" class="btn steel">Email your specs</a>
+  </div>
+  <p class="note">Hours (Mon–Fri 8–4) and capabilities shown as placeholders to confirm — and note the current site's email link is broken, so this page fixes the path to a working sales@nfwss.net.</p>
+</div></section>
+
+<footer>
+  <b>NORTH FORK WELDING &amp; STEEL SUPPLY INC.</b><br>
+  68230 Main Road, Greenport, NY 11944 · 631-477-0671 · sales@nfwss.net · 35+ years on the North Fork
+</footer>
+
+</body>
+</html>

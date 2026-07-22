@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daniel J. Brown Excavating &amp; Site Development — Richfield Springs, NY</title>
+<meta name="description" content="27 years of excavation and site work in Otsego County — driveways, foundations, drainage, septic site work, land clearing and grading. Richfield Springs, NY. Request an estimate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --char:#1c1f22; --char2:#2a2e33; --steel:#3b4148; --amber:#f4b413; --amber-d:#c88f05;
+    --gravel:#e7e3dc; --paper:#f4f2ee; --ink:#22262a; --line:#d5d0c7;
+    --shadow:0 14px 34px rgba(20,22,24,.22);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Barlow',sans-serif;color:var(--ink);background:var(--paper);line-height:1.62}
+  h1,h2,h3,.disp{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.01em}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--amber);color:#241a02;font-weight:700;font-family:'Oswald',sans-serif;
+    text-transform:uppercase;letter-spacing:.03em;padding:15px 30px;border-radius:3px;text-decoration:none;
+    box-shadow:0 8px 18px rgba(244,180,19,.32);transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.out{background:transparent;border:2px solid var(--amber);color:var(--amber);box-shadow:none}
+
+  .bar{background:#111316;color:#cfd3d7;font-size:.88rem}
+  .bar .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;padding:9px 22px}
+  .bar a{color:#fff;font-weight:700;text-decoration:none}
+  .bar .tag{color:var(--amber);font-family:'Oswald';font-weight:700;letter-spacing:.06em}
+
+  header.hero{position:relative;color:#fff;background:
+    linear-gradient(180deg, rgba(17,19,22,.9), rgba(17,19,22,.82)),
+    repeating-linear-gradient(45deg,#26292d 0 18px,#212428 18px 36px);}
+  .hazard{height:8px;background:repeating-linear-gradient(135deg,var(--amber) 0 22px,#111316 22px 44px)}
+  .hero .wrap{padding:64px 22px;display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:center}
+  .yrs{display:inline-block;background:var(--amber);color:#241a02;font-family:'Oswald';font-weight:700;
+    padding:6px 16px;border-radius:3px;letter-spacing:.05em;margin-bottom:18px;font-size:.9rem}
+  .hero h1{font-size:3rem;line-height:1.02;font-weight:700;margin-bottom:16px}
+  .hero h1 span{color:var(--amber)}
+  .hero p.l{font-size:1.12rem;color:#d7dbdf;max-width:40ch}
+  .hero .cta{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+  .factbox{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-left:5px solid var(--amber);border-radius:4px;padding:26px}
+  .factbox h3{color:var(--amber);font-size:1.05rem;margin-bottom:14px;letter-spacing:.04em}
+  .factbox .f{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.1);font-weight:600}
+  .factbox .f:last-child{border-bottom:0}
+  .factbox .f span:last-child{color:#fff;font-family:'Oswald';letter-spacing:.02em}
+
+  section{padding:60px 0}
+  .kick{color:var(--amber-d);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;text-align:center;margin-bottom:8px;font-family:'Oswald'}
+  h2.t{text-align:center;font-size:2.1rem;color:var(--char);margin-bottom:10px}
+  .lead{text-align:center;max-width:60ch;margin:0 auto 40px;color:#4c5259}
+
+  .svc{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:#fff;border-radius:6px;padding:26px 22px;box-shadow:var(--shadow);border-bottom:4px solid var(--steel);transition:border-color .15s}
+  .card:hover{border-bottom-color:var(--amber)}
+  .card .ic{width:46px;height:46px;border-radius:6px;background:var(--char);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+  .card .ic svg{width:26px;height:26px;stroke:var(--amber);fill:none;stroke-width:2}
+  .card h3{color:var(--char);font-size:1.18rem;margin-bottom:7px}
+  .card p{font-size:.96rem;color:#4f555b}
+
+  .why{background:var(--char);color:#e7e9eb}
+  .why .wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+  .why h2{color:#fff;font-size:2rem;margin-bottom:14px}
+  .why h2 span{color:var(--amber)}
+  .why p{color:#c3c8cd;margin-bottom:14px}
+  .why .stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:6px}
+  .stat{background:rgba(255,255,255,.05);border-radius:6px;padding:20px;text-align:center;border-top:3px solid var(--amber)}
+  .stat b{font-family:'Oswald';font-size:2rem;color:#fff;display:block}
+  .stat span{font-size:.85rem;color:#aeb4ba;letter-spacing:.03em}
+
+  .how{background:var(--gravel)}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
+  .stp{background:#fff;border-radius:6px;padding:26px;box-shadow:0 8px 20px rgba(20,22,24,.1);position:relative;padding-top:40px}
+  .stp::before{counter-increment:s;content:counter(s);position:absolute;top:-18px;left:22px;width:44px;height:44px;background:var(--amber);
+    color:#241a02;font-family:'Oswald';font-weight:700;font-size:1.3rem;border-radius:6px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow)}
+  .stp h3{color:var(--char);font-size:1.15rem;margin-bottom:6px}
+
+  .proj{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .tile{border-radius:6px;min-height:150px;background:repeating-linear-gradient(135deg,#d8d3ca 0 16px,#e3ded5 16px 32px);
+    display:flex;align-items:center;justify-content:center;color:#7c766a;font-family:'Oswald';text-align:center;padding:16px;border:1px solid var(--line)}
+  .ph{color:#b9860f;font-style:italic}
+
+  .area{text-align:center}
+  .towns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:760px;margin:24px auto 0}
+  .towns span{background:#fff;border:1px solid var(--line);border-radius:30px;padding:8px 18px;font-weight:600;font-family:'Oswald';letter-spacing:.02em;color:var(--steel)}
+
+  .request{background:var(--char2)}
+  .request .box{background:#fff;border-radius:8px;padding:36px;max-width:800px;margin:0 auto;box-shadow:var(--shadow);border-top:6px solid var(--amber)}
+  .request h2{text-align:center;font-size:2rem;color:var(--char);margin-bottom:6px}
+  .request p.s{text-align:center;color:#5a6066;margin-bottom:24px}
+  form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  label{display:block;font-size:.8rem;font-weight:700;margin-bottom:5px;color:#3b4148;text-transform:uppercase;letter-spacing:.04em;font-family:'Oswald'}
+  input,select,textarea{width:100%;padding:12px 14px;border-radius:4px;border:1px solid var(--line);background:#faf9f6;color:var(--ink);font-family:inherit;font-size:.95rem}
+  .full{grid-column:1/-1}
+  .request .btn{width:100%;border:0;cursor:pointer;font-size:1.05rem}
+  .callrow{text-align:center;margin-top:18px;color:#4c5259;font-weight:600}
+  .callrow a{color:var(--char);font-family:'Oswald';font-weight:700;font-size:1.3rem;text-decoration:none}
+
+  footer{background:#111316;color:#9aa0a6;text-align:center;padding:34px 22px;font-size:.9rem}
+  footer .big{font-family:'Oswald';color:#fff;font-size:1.2rem;margin-bottom:6px;letter-spacing:.03em}
+
+  @media(max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;padding:48px 22px}
+    .hero h1{font-size:2.3rem}
+    .svc,.steps,.proj{grid-template-columns:1fr}
+    .why .wrap{grid-template-columns:1fr}
+    form{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap">
+  <span class="tag">◆ 27 YEARS · OTSEGO COUNTY</span>
+  <span>Estimates: <a href="tel:13158223298">(315) 822-3298</a></span>
+</div></div>
+
+<div class="hazard"></div>
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="yrs">Serving Otsego County since 1997</span>
+      <h1>Twenty-seven years <span>moving Otsego County dirt</span> the right way.</h1>
+      <p class="l">Driveways, foundations, drainage, septic site work, clearing and grading — done by the owner who's run the machine for nearly three decades around Richfield Springs.</p>
+      <div class="cta">
+        <a class="btn" href="#request">Request an estimate</a>
+        <a class="btn out" href="tel:13158223298">Call (315) 822-3298</a>
+      </div>
+    </div>
+    <div class="factbox">
+      <h3>The short version</h3>
+      <div class="f"><span>In business</span><span>27 years</span></div>
+      <div class="f"><span>Based in</span><span>Richfield Springs</span></div>
+      <div class="f"><span>Run by</span><span>Owner-operator</span></div>
+      <div class="f"><span>Work</span><span>Site &amp; earthwork</span></div>
+      <div class="f"><span>Estimates</span><span>Free — just ask</span></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="kick">What we dig</div>
+    <h2 class="t">Site &amp; earthwork for rural Otsego County</h2>
+    <p class="lead">From a new house pad on a wooded lot to a driveway that finally drains right — the dirt work that has to be done before anything else can.</p>
+    <div class="svc">
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 20h18M6 20V9l6-4 6 4v11"/></svg></div><h3>Site Prep &amp; House Pads</h3><p>Clearing, stripping, cut-and-fill and pad work to get a building lot ready before the foundation crew shows up.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 18h18M5 18l3-9h8l3 9M9 9V6h6v3"/></svg></div><h3>Driveways &amp; Roads</h3><p>New driveways, camp roads and re-grades — proper base, crown and ditching so they shed water instead of holding it.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V8h12v12M9 20v-6h6v6"/></svg></div><h3>Foundations &amp; Footings</h3><p>Digging and backfill for foundations, footings, additions and outbuildings, cut to grade and ready for the pour.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 8c4 4 12 4 16 0M4 14c4 4 12 4 16 0M4 20c4 4 12 4 16 0"/></svg></div><h3>Drainage &amp; Wet Lots</h3><p>Curtain drains, culverts, swales and regrading to move water off a wet yard, basement or driveway for good.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v6M8 9h8l-1 5H9zM7 14v5h10v-5"/></svg></div><h3>Septic Site Work</h3><p>Excavation and site work for new and replacement septic systems — tank, field and the grading around them.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l3 6 6 .8-4.5 4.2L18 21l-6-3.5L6 21l1.5-7L3 9.8 9 9z"/></svg></div><h3>Clearing &amp; Grading</h3><p>Land clearing, stump and brush removal, pond digging and finish grading to shape a lot the way you want it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <div>
+      <h2>Nearly three decades <span>you can't fake</span></h2>
+      <p>A lot of outfits come and go. Daniel J. Brown Excavating has been doing site work around Richfield Springs and Otsego County for 27 years — long enough that most of the work comes from neighbors and repeat customers.</p>
+      <p>You deal with the owner, not a call center. He looks at the job, tells you straight what it needs, and stands behind the grade when it's done.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>27</b><span>YEARS IN BUSINESS</span></div>
+      <div class="stat"><b>1</b><span>OWNER ON EVERY JOB</span></div>
+      <div class="stat"><b>US-20</b><span>RICHFIELD SPRINGS BASE</span></div>
+      <div class="stat"><b>Free</b><span>ON-SITE ESTIMATES</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <div class="kick">How an estimate works</div>
+    <h2 class="t">Simple, no run-around</h2>
+    <p class="lead">Three steps from "I've got a project" to a number you can plan around.</p>
+    <div class="steps">
+      <div class="stp"><h3>Tell us the job</h3><p>Call or send the form with your location and what you're trying to do — a driveway, a pad, a drainage headache.</p></div>
+      <div class="stp"><h3>We look at it</h3><p>The owner comes out, walks the site, checks the grade and access, and figures out what it actually takes.</p></div>
+      <div class="stp"><h3>You get a straight price</h3><p>A clear estimate and a realistic timeline — no vague "we'll see" once the machine is running.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kick">Recent work</div>
+    <h2 class="t">Otsego County jobs</h2>
+    <p class="lead">Real project photos will go here once we pull them together — driveways, pads, drainage and clearing from around the county.</p>
+    <div class="proj">
+      <div class="tile"><span class="ph">Driveway &amp; base — photo to add</span></div>
+      <div class="tile"><span class="ph">House pad / site prep — photo to add</span></div>
+      <div class="tile"><span class="ph">Drainage &amp; regrade — photo to add</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="area">
+  <div class="wrap">
+    <div class="kick">Service area</div>
+    <h2 class="t">Richfield Springs &amp; the towns around it</h2>
+    <div class="towns">
+      <span>Richfield Springs</span><span>Cooperstown</span><span>Springfield</span><span>Schuyler Lake</span>
+      <span>West Winfield</span><span>Jordanville</span><span>Bridgewater</span><span>Cherry Valley</span><span>Milford</span>
+    </div>
+    <p style="text-align:center;margin-top:18px;color:#6a7076;font-size:.92rem">Outside these towns? Ask — if it's reasonable driving distance around Otsego County, chances are we cover it.</p>
+  </div>
+</section>
+
+<section class="request" id="request">
+  <div class="wrap">
+    <div class="box">
+      <h2>Request an estimate</h2>
+      <p class="s">Tell us where the job is and what you need — the owner will get back to you to set up a look.</p>
+      <form onsubmit="event.preventDefault();alert('Thanks! This is a preview form. On the live site your request would reach Daniel J. Brown Excavating directly.');">
+        <div><label>Name</label><input required placeholder="First &amp; last"></div>
+        <div><label>Phone</label><input required placeholder="(  )  -"></div>
+        <div><label>Job location (town)</label><input required placeholder="e.g. Springfield, NY"></div>
+        <div><label>Type of work</label>
+          <select><option>Driveway / road</option><option>Site prep / house pad</option><option>Foundation / footing dig</option><option>Drainage / wet lot</option><option>Septic site work</option><option>Clearing / grading / pond</option><option>Other</option></select></div>
+        <div class="full"><label>Timeline</label>
+          <select><option>As soon as possible</option><option>Next few weeks</option><option>This season</option><option>Just pricing for now</option></select></div>
+        <div class="full"><label>Describe the project</label><textarea rows="3" placeholder="New gravel driveway ~300 ft, wet in spring, needs proper ditching…"></textarea></div>
+        <div class="full"><button class="btn" type="submit">Send my request</button></div>
+      </form>
+      <div class="callrow">Rather call? <a href="tel:13158223298">(315) 822-3298</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="big">DANIEL J. BROWN EXCAVATING &amp; SITE DEVELOPMENT</div>
+  <div>1917 US Highway 20 · Richfield Springs, NY 13439 · (315) 822-3298 · Fax (315) 822-3291</div>
+  <div style="margin-top:8px">27 years of site &amp; earthwork across Otsego County</div>
+  <div style="margin-top:14px;font-size:.8rem;color:#5f656b">Preview concept prepared by Onyx Rise Media for review. Insurance/license details &amp; project photos to be confirmed before launch.</div>
+</footer>
+
+</body>
+</html>

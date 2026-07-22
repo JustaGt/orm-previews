@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Around Upholstery & Canvas — Massena, NY | Auto, Marine & Recreational Upholstery</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#1d3145;--deep:#14233a;--cream:#f6f2e9;--gold:#c8933c;--ink:#26303b;--mist:#6b7684;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;}
+  h1,h2,h3{font-family:'Libre Baskerville',serif;}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px;}
+  /* stitched divider trick */
+  .stitch{border-top:3px dashed var(--gold);opacity:.6;margin:0;}
+  header{background:var(--navy);color:var(--cream);padding:74px 0 64px;position:relative;}
+  header .wrap{position:relative;z-index:2;}
+  header::before{content:"";position:absolute;inset:14px;border:2px dashed rgba(200,147,60,.35);pointer-events:none;}
+  .eyebrow{letter-spacing:.22em;text-transform:uppercase;font-size:.78rem;color:var(--gold);font-weight:700;margin-bottom:16px;display:block;}
+  header h1{font-size:clamp(1.8rem,4.2vw,2.9rem);line-height:1.2;max-width:660px;}
+  header p.sub{margin:20px 0 30px;font-size:1.12rem;color:#d8dde4;max-width:580px;}
+  .btn{display:inline-block;background:var(--gold);color:var(--deep);font-weight:700;padding:14px 30px;text-decoration:none;letter-spacing:.03em;}
+  .btn.line{background:transparent;color:var(--cream);border:1.5px solid var(--cream);margin-left:12px;}
+  .hero-facts{display:flex;gap:30px;margin-top:36px;flex-wrap:wrap;font-size:.95rem;color:#b9c2cc;}
+  .hero-facts b{color:var(--cream);font-size:1.2rem;font-family:'Libre Baskerville';display:block;}
+  /* lanes */
+  section.lanes{padding:70px 0;}
+  h2.title{font-size:1.9rem;margin-bottom:8px;}
+  .lead{color:var(--mist);max-width:620px;margin-bottom:40px;}
+  .lane-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;}
+  .lane{background:#fff;border:1px solid #e7e0d2;}
+  .lane .head{background:var(--deep);color:var(--cream);padding:16px 22px;font-family:'Libre Baskerville';font-size:1.1rem;border-bottom:3px solid var(--gold);}
+  .lane ul{list-style:none;padding:20px 22px;}
+  .lane li{padding:7px 0 7px 26px;position:relative;font-size:.98rem;}
+  .lane li::before{content:"✂";position:absolute;left:0;color:var(--gold);font-size:.85rem;}
+  /* season callout */
+  .season{background:var(--deep);color:var(--cream);padding:56px 0;}
+  .season .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  .season h3{color:var(--gold);font-size:1.25rem;margin-bottom:10px;}
+  .season p{color:#c9d1da;}
+  /* process */
+  section.process{padding:70px 0;}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;counter-reset:step;}
+  .step{background:#fff;padding:28px 24px;border:1px solid #e7e0d2;position:relative;}
+  .step::before{counter-increment:step;content:counter(step);position:absolute;top:-18px;left:22px;background:var(--gold);color:var(--deep);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Libre Baskerville';font-size:1.1rem;}
+  .step h3{font-size:1.05rem;margin:10px 0 8px;}
+  .step p{font-size:.95rem;color:var(--mist);}
+  /* gallery */
+  section.gallery{background:#fff;padding:70px 0;border-top:1px solid #e7e0d2;border-bottom:1px solid #e7e0d2;}
+  .g-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;}
+  .g-slot{aspect-ratio:4/3;background:repeating-linear-gradient(45deg,#eee7d8,#eee7d8 12px,#f6f2e9 12px,#f6f2e9 24px);display:flex;align-items:center;justify-content:center;color:var(--mist);font-size:.88rem;text-align:center;padding:10px;border:1px dashed #d5cbb6;}
+  /* about + form */
+  section.contact{padding:70px 0;}
+  .c-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;}
+  .c-grid p.body{margin-bottom:16px;}
+  .info-line{padding:12px 0;border-bottom:1px dashed #d5cbb6;font-size:1rem;}
+  .info-line b{font-family:'Libre Baskerville';}
+  form{display:flex;flex-direction:column;gap:12px;background:#fff;padding:28px;border:1px solid #e7e0d2;}
+  input,select,textarea{padding:12px;border:1px solid #d9d2c2;font-family:inherit;font-size:1rem;background:var(--cream);}
+  textarea{min-height:90px;}
+  form button{background:var(--navy);color:var(--cream);border:none;padding:14px;font-weight:700;font-size:1.02rem;cursor:pointer;letter-spacing:.04em;}
+  .form-hint{font-size:.85rem;color:var(--mist);}
+  footer{background:var(--navy);color:#9fb0c2;text-align:center;padding:26px 20px;font-size:.9rem;}
+  @media(max-width:780px){.season .wrap,.c-grid{grid-template-columns:1fr;}.btn.line{margin-left:0;margin-top:12px;}}
+</style>
+</head>
+<body>
+
+<header><div class="wrap">
+  <span class="eyebrow">Auto · Marine · Recreational — Massena, NY</span>
+  <h1>Cracked helm seat? Tired truck bench? Cover that didn't survive the winter?</h1>
+  <p class="sub">All Around Upholstery & Canvas rebuilds them by hand on State Highway 420 — a quarter century of stitching for Seaway boats, North Country trucks, and the furniture your family actually sits on.</p>
+  <a class="btn" href="#quote">Get a Quote</a>
+  <a class="btn line" href="tel:13157645335">(315) 764-5335</a>
+  <div class="hero-facts">
+    <span><b>25 yrs</b> at the sewing machine</span>
+    <span><b>3 trades</b> auto, marine & rec</span>
+    <span><b>1 shop</b> right here in Massena</span>
+  </div>
+</div></header>
+<hr class="stitch">
+
+<section class="lanes"><div class="wrap">
+  <h2 class="title">Three lanes, one standard of stitch</h2>
+  <p class="lead">Whatever rolls, floats, or sits in your driveway — if it's wrapped in vinyl, leather, fabric, or canvas, it can be brought back.</p>
+  <div class="lane-grid">
+    <div class="lane"><div class="head">Automotive</div>
+      <ul><li>Seat rebuilds & re-covers</li><li>Classic car & truck interiors</li><li>Headliners & door panels</li><li>Farm & work-truck bench seats</li></ul></div>
+    <div class="lane"><div class="head">Marine</div>
+      <ul><li>Helm & cockpit seating</li><li>Boat covers & mooring canvas</li><li>Bimini tops & enclosures</li><li>Pontoon furniture re-covers</li></ul></div>
+    <div class="lane"><div class="head">Recreational & Home</div>
+      <ul><li>Snowmobile & ATV seats</li><li>Camper cushions & awnings</li><li>Furniture reupholstery</li><li>Repairs on zippers, snaps & frames</li></ul></div>
+  </div>
+</div></section>
+
+<div class="season"><div class="wrap">
+  <div>
+    <h3>Spring: seats before splash-in</h3>
+    <p>River season is short. Get helm chairs and cockpit cushions rebuilt over the off-season so the boat goes in the water finished — not with a garbage bag taped over the captain's seat.</p>
+  </div>
+  <div>
+    <h3>Fall: canvas before haul-out</h3>
+    <p>A fitted cover sewn for your hull beats a blue tarp every winter it survives — and it'll survive more of them. Measure at haul-out, store it covered right.</p>
+  </div>
+</div></div>
+
+<section class="process"><div class="wrap">
+  <h2 class="title">How a job works</h2>
+  <p class="lead">No mystery, no runaround — three steps between "worn out" and "better than factory."</p>
+  <div class="steps">
+    <div class="step"><h3>Show us the damage</h3><p>Call or send photos with the quote form below. Most jobs can be priced from a few clear pictures.</p></div>
+    <div class="step"><h3>Pick the material</h3><p>Marine-grade vinyls, Sunbrella-class canvas, upholstery fabrics — matched to the job and the weather it has to live through.</p></div>
+    <div class="step"><h3>Stitched & fitted</h3><p>Cut, sewn, and fitted in the Massena shop. You get a call when it's ready — not a tracking number from out of state.</p></div>
+  </div>
+</div></section>
+
+<section class="gallery"><div class="wrap">
+  <h2 class="title">Recent work</h2>
+  <p class="lead">[Placeholder gallery — populate with the shop's own before/after photos before publishing.]</p>
+  <div class="g-grid">
+    <div class="g-slot">Helm seat rebuild — before/after</div>
+    <div class="g-slot">Custom boat cover, fitted</div>
+    <div class="g-slot">Classic truck bench re-cover</div>
+    <div class="g-slot">Snowmobile seat re-wrap</div>
+  </div>
+</div></section>
+
+<section class="contact" id="quote"><div class="wrap">
+  <div class="c-grid">
+    <div>
+      <h2 class="title">The shop on Route 420</h2>
+      <p class="body">Twenty-five years of upholstery work doesn't need a sales pitch — it needs a clear photo of what's torn and a phone number to reach you at. Local drop-off and pick-up, straightforward pricing, and work that's built for North Country seasons.</p>
+      <div class="info-line"><b>Address:</b> 2130 State Highway 420, Massena, NY 13662</div>
+      <div class="info-line"><b>Phone:</b> (315) 764-5335</div>
+      <div class="info-line"><b>Hours:</b> Mon–Sat 8:00 am – 5:00 pm <span style="color:var(--mist);font-size:.85rem;">[directory-listed — confirm]</span></div>
+    </div>
+    <div>
+      <form>
+        <input type="text" placeholder="Name" required>
+        <input type="tel" placeholder="Phone" required>
+        <select required>
+          <option value="">What kind of job?</option>
+          <option>Boat seats / cushions</option>
+          <option>Boat cover / bimini / canvas</option>
+          <option>Car or truck interior</option>
+          <option>Snowmobile / ATV / camper</option>
+          <option>Furniture</option>
+          <option>Repair (zipper, snap, seam)</option>
+        </select>
+        <textarea placeholder="Describe the piece and the damage"></textarea>
+        <button type="submit">Request My Quote</button>
+        <span class="form-hint">Have photos? Mention it — we'll tell you where to send them.</span>
+      </form>
+    </div>
+  </div>
+</div></section>
+
+<footer>All Around Upholstery & Canvas · 2130 State Highway 420, Massena, NY 13662 · (315) 764-5335</footer>
+
+</body>
+</html>

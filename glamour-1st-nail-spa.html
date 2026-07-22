@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glamour 1st Nail Spa — Newburgh, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --rose:#e08aa8; --rose-d:#c45f83; --plum:#5a2a40; --rgold:#c79a82; --rgold-d:#a9755a;
+    --blush:#fdeef3; --blush-2:#fff7fa; --cream:#fffdfb; --ink:#43242f; --muted:#8a6b75;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;font-weight:300}
+  h1,h2,h3,.disp{font-family:'Prata',serif;font-weight:400;line-height:1.18}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 30px}
+  a{color:inherit;text-decoration:none}
+  .btn{display:inline-block;background:linear-gradient(135deg,var(--rose),var(--rose-d));color:#fff;font-weight:500;padding:14px 32px;border-radius:999px;font-family:'Jost';letter-spacing:.04em;transition:.3s;box-shadow:0 10px 26px rgba(196,95,131,.32)}
+  .btn:hover{transform:translateY(-2px);filter:brightness(1.05)}
+  .btn-out{background:#fff;color:var(--rose-d);border:1.5px solid var(--rose);box-shadow:none}
+  .btn-out:hover{background:var(--blush)}
+  .tag{font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--rose-d);font-weight:500}
+  .spark{color:var(--rgold)}
+
+  nav{position:sticky;top:0;z-index:40;background:rgba(255,253,251,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--blush)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .logo{font-family:'Prata';font-size:1.4rem;color:var(--plum)}
+  .logo span{color:var(--rose-d)}
+  .nl{display:flex;gap:30px;align-items:center}
+  .nl a{font-size:.84rem;letter-spacing:.06em;color:var(--muted)}
+  .nl a:hover{color:var(--rose-d)}
+  @media(max-width:860px){.nl a:not(.btn){display:none}}
+
+  .hero{background:
+    radial-gradient(circle at 15% 20%, var(--blush), transparent 50%),
+    radial-gradient(circle at 85% 80%, #fbe3ec, transparent 55%),
+    linear-gradient(135deg,var(--blush-2),#fdeaf1)}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;padding:80px 30px}
+  .hero h1{font-size:clamp(2.6rem,5.6vw,4.4rem);color:var(--plum)}
+  .hero h1 em{font-style:italic;color:var(--rose-d)}
+  .hero p{font-size:1.14rem;color:var(--muted);margin:22px 0 32px;max-width:44ch}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-img{position:relative;border-radius:24px 24px 120px 24px;height:480px;background-size:cover;background-position:center;background-color:var(--blush);box-shadow:0 30px 60px rgba(196,95,131,.22);background-image:url('https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=1000&q=80')}
+  .sparkle{position:absolute;font-size:1.6rem;color:var(--rgold)}
+  .sparkle.s1{top:-14px;left:-10px}.sparkle.s2{bottom:30px;right:-12px;font-size:2.2rem}
+  .chip{position:absolute;background:#fff;border-radius:999px;padding:10px 18px;font-family:'Jost';font-weight:500;font-size:.86rem;color:var(--plum);box-shadow:0 12px 30px rgba(67,36,47,.14);bottom:40px;left:-20px}
+  .chip span{color:var(--rose-d)}
+  @media(max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:34px}.hero-img{height:330px}}
+
+  section{padding:84px 0}
+  .center{text-align:center;max-width:60ch;margin:0 auto}
+  h2{font-size:clamp(2rem,4.4vw,3rem);color:var(--plum)}
+  h2 em{font-style:italic;color:var(--rose-d)}
+  .sub{color:var(--muted);font-size:1.05rem;margin-top:12px}
+
+  /* services */
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .card{border-radius:22px;background:#fff;border:1px solid var(--blush);padding:30px;transition:.25s;position:relative;overflow:hidden}
+  .card::after{content:"✦";position:absolute;top:18px;right:20px;color:var(--rgold);opacity:.5}
+  .card:hover{transform:translateY(-6px);box-shadow:0 22px 46px rgba(196,95,131,.16)}
+  .card h3{font-size:1.3rem;color:var(--plum);margin-bottom:8px}
+  .card p{color:var(--muted);font-size:.94rem}
+  .card .pr{margin-top:14px;font-family:'Prata';color:var(--rose-d);font-size:1.1rem}
+  @media(max-width:860px){.svc-grid{grid-template-columns:1fr}}
+
+  /* shimmer stat band */
+  .stats{background:linear-gradient(135deg,var(--rose),var(--rose-d));color:#fff}
+  .stats .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;text-align:center}
+  .stats .n{font-family:'Prata';font-size:3rem}
+  .stats p{color:#ffe6ef;font-size:.95rem}
+  @media(max-width:860px){.stats .wrap{grid-template-columns:1fr;gap:24px}}
+
+  /* gallery masonry */
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:14px;margin-top:46px}
+  .gi{border-radius:16px;background-size:cover;background-position:center;background-color:var(--blush)}
+  .gi.tall{grid-row:span 2}.gi.wide{grid-column:span 2}
+  .gi1{background-image:url('https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80')}
+  .gi2{background-image:url('https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=800&q=80')}
+  .gi3{background-image:url('https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=800&q=80')}
+  .gi4{background-image:url('https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=800&q=80')}
+  .gi5{background-image:url('https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=80')}
+  @media(max-width:860px){.gal{grid-template-columns:1fr 1fr;grid-auto-rows:150px}}
+
+  /* visit */
+  .visit{background:var(--blush-2)}
+  .visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .vcard{background:#fff;border-radius:24px;padding:38px;box-shadow:0 20px 44px rgba(196,95,131,.12)}
+  .vrow{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid var(--blush)}
+  .vrow .k{font-weight:500;color:var(--rose-d);min-width:84px}
+  .hrs{list-style:none}
+  .hrs li{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--blush)}
+  .hrs b{font-family:'Prata'}
+  form{display:grid;gap:13px;margin-top:18px}
+  input,textarea{padding:13px 16px;border-radius:12px;border:1px solid #f2d6e0;font-family:'Jost';font-size:.93rem;background:#fff}
+  input:focus,textarea:focus{outline:none;border-color:var(--rose)}
+  @media(max-width:860px){.visit .wrap{grid-template-columns:1fr;gap:30px}}
+
+  footer{background:var(--plum);color:#d9b8c5;padding:38px 0;font-size:.84rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .pv{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;opacity:.7}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">Glamour <span>1st</span></div>
+    <div class="nl">
+      <a href="#svc">Services</a>
+      <a href="#stats">Why Us</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+      <a href="#visit" class="btn">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="tag">Mid Valley Mall · Newburgh</span>
+      <h1 style="margin-top:16px">Pop in. Glam up. <em>Sparkle out.</em></h1>
+      <p>Your in-and-out nail stop while you're at the mall — fresh gel, glitter, and full sets that look every bit as good in daylight.</p>
+      <div class="hero-actions">
+        <a href="#visit" class="btn">Reserve a Chair</a>
+        <a href="#svc" class="btn btn-out">See the Menu</a>
+      </div>
+    </div>
+    <div style="position:relative">
+      <span class="sparkle s1">✦</span>
+      <div class="hero-img"></div>
+      <span class="sparkle s2">✦</span>
+      <div class="chip">Easy mall parking · <span>walk-ins welcome</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="svc">
+  <div class="wrap">
+    <div class="center">
+      <span class="tag">The Menu</span>
+      <h2 style="margin-top:10px">Glam for <em>every</em> occasion</h2>
+      <p class="sub">Whether it's a quick refresh between errands or a full set before a night out, we've got you.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="card"><h3>Gel Manicure</h3><p>Glossy, long-wear color that survives a week of shopping bags and texting.</p><div class="pr">from $33</div></div>
+      <div class="card"><h3>Full Acrylic Set</h3><p>Any shape, any length, all the glitter — ombré, French, chrome, you name it.</p><div class="pr">from $38</div></div>
+      <div class="card"><h3>Spa Pedicure</h3><p>Sit back in the massage chair, warm soak and scrub while you scroll.</p><div class="pr">from $38</div></div>
+      <div class="card"><h3>Dip Powder</h3><p>Strong, lightweight color with serious staying power and no lamp.</p><div class="pr">from $40</div></div>
+      <div class="card"><h3>Glam Nail Art</h3><p>Rhinestones, foil, hand-painted designs — turn it all the way up.</p><div class="pr">from $5</div></div>
+      <div class="card"><h3>Waxing</h3><p>Quick brow, lip, and facial waxing while you're already in the chair.</p><div class="pr">from $10</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="stats" id="stats">
+  <div class="wrap">
+    <div><div class="n">7 days</div><p>Open every day the mall is — evenings too</p></div>
+    <div><div class="n">~40 min</div><p>In-and-out express gel between errands</p></div>
+    <div><div class="n">Fresh tools</div><p>Single-use files, sanitized every set</p></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="center"><span class="tag">Gallery</span><h2 style="margin-top:10px">A little <em>sparkle</em> inspiration</h2></div>
+    <div class="gal">
+      <div class="gi tall gi1"></div>
+      <div class="gi gi2"></div>
+      <div class="gi gi3"></div>
+      <div class="gi wide gi4"></div>
+      <div class="gi gi5"></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div>
+      <span class="tag">Find us in the mall</span>
+      <h2 style="margin:10px 0">We're at <em>Mid Valley Mall</em></h2>
+      <p class="sub" style="margin-bottom:18px">Right inside the mall on North Plank Road — easy parking, easy to pop in.</p>
+      <ul class="hrs">
+        <li><span>Mon – Sat</span><b>10:00a – 8:00p</b></li>
+        <li><span>Sunday</span><b>11:00a – 6:00p</b></li>
+      </ul>
+      <form onsubmit="event.preventDefault();this.innerHTML='<p style=\'color:var(--rose-d);font-family:Prata;font-size:1.3rem\'>Yay! We\'ll text you to confirm. ✦</p>'">
+        <input type="text" placeholder="Your name" required>
+        <input type="tel" placeholder="Phone number" required>
+        <textarea rows="2" placeholder="What & when? (e.g. full set Friday evening)"></textarea>
+        <button class="btn" type="submit">Request Appointment</button>
+      </form>
+    </div>
+    <div class="vcard">
+      <h3 style="font-family:'Prata';font-size:1.6rem;color:var(--plum);margin-bottom:14px">Glamour 1st Nail Spa</h3>
+      <div class="vrow"><div class="k">Address</div><div>Mid Valley Mall, 47 N Plank Rd, Newburgh, NY</div></div>
+      <div class="vrow"><div class="k">Inside</div><div>Mid Valley Mall — main concourse</div></div>
+      <div class="vrow"><div class="k">Parking</div><div>Free mall lot</div></div>
+      <div class="vrow" style="border:none"><div class="k">Walk-ins</div><div>Always welcome</div></div>
+      <a href="#visit" class="btn" style="margin-top:20px;width:100%;text-align:center">Reserve a Chair</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Glamour 1st Nail Spa · Mid Valley Mall, 47 N Plank Rd, Newburgh, NY</div>
+    <div class="pv">Website preview by Onyx Rise Media</div>
+  </div>
+</footer>
+
+</body>
+</html>

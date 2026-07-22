@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maple on the Lake — Lakeside Dining on Warners Lake, East Berne NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--dusk:#16283b;--water:#274b63;--amber:#e8a04c;--mist:#f4f0e8;--ink:#1d2833;--rose:#c96f4a;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Nunito Sans',sans-serif;color:var(--ink);background:var(--mist);line-height:1.65;}
+  h1,h2,h3,.script{font-family:'Cormorant Garamond',serif;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px;}
+  /* hero — lake at dusk */
+  header{background:linear-gradient(180deg,#0e1c2b 0%,var(--dusk) 35%,var(--water) 72%,#5d7f93 100%);color:var(--mist);position:relative;overflow:hidden;padding:22px 0 0;}
+  .ripple{position:absolute;left:0;right:0;bottom:0;height:120px;background:
+    radial-gradient(ellipse 60% 8px at 30% 30%,rgba(232,160,76,.35),transparent),
+    radial-gradient(ellipse 45% 6px at 65% 55%,rgba(232,160,76,.22),transparent),
+    radial-gradient(ellipse 70% 8px at 50% 80%,rgba(244,240,232,.15),transparent);}
+  nav{display:flex;justify-content:space-between;align-items:center;padding-bottom:52px;}
+  .brand{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:700;letter-spacing:.03em;}
+  .brand em{color:var(--amber);font-style:italic;}
+  nav a.res{border:1px solid var(--amber);color:var(--amber);text-decoration:none;font-weight:600;font-size:.9rem;padding:9px 18px;border-radius:999px;}
+  .hero-inner{text-align:center;padding-bottom:150px;position:relative;z-index:1;}
+  .script{font-style:italic;color:var(--amber);font-size:1.3rem;}
+  h1{font-size:clamp(2.3rem,6vw,4rem);font-weight:700;line-height:1.08;margin:10px auto 16px;max-width:16ch;}
+  .sub{max-width:56ch;margin:0 auto 30px;color:#dfe6ea;font-size:1.05rem;}
+  .cta{display:inline-block;background:var(--amber);color:#2a1c08;text-decoration:none;font-weight:700;padding:15px 30px;border-radius:999px;}
+  .cta.line{background:transparent;border:1px solid rgba(244,240,232,.55);color:var(--mist);margin-left:10px;}
+  /* hours strip */
+  .hours{background:var(--dusk);color:var(--mist);text-align:center;padding:20px 16px;font-size:.95rem;}
+  .hours strong{color:var(--amber);letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;display:block;margin-bottom:4px;}
+  section{padding:66px 0;}
+  .kicker{color:var(--rose);letter-spacing:.22em;text-transform:uppercase;font-size:.72rem;font-weight:700;margin-bottom:8px;}
+  h2{font-size:clamp(1.7rem,3.6vw,2.4rem);font-weight:700;margin-bottom:14px;}
+  .dim{color:#4c5a66;}
+  /* menu favorites */
+  .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin-top:28px;}
+  .dish{background:#fff;border-radius:10px;padding:26px;box-shadow:0 2px 12px rgba(22,40,59,.08);border-top:3px solid var(--amber);}
+  .dish h3{font-size:1.35rem;font-weight:700;}
+  .dish p{color:#55636f;font-size:.95rem;margin-top:6px;}
+  .menu-note{font-size:.85rem;color:#6b7883;margin-top:18px;font-style:italic;}
+  /* deck band */
+  .deck{background:linear-gradient(120deg,var(--water),var(--dusk));color:var(--mist);}
+  .deck .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;}
+  .deck h2{color:var(--mist);}
+  .deck p{color:#d3dde3;}
+  .stat{background:rgba(244,240,232,.08);border:1px solid rgba(232,160,76,.4);border-radius:10px;padding:26px;text-align:center;}
+  .stat strong{font-family:'Cormorant Garamond',serif;font-size:2.6rem;color:var(--amber);display:block;line-height:1;}
+  .stat span{font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:#cfd9e0;}
+  /* reviews */
+  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:26px;}
+  .q{background:#fff;border-radius:10px;padding:26px;box-shadow:0 2px 12px rgba(22,40,59,.08);}
+  .q p{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;color:#31404d;}
+  .q span{display:block;margin-top:12px;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--rose);}
+  /* catering */
+  .cater{background:#fff;}
+  .cater .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;}
+  /* find */
+  .find{background:var(--mist);text-align:center;}
+  .find .facts{display:flex;flex-wrap:wrap;justify-content:center;gap:34px;margin-top:24px;}
+  .find .f{min-width:200px;}
+  .find .f strong{display:block;color:var(--rose);font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:4px;}
+  .final{background:linear-gradient(180deg,var(--dusk),#0e1c2b);color:var(--mist);text-align:center;}
+  .final h2{color:var(--mist);}
+  .tel{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,4vw,2.5rem);font-weight:700;color:var(--amber);display:block;margin:12px 0 24px;text-decoration:none;}
+  footer{background:#0a1520;color:#7d8b96;text-align:center;padding:26px 18px;font-size:.85rem;}
+  @media(max-width:780px){.deck .wrap,.cater .wrap{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="brand">Maple <em>on the</em> Lake</div>
+      <a class="res" href="tel:15188729433">Reserve a table</a>
+    </nav>
+    <div class="hero-inner">
+      <div class="script">Warners Lake · East Berne, NY</div>
+      <h1>Dinner, with the lake for a dining room.</h1>
+      <p class="sub">A family-run kitchen on the shore of Warners Lake — comfortable American cooking, a deck over the water, and the kind of sunset you'll plan the drive around.</p>
+      <a class="cta" href="tel:15188729433">Call (518) 872-9433</a>
+      <a class="cta line" href="#menu">See menu favorites</a>
+    </div>
+  </div>
+  <div class="ripple"></div>
+</header>
+
+<div class="hours">
+  <strong>Tonight's hours</strong>
+  [Placeholder — confirm current hours with the restaurant before publishing. Third-party sites currently post conflicting schedules; this page will be the one accurate source.]
+</div>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="kicker">From the kitchen</div>
+    <h2>The plates people drive up the hill for</h2>
+    <div class="menu-grid">
+      <div class="dish"><h3>Mushroom Ravioli</h3><p>A house favorite that's earned its reputation among regulars and reviewers alike.</p></div>
+      <div class="dish"><h3>Buffalo Chicken Tortellini Alfredo</h3><p>The comfort-food mash-up guests keep coming back for.</p></div>
+      <div class="dish"><h3>Seafood Newburgh</h3><p>An old-school lakeside classic, done properly.</p></div>
+    </div>
+    <p class="menu-note">Dishes named in press coverage and guest reviews — final menu copy to come straight from the kitchen.</p>
+  </div>
+</section>
+
+<section class="deck">
+  <div class="wrap">
+    <div>
+      <div class="kicker" style="color:var(--amber);">The deck</div>
+      <h2>Eat outside, over the water.</h2>
+      <p>Warners Lake doesn't have a public beach or a boat launch — for most people, this deck is the only way to spend an evening on it. Outdoor tables in season, sunset to your left, and nobody rushing your dessert.</p>
+    </div>
+    <div class="stat">
+      <strong>98%</strong>
+      <span>recommend · 935 Facebook reviews</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Word from the regulars</div>
+    <h2>What guests say</h2>
+    <div class="quotes">
+      <div class="q"><p>"[Placeholder — pull a verified quote from the restaurant's Facebook or Yelp reviews before publishing.]"</p><span>Facebook review</span></div>
+      <div class="q"><p>"[Placeholder — verified guest quote about the deck or the view.]"</p><span>Yelp review</span></div>
+      <div class="q"><p>"[Placeholder — verified guest quote about a favorite dish.]"</p><span>Google review</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cater">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Gatherings</div>
+      <h2>Parties &amp; catering on the lake</h2>
+      <p class="dim">Rehearsal dinners, birthdays, celebrations of life — a lakeside room does half the decorating for you. Call to talk dates, headcounts, and menus.</p>
+    </div>
+    <div>
+      <div class="kicker">Takeout</div>
+      <h2 style="font-size:1.5rem;">Dinner on your own porch</h2>
+      <p class="dim">Everything travels. Call ahead and it's ready when you pull in — no app, no fees, no cold fries from a delivery bag.</p>
+    </div>
+  </div>
+</section>
+
+<section class="find">
+  <div class="wrap">
+    <div class="kicker">Find the lake</div>
+    <h2>Fifteen minutes up the hill from Altamont</h2>
+    <div class="facts">
+      <div class="f"><strong>Address</strong>141 Warners Lake Rd<br>East Berne, NY 12059</div>
+      <div class="f"><strong>Phone</strong>(518) 872-9433</div>
+      <div class="f"><strong>Good to know</strong>Deck seating in season<br>Reservations welcome</div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <div class="kicker" style="color:var(--amber);">See you at the lake</div>
+    <h2>Book a table for sunset.</h2>
+    <a class="tel" href="tel:15188729433">(518) 872-9433</a>
+    <a class="cta" href="tel:15188729433">Call Maple on the Lake</a>
+  </div>
+</section>
+
+<footer>Maple on the Lake · 141 Warners Lake Rd, East Berne, NY 12059 · Family owned &amp; operated</footer>
+
+</body>
+</html>

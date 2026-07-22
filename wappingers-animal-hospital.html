@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wappingers Animal Hospital — Wappingers Falls, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#157a8a; --teal-dk:#0e5b67; --sun:#ffc24b; --cream:#f6f2e9;
+  --ink:#1f2a2d; --muted:#5d6c70; --white:#fff; --line:#e6ddcc;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+h1,h2,h3,.logo{font-family:'Poppins',sans-serif}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:rgba(246,242,233,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;align-items:center;gap:11px;font-weight:700;font-size:1.2rem;color:var(--teal-dk)}
+.paw{width:38px;height:38px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-size:1.1rem}
+.nav-links{display:flex;align-items:center;gap:28px;font-weight:500;font-size:.95rem}
+.nav-links a:hover{color:var(--teal)}
+.btn{display:inline-block;font-family:'Poppins';font-weight:600;border-radius:40px;padding:13px 26px;font-size:.95rem;transition:.2s;cursor:pointer;border:none}
+.btn-pri{background:var(--teal);color:#fff}
+.btn-pri:hover{background:var(--teal-dk)}
+.btn-sun{background:var(--sun);color:#3a2a00}
+.btn-sun:hover{filter:brightness(.95)}
+.btn-ghost{background:transparent;border:2px solid var(--teal);color:var(--teal-dk)}
+.nav-cta{display:flex;gap:14px;align-items:center}
+.nav-phone{font-weight:600;color:var(--teal-dk)}
+
+/* HERO split (archetype C) */
+.hero{padding:62px 0 70px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+.kicker{display:inline-block;background:#fff;border:1px solid var(--line);color:var(--teal);font-weight:600;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;padding:7px 15px;border-radius:30px;margin-bottom:22px}
+.hero h1{font-size:3.05rem;line-height:1.08;color:var(--teal-dk);margin-bottom:18px}
+.hero h1 span{color:var(--teal)}
+.hero p.sub{font-size:1.12rem;color:var(--muted);max-width:480px;margin-bottom:28px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px}
+.stats{display:flex;gap:14px;flex-wrap:wrap}
+.stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 20px;flex:1;min-width:130px}
+.stat b{font-family:'Poppins';font-size:1.5rem;color:var(--teal);display:block}
+.stat small{color:var(--muted);font-size:.83rem}
+.photo-card{position:relative}
+.photo{height:430px;border-radius:24px;
+  background:linear-gradient(140deg,rgba(21,122,138,.28),rgba(255,194,75,.12)),url('https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=1400&q=80');
+  background-size:cover;background-position:center;background-color:var(--teal);box-shadow:0 24px 50px rgba(14,91,103,.25)}
+.chip{position:absolute;bottom:-22px;left:-22px;background:#fff;border-radius:18px;padding:16px 20px;box-shadow:0 14px 30px rgba(0,0,0,.12);display:flex;align-items:center;gap:13px}
+.chip .dot{width:42px;height:42px;border-radius:12px;background:var(--sun);display:grid;place-items:center;font-size:1.2rem}
+.chip b{font-family:'Poppins';display:block;color:var(--teal-dk)}
+.chip small{color:var(--muted);font-size:.8rem}
+
+/* SECTION HEAD */
+.sec{padding:74px 0}
+.sec-head{text-align:center;max-width:620px;margin:0 auto 46px}
+.sec-head .kicker{margin-bottom:16px}
+.sec-head h2{font-size:2.2rem;color:var(--teal-dk);margin-bottom:12px}
+.sec-head p{color:var(--muted)}
+
+/* SERVICES rounded cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px 26px;transition:.2s}
+.card:hover{transform:translateY(-5px);box-shadow:0 18px 36px rgba(14,91,103,.12)}
+.card .ic{width:52px;height:52px;border-radius:14px;background:var(--cream);display:grid;place-items:center;font-size:1.4rem;margin-bottom:16px}
+.card h3{font-size:1.18rem;color:var(--teal-dk);margin-bottom:8px}
+.card p{color:var(--muted);font-size:.94rem}
+
+/* STAT BAND horizontal */
+.band{background:var(--teal-dk);color:#fff;border-radius:26px;padding:42px;display:grid;grid-template-columns:repeat(3,1fr);gap:30px;text-align:center}
+.band div b{font-family:'Poppins';font-size:2rem;color:var(--sun);display:block}
+.band div p{opacity:.85;font-size:.92rem}
+
+/* GALLERY masonry */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:16px}
+.tile{border-radius:18px;background-size:cover;background-position:center}
+.t1{grid-row:span 2;background:linear-gradient(160deg,rgba(21,122,138,.3),rgba(0,0,0,.15)),url('https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=1400&q=80');background-color:var(--teal)}
+.t2{background:linear-gradient(160deg,rgba(255,194,75,.25),rgba(0,0,0,.1)),url('https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=1400&q=80');background-color:var(--sun)}
+.t3{grid-column:span 2;background:linear-gradient(160deg,rgba(21,122,138,.32),rgba(0,0,0,.15)),url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1400&q=80');background-color:var(--teal)}
+.t4{background:linear-gradient(160deg,rgba(14,91,103,.35),rgba(0,0,0,.12)),url('https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=1400&q=80');background-color:var(--teal-dk)}
+.t5{grid-column:span 2;background:linear-gradient(160deg,rgba(255,194,75,.22),rgba(0,0,0,.12)),url('https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=1400&q=80');background-color:var(--sun)}
+
+/* CONTACT card */
+.contact-card{background:#fff;border:1px solid var(--line);border-radius:26px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;box-shadow:0 20px 44px rgba(14,91,103,.1)}
+.contact-info{padding:46px;background:var(--teal-dk);color:#fff}
+.contact-info h2{font-size:1.8rem;margin-bottom:10px}
+.contact-info p.lead{opacity:.85;margin-bottom:26px}
+.info-row{display:flex;gap:13px;margin-bottom:20px;align-items:flex-start}
+.info-row .ic{width:40px;height:40px;border-radius:11px;background:rgba(255,255,255,.12);display:grid;place-items:center;flex-shrink:0}
+.info-row b{display:block;font-family:'Poppins'}
+.info-row small{opacity:.8;font-size:.88rem}
+.form{padding:46px}
+.form h3{color:var(--teal-dk);margin-bottom:18px}
+.form label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px;color:var(--ink)}
+.form input,.form select,.form textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;font-family:inherit;font-size:.95rem;margin-bottom:15px;background:var(--cream)}
+.form textarea{resize:vertical;min-height:80px}
+.thanks{display:none;text-align:center;padding:40px 10px}
+.thanks .big{font-size:2.6rem}
+.thanks h3{color:var(--teal);margin:12px 0 8px}
+
+/* FOOTER */
+footer{background:var(--teal-dk);color:#fff;padding:46px 0 30px;margin-top:74px}
+.foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;align-items:center}
+.foot-logo{font-family:'Poppins';font-weight:700;font-size:1.25rem}
+.foot-sub{opacity:.8;font-size:.9rem;margin-top:6px}
+.foot-credit{border-top:1px solid rgba(255,255,255,.15);margin-top:30px;padding-top:20px;text-align:center;opacity:.7;font-size:.85rem}
+
+@media(max-width:860px){
+  .nav-links{display:none}
+  .hero-grid{grid-template-columns:1fr;gap:50px}
+  .hero h1{font-size:2.3rem}
+  .photo{height:320px}
+  .cards{grid-template-columns:1fr}
+  .band{grid-template-columns:1fr;gap:24px;padding:34px}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:130px}
+  .t1,.t3,.t5{grid-row:auto;grid-column:span 2}
+  .contact-card{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap nav-in">
+    <div class="logo"><span class="paw">&#128062;</span> Wappingers Animal Hospital</div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#gallery">Our Office</a>
+      <a href="#contact">Visit</a>
+    </div>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:8452972727">(845) 297-2727</a>
+      <a class="btn btn-pri" href="#contact">Book Appointment</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker">Wappingers Falls, NY</span>
+      <h1>Gentle, full-service care for the <span>pets you love</span></h1>
+      <p class="sub">From a puppy's first checkup to a senior cat's comfort visit, our team treats every dog and cat like family — same patience, same attention, every visit.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-pri" href="#contact">Request an Appointment</a>
+        <a class="btn btn-ghost" href="tel:8452972727">Call (845) 297-2727</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>Cats &amp; Dogs</b><small>Wellness through surgery</small></div>
+        <div class="stat"><b>New Patients</b><small>Warmly welcomed</small></div>
+        <div class="stat"><b>Urgent Care</b><small>Same-day when we can</small></div>
+      </div>
+    </div>
+    <div class="photo-card">
+      <div class="photo"></div>
+      <div class="chip"><span class="dot">&#10084;</span><div><b>Neighborhood vet</b><small>Right here in Wappingers Falls</small></div></div>
+    </div>
+  </div>
+</header>
+
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">What We Do</span>
+      <h2>Care for every stage of life</h2>
+      <p>One familiar team handling routine visits and the moments that need a little more.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><div class="ic">&#129658;</div><h3>Wellness Exams</h3><p>Head-to-tail checkups that catch small issues early and keep healthy pets thriving.</p></div>
+      <div class="card"><div class="ic">&#128137;</div><h3>Vaccines</h3><p>Core and lifestyle vaccinations tailored to your pet's age, breed, and daily routine.</p></div>
+      <div class="card"><div class="ic">&#129463;</div><h3>Dental Care</h3><p>Cleanings and oral exams to protect teeth, gums, and the overall health that depends on them.</p></div>
+      <div class="card"><div class="ic">&#129701;</div><h3>Surgery</h3><p>Spays, neuters, and soft-tissue procedures with careful monitoring and clear aftercare.</p></div>
+      <div class="card"><div class="ic">&#9889;</div><h3>Urgent Care</h3><p>When something feels off, call us — we'll fit in same-day visits whenever we can.</p></div>
+      <div class="card"><div class="ic">&#128062;</div><h3>Cats &amp; Dogs</h3><p>A practice built around the two companions our neighbors bring through the door most.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="why" style="background:#fff;border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Why Families Choose Us</span>
+      <h2>Calm visits, clear answers</h2>
+    </div>
+    <div class="band">
+      <div><b>Low-stress</b><p>Unhurried handling so nervous pets settle in</p></div>
+      <div><b>Straight talk</b><p>Honest explanations and options, never pressure</p></div>
+      <div><b>Local roots</b><p>A team that knows the Wappingers Falls community</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Inside Our Practice</span>
+      <h2>A welcoming place for paws</h2>
+    </div>
+    <div class="gal">
+      <div class="tile t1"></div>
+      <div class="tile t2"></div>
+      <div class="tile t3"></div>
+      <div class="tile t4"></div>
+      <div class="tile t5"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="contact-card">
+      <div class="contact-info">
+        <h2>Visit us in Wappingers Falls</h2>
+        <p class="lead">Call to book, or send a request and we'll reach out to confirm a time that works.</p>
+        <div class="info-row"><span class="ic">&#128222;</span><div><b>Phone</b><small>(845) 297-2727</small></div></div>
+        <div class="info-row"><span class="ic">&#9993;</span><div><b>Email</b><small>contactus@wappingersanimalhospital.com</small></div></div>
+        <div class="info-row"><span class="ic">&#128205;</span><div><b>Location</b><small>Wappingers Falls, NY</small></div></div>
+        <div class="info-row"><span class="ic">&#128336;</span><div><b>Hours</b><small>Mon–Fri 8am–6pm · Sat 8am–1pm · Sun closed</small></div></div>
+      </div>
+      <div class="form">
+        <form id="apptForm" onsubmit="event.preventDefault();document.getElementById('apptForm').style.display='none';document.getElementById('thanks').style.display='block';">
+          <h3>Request an appointment</h3>
+          <label>Your name</label><input required placeholder="First and last name">
+          <label>Phone</label><input required placeholder="(845) 000-0000">
+          <label>Pet &amp; reason for visit</label>
+          <select><option>Wellness exam</option><option>Vaccines</option><option>Dental</option><option>Surgery consult</option><option>Urgent care</option></select>
+          <label>Anything we should know?</label><textarea placeholder="Your pet's name, age, and how they're doing"></textarea>
+          <button class="btn btn-pri" type="submit" style="width:100%">Send Request</button>
+        </form>
+        <div class="thanks" id="thanks">
+          <div class="big">&#128062;</div>
+          <h3>Thank you!</h3>
+          <p>We've got your request. Our team will call shortly to confirm your visit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="foot-logo">Wappingers Animal Hospital</div>
+      <div class="foot-sub">Full-service veterinary care · Wappingers Falls, NY · (845) 297-2727</div>
+    </div>
+    <a class="btn btn-sun" href="#contact">Book Appointment</a>
+  </div>
+  <div class="wrap foot-credit">Website preview by Onyx Rise Media</div>
+</footer>
+</body>
+</html>

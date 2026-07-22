@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ebert Vans — Careful Horse Transport from Long Island</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#243a2b; --green2:#2f4c38; --moss:#5c7a5f; --leather:#8a5a33;
+    --tan:#c9a877; --cream:#f6f1e7; --ink:#26302a; --paper:#fbf8f1; --gold:#b8862f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Source Sans 3',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+  /* nav */
+  nav{background:var(--green);color:var(--cream)}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;flex-wrap:wrap;gap:8px}
+  nav .brand{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;letter-spacing:.5px}
+  nav .brand small{display:block;font-family:'Source Sans 3',sans-serif;font-size:.66rem;letter-spacing:3px;color:var(--tan);text-transform:uppercase;font-weight:600}
+  nav .call{color:var(--cream);text-decoration:none;font-weight:600;font-size:.95rem}
+  nav .call b{color:var(--tan)}
+  /* hero */
+  header{background:
+      linear-gradient(180deg,rgba(36,58,43,.86),rgba(36,58,43,.92)),
+      repeating-linear-gradient(135deg,#2c4634 0 26px,#284030 26px 52px);
+    color:var(--cream)}
+  header .wrap{padding:70px 22px}
+  .kick{font-size:.78rem;letter-spacing:3px;text-transform:uppercase;color:var(--tan);font-weight:600}
+  header h1{font-size:3rem;line-height:1.05;margin:14px 0 16px;max-width:760px}
+  header h1 em{color:var(--tan);font-style:italic}
+  header p{font-size:1.15rem;max-width:600px;color:#e3ddcd}
+  .btns{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;text-decoration:none;font-weight:600;padding:13px 26px;border-radius:2px;font-size:1rem}
+  .btn-gold{background:var(--tan);color:var(--green)}
+  .btn-out{border:1.5px solid var(--moss);color:var(--cream)}
+  .creds{margin-top:34px;display:flex;gap:30px;flex-wrap:wrap;border-top:1px solid #3c5645;padding-top:20px}
+  .creds div b{display:block;font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--tan)}
+  .creds div span{font-size:.85rem;color:#cdd6c8}
+  /* section */
+  section{padding:60px 0}
+  .lab{color:var(--leather);font-weight:700;letter-spacing:2px;font-size:.76rem;text-transform:uppercase}
+  h2{font-size:2.1rem;color:var(--green);margin:6px 0 10px}
+  .intro{color:#4d5a50;max-width:640px;margin-bottom:32px}
+  /* how it works */
+  .how{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .how .c{background:var(--cream);border:1px solid #e6ddc9;border-radius:8px;padding:26px}
+  .how .c .ic{width:42px;height:42px;border-radius:50%;background:var(--green);color:var(--tan);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:12px}
+  .how .c h3{font-size:1.25rem;color:var(--green);margin-bottom:6px}
+  .how .c p{font-size:.95rem;color:#4d5a50}
+  /* haul / two-col */
+  .haul{background:var(--green);color:var(--cream)}
+  .haul h2{color:#fff}
+  .haul .intro{color:#c4cdbf}
+  .haul-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .haul-grid .x{background:var(--green2);border-left:3px solid var(--tan);border-radius:0 7px 7px 0;padding:18px 20px}
+  .haul-grid .x h3{font-size:1.12rem;color:#fff;margin-bottom:4px}
+  .haul-grid .x p{font-size:.92rem;color:#c4cdbf}
+  /* trust band */
+  .trust{background:var(--cream)}
+  .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .trust-grid .t{text-align:center;padding:18px}
+  .trust-grid .t b{display:block;font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--green);margin-bottom:4px}
+  .trust-grid .t p{font-size:.88rem;color:#5a6659}
+  /* quote */
+  .quote-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:30px;align-items:center}
+  .quote-copy h2{color:var(--green)}
+  .quote-copy .area{margin-top:16px;font-size:.92rem;color:#4d5a50}
+  form{background:#fff;border:1px solid #e3d9c4;border-radius:12px;padding:28px;box-shadow:0 10px 30px rgba(36,58,43,.08)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  label{display:block;font-size:.78rem;font-weight:600;color:var(--green);text-transform:uppercase;letter-spacing:.5px;margin:12px 0 5px}
+  input,textarea{width:100%;padding:11px 12px;border:1px solid #d2c4a6;border-radius:6px;font-family:inherit;font-size:.95rem;background:#fdfbf6}
+  textarea{min-height:74px;resize:vertical}
+  .qbtn{margin-top:18px;width:100%;background:var(--green);color:var(--tan);border:none;padding:14px;border-radius:6px;font-family:'Playfair Display',serif;font-size:1.08rem;font-weight:700;cursor:pointer}
+  /* footer */
+  footer{background:#1a2a1f;color:#9bae9e;padding:32px 0;font-size:.9rem}
+  footer b{color:var(--cream)}
+  footer a{color:var(--tan);text-decoration:none}
+  @media(max-width:760px){
+    header h1{font-size:2.2rem}
+    .how,.haul-grid,.trust-grid,.quote-wrap,.row{grid-template-columns:1fr}
+    .trust-grid{grid-template-columns:1fr 1fr}
+  }
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="brand">Ebert Vans<small>Horse Transport &middot; Est. on Long Island</small></div>
+  <a class="call" href="tel:5163520090">Dispatch &middot; <b>(516) 352-0090</b></a>
+</div></nav>
+
+<header>
+  <div class="wrap">
+    <div class="kick">Long Island &middot; Northeast &middot; Coast to coast</div>
+    <h1>Your horse arrives <em>the way it left.</em></h1>
+    <p>Ebert Vans has been hauling show, sport, and family horses out of Long Island for decades — careful drivers, a properly maintained rig, and a DOT-authorized interstate operation you can hand the lead rope to with confidence.</p>
+    <div class="btns">
+      <a href="#quote" class="btn btn-gold">Request a shipping quote</a>
+      <a href="tel:5163520090" class="btn btn-out">Call dispatch</a>
+    </div>
+    <div class="creds">
+      <div><b>Decades</b><span>moving horses</span></div>
+      <div><b>DOT-authorized</b><span>interstate carrier</span></div>
+      <div><b>Insured</b><span>professional drivers</span></div>
+      <div><b>Elmont, NY</b><span>minutes from Belmont</span></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="lab">How a shipment works</div>
+    <h2>Three steps, no guesswork</h2>
+    <p class="intro">Whether it's one horse to a new barn or a string headed to a show, the process is the same — simple and planned around your horse.</p>
+    <div class="how">
+      <div class="c"><div class="ic">1</div><h3>Tell us the trip</h3><p>Pickup barn, destination, dates, and how many horses. We confirm a window and a flat, honest price — no surprises at drop-off.</p></div>
+      <div class="c"><div class="ic">2</div><h3>We load &amp; haul</h3><p>An experienced driver loads safely, monitors the ride, and keeps you updated en route. Box stall or standard, solo or a shared route to keep costs fair.</p></div>
+      <div class="c"><div class="ic">3</div><h3>Calm arrival</h3><p>Your horse steps off relaxed and on time, handed back to you or your barn staff with the same care it left with.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="haul">
+  <div class="wrap">
+    <div class="lab" style="color:var(--tan)">What we move</div>
+    <h2>The cargo is family</h2>
+    <p class="intro">Every load is a living animal worth more than the truck around it. We plan each one that way.</p>
+    <div class="haul-grid">
+      <div class="x"><h3>Show &amp; sport horses</h3><p>To and from the Northeast circuit and the Hampton Classic — dependable timing when the ring won't wait.</p></div>
+      <div class="x"><h3>Barn-to-barn moves</h3><p>Relocating a horse to a new boarding barn across the Island or out of state, handled door to door.</p></div>
+      <div class="x"><h3>Vet &amp; clinic runs</h3><p>Careful transport to and from veterinary appointments and clinics, including time-sensitive trips.</p></div>
+      <div class="x"><h3>Sale &amp; delivery</h3><p>Newly purchased horse picked up and delivered safely, so a buyer or seller never has to risk the haul themselves.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="lab">Why owners hand us the lead rope</div>
+    <h2>Built on trust, not slogans</h2>
+    <div class="trust-grid" style="margin-top:22px">
+      <div class="t"><b>Experienced drivers</b><p>People who know how a loaded trailer rides and how to keep a nervous horse calm.</p></div>
+      <div class="t"><b>Maintained rig</b><p>Footing, ventilation and brakes checked — the equipment is the safety.</p></div>
+      <div class="t"><b>Authorized &amp; insured</b><p>DOT-registered interstate carrier with coverage in place before we roll.</p></div>
+      <div class="t"><b>Straight pricing</b><p>A clear quote for your exact route and dates, agreed before pickup.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="quote">
+  <div class="wrap">
+    <div class="quote-wrap">
+      <div class="quote-copy">
+        <div class="lab">Request a quote</div>
+        <h2>Tell us where and when</h2>
+        <p class="intro">Give us the route and the date and we'll get you a price and an available window. For time-sensitive trips, call dispatch directly.</p>
+        <p class="area"><b>Service area:</b> Long Island barns to the Northeast circuit and across the country. Based at 287 Hempstead Turnpike, Elmont, NY 11003.</p>
+      </div>
+      <form onsubmit="return false">
+        <div class="row">
+          <div><label>Your name</label><input type="text" placeholder="First &amp; last"></div>
+          <div><label>Phone</label><input type="tel" placeholder="(000) 000-0000"></div>
+        </div>
+        <div class="row">
+          <div><label>Pick-up (barn / town)</label><input type="text" placeholder="Origin"></div>
+          <div><label>Drop-off (barn / town)</label><input type="text" placeholder="Destination"></div>
+        </div>
+        <div class="row">
+          <div><label>Date / window</label><input type="text" placeholder="e.g. week of Aug 20"></div>
+          <div><label># of horses</label><input type="text" placeholder="1"></div>
+        </div>
+        <label>Anything we should know?</label>
+        <textarea placeholder="Box stall, easy/hard loader, vet timing, etc."></textarea>
+        <button class="qbtn">Get my shipping quote</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>Ebert Vans Inc.</b> &middot; 287 Hempstead Turnpike, Elmont, NY 11003 &middot; <a href="tel:5163520090">(516) 352-0090</a><br>
+    Horse transport from Long Island to the Northeast and nationwide &middot; DOT-authorized interstate carrier<br>
+    <span style="font-size:.82rem;opacity:.7">Preview concept prepared by Onyx Rise Media for review. Not the live site.</span>
+  </div>
+</footer>
+
+</body>
+</html>

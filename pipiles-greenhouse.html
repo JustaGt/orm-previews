@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pipiles Greenhouse — Family-Grown Annuals, Baskets &amp; Veg Starts, Newfane NY</title>
+<meta name="description" content="Pipiles Greenhouse in Newfane, NY — a family greenhouse growing annuals, perennials, hanging baskets and vegetable &amp; tomato plants on-site. See what's ready now, this season's hours, and where to find us.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --leaf:#3f7d3a; --leaf-d:#2c5a29; --moss:#6aa15f; --sprout:#8fc47f;
+    --terra:#c96f3f; --terra-d:#a9552b; --cream:#fbf7ec; --paper:#f4f1e6;
+    --ink:#2b3527; --soil:#4a3b2f; --white:#fff; --shadow:0 14px 36px rgba(44,90,41,.15);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Karla',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+  h1,h2,h3,.disp{font-family:'Fraunces',serif}
+  a{color:inherit}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--terra);color:#fff;font-family:'Karla',sans-serif;font-weight:700;
+    padding:14px 30px;border-radius:40px;text-decoration:none;box-shadow:0 8px 20px rgba(201,111,63,.34);transition:transform .15s}
+  .btn:hover{transform:translateY(-2px);background:var(--terra-d)}
+  .btn.leaf{background:var(--leaf)}
+  .btn.leaf:hover{background:var(--leaf-d)}
+  .btn.ghost{background:transparent;border:2px solid rgba(255,255,255,.7);color:#fff;box-shadow:none}
+
+  .top{background:var(--leaf-d);color:#dcecd6;font-size:.9rem}
+  .top .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;padding:9px 22px}
+  .top a{color:#fff;font-weight:700;text-decoration:none}
+
+  header.hero{position:relative;color:#fff;overflow:hidden;
+    background:linear-gradient(165deg,var(--leaf) 0%, var(--leaf-d) 100%);}
+  .hero .wrap{position:relative;z-index:2;padding:64px 22px 92px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+  .eyebrow{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.32);
+    padding:6px 15px;border-radius:30px;font-weight:700;font-size:.82rem;margin-bottom:16px}
+  .hero h1{font-size:3rem;line-height:1.05;font-weight:700}
+  .hero h1 em{color:#ffe0b0;font-style:italic}
+  .hero p.lede{font-size:1.15rem;max-width:40ch;margin-top:16px;color:#eef6ea}
+  .hero .cta{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+  .statuscard{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:26px;backdrop-filter:blur(3px)}
+  .statuscard h3{font-family:'Karla';text-transform:uppercase;letter-spacing:.06em;font-size:.82rem;color:#ffe0b0;margin-bottom:14px}
+  .statuscard .season{font-family:'Fraunces';font-size:1.7rem;line-height:1.15;margin-bottom:8px}
+  .statuscard .season .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:#8fe08a;box-shadow:0 0 0 4px rgba(143,224,138,.3);margin-right:8px;vertical-align:middle}
+  .statuscard p{color:#e7f2e3;font-size:.95rem}
+  .statuscard .ph{color:#ffd59a;font-style:italic;font-size:.85rem}
+  .leaves{position:absolute;left:0;right:0;bottom:-2px;height:60px;display:block}
+
+  .grown{background:var(--terra);color:#fff;text-align:center;font-weight:700}
+  .grown .wrap{padding:15px 22px;font-size:1.02rem;font-family:'Fraunces'}
+
+  section{padding:60px 0}
+  .kick{color:var(--terra);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.82rem;text-align:center;margin-bottom:6px}
+  h2.t{text-align:center;font-family:'Fraunces';font-size:2.1rem;color:var(--leaf-d);margin-bottom:8px}
+  .sub{text-align:center;max-width:58ch;margin:0 auto 40px;color:#556b4e}
+
+  .beds{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .bed{background:#fff;border-radius:16px;padding:24px 20px;text-align:center;box-shadow:var(--shadow);border-bottom:5px solid var(--sprout)}
+  .bed .ic{font-size:2rem;margin-bottom:8px}
+  .bed h3{font-family:'Fraunces';color:var(--leaf-d);font-size:1.22rem;margin-bottom:6px}
+  .bed p{color:#5a6e52;font-size:.93rem}
+
+  .why{background:var(--paper)}
+  .why .row{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+  .why .card{background:var(--leaf-d);color:#eef6ea;border-radius:20px;padding:34px}
+  .why .card h2{font-family:'Fraunces';color:#fff;font-size:1.8rem;margin-bottom:12px}
+  .why .card p{color:#d7e7d1}
+  .why ul{list-style:none;margin-top:6px}
+  .why li{padding:11px 0 11px 34px;position:relative;border-bottom:1px solid #e3ddc9;color:#4a3b2f;font-weight:500}
+  .why li:last-child{border-bottom:0}
+  .why li::before{content:"🌱";position:absolute;left:0;top:9px}
+
+  .visit{background:var(--leaf);color:#fff}
+  .visit .grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:34px}
+  .vcard{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.24);border-radius:18px;padding:30px}
+  .vcard h3{font-family:'Fraunces';color:#ffe0b0;font-size:1.4rem;margin-bottom:14px}
+  .vcard .r{display:flex;gap:12px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.16)}
+  .vcard .r:last-child{border-bottom:0}
+  .vcard .r b{min-width:88px;color:#cfe6c8;font-weight:700}
+  .vcard .callbig{font-family:'Fraunces';font-size:1.8rem;color:#fff;text-decoration:none;display:inline-block;margin-top:6px}
+  .vcard .ph{color:#ffd59a;font-style:italic;font-size:.85rem}
+  .visit .ask form{display:grid;gap:12px;margin-top:8px}
+  .visit label{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#cfe6c8;margin-bottom:4px;display:block}
+  .visit input,.visit textarea,.visit select{width:100%;padding:11px 13px;border-radius:10px;border:1px solid rgba(255,255,255,.3);
+    background:#fff;color:var(--ink);font-family:inherit;font-size:.95rem}
+  .visit .btn{width:100%;text-align:center;border:0;cursor:pointer}
+
+  footer{background:#233520;color:#a9c19f;text-align:center;padding:34px 22px;font-size:.9rem}
+  footer .big{font-family:'Fraunces';color:#fff;font-size:1.35rem;margin-bottom:6px}
+  .ph{color:#c98a4f;font-style:italic;font-size:.85rem}
+
+  @media(max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;padding:48px 22px 84px}
+    .hero h1{font-size:2.2rem}
+    .beds{grid-template-columns:1fr 1fr}
+    .why .row{grid-template-columns:1fr}
+    .visit .grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <span>3378 Lockport-Olcott Rd · Newfane, NY 14108</span>
+  <span>Call the greenhouse: <a href="tel:17167787366">(716) 778-7366</a></span>
+</div></div>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">🌿 Family-grown in Newfane</span>
+      <h1>Baskets, bedding plants &amp; <em>veg starts</em> — grown right here.</h1>
+      <p class="lede">A small family greenhouse on Lockport-Olcott Road. The annuals, perennials, hanging baskets, and tomato plants you take home were started in our own houses — not trucked in from three states away.</p>
+      <div class="cta">
+        <a class="btn" href="#visit">Hours &amp; directions</a>
+        <a class="btn ghost" href="#growing">See what's ready</a>
+      </div>
+    </div>
+    <div class="statuscard">
+      <h3>This season</h3>
+      <div class="season"><span class="dot"></span>Open for spring planting</div>
+      <p>Fresh baskets and vegetable starts are coming on. <span class="ph">Live "open today / what's ready now" status to be kept current by the owner once this page is live.</span></p>
+    </div>
+  </div>
+  <svg class="leaves" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,30 C240,58 480,6 720,28 C960,50 1200,10 1440,32 L1440,60 L0,60 Z" fill="#fbf7ec"/>
+  </svg>
+</header>
+
+<div class="grown"><div class="wrap">
+  Started from seed &amp; cutting in our own greenhouses — you're buying local, not a big-box pallet.
+</div></div>
+
+<section id="growing">
+  <div class="wrap">
+    <div class="kick">What we grow</div>
+    <h2 class="t">Under our glass, through the season</h2>
+    <p class="sub">A grower's greenhouse, so what's on the tables changes as spring rolls into summer. Here's the range — call ahead if you're after something specific.</p>
+    <div class="beds">
+      <div class="bed"><div class="ic">🌸</div><h3>Annuals</h3><p>Petunias, geraniums, marigolds &amp; more color for beds, borders and porch pots.</p></div>
+      <div class="bed"><div class="ic">🪴</div><h3>Hanging Baskets</h3><p>Full, ready-to-hang baskets grown on-site — the kind you can't fake overnight.</p></div>
+      <div class="bed"><div class="ic">🍅</div><h3>Vegetable &amp; Tomato Plants</h3><p>Tomatoes, peppers &amp; garden starts — strong young plants ready for your rows.</p></div>
+      <div class="bed"><div class="ic">🌼</div><h3>Perennials</h3><p>Hardy plants that come back year after year for the long-game gardener.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <div class="row">
+      <div class="card">
+        <h2>Why buy from a grower, not a garden department?</h2>
+        <p>When plants are grown a few miles from where they'll live, they're already used to our Niagara-shoreline weather — no shock from a cross-country truck, no picked-over end-of-week racks. And the person ringing you up actually grew the thing and can tell you how to keep it alive.</p>
+      </div>
+      <div>
+        <ul>
+          <li><strong>Grown on the premises</strong> — not shipped in and marked up</li>
+          <li><strong>Hardened to local weather</strong> — ready for your garden, not a warehouse</li>
+          <li><strong>Real growing advice</strong> — ask the family, they raised it</li>
+          <li><strong>Fresh &amp; unpicked-over</strong> — new plants coming on all season</li>
+          <li><strong>A local fixture</strong> — the greenhouse Newfane drives to every spring</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="kick" style="color:#ffe0b0">Come see us</div>
+    <h2 class="t" style="color:#fff">Find the greenhouse this season</h2>
+    <p class="sub" style="color:#e7f2e3">We're a seasonal greenhouse, so hours run with the planting weeks. Call before you drive out and we'll tell you what's open and what's ready.</p>
+    <div class="grid">
+      <div class="vcard">
+        <h3>Hours &amp; where we are</h3>
+        <div class="r"><b>Address</b><span>3378 Lockport-Olcott Rd, Newfane, NY 14108 <span class="ph">(some listings show 3370 — confirm)</span></span></div>
+        <div class="r"><b>Season</b><span>Spring through early summer planting <span class="ph">(confirm dates)</span></span></div>
+        <div class="r"><b>Hours</b><span class="ph">To be confirmed by the owner &amp; kept current here</span></div>
+        <div class="r"><b>Family</b><span>Owned &amp; grown by the Pipiles family</span></div>
+        <a class="callbig" href="tel:17167787366">(716) 778-7366</a>
+      </div>
+      <div class="vcard ask">
+        <h3>Ask what's ready</h3>
+        <p style="color:#e7f2e3;margin-bottom:6px">Looking for a certain basket, color, or veg start? Send a quick note and we'll tell you if it's on the tables.</p>
+        <form onsubmit="event.preventDefault();alert('Thanks! This is a preview form. On the live site your note would reach Pipiles directly.');">
+          <div><label>Name</label><input required placeholder="First name"></div>
+          <div><label>Phone or email</label><input required placeholder="Best way to reach you"></div>
+          <div><label>What are you after?</label><textarea rows="2" placeholder="Do you have big Boston fern baskets / Roma tomato starts yet?"></textarea></div>
+          <button class="btn" type="submit">Send my note</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="big">Pipiles Greenhouse</div>
+  <div>3378 Lockport-Olcott Rd · Newfane, NY 14108 · (716) 778-7366</div>
+  <div style="margin-top:8px">Family-grown annuals, perennials, hanging baskets &amp; vegetable plants</div>
+  <div style="margin-top:14px;font-size:.8rem;color:#7f9573">Preview concept prepared by Onyx Rise Media for review. Hours, exact address &amp; seasonal status to be confirmed with the owners before this page goes live.</div>
+</footer>
+
+</body>
+</html>

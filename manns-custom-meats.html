@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manns Custom Meats — Custom Processing &amp; Smokehouse | Cortland, NY</title>
+<style>
+  :root{
+    --kraft:#e7d8bd; --kraft2:#dcc8a4; --paper:#f4ecdc; --rust:#9c3b29; --rust-d:#7c2c1e;
+    --ink:#2a2018; --muted:#6b5d4b; --line:#cdb892; --cream:#fbf6ec; --green:#586341; --white:#fff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  .slab{font-family:"Rockwell","Roboto Slab",Georgia,serif}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+  header.top{background:var(--ink);color:var(--kraft)}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{font-weight:800;font-size:1.15rem;letter-spacing:.4px}
+  .brand b{color:var(--rust)}
+  .brand .est{font-weight:500;font-size:.62rem;letter-spacing:2px;color:#b7a888;display:block;text-transform:uppercase}
+  .top nav a{font-size:.82rem;color:#c9bb9f;margin-left:20px;font-weight:600}
+  .top nav a:hover{color:var(--white)}
+  .top .callbtn{background:var(--rust);color:var(--cream);padding:8px 15px;border-radius:4px;font-size:.82rem;margin-left:20px;font-weight:700}
+  @media(max-width:780px){.top nav a:not(.callbtn){display:none}}
+
+  /* hero */
+  .hero{background:
+      linear-gradient(180deg,rgba(42,32,24,.86),rgba(42,32,24,.9)),
+      repeating-linear-gradient(0deg,#3a2c20,#3a2c20 2px,#33271c 2px,#33271c 4px);
+      color:var(--kraft)}
+  .hero .wrap{padding:70px 24px 60px;max-width:820px}
+  .kick{font-size:.76rem;letter-spacing:2.5px;text-transform:uppercase;color:#e0a85f;font-weight:700}
+  .hero h1{font-size:2.9rem;line-height:1.08;margin:16px 0 16px;font-weight:800;color:var(--cream)}
+  .hero h1 b{color:#e0a85f}
+  .hero p{font-size:1.16rem;color:#e3d8c4;max-width:52ch}
+  .hbtns{margin-top:28px;display:flex;gap:13px;flex-wrap:wrap}
+  .btn{padding:13px 22px;border-radius:5px;font-weight:700;font-size:.92rem;display:inline-block}
+  .btn-r{background:var(--rust);color:var(--cream)}
+  .btn-r:hover{background:var(--rust-d)}
+  .btn-k{background:var(--kraft);color:var(--ink)}
+  @media(max-width:600px){.hero h1{font-size:2.05rem}}
+
+  /* two-audience split */
+  .audience{background:var(--kraft)}
+  .audience .wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:48px 24px}
+  .acard{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:30px;position:relative}
+  .acard .tagk{display:inline-block;background:var(--ink);color:var(--kraft);font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;padding:5px 11px;border-radius:3px;font-weight:700}
+  .acard h2{font-size:1.5rem;margin:14px 0 8px;color:var(--rust-d)}
+  .acard p{color:var(--muted);font-size:.98rem}
+  .acard a{display:inline-block;margin-top:16px;color:var(--rust);font-weight:700;font-size:.92rem}
+  @media(max-width:700px){.audience .wrap{grid-template-columns:1fr}}
+
+  section{padding:56px 0}
+  .eyebrow{font-size:.74rem;letter-spacing:2px;text-transform:uppercase;color:var(--rust);font-weight:700}
+  h2.sec{font-size:1.9rem;color:var(--ink);margin:8px 0 8px;font-weight:800}
+  .intro{color:var(--muted);max-width:60ch;font-size:1.04rem}
+
+  /* processing services list */
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+  .svc{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:22px}
+  .svc .n{font-family:"Rockwell",Georgia,serif;color:var(--rust);font-weight:800;font-size:1.1rem;border-bottom:2px solid var(--kraft2);padding-bottom:8px;margin-bottom:10px}
+  .svc p{color:var(--muted);font-size:.92rem}
+  @media(max-width:780px){.svc-grid{grid-template-columns:1fr}}
+
+  /* smokehouse menu — cutlist style */
+  .smoke{background:var(--ink);color:var(--kraft)}
+  .smoke h2.sec{color:var(--cream)}
+  .smoke .intro{color:#c3b69e}
+  .menu{margin-top:26px;background:#34281d;border:1px solid #4a3a2a;border-radius:12px;padding:10px 26px}
+  .mrow{display:flex;align-items:baseline;gap:12px;padding:15px 0;border-bottom:1px dashed #4a3a2a}
+  .mrow:last-child{border-bottom:none}
+  .mrow .nm{font-weight:700;color:var(--cream);white-space:nowrap}
+  .mrow .dot{flex:1;border-bottom:1px dotted #6b5a44;transform:translateY(-4px)}
+  .mrow .ds{color:#bdb098;font-size:.9rem;text-align:right;max-width:46%}
+  @media(max-width:600px){.mrow{flex-direction:column;gap:3px}.mrow .dot{display:none}.mrow .ds{text-align:left;max-width:100%}}
+
+  /* how scheduling works */
+  .how .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+  .stp{border-top:3px solid var(--rust);background:var(--white);border:1px solid var(--line);border-top:3px solid var(--rust);border-radius:0 0 10px 10px;padding:22px}
+  .stp .num{font-family:"Rockwell",Georgia,serif;font-size:1.5rem;color:var(--rust);font-weight:800}
+  .stp b{display:block;margin:6px 0 6px;font-size:1.05rem}
+  .stp p{color:var(--muted);font-size:.92rem}
+  @media(max-width:780px){.how .steps{grid-template-columns:1fr}}
+
+  /* contact */
+  .contact{background:var(--kraft2)}
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:start}
+  .contact h2.sec{margin-bottom:12px}
+  .info div{margin:10px 0;font-size:1.04rem}
+  .info span{color:var(--rust-d);font-weight:800;display:inline-block;width:92px}
+  .hours{margin-top:18px;background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+  .hours b{color:var(--rust-d)}
+  .form{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:26px}
+  .form label{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin:13px 0 5px;font-weight:700}
+  .form label:first-child{margin-top:0}
+  .form input,.form select,.form textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:7px;font-size:.94rem;background:var(--white);font-family:inherit;color:var(--ink)}
+  .form button{margin-top:18px;width:100%;background:var(--rust);color:var(--cream);border:none;padding:14px;border-radius:6px;font-weight:800;font-size:.95rem;cursor:pointer}
+  .form .note{font-size:.74rem;color:#9a8b73;margin-top:8px}
+  @media(max-width:780px){.contact .wrap{grid-template-columns:1fr}}
+
+  footer{background:var(--ink);color:#b7a888;padding:28px 0;font-size:.86rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  .flag{background:#fff7e2;border:1px solid #d9b24a;color:#7a5f12;font-size:.78rem;padding:9px 13px;border-radius:8px;margin-top:14px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">MANN'S <b>CUSTOM MEATS</b><span class="est">Cortland, New York</span></div>
+    <nav>
+      <a href="#proc">Processing</a>
+      <a href="#smoke">Smokehouse</a>
+      <a href="#how">Scheduling</a>
+      <a href="#contact" class="callbtn">Book a slot</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="kick">Custom processing · smokehouse · retail counter</span>
+    <h1>Your animal, cut and wrapped <b>the way you asked.</b></h1>
+    <p>A hometown butcher in Cortland doing honest custom cut-and-wrap, real smokehouse work, and a counter worth stopping at. Raise it or hunt it — we'll handle it from rail to freezer.</p>
+    <div class="hbtns">
+      <a class="btn btn-r" href="#contact">Schedule a processing slot</a>
+      <a class="btn btn-k" href="#smoke">See the smokehouse</a>
+    </div>
+  </div>
+</section>
+
+<section class="audience">
+  <div class="wrap">
+    <div class="acard">
+      <span class="tagk">For farmers &amp; hunters</span>
+      <h2>Bring us your animal</h2>
+      <p>Beef, pork, lamb, or your deer — cut and wrapped to your order, with the cuts you want and nothing wasted. Slots fill in the fall, so it's worth getting on the calendar early.</p>
+      <a href="#how">How scheduling works →</a>
+    </div>
+    <div class="acard">
+      <span class="tagk">For the dinner table</span>
+      <h2>Stop by the counter</h2>
+      <p>Fresh cuts and smokehouse bacon, hams, and sausage made on-site — the kind of meat you can't get shrink-wrapped at the chain store. Walk in and see what's fresh.</p>
+      <a href="#contact">Hours &amp; location →</a>
+    </div>
+  </div>
+</section>
+
+<section id="proc">
+  <div class="wrap">
+    <span class="eyebrow">Processing services</span>
+    <h2 class="sec">Cut, wrapped, and labeled to your order</h2>
+    <p class="intro">You tell us the cuts and the thickness; we do the rest and label every package so you know what's in the freezer. Confirm current species, scheduling windows, and pricing with the shop.</p>
+    <div class="svc-grid">
+      <div class="svc"><div class="n">Cut &amp; wrap</div><p>Beef, pork, and lamb broken down to your cut sheet — steaks, roasts, chops, ground — wrapped and labeled.</p></div>
+      <div class="svc"><div class="n">Custom orders</div><p>Want it your way? Roast sizes, steak thickness, grind, and trim done to order, not off a chart.</p></div>
+      <div class="svc"><div class="n">Game processing</div><p>Bring your deer in for honest cut-and-wrap and summer sausage or snack sticks from the smokehouse.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="smoke" id="smoke">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#e0a85f">From the smokehouse</span>
+    <h2 class="sec">Smoked &amp; cured, made on-site</h2>
+    <p class="intro">The part the freezer aisle can't touch. Menu items below are placeholders — confirm the shop's current smokehouse list and pricing before launch.</p>
+    <div class="menu">
+      <div class="mrow"><span class="nm">Smoked bacon</span><span class="dot"></span><span class="ds">Cured and smoked from fresh pork belly</span></div>
+      <div class="mrow"><span class="nm">Hams</span><span class="dot"></span><span class="ds">Whole and half, smokehouse-cured</span></div>
+      <div class="mrow"><span class="nm">Sausage</span><span class="dot"></span><span class="ds">Fresh and smoked links, made in-house</span></div>
+      <div class="mrow"><span class="nm">Summer sausage</span><span class="dot"></span><span class="ds">From your game or our beef &amp; pork</span></div>
+      <div class="mrow"><span class="nm">Snack sticks</span><span class="dot"></span><span class="ds">Smoked, seasoned, ready to grab</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="wrap">
+    <span class="eyebrow">How scheduling works</span>
+    <h2 class="sec">Getting your animal on the calendar</h2>
+    <p class="intro">A quick, no-surprises process — especially in the busy fall season.</p>
+    <div class="steps">
+      <div class="stp"><div class="num">1</div><b>Call ahead</b><p>Reach out to reserve a slot — fall books up fast for beef, pork, and deer.</p></div>
+      <div class="stp"><div class="num">2</div><b>Give us your cut sheet</b><p>Tell us how you want it cut, ground, and packaged — we'll walk you through it if it's your first time.</p></div>
+      <div class="stp"><div class="num">3</div><b>Pick up &amp; fill the freezer</b><p>Your order comes back cut, wrapped, and labeled, with any smokehouse items ready too.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Visit or book</span>
+      <h2 class="sec">Schedule a slot or ask about an order</h2>
+      <div class="info">
+        <div><span>Address</span> 2081 Maxfield Rd, Cortland, NY 13045</div>
+        <div><span>Phone</span> <a href="tel:13152781578" style="color:var(--rust-d);font-weight:700">(315) 278-1578</a></div>
+      </div>
+      <div class="hours">
+        <b>Hours</b> — placeholder; confirm the shop's current days &amp; hours before this goes live. Seasonal processing hours often differ from the retail counter.
+      </div>
+    </div>
+    <form class="form" onsubmit="return false">
+      <label>Your name</label>
+      <input type="text" placeholder="First and last">
+      <label>Phone or email</label>
+      <input type="text" placeholder="How should we reach you?">
+      <label>What do you need?</label>
+      <select><option>Schedule a processing slot (beef/pork/lamb)</option><option>Game / deer processing</option><option>A smokehouse or counter order</option><option>Just a question</option></select>
+      <label>Details</label>
+      <textarea rows="3" placeholder="Animal, rough timing, and how you'd like it cut"></textarea>
+      <button>Send my request</button>
+      <p class="note">A working mockup — routes to the shop when the site goes live.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>Mann's Custom Meats · 2081 Maxfield Rd, Cortland, NY · Custom processing · Smokehouse · Retail counter</div>
+    <div>(315) 278-1578</div>
+  </div>
+</footer>
+
+</body>
+</html>

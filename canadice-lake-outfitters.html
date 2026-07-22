@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canadice Lake Outfitters — Canoe, Kayak &amp; SUP Rentals on the Quietest Finger Lake</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#122a26;--pine:#1d4a3f;--water:#2e6f8e;--mist:#eef4f2;--sand:#f7f3ea;--amber:#c98a2d;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--sand);line-height:1.6}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;line-height:1.15}
+img{max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(247,243,234,.95);backdrop-filter:blur(6px);border-bottom:1px solid #e2dccd}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{font-family:'Fraunces',serif;font-size:1.25rem;color:var(--pine)}
+.logo span{color:var(--water)}
+.nav a.call{background:var(--pine);color:#fff;padding:10px 18px;border-radius:999px;text-decoration:none;font-weight:700;font-size:.9rem}
+/* hero */
+.hero{background:linear-gradient(180deg,rgba(18,42,38,.72),rgba(18,42,38,.35)),url('') center/cover,linear-gradient(160deg,#1d4a3f,#2e6f8e);color:#fff;padding:110px 0 90px;text-align:left}
+.hero .kicker{letter-spacing:.22em;text-transform:uppercase;font-size:.78rem;color:#cfe3da;margin-bottom:14px}
+.hero h1{font-size:clamp(2.1rem,5.4vw,3.6rem);max-width:15ch}
+.hero p{max-width:52ch;margin:20px 0 30px;font-size:1.08rem;color:#e8f1ec}
+.btn{display:inline-block;background:var(--amber);color:#122a26;font-weight:700;padding:15px 28px;border-radius:999px;text-decoration:none}
+.btn.ghost{background:transparent;border:2px solid #fff;color:#fff;margin-left:12px}
+/* quiet strip */
+.quiet{background:var(--pine);color:#dfece6;padding:18px 0;font-size:.95rem;text-align:center}
+.quiet strong{color:#fff}
+/* why */
+.why{padding:70px 0}
+.why h2{font-size:2rem;max-width:22ch}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;margin-top:36px}
+.card{background:#fff;border:1px solid #e5dfd0;border-radius:14px;padding:26px}
+.card h3{color:var(--pine);font-size:1.15rem;margin-bottom:8px}
+.card .n{font-family:'Fraunces',serif;font-size:1.6rem;color:var(--amber)}
+/* how */
+.how{background:var(--mist);padding:70px 0}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:32px;counter-reset:step}
+.step{background:#fff;border-radius:14px;padding:24px;position:relative}
+.step::before{counter-increment:step;content:counter(step);position:absolute;top:-16px;left:22px;width:34px;height:34px;border-radius:50%;background:var(--water);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.step h3{margin:12px 0 6px;font-size:1.05rem}
+/* fleet */
+.fleet{padding:70px 0}
+table{width:100%;border-collapse:collapse;margin-top:26px;background:#fff;border-radius:14px;overflow:hidden}
+th,td{padding:14px 16px;text-align:left;border-bottom:1px solid #eee7d8}
+th{background:var(--pine);color:#fff;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+.note{font-size:.85rem;color:#7a7264;margin-top:10px}
+/* delivery */
+.delivery{background:linear-gradient(120deg,var(--water),var(--pine));color:#fff;padding:64px 0}
+.delivery h2{font-size:1.8rem}
+.lakes{display:flex;flex-wrap:wrap;gap:14px;margin-top:24px}
+.lake{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:12px 20px;border-radius:999px;font-size:.95rem}
+/* quotes */
+.quotes{padding:70px 0}
+blockquote{background:#fff;border-left:5px solid var(--amber);border-radius:0 14px 14px 0;padding:24px 28px;margin-top:24px;font-size:1.05rem;font-style:italic}
+blockquote cite{display:block;margin-top:10px;font-style:normal;font-size:.85rem;color:#7a7264}
+/* faq */
+.faq{background:var(--mist);padding:70px 0}
+details{background:#fff;border-radius:12px;padding:18px 22px;margin-top:14px}
+summary{font-weight:700;cursor:pointer;color:var(--pine)}
+details p{margin-top:10px;font-size:.95rem}
+/* booking */
+.book{padding:80px 0}
+.book .inner{background:var(--pine);color:#fff;border-radius:20px;padding:50px 40px;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.book h2{font-size:1.9rem}
+.book p{color:#d7e6df;margin-top:12px}
+form{display:grid;gap:12px}
+input,select,textarea{padding:13px 14px;border-radius:10px;border:none;font-family:inherit;font-size:.95rem;width:100%}
+form .btn{border:none;cursor:pointer;font-size:1rem}
+footer{background:#0d1f1b;color:#9db8ae;padding:34px 0;font-size:.88rem;text-align:center}
+footer a{color:#cfe3da}
+@media(max-width:760px){.book .inner{grid-template-columns:1fr;padding:36px 24px}.btn.ghost{margin-left:0;margin-top:10px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">Canadice Lake <span>Outfitters</span></div>
+    <a class="call" href="tel:5856699512">(585) 669-9512</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="kicker">Springwater, NY · Finger Lakes</div>
+    <h1>No cottages. No jet skis. Just you and three miles of water.</h1>
+    <p>Canadice is Rochester's drinking-water lake — so its shoreline was never built on, motors are capped at 10&nbsp;hp, and mornings are quiet enough to hear a bald eagle's wingbeats. We rent the canoes, kayaks, and paddleboards, and we haul every boat to the access trail for you.</p>
+    <a class="btn" href="#book">Request a paddle date</a>
+    <a class="btn ghost" href="#fleet">See boats &amp; rates</a>
+  </div>
+</section>
+
+<div class="quiet"><div class="wrap"><strong>By reservation.</strong> Open weekends &amp; most weekdays · 30 miles south of Rochester · Gear transport included on Canadice</div></div>
+
+<section class="why wrap">
+  <h2>The Finger Lake the crowds never found</h2>
+  <div class="grid3">
+    <div class="card"><div class="n">0</div><h3>Houses on the shore</h3><p>To protect Rochester's water supply, building is prohibited on Canadice. Paddling here feels like the Adirondacks without the four-hour drive.</p></div>
+    <div class="card"><div class="n">10 hp</div><h3>Motor limit, lake-wide</h3><p>Boats over 17 feet and jet skis aren't allowed. Wakes here come from wind and loons, not wakeboard boats.</p></div>
+    <div class="card"><div class="n">3 mi</div><h3>Of glass-calm water</h3><p>From the launch you can paddle the entire shoreline in an afternoon — with binocular stops for eagles, herons, and fall color on the ridges.</p></div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <h2>How a rental works</h2>
+    <div class="steps">
+      <div class="step"><h3>Pick your date</h3><p>Send the request form below with your date, party size, and boat mix — or call. We confirm the same day.</p></div>
+      <div class="step"><h3>We haul the boats</h3><p>Kayaks, canoes, paddles, life jackets, and dry bags are transported to the Canadice access trail before you arrive.</p></div>
+      <div class="step"><h3>Paddle. That's it.</h3><p>Bring lunch, a camera, and a fishing rod if you like. We handle pickup when your time is up.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="fleet wrap" id="fleet">
+  <h2>Boats, boards &amp; bikes</h2>
+  <table>
+    <tr><th>Rental</th><th>Best for</th><th>Rate</th></tr>
+    <tr><td>Single kayak</td><td>Solo paddlers, anglers</td><td>[rate — confirm with owner]</td></tr>
+    <tr><td>Tandem canoe</td><td>Couples, parent + kid</td><td>[rate — confirm with owner]</td></tr>
+    <tr><td>Stand-up paddleboard</td><td>Calm-morning workouts</td><td>[rate — confirm with owner]</td></tr>
+    <tr><td>Bike</td><td>Canadice Lake Rd rail-trail miles</td><td>[rate — confirm with owner]</td></tr>
+  </table>
+  <p class="note">Rates shown as placeholders — final pricing pulled from your current rate sheet before launch. Packages and group events available.</p>
+</section>
+
+<section class="delivery">
+  <div class="wrap">
+    <h2>Paddling a different lake? We deliver.</h2>
+    <p>Canadice is home base, but boats travel:</p>
+    <div class="lakes">
+      <div class="lake">Hemlock Lake — south-end transport, $10 + tax per kayak</div>
+      <div class="lake">Honeoye Lake — 3-day minimum rental</div>
+      <div class="lake">Conesus Lake — 3-day minimum rental</div>
+    </div>
+  </div>
+</section>
+
+<section class="quotes wrap">
+  <h2>What paddlers say</h2>
+  <blockquote>"Absolutely beautiful scenery!! Felt like we were a million miles away from it all, yet just 40 minutes from Rochester! Felt like we were in the Adirondacks."<cite>— Stephanie Z., via Groupon</cite></blockquote>
+  <blockquote>[Additional review placeholder — pull 1–2 more from the Testimonials page / Google profile before launch]<cite>— verify source</cite></blockquote>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <h2>Before you launch</h2>
+    <details><summary>Do I need to sign a waiver?</summary><p>Yes — every paddler signs a rental waiver. With the new site you'd sign it online when you book, instead of on paper at the trail.</p></details>
+    <details><summary>Can I fish from the boats?</summary><p>Absolutely. Canadice holds trout, bass, and panfish, and the no-wake quiet makes it a favorite of kayak anglers.</p></details>
+    <details><summary>Is swimming allowed?</summary><p>No — Canadice is a protected water supply. Swimming and camping are prohibited, which is exactly why it stays this quiet.</p></details>
+    <details><summary>What should I bring?</summary><p>Lunch, water, sunscreen, and a camera. Life jackets, paddles, and dry bags are included with every rental.</p></details>
+  </div>
+</section>
+
+<section class="book wrap" id="book">
+  <div class="inner">
+    <div>
+      <h2>Request a paddle date</h2>
+      <p>Tell us when you want to be on the water and how many are coming. We'll confirm by phone or email — usually the same day.</p>
+      <p style="margin-top:22px"><strong style="color:#fff">Call:</strong> (585) 669-9512<br><strong style="color:#fff">Email:</strong> canadicelakeoutfitters@gmail.com</p>
+    </div>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="tel" placeholder="Phone">
+      <input type="date" aria-label="Preferred date">
+      <select><option>Party size</option><option>1–2</option><option>3–4</option><option>5–8</option><option>9+ (group event)</option></select>
+      <select><option>Boats needed</option><option>Kayaks</option><option>Canoes</option><option>SUPs</option><option>Mix</option></select>
+      <textarea rows="3" placeholder="Anything else? (other lake delivery, cabin stay, event)"></textarea>
+      <button class="btn" type="submit">Send request</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Canadice Lake Outfitters · Springwater, NY · (585) 669-9512 · <a href="mailto:canadicelakeoutfitters@gmail.com">canadicelakeoutfitters@gmail.com</a><br>Open weekends &amp; most weekdays, by reservation · Instagram &amp; Facebook</div>
+</footer>
+
+</body>
+</html>

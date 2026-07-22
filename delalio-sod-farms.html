@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeLalio Sod Farms — Fresh-Cut Sod, Seed &amp; Soil · Calverton + Ronkonkoma, NY</title>
+<style>
+  :root{
+    --turf:#2f7d32; --turf2:#3f9b43; --leaf:#6fbf73; --soil:#5a3d28;
+    --soil2:#7a5638; --cream:#f7f9f3; --ink:#1c2a1c; --gray:#566355; --line:#d9e3d4;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.58}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+  a{color:inherit}
+  .top{background:var(--soil);color:#fbf6ef;font-size:.83rem}
+  .top .wrap{display:flex;justify-content:space-between;gap:12px;padding:8px 24px;flex-wrap:wrap}
+  .top b{color:var(--leaf)}
+  header{background:linear-gradient(180deg,#23601f 0%,var(--turf) 55%,#357a36 100%);color:#fff;position:relative}
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+  .logo{font-weight:800;font-size:1.2rem;letter-spacing:.01em}
+  .logo small{display:block;font-weight:400;font-size:.64rem;letter-spacing:.22em;color:#cce8c9}
+  .nav a.cta{background:#fff;color:var(--turf);padding:10px 16px;border-radius:30px;font-weight:700;text-decoration:none;font-size:.9rem}
+  .hero{padding:48px 0 62px;max-width:62ch}
+  .kick{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);color:#eafae8;padding:5px 13px;border-radius:30px;font-size:.76rem;letter-spacing:.06em;font-weight:600}
+  .hero h1{font-size:2.55rem;line-height:1.13;margin:16px 0 14px}
+  .hero p{font-size:1.15rem;color:#e6f4e4;max-width:52ch}
+  .ctas{margin-top:26px;display:flex;gap:13px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:14px 22px;border-radius:30px;font-weight:700;text-decoration:none}
+  .btn-w{background:#fff;color:var(--turf)}
+  .btn-l{background:transparent;color:#fff;border:1.5px solid #fff}
+  .yards{margin-top:30px;display:flex;gap:18px;flex-wrap:wrap;font-size:.92rem;color:#eafae8}
+  .yards span b{color:#fff}
+  section{padding:54px 0}
+  .h2{font-size:1.75rem;color:var(--turf);margin-bottom:6px}
+  .lead{color:var(--gray);max-width:62ch;margin-bottom:30px}
+  .prod{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .p{border:1px solid var(--line);border-radius:10px;padding:22px;background:var(--cream)}
+  .p .ic{width:38px;height:38px;border-radius:8px;background:var(--turf2);display:block;margin-bottom:12px}
+  .p:nth-child(2) .ic{background:var(--leaf)}
+  .p:nth-child(3) .ic{background:var(--soil2)}
+  .p:nth-child(4) .ic{background:var(--soil)}
+  .p h3{font-size:1.08rem;color:var(--ink);margin-bottom:6px}
+  .p p{font-size:.92rem;color:#4d5a4d}
+  .locs{background:var(--cream)}
+  .locgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .loc{background:#fff;border:1px solid var(--line);border-left:5px solid var(--turf);border-radius:10px;padding:24px}
+  .loc h3{color:var(--turf);font-size:1.2rem;margin-bottom:4px}
+  .loc .a{color:#4d5a4d;font-size:.96rem;margin-bottom:12px}
+  .loc a.tel{font-size:1.35rem;font-weight:800;color:var(--ink);text-decoration:none}
+  .loc .ph{display:block;font-size:.72rem;color:#8aa087;font-style:italic;margin-top:8px}
+  .who{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+  .chips span{background:var(--cream);border:1px solid var(--line);border-radius:30px;padding:8px 14px;font-size:.9rem;color:#3f4e3f}
+  .trust{background:var(--soil);color:#f7efe6}
+  .trust .h2{color:#fff}
+  .trust .lead{color:#e3d6c7}
+  .marquee{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:8px}
+  .marquee div{background:#6a482f;border:1px solid #875f3f;border-radius:10px;padding:18px;text-align:center;font-weight:600;font-size:.96rem}
+  .marquee small{display:block;color:#d8c4b0;font-weight:400;font-size:.78rem;margin-top:4px}
+  .quote{background:linear-gradient(160deg,var(--turf),#256d27);color:#fff}
+  .quote .h2{color:#fff}
+  .qbox{display:grid;grid-template-columns:1.2fr 1fr;gap:26px;align-items:center;margin-top:18px}
+  .qbox p{color:#e6f4e4}
+  .calc{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:24px}
+  .calc b{display:block;font-size:1.05rem;margin-bottom:6px}
+  .calc a{display:inline-block;margin-top:12px;background:#fff;color:var(--turf);padding:12px 20px;border-radius:30px;font-weight:700;text-decoration:none}
+  footer{background:var(--ink);color:#9db09c;font-size:.82rem;padding:22px 0;text-align:center}
+  @media(max-width:860px){.prod,.marquee{grid-template-columns:1fr 1fr}.locgrid,.who,.qbox{grid-template-columns:1fr}.nav a.cta{display:none}}
+  @media(max-width:480px){.prod,.marquee{grid-template-columns:1fr}.hero h1{font-size:2rem}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><span>Two Suffolk yards · Calverton &amp; Ronkonkoma</span><span>Cut fresh for pickup &amp; delivery · <b>Landscapers welcome</b></span></div></div>
+<header>
+  <div class="wrap">
+    <div class="nav">
+      <div class="logo">DeLalio Sod Farms<small>GROWERS SINCE THE 1960s · LONG ISLAND, NY</small></div>
+      <a class="cta" href="#quote">Request sod</a>
+    </div>
+    <div class="hero">
+      <span class="kick">Grown &amp; cut on Long Island</span>
+      <h1>Farm-fresh sod, cut to order from two Suffolk yards.</h1>
+      <p>Pallets of fresh-cut turfgrass for landscapers, contractors, and homeowners — plus the seed, fertilizer, and topsoil to finish the job. Sixty years of growing, the same week you need it.</p>
+      <div class="ctas">
+        <a class="btn btn-w" href="#quote">Get pricing &amp; availability</a>
+        <a class="btn btn-l" href="#yards">Call the nearest yard</a>
+      </div>
+      <div class="yards">
+        <span><b>Calverton:</b> 631-727-2002</span>
+        <span><b>Ronkonkoma:</b> 631-242-3700</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="h2">Everything for the lawn, from one grower</div>
+    <p class="lead">We grow the turf and stock the rest — so the landscape crew loads sod, seed, and soil on the same trip.</p>
+    <div class="prod">
+      <div class="p"><span class="ic"></span><h3>Fresh-cut sod</h3><p>Premium turfgrass cut to order by the roll or the pallet. Tell us the square footage and pickup day.</p></div>
+      <div class="p"><span class="ic"></span><h3>Grass seed mixes</h3><p>Our own line of seed blends matched to sun, shade, and high-traffic lawns across Long Island.</p></div>
+      <div class="p"><span class="ic"></span><h3>Fertilizers &amp; lawn care</h3><p>Fertilizers and lawn-control products to feed in a new lawn and keep an established one thick.</p></div>
+      <div class="p"><span class="ic"></span><h3>Topsoil &amp; mulch</h3><p>Screened topsoils, soils, and mulches to prep the bed before the sod goes down.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="locs" id="yards">
+  <div class="wrap">
+    <div class="h2">Two yards, pick the closer one</div>
+    <p class="lead">North Fork or central Suffolk — call ahead with your order and we'll have it cut and loaded.</p>
+    <div class="locgrid">
+      <div class="loc">
+        <h3>Calverton Yard</h3>
+        <div class="a">422 Edwards Avenue, Calverton, NY 11933</div>
+        <a class="tel" href="tel:+16317272002">631-727-2002</a>
+        <span class="ph">Yard hours to be confirmed before publishing — placeholder.</span>
+      </div>
+      <div class="loc">
+        <h3>Ronkonkoma Yard</h3>
+        <div class="a">1770 Feuereisen Avenue, Ronkonkoma, NY 11779</div>
+        <a class="tel" href="tel:+16312423700">631-242-3700</a>
+        <span class="ph">Yard hours to be confirmed before publishing — placeholder.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="who">
+      <div>
+        <div class="h2">Who we load every morning</div>
+        <p class="lead">From a one-truck landscaper to a municipal grounds crew, the order's cut fresh and ready when you pull in.</p>
+        <div class="chips">
+          <span>Landscape contractors</span><span>Lawn-install crews</span><span>Municipalities &amp; parks</span><span>Builders</span><span>Homeowners</span>
+        </div>
+      </div>
+      <div>
+        <div class="h2">Sizing a job?</div>
+        <p class="lead">Not sure how many rolls you need? Give us the length and width and we'll figure the square footage and the pallet count with you over the phone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="h2">Grown for some demanding lawns</div>
+    <p class="lead">Six decades in the ground, with turf that's gone into places that don't accept a thin lawn.</p>
+    <div class="marquee">
+      <div>Central Park<small>New York City</small></div>
+      <div>Gracie Mansion<small>NYC mayoral residence</small></div>
+      <div>Long Island National Cemetery<small>Farmingdale</small></div>
+      <div>Calverton National Cemetery<small>Calverton</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div class="h2">Request sod, seed &amp; soil</div>
+    <div class="qbox">
+      <p>Call the closer yard with your square footage and the day you need it, and we'll quote pricing and confirm availability. Wholesale accounts for landscapers welcome.</p>
+      <div class="calc">
+        <b>Two ways to order</b>
+        Calverton — <a href="tel:+16317272002" style="color:#fff;background:none;padding:0;text-decoration:underline">631-727-2002</a><br>
+        Ronkonkoma — <a href="tel:+16312423700" style="color:#fff;background:none;padding:0;text-decoration:underline">631-242-3700</a>
+        <a href="mailto:info@delaliosod.com">Email info@delaliosod.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>DeLalio Sod Farms LLC · Calverton &amp; Ronkonkoma, NY · Fresh-cut sod · seed · fertilizer · topsoil</footer>
+</body>
+</html>

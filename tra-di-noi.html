@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trattoria Tra Di Noi — Arthur Avenue, Bronx</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--crimson:#7d0a1b;--crimson-deep:#4a0510;--gold:#c9a14a;--ivory:#f7f2e9;--ink:#2c1a12;}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--ivory);line-height:1.7;font-weight:300}
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:600;letter-spacing:.01em}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 26px}
+  a{color:inherit}
+  .preview-tag{background:var(--crimson-deep);color:var(--gold);text-align:center;padding:7px;font-size:.78rem;letter-spacing:.08em}
+  /* nav */
+  nav{position:sticky;top:0;z-index:10;background:rgba(74,5,16,.96);backdrop-filter:blur(4px);color:var(--ivory)}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:16px 26px}
+  nav .logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold);letter-spacing:.05em}
+  nav .links a{text-decoration:none;margin-left:26px;font-size:.86rem;letter-spacing:.12em;text-transform:uppercase}
+  nav .links a:hover{color:var(--gold)}
+  .resv{border:1px solid var(--gold);color:var(--gold)!important;padding:8px 16px;border-radius:1px}
+  /* hero */
+  .hero{background:linear-gradient(rgba(50,4,12,.74),rgba(50,4,12,.82)),
+    radial-gradient(circle at 30% 20%,#9a1226,#5a0714 70%);
+    color:var(--ivory);text-align:center;padding:120px 26px 130px}
+  .michelin{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--gold);
+    padding:8px 18px;border-radius:1px;font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:30px}
+  .hero h1{font-size:clamp(3rem,8vw,5.6rem);line-height:.98;font-weight:600}
+  .hero h1 small{display:block;font-size:.32em;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-family:'Jost',sans-serif;font-weight:400}
+  .hero .sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.5rem;color:#f0e2c8;margin:22px auto 0;max-width:560px}
+  .btn{display:inline-block;background:var(--gold);color:#3a0a12;text-decoration:none;
+    padding:15px 34px;letter-spacing:.14em;text-transform:uppercase;font-size:.82rem;font-weight:500;
+    border:1px solid var(--gold);transition:.25s;margin-top:36px}
+  .btn:hover{background:transparent;color:var(--gold)}
+  .btn.dark{background:var(--crimson);color:var(--ivory);border-color:var(--crimson)}
+  .btn.dark:hover{background:transparent;color:var(--crimson)}
+  section{padding:84px 0}
+  .eyebrow{color:var(--gold);letter-spacing:.26em;text-transform:uppercase;font-size:.74rem;margin-bottom:14px;font-weight:500}
+  h2.title{font-size:clamp(2.2rem,5vw,3.3rem);color:var(--crimson);line-height:1.04;margin-bottom:14px}
+  .lead{font-size:1.14rem;max-width:640px}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .photo{min-height:380px;border-radius:3px;background:linear-gradient(160deg,#9a1226,#4a0510);
+    display:flex;align-items:center;justify-content:center;color:rgba(247,242,233,.45);
+    font-style:italic;text-align:center;padding:24px;border:1px solid rgba(201,161,74,.4)}
+  .chef p{margin-bottom:16px;font-size:1.08rem}
+  /* dishes */
+  .dishes{background:var(--crimson-deep);color:var(--ivory);text-align:center}
+  .dishes h2.title{color:var(--ivory)}
+  .dgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:46px;text-align:left}
+  .d{border-top:1px solid rgba(201,161,74,.5);padding-top:22px}
+  .d h3{font-size:1.6rem;color:var(--gold);margin-bottom:6px}
+  .d p{color:#e8d9bd;font-weight:300}
+  /* room */
+  .room{background:#efe6d4}
+  /* reviews */
+  .reviews{text-align:center}
+  .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:42px;text-align:left}
+  .quote{border:1px solid #e0d2b2;background:#fff;padding:30px;border-radius:3px}
+  .stars{color:var(--gold);letter-spacing:3px;margin-bottom:12px}
+  .quote p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.25rem;color:#43261c;line-height:1.4}
+  .quote .ph{display:block;margin-top:16px;font-size:.78rem;color:var(--crimson);letter-spacing:.08em;font-family:'Jost',sans-serif}
+  /* reserve */
+  .reserve{background:var(--crimson);color:var(--ivory)}
+  .reserve .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+  .reserve h2.title{color:var(--ivory)}
+  .info-row{display:flex;gap:14px;margin-bottom:18px}
+  .info-row .ic{color:var(--gold);font-size:1.1rem;width:24px}
+  form label{display:block;margin:14px 0 6px;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase}
+  form input,form textarea{width:100%;padding:12px 14px;border:none;border-radius:2px;font-family:inherit;font-size:1rem}
+  .formcard{background:rgba(255,255,255,.07);padding:36px;border:1px solid rgba(201,161,74,.4);border-radius:3px}
+  footer{background:#3a0510;color:#cbb486;text-align:center;padding:46px 26px}
+  footer .logo{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1.7rem;display:block;margin-bottom:8px}
+  @media(max-width:780px){
+    .split,.dgrid,.rgrid,.reserve .wrap{grid-template-columns:1fr;gap:30px}
+    nav .links a:not(.resv){display:none}
+  }
+</style>
+</head>
+<body>
+<div class="preview-tag">PREVIEW CONCEPT — prepared by Onyx Rise Media for Trattoria Tra Di Noi</div>
+<nav><div class="wrap">
+  <span class="logo">Tra Di Noi</span>
+  <span class="links">
+    <a href="#chef">The Kitchen</a><a href="#dishes">Dishes</a><a href="#reserve" class="resv">Reserve</a>
+  </span>
+</div></nav>
+
+<header class="hero">
+  <span class="michelin">◍ Michelin Guide · The Bronx</span>
+  <h1><small>Trattoria</small>Tra Di Noi</h1>
+  <p class="sub">An intimate Italian kitchen tucked just off Arthur Avenue — where Chef Marco Coletta cooks a short, seasonal menu the old way.</p>
+  <a class="btn" href="#reserve">Reserve a Table</a>
+</header>
+
+<section id="chef">
+  <div class="wrap split">
+    <div class="chef">
+      <div class="eyebrow">The Kitchen</div>
+      <h2 class="title">Cooked by the chef, not a system</h2>
+      <p>Behind Tra Di Noi is chef-owner Marco Coletta, who keeps the menu deliberately small so every plate leaves the kitchen the way it should. There's no factory line here — just a chef who's been doing this for years, in a dining room he runs himself.</p>
+      <p>The result earned a place in the Michelin Guide. But the room still feels like a neighborhood secret: crimson walls, red-checkered tablecloths, and regulars who book the same table every month.</p>
+      <a class="btn dark" href="#reserve">Book your evening</a>
+    </div>
+    <div class="photo">[ Photo: Chef Marco at the pass / the crimson dining room ]</div>
+  </div>
+</section>
+
+<section class="dishes" id="dishes">
+  <div class="wrap">
+    <div class="eyebrow">Signature plates</div>
+    <h2 class="title">A short menu, done properly</h2>
+    <div class="dgrid">
+      <div class="d"><h3>Spaghetti alla Chitarra</h3><p>House-made guitar-string pasta with meatballs and a slow pomodoro.</p></div>
+      <div class="d"><h3>Shrimp Francese</h3><p>Delicate, lemony, golden — a regulars' standing order.</p></div>
+      <div class="d"><h3>Artichoke Ravioli</h3><p>Hand-filled, finished in a gentle gorgonzola cream.</p></div>
+      <div class="d"><h3>Lasagna Bolognese</h3><p>Layered and baked to order, the way Sunday should taste.</p></div>
+      <div class="d"><h3>Seafood of the day</h3><p>Whatever came in fresh — ask, and let the kitchen decide.</p></div>
+      <div class="d"><h3>Ricotta Cheesecake</h3><p>The classic close. Light, not sweet, gone too quickly.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="room">
+  <div class="wrap split">
+    <div class="photo">[ Photo: candle-lit table set for two, crimson walls ]</div>
+    <div>
+      <div class="eyebrow">The Room</div>
+      <h2 class="title">Small by design</h2>
+      <p class="lead">Tra Di Noi seats just a handful of tables, which is the point. It's quiet enough to hear your guest, warm enough to stay for the second bottle, and intimate enough that the chef might come by to see how dinner's going. Because of that, evenings book up — especially weekends.</p>
+      <a class="btn dark" href="#reserve" style="margin-top:24px">Check availability</a>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <div class="eyebrow">From 245 reviews</div>
+    <h2 class="title">What guests remember</h2>
+    <div class="rgrid">
+      <div class="quote"><div class="stars">★★★★★</div><p>"The hidden gem of Arthur Avenue. Smaller and quieter than the famous spots, and the food is better."</p><span class="ph">Review placeholder — pull live</span></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"Marco runs the room himself. You feel like a guest in someone's home, not a table number."</p><span class="ph">Review placeholder — pull live</span></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"Book ahead. It's tiny and it deserves the Michelin nod. The chitarra alone is worth the trip."</p><span class="ph">Review placeholder — pull live</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="reserve" id="reserve">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Reserve</div>
+      <h2 class="title">Book a table at Tra Di Noi</h2>
+      <p style="font-size:1.08rem;margin-bottom:26px">Tables are limited and weekends fill quickly. Call us directly or send a request and we'll confirm.</p>
+      <div class="info-row"><span class="ic">📍</span><span>622 E 187th St, Bronx, NY 10458</span></div>
+      <div class="info-row"><span class="ic">☎</span><span><a href="tel:17182951784">(718) 295-1784</a></span></div>
+      <div class="info-row"><span class="ic">🕒</span><span>Tue–Sun 12–3pm & 4–9pm · Closed Monday</span></div>
+      <a class="btn" href="tel:17182951784">Call to Reserve</a>
+    </div>
+    <div class="formcard">
+      <h3 class="serif" style="color:var(--gold);font-size:1.7rem;margin-bottom:6px">Request a table</h3>
+      <form onsubmit="event.preventDefault();this.style.display='none';document.getElementById('thx-t').style.display='block';">
+        <label>Name</label><input required placeholder="Your name">
+        <label>Phone</label><input required placeholder="(___) ___-____">
+        <label>Date, time & guests</label><input placeholder="e.g. Fri 7:30pm, 2 guests">
+        <label>Special requests</label><textarea rows="3" placeholder="Occasion, seating, dietary notes"></textarea>
+        <button class="btn dark" type="submit" style="margin-top:18px;width:100%">Send Request</button>
+      </form>
+      <div id="thx-t" style="display:none;color:var(--gold)">Thank you — we'll confirm shortly. <span style="font-size:.8rem;opacity:.8">(Demo form; connects to the Onyx Rise Media CRM on build.)</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="logo">Trattoria Tra Di Noi</span>
+  622 E 187th St, Bronx · (718) 295-1784 · Michelin Guide<br>
+  <span style="font-size:.8rem;opacity:.7">Preview concept by Onyx Rise Media · not the official site</span>
+</footer>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Time-Out Family Campground — North Bay, NY · Cabins, RV &amp; Lean-To Sites on Oneida Lake's North Shore</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pine:#1f5c43; --pine-d:#143f2e; --leaf:#3e8e63; --lake:#2c7da0;
+  --lake-d:#1d5b76; --sun:#f3973b; --sun-d:#e07b1c; --sand:#f7efe0;
+  --cream:#fbf7ee; --ink:#22302a; --bark:#5a6b60; --paper:#fbf7ee; --line:#e6ddc9;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito Sans',sans-serif;color:var(--ink);background:var(--paper);line-height:1.64}
+h1,h2,h3,.disp{font-family:'Fraunces',serif}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+.btn{display:inline-block;background:var(--sun);color:#3a2200;font-weight:700;text-decoration:none;padding:13px 28px;border-radius:30px;font-size:1rem;transition:.14s;box-shadow:0 5px 16px rgba(224,123,28,.3)}
+.btn:hover{background:var(--sun-d);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);box-shadow:none}
+.btn.ghost:hover{background:rgba(255,255,255,.14)}
+.btn.pine{background:var(--pine);color:#fff;box-shadow:0 5px 16px rgba(31,92,67,.3)}
+.btn.pine:hover{background:var(--pine-d)}
+
+nav{background:var(--cream);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand b{font-family:'Fraunces';font-weight:700;color:var(--pine);font-size:1.28rem;display:block;line-height:1}
+.brand small{color:var(--lake);font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:700}
+.navlinks{display:flex;gap:26px;color:var(--bark);font-weight:600}
+.navlinks a{text-decoration:none}.navlinks a:hover{color:var(--pine)}
+@media(max-width:880px){.navlinks{display:none}}
+
+.hero{position:relative;color:#fff;overflow:hidden;
+  background:
+   linear-gradient(180deg,rgba(20,63,46,.18),rgba(20,63,46,.5)),
+   linear-gradient(155deg,var(--lake) 0%,var(--pine) 78%)}
+.hero::after{content:"";position:absolute;left:-5%;right:-5%;bottom:-1px;height:48px;background:var(--paper);
+  border-radius:50% 50% 0 0/100% 100% 0 0}
+.hero .wrap{position:relative;z-index:2;padding:86px 22px 108px}
+.hero .pill{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);color:#f0fbf4;font-weight:700;font-size:.82rem;padding:6px 15px;border-radius:30px;margin-bottom:20px}
+.hero h1{font-family:'Fraunces';font-weight:700;font-size:3.4rem;line-height:1.04;max-width:17ch}
+.hero h1 em{font-style:italic;color:var(--sun)}
+.hero p{font-size:1.2rem;max-width:52ch;margin:18px 0 28px;color:#e9f4ee}
+.hero .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+@media(max-width:600px){.hero h1{font-size:2.3rem}.hero .wrap{padding:62px 22px 88px}}
+
+.strip{background:var(--pine-d);color:#fff}
+.strip .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-around;padding:16px 22px;text-align:center}
+.strip .i{display:flex;align-items:center;gap:9px;font-weight:600;font-size:.96rem;color:#dcefe3}
+.strip .i b{font-family:'Fraunces';color:var(--sun)}
+
+section{padding:74px 0}
+.shead{max-width:60ch;margin-bottom:38px}
+.shead .k{color:var(--lake);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.8rem}
+.shead h2{font-family:'Fraunces';font-weight:700;font-size:2.3rem;color:var(--pine-d);margin-top:6px;line-height:1.1}
+.shead p{color:var(--bark);margin-top:10px;font-size:1.05rem}
+
+.sites{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:860px){.sites{grid-template-columns:1fr}}
+.site{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;transition:.15s;border-bottom:5px solid var(--leaf)}
+.site:hover{box-shadow:0 16px 36px rgba(31,92,67,.13);transform:translateY(-3px)}
+.site .ic{font-size:2.3rem}
+.site h3{font-family:'Fraunces';font-size:1.4rem;margin:8px 0 6px;color:var(--pine-d)}
+.site p{color:var(--bark);font-size:.97rem}
+
+.launch{background:linear-gradient(160deg,var(--lake) 0%,var(--lake-d) 100%);color:#fff}
+.launch .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+@media(max-width:860px){.launch .wrap{grid-template-columns:1fr}}
+.launch h2{font-family:'Fraunces';font-weight:700;font-size:2.25rem;line-height:1.1;margin-bottom:14px}
+.launch p{color:#e3f1f6;margin-bottom:14px;font-size:1.06rem}
+.launch .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.launch .chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:24px;padding:8px 16px;font-weight:600;font-size:.9rem}
+.launch .card{background:rgba(8,40,30,.32);border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:30px}
+.launch .card .big{font-family:'Fraunces';font-size:2.6rem;color:var(--sun);line-height:1}
+.launch .card .lab{color:#e3f1f6;font-weight:600;margin-bottom:18px}
+.launch .card .li{display:flex;gap:10px;margin-bottom:10px;color:#f0fbf4;font-weight:600}
+.launch .card .li span{color:#bfe6f2}
+
+.season .grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+@media(max-width:860px){.season .grid{grid-template-columns:1fr}}
+.season ul{list-style:none;margin-top:8px}
+.season li{display:flex;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);font-weight:600}
+.season li:last-child{border:0}
+.season li span{color:var(--leaf);font-size:1.2rem}
+.season li small{display:block;font-weight:400;color:var(--bark)}
+.framecard{background:var(--pine);color:#fff;border-radius:20px;padding:34px;position:relative;overflow:hidden}
+.framecard::before{content:"🌲";position:absolute;right:-12px;bottom:-20px;font-size:8rem;opacity:.1}
+.framecard h3{font-family:'Fraunces';color:var(--sun);font-size:1.6rem;margin-bottom:8px}
+.framecard p{color:#dcefe3}
+
+.contact{background:var(--pine-d);color:#fff;text-align:center}
+.contact h2{font-family:'Fraunces';font-weight:700;font-size:2.35rem;color:#fff}
+.contact p{color:#dcefe3;max-width:50ch;margin:12px auto 24px;font-size:1.08rem}
+.contact .row{display:flex;gap:34px;justify-content:center;flex-wrap:wrap;margin:20px 0 8px}
+.contact .row div b{font-family:'Fraunces';color:var(--sun);font-size:1.3rem;display:block}
+.contact .row div span{color:#a9c6b6;font-size:.85rem;text-transform:uppercase;letter-spacing:1px}
+.contact .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.note{font-size:.8rem;color:#86a594;font-style:italic;margin-top:30px}
+
+footer{background:#102e22;color:#86a594;text-align:center;padding:26px 0;font-size:.9rem}
+footer b{font-family:'Fraunces';color:#dcefe3}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="brand"><b>Time-Out Family Campground</b><small>North Bay · Oneida Lake</small></div>
+  <div class="navlinks">
+    <a href="#sites">Your Site</a>
+    <a href="#launch">Boat Launch</a>
+    <a href="#season">The Season</a>
+    <a href="#contact">Reserve</a>
+  </div>
+  <a href="#contact" class="btn">Reserve a site</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="pill"><span>🌅</span> North shore of Oneida Lake · North Bay, NY</div>
+  <h1>Back the trailer in, and you're <em>on the water by noon.</em></h1>
+  <p>A family-owned campground on Oneida Lake's north shore — cabins, lean-tos and RV sites, sun or shade, with our own boat launch a minute up the road.</p>
+  <div class="cta-row">
+    <a href="#contact" class="btn">Reserve your site</a>
+    <a href="#sites" class="btn ghost">See the sites</a>
+  </div>
+</div></header>
+
+<div class="strip"><div class="wrap">
+  <div class="i"><span>🛶</span><div>Private <b>boat launch</b> nearby</div></div>
+  <div class="i"><span>🏕️</span><div>Cabin · lean-to · <b>RV sites</b></div></div>
+  <div class="i"><span>☀️</span><div>Pick your <b>sun or shade</b></div></div>
+  <div class="i"><span>👪</span><div><b>Family owned</b> &amp; run</div></div>
+</div></div>
+
+<section id="sites"><div class="wrap">
+  <div class="shead">
+    <div class="k">Your site</div>
+    <h2>Three ways to stay — pick the one that fits your weekend</h2>
+    <p>Whether you're rolling in with a fifth-wheel or just need four walls and a roof, there's a spot for it on the north shore.</p>
+  </div>
+  <div class="sites">
+    <div class="site"><div class="ic">🏠</div><h3>Cabins</h3><p>A simple cabin when you want the lake without the tent — easy for families, first-timers, or a quick getaway up from Syracuse.</p></div>
+    <div class="site"><div class="ic">⛺</div><h3>Lean-To Sites</h3><p>Half-shelter, half-outdoors — the classic Central NY camping setup for folks who want to be in it but covered overhead.</p></div>
+    <div class="site"><div class="ic">🚐</div><h3>RV Sites</h3><p>Pull-in sites for the camper or trailer, in sun or shade as you like it. Settle in for a weekend or stay the season.</p></div>
+  </div>
+</div></section>
+
+<section class="launch" id="launch"><div class="wrap">
+  <div>
+    <h2>The reason lake people stay here: the boat launch</h2>
+    <p>Most campers near Oneida Lake make you trailer your boat across town to put it in. Ours is about a minute up the road — our own launch, so the boat, the kayaks and the water toys go straight in.</p>
+    <p>Fish for walleye and perch in the morning, beach it at Sylvan Beach in the afternoon, and you're back at the fire by dark.</p>
+    <div class="chips">
+      <div class="chip">🎣 Oneida Lake fishing</div>
+      <div class="chip">🏖️ Minutes from Sylvan Beach</div>
+      <div class="chip">🛶 Kayaks &amp; water toys welcome</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="big">~1 min</div>
+    <div class="lab">up the road to our private launch</div>
+    <div class="li"><span>✔</span> Launch your own boat</div>
+    <div class="li"><span>✔</span> North-shore lake access</div>
+    <div class="li"><span>✔</span> Walleye, perch &amp; bass water</div>
+  </div>
+</div></section>
+
+<section class="season"><div class="wrap">
+  <div class="grid">
+    <div>
+      <div class="shead" style="margin-bottom:16px">
+        <div class="k">The season</div>
+        <h2>Open April through October</h2>
+        <p>A full Central New York camping season on the lake — book early for summer weekends, and ask about returning for the whole season.</p>
+      </div>
+      <ul>
+        <li><span>📅</span><div>Season runs Apr 21 – Oct 15<small>Spring through leaf-peeping fall</small></div></li>
+        <li><span>🌞</span><div>Sun or shade sites<small>Catch a tan or set up under the trees</small></div></li>
+        <li><span>🔥</span><div>Easygoing, family-run<small>The kind of place people come back to</small></div></li>
+      </ul>
+    </div>
+    <div class="framecard">
+      <h3>Prices, plain and simple</h3>
+      <p>Nightly and seasonal rates for cabins, lean-tos and RV sites — laid out right on the page so you can plan the trip, instead of hunting for a download or a Facebook post.</p>
+      <p style="color:#bfe6c9;font-size:.85rem;font-style:italic;margin-top:10px">(Rate table to be added from the campground's current pricing before the page goes live.)</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <h2>Ready to grab a weekend on the lake?</h2>
+  <p>Call or email to check availability and reserve your cabin, lean-to or RV site for the season.</p>
+  <div class="row">
+    <div><b>(315) 245-1489</b><span>Call to reserve</span></div>
+    <div><b>timeoutfamilycampground@gmail.com</b><span>Email us</span></div>
+    <div><b>7501 East Lake St</b><span>North Bay, NY 13123</span></div>
+  </div>
+  <div class="cta-row">
+    <a href="tel:3152451489" class="btn">Call to reserve</a>
+    <a href="mailto:timeoutfamilycampground@gmail.com" class="btn pine">Email the campground</a>
+  </div>
+  <p class="note">Rates and availability shown as placeholders to confirm before the page goes live. This page gives the campground its own name and a clear reservation path — instead of sending every visitor off to Facebook.</p>
+</div></section>
+
+<footer>
+  <b>TIME-OUT FAMILY CAMPGROUND</b><br>
+  7501 East Lake Street, North Bay, NY 13123 · (315) 245-1489 · timeoutfamilycampground@gmail.com · Family owned on Oneida Lake's north shore
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palmer's Repair Shop — Auto Repair &amp; Engine Rebuilding, Walton NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--steel:#2b3a4a;--steel-dark:#1c2733;--orange:#e8731a;--bone:#f4f2ec;--line:#d7d2c6;--ink:#22292f}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--bone)}
+h1,h2,h3,.board-head{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.03em}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+/* top bar */
+.topbar{background:var(--steel-dark);color:#cfd8e0;font-size:.9rem;padding:8px 0}
+.topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.topbar a{color:#fff;text-decoration:none;font-weight:700}
+/* hero */
+.hero{background:linear-gradient(160deg,var(--steel-dark) 0%,var(--steel) 70%);color:#fff;padding:72px 0 60px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-60px;top:-40px;width:340px;height:340px;border:22px solid rgba(232,115,26,.14);border-radius:50%}
+.hero .kicker{color:var(--orange);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.85rem}
+.hero h1{font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.05;margin:14px 0 18px;max-width:640px}
+.hero p{max-width:560px;font-size:1.12rem;color:#dbe3ea;margin-bottom:28px}
+.btn{display:inline-block;background:var(--orange);color:#fff;text-decoration:none;font-weight:700;padding:15px 30px;border-radius:4px;font-size:1.05rem}
+.btn.ghost{background:transparent;border:2px solid #8fa2b3;margin-left:12px}
+/* service board */
+.board{background:#fff;border:1px solid var(--line);border-radius:8px;margin:-38px auto 0;position:relative;z-index:2;box-shadow:0 14px 34px rgba(28,39,51,.14)}
+.board-head{background:var(--steel-dark);color:#fff;padding:14px 22px;border-radius:8px 8px 0 0;font-size:1.05rem;display:flex;justify-content:space-between}
+.board-head span:last-child{color:var(--orange)}
+.board table{width:100%;border-collapse:collapse}
+.board td{padding:15px 22px;border-top:1px solid var(--line);font-size:1rem;vertical-align:top}
+.board td:first-child{font-family:'Oswald',sans-serif;text-transform:uppercase;color:var(--steel);width:34%;font-weight:600}
+.board td:last-child{text-align:right;white-space:nowrap;color:#59463a;font-weight:700;width:20%}
+/* engine spotlight */
+.engine{padding:78px 0 66px}
+.engine .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+.engine h2{font-size:2rem;color:var(--steel-dark);margin-bottom:16px}
+.engine p{margin-bottom:14px;line-height:1.65}
+.spec{background:var(--steel-dark);color:#dbe3ea;border-radius:8px;padding:30px}
+.spec h3{color:var(--orange);font-size:1.1rem;margin-bottom:14px}
+.spec li{list-style:none;padding:9px 0;border-bottom:1px solid #33455a}
+.spec li:last-child{border-bottom:none}
+/* napa band */
+.napa{background:var(--orange);color:#fff;padding:38px 0}
+.napa .wrap{display:flex;gap:26px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.napa h2{font-size:1.5rem;max-width:520px}
+.napa p{max-width:420px;font-weight:600}
+/* reviews */
+.reviews{padding:70px 0}
+.reviews h2{text-align:center;font-size:2rem;color:var(--steel-dark)}
+.reviews .note{text-align:center;font-size:.85rem;color:#7b7466;margin:8px 0 34px}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rcard{background:#fff;border:1px solid var(--line);border-left:5px solid var(--orange);border-radius:6px;padding:24px;line-height:1.6}
+.rcard .src{display:block;margin-top:12px;font-size:.82rem;color:#8a8272;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+/* about + area */
+.about{background:var(--steel);color:#e6ecf1;padding:70px 0}
+.about .grid{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.about h2{font-size:1.8rem;margin-bottom:16px;color:#fff}
+.about p{line-height:1.7;margin-bottom:12px}
+.area li{list-style:none;padding:8px 0 8px 26px;position:relative}
+.area li:before{content:"→";position:absolute;left:0;color:var(--orange);font-weight:700}
+/* contact */
+.contact{padding:70px 0}
+.contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.contact h2{font-size:2rem;color:var(--steel-dark);margin-bottom:14px}
+.contact form{background:#fff;border:1px solid var(--line);border-radius:8px;padding:28px}
+.contact label{display:block;font-weight:700;margin:14px 0 6px;font-size:.92rem}
+.contact input,.contact select,.contact textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:4px;font-family:inherit;font-size:1rem}
+.contact button{margin-top:20px;width:100%;border:none;cursor:pointer}
+.meta{line-height:1.9;font-size:1.05rem}
+.meta strong{color:var(--steel-dark)}
+footer{background:var(--steel-dark);color:#93a5b5;text-align:center;padding:26px 0;font-size:.9rem}
+@media(max-width:820px){.engine .grid,.about .grid,.contact .grid{grid-template-columns:1fr}.rgrid{grid-template-columns:1fr}.btn.ghost{margin-left:0;margin-top:10px}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+<span>152 Townsend St, Walton, NY 13856 · Mon–Fri 7am–5pm</span>
+<span>Call the shop: <a href="tel:6078655002">(607) 865-5002</a></span>
+</div></div>
+
+<section class="hero"><div class="wrap">
+<div class="kicker">Auto Repair · Engine Rebuilding · NAPA AutoCare Center</div>
+<h1>The Townsend Street shop that fixes what other garages replace.</h1>
+<p>From inspections and brakes to full engine installs and rebuilds, Palmer's has kept Walton's farm trucks, commuter cars, and high-mileage workhorses on Delaware County roads for decades — with a NAPA parts counter right in the building.</p>
+<a class="btn" href="tel:6078655002">Call (607) 865-5002</a>
+<a class="btn ghost" href="#bay">Request a bay</a>
+</div></section>
+
+<div class="wrap"><div class="board">
+<div class="board-head"><span>Today's service board</span><span>Mon–Fri · 7:00–5:00</span></div>
+<table>
+<tr><td>Engine install &amp; exchange</td><td>The specialty — rebuilds and swaps that keep a good truck out of the crusher.</td><td>Bay 1</td></tr>
+<tr><td>Brakes, exhaust &amp; suspension</td><td>Rt 10 salt and washboard back roads are hard on undercarriages. We see it daily.</td><td>Bay 2</td></tr>
+<tr><td>Diagnostics &amp; electrical</td><td>Check-engine lights read and actually explained — before any work is agreed.</td><td>Bay 2</td></tr>
+<tr><td>NY State inspections &amp; tires</td><td>In-and-out scheduling around farm and work hours.</td><td>Bay 3</td></tr>
+<tr><td>Parts counter</td><td>NAPA parts and supplies on site — for our bays and for your own driveway jobs.</td><td>Counter</td></tr>
+</table>
+</div></div>
+
+<section class="engine"><div class="wrap"><div class="grid">
+<div>
+<h2>A dying engine isn't always a dying vehicle</h2>
+<p>Around here a good 3/4-ton with a tired motor is worth saving — a replacement costs more than most families want to spend. Palmer's is one of the few shops in Delaware County that still does engine installation and exchange in-house, listed and categorized for exactly that work.</p>
+<p>Bring it in, get a straight answer: rebuild, exchange, or — if the frame's gone — an honest "don't put money in this one."</p>
+</div>
+<div class="spec">
+<h3>Before you scrap it, ask about:</h3>
+<ul>
+<li>Complete engine exchanges &amp; installs</li>
+<li>Rebuilds on trucks, vans &amp; farm vehicles</li>
+<li>Cooling-system and head-gasket work</li>
+<li>Post-install break-in checks</li>
+</ul>
+</div>
+</div></div></section>
+
+<section class="napa"><div class="wrap">
+<h2>NAPA AutoCare: local hands, nationwide warranty</h2>
+<p>Work done here is backed by the NAPA AutoCare warranty honored at thousands of shops across the country — so a repair in Walton still protects you in Watertown or Wilmington.</p>
+</div></section>
+
+<section class="reviews"><div class="wrap">
+<h2>What drivers say</h2>
+<p class="note">Paraphrased from public reviews (4.8★ across 32 ratings on Birdeye; BBB rating A+). Verify before publishing.</p>
+<div class="rgrid">
+<div class="rcard">Reviewers describe it as a fantastic repair shop and say they've been fully satisfied every time.<span class="src">Summarized — Birdeye</span></div>
+<div class="rcard">Customers call the shop honest and fair, with excellent service on repeat visits.<span class="src">Summarized — Birdeye</span></div>
+<div class="rcard">Long-time locals treat Palmer's as the default answer to "who works on your truck?"<span class="src">Summarized — public reviews</span></div>
+</div>
+</div></section>
+
+<section class="about"><div class="wrap"><div class="grid">
+<div>
+<h2>Fifty years of grease under the fingernails</h2>
+<p>Palmer's Repair Shop has been part of Walton for roughly five decades [YEARS IN BUSINESS — CONFIRM: directory lists 50 yrs; BBB file dates from 1999]. Today Arnie Drumm and the crew run the Townsend Street bays the same way they've always run: diagnose first, explain plainly, fix what needs fixing.</p>
+<p>No service writers, no upsell scripts — the person you talk to is the person under the hood.</p>
+</div>
+<div class="area">
+<h2>Who we see in the bays</h2>
+<ul>
+<li>Walton village daily drivers &amp; school-run cars</li>
+<li>Farm trucks from Hamden, Trout Creek &amp; Downsville</li>
+<li>High-mileage commuters running Rt 10 to Oneonta &amp; Sidney</li>
+<li>Deer-strike and rough-road repairs, all seasons</li>
+</ul>
+</div>
+</div></div></section>
+
+<section class="contact" id="bay"><div class="wrap"><div class="grid">
+<div>
+<h2>Request a bay</h2>
+<p class="meta">
+<strong>Palmer's Repair Shop</strong><br>
+152 Townsend St, Walton, NY 13856<br>
+<strong>Phone:</strong> (607) 865-5002<br>
+<strong>Fax:</strong> (607) 865-8531<br>
+<strong>Hours:</strong> Mon–Fri 7:00am–5:00pm<br><br>
+Fastest way in is still the phone — but drop your details here and we'll call you back to set a time.
+</p>
+</div>
+<form onsubmit="return false">
+<label>Name</label><input type="text" placeholder="Your name">
+<label>Phone</label><input type="tel" placeholder="Best number to reach you">
+<label>Vehicle</label><input type="text" placeholder="e.g. 2012 F-250, 160k miles">
+<label>What's it doing?</label><textarea rows="3" placeholder="Noise, light, leak — plain words are fine"></textarea>
+<button class="btn" type="submit">Send it to the shop</button>
+</form>
+</div></div></section>
+
+<footer>Palmer's Repair Shop · 152 Townsend St, Walton, NY · (607) 865-5002 — Website concept preview by Onyx Rise Media</footer>
+</body>
+</html>

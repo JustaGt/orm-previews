@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lake Country Lumber — Custom Rough-Cut Lumber &amp; Sawmill | Dundee, NY</title>
+<style>
+  :root{
+    --bark:#2a2017; --bark2:#3a2c1e; --saw:#b5732e; --saw2:#97591d;
+    --moss:#3f5236; --moss2:#33442c; --oat:#f4ecdc; --kraft:#e9dcc2;
+    --ink:#241b12; --line:#d8c9ad; --paper:#faf5ea;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.62}
+  h1,h2,h3{font-family:"Arial Black","Segoe UI",sans-serif;line-height:1.1;letter-spacing:-.01em}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .util{background:var(--bark2);color:#dcceb4;font-size:.9rem}
+  .util .wrap{display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:space-between;align-items:center;padding:8px 22px}
+  .util strong{color:#fff}
+  nav{background:var(--bark);position:sticky;top:0;z-index:20;border-bottom:3px solid var(--saw)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:13px 22px}
+  .brand{color:#fff;font-family:"Arial Black",sans-serif;font-size:1.16rem;letter-spacing:.01em}
+  .brand span{color:var(--saw)}
+  .links{display:flex;gap:20px}
+  .links a{color:#e3d6bd;text-decoration:none;font-size:.92rem;font-weight:700}
+  .links a:hover{color:#fff}
+  .callbtn{background:var(--saw);color:#fff;padding:10px 17px;border-radius:2px;text-decoration:none;font-weight:800;font-size:.9rem}
+  .callbtn:hover{background:var(--saw2)}
+  .hero{position:relative;color:#fff;
+    background:
+      linear-gradient(rgba(26,19,12,.82),rgba(34,26,17,.7)),
+      linear-gradient(120deg,#4a3621 0%,#2e2316 60%,#3f5236 100%);
+    padding:90px 0 80px}
+  .hero h1{font-size:2.75rem;max-width:19ch}
+  .hero .sub{font-size:1.18rem;margin-top:18px;max-width:54ch;color:#ece2cf}
+  .hero .cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:14px 26px;border-radius:2px;text-decoration:none;font-weight:800}
+  .btn-a{background:var(--saw);color:#fff}.btn-a:hover{background:var(--saw2)}
+  .btn-b{background:#fff;color:var(--bark)}.btn-b:hover{background:#efe6d3}
+  .measure{background:var(--saw);color:#241606;padding:15px 0;font-weight:800;font-size:1.04rem}
+  .measure .wrap{display:flex;flex-wrap:wrap;gap:8px 34px;justify-content:center;text-align:center}
+  section{padding:60px 0}
+  .eyebrow{color:var(--saw2);font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:.8rem}
+  h2{font-size:1.95rem;margin:8px 0 10px;color:var(--bark2)}
+  .lead{max-width:62ch;color:#473827;font-size:1.05rem}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:4px;padding:22px;border-left:5px solid var(--moss)}
+  .card h3{font-size:1.1rem;color:var(--moss2);margin-bottom:7px}
+  .card p{font-size:.94rem;color:#4e4030}
+  .byo{background:var(--bark2);color:#ece2cf}
+  .byo .two{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+  .byo h2{color:#fff}.byo .lead{color:#ddd0b8}
+  ul.checks{list-style:none;margin-top:14px}
+  ul.checks li{padding:8px 0 8px 28px;position:relative;font-size:1.02rem;color:#e7dcc6}
+  ul.checks li:before{content:"▸";position:absolute;left:2px;top:8px;color:var(--saw);font-weight:900}
+  .callout{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:24px}
+  .callout h3{color:#fff;font-size:1.22rem;margin-bottom:8px}
+  .callout p{color:#ddd0b8;font-size:.96rem}
+  .uses{background:var(--kraft)}
+  .usegrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
+  .use{background:#fff;border:1px solid #d8c9ad;border-radius:4px;padding:18px}
+  .use h3{font-size:1rem;color:var(--bark2);margin-bottom:5px}
+  .use p{font-size:.9rem;color:#5a4a35}
+  .extra .wrap{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+  .extra .panel{background:var(--moss);color:#eaf0e4;border-radius:6px;padding:26px}
+  .extra .panel h3{color:#fff;font-size:1.2rem;margin-bottom:8px}
+  .extra .panel p{color:#dbe6d2}
+  .contact{background:var(--bark)}
+  .contact h2{color:#fff}.contact .eyebrow{color:#e2ad74}
+  .cbox{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:26px}
+  .cinfo{color:#e3d6bd}.cinfo p{margin:10px 0;font-size:1.04rem}
+  .cinfo b{color:#fff}.cinfo a{color:var(--saw);font-weight:700;text-decoration:none}
+  form{background:#fff;border-radius:6px;padding:24px}
+  form label{display:block;font-size:.83rem;font-weight:800;margin:12px 0 5px;color:var(--bark2)}
+  form input,form textarea,form select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:4px;font-family:inherit;font-size:.95rem;background:#fbf7ee}
+  form button{margin-top:18px;width:100%;background:var(--saw);color:#fff;border:0;padding:14px;border-radius:2px;font-weight:800;font-size:1rem;cursor:pointer}
+  form button:hover{background:var(--saw2)}
+  footer{background:#160f08;color:#a8987a;font-size:.9rem;padding:24px 0}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+  .ph{font-size:.74rem;color:#9a8a6a}
+  @media(max-width:900px){
+    .links{display:none}
+    .hero h1{font-size:2rem}
+    .grid{grid-template-columns:1fr}
+    .usegrid{grid-template-columns:1fr 1fr}
+    .byo .two,.extra .wrap,.cbox{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="util"><div class="wrap">
+  <span>Locally owned &amp; family operated sawmill · Bring your own logs or buy from our stock</span>
+  <span><strong>607-243-9525</strong> · 4610 Six Corners Rd, Dundee, NY</span>
+</div></div>
+
+<nav><div class="wrap">
+  <div class="brand">LAKE COUNTRY <span>LUMBER</span></div>
+  <div class="links">
+    <a href="#cut">What We Cut</a>
+    <a href="#logs">Mill Your Logs</a>
+    <a href="#uses">Uses</a>
+    <a href="#firewood">Logging &amp; Firewood</a>
+    <a href="#contact">Cut List</a>
+  </div>
+  <a class="callbtn" href="tel:16072439525">Call the Mill</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <h1>Rough-cut lumber, sawn to your sizes — any length up to 20 feet.</h1>
+  <p class="sub">A family sawmill in Dundee cutting hemlock and pine to order. Buy off the stack, give us your cut list, or haul in your own logs and we'll mill them. Real boards at sawmill prices, between the lakes in Yates County.</p>
+  <div class="cta">
+    <a class="btn btn-a" href="#contact">Send Your Cut List</a>
+    <a class="btn btn-b" href="#cut">See What We Cut</a>
+  </div>
+</div></header>
+
+<div class="measure"><div class="wrap">
+  <span>Cut to any length — up to 20′</span><span>From our stock or your logs</span><span>Hemlock · Pine · More</span>
+</div></div>
+
+<section id="cut"><div class="wrap">
+  <span class="eyebrow">Custom rough-cut</span>
+  <h2>Boards cut the way your job needs them</h2>
+  <p class="lead">No fixed pre-cut bins to pick over. Tell us the dimensions and lengths and we cut to your list off logs we have in the yard — so a barn beam, a run of siding, and trailer decking can all come off the same order.</p>
+  <div class="grid">
+    <div class="card"><h3>Dimensional Framing Stock</h3><p>Rough-sawn studs, joists, posts, and beams cut full-size for barns, sheds, lean-tos, and outbuildings.</p></div>
+    <div class="card"><h3>Board &amp; Batten Siding</h3><p>Rough hemlock and pine siding boards for that authentic barn-board look that holds up out here.</p></div>
+    <div class="card"><h3>Long Stock to 20′</h3><p>Need it longer than the box store carries? We cut lengths up to 20 feet — beams, stringers, and runs in one piece.</p></div>
+  </div>
+</div></section>
+
+<section id="logs" class="byo"><div class="wrap">
+  <span class="eyebrow" style="color:#e2ad74">Bring your own logs</span>
+  <h2>Got logs on your land? We'll turn them into lumber.</h2>
+  <div class="two" style="margin-top:24px">
+    <div>
+      <p class="lead">Cleared a few good trees, took down a yard oak, or have a woodlot worth milling? Haul the logs in and we'll saw them into usable boards and beams — your own wood, your own project, cut to your sizes.</p>
+      <ul class="checks">
+        <li>Mill logs you bring from your own property</li>
+        <li>Cut to the dimensions and lengths you spec</li>
+        <li>Keep the lumber from your own trees</li>
+        <li>We also buy timber — ask about your standing logs</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h3>Not sure what your logs will yield?</h3>
+      <p>Call the mill with what you've got — species, rough length, and how many — and we'll tell you what we can cut and roughly what to expect off the stack.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="uses" class="uses"><div class="wrap">
+  <span class="eyebrow">What it's good for</span>
+  <h2>What folks build with our lumber</h2>
+  <p class="lead">Rough-cut isn't for everything — but for the jobs where it's the right wood, nothing else makes as much sense for the money.</p>
+  <div class="usegrid">
+    <div class="use"><h3>Framing</h3><p>Barns, sheds, pole buildings, and outbuilding framing.</p></div>
+    <div class="use"><h3>Board &amp; Batten Siding</h3><p>Rustic, durable siding for barns, garages, and cabins.</p></div>
+    <div class="use"><h3>Trailer Beds</h3><p>Tough rough-sawn decking that takes a beating on flatbeds and utility trailers.</p></div>
+    <div class="use"><h3>Raised Garden Beds</h3><p>Untreated boards for garden boxes, planters, and homestead projects.</p></div>
+  </div>
+</div></section>
+
+<section id="firewood" class="extra"><div class="wrap">
+  <div>
+    <span class="eyebrow">Same family, same yard</span>
+    <h2>Logging &amp; firewood too</h2>
+    <p class="lead">Lake Country also handles logging and firewood, so the whole job — from standing timber to a stack of boards or a load of seasoned firewood — stays with one local outfit you can drive to.</p>
+  </div>
+  <div class="extra panel">
+    <h3>Need firewood instead of boards?</h3>
+    <p>Ask about firewood availability and what's split and ready. Tell us how much and where, and we'll let you know what we can deliver. <span class="ph" style="color:#cfe0c4">(Pricing &amp; availability confirmed by call — placeholder.)</span></p>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <span class="eyebrow">Request a cut</span>
+  <h2>Send us your cut list</h2>
+  <div class="cbox">
+    <div class="cinfo">
+      <p>Tell us the dimensions, lengths, and rough quantity you need — or that you've got your own logs to mill — and we'll get back to you on what we can cut and when. For a quick answer, call the mill direct.</p>
+      <p><b>Phone:</b> <a href="tel:16072439525">607-243-9525</a></p>
+      <p><b>Yard:</b> 4610 Six Corners Rd, Dundee, NY 14837</p>
+      <p><b>Area:</b> Dundee &amp; greater Yates County, between Keuka &amp; Seneca lakes</p>
+      <p><b>Find us:</b> Lake Country Lumber on Facebook</p>
+    </div>
+    <form onsubmit="return false">
+      <label>Name</label><input type="text" placeholder="Your name">
+      <label>Phone</label><input type="tel" placeholder="Best number to reach you">
+      <label>What do you need?</label>
+      <select>
+        <option>Rough-cut lumber from your stock</option>
+        <option>Mill my own logs</option>
+        <option>Long stock (up to 20′)</option>
+        <option>Board &amp; batten siding</option>
+        <option>Firewood</option>
+        <option>Sell standing timber / logs</option>
+      </select>
+      <label>Your cut list / details</label>
+      <textarea rows="4" placeholder="Dimensions, lengths, quantity — or what logs you have and roughly how many."></textarea>
+      <button type="submit">Send Cut List</button>
+    </form>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>Lake Country Lumber · 4610 Six Corners Rd, Dundee, NY 14837 · 607-243-9525</span>
+  <span>Family-owned sawmill · Custom rough-cut to 20′ · Logging &amp; firewood · Yates County</span>
+</div></footer>
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CNY Appliance Service &amp; Installations — Groton, NY | Repair &amp; Installation, European Brands a Specialty</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--steel:#3d454d;--ink:#22282e;--enamel:#f4f6f7;--badge:#1d4e89;--badge-dk:#163b68;--copper:#b96a3b;--line:#d7dde1;--white:#ffffff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Barlow',sans-serif;color:var(--ink);background:var(--enamel);line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.condensed{font-family:'Barlow Condensed',sans-serif}
+/* top bar */
+.topbar{background:var(--ink);color:#cfd6db;font-size:.85rem;padding:8px 0}
+.topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.topbar a{color:#fff;text-decoration:none;font-weight:700}
+/* header */
+header{background:var(--white);border-bottom:3px solid var(--badge);padding:18px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.logo{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.5rem;letter-spacing:.5px}
+.logo span{color:var(--badge)}
+.call-btn{background:var(--badge);color:#fff;text-decoration:none;font-weight:800;padding:11px 22px;border-radius:4px;font-size:1.02rem}
+.call-btn:hover{background:var(--badge-dk)}
+/* hero */
+.hero{background:linear-gradient(135deg,var(--steel) 0%,var(--ink) 100%);color:#fff;padding:64px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:center}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2rem,4.6vw,3.1rem);line-height:1.08;font-weight:700}
+.hero h1 em{font-style:normal;color:#9fc3ec}
+.hero p.sub{margin:16px 0 26px;color:#c9d2d9;font-size:1.08rem;max-width:34em}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero-ctas .ghost{border:2px solid #7a8792;color:#fff;text-decoration:none;font-weight:700;padding:10px 20px;border-radius:4px}
+.hero-ctas .ghost:hover{border-color:#fff}
+/* spec card */
+.spec-card{background:var(--white);color:var(--ink);border-radius:8px;padding:26px;border-top:6px solid var(--copper);box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.spec-card h3{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--copper);margin-bottom:12px}
+.spec-card table{width:100%;border-collapse:collapse;font-size:.95rem}
+.spec-card td{padding:7px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.spec-card td:first-child{font-weight:700;width:46%;color:var(--steel)}
+/* section scaffolding */
+section{padding:58px 0}
+.kicker{font-family:'Barlow Condensed',sans-serif;letter-spacing:2px;text-transform:uppercase;color:var(--copper);font-weight:700;font-size:.95rem}
+h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.6rem,3.4vw,2.3rem);font-weight:700;margin:6px 0 14px}
+.lead{max-width:46em;color:#4a545c}
+/* service grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:26px}
+.tile{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:18px 16px}
+.tile b{display:block;font-size:1.02rem;margin-bottom:4px}
+.tile small{color:#5c666e}
+.tile .chip{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:1px;color:var(--badge);border:1px solid var(--badge);border-radius:3px;padding:1px 7px;margin-bottom:9px;text-transform:uppercase}
+/* euro band */
+.euro{background:var(--badge);color:#fff}
+.euro .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.euro .kicker{color:#ffd9bd}
+.euro h2{color:#fff}
+.euro p{color:#d9e5f2}
+.euro .badge-box{background:var(--badge-dk);border-radius:8px;padding:26px}
+.euro .badge-box li{list-style:none;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.15);font-weight:600}
+.euro .badge-box li:last-child{border-bottom:none}
+.euro .badge-box li::before{content:"■";color:var(--copper);margin-right:10px;font-size:.8rem}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:26px}
+.step{background:var(--white);border:1px solid var(--line);border-left:5px solid var(--copper);border-radius:6px;padding:18px}
+.step .num{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.6rem;color:var(--copper)}
+/* about */
+.about{background:var(--white)}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about blockquote{background:var(--enamel);border-left:5px solid var(--badge);padding:18px 20px;border-radius:0 6px 6px 0;font-size:.98rem;color:#48525a}
+.about blockquote footer{margin-top:8px;font-size:.85rem;color:#7a848c}
+/* area */
+.area{background:var(--steel);color:#fff}
+.area h2{color:#fff}
+.area .kicker{color:#e8b58f}
+.towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.towns span{border:1px solid #6c7883;border-radius:20px;padding:6px 16px;font-weight:600;font-size:.92rem}
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.contact-card{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:28px}
+.contact-card h3{font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;margin-bottom:12px}
+.contact-card p{margin-bottom:10px}
+.big-phone{display:block;font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:700;color:var(--badge);text-decoration:none;margin:6px 0 14px}
+form label{display:block;font-weight:700;font-size:.85rem;margin:12px 0 4px;letter-spacing:.3px}
+form input,form select,form textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:4px;font-family:inherit;font-size:.95rem;background:#fbfcfd}
+form button{margin-top:16px;background:var(--copper);border:none;color:#fff;font-weight:800;font-size:1rem;padding:12px 26px;border-radius:4px;cursor:pointer}
+form button:hover{background:#a05a30}
+.note{font-size:.8rem;color:#7a848c;margin-top:10px}
+footer.site{background:var(--ink);color:#9aa4ad;padding:26px 0;font-size:.85rem}
+footer.site .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:800px){.hero .wrap,.euro .wrap,.about .wrap,.contact .wrap{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>Groton, NY — serving the Ithaca–Cortland corridor</span>
+    <span>Repair &amp; installs: <a href="tel:6072277373">(607) 227-7373</a></span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <div class="logo">CNY <span>Appliance</span> Service &amp; Installations</div>
+    <a class="call-btn" href="tel:6072277373">Call Doug: (607) 227-7373</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Washer down? New range waiting in the garage?<br><em>One local number handles both.</em></h1>
+      <p class="sub">Repair and installation of most major appliances — dishwashers, washers, dryers, ranges, wall ovens, cooktops, hoods, over-the-range microwaves, and disposers. European high-end brands are the specialty, not the exception.</p>
+      <div class="hero-ctas">
+        <a class="call-btn" href="tel:6072277373">Book a service call</a>
+        <a class="ghost" href="#install">Installation &amp; gas work</a>
+      </div>
+    </div>
+    <aside class="spec-card">
+      <h3>Service label</h3>
+      <table>
+        <tr><td>Established</td><td>2011 — owner-operated</td></tr>
+        <tr><td>Owner / technician</td><td>Doug Portzline</td></tr>
+        <tr><td>Bosch warranty servicer</td><td>16+ years</td></tr>
+        <tr><td>Specialty</td><td>European high-end appliances</td></tr>
+        <tr><td>Base</td><td>195 Bossard Rd, Groton NY</td></tr>
+        <tr><td>Toll-free</td><td>(800) 352-6947</td></tr>
+      </table>
+    </aside>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">Repair bench</span>
+    <h2>What comes back to life on a service call</h2>
+    <p class="lead">Parts, service, and installation on most large appliances. If a machine below is acting up, describe the symptom over the phone — an honest read on repair-versus-replace comes before any wrench does.</p>
+    <div class="grid">
+      <div class="tile"><span class="chip">Laundry</span><b>Washers &amp; dryers</b><small>No-spin, no-heat, mid-cycle stops, error codes</small></div>
+      <div class="tile"><span class="chip">Kitchen</span><b>Dishwashers</b><small>Not draining, not cleaning, door and rack issues</small></div>
+      <div class="tile"><span class="chip">Cooking</span><b>Ranges, wall ovens &amp; cooktops</b><small>Uneven heat, ignition trouble, element failures</small></div>
+      <div class="tile"><span class="chip">Ventilation</span><b>Hoods &amp; OTR microwaves</b><small>Fans, lighting, mounting and replacement</small></div>
+      <div class="tile"><span class="chip">Sink</span><b>Disposers</b><small>Jams, leaks, hum-but-no-grind, swap-outs</small></div>
+      <div class="tile"><span class="chip">Water</span><b>Hot water heaters</b><small>Installation of replacement units</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="euro">
+  <div class="wrap">
+    <div>
+      <span class="kicker">The specialty</span>
+      <h2>European appliances, serviced by someone who actually knows them</h2>
+      <p>High-end European machines are engineered differently — and most repair outfits in the Finger Lakes won't touch them. Doug has been a Bosch warranty service provider for over sixteen years and works on European high-end appliances every week, under warranty and out of it.</p>
+      <p style="margin-top:12px">If the manufacturer's locator sent you here for warranty work, you're in the right place. If your machine is long out of warranty, it still gets the same factory-standard care.</p>
+    </div>
+    <div class="badge-box">
+      <ul>
+        <li>Bosch warranty service provider — 16+ years</li>
+        <li>European high-end appliances a specialty</li>
+        <li>Factory-standard parts and procedures</li>
+        <li>Warranty and out-of-warranty service</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="install">
+  <div class="wrap">
+    <span class="kicker">Installation &amp; gas</span>
+    <h2>Bought the appliance? The tricky part is getting it in right.</h2>
+    <p class="lead">Delivery crews drop the box. What your kitchen actually needs is level, sealed, vented, and safely connected — especially where gas is involved.</p>
+    <div class="steps">
+      <div class="step"><span class="num">01</span><b>Appliance installation</b><p>Built-ins, slide-ins, stacked laundry, OTR microwaves — fitted and tested.</p></div>
+      <div class="step"><span class="num">02</span><b>Gas hookups</b><p>New gas appliance connections done properly and leak-checked.</p></div>
+      <div class="step"><span class="num">03</span><b>LP (propane) conversions</b><p>Converting natural-gas units for propane households — common out here.</p></div>
+      <div class="step"><span class="num">04</span><b>Old unit removed free</b><p>New installation includes free removal of the appliance it replaces.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Who shows up</span>
+      <h2>You call Doug. Doug answers. Doug does the work.</h2>
+      <p class="lead">CNY Appliance Service &amp; Installations has been owner-operated in Groton since 2011. No dispatch center, no rotating technicians, no upsell script — one experienced tech who'd rather talk you out of an unnecessary repair than sell you one.</p>
+    </div>
+    <blockquote>
+      "CNY does not fix my brand of washer, but Doug kindly sat on the phone with me and talked through some troubleshooting possibilities. His advice helped me fix the problem myself for free! I will definitely do whatever business I have in the future with CNY."
+      <footer>— verified Yellow Pages review</footer>
+    </blockquote>
+  </div>
+</section>
+
+<section class="area">
+  <div class="wrap">
+    <span class="kicker">Service area</span>
+    <h2>Based on Bossard Road — minutes from anywhere between Ithaca and Cortland</h2>
+    <div class="towns">
+      <span>Groton</span><span>Freeville</span><span>Dryden</span><span>McLean</span><span>Lansing</span><span>Ithaca</span><span>Cortland</span><span>Locke</span><span>Moravia</span>
+    </div>
+    <p class="note" style="color:#b9c3cb">[Confirm exact service radius with Doug before publishing.]</p>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <div class="contact-card">
+      <h3>Fastest: pick up the phone</h3>
+      <p>Describe the machine, the brand, and the symptom. You'll get a straight answer on whether it's worth fixing.</p>
+      <a class="big-phone" href="tel:6072277373">(607) 227-7373</a>
+      <p><b>Toll-free:</b> (800) 352-6947<br><b>Base:</b> 195 Bossard Rd, Groton, NY 13073</p>
+      <p class="note">[Hours placeholder — confirm scheduling window with owner.]</p>
+    </div>
+    <div class="contact-card">
+      <h3>Or request a service call</h3>
+      <form>
+        <label>Name</label><input type="text" placeholder="Your name">
+        <label>Phone</label><input type="tel" placeholder="Best callback number">
+        <label>Appliance &amp; brand</label><input type="text" placeholder="e.g., Bosch dishwasher">
+        <label>What's it doing (or not doing)?</label><textarea rows="3" placeholder="Describe the symptom"></textarea>
+        <button type="button">Request a call back</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <span>CNY Appliance Service &amp; Installations · Groton, NY</span>
+    <span>Repair · Installation · Gas hookups · LP conversions</span>
+  </div>
+</footer>
+
+</body>
+</html>

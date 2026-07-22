@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuba Lake Marina — Pontoon Rentals, Tahoe Sales &amp; Boat Service on Cuba Lake, NY</title>
+<style>
+  :root{
+    --deep:#0f3a52; --deep2:#155174; --wave:#2b86b3; --aqua:#46b0d0;
+    --sun:#f2a93b; --sun2:#e6962a; --cedar:#b9763f; --sand:#f3ede1;
+    --paper:#ffffff; --ink:#172a33; --mute:#5b6f78; --foam:#eaf5fa;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3{font-family:"Helvetica Neue",Arial,sans-serif;line-height:1.12;letter-spacing:-.3px}
+  .wrap{max-width:1090px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .btn{display:inline-block;background:var(--sun);color:#241803;text-decoration:none;font-weight:800;padding:13px 26px;border-radius:6px;font-size:.95rem;letter-spacing:.2px}
+  .btn:hover{background:var(--sun2)}
+  .btn-w{background:#fff;color:var(--deep)}
+  .btn-o{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7)}
+  .btn-o:hover{background:#fff;color:var(--deep)}
+  /* top */
+  .top{background:var(--deep);color:#cfe6f1;font-size:.82rem}
+  .top .wrap{display:flex;justify-content:space-between;gap:12px;padding:7px 22px;flex-wrap:wrap;align-items:center}
+  .top b{color:#fff}
+  /* header */
+  header{background:#fff;border-bottom:1px solid #e3ebef;position:sticky;top:0;z-index:30}
+  .head{display:flex;justify-content:space-between;align-items:center;padding:13px 22px;gap:14px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:12px}
+  .mk{width:48px;height:48px;border-radius:11px;background:linear-gradient(150deg,var(--wave),var(--deep));position:relative;flex:0 0 auto;overflow:hidden}
+  .mk:before{content:"";position:absolute;left:8px;top:20px;width:32px;height:9px;background:var(--cedar);border-radius:2px}
+  .mk:after{content:"";position:absolute;left:14px;top:9px;width:4px;height:14px;background:#fff;box-shadow:8px 0 0 #fff,16px 2px 0 #fff}
+  .brand h2{font-size:1.18rem;color:var(--deep)}
+  .brand small{display:block;font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--mute)}
+  .nav a{text-decoration:none;font-size:.86rem;color:var(--deep);margin-left:17px;font-weight:600}
+  .nav a:hover{color:var(--wave)}
+  /* hero */
+  .hero{position:relative;background:linear-gradient(175deg,var(--deep) 0%,var(--deep2) 45%,var(--wave) 100%);color:#fff;overflow:hidden}
+  .hero .waves{position:absolute;left:0;right:0;bottom:-2px;height:120px;opacity:.5}
+  .hero .sunc{position:absolute;right:7%;top:42px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,#ffd789,rgba(242,169,59,0));opacity:.8}
+  .hero .wrap{position:relative;z-index:2;padding:58px 22px 46px}
+  .kick{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);font-size:.74rem;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:18px;font-weight:700;color:#eaf5fa}
+  .hero h1{font-size:3.05rem;max-width:16ch;margin-bottom:14px}
+  .hero h1 span{color:var(--sun)}
+  .hero p{font-size:1.12rem;color:#d7ecf5;max-width:34rem;margin-bottom:8px}
+  /* three lanes */
+  .lanes{position:relative;z-index:3;margin-top:30px}
+  .lanes .wrap{padding:0 22px}
+  .lanegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:-34px}
+  .lane{background:#fff;border-radius:12px;padding:22px 20px;box-shadow:0 14px 34px rgba(15,58,82,.16);border-top:4px solid var(--wave)}
+  .lane.rent{border-top-color:var(--sun)}
+  .lane.buy{border-top-color:var(--wave)}
+  .lane.svc{border-top-color:var(--cedar)}
+  .lane .lk{font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--mute);font-weight:800}
+  .lane h3{color:var(--deep);font-size:1.28rem;margin:5px 0 7px}
+  .lane p{font-size:.92rem;color:var(--mute);margin-bottom:15px;min-height:48px}
+  .lane a{display:inline-block;font-weight:800;font-size:.9rem;color:var(--deep);text-decoration:none;border-bottom:2px solid var(--sun);padding-bottom:1px}
+  .lane a:hover{color:var(--wave)}
+  /* sections */
+  section{padding:54px 0}
+  .eyebrow{font-size:.72rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--wave);margin-bottom:9px;font-weight:800}
+  .sec-h{font-size:2.05rem;color:var(--deep);margin-bottom:10px}
+  .sec-sub{color:var(--mute);max-width:42rem;margin-bottom:30px}
+  /* rentals */
+  .rentbox{background:var(--foam);border-radius:16px;padding:32px 30px;display:grid;grid-template-columns:1.1fr 1fr;gap:30px;align-items:center}
+  .rentbox h2{color:var(--deep);font-size:1.9rem;margin-bottom:10px}
+  .rentbox p{color:var(--mute);margin-bottom:16px}
+  .rlist{list-style:none}
+  .rlist li{padding:9px 0 9px 28px;position:relative;border-bottom:1px solid #d8e8ef;font-size:.96rem}
+  .rlist li:before{content:"⚓";position:absolute;left:0;color:var(--wave)}
+  .reserve{background:#fff;border-radius:13px;padding:24px 22px;border:1px solid #d8e8ef}
+  .reserve h3{color:var(--deep);font-size:1.15rem;margin-bottom:14px}
+  .rrow{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed #d8e8ef;font-size:.92rem}
+  .rrow b{color:var(--sun2)}
+  /* dealer brands */
+  .brands{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .bcard{background:#fff;border:1px solid #e3ebef;border-radius:12px;padding:22px 18px;text-align:center}
+  .bcard .bt{font-size:.66rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--mute);font-weight:800;margin-bottom:6px}
+  .bcard h3{color:var(--deep);font-size:1.18rem;margin-bottom:4px}
+  .bcard p{font-size:.85rem;color:var(--mute)}
+  .build{background:var(--deep);color:#fff;border-radius:14px;padding:26px 26px;margin-top:18px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  .build h3{font-size:1.4rem;margin-bottom:5px}
+  .build p{color:#cfe6f1;font-size:.95rem;max-width:40ch}
+  /* service */
+  .svc-sec{background:linear-gradient(160deg,#13405b,#0f3a52);color:#fff}
+  .svccards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .scard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:22px 20px}
+  .scard h3{font-size:1.12rem;margin-bottom:7px;color:#fff}
+  .scard p{font-size:.92rem;color:#cfe6f1}
+  .scard .cert{display:inline-block;margin-top:10px;font-size:.68rem;letter-spacing:.5px;background:var(--sun);color:#241803;font-weight:800;padding:3px 9px;border-radius:10px}
+  /* winter band */
+  .winter{background:var(--cedar);color:#fff;border-radius:14px;padding:26px 26px;margin-top:20px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+  .winter h3{font-size:1.35rem;margin-bottom:4px}
+  .winter p{opacity:.95;font-size:.95rem}
+  /* why */
+  .why{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center}
+  .why ul{list-style:none;margin-top:14px}
+  .why li{padding:10px 0 10px 30px;border-bottom:1px solid #e3ebef;position:relative;color:var(--ink)}
+  .why li:before{content:"●";position:absolute;left:4px;color:var(--sun);font-size:.7rem;top:16px}
+  .why li b{color:var(--deep)}
+  .lakecard{background:linear-gradient(160deg,var(--wave),var(--deep));border-radius:16px;padding:30px 26px;color:#fff}
+  .lakecard .big{font-size:2.6rem;font-weight:800;line-height:1}
+  .lakecard .big small{display:block;font-size:.78rem;letter-spacing:1px;text-transform:uppercase;opacity:.85;margin-top:6px;font-weight:600}
+  .lakecard p{color:#dceff6;margin-top:14px;font-size:.95rem}
+  /* contact */
+  .contact{background:var(--foam)}
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+  .ccard{background:#fff;border-radius:14px;padding:26px 24px;border:1px solid #d8e8ef}
+  .ccard h3{color:var(--deep);font-size:1.3rem;margin-bottom:14px}
+  .crow{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed #d8e8ef;font-size:.95rem}
+  .crow b{color:var(--wave)}
+  /* footer */
+  footer{background:var(--deep);color:#bcd6e3;padding:38px 0 20px;font-size:.92rem}
+  .fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:28px;padding-bottom:22px;border-bottom:1px solid #1d5070}
+  footer h4{color:#fff;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:11px}
+  footer a{color:#bcd6e3;text-decoration:none;display:block;padding:3px 0}
+  footer a:hover{color:var(--sun)}
+  .fbot{padding-top:15px;font-size:.78rem;color:#7fa7bc;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  @media(max-width:820px){
+    .nav{display:none}
+    .hero h1{font-size:2.3rem}
+    .lanegrid,.brands,.svccards{grid-template-columns:1fr}
+    .rentbox,.why,.contact .wrap,.fgrid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <div>On the water at Cuba Lake · Allegany County, NY</div>
+  <div>Mon–Fri 9–5 · <b>585-968-1433</b></div>
+</div></div>
+
+<header><div class="head">
+  <div class="brand">
+    <div class="mk"></div>
+    <div><h2>Cuba Lake Marina</h2><small>Sales · Rentals · Service · Cuba, NY</small></div>
+  </div>
+  <nav class="nav">
+    <a href="#rentals">Rentals</a>
+    <a href="#boats">New Boats</a>
+    <a href="#service">Service</a>
+    <a href="#winter">Winterize</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div></header>
+
+<section class="hero">
+  <div class="sunc"></div>
+  <svg class="waves" viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M0,40 C150,90 350,0 600,45 C850,90 1050,10 1200,50 L1200,120 L0,120 Z" fill="#46b0d0"/>
+    <path d="M0,70 C200,110 400,40 600,70 C800,100 1000,45 1200,75 L1200,120 L0,120 Z" fill="#2b86b3"/>
+  </svg>
+  <div class="wrap">
+    <span class="kick">Authorized Tahoe &amp; Paddle King Dealer · Suzuki-Certified Service</span>
+    <h1>Your whole day on <span>Cuba Lake</span> starts at the dock.</h1>
+    <p>Rent a pontoon for Saturday, build a brand-new Tahoe, or get the boat tuned up by a certified Suzuki mechanic — all from the one full-service marina right on the water in Cuba.</p>
+  </div>
+</section>
+
+<div class="lanes"><div class="wrap"><div class="lanegrid">
+  <div class="lane rent">
+    <div class="lk">Lane 1 · Today</div>
+    <h3>Rent a boat</h3>
+    <p>Pontoons, kayaks and paddle boats — grab the family and get on the lake this weekend.</p>
+    <a href="#rentals">See rentals &amp; reserve →</a>
+  </div>
+  <div class="lane buy">
+    <div class="lk">Lane 2 · This year</div>
+    <h3>Buy a pontoon</h3>
+    <p>New Tahoe (build your own), Paddle King, Suzuki power and trailers — priced and rigged here.</p>
+    <a href="#boats">Browse &amp; get a quote →</a>
+  </div>
+  <div class="lane svc">
+    <div class="lk">Lane 3 · Any time</div>
+    <h3>Service &amp; storage</h3>
+    <p>Tune-ups, repairs, parts, fall winterization and storage by a Suzuki-certified tech.</p>
+    <a href="#service">Book service →</a>
+  </div>
+</div></div></div>
+
+<section id="rentals"><div class="wrap">
+  <div class="rentbox">
+    <div>
+      <div class="eyebrow">Rentals</div>
+      <h2>Out on the lake by lunchtime</h2>
+      <p>No boat of your own? No problem. Reserve a well-kept pontoon for the day, or take a kayak or paddle boat out to fish, cruise, or just float. Cottage guests and first-time visitors welcome.</p>
+      <ul class="rlist">
+        <li>Pontoon boats — fits the whole family</li>
+        <li>Kayaks &amp; paddle boats by the hour</li>
+        <li>Life jackets included · launch right here</li>
+        <li>Weekends book up — reserve ahead</li>
+      </ul>
+    </div>
+    <div class="reserve">
+      <h3>Reserve a rental</h3>
+      <div class="rrow"><span>Pontoon — full day</span><b>Call for rate</b></div>
+      <div class="rrow"><span>Kayak / paddle boat</span><b>By the hour</b></div>
+      <div class="rrow"><span>Best days</span><b>Reserve early</b></div>
+      <div class="rrow" style="border:none"><span>How to book</span><b>Call or email</b></div>
+      <a class="btn" href="tel:5859681433" style="width:100%;text-align:center;margin-top:14px">Call 585-968-1433</a>
+      <a class="btn btn-w" href="mailto:cubalakemarina@outlook.com?subject=Pontoon%20rental%20reservation" style="width:100%;text-align:center;margin-top:8px;border:1px solid #d8e8ef">Email to reserve</a>
+      <p style="font-size:.76rem;color:var(--mute);margin-top:10px">Rates shown as placeholders — confirm current pricing with the marina.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="boats" style="background:var(--sand)"><div class="wrap">
+  <div class="eyebrow">New boats &amp; trailers</div>
+  <h2 class="sec-h">An authorized dealer, right on the lake you'll boat</h2>
+  <p class="sec-sub">Buy where you'll launch. We rig, deliver, and service everything we sell — so the people who set up your boat are the same ones who'll keep it running.</p>
+  <div class="brands">
+    <div class="bcard"><div class="bt">Pontoons</div><h3>Tahoe</h3><p>Build your own — pick the layout, power and options.</p></div>
+    <div class="bcard"><div class="bt">Pontoons</div><h3>Paddle King</h3><p>Made-in-NY aluminum pontoons built for inland lakes.</p></div>
+    <div class="bcard"><div class="bt">Power</div><h3>Suzuki Marine</h3><p>Outboards rigged and serviced by a certified tech.</p></div>
+    <div class="bcard"><div class="bt">Trailers</div><h3>Venture / Load Rite</h3><p>Match the right trailer to your boat and your ramp.</p></div>
+  </div>
+  <div class="build">
+    <div><h3>Build your own Tahoe pontoon</h3><p>Spec it out the way you want it, and we'll quote it with local rigging and service included.</p></div>
+    <a class="btn" href="mailto:cubalakemarina@outlook.com?subject=Pontoon%20quote%20request">Request a quote</a>
+  </div>
+</div></section>
+
+<section class="svc-sec" id="service"><div class="wrap">
+  <div class="eyebrow" style="color:var(--aqua)">Service &amp; repair</div>
+  <h2 class="sec-h" style="color:#fff">A certified Suzuki mechanic, minutes from your dock</h2>
+  <p class="sec-sub" style="color:#cfe6f1">Don't haul the boat to Buffalo. Get it diagnosed and fixed here — by a tech trained on the engines you're running.</p>
+  <div class="svccards">
+    <div class="scard"><h3>Tune-ups &amp; diagnostics</h3><p>Scheduled maintenance and "why won't it start" problems, sorted before the weekend.</p><span class="cert">Suzuki-certified</span></div>
+    <div class="scard"><h3>Repairs &amp; parts</h3><p>Engine components, propellers, batteries and quality replacement parts in stock.</p><span class="cert">On-site tech</span></div>
+    <div class="scard"><h3>Battery &amp; electrical</h3><p>Full battery inspections so a dead cell doesn't cut a lake day short.</p><span class="cert">Same crew</span></div>
+  </div>
+  <div class="winter" id="winter">
+    <div><h3>Winterization &amp; storage — book early</h3><p>Lock in your fall winterization and off-season storage before the cold sets in and the calendar fills.</p></div>
+    <a class="btn" href="tel:5859681433">Reserve a spot</a>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="why">
+    <div>
+      <div class="eyebrow">Why Cuba Lake Marina</div>
+      <h2 class="sec-h">The local marine shop that does all four</h2>
+      <ul>
+        <li><b>Sales, rentals, service &amp; storage</b> — one place, one crew, all season.</li>
+        <li><b>Right on Cuba Lake</b> — launch where you buy, rent and service.</li>
+        <li><b>Suzuki-certified mechanic on site</b> — no long-distance hauls for repairs.</li>
+        <li><b>Authorized Tahoe · Paddle King · Suzuki · Venture dealer</b> — real factory backing.</li>
+      </ul>
+    </div>
+    <div class="lakecard">
+      <div class="big">445<small>acres of Cuba Lake to explore</small></div>
+      <p>A cottage-lined reservoir in Allegany County, easy to reach off the I-86 Southern Tier corridor — and your home base for the day is the dock at North Shore Road.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div>
+    <div class="eyebrow">Find us</div>
+    <h2 class="sec-h">Stop down at the marina</h2>
+    <p style="color:var(--mute);max-width:30rem">On North Shore Road on Cuba Lake. Call or email to reserve a rental, ask about a new pontoon, or get the boat in for service.</p>
+    <p style="margin-top:16px;font-size:1.05rem"><b>9845 North Shore Rd</b><br>Cuba, NY 14727</p>
+    <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+      <a class="btn" href="tel:5859681433">Call 585-968-1433</a>
+      <a class="btn btn-w" href="mailto:cubalakemarina@outlook.com" style="border:1px solid #d8e8ef">Email the marina</a>
+    </div>
+  </div>
+  <div class="ccard">
+    <h3>Hours &amp; contact</h3>
+    <div class="crow"><span>Monday – Friday</span><b>9:00am – 5:00pm</b></div>
+    <div class="crow"><span>Phone</span><b>585-968-1433</b></div>
+    <div class="crow"><span>Email</span><b>cubalakemarina@outlook.com</b></div>
+    <div class="crow" style="border:none"><span>Address</span><b>9845 North Shore Rd, Cuba</b></div>
+    <p style="font-size:.78rem;color:var(--mute);margin-top:12px">Seasonal weekend hours may vary — confirm with the marina.</p>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div>
+      <h4>Cuba Lake Marina, Inc.</h4>
+      <p style="margin-bottom:10px">The full-service marina on Cuba Lake, Allegany County — pontoon rentals, new Tahoe &amp; Paddle King sales, Suzuki-certified repairs, parts, winterization and storage.</p>
+      <p style="color:#fff;font-weight:bold">585-968-1433</p>
+      <p>9845 North Shore Rd, Cuba, NY 14727</p>
+    </div>
+    <div>
+      <h4>On the water</h4>
+      <a href="#rentals">Boat rentals</a>
+      <a href="#boats">New pontoons</a>
+      <a href="#service">Service &amp; repair</a>
+      <a href="#winter">Winterize &amp; store</a>
+    </div>
+    <div>
+      <h4>Get in touch</h4>
+      <a href="tel:5859681433">Call the marina</a>
+      <a href="mailto:cubalakemarina@outlook.com">Email us</a>
+      <a href="#contact">Hours &amp; directions</a>
+    </div>
+  </div>
+  <div class="fbot">
+    <span>© 2026 Cuba Lake Marina, Inc. · Cuba, NY</span>
+    <span>Authorized Tahoe · Paddle King · Suzuki · Venture dealer</span>
+  </div>
+</div></footer>
+
+</body>
+</html>

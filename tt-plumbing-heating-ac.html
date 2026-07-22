@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TT Plumbing, Heating &amp; AC | Kingston NY | 24/7 Service</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#103b5c;--orange:#f26a1b;--ink:#14222d;--gray:#5a6975;--line:#e0e6ea;--bg:#f5f8fa;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:#fff;line-height:1.6;}
+h1,h2,h3,.disp{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;line-height:1.02;letter-spacing:.5px;}
+a{text-decoration:none;color:inherit;}
+.wrap{max-width:1160px;margin:0 auto;padding:0 26px;}
+
+nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(16,59,92,.06);}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:13px 26px;max-width:1160px;margin:0 auto;}
+.brand{font-family:'Barlow Condensed';font-weight:700;font-size:1.5rem;color:var(--blue);}
+.brand b{color:var(--orange);}
+.nav-links{display:flex;gap:24px;align-items:center;}
+.nav-links a.menu{font-family:'Barlow Condensed';font-weight:600;font-size:1rem;color:var(--blue);text-transform:uppercase;letter-spacing:.5px;}
+.nav-links a.menu:hover{color:var(--orange);}
+.callbtn{background:var(--orange);color:#fff;font-family:'Barlow Condensed';font-weight:700;font-size:1.05rem;padding:9px 18px;border-radius:4px;letter-spacing:.5px;}
+.callbtn:hover{background:#d85a10;}
+
+.banner{background:var(--orange);color:#fff;text-align:center;font-family:'Barlow Condensed';font-weight:600;letter-spacing:1px;font-size:.95rem;padding:7px;}
+
+.hero{min-height:84vh;display:flex;align-items:center;color:#fff;
+background:linear-gradient(95deg,rgba(16,59,92,.93) 42%,rgba(16,59,92,.55)),url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1400&q=80');
+background-size:cover;background-position:center;background-color:#103b5c;}
+.hero-c{max-width:660px;padding:64px 0;}
+.kicker{font-family:'Barlow Condensed';color:var(--orange);letter-spacing:3px;font-weight:600;font-size:1rem;margin-bottom:14px;}
+.hero h1{font-size:4rem;font-weight:700;margin-bottom:16px;}
+.hero p.sub{font-size:1.12rem;color:#d6e2ec;max-width:540px;margin-bottom:30px;}
+.cta-row{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:40px;}
+.btn{display:inline-block;font-family:'Barlow Condensed';font-weight:700;letter-spacing:.5px;padding:13px 26px;border-radius:4px;font-size:1.05rem;}
+.btn-pri{background:var(--orange);color:#fff;}.btn-pri:hover{background:#d85a10;}
+.btn-sec{background:#fff;color:var(--blue);}.btn-sec:hover{background:#e9eef2;}
+.stats{display:flex;gap:34px;flex-wrap:wrap;}
+.stat .n{font-family:'Barlow Condensed';font-size:2.4rem;font-weight:700;color:var(--orange);}
+.stat .l{font-size:.78rem;text-transform:uppercase;letter-spacing:1.5px;color:#bcccd8;}
+
+section{padding:78px 0;}
+.eyebrow{font-family:'Barlow Condensed';color:var(--orange);letter-spacing:3px;font-weight:600;font-size:.95rem;}
+.sec-h{font-size:2.6rem;font-weight:700;margin:6px 0 14px;color:var(--blue);}
+.lead{max-width:640px;color:var(--gray);margin-bottom:42px;}
+
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.svc{background:var(--bg);border:1px solid var(--line);border-left:5px solid var(--blue);padding:28px 24px;border-radius:4px;transition:.2s;}
+.svc:hover{border-left-color:var(--orange);transform:translateY(-3px);}
+.svc h3{font-size:1.35rem;color:var(--blue);margin-bottom:8px;}
+.svc p{font-size:.94rem;color:var(--gray);}
+
+.band{background:var(--blue);color:#fff;}
+.band .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding:54px 26px;}
+.tcard h3{color:var(--orange);font-size:1.3rem;margin-bottom:7px;}
+.tcard p{color:#cdd9e2;font-size:.94rem;}
+
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.tile{aspect-ratio:1/1.05;border-radius:5px;display:flex;align-items:flex-end;color:#fff;}
+.tile span{font-family:'Barlow Condensed';background:rgba(16,59,92,.82);padding:6px 12px;font-size:.92rem;letter-spacing:.5px;margin:12px;text-transform:uppercase;}
+.t1{background:linear-gradient(rgba(16,59,92,.15),rgba(16,59,92,.5)),url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:#103b5c;}
+.t2{background:linear-gradient(rgba(16,59,92,.15),rgba(16,59,92,.5)),url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:#1d4d72;}
+.t3{background:linear-gradient(rgba(16,59,92,.15),rgba(16,59,92,.5)),url('https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:#f26a1b;}
+.t4{background:linear-gradient(rgba(16,59,92,.15),rgba(16,59,92,.5)),url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:#2a5b80;}
+
+.contact{background:var(--bg);}
+.csplit{display:grid;grid-template-columns:1fr 1fr;gap:50px;}
+.info h3{color:var(--blue);font-size:1.4rem;margin:22px 0 5px;}
+.info p{color:var(--gray);}
+.info .big{font-family:'Barlow Condensed';font-size:2.2rem;color:var(--orange);font-weight:700;}
+.form{background:#fff;border:1px solid var(--line);border-radius:8px;padding:32px;box-shadow:0 8px 28px rgba(16,59,92,.08);}
+.form label{display:block;font-size:.85rem;text-transform:uppercase;letter-spacing:.5px;color:var(--blue);margin:14px 0 5px;font-family:'Barlow Condensed';font-weight:600;}
+.form input,.form select,.form textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:4px;font-family:inherit;font-size:.95rem;}
+.form button{margin-top:20px;width:100%;background:var(--orange);color:#fff;font-family:'Barlow Condensed';font-weight:700;letter-spacing:.5px;padding:15px;border:none;border-radius:4px;cursor:pointer;font-size:1.2rem;}
+.form button:hover{background:#d85a10;}
+.thanks{background:#fff;border:2px solid var(--orange);padding:34px;text-align:center;border-radius:8px;}
+.thanks h3{color:var(--blue);margin-bottom:8px;font-size:1.5rem;}
+
+footer{background:var(--ink);color:#aebcc6;padding:34px 0;text-align:center;font-size:.88rem;}
+footer .by{color:var(--orange);font-family:'Barlow Condensed';letter-spacing:1px;margin-top:8px;font-weight:600;}
+
+@media(max-width:860px){
+.nav-links .menu{display:none;}
+.hero h1{font-size:2.6rem;}
+.svc-grid,.band .wrap,.gal,.csplit{grid-template-columns:1fr;}
+.gal{grid-template-columns:1fr 1fr;}
+section{padding:52px 0;}
+}
+</style>
+</head>
+<body>
+<div class="banner">24/7 EMERGENCY SERVICE &middot; NO HEAT? NO HOT WATER? CALL (845) 332-5265</div>
+<nav><div class="nav-in">
+<div class="brand">TT PLUMBING <b>&middot;</b> HEATING &amp; AC</div>
+<div class="nav-links">
+<a class="menu" href="#services">Services</a>
+<a class="menu" href="#work">Work</a>
+<a class="menu" href="#contact">Schedule</a>
+<a class="callbtn" href="tel:18453325265">CALL (845) 332-5265</a>
+</div></div></nav>
+
+<header class="hero"><div class="wrap"><div class="hero-c">
+<div class="kicker">KINGSTON &middot; ULSTER COUNTY</div>
+<h1>Heat, Water &amp; Cool Air&mdash;Fixed Right</h1>
+<p class="sub">Residential plumbing, heating, and air conditioning for Kingston homes. Burst pipe at 2am or a furnace down in January, we answer and we show up.</p>
+<div class="cta-row">
+<a class="btn btn-pri" href="tel:18453325265">Call 24/7 Now</a>
+<a class="btn btn-sec" href="#contact">Get a Free Estimate</a>
+</div>
+<div class="stats">
+<div class="stat"><div class="n">24/7</div><div class="l">Emergency Service</div></div>
+<div class="stat"><div class="n">L&amp;I</div><div class="l">Licensed &amp; Insured</div></div>
+<div class="stat"><div class="n">Local</div><div class="l">Kingston Based</div></div>
+</div>
+</div></div></header>
+
+<section id="services"><div class="wrap">
+<div class="eyebrow">WHAT WE DO</div>
+<h2 class="sec-h">Plumbing, Heating &amp; AC</h2>
+<p class="lead">One crew for the whole house. We handle the leaks, the furnace, and the AC&mdash;so you're not chasing three different contractors.</p>
+<div class="svc-grid">
+<div class="svc"><h3>Plumbing Repair</h3><p>Leaks, clogged drains, running toilets, water heaters, fixtures, and repipes. Diagnosed straight and fixed clean.</p></div>
+<div class="svc"><h3>Heating Service</h3><p>Furnace and boiler repair, tune-ups, and replacements. Get the heat back on before the house gets cold.</p></div>
+<div class="svc"><h3>AC Install &amp; Repair</h3><p>Central air and mini-split installs plus summer repairs. Cool, even temps without sky-high bills.</p></div>
+<div class="svc"><h3>Water Heaters</h3><p>Tank and tankless replacements installed same-week when we can, with old unit hauled away.</p></div>
+<div class="svc"><h3>Drain &amp; Sewer</h3><p>Snaking, camera inspections, and clearing the stubborn backups that the store-bought stuff won't touch.</p></div>
+<div class="svc"><h3>24/7 Emergency</h3><p>Burst pipes, no heat, flooded basements&mdash;day or night, weekends and holidays included.</p></div>
+</div>
+</div></section>
+
+<section class="band"><div class="wrap">
+<div class="tcard"><h3>We Answer The Phone</h3><p>A real person picks up, including nights and weekends. No endless hold music while your basement floods.</p></div>
+<div class="tcard"><h3>Upfront Pricing</h3><p>You hear the price before we start the work. No surprise line items after the truck pulls away.</p></div>
+<div class="tcard"><h3>Clean &amp; Respectful</h3><p>Boots covered, work area protected, mess cleaned up. We treat your home like it's ours.</p></div>
+</div></section>
+
+<section id="work"><div class="wrap">
+<div class="eyebrow">ON THE JOB</div>
+<h2 class="sec-h">Recent Work</h2>
+<p class="lead">Plumbing and HVAC jobs around Kingston and the surrounding towns.</p>
+<div class="gal">
+<div class="tile t1"><span>Boiler Swap</span></div>
+<div class="tile t2"><span>Water Heater Install</span></div>
+<div class="tile t3"><span>Mini-Split AC</span></div>
+<div class="tile t4"><span>Repipe &middot; Kingston</span></div>
+</div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap"><div class="csplit">
+<div class="info">
+<div class="eyebrow">GET IN TOUCH</div>
+<h2 class="sec-h">Book Service or an Estimate</h2>
+<p>Serving Kingston, Saugerties, Hurley, Lake Katrine, Port Ewen, and nearby Ulster County towns.</p>
+<h3>Emergency &amp; Scheduling</h3>
+<a class="big" href="tel:18453325265">(845) 332-5265</a>
+<h3>Hours</h3>
+<p>Mon&ndash;Fri 7:30am &ndash; 6:00pm<br>Emergency service 24/7</p>
+<h3>Service Area</h3>
+<p>Kingston &amp; greater Ulster County</p>
+</div>
+<div>
+<div class="form" id="formbox">
+<form id="qf" onsubmit="return ty(event)">
+<label>Name</label><input required placeholder="Your name">
+<label>Phone</label><input required placeholder="(845) 000-0000">
+<label>Service Needed</label>
+<select><option>Plumbing Repair</option><option>Heating / Furnace</option><option>AC Install or Repair</option><option>Water Heater</option><option>Drain / Sewer</option><option>Emergency</option></select>
+<label>Tell Us What's Going On</label><textarea rows="4" placeholder="Describe the issue and where it is..."></textarea>
+<button type="submit">Request Service</button>
+</form>
+<div id="ty" class="thanks" style="display:none">
+<h3>Got it&mdash;thanks!</h3>
+<p>We'll call you back shortly. For an active emergency, call (845) 332-5265 now.</p>
+</div>
+</div>
+</div>
+</div></div></section>
+
+<footer><div class="wrap">
+TT Plumbing, Heating &amp; AC &middot; Kingston, NY &middot; (845) 332-5265<br>
+<span class="by">Website preview by Onyx Rise Media</span>
+</div></footer>
+<script>
+function ty(e){e.preventDefault();document.getElementById('qf').style.display='none';document.getElementById('ty').style.display='block';return false;}
+</script>
+</body>
+</html>

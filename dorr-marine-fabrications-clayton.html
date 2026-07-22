@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dorr Marine Fabrications — Custom Marine Welding, Docks, Barges &amp; Boat Lifts · Clayton, NY</title>
+<meta name="description" content="Custom marine welding and steel fabrication in Clayton, NY — floating docks, barges, push boats, IMM boat lifts, pontoon and trailer repair for the Thousand Islands.">
+<style>
+  :root{
+    --steel:#1b2026; --steel-2:#262d35; --gun:#39424c; --spark:#ff6a1a; --spark-d:#e2560c;
+    --river:#2e6b8a; --bg:#eef1f3; --ink:#1c2229; --line:#d5dce1; --pale:#f6f8f9;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",-apple-system,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+  h1,h2,h3{font-family:"Arial Narrow","Arial Black",Impact,"Segoe UI",sans-serif;text-transform:uppercase;letter-spacing:.5px}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  header{background:var(--steel);color:#e9edf0;position:sticky;top:0;z-index:40;border-bottom:3px solid var(--spark)}
+  .nav{max-width:1140px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between}
+  .brand{font-weight:800;font-size:1.15rem;letter-spacing:1px;line-height:1;text-transform:uppercase}
+  .brand span{color:var(--spark)}
+  .brand small{display:block;font-family:"Segoe UI",sans-serif;font-weight:400;font-size:.58rem;letter-spacing:2px;color:#93a1ad;margin-top:5px;text-transform:none}
+  nav ul{display:flex;gap:22px;list-style:none;font-size:.86rem;text-transform:uppercase;letter-spacing:.6px;font-weight:600}
+  nav a{text-decoration:none;color:#c3ced7}
+  nav a:hover{color:var(--spark)}
+  .btn{display:inline-block;background:var(--spark);color:#1c1206;padding:12px 22px;border-radius:3px;text-decoration:none;font-weight:800;font-size:.84rem;text-transform:uppercase;letter-spacing:.7px;transition:.15s;border:none;cursor:pointer}
+  .btn:hover{background:var(--spark-d);color:#fff}
+  .btn-ghost{background:transparent;border:2px solid #93a1ad;color:#e9edf0;padding:10px 20px}
+  .btn-ghost:hover{border-color:var(--spark);color:var(--spark)}
+  @media(max-width:840px){nav ul{display:none}}
+  /* hero */
+  .hero{position:relative;color:#fff;padding:84px 0 74px;
+    background:linear-gradient(180deg,rgba(20,24,29,.78),rgba(20,24,29,.9)),
+    linear-gradient(115deg,#2e6b8a 0%,#1b2026 55%);overflow:hidden}
+  .hero:before{content:"";position:absolute;inset:0;opacity:.5;
+    background:repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0 2px,transparent 2px 40px)}
+  .hero .spark{position:absolute;right:-40px;top:-30px;width:340px;height:340px;border-radius:50%;
+    background:radial-gradient(circle,rgba(255,106,26,.4),transparent 62%);filter:blur(6px)}
+  .hero-inner{position:relative}
+  .tag{display:inline-block;border:1.5px solid var(--spark);color:#ffcaa6;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:3px;margin-bottom:22px}
+  .hero h1{font-size:clamp(2.2rem,5.6vw,4.1rem);line-height:1;max-width:16ch}
+  .hero h1 em{color:var(--spark);font-style:normal}
+  .hero p{font-size:1.14rem;max-width:46ch;margin:22px 0 30px;color:#dce6ec;text-transform:none;line-height:1.55}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  /* strip */
+  .strip{background:var(--steel-2);color:#c3ced7;text-align:center;padding:12px 22px;font-size:.82rem;text-transform:uppercase;letter-spacing:1.4px}
+  .strip b{color:var(--spark)}
+  /* sections */
+  section{padding:76px 0}
+  .kick{font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--spark);font-weight:800;margin-bottom:12px}
+  h2{font-size:clamp(1.8rem,3.8vw,2.7rem);color:var(--steel);line-height:1.04;margin-bottom:14px}
+  .lead{font-size:1.08rem;max-width:62ch;color:#3d4650;text-transform:none}
+  /* build grid */
+  .build{background:#fff}
+  .bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+  .bc{background:var(--pale);border:1px solid var(--line);border-top:4px solid var(--river);border-radius:8px;padding:24px 22px}
+  .bc:nth-child(3n+1){border-top-color:var(--spark)}
+  .bc h3{font-size:1.12rem;color:var(--steel);margin-bottom:8px;letter-spacing:.3px}
+  .bc p{font-size:.94rem;color:#4a545e;text-transform:none}
+  @media(max-width:840px){.bgrid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.bgrid{grid-template-columns:1fr}}
+  /* projects */
+  .proj{background:var(--steel);color:#dce6ec}
+  .proj h2{color:#fff}
+  .proj .lead{color:#a9bcc8}
+  .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+  .pt{border-radius:10px;overflow:hidden;border:1px solid #333d47;min-height:190px;position:relative;display:flex;align-items:flex-end;
+    background:linear-gradient(160deg,#2e6b8a,#1b2026)}
+  .pt:nth-child(2){background:linear-gradient(160deg,#3a4b57,#1b2026)}
+  .pt:nth-child(3){background:linear-gradient(160deg,#25566e,#1b2026)}
+  .pt .cap{padding:16px 18px}
+  .pt .cap .t{font-family:"Arial Narrow",sans-serif;font-weight:800;text-transform:uppercase;font-size:1.1rem;color:#fff;letter-spacing:.5px}
+  .pt .cap .d{font-size:.82rem;color:#a9bcc8;text-transform:none}
+  .proj .note{margin-top:24px;font-size:.84rem;color:#7f95a4}
+  @media(max-width:840px){.pgrid{grid-template-columns:1fr}}
+  /* lifts band */
+  .lifts{background:var(--river);color:#fff}
+  .lsplit{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+  .lifts h2{color:#fff}
+  .lifts p{text-transform:none;font-size:1.06rem;color:#e2eef4;max-width:52ch}
+  .lbadge{background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.35);border-radius:12px;padding:24px;text-align:center}
+  .lbadge .b{font-family:"Arial Black",sans-serif;font-size:1.6rem;line-height:1.1}
+  .lbadge .s{font-size:.85rem;color:#d4e6ef;margin-top:6px;text-transform:none}
+  @media(max-width:840px){.lsplit{grid-template-columns:1fr;gap:24px}}
+  /* quote form */
+  .quote{background:var(--bg)}
+  .qwrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;margin-top:34px;align-items:start}
+  .qinfo h3{font-size:1.2rem;color:var(--steel);margin-bottom:14px}
+  .qinfo .row{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:.98rem;text-transform:none}
+  .qinfo .row b{color:var(--steel);min-width:80px;text-transform:uppercase;font-size:.76rem;letter-spacing:.6px;padding-top:2px}
+  .qcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .qcard .full{grid-column:1/3}
+  label{display:block;font-size:.76rem;text-transform:uppercase;letter-spacing:.8px;color:var(--gun);margin-bottom:6px;font-weight:700}
+  input,select,textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:7px;font-size:.96rem;font-family:inherit;background:var(--pale)}
+  textarea{min-height:96px;resize:vertical}
+  @media(max-width:840px){.qwrap{grid-template-columns:1fr}}
+  @media(max-width:560px){.qcard{grid-template-columns:1fr}.qcard .full{grid-column:1}}
+  /* footer */
+  footer{background:#12161b;color:#8fa0ad;padding:50px 0 26px;font-size:.92rem}
+  .fg{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+  footer h4{color:#fff;font-family:"Arial Narrow",sans-serif;font-weight:800;font-size:1rem;text-transform:uppercase;letter-spacing:.6px;margin-bottom:12px}
+  footer a{color:#8fa0ad;text-decoration:none}
+  footer a:hover{color:var(--spark)}
+  .flag{background:#7c2b2b;color:#fff;font-size:.72rem;padding:3px 8px;border-radius:6px;display:inline-block;margin-top:10px}
+  .fnote{border-top:1px solid rgba(255,255,255,.1);margin-top:30px;padding-top:16px;font-size:.8rem;color:#6a7c8a;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  @media(max-width:840px){.fg{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">DORR MARINE <span>FABRICATIONS</span><small>Custom steel on the St. Lawrence · Clayton, NY</small></div>
+    <nav><ul>
+      <li><a href="#build">What We Build</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#lifts">Boat Lifts</a></li>
+      <li><a href="#quote">Get a Quote</a></li>
+    </ul></nav>
+    <a href="#quote" class="btn">Get a quote</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="spark"></div>
+  <div class="wrap hero-inner">
+    <span class="tag">Custom marine welding · 20+ years on the water</span>
+    <h1>Built in steel, <em>to your spec,</em> for the river.</h1>
+    <p>Floating docks, barges, push boats, boat lifts, pontoon and trailer repair — fabricated in Clayton for marine, commercial and residential jobs across the Thousand Islands. Send us your drawings; we'll build it to hold.</p>
+    <div class="hero-cta">
+      <a href="#quote" class="btn">Send your fabrication spec</a>
+      <a href="tel:3156862463" class="btn btn-ghost">Call (315) 686-2463</a>
+    </div>
+  </div>
+</section>
+<div class="strip">Floating docks · <b>Barges &amp; push boats</b> · Boat lifts · Pontoon &amp; trailer repair · Sandblasting</div>
+
+<section class="build" id="build">
+  <div class="wrap">
+    <p class="kick">What We Build</p>
+    <h2>Custom metal work for the water</h2>
+    <p class="lead">Not off-the-shelf kits — steel built to the job in front of us. Whether it's a dock section for a private shoreline or a push boat for a marina, the work is measured, cut and welded to spec.</p>
+    <div class="bgrid">
+      <div class="bc"><h3>Floating Docks</h3><p>Custom steel-frame floating docks engineered for St. Lawrence current, ice and the depth off your shoreline.</p></div>
+      <div class="bc"><h3>Barges</h3><p>Work barges built and repaired for hauling material, equipment and dock sections out to the islands.</p></div>
+      <div class="bc"><h3>Push Boats</h3><p>Custom push boats to move your barge — priced to the size and power you need. Ask for a build quote.</p></div>
+      <div class="bc"><h3>Boat Lifts</h3><p>Boat-lift supply and install, including IMM lifts, sized to your dock and hull.</p></div>
+      <div class="bc"><h3>Pontoon &amp; Trailer Repair</h3><p>Aluminum pontoon repair and trailer welding — the fixes that keep your rig on the road and the water.</p></div>
+      <div class="bc"><h3>Sandblasting</h3><p>Surface prep and sandblasting so a repair or new build is coated right and lasts on the river.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="proj" id="projects">
+  <div class="wrap">
+    <p class="kick">Recent Work</p>
+    <h2>See the steel, not a stock photo</h2>
+    <p class="lead">Every custom job is different. Here's the kind of work that comes out of the Clayton shop — real barges, docks and boat lifts built for Thousand Islands owners and marinas.</p>
+    <div class="pgrid">
+      <div class="pt"><div class="cap"><div class="t">Custom Work Barge</div><div class="d">Steel deck barge for island material runs</div></div></div>
+      <div class="pt"><div class="cap"><div class="t">Push Boat Build</div><div class="d">Repowered and fabricated to move the barge</div></div></div>
+      <div class="pt"><div class="cap"><div class="t">Shoreline Boat Lift</div><div class="d">IMM lift set to the dock and hull</div></div></div>
+    </div>
+    <p class="note"><em>Gallery placeholders — to be filled with the shop's own project photos (the current site's images don't load). Job photos available on the Dorr Marine Fabrications Facebook page.</em></p>
+  </div>
+</section>
+
+<section class="lifts" id="lifts">
+  <div class="wrap lsplit">
+    <div>
+      <p class="kick" style="color:#ffd7bd">Boat Lifts</p>
+      <h2 style="text-transform:uppercase">Ask about IMM boat lifts</h2>
+      <p>Get your boat up out of the water and off the weather when you're not running it. We supply and install boat lifts — including IMM lifts — matched to your dock structure and your hull weight, and we'll fabricate the mounting steel to fit.</p>
+    </div>
+    <div class="lbadge">
+      <div class="b">IMM<br>Boat Lifts</div>
+      <div class="s">Supply · install · custom mounting steel</div>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="wrap">
+    <p class="kick">Get a Quote</p>
+    <h2>Tell us what you need built</h2>
+    <div class="qwrap">
+      <div class="qinfo">
+        <h3>The shop</h3>
+        <div class="row"><b>Address</b><span>36811 NY-12<br>Clayton, NY 13624</span></div>
+        <div class="row"><b>Phone</b><span><a href="tel:3156862463">(315) 686-2463</a></span></div>
+        <div class="row"><b>Email</b><span><a href="mailto:dorrmarinefabs@gmail.com">dorrmarinefabs@gmail.com</a></span></div>
+        <div class="row"><b>Serves</b><span>Marine, commercial &amp; residential — Thousand Islands region</span></div>
+      </div>
+      <form class="qcard" onsubmit="return false;">
+        <div><label>Name</label><input type="text" placeholder="Name"></div>
+        <div><label>Phone</label><input type="tel" placeholder="Best number"></div>
+        <div><label>Project type</label><select><option>Floating dock</option><option>Barge</option><option>Push boat</option><option>Boat lift</option><option>Pontoon / trailer repair</option><option>Sandblasting</option><option>Other custom fabrication</option></select></div>
+        <div><label>Material / size (if known)</label><input type="text" placeholder="e.g. 20ft dock section, aluminum pontoon"></div>
+        <div class="full"><label>Describe the job</label><textarea placeholder="What you need built or fixed, dimensions, timeline. You can email drawings or photos to the address on the left."></textarea></div>
+        <div class="full"><button class="btn" style="width:100%;padding:15px;font-size:.95rem">Send my spec to the shop</button></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fg">
+    <div>
+      <h4>Dorr Marine Fabrications LLC</h4>
+      <p>Custom marine welding and steel fabrication — docks, barges, push boats and boat lifts — in Clayton, New York, on the St. Lawrence River.</p>
+      <span class="flag">Preview concept — Onyx Rise Media</span>
+    </div>
+    <div>
+      <h4>Find the shop</h4>
+      <p>36811 NY-12<br>Clayton, NY 13624</p>
+      <p style="margin-top:8px"><a href="https://www.facebook.com/DorrMarineFabrications">Facebook: Dorr Marine Fabrications</a></p>
+    </div>
+    <div>
+      <h4>Reach us</h4>
+      <p><a href="tel:3156862463">(315) 686-2463</a></p>
+      <p style="margin-top:6px"><a href="mailto:dorrmarinefabs@gmail.com">dorrmarinefabs@gmail.com</a></p>
+    </div>
+  </div>
+  <div class="wrap fnote">
+    <span>© 2026 Dorr Marine Fabrications LLC · Clayton, NY</span>
+    <span>Design preview prepared for the owner — not the live site.</span>
+  </div>
+</footer>
+
+</body>
+</html>

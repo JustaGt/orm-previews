@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blizzard Manufacturing — All-Aluminum Trailers Built in Boonville, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --steel:#1c2733; --steel2:#26333f; --ice:#2f6fb0; --ice-lt:#4a90d9;
+  --plate:#c7ced6; --plate2:#e8ecf1; --salt:#f5f7fa; --ink:#141b22; --amber:#f0a828;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--salt);line-height:1.6}
+h1,h2,h3,.head{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.08}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}
+/* top bar */
+.bar{background:var(--steel);color:#fff;font-size:.82rem;padding:7px 0}
+.bar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+.bar b{color:var(--amber);font-weight:600}
+/* nav */
+nav{background:var(--steel2);position:sticky;top:0;z-index:40;border-bottom:3px solid var(--ice)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 22px}
+.logo{font-family:'Oswald';font-weight:700;color:#fff;font-size:1.4rem;letter-spacing:.06em}
+.logo span{color:var(--ice-lt)}
+.nlinks{display:flex;gap:22px;font-size:.9rem;font-weight:600;color:#cdd6df;text-transform:uppercase;letter-spacing:.04em}
+.nlinks a:hover{color:#fff}
+.cta{background:var(--amber);color:#1a1200;padding:10px 18px;border-radius:4px;font-weight:700;font-family:'Oswald';text-transform:uppercase;letter-spacing:.03em;font-size:.9rem;display:inline-block}
+.cta:hover{background:#ffbf47}
+@media(max-width:820px){.nlinks{display:none}}
+/* hero */
+.hero{background:
+   linear-gradient(115deg,rgba(20,27,34,.94) 0%,rgba(28,39,51,.78) 55%,rgba(47,111,176,.55) 100%),
+   repeating-linear-gradient(45deg,#20303e 0 22px,#233544 22px 44px);
+  color:#fff;padding:78px 0 70px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.hero .kick{color:var(--amber);font-family:'Oswald';font-weight:600;letter-spacing:.14em;font-size:.82rem;margin-bottom:14px}
+.hero h1{font-size:3.15rem;margin-bottom:16px}
+.hero h1 em{color:var(--ice-lt);font-style:normal}
+.hero p{font-size:1.1rem;color:#d3dbe4;max-width:46ch;margin-bottom:26px}
+.hbtns{display:flex;gap:14px;flex-wrap:wrap}
+.ghost{border:2px solid #6f8397;color:#fff;padding:10px 18px;border-radius:4px;font-weight:600;font-family:'Oswald';text-transform:uppercase;letter-spacing:.03em;font-size:.9rem}
+.ghost:hover{border-color:#fff}
+.spec-card{background:rgba(11,17,23,.66);border:1px solid #3a4a5a;border-radius:8px;padding:24px}
+.spec-card h3{color:#fff;font-size:1.05rem;margin-bottom:14px;border-bottom:1px solid #3a4a5a;padding-bottom:10px}
+.spec-card ul{list-style:none;font-size:.94rem;color:#d3dbe4}
+.spec-card li{padding:7px 0;display:flex;gap:10px;align-items:flex-start}
+.spec-card li::before{content:"›";color:var(--amber);font-weight:700}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.hero h1{font-size:2.4rem}}
+/* strip */
+.strip{background:var(--ice);color:#fff;text-align:center;font-family:'Oswald';text-transform:uppercase;letter-spacing:.05em;padding:14px;font-size:1rem}
+/* section */
+section{padding:62px 0}
+.eyebrow{color:var(--ice);font-family:'Oswald';font-weight:600;letter-spacing:.12em;font-size:.8rem;text-transform:uppercase;margin-bottom:10px}
+.stitle{font-size:2rem;margin-bottom:8px}
+.lead{color:#54606c;max-width:60ch;margin-bottom:34px}
+/* trailer grid */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tcard{background:#fff;border:1px solid #dce2e8;border-radius:8px;padding:22px;transition:.15s;border-top:4px solid var(--steel2)}
+.tcard:hover{transform:translateY(-3px);border-top-color:var(--ice);box-shadow:0 10px 26px rgba(28,39,51,.12)}
+.tcard h3{font-size:1.12rem;margin-bottom:8px;color:var(--steel)}
+.tcard p{font-size:.9rem;color:#5a6672}
+.tcard .tag{font-size:.72rem;color:var(--ice);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+@media(max-width:720px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}}
+/* features comparison */
+.feat{background:var(--steel);color:#fff}
+.feat .stitle,.feat .eyebrow{color:#fff}
+.feat .eyebrow{color:var(--amber)}
+.frow{display:grid;grid-template-columns:1fr;gap:12px;max-width:760px}
+.fitem{background:var(--steel2);border-left:4px solid var(--amber);padding:15px 18px;border-radius:5px}
+.fitem b{font-family:'Oswald';letter-spacing:.02em}
+.fitem span{display:block;color:#b9c4cf;font-size:.9rem;margin-top:3px}
+/* quote form */
+.quote{background:linear-gradient(180deg,#eef2f6,#fff)}
+.qgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.qfull{grid-column:1/-1}
+label{font-size:.8rem;font-weight:600;color:#3a4652;display:block;margin-bottom:5px;text-transform:uppercase;letter-spacing:.03em}
+input,select,textarea{width:100%;padding:11px 13px;border:1px solid #c4ccd4;border-radius:5px;font-family:inherit;font-size:.95rem;background:#fff}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--ice)}
+.qbtn{background:var(--amber);color:#1a1200;border:none;padding:14px 22px;border-radius:5px;font-family:'Oswald';text-transform:uppercase;letter-spacing:.04em;font-weight:700;font-size:1rem;cursor:pointer}
+.qbtn:hover{background:#ffbf47}
+.formbox{background:#fff;border:1px solid #dce2e8;border-radius:10px;padding:28px;box-shadow:0 8px 24px rgba(28,39,51,.06)}
+@media(max-width:620px){.qgrid{grid-template-columns:1fr}}
+/* two col */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+@media(max-width:760px){.two{grid-template-columns:1fr}}
+.dock{background:#0f1a24;color:#fff;border-radius:10px;padding:30px}
+.dock h3{color:var(--ice-lt);font-size:1.4rem;margin-bottom:10px}
+.dock p{color:#c3ccd5;font-size:.96rem}
+.repair{background:#fff;border:1px solid #dce2e8;border-radius:10px;padding:30px}
+.repair h3{font-size:1.4rem;margin-bottom:10px;color:var(--steel)}
+/* shows */
+.shows{background:var(--salt)}
+.showlist{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
+.show{background:#fff;border:1px solid #dce2e8;border-radius:8px;padding:16px;border-left:4px solid var(--ice)}
+.show .dt{font-family:'Oswald';color:var(--ice);font-size:.85rem;letter-spacing:.03em}
+.show b{display:block;margin-top:3px}
+@media(max-width:720px){.showlist{grid-template-columns:1fr}}
+.note{font-size:.8rem;color:#8a95a0;margin-top:14px}
+/* footer */
+footer{background:var(--steel);color:#c3ccd5;padding:44px 0 26px}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:26px}
+footer h4{color:#fff;font-family:'Oswald';letter-spacing:.03em;margin-bottom:12px;font-size:1rem;text-transform:uppercase}
+footer a:hover{color:#fff}
+.fbig{font-family:'Oswald';font-size:1.35rem;color:#fff}
+.copy{border-top:1px solid #3a4a5a;margin-top:28px;padding-top:16px;font-size:.8rem;color:#7d8894}
+@media(max-width:720px){footer .cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap">
+  <span>13080 State Route 12 · Boonville, NY 13309 · Tug Hill / Adirondack foothills</span>
+  <span>Showroom: Mon–Fri 7–3:30 · Sat 10–1 · <b>Call (315) 942-2399</b></span>
+</div></div>
+
+<nav><div class="wrap">
+  <a href="#top" class="logo">BLIZZARD<span>MFG</span></a>
+  <div class="nlinks">
+    <a href="#trailers">Trailers</a>
+    <a href="#build">Standard Features</a>
+    <a href="#docks">Adiron-Docks</a>
+    <a href="#repair">Repair</a>
+    <a href="#shows">Shows</a>
+  </div>
+  <a href="#quote" class="cta">Build a Quote</a>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <div>
+    <div class="kick">ALL-ALUMINUM · BUILT IN BOONVILLE SINCE THE EARLY '90s</div>
+    <h1>The trailer you order is the trailer <em>we build for you.</em></h1>
+    <p>Enclosed, V-nose, snowmobile, car hauler, ATV, motorcycle and utility trailers — welded from aluminum in our own Boonville plant, then tailored to exactly what you haul. No cookie-cutter lots-only inventory.</p>
+    <div class="hbtns">
+      <a href="#quote" class="cta">Start a Custom Build</a>
+      <a href="#trailers" class="ghost">See Trailer Types</a>
+    </div>
+  </div>
+  <div class="spec-card">
+    <h3>Why the frame matters</h3>
+    <ul>
+      <li>Heavier-gauge aluminum frame, not the lightest we could get away with</li>
+      <li>Roof-truss bow system across the top — holds its shape loaded</li>
+      <li>Completely sealed exterior — built for Tug Hill road salt</li>
+      <li>Finished interior walls, recessed camlock latches, diamond kick plate — standard, not upsell</li>
+      <li>14 color options, many in stock</li>
+    </ul>
+  </div>
+</div></header>
+
+<div class="strip">There may not be snow yet — but you can still get a Blizzard.</div>
+
+<section id="trailers"><div class="wrap">
+  <div class="eyebrow">What we build</div>
+  <h2 class="stitle">Every trailer type for everything you haul</h2>
+  <p class="lead">Pick a category to start. Anything on this list can be built to your length, door placement, lighting, and interior — most changes fall inside our standard build, not extra cost.</p>
+  <div class="grid">
+    <div class="tcard"><div class="tag">Winter</div><h3>Snowmobile</h3><p>V-nose box, crossover, enclosures and flatbeds sized to your sled count and where you park it.</p></div>
+    <div class="tcard"><div class="tag">Enclosed</div><h3>Cargo</h3><p>Sealed, finished-wall enclosed trailers for tools, gear and toys — kept dry and locked.</p></div>
+    <div class="tcard"><div class="tag">Two-wheel</div><h3>Motorcycle</h3><p>Including the dual-color LowBoy layout, built low and light for bikes.</p></div>
+    <div class="tcard"><div class="tag">Auto</div><h3>Car Hauler</h3><p>Open or enclosed, with the V-nose box option for parts, tools and a spare set of tires.</p></div>
+    <div class="tcard"><div class="tag">Work</div><h3>Utility &amp; Tilt</h3><p>A-frame non-tilt and tilt utility trailers for contractors, landscapers and equipment.</p></div>
+    <div class="tcard"><div class="tag">Off-road</div><h3>ATV / UTV</h3><p>Built around machine width and ramp needs so loading isn't a fight.</p></div>
+  </div>
+</div></section>
+
+<section class="feat" id="build"><div class="wrap">
+  <div class="eyebrow">Standard, not "extra"</div>
+  <h2 class="stitle">The features other builders charge you for</h2>
+  <p class="lead" style="color:#b9c4cf">A Blizzard shows up with things that appear on a competitor's quote as add-ons. Here's what comes in the base build.</p>
+  <div class="frow">
+    <div class="fitem"><b>Finished interior walls</b><span>Clean, sealed interior — not bare studs and exposed skin.</span></div>
+    <div class="fitem"><b>Recessed camlock latches</b><span>Flush latches that don't catch, rattle or snag your gear.</span></div>
+    <div class="fitem"><b>Diamond kick plate</b><span>Front protection where stone and salt spray hit hardest.</span></div>
+    <div class="fitem"><b>Roof-truss bow system + sealed exterior</b><span>Structure and weather sealing engineered in from the frame up.</span></div>
+    <div class="fitem"><b>Optional upgrades on request</b><span>Diamond-plate trim, LED lighting, helmet shelves, salt shields, cabinetry — we'll install parts you supply, too.</span></div>
+  </div>
+</div></section>
+
+<section class="quote" id="quote"><div class="wrap">
+  <div class="eyebrow">Tell us what you haul</div>
+  <h2 class="stitle">Start your custom build</h2>
+  <p class="lead">Give us the basics and our sales team will come back with a build and a price. The more you tell us about what's going in it, the tighter the quote.</p>
+  <div class="formbox">
+    <form onsubmit="return false">
+      <div class="qgrid">
+        <div><label>Name</label><input type="text" placeholder="Your name"></div>
+        <div><label>Phone</label><input type="tel" placeholder="(315) 000-0000"></div>
+        <div><label>Email</label><input type="email" placeholder="you@email.com"></div>
+        <div><label>Trailer type</label>
+          <select><option>Snowmobile</option><option>Cargo / Enclosed</option><option>Motorcycle</option><option>Car Hauler</option><option>Utility / Tilt</option><option>ATV / UTV</option><option>Not sure — help me pick</option></select>
+        </div>
+        <div class="qfull"><label>What will you haul in it? (machines, weight, how many, length you have in mind)</label>
+          <textarea rows="3" placeholder="e.g. two 137&quot; sleds, want a V-nose I can stand in, park it outside all winter"></textarea></div>
+      </div>
+      <div style="margin-top:16px"><button class="qbtn">Request My Build &amp; Price</button></div>
+      <p class="note">Prefer to talk it through? Call the shop at (315) 942-2399, Mon–Fri 7–3:30 or Sat 10–1.</p>
+    </form>
+  </div>
+</div></section>
+
+<section><div class="wrap two">
+  <div class="dock" id="docks">
+    <div class="eyebrow" style="color:var(--amber)">Also from our plant</div>
+    <h3>Adiron-Docks — aluminum docks</h3>
+    <p>The same all-aluminum, salt-and-weather-resistant construction we put into trailers, built into modular dock systems for Tug Hill and Adirondack lakes. Aluminum won't rot, won't hold water, and comes out light in the fall. Ask us about sizing a dock for your shoreline.</p>
+  </div>
+  <div class="repair" id="repair">
+    <div class="eyebrow">Not just what we build</div>
+    <h3>Trailer repair — all makes &amp; models</h3>
+    <p>Bearings, lights, axles, floors, doors, ramps, wiring — we fix trailers we didn't build, too. Our parts counter and service team keep you on the road instead of waiting on a dealer three counties away. Bring it in and get it fixed right the first time.</p>
+  </div>
+</div></section>
+
+<section class="shows" id="shows"><div class="wrap">
+  <div class="eyebrow">Come see us</div>
+  <h2 class="stitle">2026–27 show schedule</h2>
+  <p class="lead">Order your show-priced trailer early — the overflow lot gets picked over fast once the season turns.</p>
+  <div class="showlist">
+    <div class="show"><div class="dt">Fall 2026 · date TBA</div><b>Ohio Ridge Riders — Snow Bash Blizzard 500</b><span style="font-size:.85rem;color:#6a7580">Ohio, NY</span></div>
+    <div class="show"><div class="dt">Fall 2026 · date TBA</div><b>Big East Powersports Show</b><span style="font-size:.85rem;color:#6a7580">NYS Fairgrounds, Syracuse, NY</span></div>
+    <div class="show"><div class="dt">Fall 2026 · date TBA</div><b>Sled Mass Powersports Show</b><span style="font-size:.85rem;color:#6a7580">West Springfield, MA</span></div>
+  </div>
+  <p class="note">Placeholder dates — confirm 2026–27 show dates before this page goes live.</p>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div>
+      <div class="logo" style="margin-bottom:10px">BLIZZARD<span>MFG</span></div>
+      <p>All-aluminum trailers &amp; Adiron-Docks, built and repaired in Boonville, New York. Operating as North South Connection.</p>
+      <p class="fbig" style="margin-top:12px">(315) 942-2399</p>
+    </div>
+    <div>
+      <h4>Visit / Ship</h4>
+      <p>13080 State Route 12<br>Boonville, NY 13309</p>
+      <p style="margin-top:10px">Showroom<br>Mon–Fri 7:00–3:30<br>Sat 10:00–1:00</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <p><a href="#trailers">Trailer types</a><br>
+      <a href="#build">Standard features</a><br>
+      <a href="#docks">Adiron-Docks</a><br>
+      <a href="#repair">Trailer repair</a><br>
+      <a href="#quote">Build a quote</a></p>
+    </div>
+  </div>
+  <div class="copy">© 2026 Blizzard Manufacturing / North South Connection · Boonville, NY · Preview concept prepared by Onyx Rise Media.</div>
+</div></footer>
+
+</body>
+</html>

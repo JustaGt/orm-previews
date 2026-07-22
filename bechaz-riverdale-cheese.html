@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bechaz Riverdale Cheese &amp; Gelatería — Farm-Fresh Curds, Gelato &amp; Creamline Milk | Clayton, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf4e6; --cream2:#f3e7cf; --gold:#e0a72e; --gold-dk:#b9831a;
+    --river:#2f6f86; --river-lt:#dcebcb; --barn:#a6402f; --ink:#3a3024; --line:#e6d6b6; --white:#fff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Nunito Sans',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  h1,h2,h3{font-family:'Fraunces',serif;line-height:1.12}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+
+  .topnote{background:var(--river);color:#eaf3f6;text-align:center;font-size:.92rem;padding:9px 16px}
+  .topnote b{color:#fff}
+
+  header.hero{background:
+      radial-gradient(circle at 80% 18%,rgba(224,167,46,.22),transparent 46%),
+      var(--cream);padding:56px 0 50px}
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:center}
+  .badge{display:inline-flex;align-items:center;gap:8px;background:var(--cream2);border:1px solid var(--line);
+    color:var(--gold-dk);font-weight:700;font-size:.82rem;letter-spacing:.5px;padding:6px 14px;border-radius:30px}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.4rem);margin:16px 0 12px;color:var(--barn)}
+  .hero h1 em{font-style:italic;color:var(--river)}
+  .hero p{font-size:1.14rem;max-width:520px;color:#5e5240}
+  .acts{display:flex;flex-wrap:wrap;gap:13px;margin-top:24px}
+  .btn{display:inline-block;font-weight:700;text-decoration:none;padding:14px 24px;border-radius:40px;font-size:1rem}
+  .btn-pri{background:var(--barn);color:#fff}
+  .btn-sec{background:#fff;color:var(--barn);border:2px solid var(--barn)}
+  .hours-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 22px;box-shadow:0 10px 30px rgba(166,64,47,.08)}
+  .hours-card h3{color:var(--river);font-size:1.3rem;margin-bottom:8px}
+  .hours-card .big{font-family:'Fraunces',serif;font-size:1.7rem;color:var(--barn)}
+  .hours-card ul{list-style:none;margin-top:12px}
+  .hours-card li{display:flex;gap:9px;padding:6px 0;border-bottom:1px dashed var(--line);font-size:.98rem}
+  .hours-card li:last-child{border:0}
+  .hours-card li b{color:var(--gold-dk);flex:none}
+
+  section{padding:54px 0}
+  .center{text-align:center}
+  .eyebrow{color:var(--gold-dk);font-weight:700;letter-spacing:2px;font-size:.8rem;text-transform:uppercase}
+  .sec-h{font-size:clamp(1.8rem,4vw,2.5rem);color:var(--barn);margin:8px 0 8px}
+  .sec-sub{color:#6b5e49;max-width:600px;margin:0 auto 30px}
+
+  .menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+  .m{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 22px;border-top:6px solid var(--gold)}
+  .m:nth-child(2){border-top-color:var(--river)}
+  .m:nth-child(3){border-top-color:var(--barn)}
+  .m:nth-child(4){border-top-color:var(--gold-dk)}
+  .m:nth-child(5){border-top-color:var(--river)}
+  .m h3{font-size:1.35rem;color:var(--ink);margin-bottom:6px}
+  .m .price{display:inline-block;background:var(--cream2);color:var(--gold-dk);font-weight:700;font-size:.82rem;padding:3px 10px;border-radius:20px;margin-bottom:9px}
+  .m .flav{color:#6b5e49;font-size:.98rem}
+  .m .flav b{color:var(--ink)}
+
+  .rhythm{background:var(--river);color:#eaf3f6}
+  .rhythm .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
+  .rhythm h2{color:#fff;font-size:clamp(1.7rem,3.8vw,2.4rem);margin-bottom:10px}
+  .rhythm p{color:#cfe2e9;margin-bottom:14px}
+  .steps{list-style:none}
+  .steps li{display:flex;gap:13px;margin-bottom:14px;align-items:flex-start}
+  .num{background:var(--gold);color:#3a2e10;font-family:'Fraunces',serif;font-weight:700;width:34px;height:34px;
+    border-radius:50%;display:grid;place-items:center;flex:none}
+  .steps b{color:#fff}
+
+  .story{background:var(--cream2)}
+  .story .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;align-items:center}
+  .story h2{color:var(--barn);font-size:clamp(1.7rem,3.8vw,2.4rem);margin-bottom:10px}
+  .story p{color:#5e5240;margin-bottom:12px}
+  .mark{font-family:'Fraunces',serif;font-style:italic;color:var(--river);font-size:1.1rem}
+
+  .where ul{columns:2;column-gap:30px;list-style:none;max-width:760px;margin:0 auto}
+  .where li{padding:7px 0 7px 22px;position:relative;color:#5e5240;break-inside:avoid}
+  .where li::before{content:"●";color:var(--gold);position:absolute;left:0}
+
+  .visit{background:var(--barn);color:#fff;text-align:center}
+  .visit h2{color:#fff;font-size:clamp(1.8rem,4vw,2.5rem)}
+  .visit p{color:#f6d9cf;max-width:560px;margin:12px auto 0}
+  .visit .acts{justify-content:center;margin-top:26px}
+  .visit .btn-pri{background:var(--gold);color:#3a2e10}
+  .visit .btn-sec{background:transparent;color:#fff;border-color:#fff}
+  .addr{margin-top:22px;font-family:'Fraunces',serif;font-size:1.2rem}
+
+  footer{background:#2a2014;color:#b6a487;text-align:center;padding:24px 0;font-size:.9rem}
+  @media(max-width:760px){.hero .wrap,.rhythm .grid{grid-template-columns:1fr}.where ul{columns:1}}
+</style>
+</head>
+<body>
+
+<div class="topnote">Self-serve at the house &amp; farm, <b>7 AM – 9 PM daily</b> · Fresh cheese curd made <b>every Thursday</b>, usually ready by 2 PM</div>
+
+<header class="hero"><div class="wrap">
+  <div>
+    <span class="badge">★ 4th-generation farm · Clayton, NY · 1000 Islands</span>
+    <h1>Curds, brick cheese &amp; <em>gelato</em> from cows grazing above the St. Lawrence.</h1>
+    <p>Bechaz Riverdale Cheese is a family dairy in Clayton making fresh cheese curd, aged brick cheeses, slow-churned gelato and old-fashioned creamline milk — sold right at the farm on the honor of the self-serve cooler.</p>
+    <div class="acts">
+      <a class="btn btn-pri" href="#menu">See what's in the cooler</a>
+      <a class="btn btn-sec" href="#visit">Directions &amp; hours</a>
+    </div>
+  </div>
+  <aside class="hours-card">
+    <h3>Stop by the farm</h3>
+    <div class="big">Self-serve · 7 AM – 9 PM</div>
+    <ul>
+      <li><b>Curd day:</b> made fresh every Thursday (Wed &amp; Thu in summer), ready ~2 PM</li>
+      <li><b>Always stocked:</b> brick cheese, gelato &amp; creamline milk</li>
+      <li><b>Beef:</b> grass-fed ground in the freezer — call for steaks &amp; roasts</li>
+    </ul>
+  </aside>
+</div></header>
+
+<section id="menu"><div class="wrap">
+  <div class="center">
+    <span class="eyebrow">From our milk, in our cheese room</span>
+    <h2 class="sec-h">What you'll find</h2>
+    <p class="sec-sub">Everything starts with whole milk pumped straight into the vat — natural cultures, a little salt, and four generations of practice.</p>
+  </div>
+  <div class="menu">
+    <div class="m"><h3>Fresh cheese curd</h3><span class="price">Made every Thursday</span>
+      <p class="flav"><b>Plain</b>, Garlic &amp; Chive, Ay Chihuahua Chipotle, Mustard Dill, Onion Pepper — plus a rotating flavor of the month.</p></div>
+    <div class="m"><h3>Brick cheeses</h3><span class="price">Aged on the farm</span>
+      <p class="flav"><b>Swedish Bondost</b> (fennel), Mild Cheddar, Italian, Peppercorn, Garlic Dill and Poco Picante (a little spicy).</p></div>
+    <div class="m"><h3>Artisan gelato</h3><span class="price">Whole milk, no additives</span>
+      <p class="flav"><b>Vanilla, Maple, Coffee D'Oro, Mint</b>, Blackberry, Forest Berries, Peach, Mango, Toasted Marshmallow &amp; seasonal flavors.</p></div>
+    <div class="m"><h3>Creamline milk</h3><span class="price">½-gallon &amp; quart</span>
+      <p class="flav">Pasteurized, never homogenized — the cream rises to the top, so give it a good <b>shake, shake, shake</b>.</p></div>
+    <div class="m"><h3>Grass-fed beef</h3><span class="price">~1 lb · $5</span>
+      <p class="flav">Ground beef in the freezer at the house and farm. Call ahead for <b>steaks, roasts &amp; briskets</b>.</p></div>
+  </div>
+</div></section>
+
+<section class="rhythm"><div class="wrap"><div class="grid">
+  <div>
+    <span class="eyebrow" style="color:var(--gold)">How self-serve works</span>
+    <h2>Pull in, help yourself, leave it honest.</h2>
+    <p>No counter, no waiting — the farm runs on the honor system, the way the North Country has always done it.</p>
+    <ol class="steps">
+      <li><span class="num">1</span><div><b>Come during open hours</b> — 7 AM to 9 PM, any day.</div></li>
+      <li><span class="num">2</span><div><b>Grab from the cooler</b> — curd (freshest on Thursdays), brick cheese, gelato and milk are all stocked.</div></li>
+      <li><span class="num">3</span><div><b>Leave your payment</b> in the box, or use the phone-app option posted at the cooler.</div></li>
+    </ol>
+  </div>
+  <div class="hours-card" style="background:#27606f;border-color:#3c7c8c">
+    <h3 style="color:#fff">Look for the cow, the lighthouse &amp; the bridge</h3>
+    <p style="color:#cfe2e9">That's our mark on every label and at every store that carries us. If you see it, it came from our herd in Clayton.</p>
+  </div>
+</div></div></section>
+
+<section class="story"><div class="wrap"><div class="grid">
+  <div>
+    <span class="eyebrow">Four generations</span>
+    <h2>Same family, same river view</h2>
+    <p>Bechaz Dairy has worked this ground in Clayton for four generations. The herd grazes pastures that look out over the St. Lawrence, and that milk goes straight into the cheese room — nothing trucked in, nothing watered down.</p>
+    <p class="mark">"Creamline milk, like the milkman used to deliver."</p>
+  </div>
+  <div>
+    <p style="color:#5e5240"><b>Why creamline?</b> Because pasteurized-but-not-homogenized milk lets the cream rise the way it did before everything got blended smooth. <b>Why gelato?</b> Because churning whole milk slow and dense makes a richer, lighter treat than ordinary ice cream. Small choices, four generations deep.</p>
+  </div>
+</div></div></section>
+
+<section class="where"><div class="wrap center">
+  <span class="eyebrow">Can't make it to the farm?</span>
+  <h2 class="sec-h">Where else to find our cheese</h2>
+  <p class="sec-sub">Our curd, cheese and gelato are carried across the 1000 Islands — and many area restaurants use our curd for poutine and fried cheese curd.</p>
+  <ul>
+    <li>Clayton Shur Fine</li>
+    <li>The Cheese Store on Route 3</li>
+    <li>Country Cousins Farm, Evans Mills</li>
+    <li>North Country Store, Philadelphia</li>
+    <li>Anthony's General Store, Bradley St.</li>
+    <li>Big M, Alexandria Bay</li>
+    <li>Swan Bay Resort &amp; Riveredge Resort</li>
+    <li>The Barn (Clayton), The Crescent (Chaumont), Empire Square (Watertown)</li>
+  </ul>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <h2>Come see the herd</h2>
+  <p>We're always open at the house and the farm — self-serve, 7 AM to 9 PM. For steaks, roasts, big orders or this week's specialty gelato flavors, give Melinda a call.</p>
+  <div class="acts">
+    <a class="btn btn-pri" href="tel:13156865979">Call us: 315-686-5979</a>
+    <a class="btn btn-sec" href="https://facebook.com/BechazRiverdaleCheese" target="_blank" rel="noopener">Specialty flavors on Facebook</a>
+  </div>
+  <div class="addr">37851 Deferno Road · Clayton, NY 13624</div>
+</div></section>
+
+<footer><div class="wrap">
+  Bechaz Riverdale Cheese &amp; Gelatería · Clayton, NY · 315-686-5979 · Concept preview prepared by Onyx Rise Media.
+</div></footer>
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aspen Family Campground — 40 Sites on 100 Wooded Acres, Candor NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#1e3d2b;--pine-dark:#132a1d;--amber:#e8a13c;--pond:#4a7f96;--cream:#f6f1e7;--ink:#26261f}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Public Sans',sans-serif;color:var(--ink);background:var(--cream)}
+h1,h2,h3{font-family:'Fraunces',serif}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+/* hero */
+.hero{background:linear-gradient(160deg,var(--pine-dark) 0%,var(--pine) 55%,#2c5a3f 100%);color:var(--cream);padding:64px 0 0;position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:2}
+.season{display:inline-block;background:var(--amber);color:var(--pine-dark);font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:6px 14px;border-radius:3px}
+.hero h1{font-size:clamp(2rem,5vw,3.3rem);line-height:1.1;margin:22px 0 14px;max-width:14ch}
+.hero p{max-width:52ch;font-size:1.1rem;opacity:.92}
+.hero-ctas{margin:28px 0 0;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:15px 28px;border-radius:4px;font-weight:700;text-decoration:none;font-size:1rem}
+.btn-amber{background:var(--amber);color:var(--pine-dark)}
+.btn-ghost{border:2px solid var(--cream);color:var(--cream)}
+.treeline{height:90px;margin-top:44px;background:
+ radial-gradient(60px 90px at 6% 100%,var(--pine-dark) 98%,transparent),
+ radial-gradient(90px 130px at 16% 100%,#0e2015 98%,transparent),
+ radial-gradient(70px 100px at 27% 100%,var(--pine-dark) 98%,transparent),
+ radial-gradient(110px 150px at 41% 100%,#0e2015 98%,transparent),
+ radial-gradient(70px 95px at 55% 100%,var(--pine-dark) 98%,transparent),
+ radial-gradient(95px 140px at 68% 100%,#0e2015 98%,transparent),
+ radial-gradient(65px 90px at 79% 100%,var(--pine-dark) 98%,transparent),
+ radial-gradient(120px 160px at 93% 100%,#0e2015 98%,transparent)}
+/* quick facts */
+.facts{background:var(--pine-dark);color:var(--cream);padding:22px 0}
+.facts .wrap{display:flex;gap:10px 34px;flex-wrap:wrap;justify-content:center;font-size:.95rem}
+.facts b{color:var(--amber)}
+/* sections */
+section{padding:64px 0}
+.kicker{color:#7c6a3f;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem}
+h2{font-size:clamp(1.5rem,3.4vw,2.2rem);margin:8px 0 16px;color:var(--pine-dark)}
+.grid{display:grid;gap:22px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:#fff;border-radius:8px;padding:26px;border-top:5px solid var(--pine)}
+.card h3{margin-bottom:10px;color:var(--pine-dark)}
+.card p{font-size:.96rem;line-height:1.55}
+.tag{display:inline-block;background:#e9e2d0;border-radius:3px;padding:3px 9px;font-size:.78rem;font-weight:600;margin:10px 6px 0 0}
+/* water band */
+.water{background:linear-gradient(120deg,var(--pond),#356378);color:#f2f8fb}
+.water h2{color:#fff}
+.water .grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.wcard{background:rgba(255,255,255,.11);border-radius:8px;padding:26px;backdrop-filter:blur(2px)}
+.wcard h3{margin-bottom:8px}
+/* rates */
+.rates table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden}
+.rates th{background:var(--pine);color:var(--cream);text-align:left;padding:13px 16px;font-size:.9rem}
+.rates td{padding:13px 16px;border-bottom:1px solid #eee5d2;font-size:.95rem}
+.ph{color:#a5670f;font-weight:600;font-size:.82rem}
+/* reviews */
+.quote{background:#fff;border-left:5px solid var(--amber);border-radius:0 8px 8px 0;padding:22px 26px;margin-bottom:16px}
+.quote p{font-style:italic;line-height:1.55}
+.quote span{display:block;margin-top:8px;font-size:.83rem;color:#77704f;font-style:normal;font-weight:600}
+/* directions */
+.dir{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.dir div{background:#fff;border-radius:8px;padding:20px;text-align:center}
+.dir b{display:block;font-size:1.6rem;color:var(--pine-dark);font-family:'Fraunces',serif}
+/* form */
+.book{background:var(--pine-dark);color:var(--cream)}
+.book h2{color:var(--cream)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:640px}
+label{font-size:.82rem;font-weight:600;letter-spacing:.04em;display:block;margin-bottom:5px}
+input,select,textarea{width:100%;padding:12px;border-radius:4px;border:none;font-family:inherit;font-size:.95rem}
+.full{grid-column:1/-1}
+footer{background:#0d1c12;color:#9db3a2;padding:26px 0;font-size:.85rem;text-align:center}
+@media(max-width:640px){form{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+ <div class="wrap">
+  <span class="season">Open May 1 – October 15</span>
+  <h1>Forty sites. A hundred wooded acres. One quiet hill above Candor.</h1>
+  <p>Aspen Family Campground sits 18 miles south of Ithaca — far enough that the loudest thing at night is the fire. Water &amp; electric sites for RVs and tents, a saltwater pool, and a five-acre pond you can fish before breakfast.</p>
+  <div class="hero-ctas">
+   <a class="btn btn-amber" href="#book">Check dates for your stay</a>
+   <a class="btn btn-ghost" href="tel:6076597865">(607) 659-7865</a>
+  </div>
+ </div>
+ <div class="treeline"></div>
+</header>
+
+<div class="facts">
+ <div class="wrap">
+  <span><b>40</b> RV &amp; tent sites</span>
+  <span><b>30/50-amp</b> water + electric</span>
+  <span><b>100</b> wooded acres</span>
+  <span><b>5-acre</b> fishing pond</span>
+  <span><b>18 mi</b> from Ithaca</span>
+ </div>
+</div>
+
+<section>
+ <div class="wrap">
+  <span class="kicker">Sites &amp; hookups</span>
+  <h2>Pick your spot under the trees</h2>
+  <div class="grid g3">
+   <div class="card">
+    <h3>Water + electric RV sites</h3>
+    <p>Most of our forty sites carry water and 30-amp electric, with select 50-amp sites for bigger rigs. Every site comes with a fire ring and picnic table. Tell us your rig length when you book and we'll match you to a pad that fits.</p>
+    <span class="tag">30 amp</span><span class="tag">Select 50 amp</span><span class="tag">Fire ring</span>
+   </div>
+   <div class="card">
+    <h3>Tent sites in the woods</h3>
+    <p>Tenters get real tree cover, not a mowed strip beside the RVs. Hot showers are a short walk away, and the central fire pit hosts the kind of evenings kids talk about all winter.</p>
+    <span class="tag">Hot showers</span><span class="tag">Central fire pit</span>
+   </div>
+   <div class="card">
+    <h3>Seasonal stays</h3>
+    <p>Spend the whole season on the hill — May 1 through October 15. Seasonal campers get first pick of sites for the following year. Ask about availability; seasonal spots go fast.</p>
+    <span class="tag">May 1 – Oct 15</span><span class="tag">Ask about seasonal</span>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="water">
+ <div class="wrap">
+  <span class="kicker" style="color:#bcd9e6">Two ways to get wet</span>
+  <h2>A saltwater pool and a pond of your own</h2>
+  <div class="grid">
+   <div class="wcard">
+    <h3>24,000-gallon saltwater pool</h3>
+    <p>Gentler on eyes and swimsuits than chlorine — and not something you'll find at many campgrounds our size. Heated by the sun, watched by the lifeguard chair, loved by every kid on the hill.</p>
+   </div>
+   <div class="wcard">
+    <h3>The five-acre pond</h3>
+    <p>Fish it, row it, swim it. Bass at dawn, small boats all afternoon. No motors, no wake — just water doing what water does in the woods.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="rates">
+ <div class="wrap">
+  <span class="kicker">Rates &amp; season</span>
+  <h2>Straight answers on what a night costs</h2>
+  <p style="margin-bottom:18px;max-width:60ch">No hunting through forums, no "call for rates." Here's the rate card — reserve with a deposit and you're set. <span class="ph">[Placeholder — owner to confirm current rates before publishing]</span></p>
+  <table>
+   <tr><th>Site type</th><th>Nightly</th><th>Weekly</th><th>Seasonal</th></tr>
+   <tr><td>Water + electric (30 amp)</td><td class="ph">$—</td><td class="ph">$—</td><td class="ph">$—</td></tr>
+   <tr><td>Water + electric (50 amp)</td><td class="ph">$—</td><td class="ph">$—</td><td class="ph">$—</td></tr>
+   <tr><td>Tent site</td><td class="ph">$—</td><td class="ph">$—</td><td>—</td></tr>
+  </table>
+  <p style="margin-top:12px;font-size:.85rem;color:#77704f">Deposits are required to hold a reservation and are non-refundable.</p>
+ </div>
+</section>
+
+<section style="background:#efe8d8">
+ <div class="wrap">
+  <span class="kicker">What campers say</span>
+  <h2>Word from the hill</h2>
+  <div class="quote">
+   <p>"The pond is beautiful, it was quiet and just relaxing. The kids had a great time... The owners were super nice and accommodating."</p>
+   <span>Camper review — Campendium</span>
+  </div>
+  <div class="quote">
+   <p>Reviewers on The Dyrt and Campendium keep coming back to the same three words: secluded, relaxing, friendly — with miles of walking trails right out of camp.</p>
+   <span>Review themes across camping platforms</span>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <span class="kicker">Getting here</span>
+  <h2>Close to Ithaca. Nothing like it.</h2>
+  <div class="dir">
+   <div><b>18 mi</b>South of Ithaca — about 30 minutes door to fire ring</div>
+   <div><b>Rte 96/96B</b>Easy tow from either the Ithaca or Owego side</div>
+   <div><b>Tuttle Hill Rd</b>217 Tuttle Hill Road, Candor NY 13743</div>
+  </div>
+  <p style="margin-top:16px;font-size:.9rem;max-width:60ch">Day trips both directions: Ithaca's gorges and farmers market to the north, Owego's river town to the south — and Candor's Hi Way Dairy Bar on the way back for cones.</p>
+ </div>
+</section>
+
+<section class="book" id="book">
+ <div class="wrap">
+  <span class="kicker" style="color:var(--amber)">Reserve</span>
+  <h2>Ask about your dates</h2>
+  <p style="margin-bottom:22px;max-width:55ch">Tell us when you'd like to come and what you're bringing — we'll get back to you with availability and a firm price. Or just call: <b>(607) 659-7865</b>.</p>
+  <form>
+   <div><label>Arrival</label><input type="date"></div>
+   <div><label>Departure</label><input type="date"></div>
+   <div><label>Site type</label><select><option>RV — 30 amp</option><option>RV — 50 amp</option><option>Tent</option><option>Seasonal inquiry</option></select></div>
+   <div><label>Rig length (if RV)</label><input type="text" placeholder="e.g., 28 ft travel trailer"></div>
+   <div class="full"><label>Name &amp; phone or email</label><input type="text" placeholder="How do we reach you?"></div>
+   <div class="full"><label>Anything else?</label><textarea rows="3" placeholder="Kids, dogs, tow vehicle, questions about the pond..."></textarea></div>
+   <div class="full"><button class="btn btn-amber" type="button" style="border:none;cursor:pointer;width:100%">Send availability request</button></div>
+  </form>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">Aspen Family Campground · 217 Tuttle Hill Road, Candor NY 13743 · (607) 659-7865 · Open May 1 – October 15</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Williams Farms, LLC — NY Muck-Grown Onions &amp; Potatoes, Grower + Packer, Marion NY</title>
+<meta name="description" content="Williams Farms of Marion, NY — third-generation grower and packer of onions and potatoes off Wayne County's black muck soil. Wholesale produce supply and contract packing to your spec. Call the office at (315) 926-5770.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --muck:#2f2a22; --muck-d:#211d17; --soil:#4a3d2b; --onion:#c9902f; --onion-d:#a4741f;
+    --skin:#e6b552; --tan:#d8c9a3; --potato:#c8a06a; --sprout:#5f7d3a;
+    --cream:#f6f0e2; --paper:#fbf7ee; --ink:#26221b; --gray:#6a6153; --white:#fff;
+    --line:#e0d6c0; --shadow:0 14px 38px rgba(33,29,23,.16);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3,.disp{font-family:'Barlow Condensed',sans-serif;line-height:1.03;text-transform:uppercase;letter-spacing:.01em}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--onion);color:#231c0d;font-weight:700;padding:14px 30px;border-radius:6px;
+    text-decoration:none;box-shadow:0 8px 18px rgba(164,116,31,.35);transition:transform .15s,background .15s;letter-spacing:.02em}
+  .btn:hover{transform:translateY(-2px);background:var(--skin)}
+  .btn.dark{background:var(--soil);color:#f4e9cf}
+  .btn.dark:hover{background:var(--muck)}
+  .btn.ghost{background:transparent;border:2px solid rgba(255,255,255,.55);color:#fff}
+
+  .bar{background:var(--muck-d);color:#e7d9b8;font-size:.92rem}
+  .bar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;padding:8px 22px}
+  .bar a{text-decoration:none;font-weight:600;color:#f0dfb6}
+
+  header.nav{background:var(--muck);color:#fff;position:sticky;top:0;z-index:20;border-bottom:3px solid var(--onion)}
+  header.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand .mark{width:40px;height:40px;border-radius:6px;background:linear-gradient(135deg,var(--onion),var(--sprout));display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed';font-weight:700;color:#231c0d;font-size:1.3rem}
+  .brand b{font-family:'Barlow Condensed';font-size:1.5rem;letter-spacing:.02em;text-transform:uppercase}
+  .brand span{display:block;font-family:'Source Sans 3';font-size:.72rem;letter-spacing:.22em;color:var(--skin);text-transform:uppercase;font-weight:600}
+  nav.links{display:flex;gap:26px;font-weight:600;font-size:.95rem}
+  nav.links a{text-decoration:none}
+  nav.links a:hover{color:var(--skin)}
+  @media(max-width:760px){nav.links{display:none}}
+
+  .hero{background:
+     linear-gradient(rgba(33,29,23,.80),rgba(33,29,23,.86)),
+     repeating-linear-gradient(115deg,#2c261c 0 26px,#332c20 26px 52px);
+     color:#fff;padding:82px 0 74px}
+  .hero .kick{color:var(--skin);font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:.82rem;margin-bottom:14px}
+  .hero h1{font-size:clamp(2.5rem,6vw,4.4rem);max-width:16ch}
+  .hero h1 em{font-style:normal;color:var(--skin)}
+  .hero p.lead{margin:20px 0 30px;font-size:1.2rem;max-width:56ch;color:#efe6d1}
+  .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero .facts{display:flex;gap:30px;flex-wrap:wrap;margin-top:40px;border-top:1px solid rgba(255,255,255,.18);padding-top:24px}
+  .hero .facts div b{font-family:'Barlow Condensed';font-size:2rem;color:var(--skin);display:block;line-height:1}
+  .hero .facts div span{font-size:.86rem;color:#d8cdb4;letter-spacing:.03em}
+
+  section{padding:64px 0}
+  .eyebrow{color:var(--onion-d);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:.8rem;margin-bottom:10px}
+  h2.big{font-size:clamp(1.9rem,4vw,3rem);margin-bottom:12px;color:var(--muck)}
+  .sub{max-width:60ch;color:var(--gray);font-size:1.05rem}
+
+  .grow{background:var(--cream)}
+  .cropgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:34px}
+  .crop{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px 24px;box-shadow:var(--shadow)}
+  .crop .tag{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sprout)}
+  .crop h3{font-size:1.5rem;margin:6px 0 8px;color:var(--soil)}
+  .crop p{color:var(--gray);font-size:.98rem}
+  .crop ul{list-style:none;margin-top:12px;font-size:.92rem;color:#4c4436}
+  .crop ul li{padding:4px 0 4px 20px;position:relative}
+  .crop ul li:before{content:"";position:absolute;left:0;top:11px;width:9px;height:9px;border-radius:50%;background:var(--onion)}
+
+  .pack{background:var(--soil);color:#f3e9d2}
+  .pack .eyebrow{color:var(--skin)}
+  .pack h2.big{color:#fff}
+  .pack .sub{color:#e2d6ba}
+  .packrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:34px}
+  .pcard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:26px}
+  .pcard h3{font-size:1.3rem;color:var(--skin);margin-bottom:8px}
+  .pcard p{color:#e6dcc4;font-size:.96rem}
+  .specs{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+  .spec{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.2);border-radius:30px;padding:8px 18px;font-size:.9rem;font-weight:600;color:#f2e8cf}
+
+  .certs{background:var(--paper)}
+  .certwall{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:30px}
+  .cert{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px 18px;text-align:center}
+  .cert b{display:block;font-family:'Barlow Condensed';font-size:1.15rem;color:var(--soil);letter-spacing:.02em}
+  .cert span{font-size:.82rem;color:var(--gray)}
+
+  .story{background:var(--muck);color:#efe4cc}
+  .story .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+  .story h2{font-size:clamp(1.8rem,4vw,2.7rem);color:#fff;margin-bottom:16px}
+  .story p{color:#ddd0b4;margin-bottom:14px;font-size:1.05rem}
+  .story .panel{background:linear-gradient(160deg,#3a3122,#241f16);border:1px solid rgba(230,181,82,.3);border-radius:14px;padding:30px}
+  .story .panel h3{color:var(--skin);font-size:1.5rem;margin-bottom:10px}
+  .story .panel li{list-style:none;padding:8px 0 8px 26px;position:relative;color:#e7dcc2}
+  .story .panel li:before{content:"✓";position:absolute;left:0;color:var(--onion);font-weight:700}
+  @media(max-width:800px){.story .wrap{grid-template-columns:1fr}}
+
+  .contact{background:var(--cream)}
+  .cbox{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:30px}
+  .cinfo{background:#fff;border:1px solid var(--line);border-radius:14px;padding:32px;box-shadow:var(--shadow)}
+  .cinfo h3{font-size:1.7rem;color:var(--soil);margin-bottom:14px}
+  .cinfo .row{display:flex;gap:12px;margin-bottom:12px;font-size:1rem}
+  .cinfo .row b{font-family:'Barlow Condensed';font-size:1.15rem;color:var(--onion-d);min-width:78px;letter-spacing:.03em}
+  .cform{background:var(--soil);color:#f2e8cf;border-radius:14px;padding:32px}
+  .cform h3{color:#fff;font-size:1.5rem;margin-bottom:8px}
+  .cform label{display:block;font-size:.86rem;margin:14px 0 5px;color:var(--skin);font-weight:600;letter-spacing:.03em}
+  .cform input,.cform select,.cform textarea{width:100%;padding:11px 13px;border-radius:7px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.95);font:inherit;color:#2a251d}
+  .cform .btn{margin-top:18px;width:100%;text-align:center;border:none;cursor:pointer}
+  @media(max-width:800px){.cbox{grid-template-columns:1fr}}
+
+  footer{background:var(--muck-d);color:#c6b892;padding:34px 0;font-size:.92rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+  .flag{background:#fff5d8;border:1px solid #e6c96a;color:#6d5514;font-size:.8rem;padding:9px 14px;border-radius:8px;margin-top:20px;display:inline-block}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap">
+  <span>Marion, NY · Wayne County · muck-grown since three generations</span>
+  <a href="tel:3159265770">Office (315) 926-5770</a>
+</div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">
+    <div class="mark">WF</div>
+    <div><b>Williams Farms</b><span>Grower &amp; Packer · Marion NY</span></div>
+  </div>
+  <nav class="links">
+    <a href="#grow">What We Grow</a>
+    <a href="#pack">Packing</a>
+    <a href="#certs">Certifications</a>
+    <a href="#story">The Muck</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="#contact" class="btn" style="padding:10px 20px">Request Supply</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <p class="kick">Onions &amp; Potatoes · Wholesale Supply · Contract Packing</p>
+  <h1>NY muck onions and potatoes, <em>grown and packed on one farm.</em></h1>
+  <p class="lead">Williams Farms grows potatoes and onions on the black muck soil east of Marion, then washes, grades and bags them in our own packhouse — so a buyer gets one call for both the crop and the pack.</p>
+  <div class="cta">
+    <a href="#contact" class="btn">Talk to the office</a>
+    <a href="#pack" class="btn ghost">See pack options</a>
+  </div>
+  <div class="facts">
+    <div><b>3rd</b><span>generation family farm</span></div>
+    <div><b>Muck</b><span>black-soil onions &amp; potatoes</span></div>
+    <div><b>Grow&nbsp;+&nbsp;Pack</b><span>field to bagged, in-house</span></div>
+    <div><b>Marion</b><span>Wayne County, NY</span></div>
+  </div>
+</div></section>
+
+<section class="grow" id="grow"><div class="wrap">
+  <p class="eyebrow">What comes off the muck</p>
+  <h2 class="big">Two crops the black soil does best</h2>
+  <p class="sub">Marion's drained muck is dark, deep and fertile — the reason Wayne County onions and potatoes have their reputation with buyers. We grow for storage and for pack quality, not just yield.</p>
+  <div class="cropgrid">
+    <div class="crop">
+      <span class="tag">Storage &amp; fresh</span>
+      <h3>Onions</h3>
+      <p>Yellow cooking onions grown and cured for a clean, firm pack that holds through the season.</p>
+      <ul><li>Field-grown on muck</li><li>Cured for storage life</li><li>Bagged to buyer spec</li></ul>
+    </div>
+    <div class="crop">
+      <span class="tag">Table &amp; process</span>
+      <h3>Potatoes</h3>
+      <p>Muck-grown potatoes graded for size and quality — fresh-market pack or process loads.</p>
+      <ul><li>Washed &amp; graded</li><li>Size-sorted</li><li>Fresh-market or bulk</li></ul>
+    </div>
+    <div class="crop">
+      <span class="tag">Ask the office</span>
+      <h3>Seasonal rotation</h3>
+      <p>Acreage moves with demand and rotation. Call for what's in the ground and what's projected for your delivery window.</p>
+      <ul><li>Contract-ahead welcome</li><li>Volume by the season</li><li>NY-grown provenance</li></ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="pack" id="pack"><div class="wrap">
+  <p class="eyebrow">The part most growers can't offer</p>
+  <h2 class="big">We pack, too — not just grow</h2>
+  <p class="sub">Our packhouse washes, grades, sorts and bags on-site. That means a produce buyer or a smaller farm can source the crop and get it packed to spec in one stop, on one invoice.</p>
+  <div class="packrow">
+    <div class="pcard"><h3>Grade &amp; sort</h3><p>Washing, size-grading and sorting so what ships meets your quality line, not just ours.</p></div>
+    <div class="pcard"><h3>Bag &amp; label</h3><p>Pack to your count and bag style — consumer bags through bulk, labeled for your program.</p></div>
+    <div class="pcard"><h3>Contract packing</h3><p>Bring us your product to run through the house, or take ours grown and packed together.</p></div>
+  </div>
+  <div class="specs">
+    <span class="spec">Consumer bags</span>
+    <span class="spec">Bulk loads</span>
+    <span class="spec">Custom counts</span>
+    <span class="spec">Your label or ours</span>
+    <span class="spec">Pallet-ready</span>
+  </div>
+</div></section>
+
+<section class="certs" id="certs"><div class="wrap">
+  <p class="eyebrow">Verify before you buy</p>
+  <h2 class="big">The paperwork buyers ask for, up front</h2>
+  <p class="sub">These are the memberships and certifications already tied to Williams Farms. A rebuilt site puts them where a buyer can see them — not shrunk into a footer.</p>
+  <div class="certwall">
+    <div class="cert"><b>USDA Organic</b><span>certified program</span></div>
+    <div class="cert"><b>USDA PACA</b><span>licensed dealer</span></div>
+    <div class="cert"><b>National Onion Assn.</b><span>member</span></div>
+    <div class="cert"><b>NY Farm Bureau</b><span>member</span></div>
+    <div class="cert"><b>Pride of New York</b><span>NY-grown</span></div>
+    <div class="cert"><b>NYS Dept. of Ag</b><span>listed grower</span></div>
+  </div>
+  <span class="flag">Certification list mirrors the badges shown on the current williamsfarmsny.com — confirm exact current status before publishing.</span>
+</div></section>
+
+<section class="story" id="story"><div class="wrap">
+  <div>
+    <h2>Why the muck matters</h2>
+    <p>The fields east of Marion sit on drained glacial-lake bed — black, moist, fertile muck that grows the firm, clean onions and potatoes buyers come to Wayne County for. Williams Farms has worked this ground for three generations.</p>
+    <p>Growing and packing under one roof isn't common. It's the reason a buyer can point to the field the crop came from and still hand us the pack spec.</p>
+  </div>
+  <div class="panel">
+    <h3>What a buyer gets</h3>
+    <ul>
+      <li>One source for crop and pack</li>
+      <li>NY muck-soil provenance you can name</li>
+      <li>A third-generation family on the phone</li>
+      <li>Certifications ready on request</li>
+      <li>Contract-ahead for your season</li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <p class="eyebrow">Marion, NY</p>
+  <h2 class="big">Reach the office</h2>
+  <p class="sub">Supply questions, pack specs, or contract-ahead — call during pack season or send the details and we'll get back to you.</p>
+  <div class="cbox">
+    <div class="cinfo">
+      <h3>Williams Farms, LLC</h3>
+      <div class="row"><b>Phone</b><span><a href="tel:3159265770" style="text-decoration:none;color:var(--onion-d);font-weight:700">(315) 926-5770</a></span></div>
+      <div class="row"><b>Email</b><span>office@williamsfarmsny.com</span></div>
+      <div class="row"><b>Where</b><span>Marion, Wayne County, New York</span></div>
+      <div class="row"><b>Grows</b><span>Muck-soil onions &amp; potatoes</span></div>
+      <div class="row"><b>Also</b><span>Wash · grade · bag · contract pack</span></div>
+      <p style="margin-top:14px;color:var(--gray);font-size:.92rem">Third-generation grower and packer serving produce buyers, distributors and packing customers across New York.</p>
+    </div>
+    <form class="cform" onsubmit="return false">
+      <h3>Request supply or packing</h3>
+      <p style="color:#e3d7ba;font-size:.92rem">Tell us the crop, volume and your delivery window.</p>
+      <label>Business / buyer name</label><input type="text" placeholder="Company">
+      <label>What do you need?</label>
+      <select><option>Onions — supply</option><option>Potatoes — supply</option><option>Onions &amp; potatoes</option><option>Contract packing</option></select>
+      <label>Volume &amp; window</label><textarea rows="3" placeholder="e.g. weekly loads Sept–Feb, consumer bags"></textarea>
+      <label>Phone or email</label><input type="text" placeholder="How to reach you">
+      <button class="btn">Send inquiry</button>
+    </form>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b style="font-family:'Barlow Condensed';font-size:1.3rem;color:#f0dfb6;text-transform:uppercase">Williams Farms, LLC</b><br>Marion, Wayne County, NY · (315) 926-5770 · office@williamsfarmsny.com</div>
+  <div style="text-align:right">Muck-grown onions &amp; potatoes<br>Grower &amp; packer · third generation</div>
+</div></footer>
+
+</body>
+</html>

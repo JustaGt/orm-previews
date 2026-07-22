@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--
+NICHE IDENTITY BRIEF — Kevin's Custom Butchering, Meat Cutting & Deer Processing (Port Byron, Cayuga Co., NY)  [ORM prospect #158]
+Business type: Owner-run custom butcher shop / cut-and-wrap + seasonal deer & game processing. Owner Kevin Lillie, since 2003. 10519 Spook Woods Rd, Port Byron NY 13140. Phones (315) 776-8397 / (315) 252-1074.
+Target customers: (1) Local farmers & homesteaders bringing beef/pork/lamb/goat to be slaughtered/cut and wrapped for their freezer; (2) deer & bear hunters in gun/bow season wanting fast, clean processing + specialty (jerky/snack sticks/sausage); (3) families buying a half/whole animal share.
+Local market: Rural Cayuga County (Port Byron, Weedsport, Cato, Montezuma, Auburn) — farm country + a strong Central NY deer-hunting culture. Nearest known processors are a drive away; a reliable local cutter is in real demand each fall.
+Emotional tone: Straight-talking, dependable, small-town, no-nonsense. "Drop it off, we handle it right, you get your meat back the way you asked." Respect for the animal and the hunter's work.
+Visual style: Butcher-paper cream + deep ox-blood red + charcoal; bold slab type; clean, not fancy. Feels like a trusted country shop, not a corporate plant.
+Pain points: No website at all — only scattered directory cards (YP unclaimed, Nextdoor, D&B, BBB, Manta) + a Facebook page. A hunter Googling at 6am in November can't find hours, whether he's taking deer this week, what cuts/specialty options exist, drop-off instructions, or what it costs. Every one of those is a phone call Kevin has to field mid-cut.
+Customer desires: Know they're open + taking animals this week; know exactly what to bring & how (field-dressed, tag, etc.); pick cuts/specialty (steaks, roasts, ground, sausage, jerky, snack sticks); rough turnaround & pricing; that it's clean and done right by a real person.
+Trust signals: In business since 2003; owner Kevin Lillie cuts the meat himself; local/word-of-mouth reputation; custom orders honored.
+Conversion goal: Phone calls + drop-offs (esp. a "call ahead before you bring a deer" during season) and freezer-share inquiries. No online payment needed.
+Sections needed: hero (open/taking animals hook); what we do (custom farm cut-and-wrap / deer & game / retail shares); deer-season how-it-works strip; cut & specialty options; about Kevin; location + hours + call-ahead; sticky call CTA.
+Cliches to avoid: banned ORM list; also "farm to table" buzz, "premium quality meats," generic stock-photo feel.
+Unique to niche: a real deer-season readiness board ("taking deer now / call ahead"), a plain drop-off checklist for hunters, and a specialty-cut menu — things a Facebook page can't surface. Built around November demand spikes.
+DATA NOTES: No public email found (Facebook + directory only) -> outreach body saved to .email.txt, NOT drafted. Hours, pricing, cut list and specialty items are CLEARLY-LABELED PLACEHOLDERS — confirm with Kevin before publishing. Two phone numbers on record; both shown.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kevin's Custom Butchering — Cut &amp; Wrap + Deer Processing | Port Byron, NY</title>
+<style>
+  :root{
+    --blood:#7a1f1a; --blood-dk:#571512; --char:#211d1b; --paper:#f6efe4;
+    --cream:#fbf6ec; --tan:#e7d9c2; --ink:#241f1c; --muted:#6f6357; --line:#e0d3bd;
+    --tag:#c8842b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  h1,h2,h3{font-family:'Arial Black','Segoe UI',Impact,sans-serif;line-height:1.12;letter-spacing:-.5px}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  /* top bar */
+  .top{background:var(--char);color:#eaded0;font-size:.9rem}
+  .top .wrap{display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:space-between;align-items:center;padding:9px 22px}
+  .top b{color:#fff}
+  .top .ph{color:#f2c78a;font-weight:700}
+  /* hero */
+  .hero{background:linear-gradient(rgba(35,20,18,.86),rgba(87,21,18,.9)),repeating-linear-gradient(135deg,#3a2420 0 26px,#2c1a17 26px 52px);color:#fff;padding:64px 0 58px}
+  .hero .wrap{max-width:900px}
+  .kick{display:inline-block;background:var(--tag);color:#2a1a06;text-transform:uppercase;letter-spacing:1.5px;font-size:.74rem;font-weight:800;padding:5px 12px;border-radius:3px}
+  .hero h1{font-size:3rem;margin:16px 0 12px}
+  .hero p.lede{font-size:1.22rem;color:#f0e4d6;max-width:640px}
+  .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+  .btn{display:inline-block;padding:15px 28px;border-radius:5px;font-weight:800;text-decoration:none;font-size:1.04rem;border:none;cursor:pointer}
+  .btn-tag{background:var(--tag);color:#2a1a06}
+  .btn-ghost{border:2px solid #d7b48a;color:#fff;background:transparent}
+  /* season strip */
+  .season{background:#153a1e;color:#dff3e3;text-align:center;padding:13px 22px;font-weight:600;font-size:1.02rem}
+  .season b{color:#fff}
+  .ph-note{font-size:.8rem;color:#a9cbb0;font-style:italic}
+  /* sections */
+  section.pad{padding:56px 0}
+  h2.big{font-size:2.05rem;color:var(--blood);text-align:center;margin-bottom:8px;text-transform:uppercase}
+  .lead-c{text-align:center;color:var(--muted);max-width:660px;margin:0 auto 36px}
+  .svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px;border-top:5px solid var(--blood)}
+  .card.deer{border-top-color:var(--tag)}
+  .card.share{border-top-color:#153a1e}
+  .card h3{font-size:1.28rem;margin-bottom:10px;color:var(--char);text-transform:none}
+  .card p{font-size:.98rem;color:var(--muted)}
+  .card ul{margin:12px 0 0 18px;font-size:.94rem;color:var(--muted)}
+  .card li{margin:4px 0}
+  /* how-it-works */
+  .how{background:var(--paper)}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:22px;margin-top:12px}
+  .step{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px;position:relative}
+  .step .n{position:absolute;top:-16px;left:20px;width:34px;height:34px;background:var(--blood);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:'Arial Black',sans-serif}
+  .step h3{font-size:1.08rem;margin:6px 0 6px;text-transform:none;color:var(--char)}
+  .step p{font-size:.92rem;color:var(--muted)}
+  /* cuts */
+  .cutgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:10px}
+  .cut{background:#fff;border:1px solid var(--line);border-left:4px solid var(--tag);border-radius:6px;padding:12px 14px;font-size:.95rem;font-weight:600;color:var(--char)}
+  .cut span{display:block;font-weight:400;color:var(--muted);font-size:.85rem}
+  /* about */
+  .about{background:var(--char);color:#eee}
+  .about .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:36px;align-items:center}
+  .about h2{color:#fff;font-size:1.9rem;margin-bottom:14px}
+  .about p{color:#d7ccc0;margin-bottom:12px}
+  .about .badge{background:var(--blood);display:inline-block;padding:6px 14px;border-radius:4px;font-weight:800;color:#fff;font-size:.9rem}
+  .about .side{background:#2c2523;border:1px solid #3d3431;border-radius:12px;padding:24px}
+  .about .side h3{color:var(--tag);font-size:1.05rem;margin-bottom:10px;text-transform:none}
+  .about .side li{margin:7px 0;color:#e2d7cb;font-size:.95rem;list-style:none;padding-left:22px;position:relative}
+  .about .side li::before{content:"✓";position:absolute;left:0;color:var(--tag);font-weight:800}
+  /* contact */
+  .contact{background:var(--blood-dk);color:#fff;text-align:center}
+  .contact h2{color:#fff;font-size:2rem;margin-bottom:8px;text-transform:uppercase}
+  .contact p{color:#f0d9d5;margin-bottom:6px}
+  .phones{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin:22px 0 10px}
+  .phones a{background:var(--tag);color:#2a1a06;padding:15px 26px;border-radius:6px;font-weight:800;text-decoration:none;font-size:1.1rem}
+  .hours{background:#fff;color:var(--ink);max-width:440px;margin:24px auto 0;border-radius:12px;padding:22px;text-align:left}
+  .hours h3{color:var(--blood);font-size:1.05rem;margin-bottom:10px;text-transform:none}
+  .hours .row{display:flex;justify-content:space-between;border-bottom:1px dashed var(--line);padding:6px 0;font-size:.95rem}
+  .hours .ph{color:var(--tag);font-style:italic;font-size:.82rem}
+  footer{background:var(--char);color:#b6a99c;text-align:center;padding:22px;font-size:.85rem}
+  /* sticky */
+  .sticky{position:fixed;bottom:0;left:0;right:0;background:var(--blood);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:11px 18px;z-index:20;box-shadow:0 -3px 12px rgba(0,0,0,.25)}
+  .sticky b{font-size:1rem}
+  .sticky a{background:var(--tag);color:#2a1a06;padding:10px 18px;border-radius:5px;font-weight:800;text-decoration:none;font-size:.95rem}
+  @media(max-width:760px){.hero h1{font-size:2.2rem}.about .wrap{grid-template-columns:1fr}.sticky b{display:none}.sticky{justify-content:center}}
+</style>
+</head>
+<body>
+  <div class="top"><div class="wrap"><span><b>Kevin's Custom Butchering</b> · Meat Cutting &amp; Deer Processing</span><span>10519 Spook Woods Rd, Port Byron NY · <a class="ph" href="tel:13157768397">(315) 776-8397</a></span></div></div>
+
+  <header class="hero">
+    <div class="wrap">
+      <span class="kick">Cutting for Cayuga County since 2003</span>
+      <h1>Bring the animal. Leave with a freezer done right.</h1>
+      <p class="lede">Kevin cuts and wraps your beef, pork, lamb and goat to order — and in the fall, gets your deer processed clean and back to you fast. Port Byron's own butcher, one order at a time.</p>
+      <div class="cta">
+        <a class="btn btn-tag" href="tel:13157768397">Call Kevin — (315) 776-8397</a>
+        <a class="btn btn-ghost" href="#how">How drop-off works</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="season">🦌 <b>Deer season:</b> call ahead before you drop off so we're ready for your animal. <span class="ph-note">[dates &amp; current capacity — confirm with Kevin]</span></div>
+
+  <section class="pad">
+    <div class="wrap">
+      <h2 class="big">What Kevin does</h2>
+      <p class="lead-c">One person doing it the way it should be done — you tell him how you want it cut, and that's how it comes back.</p>
+      <div class="svc">
+        <div class="card">
+          <h3>Custom cut &amp; wrap</h3>
+          <p>Bring your beef, pork, lamb or goat. Kevin breaks it down to your cut sheet — steaks, roasts, chops, ground — vacuum-sealed or paper-wrapped and labeled for the freezer.</p>
+          <ul><li>Beef · pork · lamb · goat</li><li>Your cuts, your thickness, your package sizes</li><li>Ground, patties &amp; bulk sausage</li></ul>
+        </div>
+        <div class="card deer">
+          <h3>Deer &amp; game processing</h3>
+          <p>Gun or bow season, field-dressed and tagged — drop it off and Kevin handles the rest. Standard cuts or turn it into something you'll snack on all winter.</p>
+          <ul><li>Steaks, roasts &amp; ground venison</li><li>Snack sticks · jerky · summer sausage <span style="font-size:.85em">[specialty list — confirm]</span></li><li>Call-ahead during peak weeks</li></ul>
+        </div>
+        <div class="card share">
+          <h3>Half &amp; whole shares</h3>
+          <p>Buying a side of beef or a whole hog from a local farmer? Kevin does the cut-and-wrap so you fill the chest freezer with exactly the cuts your family uses.</p>
+          <ul><li>Half / whole beef &amp; pork</li><li>Split an order with family</li><li>Talk through a cut sheet before you commit</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad how" id="how">
+    <div class="wrap">
+      <h2 class="big">Dropping off a deer? Here's the drill</h2>
+      <p class="lead-c">No guesswork. A quick call, a clean drop-off, and a date to pick up your meat.</p>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><h3>Call first</h3><p>Ring Kevin before you come so he knows you're bringing an animal and can tell you if he's taking deer that week.</p></div>
+        <div class="step"><div class="n">2</div><h3>Field-dress &amp; tag</h3><p>Bring it field-dressed with your tag attached, and tell Kevin how you want it cut and what specialty items you want.</p></div>
+        <div class="step"><div class="n">3</div><h3>Kevin cuts it</h3><p>Your deer is processed, wrapped and labeled — standard cuts or sticks, jerky and sausage if you asked for them.</p></div>
+        <div class="step"><div class="n">4</div><h3>Pick up &amp; freeze</h3><p>He'll give you a ready date. Pick up your clearly-labeled packages and stock the freezer.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad">
+    <div class="wrap">
+      <h2 class="big">Cuts &amp; specialty items</h2>
+      <p class="lead-c">A sample of what you can ask for. <em>[Full menu &amp; pricing to be confirmed with Kevin before publishing.]</em></p>
+      <div class="cutgrid">
+        <div class="cut">Steaks<span>ribeye, sirloin, round — your thickness</span></div>
+        <div class="cut">Roasts<span>chuck, rump, shoulder</span></div>
+        <div class="cut">Ground &amp; patties<span>your lean, your package size</span></div>
+        <div class="cut">Chops &amp; ribs<span>pork &amp; lamb</span></div>
+        <div class="cut">Snack sticks<span>venison — [flavors to confirm]</span></div>
+        <div class="cut">Jerky<span>[available seasonally — confirm]</span></div>
+        <div class="cut">Summer sausage<span>[confirm]</span></div>
+        <div class="cut">Bulk sausage<span>breakfast &amp; Italian [confirm]</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad about">
+    <div class="wrap">
+      <div>
+        <span class="badge">Owner-operated since 2003</span>
+        <h2>It's Kevin's name on the door — and his hands on the knife</h2>
+        <p>Kevin Lillie has been cutting meat for Cayuga County families and hunters out of the shop on Spook Woods Road for two decades. No assembly line, no mystery — you talk to the person who's actually going to cut your order.</p>
+        <p>That's why folks in Port Byron, Weedsport, Cato and Montezuma keep coming back every fall, and why farm families trust him with a whole beef.</p>
+      </div>
+      <div class="side">
+        <h3>Why locals bring their animals here</h3>
+        <ul>
+          <li>Real custom cut sheets — cut your way</li>
+          <li>Deer &amp; game done clean and fast in season</li>
+          <li>Specialty: sticks, jerky, sausage</li>
+          <li>Half &amp; whole shares for the freezer</li>
+          <li>One local person you can actually reach</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad contact" id="contact">
+    <div class="wrap">
+      <h2>Call ahead — especially in deer season</h2>
+      <p>The shop's on Spook Woods Road in Port Byron. Give Kevin a call before you bring an animal.</p>
+      <div class="phones">
+        <a href="tel:13157768397">(315) 776-8397</a>
+        <a href="tel:13152521074">(315) 252-1074</a>
+      </div>
+      <div class="hours">
+        <h3>Hours &amp; location</h3>
+        <div class="row"><span>Address</span><span>10519 Spook Woods Rd, Port Byron NY 13140</span></div>
+        <div class="row"><span>In season (fall)</span><span class="ph">[hours — confirm]</span></div>
+        <div class="row"><span>Off season</span><span class="ph">[by appointment — confirm]</span></div>
+        <div class="row"><span>Best bet</span><span>Call before you drop off</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Kevin's Custom Butchering, Meat Cutting &amp; Deer Processing · 10519 Spook Woods Rd, Port Byron NY 13140 · (315) 776-8397<br>
+    <span style="font-size:.8rem;opacity:.7">Preview concept prepared by Onyx Rise Media. Hours, pricing and specialty items are placeholders pending confirmation.</span>
+  </footer>
+
+  <div class="sticky"><b>Bringing in a deer or an animal?</b><a href="tel:13157768397">Call (315) 776-8397</a></div>
+</body>
+</html>

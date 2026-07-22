@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Central Lanes &amp; Crist Restaurant — Bowling, Wings &amp; Fish Fry in Salamanca, NY</title>
+<meta name="description" content="12 lanes, league nights, birthday parties and Crist Restaurant's wings and fish fry — 191 Central Ave, Salamanca NY. Call (716) 945-9819 to book a lane.">
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Barlow:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#101a30;--navy2:#182742;--neon:#ff7a1a;--teal:#2fd6c3;--cream:#fff6ea;--ink:#22283a;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Barlow',sans-serif;background:var(--navy);color:var(--cream);}
+  h1,h2,h3{font-family:'Bowlby One',cursive;letter-spacing:.5px;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px;}
+  /* top strip */
+  .strip{background:var(--neon);color:var(--navy);font-weight:800;text-align:center;padding:9px 14px;font-size:.95rem;}
+  .strip a{color:var(--navy);}
+  /* nav */
+  nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;}
+  .logo{font-family:'Bowlby One';font-size:1.35rem;color:var(--cream);}
+  .logo span{color:var(--neon);}
+  nav .call{background:var(--teal);color:var(--navy);padding:10px 18px;border-radius:999px;font-weight:800;text-decoration:none;}
+  /* hero */
+  .hero{padding:56px 0 64px;background:
+    radial-gradient(ellipse at 80% 10%, rgba(47,214,195,.18), transparent 55%),
+    radial-gradient(ellipse at 15% 90%, rgba(255,122,26,.22), transparent 50%), var(--navy);}
+  .hero .kick{color:var(--teal);font-weight:800;text-transform:uppercase;letter-spacing:2.5px;font-size:.85rem;}
+  .hero h1{font-size:clamp(2rem,5.4vw,3.6rem);line-height:1.08;margin:14px 0 18px;}
+  .hero h1 em{font-style:normal;color:var(--neon);}
+  .hero p{max-width:560px;font-size:1.12rem;line-height:1.6;color:#dfe6f5;}
+  .cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{display:inline-block;padding:15px 26px;border-radius:999px;font-weight:800;text-decoration:none;font-size:1.02rem;}
+  .btn.primary{background:var(--neon);color:var(--navy);}
+  .btn.ghost{border:2px solid var(--teal);color:var(--teal);}
+  .tonight{margin-top:34px;display:inline-flex;gap:22px;background:var(--navy2);border:1px solid #2a3a5e;border-radius:14px;padding:14px 22px;flex-wrap:wrap;}
+  .tonight b{color:var(--teal);display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:1.5px;}
+  /* lanes + leagues */
+  section{padding:64px 0;}
+  .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:30px;}
+  .card{background:var(--navy2);border:1px solid #2a3a5e;border-radius:16px;padding:26px;}
+  .card h3{color:var(--neon);font-size:1.15rem;margin-bottom:10px;}
+  .card p{color:#ccd6ec;line-height:1.6;}
+  .pin{font-size:1.6rem;}
+  h2{font-size:clamp(1.5rem,3.6vw,2.3rem);}
+  h2 .bar{color:var(--teal);}
+  /* crist */
+  .crist{background:var(--cream);color:var(--ink);}
+  .crist h2{color:#a33b00;}
+  .crist .menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:26px;}
+  .dish{border:2px dashed #a33b00;border-radius:14px;padding:20px;background:#fffdf8;}
+  .dish h3{font-size:1.05rem;color:#a33b00;}
+  .dish p{line-height:1.55;margin-top:6px;}
+  .dish .tag{display:inline-block;background:#a33b00;color:#fff;border-radius:999px;font-size:.72rem;font-weight:800;padding:3px 10px;margin-top:10px;letter-spacing:1px;}
+  .crist .note{margin-top:22px;font-size:.95rem;color:#6b5744;}
+  /* parties */
+  .party .big{font-size:1.15rem;max-width:640px;line-height:1.65;color:#dfe6f5;margin-top:16px;}
+  .party form{margin-top:30px;background:var(--navy2);border:1px solid #2a3a5e;border-radius:16px;padding:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;}
+  .party input,.party select{padding:13px;border-radius:9px;border:1px solid #3a4d77;background:var(--navy);color:var(--cream);font-family:inherit;font-size:.98rem;}
+  .party button{grid-column:1/-1;padding:15px;background:var(--teal);color:var(--navy);border:none;border-radius:999px;font-weight:800;font-size:1.05rem;cursor:pointer;font-family:inherit;}
+  /* visitors */
+  .visit{background:linear-gradient(180deg,var(--navy2),var(--navy));}
+  .visit ul{margin-top:20px;list-style:none;}
+  .visit li{padding:12px 0 12px 34px;position:relative;color:#dfe6f5;line-height:1.5;border-bottom:1px dashed #2a3a5e;}
+  .visit li::before{content:"🎳";position:absolute;left:0;top:12px;}
+  /* footer */
+  footer{background:#0b1222;padding:50px 0 40px;}
+  .fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px;}
+  footer h3{color:var(--neon);font-size:1rem;margin-bottom:10px;}
+  footer p,footer a{color:#b9c4dd;line-height:1.7;text-decoration:none;}
+  .hours td{padding:3px 12px 3px 0;color:#b9c4dd;font-size:.95rem;}
+  .fine{margin-top:34px;font-size:.8rem;color:#5f6d8d;text-align:center;}
+  @media(max-width:640px){.tonight{gap:14px;}}
+</style>
+</head>
+<body>
+
+<div class="strip">Friday fish fry at Crist's + open bowling till midnight — call <a href="tel:+17169459819">(716) 945-9819</a> to grab a lane</div>
+
+<div class="wrap">
+<nav>
+  <div class="logo">CENTRAL <span>LANES</span></div>
+  <a class="call" href="tel:+17169459819">(716) 945-9819</a>
+</nav>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kick">191 Central Ave · Salamanca · 21+ years rolling</div>
+    <h1>Twelve lanes up front.<br><em>Crist's wings</em> in the back.</h1>
+    <p>Central Lanes is where Salamanca actually spends its Friday nights — league play, birthday pizza parties, and a fish fry people drive in from Allegany State Park for. One roof, one phone call.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="tel:+17169459819">Book a Lane</a>
+      <a class="btn ghost" href="#party">Plan a Party</a>
+    </div>
+    <div class="tonight">
+      <div><b>Tonight</b>Open till 12:00 AM</div>
+      <div><b>Sunday</b>Family open bowl from 11 AM</div>
+      <div><b>Kitchen</b>Crist's serving wings &amp; fish fry</div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Open bowling, league nights &amp; loud birthdays<span class="bar"> —</span></h2>
+    <div class="cols">
+      <div class="card"><div class="pin">🎳</div><h3>Open Bowling</h3><p>Walk in with the kids or your whole shift crew — 12 lanes, house balls from six pounds up, and shoes at the counter. Evenings fill fast when leagues roll, so call ahead for a lane.</p></div>
+      <div class="card"><div class="pin">🏆</div><h3>League Play</h3><p>Salamanca's bowling association keeps these lanes busy all winter. Want in? Ask at the desk about fall signups — first-timers welcome, and yes, there's a spot for you on a Tuesday.</p></div>
+      <div class="card"><div class="pin">🎂</div><h3>Birthday Parties</h3><p>Lanes, pizza and wings from Crist's kitchen, and zero cleanup at your house. Tell us the headcount and the age — we'll set the bumpers and the table.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="crist">
+  <div class="wrap">
+    <h2>Crist Restaurant — the reason half our regulars don't even bowl</h2>
+    <div class="menu">
+      <div class="dish"><h3>Friday Fish Fry</h3><p>The Salamanca classic — crisp battered fish with the works. Come early; Fridays are the busiest night in the building.</p><span class="tag">FRIDAY</span></div>
+      <div class="dish"><h3>Wings</h3><p>The thing Yelp reviewers actually write home about. Sauced hot, mild, or somewhere smarter in between.</p><span class="tag">FAN FAVORITE</span></div>
+      <div class="dish"><h3>Pizza &amp; Subs</h3><p>Made for lane-side eating — order at the bar and we'll call your name between frames.</p><span class="tag">LANE-SIDE</span></div>
+    </div>
+    <p class="note">Full bar for the grown-ups, high chairs for the small ones. Kitchen hours can differ from lane hours — call before you make the drive.</p>
+  </div>
+</section>
+
+<section class="party" id="party">
+  <div class="wrap">
+    <h2>Book a party without playing phone tag</h2>
+    <p class="big">Tell us what you're planning — birthday, team banquet, work night out — and we'll call you back with lane times and food options from Crist's kitchen.</p>
+    <form onsubmit="alert('Thanks! We\'ll call you back to confirm your party.');return false;">
+      <input type="text" placeholder="Your name" required>
+      <input type="tel" placeholder="Phone number" required>
+      <select><option>Birthday party</option><option>Work / team event</option><option>League inquiry</option><option>Just a lane for tonight</option></select>
+      <input type="text" placeholder="How many people?">
+      <button type="submit">Request a Callback</button>
+    </form>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap">
+    <h2>Staying at the casino? Camping at the park?</h2>
+    <ul>
+      <li><strong>5 minutes from Seneca Allegany Resort &amp; Casino</strong> — trade the slot floor for ten frames and a basket of wings before the drive home.</li>
+      <li><strong>Rainy-day plan for Allegany State Park</strong> — when the campsite floods, the lanes are dry, warm, and serving fish fry.</li>
+      <li><strong>Downtown Salamanca</strong> — on Central Ave, a block off the main drag, with parking out front.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fgrid">
+    <div>
+      <h3>Central Lanes &amp; Crist Restaurant</h3>
+      <p>191 Central Ave<br>Salamanca, NY 14779<br><a href="tel:+17169459819">(716) 945-9819</a></p>
+    </div>
+    <div>
+      <h3>Lane Hours</h3>
+      <table class="hours">
+        <tr><td>Mon–Thu</td><td>3 PM – 11 PM</td></tr>
+        <tr><td>Fri</td><td>3 PM – 12 AM</td></tr>
+        <tr><td>Sat</td><td>3 PM – 11 PM</td></tr>
+        <tr><td>Sun</td><td>11 AM – 10 PM</td></tr>
+      </table>
+    </div>
+    <div>
+      <h3>Find Us</h3>
+      <p>Find "The New Central Lanes" on Facebook for league news and kitchen specials.</p>
+    </div>
+  </div>
+  <p class="fine">© 2026 Central Lanes · 191 Central Ave, Salamanca NY · Preview concept by Onyx Rise Media</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KDR Self Storage — Margaretville NY Storage Units, Two Locations, Sizes 5×10 to 10×30</title>
+<meta name="description" content="KDR Self Storage, Margaretville NY. Two clean, lit, surveilled self-storage facilities serving Andes, Bovina, Roxbury, Delhi and Stamford. Units 5×10 through 10×30, 7-day access 6am–8pm, month-to-month or prepay.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --steel:#23262b; --steel-d:#15171a; --steel-l:#31353c; --edge:#3d434c;
+  --door:#e5711f; --door-d:#c65c11; --safe:#3fa66b;
+  --pale:#f4f5f6; --paper:#fff; --ink:#1a1c20; --gray:#666c75; --line:#dfe2e6;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+h1,h2,h3,.disp{font-family:'Barlow Condensed',sans-serif;line-height:1.06;letter-spacing:.005em}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.btn{display:inline-block;background:var(--door);color:#fff;font-weight:700;padding:14px 30px;border-radius:2px;text-decoration:none;font-size:.98rem;letter-spacing:.03em;text-transform:uppercase;transition:background .15s}
+.btn:hover{background:var(--door-d)}
+.btn.ghost{background:transparent;border:2px solid var(--door);color:var(--door)}
+.btn.ghost:hover{background:var(--door);color:#fff}
+.btn.light{background:#fff;color:var(--steel)}
+.btn.light:hover{background:var(--pale)}
+
+.util{background:var(--steel-d);color:#9aa1ab;font-size:.86rem}
+.util .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:7px;padding:8px 22px}
+.util b{color:#fff}
+.util .live{color:var(--safe);font-weight:700}
+
+header.nav{background:var(--steel);color:#fff;position:sticky;top:0;z-index:30;border-bottom:3px solid var(--door)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:11px 22px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand .mark{width:52px;height:44px;border-radius:2px;background:var(--door);position:relative;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;padding-bottom:5px;color:#fff;font-family:'Barlow Condensed';font-weight:700;font-size:1.15rem}
+.brand .mark:before{content:"";position:absolute;top:0;left:0;right:0;height:60%;background:repeating-linear-gradient(180deg,rgba(0,0,0,.16) 0 3px,transparent 3px 7px)}
+.brand b{font-family:'Barlow Condensed';font-size:1.5rem;display:block;letter-spacing:.02em}
+.brand span{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:#98a0aa;font-weight:700}
+nav.links{display:flex;gap:26px;font-weight:600;font-size:.9rem}
+nav.links a{text-decoration:none}
+nav.links a:hover{color:var(--door)}
+@media(max-width:960px){nav.links{display:none}}
+
+.hero{background:var(--steel);color:#fff;padding:0;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:44px;align-items:center;padding-top:64px;padding-bottom:64px;position:relative;z-index:2}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:48px;padding-bottom:48px}}
+.hero:before{content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(90deg,transparent 0 84px,rgba(255,255,255,.035) 84px 86px);}
+.hero .kick{color:var(--door);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:.75rem;margin-bottom:13px}
+.hero h1{font-size:clamp(2.4rem,5.6vw,4.1rem);max-width:15ch;text-transform:uppercase}
+.hero h1 em{font-style:normal;color:var(--door)}
+.hero p.lead{margin:18px 0 26px;font-size:1.1rem;color:#c3c9d1;max-width:48ch}
+.hero .badges{display:flex;gap:9px;flex-wrap:wrap;margin-top:24px}
+.hero .badges span{background:var(--steel-l);border:1px solid var(--edge);color:#c9cfd6;font-size:.79rem;font-weight:600;padding:6px 12px;border-radius:2px}
+
+/* size finder */
+.finder{background:var(--steel-l);border:1px solid var(--edge);border-radius:3px;padding:26px}
+.finder h3{font-family:'Barlow Condensed';font-size:1.55rem;color:#fff;text-transform:uppercase;margin-bottom:6px}
+.finder p{color:#a7aeb7;font-size:.9rem;margin-bottom:16px}
+.finder label{display:block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.11em;color:#8f96a0;margin:12px 0 5px}
+.finder select,.finder input{width:100%;padding:11px 12px;border:1px solid var(--edge);border-radius:2px;background:var(--steel-d);color:#fff;font-family:inherit;font-size:.95rem}
+.finder .btn{width:100%;margin-top:18px;border:0;cursor:pointer;font-family:inherit;text-align:center}
+.finder .out{margin-top:14px;background:var(--steel-d);border:1px dashed var(--edge);border-radius:2px;padding:14px;font-size:.9rem;color:#c9cfd6;display:none}
+.finder .out.show{display:block}
+.finder .out b{color:var(--door)}
+
+section{padding:72px 0}
+.sec-head{max-width:62ch;margin-bottom:36px}
+.eyebrow{color:var(--door);font-weight:700;letter-spacing:.17em;text-transform:uppercase;font-size:.74rem;margin-bottom:10px}
+.sec-head h2{font-size:clamp(1.9rem,4vw,2.8rem);text-transform:uppercase}
+.sec-head p{margin-top:12px;color:var(--gray);font-size:1.04rem}
+.pale{background:var(--pale)}
+
+/* size table */
+.sizes{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:16px}
+.unit{background:#fff;border:1px solid var(--line);border-radius:3px;overflow:hidden;transition:border-color .15s,transform .15s}
+.unit:hover{border-color:var(--door);transform:translateY(-3px)}
+.unit .door{background:var(--door);height:64px;position:relative;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Barlow Condensed';font-size:1.9rem;font-weight:700;letter-spacing:.04em}
+.unit .door:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(180deg,rgba(0,0,0,.13) 0 4px,transparent 4px 9px)}
+.unit .door span{position:relative;z-index:2}
+.unit .in{padding:18px 20px}
+.unit .fits{font-size:.92rem;color:var(--gray);min-height:66px}
+.unit .price{border-top:1px solid var(--line);margin-top:12px;padding-top:12px;font-size:.9rem;color:var(--gray)}
+.unit .price b{font-family:'Barlow Condensed';font-size:1.5rem;color:var(--steel);display:block;letter-spacing:.02em}
+.ph{display:inline-block;background:#ffeacb;color:#8a5312;font-size:.7rem;font-weight:700;padding:2px 7px;border-radius:2px;letter-spacing:.05em;text-transform:uppercase}
+
+/* two facilities */
+.fac2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:820px){.fac2{grid-template-columns:1fr}}
+.fac2 .f{background:#fff;border:1px solid var(--line);border-top:5px solid var(--steel);border-radius:3px;padding:26px}
+.fac2 .f.east{border-top-color:var(--door)}
+.fac2 .f h3{font-family:'Barlow Condensed';font-size:1.7rem;text-transform:uppercase;margin-bottom:4px}
+.fac2 .f .addr{color:var(--gray);font-size:.97rem;margin-bottom:16px}
+.fac2 .f ul{list-style:none}
+.fac2 .f li{padding:9px 0 9px 24px;position:relative;border-bottom:1px solid var(--line);font-size:.95rem;color:var(--gray)}
+.fac2 .f li:last-child{border-bottom:0}
+.fac2 .f li:before{content:"";position:absolute;left:0;top:16px;width:12px;height:3px;background:var(--door)}
+
+/* access spec */
+.spec{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.spec div{background:#fff;padding:22px}
+.spec .k{font-family:'Barlow Condensed';font-size:1.85rem;color:var(--door);text-transform:uppercase;line-height:1}
+.spec h4{font-size:.98rem;margin:8px 0 5px}
+.spec p{font-size:.9rem;color:var(--gray)}
+
+/* who */
+.who{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:20px}
+.who .c{background:var(--steel);color:#c9cfd6;border-radius:3px;padding:24px;border-left:4px solid var(--door)}
+.who .c h4{font-family:'Barlow Condensed';color:#fff;font-size:1.35rem;text-transform:uppercase;margin-bottom:8px}
+.who .c p{font-size:.94rem}
+
+/* terms */
+.terms{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:760px){.terms{grid-template-columns:1fr}}
+.terms .t{background:#fff;border:1px solid var(--line);border-radius:3px;padding:26px}
+.terms .t h3{font-family:'Barlow Condensed';font-size:1.55rem;text-transform:uppercase;margin-bottom:10px;color:var(--steel)}
+.terms .t p{color:var(--gray);font-size:.97rem}
+
+/* reserve */
+.reserve{background:var(--steel-d);color:#fff}
+.reserve .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px}
+@media(max-width:880px){.reserve .wrap{grid-template-columns:1fr}}
+.reserve h2{font-family:'Barlow Condensed';font-size:clamp(1.9rem,4vw,2.8rem);text-transform:uppercase;margin-bottom:14px}
+.reserve p.sub{color:#a7aeb7;margin-bottom:22px}
+.reserve .info{line-height:2;font-size:.99rem;color:#c3c9d1}
+.reserve .info b{color:var(--door);font-family:'Barlow Condensed';font-size:1.15rem;letter-spacing:.03em}
+form{background:#fff;border-radius:3px;padding:26px}
+form h3{font-family:'Barlow Condensed';font-size:1.6rem;text-transform:uppercase;color:var(--steel);margin-bottom:14px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+@media(max-width:520px){.f2{grid-template-columns:1fr}}
+form label{display:block;font-size:.73rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray);margin:12px 0 5px}
+form input,form select,form textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:2px;font-family:inherit;font-size:.96rem;background:var(--pale);color:var(--ink)}
+form textarea{min-height:82px;resize:vertical}
+form .btn{width:100%;margin-top:18px;border:0;cursor:pointer;font-family:inherit;text-align:center}
+.fine{font-size:.79rem;color:var(--gray);margin-top:10px;text-align:center}
+
+footer{background:#0e1013;color:#868d96;padding:44px 0 28px;font-size:.92rem}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:30px;margin-bottom:28px}
+footer h4{font-family:'Barlow Condensed';color:#fff;font-size:1.25rem;text-transform:uppercase;margin-bottom:10px}
+footer a{color:var(--door);text-decoration:none}
+footer a:hover{text-decoration:underline}
+footer .bar{border-top:1px solid #23262b;padding-top:17px;font-size:.83rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+</style>
+</head>
+<body>
+
+<div class="util">
+  <div class="wrap">
+    <span><span class="live">●</span> Gate access 7 days, 6:00 am – 8:00 pm · Two Margaretville locations</span>
+    <span>Call or text <b>(845) 586-2699</b></span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="mark">KDR</span>
+      <span><b>KDR Self Storage</b><span>Margaretville, NY · Since 2001</span></span>
+    </a>
+    <nav class="links">
+      <a href="#sizes">Sizes &amp; Rates</a>
+      <a href="#locations">Two Locations</a>
+      <a href="#access">Access &amp; Security</a>
+      <a href="#terms">Terms</a>
+      <a href="#reserve">Reserve</a>
+    </nav>
+    <a class="btn" href="#reserve">Reserve a Unit</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="kick">Margaretville · Andes · Bovina · Roxbury · Delhi · Stamford</div>
+      <h1>What fits, what's open, <em>what it costs.</em></h1>
+      <p class="lead">Six unit sizes across two Margaretville facilities. Twenty-five years of storing gear for second-home owners, contractors and families mid-move. Pick a size below and reserve it — you shouldn't need an appointment just to ask a price.</p>
+      <a class="btn" href="#sizes">See all six sizes</a>
+      <div class="badges">
+        <span>Since 2001</span><span>24-hour surveillance</span><span>Well-lit drives</span><span>Truck-friendly access</span><span>Month-to-month</span>
+      </div>
+    </div>
+    <div class="finder">
+      <h3>Size finder</h3>
+      <p>Tell us roughly what you're storing and we'll point at a door.</p>
+      <label for="what">What are you storing?</label>
+      <select id="what">
+        <option value="">Choose one…</option>
+        <option value="5x10">Seasonal gear — skis, kayaks, bikes, patio furniture</option>
+        <option value="10x10">One room of furniture, or a small apartment</option>
+        <option value="10x15">A two-bedroom house, or a contractor's tools and stock</option>
+        <option value="10x20">A three-bedroom house, or a vehicle plus boxes</option>
+        <option value="10x25">Whole-house move, or business inventory</option>
+        <option value="10x30">Long trailer, equipment, or a full commercial load</option>
+      </select>
+      <label for="when">When do you need it?</label>
+      <input id="when" type="date">
+      <button class="btn" type="button" onclick="var v=document.getElementById('what').value;var o=document.getElementById('res');if(!v){o.innerHTML='Pick what you’re storing first.';o.className='out show';return;}o.innerHTML='Recommended size: <b>'+v.replace('x','′ × ')+'′</b> — send the reservation form below and we’ll confirm availability at both locations.';o.className='out show';">Find my size</button>
+      <div class="out" id="res"></div>
+    </div>
+  </div>
+</section>
+
+<section id="sizes">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Sizes &amp; Rates</div>
+      <h2>Six doors. Here's what actually fits behind each one.</h2>
+      <p>Nobody thinks in square feet. They think "will my snowblower, four bikes and the guest-room furniture go in there." Rates below are placeholders until confirmed — the finished site publishes live monthly pricing.</p>
+    </div>
+    <div class="sizes">
+
+      <div class="unit"><div class="door"><span>5 × 10</span></div><div class="in">
+        <div class="fits">Skis, boards, kayaks, bikes, patio furniture, tools, a season's worth of second-home overflow. Roughly a large walk-in closet.</div>
+        <div class="price"><b><span class="ph">rate to confirm</span></b> per month</div></div></div>
+
+      <div class="unit"><div class="door"><span>10 × 10</span></div><div class="in">
+        <div class="fits">One furnished room, or a studio to one-bedroom apartment. Common choice during a renovation.</div>
+        <div class="price"><b><span class="ph">rate to confirm</span></b> per month</div></div></div>
+
+      <div class="unit"><div class="door"><span>10 × 15</span></div><div class="in">
+        <div class="fits">A two-bedroom house, or a contractor's saws, ladders, staging and material stock with room to walk.</div>
+        <div class="price"><b><span class="ph">rate to confirm</span></b> per month</div></div></div>
+
+      <div class="unit"><div class="door"><span>10 × 20</span></div><div class="in">
+        <div class="fits">A three-bedroom house, or a car plus boxes, or a small landscaping outfit's off-season equipment.</div>
+        <div class="price"><b><span class="ph">rate to confirm</span></b> per month</div></div></div>
+
+      <div class="unit"><div class="door"><span>10 × 25</span></div><div class="in">
+        <div class="fits">A full-house move with appliances, or business inventory and records with aisle space.</div>
+        <div class="price"><b><span class="ph">rate to confirm</span></b> per month</div></div></div>
+
+      <div class="unit"><div class="door"><span>10 × 30</span></div><div class="in">
+        <div class="fits">Long trailers, equipment, commercial loads. The largest door on either KDR site.</div>
+        <div class="price"><b><span class="ph">rate to confirm</span></b> per month</div></div></div>
+
+    </div>
+  </div>
+</section>
+
+<section class="pale" id="locations">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Two Locations</div>
+      <h2>East on Route 30. West on County Highway 3.</h2>
+      <p>Both are in Margaretville, both are KDR, and people routinely drive to the wrong one. A side-by-side comparison fixes that on the first visit.</p>
+    </div>
+    <div class="fac2">
+      <div class="f east">
+        <h3>KDR Self Storage — East</h3>
+        <div class="addr">44401 State Highway 30, Margaretville, NY 12455</div>
+        <ul>
+          <li>On the Route 30 corridor — easiest approach from Arkville and Halcottsville</li>
+          <li>Mailing address for the business</li>
+          <li>Wide drives for moving vans and box trucks</li>
+          <li>Well-lit with 24-hour surveillance</li>
+          <li>Access 7 days, 6:00 am – 8:00 pm</li>
+        </ul>
+      </div>
+      <div class="f">
+        <h3>KDR Self Storage — West</h3>
+        <div class="addr">520 County Highway 3, Margaretville, NY 12455</div>
+        <ul>
+          <li>Newer building, added to meet demand</li>
+          <li>Convenient from the New Kingston and Bovina side</li>
+          <li>Same sizes, same access hours, same security</li>
+          <li>Well-lit with 24-hour surveillance</li>
+          <li>Access 7 days, 6:00 am – 8:00 pm</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="access">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Access &amp; Security</div>
+      <h2>The specifics people check before they hand over a deposit</h2>
+    </div>
+    <div class="spec">
+      <div><div class="k">6–8</div><h4>Access hours</h4><p>Seven days a week, 6:00 am to 8:00 pm. Long enough for a contractor's day at either end.</p></div>
+      <div><div class="k">24 hr</div><h4>Surveillance</h4><p>Camera coverage around the clock at both facilities.</p></div>
+      <div><div class="k">Your lock</div><h4>Your key</h4><p>You secure the unit with your own lock. Nobody else holds a key to your door.</p></div>
+      <div><div class="k">Drive-up</div><h4>Truck access</h4><p>Easy in-and-out for moving vans and large trucks — no narrow turns, no elevators, no loading dock queue.</p></div>
+      <div><div class="k">Lit</div><h4>Evening use</h4><p>Facilities are well-lit, which matters in a Catskills December when it's dark at 4:30.</p></div>
+      <div><div class="k">2001</div><h4>Track record</h4><p>Locally owned and operating in Margaretville for a quarter century.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pale">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Who stores here</div>
+      <h2>Four very different customers, four different pages</h2>
+      <p>A weekender storing kayaks and a builder storing staging are not the same sale. Splitting them is the single biggest ranking and conversion gain available here.</p>
+    </div>
+    <div class="who">
+      <div class="c"><h4>Second-home owners</h4><p>Kayaks and paddleboards in winter, skis and snowshoes in summer, spare furniture year-round. A 5×10 costs less than losing half the garage.</p></div>
+      <div class="c"><h4>Contractors &amp; trades</h4><p>A locked, lit, drive-up base between jobs across Delaware County — closer than hauling everything back to the yard every night.</p></div>
+      <div class="c"><h4>Moving &amp; renovating</h4><p>The gap between closing dates, or the six weeks the floors are being redone. Month-to-month means you're not signing a year for a six-week problem.</p></div>
+      <div class="c"><h4>Local businesses</h4><p>Overflow inventory, seasonal stock, records. Cheaper per square foot than commercial space on Main Street.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="terms">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Terms</div>
+      <h2>Month-to-month, or prepay and pay less</h2>
+    </div>
+    <div class="terms">
+      <div class="t">
+        <h3>Month to month</h3>
+        <p>Rent for as long as you need it and stop when you're done. Best for moves, renovations and jobs with an end date. No long contract, no penalty for leaving on schedule.</p>
+      </div>
+      <div class="t">
+        <h3>Prepay for longer, save more</h3>
+        <p>Paying for a longer period up front lowers the monthly cost — the right choice for second-home owners and contractors who know the unit is a permanent fixture. Discount tiers are published on the finished site.</p>
+      </div>
+    </div>
+    <div style="margin-top:26px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--door);border-radius:3px;padding:22px 24px;max-width:76ch">
+      <h3 style="font-family:'Barlow Condensed';font-size:1.4rem;text-transform:uppercase;margin-bottom:8px">A note on portable containers</h3>
+      <p style="color:var(--gray);font-size:.97rem">KDR no longer offers dumpsters or portable storage — that side of the business transferred to A-Verdi, and the company is now KDR Self Storage. Worth stating clearly and early, because the current site still lives on the old kdrcontainers.com address and people arrive expecting a container drop-off.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reserve" id="reserve">
+  <div class="wrap">
+    <div>
+      <h2>Reserve a unit</h2>
+      <p class="sub">Send the size, the location and your move-in date. You get a written confirmation with the unit number and the monthly rate — no waiting for the office to be open by appointment.</p>
+      <div class="info">
+        <b>KDR Self Storage</b><br>
+        East — 44401 State Highway 30, Margaretville, NY 12455<br>
+        West — 520 County Highway 3, Margaretville, NY 12455<br>
+        <b>Call or text:</b> (845) 586-2699<br>
+        <b>Gate access:</b> 7 days, 6:00 am – 8:00 pm<br>
+        <b>Office:</b> by appointment
+      </div>
+      <p style="margin-top:20px;color:#7d848d;font-size:.88rem">Note for Sandro: no public email address appears anywhere on the current KDR site or its listings — confirm one by phone before the outreach email goes out.</p>
+    </div>
+    <form onsubmit="event.preventDefault();this.querySelector('button.btn').textContent='Sent — we’ll confirm your unit';">
+      <h3>Unit reservation request</h3>
+      <div class="f2">
+        <div><label for="n">Name</label><input id="n" type="text" placeholder="First and last"></div>
+        <div><label for="p">Phone</label><input id="p" type="tel" placeholder="(845) 000-0000"></div>
+      </div>
+      <label for="e">Email</label><input id="e" type="email" placeholder="you@email.com">
+      <div class="f2">
+        <div><label for="sz">Unit size</label>
+          <select id="sz"><option>5 × 10</option><option>10 × 10</option><option>10 × 15</option><option>10 × 20</option><option>10 × 25</option><option>10 × 30</option><option>Not sure — recommend one</option></select>
+        </div>
+        <div><label for="loc">Location</label>
+          <select id="loc"><option>Either — whichever is open</option><option>East — State Highway 30</option><option>West — County Highway 3</option></select>
+        </div>
+      </div>
+      <label for="d">Move-in date</label><input id="d" type="date">
+      <label for="m">What are you storing?</label>
+      <textarea id="m" placeholder="e.g. two kayaks, patio set, snowblower and about 20 boxes — storing through the winter"></textarea>
+      <button class="btn" type="submit">Request this unit</button>
+      <div class="fine">Demonstration form — this preview does not store or transmit anything.</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>KDR Self Storage</h4>
+        <p>44401 State Highway 30<br>520 County Highway 3<br>Margaretville, NY 12455</p>
+        <p style="margin-top:10px"><a href="tel:18455862699">(845) 586-2699</a> — call or text</p>
+      </div>
+      <div>
+        <h4>Unit sizes</h4>
+        <p>5×10 · 10×10 · 10×15<br>10×20 · 10×25 · 10×30</p>
+      </div>
+      <div>
+        <h4>Serving</h4>
+        <p>Margaretville, Andes, Bovina, Roxbury, Delhi, Stamford, Halcottsville, Arkville, Hamden, Kortright, Meredith, Middletown</p>
+      </div>
+      <div>
+        <h4>Access</h4>
+        <p>7 days, 6:00 am – 8:00 pm<br>24-hour surveillance<br>Your lock, your key<br>Office by appointment</p>
+      </div>
+    </div>
+    <div class="bar">
+      <span>Concept preview prepared by Onyx Rise Media.</span>
+      <span>Not a live reservation system — rates shown are placeholders.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

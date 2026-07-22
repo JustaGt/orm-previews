@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lee Shuknecht &amp; Sons — Elba, NY · Onion Harvesting &amp; Packing-House Equipment Since 1974</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --field:#2f5d34; --field2:#24471f; --leaf:#3f8a3f; --amber:#e07b18; --amber2:#f5941f;
+  --steel:#2a2f33; --ink:#191d1b; --paper:#f7f6f1; --line:#e2ddcf; --muck:#40352a;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+h1,h2,h3,.head{font-family:'Oswald',sans-serif;line-height:1.08;text-transform:uppercase;letter-spacing:.01em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}
+.topbar{background:var(--steel);color:#cfd6cf;font-size:.86rem}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:7px 22px;flex-wrap:wrap;gap:6px}
+.topbar b{color:#fff}
+nav{background:var(--field);color:#fff;position:sticky;top:0;z-index:40;box-shadow:0 2px 10px rgba(0,0,0,.15)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:13px 22px}
+.brand{font-family:'Oswald';font-weight:700;font-size:1.45rem;letter-spacing:.02em;display:flex;flex-direction:column;line-height:1}
+.brand small{font-size:.6rem;letter-spacing:.22em;color:#bce0bc;font-weight:600;margin-top:4px}
+.nlinks{display:flex;gap:22px;font-family:'Oswald';font-weight:600;text-transform:uppercase;font-size:.98rem;color:#d6ead6}
+.nlinks a:hover{color:var(--amber2)}
+.ncta{background:var(--amber);color:#fff;padding:9px 17px;border-radius:5px;font-family:'Oswald';font-weight:600;font-size:.95rem}
+.ncta:hover{background:var(--amber2)}
+@media(max-width:860px){.nlinks{display:none}}
+.hero{background:linear-gradient(115deg,rgba(36,71,31,.94),rgba(24,45,20,.86)),
+  repeating-linear-gradient(100deg,#3a2b1e 0 30px,#463322 30px 62px);color:#fff;padding:70px 0 62px}
+.hero .eye{color:var(--amber2);font-family:'Oswald';font-weight:600;letter-spacing:.14em;font-size:.92rem;margin-bottom:14px}
+.hero h1{font-size:3.5rem;max-width:17ch;margin-bottom:18px}
+.hero h1 em{color:var(--amber2);font-style:normal}
+.hero p{font-size:1.16rem;color:#dbe8db;max-width:52ch;margin-bottom:28px}
+.hbtns{display:flex;gap:13px;flex-wrap:wrap}
+.b1{background:var(--amber);color:#fff;padding:15px 28px;border-radius:6px;font-family:'Oswald';font-weight:600;font-size:1.12rem}
+.b1:hover{background:var(--amber2)}
+.b2{border:2px solid #7fae7f;color:#fff;padding:14px 26px;border-radius:6px;font-family:'Oswald';font-weight:600;font-size:1.05rem}
+.b2:hover{border-color:#fff}
+.stats{display:flex;gap:34px;margin-top:32px;flex-wrap:wrap}
+.stats b{font-family:'Oswald';font-size:1.9rem;color:var(--amber2);display:block;line-height:1}
+.stats span{font-size:.9rem;color:#cfe0cf}
+@media(max-width:600px){.hero h1{font-size:2.4rem}}
+section{padding:60px 0}
+.eyebrow{color:var(--leaf);font-family:'Oswald';font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:.9rem;margin-bottom:9px}
+.stitle{font-size:2.3rem;color:var(--field2);margin-bottom:10px}
+.lead{color:#5a6155;max-width:64ch;margin-bottom:34px;font-size:1.04rem}
+.line-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.mc{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(47,93,52,.06)}
+.mc .top{background:linear-gradient(160deg,var(--field),var(--field2));color:#fff;padding:18px 20px}
+.mc .top h3{font-size:1.35rem}
+.mc .top .tag{font-size:.78rem;color:#bfe0bf;font-weight:600;letter-spacing:.04em}
+.mc .body{padding:18px 20px}
+.mc ul{list-style:none;font-size:.94rem;color:#4b5249}
+.mc li{padding:6px 0 6px 20px;position:relative;border-bottom:1px dashed #e7e2d4}
+.mc li:last-child{border-bottom:none}
+.mc li::before{content:"▸";position:absolute;left:0;color:var(--amber)}
+@media(max-width:820px){.line-grid{grid-template-columns:1fr}}
+.split{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.split .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.split .txt h2{font-size:2rem;color:var(--field2);margin-bottom:12px}
+.split .txt p{color:#555c50;margin-bottom:12px}
+.capchips span{display:inline-block;background:#eef4ea;border:1px solid #cfe0cf;color:var(--field2);font-weight:600;font-size:.86rem;padding:6px 13px;border-radius:20px;margin:0 6px 8px 0}
+.shopcard{background:var(--muck);color:#f3ece0;border-radius:14px;padding:30px}
+.shopcard h3{font-size:1.5rem;color:#fff;margin-bottom:8px}
+.shopcard ul{list-style:none;margin-top:10px}
+.shopcard li{padding:7px 0 7px 24px;position:relative;border-bottom:1px solid rgba(255,255,255,.12);font-size:.96rem}
+.shopcard li::before{content:"✚";position:absolute;left:0;color:var(--amber2);font-weight:700}
+@media(max-width:820px){.split .wrap{grid-template-columns:1fr}}
+.about{background:linear-gradient(160deg,#eef3e9,#e6efe0)}
+.about .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center}
+.about h2{font-size:2.1rem;color:var(--field2);margin-bottom:14px}
+.about p{color:#4f564a;margin-bottom:12px}
+.yearbox{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;text-align:center}
+.yearbox .big{font-family:'Oswald';font-size:3.4rem;color:var(--amber);line-height:1}
+.yearbox .lbl{color:#5a6155;font-weight:600;letter-spacing:.05em;text-transform:uppercase;font-size:.82rem;margin-top:4px}
+.yearbox hr{border:none;border-top:1px solid var(--line);margin:16px 0}
+.contact{background:var(--field2);color:#e6f0e6}
+.contact .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:38px;align-items:start}
+.contact h2{color:#fff;font-size:2.1rem;margin-bottom:12px}
+.contact .info p{margin-bottom:9px;color:#cfe0cf}
+.contact .info b{color:#fff}
+.formbox{background:#fff;color:var(--ink);border-radius:14px;padding:28px}
+.formbox h3{font-family:'Oswald';color:var(--field2);font-size:1.4rem;margin-bottom:6px;text-transform:uppercase}
+.formbox p.sm{font-size:.9rem;color:#5a6155;margin-bottom:14px}
+label{display:block;font-size:.78rem;font-weight:700;color:var(--field2);margin-bottom:5px;text-transform:uppercase;letter-spacing:.03em}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid #d3ccbc;border-radius:7px;font-family:inherit;font-size:.95rem;background:#fdfcf9}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--leaf)}
+.frow2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fbtn{margin-top:15px;background:var(--amber);color:#fff;border:none;padding:14px 22px;border-radius:7px;font-family:'Oswald';font-weight:600;font-size:1.1rem;cursor:pointer;width:100%}
+.fbtn:hover{background:var(--amber2)}
+@media(max-width:820px){.contact .wrap{grid-template-columns:1fr}.frow2{grid-template-columns:1fr}}
+footer{background:var(--steel);color:#aeb6ae;padding:38px 0 20px}
+footer .cols{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:26px}
+footer h4{color:#fff;font-family:'Oswald';font-size:1.1rem;letter-spacing:.03em;margin-bottom:10px;text-transform:uppercase}
+footer a:hover{color:var(--amber2)}
+.copy{border-top:1px solid #3a4046;margin-top:22px;padding-top:14px;font-size:.8rem;color:#7f877f}
+@media(max-width:720px){footer .cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Elba, NY · Building onion equipment since <b>1974</b></span>
+  <span>Parts &amp; repair on-site · <b>(585) 757-6628</b></span>
+</div></div>
+
+<nav><div class="wrap">
+  <span class="brand">LEE SHUKNECHT &amp; SONS<small>ONION HARVESTING &amp; PACKING EQUIPMENT · ELBA, NY</small></span>
+  <div class="nlinks">
+    <a href="#line">Harvesters</a>
+    <a href="#packing">Packing House</a>
+    <a href="#shop">Machine Shop</a>
+    <a href="#about">About</a>
+  </div>
+  <a href="#contact" class="ncta">Request a Quote</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="eye">SELF-PROPELLED HARVESTERS · PACKING-HOUSE SYSTEMS · CUSTOM FABRICATION</div>
+  <h1>Onion equipment built in the muck it <em>runs in.</em></h1>
+  <p>For half a century, Elba growers and packing houses across the country have run Shuknecht harvesters, toppers, sizers and elevators — designed, welded and serviced under one roof in Genesee County.</p>
+  <div class="hbtns">
+    <a href="#contact" class="b1">Get a Build Quote</a>
+    <a href="#line" class="b2">See the Harvester Line</a>
+  </div>
+  <div class="stats">
+    <div><b>1974</b><span>Family-owned since</span></div>
+    <div><b>SP-160</b><span>High-volume self-propelled harvester</span></div>
+    <div><b>2 gen.</b><span>Design · fab · machine shop in-house</span></div>
+  </div>
+</div></header>
+
+<section id="line"><div class="wrap">
+  <div class="eyebrow">Harvesting Line</div>
+  <h2 class="stitle">Machines for the field</h2>
+  <p class="lead">From pull-behind units for smaller acreage to the self-propelled SP-132 and SP-160 built for high-volume muck harvests, every machine is designed to move onions fast and handle them gently.</p>
+  <div class="line-grid">
+    <div class="mc">
+      <div class="top"><h3>Self-Propelled Harvesters</h3><div class="tag">SP-132 · SP-160</div></div>
+      <div class="body"><ul>
+        <li>High-volume self-propelled harvesting</li>
+        <li>Built for muck-ground conditions</li>
+        <li>Gentle crop handling to reduce loss</li>
+        <li>Configurable for your operation</li>
+      </ul></div>
+    </div>
+    <div class="mc">
+      <div class="top"><h3>Pull-Behind Harvesters</h3><div class="tag">Field units</div></div>
+      <div class="body"><ul>
+        <li>Onion lifters &amp; pullers</li>
+        <li>Finish toppers &amp; roller toppers</li>
+        <li>Field elevators &amp; conveyors</li>
+        <li>Matched to your tractor &amp; acreage</li>
+      </ul></div>
+    </div>
+    <div class="mc">
+      <div class="top"><h3>Field Equipment</h3><div class="tag">Plant to haul</div></div>
+      <div class="body"><ul>
+        <li>Planters &amp; transplanters</li>
+        <li>Side-dump bodies (truck &amp; trailer)</li>
+        <li>Cabbage &amp; side-tilt squash trailers</li>
+        <li>Box dippers &amp; hoppers</li>
+      </ul></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="split" id="packing"><div class="wrap">
+  <div class="txt">
+    <div class="eyebrow">Packing House</div>
+    <h2>Systems for the shed, too</h2>
+    <p>The harvest is only half of it. Shuknecht builds the packing-shed equipment that moves, sizes and grades the crop once it's off the field — the same engineering, sized to your building.</p>
+    <div class="capchips">
+      <span>PVC roll sizers</span><span>Pre-sizers</span><span>Belt elevators</span>
+      <span>Hopper incline elevators</span><span>Brushers</span><span>Roller toppers</span>
+      <span>Picking tables</span><span>Box dumpers</span><span>Silage dump-truck lids</span>
+    </div>
+  </div>
+  <div class="shopcard">
+    <h3>One shop, start to finish</h3>
+    <p style="color:#d7cdbe">Everything is designed, fabricated and serviced in Elba — so the crew that built your machine is the crew that knows how to fix it.</p>
+    <ul>
+      <li>Custom builds to your crop &amp; layout</li>
+      <li>Standard units in production</li>
+      <li>Rebuilds of existing Shuknecht machines</li>
+      <li>Parts kept on the shelf</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="shop" style="background:var(--paper)"><div class="wrap">
+  <div class="eyebrow">Machine Shop · Parts · Repair</div>
+  <h2 class="stitle">More than a machinery brand</h2>
+  <p class="lead">The larger Elba shop houses a full machine shop, a farm parts store and steel distribution — so a broken bearing at 6 a.m. in harvest season is a phone call, not a shutdown.</p>
+  <div class="line-grid">
+    <div class="mc"><div class="top" style="background:linear-gradient(160deg,var(--muck),#2b2015)"><h3>Machine Shop</h3><div class="tag" style="color:#e6cfae">Manual &amp; CNC</div></div>
+      <div class="body"><ul><li>Custom fabrication</li><li>Manual machining &amp; CNC work</li><li>Ag &amp; construction equipment repair</li><li>Equipment rebuilds &amp; restorations</li></ul></div></div>
+    <div class="mc"><div class="top" style="background:linear-gradient(160deg,var(--muck),#2b2015)"><h3>Parts Store</h3><div class="tag" style="color:#e6cfae">Keep it running</div></div>
+      <div class="body"><ul><li>Farm parts counter</li><li>Wear parts for Shuknecht machines</li><li>Steel distribution</li><li>Harvest-season support</li></ul></div></div>
+    <div class="mc"><div class="top" style="background:linear-gradient(160deg,var(--muck),#2b2015)"><h3>Steel &amp; Fab</h3><div class="tag" style="color:#e6cfae">Short runs welcome</div></div>
+      <div class="body"><ul><li>Steel supply for local jobs</li><li>Custom brackets &amp; assemblies</li><li>One-off pieces</li><li>Welding &amp; fitting</li></ul></div></div>
+  </div>
+</div></section>
+
+<section class="about" id="about"><div class="wrap">
+  <div class="txt">
+    <div class="eyebrow">Our Story</div>
+    <h2>Started by a grower's problem, in 1974</h2>
+    <p>Lee Shuknecht grew up on an Elba dairy farm. Working a local repair shop, he kept hearing onion growers wish for better harvesting equipment — so he designed and built a self-propelled onion harvester himself. Joan and Lee started the company in 1974.</p>
+    <p>Fifty years on, the machines have evolved, the shop has moved to a larger building with a full parts store and machine shop, and the second generation runs the floor — but it's still a family operation building onion equipment in the heart of the muck.</p>
+  </div>
+  <div class="yearbox">
+    <div class="big">50+</div>
+    <div class="lbl">Years building onion equipment</div>
+    <hr>
+    <p style="color:#4f564a;font-size:.95rem">Founded by Lee &amp; Joan Shuknecht<br>Elba, New York · second generation</p>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div class="info">
+    <div class="eyebrow" style="color:var(--amber2)">Talk to the Shop</div>
+    <h2>Let's spec your machine</h2>
+    <p style="color:#cfe0cf;max-width:44ch;margin-bottom:20px">Tell us your crop, your acreage and whether you're outfitting the field, the shed, or both. We'll get back to you with a build path.</p>
+    <p><b>Phone:</b> (585) 757-6628</p>
+    <p><b>Shop:</b> 4458 Ford Road, Elba, NY 14058</p>
+    <p><b>Email:</b> sales@shuknecht.com <span style="color:#9dc09d;font-size:.85rem">(proposed — replaces the current Gmail address)</span></p>
+    <p style="margin-top:14px;color:#a9c4a9;font-size:.9rem">Full machine shop, parts store &amp; steel supply on-site.</p>
+  </div>
+  <div class="formbox">
+    <h3>Request a Build Quote</h3>
+    <p class="sm">The more you tell us up front, the faster we can price it.</p>
+    <form onsubmit="return false">
+      <div class="frow2">
+        <div><label>Name / Farm</label><input type="text" placeholder="Grower or operation name"></div>
+        <div><label>Phone</label><input type="tel" placeholder="(000) 000-0000"></div>
+      </div>
+      <div style="margin-top:12px"><label>Email</label><input type="email" placeholder="you@yourfarm.com"></div>
+      <div class="frow2" style="margin-top:12px">
+        <div><label>Crop</label><select><option>Onions</option><option>Cabbage</option><option>Squash</option><option>Other vegetable</option></select></div>
+        <div><label>Approx. acreage</label><input type="text" placeholder="e.g. 120 ac"></div>
+      </div>
+      <div style="margin-top:12px"><label>What do you need?</label>
+        <select><option>Self-propelled harvester (SP-132 / SP-160)</option><option>Pull-behind harvester / toppers</option><option>Packing-house equipment</option><option>Field equipment / trailers</option><option>Machine shop / repair / rebuild</option><option>Parts</option></select></div>
+      <div style="margin-top:12px"><label>Details</label><textarea rows="3" placeholder="e.g. replacing an older harvester before next season; also need a pre-sizer for the shed"></textarea></div>
+      <button class="fbtn">Send Quote Request</button>
+    </form>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div>
+      <h4>Lee Shuknecht &amp; Sons, Inc.</h4>
+      <p>Onion harvesting &amp; packing-house equipment, custom fabrication, machine shop, parts &amp; steel. Elba, NY, since 1974.</p>
+      <p style="font-family:'Oswald';font-size:1.5rem;color:#fff;margin-top:10px">(585) 757-6628</p>
+    </div>
+    <div>
+      <h4>Find Us</h4>
+      <p>4458 Ford Road<br>Elba, NY 14058<br>Genesee County</p>
+    </div>
+    <div>
+      <h4>Equipment</h4>
+      <p><a href="#line">Harvesters</a><br><a href="#packing">Packing house</a><br><a href="#shop">Machine shop &amp; parts</a><br><a href="#contact">Request a quote</a></p>
+    </div>
+  </div>
+  <div class="copy">© 2026 Lee Shuknecht &amp; Sons, Inc. · Elba, NY · Preview concept prepared by Onyx Rise Media.</div>
+</div></footer>
+
+</body>
+</html>

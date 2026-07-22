@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lyons Memorial Shop — Headstones &amp; Year-Round Grave Care | Lyons, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --slate:#34495a; --slate-d:#243441; --steel:#52708a;
+  --stone:#8a9097; --mist:#eef1f4; --ivory:#faf9f6; --paper:#fdfdfb;
+  --ink:#27313a; --soft:#5e6770; --line:#dde3e8; --brass:#b08d57;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Work Sans',sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+h1,h2,h3,.disp{font-family:'Spectral',serif;font-weight:600;line-height:1.15}
+.wrap{max-width:1050px;margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-block;background:var(--slate);color:#fff;font-weight:600;padding:14px 28px;border-radius:4px;font-size:1rem}
+.btn:hover{background:var(--slate-d)}
+/* header */
+.bar{background:var(--slate-d);color:#cdd6de;font-size:.9rem}
+.bar .wrap{display:flex;justify-content:space-between;align-items:center;padding:10px 22px;flex-wrap:wrap;gap:6px}
+.bar b{color:#fff}
+.logo{font-family:'Spectral',serif;font-size:1.45rem;font-weight:700;color:#fff;letter-spacing:.3px}
+.logo em{color:var(--brass);font-style:normal}
+/* hero */
+.hero{background:linear-gradient(rgba(36,52,65,.8),rgba(36,52,65,.7)),
+  linear-gradient(120deg,#4a657d,#243441);color:#fff;padding:80px 0 72px}
+.hero .wrap{max-width:740px}
+.kick{letter-spacing:3px;text-transform:uppercase;font-size:.74rem;color:var(--brass);margin-bottom:16px}
+.hero h1{font-size:3rem;margin-bottom:16px}
+.hero p{font-size:1.18rem;color:#e6ecf1;max-width:580px;margin-bottom:28px}
+.hero .row{display:flex;gap:13px;flex-wrap:wrap;align-items:center}
+.phone{display:inline-flex;align-items:center;gap:9px;border:1.5px solid rgba(255,255,255,.42);padding:12px 19px;border-radius:4px;font-size:1.05rem}
+.phone b{font-family:'Spectral',serif;font-size:1.3rem}
+section{padding:60px 0}
+.head{max-width:660px;margin:0 auto 40px;text-align:center}
+.head .kick{color:var(--steel)}
+.head h2{font-size:2.2rem;color:var(--slate-d)}
+.head p{color:var(--soft);margin-top:10px}
+/* intro split */
+.intro .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.intro h2{font-size:2rem;color:var(--slate-d);margin-bottom:14px}
+.intro p{color:var(--soft);margin-bottom:12px}
+.factbox{background:var(--mist);border-left:4px solid var(--brass);border-radius:4px;padding:24px}
+.factbox .big{font-family:'Spectral',serif;font-size:2.6rem;color:var(--slate);line-height:1}
+.factbox span{color:var(--soft);font-size:.95rem}
+/* seasonal almanac */
+.almanac{background:var(--mist)}
+.seasons{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.season{background:#fff;border:1px solid var(--line);border-radius:6px;padding:24px 20px}
+.season .tag{font-family:'Spectral',serif;font-size:.85rem;letter-spacing:1px;text-transform:uppercase;color:var(--brass);margin-bottom:8px}
+.season h3{font-size:1.4rem;color:var(--slate-d);margin-bottom:8px}
+.season p{font-size:.93rem;color:var(--soft)}
+/* services list */
+.svc{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.row2{display:flex;gap:16px;background:var(--ivory);border:1px solid var(--line);border-radius:6px;padding:22px}
+.row2 .mark{flex:0 0 8px;align-self:stretch;background:var(--steel);border-radius:4px}
+.row2 h3{font-size:1.35rem;color:var(--slate-d);margin-bottom:5px}
+.row2 p{font-size:.95rem;color:var(--soft)}
+/* gallery strip */
+.work .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.tile{aspect-ratio:1;border-radius:5px;background:linear-gradient(135deg,#5a7388,#27313a);position:relative;display:flex;align-items:flex-end}
+.tile span{color:#fff;font-size:.82rem;padding:12px;width:100%;background:linear-gradient(0deg,rgba(0,0,0,.5),transparent)}
+.tile .ph{position:absolute;top:10px;left:12px;font-size:.65rem;letter-spacing:1px;text-transform:uppercase;color:#cdd6de;opacity:.85}
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.contact h2{font-size:2rem;color:var(--slate-d);margin-bottom:10px}
+.contact p{color:var(--soft);margin-bottom:14px}
+.people{list-style:none;margin:14px 0}
+.people li{padding:9px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:10px}
+.people b{font-family:'Spectral',serif;font-size:1.05rem;color:var(--slate-d)}
+.people a{color:var(--steel);font-weight:600}
+.addr{background:var(--mist);border-radius:6px;padding:18px;font-size:.95rem;color:var(--soft);margin-top:14px}
+form label{display:block;font-size:.85rem;color:var(--slate);margin:12px 0 5px;font-weight:600}
+form input,form textarea,form select{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:4px;font-family:inherit;font-size:.95rem;background:#fff}
+form .btn{border:none;cursor:pointer;margin-top:18px}
+footer{background:var(--slate-d);color:#aeb9c2;font-size:.9rem;padding:28px 0}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:860px){
+  .intro .wrap,.contact .wrap{grid-template-columns:1fr}
+  .seasons,.work .grid{grid-template-columns:repeat(2,1fr)}
+  .svc{grid-template-columns:1fr}
+  .hero h1{font-size:2.4rem}
+}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap"><span class="logo">Lyons <em>Memorial Shop</em></span><span>108 Montezuma St, Lyons NY &nbsp;·&nbsp; <b>(315) 946-6328</b></span></div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="kick">Memorials · Lettering · Cleaning · Year-Round Grave Care</div>
+  <h1>On Montezuma Street for 35 years, and still by hand.</h1>
+  <p>From the first stone to the date you add years later — and the flowers, mums, and wreaths in between — Lyons Memorial Shop tends the whole story, not just the sale.</p>
+  <div class="row">
+    <a class="btn" href="#contact">Get in touch</a>
+    <a class="phone" href="tel:3159466328">Shop <b>(315)&nbsp;946-6328</b></a>
+  </div>
+</div></header>
+
+<section class="intro"><div class="wrap">
+  <div>
+    <div class="kick" style="color:var(--steel)">Who we are</div>
+    <h2>The shop families in Lyons keep coming back to</h2>
+    <p>Roger Clark and Geoff Grambo run a shop that's served Lyons and the surrounding Wayne County villages for more than three decades — selling and setting memorials, and coming back to add a name when the time comes.</p>
+    <p>Most of our work is for people we've helped before. We answer the phone, we know the local cemeteries, and we do the work ourselves.</p>
+  </div>
+  <div class="factbox"><div class="big">35+</div><span>years setting and caring for memorials in Lyons, NY</span></div>
+</div></section>
+
+<section class="almanac">
+  <div class="head"><div class="kick">Through the year</div><h2>We tend the grave when you can't be there</h2><p>The part most shops don't offer — and the reason out-of-town families call us.</p></div>
+  <div class="wrap seasons">
+    <div class="season"><div class="tag">Spring</div><h3>Planted flowers</h3><p>We deliver and set planted pots at the grave each spring, so it's bright by the time you visit.</p></div>
+    <div class="season"><div class="tag">Fall</div><h3>Mums</h3><p>A second seasonal planting in the fall — set in the cemetery for you, no trip required.</p></div>
+    <div class="season"><div class="tag">November</div><h3>Christmas wreaths</h3><p>Wreaths placed at the headstone mid-to-late November and through the holidays.</p></div>
+    <div class="season"><div class="tag">Any time</div><h3>Added dates &amp; lettering</h3><p>When a second name needs to join a stone already set, we letter it cleanly, right in the cemetery.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="head"><div class="kick">Stone work</div><h2>What we make and maintain</h2></div>
+  <div class="wrap svc">
+    <div class="row2"><div class="mark"></div><div><h3>Memorial sales &amp; installation</h3><p>Upright stones, markers, and companion monuments — purchased, lettered, and set at the cemetery.</p></div></div>
+    <div class="row2"><div class="mark"></div><div><h3>Cleaning &amp; foundation repair</h3><p>Cleaning older stones and repairing or re-leveling foundations that have settled over the years.</p></div></div>
+    <div class="row2"><div class="mark"></div><div><h3>Lettering on existing stones</h3><p>Adding end dates or inscriptions to a memorial that's already in place — matched to the original.</p></div></div>
+    <div class="row2"><div class="mark"></div><div><h3>Urns &amp; planted pots</h3><p>Seasonal urns and planted pots, delivered and set twice a year. Call for current inventory.</p></div></div>
+  </div>
+</section>
+
+<section class="work">
+  <div class="head"><div class="kick">Our work</div><h2>Stones we've set around Lyons</h2><p>Add real photos of your own memorials here — the thing your current site is missing entirely.</p></div>
+  <div class="wrap grid">
+    <div class="tile"><span class="ph">your photo</span><span>Upright granite, Elmwood Cemetery</span></div>
+    <div class="tile"><span class="ph">your photo</span><span>Companion stone with etching</span></div>
+    <div class="tile"><span class="ph">your photo</span><span>Added date, lettered on site</span></div>
+    <div class="tile"><span class="ph">your photo</span><span>Cleaned &amp; re-leveled marble</span></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Reach the shop</h2>
+      <p>Call the shop, or ask for Roger or Geoff directly. Whether it's a new stone, an added date, or seasonal care, we'll talk it through.</p>
+      <ul class="people">
+        <li><b>Shop</b><a href="tel:3159466328">(315) 946-6328</a></li>
+        <li><b>Roger Clark</b><a href="tel:3153984876">(315) 398-4876</a></li>
+        <li><b>Geoff Grambo</b><a href="tel:3155731041">(315) 573-1041</a></li>
+        <li><b>Email</b><a href="mailto:lyonsmemorialshop@gmail.com">lyonsmemorialshop@gmail.com</a></li>
+      </ul>
+      <div class="addr">Lyons Memorial Shop · 108 Montezuma St, Lyons, NY 14489<br><span style="font-size:.85rem">Placeholder: add your shop hours and a map embed here.</span></div>
+    </div>
+    <form onsubmit="return false">
+      <label>Name</label><input type="text">
+      <label>Phone</label><input type="tel">
+      <label>Email</label><input type="email">
+      <label>How can we help?</label>
+      <select><option>New memorial or marker</option><option>Add a date / lettering to an existing stone</option><option>Cleaning or foundation repair</option><option>Seasonal grave care (flowers / mums / wreath)</option></select>
+      <label>Details</label><textarea rows="4"></textarea>
+      <button class="btn">Send to Lyons Memorial Shop</button>
+    </form>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>Lyons Memorial Shop · 108 Montezuma St, Lyons, NY · Serving Wayne County 35+ years</span><span>(315) 946-6328</span></div></footer>
+
+</body>
+</html>

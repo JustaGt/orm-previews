@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lake Country Kennels — Dog & Cat Boarding | Watkins Glen, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sage:#6e8c63; --sage-d:#52704a; --moss:#3f5639; --sky:#7fa8c9; --sky-d:#4d7ba0;
+    --cream:#f7f4ec; --cream2:#efe9da; --warm:#e9c46a; --ink:#33382e; --soft:#6f7468; --line:#e0dccd;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Nunito Sans',sans-serif;color:var(--ink);background:var(--cream);line-height:1.62}
+  h1,h2,h3,.disp{font-family:'Fraunces',Georgia,serif}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .announce{background:var(--moss);color:#eef3e6;text-align:center;padding:9px;font-size:.9rem;font-weight:700}
+  .nav{background:var(--cream);border-bottom:1px solid var(--line);padding:14px 0}
+  .nav .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  .brand{font-family:'Fraunces',serif;font-weight:600;font-size:1.45rem;color:var(--sage-d);display:flex;align-items:center;gap:10px}
+  .brand .mark{width:38px;height:38px;border-radius:50%;background:var(--sage);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:1.2rem}
+  .nav a.call{background:var(--sage);color:#fff;text-decoration:none;font-weight:800;padding:9px 18px;border-radius:30px;font-size:.92rem}
+  .hero{background:radial-gradient(circle at 80% 12%,rgba(127,168,201,.4),transparent 50%),linear-gradient(180deg,var(--cream2),var(--cream));padding:64px 0 58px}
+  .hero .pill{display:inline-block;background:#fff;border:1px solid var(--sage);color:var(--sage-d);font-weight:800;font-size:.76rem;letter-spacing:1px;padding:5px 14px;border-radius:30px;text-transform:uppercase}
+  .hero h1{font-size:clamp(2.3rem,5.6vw,3.8rem);font-weight:600;margin:18px 0 10px;line-height:1.04}
+  .hero h1 em{font-style:italic;color:var(--sage-d)}
+  .hero p{font-size:1.18rem;max-width:560px;color:#5c6256;margin-bottom:26px}
+  .btn{display:inline-block;text-decoration:none;font-weight:800;padding:14px 26px;border-radius:30px;font-size:1rem}
+  .btn.s{background:var(--sage);color:#fff;border-bottom:3px solid var(--sage-d)}
+  .btn.o{background:transparent;border:2px solid var(--sky-d);color:var(--sky-d);margin-left:8px}
+  .badges{display:flex;gap:24px;flex-wrap:wrap;margin-top:30px}
+  .badge b{font-family:'Fraunces',serif;color:var(--sage-d);font-size:1.35rem;display:block;line-height:1}
+  .badge span{font-size:.82rem;color:var(--soft);font-weight:600}
+  section{padding:58px 0}
+  .head{max-width:640px;margin:0 auto;text-align:center}
+  .eyebrow{color:var(--sky-d);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:.78rem}
+  h2{font-size:clamp(1.8rem,4.3vw,2.6rem);font-weight:600;margin:7px 0 10px}
+  .head p{color:var(--soft);font-size:1.06rem}
+  .care{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:38px}
+  .carec{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 20px;text-align:center}
+  .carec .ic{width:54px;height:54px;border-radius:50%;background:var(--cream2);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.5rem;border:2px solid var(--sage)}
+  .carec h3{font-size:1.12rem;font-weight:600;margin-bottom:4px}
+  .carec p{font-size:.92rem;color:var(--soft)}
+  .place{background:var(--sage);color:#eef3e6}
+  .place h2{color:#fff}
+  .place .head p{color:#d6e3cb}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-top:34px}
+  .gph{background:rgba(255,255,255,.1);border:1px dashed rgba(255,255,255,.5);border-radius:14px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;text-align:center;color:#eef3e6;font-size:.82rem;padding:14px}
+  .rules{background:var(--cream2)}
+  .rulebox{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:center}
+  .rulebox .copy h2{text-align:left}
+  .rulebox .copy p{color:#55594c;margin-top:10px;font-size:1.04rem}
+  .rulelist{list-style:none;margin-top:14px}
+  .rulelist li{padding:8px 0 8px 30px;position:relative;font-weight:600;border-bottom:1px solid var(--line)}
+  .rulelist li:before{content:"🐾";position:absolute;left:0}
+  .ratecard{background:#fff;border:2px solid var(--warm);border-radius:16px;padding:26px;text-align:center}
+  .ratecard h3{font-size:1.4rem;color:var(--sage-d);margin-bottom:8px}
+  .ratecard .big{font-family:'Fraunces',serif;font-size:1.5rem;color:var(--ink);margin:6px 0}
+  .ratecard p{color:var(--soft);font-size:.94rem}
+  .ph{background:#fff3cf;color:#7a5a00;font-size:.7rem;padding:2px 7px;border-radius:4px;font-weight:800;white-space:nowrap}
+  .book{background:#fff}
+  .bookbox{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+  .bookbox .copy h2{text-align:left}
+  .bookbox .copy p{color:var(--soft);margin-top:8px}
+  .bookbox .copy li{margin:8px 0;list-style:none;padding-left:24px;position:relative;font-weight:600}
+  .bookbox .copy li:before{content:"✓";position:absolute;left:0;color:var(--sage);font-weight:800}
+  .form{background:var(--cream);border:2px solid var(--sage);border-radius:16px;padding:26px}
+  .form h3{color:var(--sage-d);font-size:1.4rem;margin-bottom:4px}
+  .form .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .form label{display:block;font-size:.78rem;font-weight:800;color:var(--soft);margin:11px 0 4px;text-transform:uppercase;letter-spacing:.4px}
+  .form input,.form select{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:9px;font-size:.95rem;font-family:inherit}
+  .form button{margin-top:15px;width:100%;background:var(--sage);color:#fff;border:none;padding:13px;border-radius:30px;font-weight:800;font-size:1rem;cursor:pointer}
+  .form .note{font-size:.74rem;color:var(--soft);margin-top:8px;text-align:center}
+  .find{background:var(--moss);color:#dfe9d6;text-align:center}
+  .find h2{color:#fff}
+  .find .addr{font-family:'Fraunces',serif;font-size:1.4rem;color:var(--warm);margin:8px 0}
+  .find .row{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:22px}
+  .find .fcard{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.3);border-radius:14px;padding:18px 24px;min-width:200px}
+  .find .fcard b{display:block;font-family:'Fraunces',serif;color:#fff;font-size:1.05rem;margin-bottom:3px}
+  .find .fcard span{font-size:.9rem;color:#cfe0c4}
+  footer{background:#27301f;color:#aebaa3;text-align:center;padding:34px 0;font-size:.9rem}
+  footer .disp{color:var(--warm);font-size:1.35rem;margin-bottom:6px}
+  @media(max-width:760px){.rulebox,.bookbox{grid-template-columns:1fr}.btn.o{margin-left:0;margin-top:10px}.rulebox .copy h2,.bookbox .copy h2{text-align:center}.form .two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="announce">🐾 Race weekends &amp; holidays fill first — request your dates early to hold a run</div>
+
+<div class="nav">
+  <div class="wrap">
+    <div class="brand"><span class="mark">🐾</span> Lake Country Kennels</div>
+    <a class="call" href="tel:6073293118">📞 (607) 329-3118</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="pill">Dog &amp; cat boarding · Watkins Glen, NY</span>
+    <h1>Leave town knowing<br><em>they're in good hands.</em></h1>
+    <p>A quiet country kennel near Watkins Glen — clean runs, a personalized feeding schedule, and someone who'll give your dog or cat the same routine you would. Request your dates and we'll confirm the spot.</p>
+    <a class="btn s" href="#book">Request boarding dates</a>
+    <a class="btn o" href="#place">See the place</a>
+    <div class="badges">
+      <div class="badge"><b>Dogs &amp; cats</b><span>All breeds &amp; small animals</span></div>
+      <div class="badge"><b>Quiet &amp; rural</b><span>Away from in-town noise</span></div>
+      <div class="badge"><b>Near WGI</b><span>Corning · Horseheads · Big Flats</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="care">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">How we care for them</p>
+      <h2>Their routine, kept — not just a cage</h2>
+      <p>Boarding is a trust decision. Here's what actually happens while you're away.</p>
+    </div>
+    <div class="care">
+      <div class="carec"><div class="ic">🐕</div><h3>Dogs of every breed</h3><p>Roomy runs in a calm country setting, with daily care and attention.</p></div>
+      <div class="carec"><div class="ic">🐈</div><h3>Cats &amp; small animals</h3><p>A quieter space for cats and small pets, kept separate from the dogs.</p></div>
+      <div class="carec"><div class="ic">🍽️</div><h3>Personalized feeding</h3><p>We keep your pet on their own food and schedule to avoid an upset stomach.</p></div>
+      <div class="carec"><div class="ic">💊</div><h3>Medications &amp; supplements</h3><p>We administer meds and supplements — just talk it through with us before booking.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="place" id="place">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow" style="color:#d6e3cb">See the place</p>
+      <h2>Come see where they'll stay</h2>
+      <p>Worried owners want to see the actual kennel, not a stock photo. Real photos of the runs, the grounds and a few happy guests go here.</p>
+    </div>
+    <div class="gallery">
+      <div class="gph"><span class="ph">PHOTO</span> &nbsp;Indoor runs</div>
+      <div class="gph"><span class="ph">PHOTO</span> &nbsp;Country grounds &amp; play yard</div>
+      <div class="gph"><span class="ph">PHOTO</span> &nbsp;Cat &amp; small-animal area</div>
+      <div class="gph"><span class="ph">PHOTO</span> &nbsp;A few of our guests</div>
+    </div>
+    <p style="text-align:center;margin-top:18px;font-size:.84rem;color:#d6e3cb">Add 6–8 current photos of the facility and guests — the single biggest thing that turns a nervous first-timer into a booking.</p>
+  </div>
+</section>
+
+<section class="rules">
+  <div class="wrap">
+    <div class="rulebox">
+      <div class="copy">
+        <p class="eyebrow">Before you book</p>
+        <h2>What to have ready at drop-off</h2>
+        <p>A few simple things keep every pet in our care safe and healthy. Knowing them up front saves a scramble on the day you leave.</p>
+        <ul class="rulelist">
+          <li>Current <strong>rabies</strong> and <strong>bordetella (kennel cough)</strong> records at arrival</li>
+          <li>Your dog on a <strong>leash</strong> when you pull in, for everyone's safety</li>
+          <li>Tell us about <strong>any medications</strong> before booking so we can plan for them</li>
+          <li>We are not able to accept <strong>aggressive dogs</strong></li>
+        </ul>
+      </div>
+      <div class="ratecard">
+        <h3>Boarding rates</h3>
+        <p class="big"><span class="ph">PLACEHOLDER</span> per-night rate</p>
+        <p>Dog, cat and multi-pet nightly rates would be listed clearly here so owners can plan — confirm current pricing before publishing. Medication administration may carry a small additional charge.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="bookbox">
+      <div class="copy">
+        <p class="eyebrow">Request dates</p>
+        <h2>Hold your dates online</h2>
+        <p>No more phone tag inside a narrow window. Send your check-in and check-out dates and a little about your pet, and we'll confirm whether we have the spot.</p>
+        <ul>
+          <li>Pick your check-in and check-out dates</li>
+          <li>Tell us about your pet and its food</li>
+          <li>We confirm the spot — then it's booked</li>
+        </ul>
+        <p style="font-size:.82rem;color:var(--soft);margin-top:12px">Reservations can also be made by phone between 7&nbsp;AM and 7&nbsp;PM at (607)&nbsp;329-3118 or (607)&nbsp;973-2163.</p>
+      </div>
+      <div class="form">
+        <h3>Request a stay</h3>
+        <form onsubmit="return false">
+          <label>Your name</label>
+          <input type="text" placeholder="First &amp; last name">
+          <div class="two">
+            <div><label>Phone</label><input type="tel" placeholder="(607) 000-0000"></div>
+            <div><label>Email</label><input type="email" placeholder="you@email.com"></div>
+          </div>
+          <div class="two">
+            <div><label>Check-in</label><input type="text" placeholder="mm/dd"></div>
+            <div><label>Check-out</label><input type="text" placeholder="mm/dd"></div>
+          </div>
+          <label>Pet type</label>
+          <select><option>Dog</option><option>Cat</option><option>Small animal</option><option>More than one pet</option></select>
+          <label>Vaccines current (rabies + bordetella)?</label>
+          <select><option>Yes</option><option>Not sure — I'll check</option></select>
+          <button>Send my date request</button>
+        </form>
+        <p class="note">We reply within 24–48 hours — please check your spam folder. Aggressive dogs cannot be accepted.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="find">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--warm)">Find us</p>
+    <h2>A quiet drive from town</h2>
+    <p class="addr"><span class="ph">PLACEHOLDER</span> street address, Watkins Glen, NY 14891</p>
+    <p style="color:#cfe0c4">Easy to reach from Watkins Glen, Corning, Horseheads and Big Flats — handy for race weekends at the track.</p>
+    <div class="row">
+      <div class="fcard"><b>Call hours</b><span>7 AM – 7 PM · (607) 329-3118</span></div>
+      <div class="fcard"><b>Second line</b><span>(607) 973-2163</span></div>
+      <div class="fcard"><b>Email</b><span>lauriebeth@lakecountrykennel.com</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="disp">Lake Country Kennels</div>
+    <p>Watkins Glen, NY · (607) 329-3118 · Dog &amp; cat boarding in a quiet country setting</p>
+    <p style="margin-top:10px;font-size:.78rem;color:#7f8a74">Preview concept prepared by Onyx Rise Media for review. Street address, nightly rates, hours and facility photos to be confirmed and supplied by the owner. Rabies &amp; bordetella required at arrival.</p>
+  </div>
+</footer>
+</body>
+</html>

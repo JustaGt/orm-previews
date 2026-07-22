@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Woody's Tackle and Gift Shop — Route 3, Pulaski, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#9e2b25; --red-dk:#7c1f1a; --cream:#fdf6e9; --walnut:#4a352a;
+    --pine:#33544a; --sand:#efe3cc;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'PT Sans',sans-serif;color:var(--walnut);background:var(--cream);line-height:1.6}
+  .slab{font-family:'Alfa Slab One',serif;font-weight:400}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+
+  .topbar{background:var(--walnut);color:var(--sand);font-size:.9rem;padding:8px 0}
+  .topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+  .topbar a{color:#f3c98a;text-decoration:none;font-weight:700}
+
+  .hero{background:var(--red);color:var(--cream);text-align:center;padding:70px 0 60px;border-bottom:8px double var(--cream);position:relative}
+  .hero .sign{display:inline-block;border:3px solid var(--cream);border-radius:6px;padding:26px 34px;background:var(--red-dk);box-shadow:0 6px 0 rgba(0,0,0,.25)}
+  .hero h1{font-size:clamp(1.7rem,5vw,2.9rem);letter-spacing:.02em;line-height:1.15}
+  .hero .est{letter-spacing:.3em;text-transform:uppercase;font-size:.75rem;margin-top:10px;color:#f3c98a}
+  .hero p.sub{max-width:52ch;margin:26px auto 28px;font-size:1.08rem}
+  .btn{display:inline-block;background:var(--cream);color:var(--red-dk);font-weight:700;text-decoration:none;padding:13px 28px;border-radius:4px;margin:0 6px}
+  .btn.o{background:transparent;color:var(--cream);border:2px solid var(--cream)}
+
+  section{padding:58px 0}
+  h2{font-family:'Alfa Slab One',serif;font-weight:400;color:var(--red-dk);font-size:1.55rem;margin-bottom:8px}
+  .sub2{color:var(--pine);font-weight:700;margin-bottom:26px}
+
+  .depts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+  .dept{background:#fff;border:2px solid var(--sand);border-radius:6px;padding:22px 18px;text-align:center}
+  .dept .ico{font-size:1.9rem;display:block;margin-bottom:8px}
+  .dept h3{font-size:1.02rem;color:var(--walnut);margin-bottom:6px}
+  .dept p{font-size:.88rem}
+
+  .seasons{background:var(--pine);color:var(--cream)}
+  .seasons h2{color:var(--cream)}
+  .seasons .sub2{color:#cfe0d5}
+  .season-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+  .season{border-left:4px solid #f3c98a;padding:6px 0 6px 16px}
+  .season b{display:block;font-size:1.03rem;margin-bottom:4px}
+  .season p{font-size:.92rem}
+
+  .callout{background:var(--sand);text-align:center}
+  .callout .inner{max-width:60ch;margin:0 auto}
+  .callout .tel{font-family:'Alfa Slab One',serif;font-size:1.7rem;color:var(--red-dk);display:block;margin:14px 0;text-decoration:none}
+
+  .find .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .find h2{margin-bottom:14px}
+  .mapbox{background:#fff;border:2px dashed var(--sand);border-radius:6px;padding:40px;text-align:center;color:#9b8a75;font-size:.9rem}
+
+  footer{background:var(--walnut);color:#cbb9a6;text-align:center;font-size:.85rem;padding:20px 0}
+  @media(max-width:720px){.find .wrap{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>7402 County Route 3, Pulaski NY — on the way to Port Ontario &amp; Sandy Pond</span>
+    <a href="tel:+13152982378">(315) 298-2378</a>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="sign">
+      <h1 class="slab">WOODY'S<br>TACKLE &amp; GIFT SHOP</h1>
+      <div class="est">Pulaski, New York</div>
+    </div>
+    <p class="sub">Bait for the river, shells for the blind, kibble for the dog waiting in the truck, and a gift for whoever let you go fishing all weekend. One stop on Route 3 covers it.</p>
+    <a class="btn" href="tel:+13152982378">Call Ahead</a>
+    <a class="btn o" href="#find">Get Directions</a>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Five departments under one roof</h2>
+    <div class="sub2">The stuff you forgot, the stuff you ran out of, and the stuff you didn't know you needed.</div>
+    <div class="depts">
+      <div class="dept"><span class="ico">🎣</span><h3>Lake &amp; River Tackle</h3><p>Rigs, hooks, skein and beads for the Salmon River; spoons and sticks for the lake and Sandy Pond.</p></div>
+      <div class="dept"><span class="ico">🧊</span><h3>Ice Fishing</h3><p>Jigs, tip-ups, spikes and hand warmers when the ponds harden up — no winter shutdown here.</p></div>
+      <div class="dept"><span class="ico">🦌</span><h3>Hunting &amp; Ammo</h3><p>Ammunition and hunting supplies for deer, duck and small game seasons across Oswego County.</p></div>
+      <div class="dept"><span class="ico">🐾</span><h3>Pet Section</h3><p>Feed and supplies — because the dog rides along on every trip anyway.</p></div>
+      <div class="dept"><span class="ico">🎁</span><h3>Full Gift Shop</h3><p>Camp-and-cottage gifts, local souvenirs, and peace offerings for the folks back home.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="seasons">
+  <div class="wrap">
+    <h2>Stocked for the calendar Pulaski actually runs on</h2>
+    <div class="sub2">Four seasons, four different carloads pulling in off Route 3.</div>
+    <div class="season-row">
+      <div class="season"><b>Sept–Nov · The Run</b><p>Kings, cohos and the fall crowd. Terminal tackle, waders' odds and ends, and honest intel at the counter.</p></div>
+      <div class="season"><b>Dec–Mar · Hard Water</b><p>Ice gear for Sandy Pond and the back bays, plus hunting-season supplies through the late seasons.</p></div>
+      <div class="season"><b>Apr–May · Steelhead &amp; Opener</b><p>Drop-back steelhead tackle and everything for trout opener weekend.</p></div>
+      <div class="season"><b>Jun–Aug · Camp Season</b><p>Pond and lake tackle, pet supplies and the gift shop in full swing for cottage guests.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="callout">
+  <div class="wrap inner">
+    <h2>Wondering what's biting — or if it's in stock?</h2>
+    <p>Save the trip and ask. A thirty-second call beats an hour's drive.</p>
+    <a class="tel" href="tel:+13152982378">(315) 298-2378</a>
+    <p style="font-size:.85rem;color:#8a7963">[PLACEHOLDER — confirm current hours with owner before publish]</p>
+  </div>
+</section>
+
+<section class="find" id="find">
+  <div class="wrap">
+    <div>
+      <h2>On the way to the water</h2>
+      <p>7402 County Route 3, Pulaski, NY 13142 — the Route 3 corridor between Pulaski village and Port Ontario, minutes from Selkirk Shores State Park, the Salmon River estuary and Sandy Pond launches.</p>
+      <p style="margin-top:12px"><b>Phone:</b> <a href="tel:+13152982378" style="color:var(--red-dk)">(315) 298-2378</a></p>
+    </div>
+    <div class="mapbox">[PLACEHOLDER — embed Google map pin]</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Woody's Tackle and Gift Shop · Pulaski, New York · © <span id="y"></span></div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>

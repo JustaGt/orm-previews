@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Power's Taxidermy — Whitetail, Bird, Fish &amp; Exotic Mounts · Canisteo, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --char:#161a17; --char2:#1f2621; --forest:#2f3d30; --moss:#6f7d5a;
+    --bone:#e8e0cf; --tan:#c9b184; --brass:#c9a227; --ink:#e8e0cf; --muted:#9aa091; --line:#33392f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Barlow',sans-serif;color:var(--ink);background:var(--char);line-height:1.65}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;letter-spacing:.01em}
+  .cond{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.12em}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  /* header */
+  .bar{background:#0f120f;border-bottom:1px solid var(--line)}
+  .bar .wrap{display:flex;justify-content:space-between;align-items:center;padding:12px 22px;flex-wrap:wrap;gap:10px}
+  .logo{font-family:'Cormorant Garamond';font-size:1.4rem;color:var(--bone)}
+  .logo b{color:var(--brass)}
+  .bar .est{font-family:'Barlow Condensed';letter-spacing:.18em;color:var(--muted);font-size:.82rem}
+  /* hero */
+  .hero{position:relative;
+    background:
+      radial-gradient(120% 90% at 70% 10%,rgba(111,125,90,.22),transparent 60%),
+      linear-gradient(180deg,#12160f 0%,#161a17 60%,#1a1f19 100%);
+    border-bottom:1px solid var(--line)}
+  .hero .wrap{padding:74px 22px 82px}
+  .hero .kicker{font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:.22em;color:var(--brass);font-size:.9rem;margin-bottom:18px}
+  .hero h1{font-size:clamp(2.2rem,5.4vw,3.8rem);line-height:1.06;color:var(--bone);max-width:20ch}
+  .hero h1 em{font-style:italic;color:var(--tan)}
+  .hero p{font-size:1.15rem;color:#c3c9b7;max-width:52ch;margin:22px 0 30px}
+  .btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:.1em;font-weight:600;
+    font-size:1rem;padding:14px 26px;border-radius:2px;text-decoration:none;display:inline-block}
+  .btn-brass{background:var(--brass);color:#161a17}
+  .btn-brass:hover{background:#b8931f}
+  .btn-line{border:1px solid var(--moss);color:var(--bone)}
+  .btn-line:hover{background:rgba(111,125,90,.18)}
+  /* meta strip */
+  .meta{background:#0f120f;border-bottom:1px solid var(--line)}
+  .meta .wrap{display:flex;gap:34px;flex-wrap:wrap;justify-content:center;padding:16px 22px}
+  .meta span{font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-size:.88rem}
+  .meta b{color:var(--tan)}
+  /* section */
+  section{padding:64px 0}
+  .head{max-width:60ch;margin-bottom:32px}
+  .head .kicker{font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:.2em;color:var(--moss);font-size:.85rem}
+  .head h2{font-size:clamp(1.8rem,4vw,2.6rem);color:var(--bone);margin:6px 0 10px}
+  .head p{color:#adb3a3}
+  /* work gallery */
+  .work{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+  .mount{position:relative;aspect-ratio:3/4;border:1px solid var(--line);border-radius:4px;overflow:hidden;
+    display:flex;flex-direction:column;justify-content:flex-end;padding:16px;
+    background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.55)),linear-gradient(150deg,#2f3d30,#161a17)}
+  .mount .cat{font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;color:var(--brass)}
+  .mount h3{font-size:1.35rem;color:var(--bone);line-height:1.1;margin-top:2px}
+  .mount p{font-size:.88rem;color:#c3c9b7;margin-top:6px}
+  .ph{font-size:.8rem;color:#6f7560;font-style:italic;margin-top:14px}
+  /* dropoff steps */
+  .drop{background:linear-gradient(180deg,#1a1f19,#12160f)}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+  .step{background:#191e18;border:1px solid var(--line);border-top:3px solid var(--brass);border-radius:5px;padding:22px}
+  .step .n{font-family:'Cormorant Garamond';font-size:2.2rem;color:var(--tan);line-height:1}
+  .step h3{font-size:1.3rem;color:var(--bone);margin:6px 0 6px}
+  .step p{font-size:.94rem;color:#adb3a3}
+  .step .note{font-size:.8rem;color:#6f7560;font-style:italic;margin-top:8px}
+  /* heritage split */
+  .her .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:center}
+  .her .big{font-family:'Cormorant Garamond';font-size:clamp(3rem,8vw,5rem);color:var(--brass);line-height:.9}
+  .her .big small{display:block;font-family:'Barlow Condensed';font-size:1rem;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;margin-top:10px}
+  .her h2{font-size:clamp(1.7rem,3.6vw,2.4rem);color:var(--bone);margin-bottom:12px}
+  .her p{color:#adb3a3;margin-bottom:10px}
+  /* field care */
+  .care ul{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:10px}
+  .care li{background:#191e18;border:1px solid var(--line);border-left:3px solid var(--moss);border-radius:4px;padding:16px 18px}
+  .care li b{color:var(--tan);display:block;font-family:'Barlow Condensed';letter-spacing:.06em;text-transform:uppercase;font-size:.86rem;margin-bottom:4px}
+  .care li span{font-size:.93rem;color:#b4b9a8}
+  /* contact */
+  .contact{background:#0f120f;border-top:1px solid var(--line)}
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:60px 22px}
+  .contact h2{color:var(--bone);font-size:clamp(1.7rem,3.6vw,2.4rem);margin-bottom:10px}
+  .contact .big{font-family:'Cormorant Garamond';font-size:2rem;color:var(--brass);text-decoration:none;display:block;margin:6px 0}
+  .contact p{color:#adb3a3}
+  form{display:grid;gap:11px}
+  input,select,textarea{font-family:inherit;padding:12px 14px;background:#191e18;border:1px solid var(--line);border-radius:4px;color:var(--bone);font-size:1rem}
+  input::placeholder,textarea::placeholder{color:#727865}
+  form button{border:none;cursor:pointer}
+  footer{background:#0b0d0a;color:#6f7560;text-align:center;font-size:.84rem;padding:22px}
+  @media(max-width:760px){.her .wrap,.contact .wrap{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap">
+  <span class="logo">Power's <b>Taxidermy</b></span>
+  <span class="est">Canisteo, NY · Established 1991</span>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="kicker">Southern Tier taxidermy studio</div>
+  <h1>Mounts you'll still be proud of <em>thirty seasons</em> from now.</h1>
+  <p>Whitetail, birds, fish, and small game out of the Canisteo valley — and full-mount exotic work for trophies brought back from far beyond it. Same hands on the bench since 1991.</p>
+  <div class="btns">
+    <a class="btn btn-brass" href="#dropoff">Arrange a drop-off</a>
+    <a class="btn btn-line" href="tel:16076989205">Call (607) 698-9205</a>
+  </div>
+</div></header>
+
+<div class="meta"><div class="wrap">
+  <span><b>Since 1991</b> · 30+ years</span>
+  <span>Whitetail · <b>Bird</b> · Fish · Small game</span>
+  <span><b>Exotic &amp; international</b> mounts</span>
+  <span>Canisteo, NY</span>
+</div></div>
+
+<section><div class="wrap">
+  <div class="head">
+    <div class="kicker">The work</div>
+    <h2>What comes off the bench</h2>
+    <p>From a first buck to a bird you want done right, every mount gets the same patience. Bring in what you've got — here's the range we handle.</p>
+  </div>
+  <div class="work">
+    <div class="mount"><span class="cat">Big game</span><h3>Whitetail &amp; deer</h3><p>Shoulder mounts, pedestals, and European skulls done clean, with a natural set to the cape.</p></div>
+    <div class="mount"><span class="cat">Wingshooting</span><h3>Birds</h3><p>Turkey, waterfowl, and upland birds — feathers set right so they hold their look for decades.</p></div>
+    <div class="mount"><span class="cat">On the water</span><h3>Fish</h3><p>Skin mounts and reproductions of your catch, painted back to how it looked coming out of the water.</p></div>
+    <div class="mount"><span class="cat">The unusual</span><h3>Exotic &amp; international</h3><p>Trophies from far off — full-mount and life-size work most local shops turn away.</p></div>
+  </div>
+  <p class="ph">Gallery tiles are placeholders — to be filled with Power's own finished mounts before launch.</p>
+</div></section>
+
+<section class="drop" id="dropoff"><div class="wrap">
+  <div class="head">
+    <div class="kicker">Before you bring it in</div>
+    <h2>How a drop-off works</h2>
+    <p>A little care in the field makes a better mount. Here's the short version — call first and we'll walk you through anything specific to your animal.</p>
+  </div>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><h3>Call ahead</h3><p>Ring the shop before you drive out so we know what's coming and can talk through the pose you want.</p><p class="note">(607) 698-9205</p></div>
+    <div class="step"><div class="n">2</div><h3>Keep it cold</h3><p>Get the animal cool and, for a cape or bird, get it frozen if you can't come straight in. It protects the hide and feathers.</p></div>
+    <div class="step"><div class="n">3</div><h3>Drop it off</h3><p>Bring it to the Canisteo shop. We'll log the work, talk pose and mount style, and set expectations up front.</p></div>
+    <div class="step"><div class="n">4</div><h3>We do the rest</h3><p>Careful bench work through the off-season — you get a call when your mount is ready to come home.</p><p class="note">Turnaround varies by season and species — ask when you drop off.</p></div>
+  </div>
+</div></section>
+
+<section class="her"><div class="wrap">
+  <div>
+    <div class="big">1991<small>On the bench ever since</small></div>
+  </div>
+  <div>
+    <div class="kicker" style="font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:.2em;color:var(--moss);font-size:.85rem">Why hunters keep coming back</div>
+    <h2>Three decades of steady hands.</h2>
+    <p>Taxidermy rewards patience more than anything else, and there's no substitute for having done it since 1991. Enough seasons behind the bench to handle a routine shoulder mount and a once-in-a-lifetime exotic with the same care.</p>
+    <p>Local enough for the Canisteo-valley hunter; experienced enough for the trophy that came from the other side of the world.</p>
+  </div>
+</div></section>
+
+<section class="care"><div class="wrap">
+  <div class="head">
+    <div class="kicker">Field notes</div>
+    <h2>Give your trophy the best start</h2>
+    <p>Quick things that make a real difference before your animal ever reaches the shop. When in doubt, call — better a question than a ruined cape.</p>
+  </div>
+  <ul>
+    <li><b>Don't cut the throat</b><span>For a shoulder mount, avoid cutting up the brisket or throat — that's the part we need whole for the cape.</span></li>
+    <li><b>Cool it fast</b><span>Heat is the enemy of hair and feathers. Get the animal cool quickly and out of the sun.</span></li>
+    <li><b>Freeze if you can't come in</b><span>Can't get to Canisteo right away? Bag it and freeze it rather than let it sit.</span></li>
+    <li><b>Handle fish &amp; birds gently</b><span>Keep fins, tails, and feathers from breaking — wrap them and call for the details.</span></li>
+  </ul>
+</div></section>
+
+<section class="contact"><div class="wrap">
+  <div>
+    <div class="kicker" style="font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:.2em;color:var(--moss);font-size:.85rem">Get in touch</div>
+    <h2>Bring your trophy to Canisteo.</h2>
+    <a class="big" href="tel:16076989205">(607) 698-9205</a>
+    <p>2 Elmwood Pl<br>Canisteo, NY 14823</p>
+    <p style="margin-top:10px;color:#8a9079">Call before a drop-off so someone's here to take your work in.</p>
+  </div>
+  <form onsubmit="return false">
+    <input type="text" placeholder="Your name" required>
+    <input type="tel" placeholder="Phone" required>
+    <select>
+      <option>What have you got?</option>
+      <option>Whitetail / deer</option>
+      <option>Bird (turkey / waterfowl / upland)</option>
+      <option>Fish</option>
+      <option>Small game</option>
+      <option>Exotic / international mount</option>
+    </select>
+    <textarea rows="3" placeholder="Tell us about the animal and the mount you're after"></textarea>
+    <button class="btn btn-brass" type="submit">Send to the studio</button>
+  </form>
+</div></section>
+
+<footer>Power's Taxidermy · 2 Elmwood Pl, Canisteo, NY 14823 · (607) 698-9205 · Established 1991 — preview concept by Onyx Rise Media</footer>
+
+</body>
+</html>

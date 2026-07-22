@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pleasant Lake Campground — Lakeside Camping in Pennellville, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{--lake:#1d6f8f;--lake-dk:#134d64;--sand:#f4e9d3;--pine:#31633c;--sun:#f2a93b;--ink:#233138;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Nunito',sans-serif;color:var(--ink);background:#fdfaf3;line-height:1.65;}
+  h1,h2,h3{font-family:'Fredoka',sans-serif;font-weight:600;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px;}
+  /* Hero */
+  .hero{background:linear-gradient(180deg,#7cc3d8 0%,var(--lake) 78%);color:#fff;padding:58px 0 0;text-align:center;overflow:hidden;}
+  .hero h1{font-size:clamp(2rem,5.5vw,3.2rem);line-height:1.1;max-width:20ch;margin:0 auto 14px;}
+  .hero p{max-width:52ch;margin:0 auto 26px;font-size:1.1rem;color:#eaf6fa;}
+  .cta{display:inline-block;background:var(--sun);color:#4a3208;font-weight:800;text-decoration:none;padding:15px 32px;border-radius:40px;font-size:1.05rem;box-shadow:0 4px 0 #c07f14;}
+  .cta:hover{transform:translateY(-2px);}
+  .waves{display:block;width:100%;height:70px;margin-top:46px;}
+  /* Rates strip */
+  .rates{background:var(--sand);padding:0 0 8px;}
+  .rates .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:-34px;}
+  .rate{background:#fff;border-radius:14px;padding:22px;text-align:center;box-shadow:0 6px 18px rgba(19,77,100,.12);}
+  .rate b{display:block;font-family:'Fredoka',sans-serif;font-size:2rem;color:var(--lake-dk);}
+  .rate span{font-size:.86rem;color:#5c6b73;}
+  .rates p.fine{text-align:center;font-size:.82rem;color:#7a6f57;padding:14px 0 10px;}
+  section{padding:58px 0;}
+  .kicker{display:inline-block;background:var(--pine);color:#fff;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:800;padding:5px 14px;border-radius:20px;margin-bottom:14px;}
+  h2{font-size:2rem;color:var(--lake-dk);margin-bottom:12px;}
+  /* Sites */
+  .sites{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px;}
+  .site{border:2px solid #e3dcc9;border-radius:14px;padding:26px;background:#fff;}
+  .site h3{color:var(--pine);font-size:1.3rem;margin-bottom:8px;}
+  .site ul{list-style:none;margin-top:10px;}
+  .site li{padding:7px 0 7px 28px;position:relative;font-size:.97rem;}
+  .site li:before{content:"✦";position:absolute;left:4px;color:var(--sun);font-weight:800;}
+  /* Lake band */
+  .lakeband{background:var(--lake-dk);color:#dceef5;}
+  .lakeband h2{color:#fff;}
+  .lakeband .cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-top:26px;}
+  .lakeband .col{background:rgba(255,255,255,.07);border-radius:12px;padding:24px;}
+  .lakeband .col h3{color:var(--sun);font-size:1.15rem;margin-bottom:8px;}
+  /* Seasonal */
+  .seasonal .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;}
+  .fairbox{background:var(--sand);border-radius:14px;padding:30px;border:2px dashed var(--sun);}
+  .fairbox h3{color:var(--lake-dk);font-size:1.25rem;margin-bottom:8px;}
+  /* Form */
+  .reserve{background:#fff;border-top:2px solid #e3dcc9;}
+  .reserve .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;}
+  form label{display:block;font-weight:800;font-size:.85rem;margin:13px 0 5px;}
+  form input,form select,form textarea{width:100%;padding:12px;border:2px solid #d8d0bc;border-radius:10px;font-family:inherit;font-size:.95rem;}
+  form button{margin-top:18px;background:var(--lake);color:#fff;border:none;padding:15px 34px;font-weight:800;font-size:1rem;border-radius:40px;cursor:pointer;}
+  form button:hover{background:var(--lake-dk);}
+  .contact p{margin-bottom:12px;}
+  .contact a{color:var(--lake);font-weight:800;text-decoration:none;}
+  footer{background:var(--lake-dk);color:#a8cbd9;text-align:center;padding:24px;font-size:.85rem;}
+  @media(max-width:760px){.rates .wrap,.sites,.lakeband .cols,.seasonal .wrap,.reserve .wrap{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>A quiet lake of our own, twenty minutes north of Syracuse.</h1>
+    <p>Pleasant Lake Campground in Pennellville — full-hookup sites, a swimmable private lake, and a camp store that knows your order by July.</p>
+    <a class="cta" href="#reserve">Request a Reservation</a>
+  </div>
+  <svg class="waves" viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 C240,70 480,10 720,35 C960,60 1200,15 1440,40 L1440,70 L0,70 Z" fill="#f4e9d3"/></svg>
+</div>
+
+<div class="rates">
+  <div class="wrap">
+    <div class="rate"><b>$38</b><span>per night · water, sewer &amp; electric</span></div>
+    <div class="rate"><b>$180</b><span>per week · full hookup</span></div>
+    <div class="rate"><b>$480</b><span>per month · full hookup</span></div>
+  </div>
+  <p class="fine">Posted rates — call (315) 668-2074 for current seasonal-site pricing and availability.</p>
+</div>
+
+<section id="sites">
+  <div class="wrap">
+    <span class="kicker">Sites &amp; Hookups</span>
+    <h2>Pull in, hook up, slow down.</h2>
+    <div class="sites">
+      <div class="site">
+        <h3>Full-Hookup RV Sites</h3>
+        <ul>
+          <li>Water, sewer &amp; electric at every full-hookup site</li>
+          <li>Room for slide-outs and awnings</li>
+          <li>Nightly, weekly &amp; monthly stays</li>
+          <li>Clean bathhouses + on-site laundry</li>
+        </ul>
+      </div>
+      <div class="site">
+        <h3>Seasonal Sites</h3>
+        <ul>
+          <li>Spend the whole summer on the lake</li>
+          <li>A tight-knit crowd of returning families</li>
+          <li>Set up once — your spot's here all season</li>
+          <li>Ask about next-season openings early; they go fast</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lakeband">
+  <div class="wrap">
+    <span class="kicker" style="background:var(--sun);color:#4a3208;">The Lake</span>
+    <h2>The reason it's called Pleasant.</h2>
+    <div class="cols">
+      <div class="col"><h3>Swim</h3><p>A private lake without the public-beach crowds — easy entry, kid-friendly water, and space to float all afternoon.</p></div>
+      <div class="col"><h3>Fish</h3><p>Cast off the shore before breakfast. Panfish and bass keep young anglers busy all weekend.</p></div>
+      <div class="col"><h3>Sit still</h3><p>Coffee at the water's edge, loons at dusk. Nobody's in a hurry here — that's the point.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="seasonal">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Around Camp</span>
+      <h2>Little store, big porch, easy weekends.</h2>
+      <p>The camp store covers what you forgot — ice, firewood, s'more supplies. Bathhouses are kept clean (campers say so in their reviews, not just us), laundry's on-site, and the Wigwam Drive loop is quiet by ten.</p>
+    </div>
+    <div class="fairbox">
+      <h3>Coming for the New York State Fair?</h3>
+      <p>The fairgrounds are an easy drive from Pennellville — camp here, skip the fairground lots, and come home to the lake each night. Fair-week sites are limited; book ahead.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reserve" id="reserve">
+  <div class="wrap">
+    <div class="contact">
+      <span class="kicker">Reserve</span>
+      <h2>Pick your dates, we'll find your site.</h2>
+      <p>Send a request and we'll confirm availability by phone or email — usually the same day.</p>
+      <p><b>Pleasant Lake Campground</b><br>65 Wigwam Dr, Pennellville, NY 13132</p>
+      <p>Office: <a href="tel:13156682074">(315) 668-2074</a><br>Email: <a href="mailto:pleasantlakecampground@gmail.com">pleasantlakecampground@gmail.com</a></p>
+    </div>
+    <form>
+      <h3 style="color:var(--lake-dk);font-size:1.3rem;">Reservation request</h3>
+      <label>Name</label><input type="text" placeholder="Your name">
+      <label>Phone or email</label><input type="text" placeholder="Best way to reach you">
+      <label>Site type</label>
+      <select><option>Full-hookup RV site</option><option>Seasonal site inquiry</option><option>Tent camping</option></select>
+      <label>Dates</label><input type="text" placeholder="e.g., July 24–27">
+      <label>Anything we should know?</label><textarea rows="3" placeholder="Rig length, first visit, Fair week…"></textarea>
+      <button type="submit">Send Request</button>
+    </form>
+  </div>
+</section>
+
+<footer>Pleasant Lake Campground · 65 Wigwam Dr, Pennellville, NY 13132 · (315) 668-2074</footer>
+
+</body>
+</html>

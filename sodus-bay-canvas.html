@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sodus Bay Canvas — Marine Canvas Repair, Zippers & Covers | Sodus Point, NY</title>
+<meta name="description" content="Marine canvas repair on Sodus Bay: re-stitching, zipper replacement, cockpit covers and mooring covers, measured and fitted right at Sodus Point. (315) 483-6497.">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#132a43; --navy-deep:#0c1d30; --ecru:#f3ecdd; --ecru-2:#e9dfc8;
+    --brass:#b98a3c; --brass-lt:#d4a955;
+    --ink:#22303f; --stitch:repeating-linear-gradient(90deg,var(--brass) 0 14px,transparent 14px 24px);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--ecru);line-height:1.6}
+  h1,h2,h3{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.04em}
+  .stitch{height:4px;background:var(--stitch)}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  /* header */
+  header{background:var(--navy);color:var(--ecru);padding:14px 0}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+  .brand{font-family:'Oswald',sans-serif;font-size:1.35rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+  .brand span{color:var(--brass-lt)}
+  .call-btn{background:var(--brass);color:#fff;text-decoration:none;font-weight:600;padding:10px 18px;border-radius:3px}
+  .call-btn:hover{background:var(--brass-lt)}
+  /* hero */
+  .hero{background:linear-gradient(rgba(12,29,48,.88),rgba(19,42,67,.92)),var(--navy-deep);color:var(--ecru);padding:74px 0 66px;position:relative}
+  .hero h1{font-size:clamp(1.9rem,4.6vw,3.1rem);line-height:1.15;max-width:19ch}
+  .hero h1 em{font-style:normal;color:var(--brass-lt)}
+  .hero p.sub{margin:18px 0 8px;font-size:1.15rem;max-width:56ch;color:#dfe7ef}
+  .hero .meta{color:#9fb2c5;font-size:.95rem;margin-bottom:26px}
+  .hero .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;text-decoration:none;font-weight:600;padding:13px 24px;border-radius:3px}
+  .btn-brass{background:var(--brass);color:#fff}
+  .btn-brass:hover{background:var(--brass-lt)}
+  .btn-ghost{border:2px solid var(--ecru);color:var(--ecru)}
+  .btn-ghost:hover{background:var(--ecru);color:var(--navy)}
+  /* repair list */
+  section{padding:58px 0}
+  .kicker{color:var(--brass);font-weight:700;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:.85rem}
+  h2{font-size:clamp(1.5rem,3.2vw,2.1rem);color:var(--navy);margin:6px 0 26px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:18px}
+  .card{background:#fff;border-top:4px solid var(--brass);padding:22px;box-shadow:0 2px 8px rgba(19,42,67,.08)}
+  .card h3{color:var(--navy);font-size:1.05rem;margin-bottom:8px}
+  .card p{font-size:.97rem}
+  /* repair vs replace */
+  .rvr{background:var(--navy);color:var(--ecru)}
+  .rvr h2{color:var(--ecru)}
+  .rvr .cols{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .rvr .col{background:rgba(255,255,255,.06);padding:24px;border-left:4px solid var(--brass)}
+  .rvr .col h3{color:var(--brass-lt);margin-bottom:10px;font-size:1.05rem}
+  .rvr p{color:#dfe7ef;font-size:.98rem}
+  @media(max-width:700px){.rvr .cols{grid-template-columns:1fr}}
+  /* calendar */
+  .cal .row{display:flex;gap:18px;align-items:flex-start;background:#fff;padding:18px 22px;margin-bottom:12px;border-left:4px solid var(--navy)}
+  .cal .season{min-width:110px;font-family:'Oswald',sans-serif;font-weight:600;color:var(--brass);text-transform:uppercase;letter-spacing:.06em}
+  .cal p{font-size:.98rem}
+  /* area */
+  .area{background:var(--ecru-2)}
+  .area ul{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+  .area li{background:var(--navy);color:var(--ecru);padding:7px 14px;border-radius:3px;font-size:.92rem}
+  /* contact */
+  .contact{background:var(--navy-deep);color:var(--ecru)}
+  .contact h2{color:var(--ecru)}
+  .contact .split{display:grid;grid-template-columns:1.1fr .9fr;gap:34px}
+  @media(max-width:760px){.contact .split{grid-template-columns:1fr}}
+  .contact form{display:grid;gap:12px}
+  .contact input,.contact textarea{padding:12px;border:none;border-radius:3px;font-family:inherit;font-size:.98rem;background:#fff}
+  .contact textarea{min-height:110px}
+  .contact .info p{margin-bottom:12px;color:#dfe7ef}
+  .contact .info a{color:var(--brass-lt)}
+  .ph{font-family:'Oswald',sans-serif;font-size:1.5rem;color:var(--brass-lt)}
+  .placeholder{opacity:.75;font-style:italic;font-size:.88rem}
+  footer{background:#08131f;color:#7e93a8;text-align:center;padding:20px;font-size:.88rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">Sodus Bay <span>Canvas</span></div>
+    <a class="call-btn" href="tel:+13154836497">(315) 483-6497</a>
+  </div>
+</header>
+<div class="stitch"></div>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Torn canvas doesn't have to mean <em>new canvas.</em></h1>
+    <p class="sub">Re-stitching, zipper replacement, small-boat cockpit covers and mooring covers — measured and fitted right here at Sodus Point, on Route 14 at the bay.</p>
+    <p class="meta">7410 State Route 14 · Sodus Point, NY 14555</p>
+    <div class="cta-row">
+      <a class="btn btn-brass" href="#quote">Get a repair quote</a>
+      <a class="btn btn-ghost" href="#repairs">What we repair</a>
+    </div>
+  </div>
+</section>
+
+<section id="repairs">
+  <div class="wrap">
+    <span class="kicker">The Bench</span>
+    <h2>Canvas work for Sodus Bay boats</h2>
+    <div class="grid">
+      <div class="card"><h3>Repairs & re-stitching</h3><p>UV-rotted thread is usually what fails first — the fabric outlives its stitching by years. Seams re-sewn before a small opening becomes a torn panel.</p></div>
+      <div class="card"><h3>Zipper replacement</h3><p>Corroded sliders and blown zipper tape on enclosures, dodgers and camper backs replaced, so you stop wrestling the same stuck zipper every launch and haul-out.</p></div>
+      <div class="card"><h3>Cockpit covers</h3><p>Small-boat cockpit covers built to your boat's measurements — keeping rain, leaves and gulls out of the boat all season at the slip.</p></div>
+      <div class="card"><h3>Mooring covers</h3><p>Mooring covers made and repaired for the winter that Lake Ontario actually delivers — snow load, wind and six months on the hard.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="rvr">
+  <div class="wrap">
+    <span class="kicker" style="color:var(--brass-lt)">Repair First</span>
+    <h2>The repair-first arithmetic</h2>
+    <div class="cols">
+      <div class="col">
+        <h3>Repair it</h3>
+        <p>New stitching, a new zipper or a patched panel is usually a fraction of replacement cost — and your cover already fits your boat, because it was made for it.</p>
+      </div>
+      <div class="col">
+        <h3>Replace it</h3>
+        <p>Full new canvas runs into four figures fast and takes weeks in peak season. Worth it when fabric is truly gone — and we'll tell you honestly when it is.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cal">
+  <div class="wrap">
+    <span class="kicker">The Bay Calendar</span>
+    <h2>Timed to haul-out and launch</h2>
+    <div class="row"><div class="season">Fall</div><p>Bring canvas in at haul-out. That torn mooring cover you noticed in September gets fixed before the snow, not discovered again in April.</p></div>
+    <div class="row"><div class="season">Winter</div><p>The bench season — repairs, re-stitching and new covers worked through while the boats sleep.</p></div>
+    <div class="row"><div class="season">Spring</div><p>Fitted and back on the boat before launch. No mailing covers across the state and hoping they return by Memorial Day.</p></div>
+    <div class="row"><div class="season">Summer</div><p>Mid-season zipper and seam failures handled close to home — the shop is minutes from every marina on the bay.</p></div>
+  </div>
+</section>
+
+<section class="area">
+  <div class="wrap">
+    <span class="kicker">Close To Your Slip</span>
+    <h2>Serving the whole bay</h2>
+    <p>Canvas has to fit the boat it lives on. Being at Sodus Point means your cover is measured against your boat — not a mail-order guess.</p>
+    <ul>
+      <li>Sodus Point</li><li>Sodus Bay marinas</li><li>Sodus & Alton</li><li>Bay islands & cottages</li><li>Lake Ontario shoreline</li>
+    </ul>
+  </div>
+</section>
+
+<section class="contact" id="quote">
+  <div class="wrap">
+    <span class="kicker" style="color:var(--brass-lt)">Start Here</span>
+    <h2>Get a repair quote</h2>
+    <div class="split">
+      <form>
+        <input type="text" placeholder="Name" required>
+        <input type="tel" placeholder="Phone">
+        <input type="text" placeholder="Boat & where it's kept (marina / slip / trailer)">
+        <textarea placeholder="What needs work? A photo of the damage is the fastest way to a quote."></textarea>
+        <button class="btn btn-brass" type="submit" style="border:none;cursor:pointer;font-size:1rem">Request quote</button>
+      </form>
+      <div class="info">
+        <p class="ph">(315) 483-6497</p>
+        <p>7410 State Route 14<br>PO Box 346<br>Sodus Point, NY 14555</p>
+        <p class="placeholder">[Hours by season — to be confirmed with owner]</p>
+        <p class="placeholder">[Owner name & years on the bay — to be confirmed]</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>Sodus Bay Canvas · Sodus Point, NY · (315) 483-6497</footer>
+</body>
+</html>

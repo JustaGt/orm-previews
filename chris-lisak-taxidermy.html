@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!--
+NICHE IDENTITY BRIEF — Chris Lisak Taxidermy (Owego, Tioga Co., NY)  [ORM prospect #162]
+Business type: Solo taxidermy studio, est. Oct 2018. Specialties: whitetail deer, birds (turkey/waterfowl), fish, small mammals. Owner Chris Lisak. Owego NY. Instagram @chris_lisak (active portfolio).
+Target customers: Southern Tier deer/turkey/waterfowl hunters & anglers who want a mount of a memorable animal; out-of-state hunters who took a trophy in-region.
+Local market: Tioga / Broome / Chemung — heavy fall deer + spring turkey seasons, strong hunting culture. Competes w/ Southern Tier Taxidermy (Owego) + Elmira/Ithaca shops.
+Emotional tone: respectful of the animal & the memory; craftsman, patient, proud; warm and personal, not gimmicky.
+Visual style: deep forest green + charcoal + warm wood/bone tones; big photography space for real mounts; rugged serif display type; calm, gallery-like.
+Pain points (VERIFIED): no owned website. Presence is scattered UNCLAIMED directory cards (The Hunt Buddy listing literally marked "This listing hasn't been claimed" w/ "unverified" phone; also MountChief, Yelp) + Instagram. A hunter Googling "taxidermist near Owego" finds inconsistent, unverified listings (directories even disagree on address/phone), no drop-off info, no turnaround expectation, no price guide, no clear contact beyond DMs.
+Customer desires: see quality of work (real mount photos); know what he mounts (deer/birds/fish/small game); understand field-care & drop-off; realistic turnaround; a straightforward way to contact & get on the list right after a harvest.
+Trust signals: real mount photography, since 2018, specialty range, a claimed & consistent contact, local Owego.
+Conversion goal: new-client contact + drop-off inquiries (call/message -> "bring your animal / get on the list"), esp. deer & turkey season.
+Sections needed: hero (strong mount photo + name), gallery of work, what he mounts, field-care & drop-off guide, how it works/turnaround, about Chris, contact + "get on the list."
+Cliches to avoid: ORM banned list; also "preserving memories that last a lifetime," "bringing your trophy to life," clip-art antlers.
+Unique to niche: leads with a real field-care + drop-off guide (what hunters need at 6am after a harvest and no directory card gives), foregrounds IG-proven quality as a gallery, sets honest turnaround expectations, gives ONE consistent claimed contact to replace conflicting directory listings.
+DATA NOTES: NO email found -> outreach body saved to .email.txt (DO-NOT-SEND until an email is found). DATA-INTEGRITY FLAG: directories DISAGREE — phone (607) 972-5988 (Hunt Buddy/MountChief) OR (607) 223-4133 (Yelp/idcrawl); address 47 West Ave OR 15 Cove St, both Owego 13827. Concept stays town-level (Owego) and lists BOTH flagged "confirm at first contact." Business existence solid (multi-directory + active IG). Turnaround/prices = CLEARLY-LABELED PLACEHOLDERS.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chris Lisak Taxidermy — Whitetail, Birds, Fish &amp; Small Game · Owego, NY</title>
+<style>
+  :root{
+    --forest:#1f2a22; --forest-dk:#16201a; --moss:#3d5a3f; --bone:#efe9dc; --paper:#f6f3ec;
+    --wood:#7c5a36; --gold:#c9a24b; --ink:#22271f; --muted:#5c6157; --line:#ddd6c7; --card:#fffdf8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+  h1,h2,h3{font-family:'Georgia','Times New Roman',serif;line-height:1.12}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .top{background:var(--forest-dk);color:#bcc7bb;font-size:.9rem}
+  .top .wrap{display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:space-between;align-items:center;padding:9px 22px}
+  .top b{color:#fff}
+  .top .ig{color:var(--gold);text-decoration:none;font-weight:600}
+  /* hero */
+  .hero{background:linear-gradient(rgba(22,32,26,.86),rgba(22,32,26,.9)),radial-gradient(circle at 30% 20%,#2c3b2e,#16201a);color:#fff;padding:66px 0 58px;border-bottom:4px solid var(--gold)}
+  .hero .wrap{max-width:900px}
+  .kick{display:inline-block;border:1px solid var(--gold);color:var(--gold);text-transform:uppercase;letter-spacing:2px;font-size:.72rem;font-weight:700;padding:6px 13px;border-radius:2px}
+  .hero h1{font-size:3rem;margin:18px 0 14px;color:#fff}
+  .hero h1 span{color:var(--gold)}
+  .hero p.lede{font-size:1.18rem;color:#d7dcd2;max-width:600px}
+  .cta{display:flex;flex-wrap:wrap;gap:13px;margin-top:26px}
+  .btn{display:inline-block;padding:15px 26px;border-radius:4px;font-weight:700;text-decoration:none;font-size:1.02rem;border:none;cursor:pointer;font-family:'Segoe UI',sans-serif}
+  .btn-g{background:var(--gold);color:#221c0c}
+  .btn-o{border:2px solid #5c7360;color:#fff;background:transparent}
+  /* what he mounts */
+  section.pad{padding:56px 0}
+  h2.big{font-size:2.15rem;text-align:center;margin-bottom:8px;color:var(--forest)}
+  .lead-c{text-align:center;color:var(--muted);max-width:640px;margin:0 auto 34px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:24px;text-align:center}
+  .card .ico{font-size:1.7rem;margin-bottom:8px}
+  .card h3{font-size:1.15rem;margin-bottom:7px;color:var(--forest)}
+  .card p{font-size:.94rem;color:var(--muted)}
+  /* gallery */
+  .gallery{background:var(--forest);color:#fff}
+  .gallery h2{color:#fff}
+  .gallery .lead-c{color:#c3ccc2}
+  .gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:14px;margin-top:8px}
+  .shot{aspect-ratio:3/4;background:linear-gradient(135deg,#26332a,#1a241d);border:1px solid #34432f;border-radius:8px;display:flex;align-items:flex-end;padding:12px;color:#9fb09f;font-size:.82rem;font-weight:600}
+  .igline{text-align:center;margin-top:22px;color:#c3ccc2}
+  .igline a{color:var(--gold);font-weight:700;text-decoration:none}
+  /* field care */
+  .care{background:var(--bone)}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:14px}
+  .step{background:#fff;border:1px solid var(--line);border-radius:8px;padding:24px 22px;position:relative;border-left:5px solid var(--wood)}
+  .step .n{position:absolute;top:-15px;left:20px;width:32px;height:32px;background:var(--wood);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:'Georgia',serif}
+  .step h3{font-size:1.05rem;margin:6px 0 6px;color:var(--forest)}
+  .step p{font-size:.92rem;color:var(--muted)}
+  .care .note{text-align:center;margin-top:24px;color:var(--muted);font-style:italic;font-size:.9rem}
+  /* how it works / about */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:28px}
+  .panel h3{color:var(--forest);font-size:1.3rem;margin-bottom:12px}
+  .panel li{list-style:none;padding-left:24px;position:relative;margin:9px 0;color:var(--muted)}
+  .panel li::before{content:"❯";position:absolute;left:0;color:var(--wood);font-weight:800}
+  .panel p{color:var(--muted)}
+  .ph-note{font-size:.82rem;color:var(--muted);font-style:italic;margin-top:12px}
+  /* contact */
+  .contact{background:var(--forest-dk);color:#fff}
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+  .contact h2{color:#fff;font-size:2rem;margin-bottom:10px}
+  .contact p{color:#c7d0c6;margin-bottom:16px}
+  .cbtn{display:block;background:#22301f;border:1px solid #3a4a34;border-radius:8px;padding:15px 18px;margin-bottom:12px;text-decoration:none;color:#fff}
+  .cbtn b{color:var(--gold);font-size:1.06rem}
+  .cbtn span{display:block;color:#b7c1b6;font-size:.86rem}
+  .flag{background:#2a3724;border:1px dashed #55663f;border-radius:8px;padding:12px 14px;color:#cdd6c6;font-size:.82rem;margin-top:6px}
+  form{background:#fff;border-radius:10px;padding:24px;color:var(--ink)}
+  form label{display:block;font-size:.8rem;font-weight:700;color:var(--forest);margin:10px 0 4px;text-transform:uppercase;letter-spacing:.5px}
+  form input,form textarea,form select{width:100%;padding:11px;border:1px solid var(--line);border-radius:6px;font-family:inherit;font-size:.95rem}
+  form button{width:100%;margin-top:16px;background:var(--wood);color:#fff;border:none;padding:15px;border-radius:7px;font-weight:800;font-size:1.02rem;cursor:pointer}
+  form .hint{font-size:.8rem;color:var(--muted);margin-top:9px}
+  footer{background:#10160f;color:#8f988c;text-align:center;padding:22px;font-size:.85rem}
+  @media(max-width:760px){.hero h1{font-size:2.2rem}.two,.contact .wrap{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+  <div class="top"><div class="wrap"><span><b>Chris Lisak Taxidermy</b> · Owego, NY · whitetail · birds · fish · small game</span><span>Since 2018 · <a class="ig" href="#contact">See the work on Instagram @chris_lisak</a></span></div></div>
+
+  <header class="hero">
+    <div class="wrap">
+      <span class="kick">Owego · Southern Tier taxidermy</span>
+      <h1>The mount should look like <span>the morning you took the shot.</span></h1>
+      <p class="lede">Chris Lisak has been mounting whitetail, turkeys, waterfowl, fish and small game in Owego since 2018. Bring in your animal and get it done right — here's how, and what to expect.</p>
+      <div class="cta">
+        <a class="btn btn-g" href="#contact">Get on the list</a>
+        <a class="btn btn-o" href="#care">Field-care &amp; drop-off</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="pad">
+    <div class="wrap">
+      <h2 class="big">What Chris mounts</h2>
+      <p class="lead-c">A one-person studio focused on the game the Southern Tier actually hunts.</p>
+      <div class="grid">
+        <div class="card"><div class="ico">🦌</div><h3>Whitetail deer</h3><p>Shoulder mounts, pedestal and European skull mounts — posed to suit your wall and the animal.</p></div>
+        <div class="card"><div class="ico">🦃</div><h3>Birds</h3><p>Turkey fans and full mounts, plus waterfowl and upland birds in natural poses.</p></div>
+        <div class="card"><div class="ico">🐟</div><h3>Fish</h3><p>Skin and replica fish mounts for the catch worth keeping on the wall.</p></div>
+        <div class="card"><div class="ico">🦊</div><h3>Small game</h3><p>Small mammals and predators mounted with the same care as the big trophies.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad gallery">
+    <div class="wrap">
+      <h2 class="big">The work speaks first</h2>
+      <p class="lead-c">A gallery of finished mounts — the proof a hunter wants before handing over a once-in-a-season animal.</p>
+      <div class="gal">
+        <div class="shot">[Whitetail shoulder mount — photo to add]</div>
+        <div class="shot">[Turkey fan / full mount — photo to add]</div>
+        <div class="shot">[Waterfowl mount — photo to add]</div>
+        <div class="shot">[European skull mount — photo to add]</div>
+        <div class="shot">[Fish mount — photo to add]</div>
+      </div>
+      <p class="igline">Years of finished mounts are posted on Instagram <a href="#contact">@chris_lisak</a> — real work, not stock photos.</p>
+    </div>
+  </section>
+
+  <section class="pad care" id="care">
+    <div class="wrap">
+      <h2 class="big">Took one? Do this before you bring it in</h2>
+      <p class="lead-c">A good mount starts in the field. A few simple steps protect the cape and the memory.</p>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><h3>Keep it cool &amp; dry</h3><p>Get the animal cooled down fast and keep the hide out of the sun and off wet ground.</p></div>
+        <div class="step"><div class="n">2</div><h3>Don't cut the cape short</h3><p>If you want a shoulder mount, cut well behind the front legs — leave extra hide rather than too little.</p></div>
+        <div class="step"><div class="n">3</div><h3>Freeze or bring it soon</h3><p>Bag it and freeze it, or drop it off promptly. Sooner is always better for the cape.</p></div>
+        <div class="step"><div class="n">4</div><h3>Call before you drive out</h3><p>Give Chris a call so he knows you're coming and can tell you exactly how he wants it dropped off.</p></div>
+      </div>
+      <p class="note">[General field-care guidance — Chris will confirm his exact drop-off instructions and cape-cut preferences.]</p>
+    </div>
+  </section>
+
+  <section class="pad">
+    <div class="wrap two">
+      <div class="panel">
+        <h3>How it works</h3>
+        <ul>
+          <li>Call or message to get on the list — especially in deer &amp; turkey season</li>
+          <li>Drop off your animal (frozen or fresh) with your pose preference</li>
+          <li>Chris tans, forms and finishes the mount by hand</li>
+          <li>You get a call when it's ready for pickup</li>
+        </ul>
+        <p class="ph-note">[Turnaround times and pricing vary by species and mount type — to be confirmed. Quality taxidermy commonly takes several months.]</p>
+      </div>
+      <div class="panel">
+        <h3>About Chris</h3>
+        <p>Chris Lisak has run his own taxidermy studio in Owego since 2018, working on whitetail, birds, fish and small game for hunters across Tioga, Broome and Chemung counties. One person, start to finish, so the animal you drop off is the one he works on.</p>
+        <p class="ph-note">[Studio hours to be confirmed.]</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad contact" id="contact">
+    <div class="wrap">
+      <div>
+        <h2>Get on the list</h2>
+        <p>Call or message Chris to talk about your animal and reserve a spot — the fastest way to lock in a mount right after a harvest.</p>
+        <a class="cbtn" href="tel:16079725988"><b>(607) 972-5988</b><span>Call or text about your mount</span></a>
+        <a class="cbtn" href="#"><b>Instagram: @chris_lisak</b><span>Message Chris and see finished mounts</span></a>
+        <div class="flag">Owego, NY (Tioga County). A second number, (607)&nbsp;223-4133, and a second address appear in online directories — Chris will confirm the current phone and drop-off location when you reach out.</div>
+      </div>
+      <form onsubmit="return false">
+        <label>Your name</label>
+        <input type="text" placeholder="Name">
+        <label>Phone</label>
+        <input type="text" placeholder="Best number to reach you">
+        <label>What did you take?</label>
+        <select><option>Whitetail deer</option><option>Turkey / bird</option><option>Waterfowl</option><option>Fish</option><option>Small game</option><option>Not sure yet</option></select>
+        <label>Tell Chris about it</label>
+        <textarea rows="3" placeholder="When you took it, the mount you're picturing, and whether it's frozen…"></textarea>
+        <button type="submit">Request a spot</button>
+        <p class="hint">This preview form isn't wired up yet — call or Instagram message are live.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    Chris Lisak Taxidermy · Owego, NY (Tioga County) · whitetail · birds · fish · small game · since 2018<br>
+    <span style="font-size:.8rem;opacity:.7">Preview concept prepared by Onyx Rise Media. Phone, address, hours, turnaround and pricing are to be confirmed with the owner; gallery images are placeholders.</span>
+  </footer>
+</body>
+</html>

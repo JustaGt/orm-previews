@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ray Forker Excavation — Driveways, Drainage & Site Work | Montour Falls, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Rye&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --clay:#6b4528; --clay-d:#4e3019; --gravel:#4b4f52; --gravel-d:#33373a;
+    --orange:#e8772b; --orange-d:#c25d17; --ylw:#f4b42c; --sand:#efe7da; --sand2:#e3d6c2;
+    --ink:#2a241e; --soft:#6f6557; --line:#d6cab5;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Barlow',sans-serif;color:var(--ink);background:var(--sand);line-height:1.6}
+  h1,h2,h3{font-family:'Barlow Condensed',sans-serif;letter-spacing:.4px;text-transform:uppercase}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .announce{background:var(--gravel-d);color:var(--ylw);text-align:center;padding:9px;font-size:.9rem;font-weight:700;letter-spacing:.3px}
+  .nav{background:var(--sand);border-bottom:3px solid var(--clay);padding:13px 0}
+  .nav .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  .brand{font-family:'Barlow Condensed';font-weight:700;font-size:1.7rem;color:var(--clay);display:flex;align-items:center;gap:10px;text-transform:uppercase}
+  .brand .mark{width:42px;height:42px;background:var(--orange);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:1.5rem;border-radius:6px}
+  .nav a.call{background:var(--orange);color:#fff;text-decoration:none;font-weight:800;padding:10px 18px;border-radius:6px;font-size:.95rem;font-family:'Barlow'}
+  .hero{background:linear-gradient(180deg,rgba(40,33,26,.78),rgba(40,33,26,.86)),linear-gradient(135deg,var(--clay),var(--clay-d));color:#f3ece1;padding:66px 0 60px;position:relative;overflow:hidden}
+  .hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:18px;background:repeating-linear-gradient(45deg,var(--ylw) 0 26px,var(--gravel-d) 26px 52px)}
+  .hero .pill{display:inline-block;background:rgba(232,119,43,.2);border:1px solid var(--orange);color:var(--ylw);font-weight:700;font-size:.76rem;letter-spacing:1.5px;padding:5px 14px;border-radius:5px;text-transform:uppercase;font-family:'Barlow'}
+  .hero h1{font-size:clamp(2.4rem,6vw,4.1rem);font-weight:700;margin:16px 0 10px;line-height:.98;color:#fff}
+  .hero h1 em{font-style:normal;color:var(--orange)}
+  .hero p{font-size:1.16rem;max-width:560px;color:#ddd2c4;margin-bottom:24px}
+  .btn{display:inline-block;text-decoration:none;font-weight:800;padding:14px 26px;border-radius:6px;font-size:1rem}
+  .btn.o{background:var(--orange);color:#fff;border-bottom:3px solid var(--orange-d)}
+  .btn.g{background:transparent;border:2px solid #b7a98f;color:#f3ece1;margin-left:8px}
+  .stats{display:flex;gap:30px;flex-wrap:wrap;margin-top:30px}
+  .stat b{font-family:'Barlow Condensed';color:var(--ylw);font-size:1.6rem;display:block;line-height:1}
+  .stat span{font-size:.8rem;color:#c3b8a8;font-weight:600}
+  section{padding:58px 0}
+  .head{max-width:660px}
+  .head.ctr{margin:0 auto;text-align:center}
+  .eyebrow{color:var(--orange-d);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:.78rem}
+  h2{font-size:clamp(1.9rem,4.6vw,2.8rem);font-weight:700;margin:6px 0 10px}
+  .head p{color:var(--soft);font-size:1.05rem}
+  .dig{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-top:36px}
+  .digc{background:#fff;border:1px solid var(--line);border-top:5px solid var(--orange);border-radius:8px;padding:22px 18px}
+  .digc .ic{font-size:1.8rem;margin-bottom:8px}
+  .digc h3{font-size:1.2rem;color:var(--clay);margin-bottom:4px}
+  .digc p{font-size:.9rem;color:var(--soft)}
+  .steps{background:var(--gravel);color:#e7e9ea}
+  .steps h2{color:#fff}
+  .steps .head p{color:#bcc1c5}
+  .steprow{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:36px}
+  .step{background:rgba(255,255,255,.06);border:1px solid #5a6065;border-radius:10px;padding:24px 20px;position:relative}
+  .step .num{font-family:'Barlow Condensed';font-size:2.4rem;font-weight:700;color:var(--orange);line-height:1}
+  .step h3{font-size:1.18rem;color:#fff;margin:6px 0 5px}
+  .step p{font-size:.92rem;color:#c4c9cd}
+  .area{background:var(--sand2)}
+  .areabox{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:center}
+  .areabox .copy h2{text-align:left}
+  .areabox .copy p{color:#5b5142;margin-top:10px;font-size:1.05rem}
+  .townlist{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+  .townlist span{background:#fff;border:1px solid var(--line);color:var(--clay);font-weight:700;padding:7px 14px;border-radius:30px;font-size:.88rem}
+  .proof{background:var(--clay);color:#f3ece1;border-radius:12px;padding:28px}
+  .proof h3{font-size:1.35rem;color:#fff;margin-bottom:8px}
+  .proof p{color:#e4d8c8;font-size:.96rem}
+  .ph{background:#fff3cf;color:#7a5a00;font-size:.7rem;padding:2px 7px;border-radius:4px;font-weight:800;white-space:nowrap}
+  .quote{background:#fff}
+  .quotebox{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+  .quotebox .copy h2{text-align:left}
+  .quotebox .copy p{color:var(--soft);margin-top:8px}
+  .quotebox .copy li{margin:8px 0 8px 4px;list-style:none;padding-left:24px;position:relative;font-weight:600}
+  .quotebox .copy li:before{content:"✓";position:absolute;left:0;color:var(--orange);font-weight:800}
+  .form{background:var(--sand);border:2px solid var(--clay);border-radius:12px;padding:26px}
+  .form h3{color:var(--clay);font-size:1.4rem;margin-bottom:4px}
+  .form label{display:block;font-size:.78rem;font-weight:800;color:var(--soft);margin:11px 0 4px;text-transform:uppercase;letter-spacing:.5px}
+  .form input,.form select,.form textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:7px;font-size:.95rem;font-family:inherit}
+  .form button{margin-top:15px;width:100%;background:var(--orange);color:#fff;border:none;padding:13px;border-radius:7px;font-weight:800;font-size:1rem;cursor:pointer;font-family:'Barlow Condensed';letter-spacing:1px;text-transform:uppercase}
+  .form .note{font-size:.74rem;color:var(--soft);margin-top:8px;text-align:center}
+  .endcta{background:var(--orange);color:#fff;text-align:center}
+  .endcta h2{color:#fff}
+  .endcta a{display:inline-block;background:var(--gravel-d);color:#fff;font-weight:800;text-decoration:none;padding:14px 30px;border-radius:6px;margin-top:16px;font-size:1.05rem;font-family:'Barlow Condensed';letter-spacing:1px;text-transform:uppercase}
+  footer{background:var(--gravel-d);color:#a9a39a;text-align:center;padding:34px 0;font-size:.9rem}
+  footer .disp{font-family:'Rye',serif;color:var(--ylw);font-size:1.5rem;margin-bottom:6px;text-transform:none}
+  @media(max-width:760px){.areabox,.quotebox{grid-template-columns:1fr}.btn.g{margin-left:0;margin-top:10px}.areabox .copy h2,.quotebox .copy h2{text-align:center}}
+</style>
+</head>
+<body>
+<div class="announce">Booking digs around Montour Falls &amp; the south end of Seneca Lake — call to get on the schedule</div>
+
+<div class="nav">
+  <div class="wrap">
+    <div class="brand"><span class="mark">⛏</span> Ray Forker Excavation</div>
+    <a class="call" href="tel:6072104259">📞 (607) 210-4259</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="pill">Owner-operated · Montour Falls, Schuyler County</span>
+    <h1>Driveways, drainage<br>and <em>dirt work done right.</em></h1>
+    <p>From a new driveway to a wet basement to a foundation dig, Ray Forker runs the machine himself — straight answers, a written number, and the site left graded the way it should be.</p>
+    <a class="btn o" href="#quote">Get a quote</a>
+    <a class="btn g" href="#dig">See what we dig</a>
+    <div class="stats">
+      <div class="stat"><b>Owner-run</b><span>The man quoting it runs the machine</span></div>
+      <div class="stat"><b>Local</b><span>Montour Falls · Schuyler County</span></div>
+      <div class="stat"><b>Written quotes</b><span>A number before we dig</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="dig">
+  <div class="wrap">
+    <div class="head ctr">
+      <p class="eyebrow">What we dig</p>
+      <h2>The jobs we get called for</h2>
+      <p>Residential and light-commercial dirt work around the south Finger Lakes. If your job's not listed, ask — odds are it's a Tuesday for us.</p>
+    </div>
+    <div class="dig">
+      <div class="digc"><div class="ic">🛣️</div><h3>Driveways</h3><p>New stone driveways, regrading washed-out ones, culverts and ditching.</p></div>
+      <div class="digc"><div class="ic">🏠</div><h3>Foundations &amp; footers</h3><p>Digs for additions, garages, pole barns and new builds.</p></div>
+      <div class="digc"><div class="ic">💧</div><h3>Drainage</h3><p>French drains, curtain drains and grading to pull water away from the house.</p></div>
+      <div class="digc"><div class="ic">🚰</div><h3>Water, sewer &amp; utility lines</h3><p>Trenching and backfill for service lines and septic runs.</p></div>
+      <div class="digc"><div class="ic">🌳</div><h3>Land clearing</h3><p>Brush, stumps and grubbing to open up a building lot or yard.</p></div>
+      <div class="digc"><div class="ic">🧱</div><h3>Grading &amp; demolition</h3><p>Final grade, fill, pad prep and small demolition haul-offs.</p></div>
+    </div>
+    <p style="text-align:center;margin-top:18px;font-size:.82rem;color:var(--soft)"><span class="ph">PLACEHOLDER</span> exact service list to be confirmed with Ray.</p>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="wrap">
+    <div class="head ctr">
+      <p class="eyebrow" style="color:var(--ylw)">How a dig job goes</p>
+      <h2>No surprises in the dirt</h2>
+      <p>You should know what's happening and what it costs before a machine touches the ground.</p>
+    </div>
+    <div class="steprow">
+      <div class="step"><div class="num">1</div><h3>Site visit</h3><p>Ray comes out, walks the job, and looks at access, grade and where the water goes.</p></div>
+      <div class="step"><div class="num">2</div><h3>Written quote</h3><p>A clear number for the work — not a vague "we'll see when we get there."</p></div>
+      <div class="step"><div class="num">3</div><h3>We dig</h3><p>Scheduled in, machine on site, the work done the way it was quoted.</p></div>
+      <div class="step"><div class="num">4</div><h3>Backfill &amp; grade</h3><p>Site cleaned up and graded so it drains and seeds back in — not left a mess.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="area">
+  <div class="wrap">
+    <div class="areabox">
+      <div class="copy">
+        <p class="eyebrow">Where we work</p>
+        <h2>Schuyler County &amp; the south end of Seneca</h2>
+        <p>Based on Route 14 in Montour Falls, working the towns around the bottom of Seneca Lake. Not sure if you're in range? Call and ask — if it's close, we'll come look.</p>
+        <div class="townlist">
+          <span>Montour Falls</span><span>Watkins Glen</span><span>Odessa</span><span>Burdett</span><span>Reading</span><span>Beaver Dams</span><span>Hector</span><span>Mecklenburg</span>
+        </div>
+      </div>
+      <div class="proof">
+        <h3>See the work, not just a phone number</h3>
+        <p>A real site shows before-and-after photos of finished driveways, drains and digs so a new customer can see the quality before they call. <span class="ph">PLACEHOLDER</span> — add 6–8 job photos here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div class="quotebox">
+      <div class="copy">
+        <p class="eyebrow">Get a quote</p>
+        <h2>Tell us about the job</h2>
+        <p>Right now there's no website to find Ray on — just a phone number on a directory. A few details here and he can come look and get you a number.</p>
+        <ul>
+          <li>What the job is — driveway, drainage, foundation, clearing</li>
+          <li>Your town, so we know it's in range</li>
+          <li>When you're hoping to have it done</li>
+        </ul>
+      </div>
+      <div class="form">
+        <h3>Request a quote</h3>
+        <form onsubmit="return false">
+          <label>Your name</label>
+          <input type="text" placeholder="First &amp; last name">
+          <label>Phone</label>
+          <input type="tel" placeholder="(607) 000-0000">
+          <label>Type of job</label>
+          <select><option>Driveway / stone</option><option>Drainage / French drain</option><option>Foundation / footer dig</option><option>Water / sewer / utility line</option><option>Land clearing</option><option>Grading / demolition</option><option>Something else</option></select>
+          <label>Your town</label>
+          <input type="text" placeholder="e.g. Burdett">
+          <label>Tell us a little about it</label>
+          <textarea rows="2" placeholder="e.g. driveway washes out every spring, ~300 ft"></textarea>
+          <button>Send my quote request</button>
+        </form>
+        <p class="note">Prefer to talk it through? Call <a href="tel:6072104259" style="color:var(--orange-d);font-weight:800">(607) 210-4259</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="endcta">
+  <div class="wrap">
+    <h2>Got a job that needs a machine?</h2>
+    <p style="max-width:540px;margin:10px auto 0;color:#ffe7d6">Call Ray, describe it, and get on the schedule before the busy stretch.</p>
+    <a href="tel:6072104259">Call (607) 210-4259</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="disp">Ray Forker Excavation</div>
+    <p>2049 State Route 14, Montour Falls, NY 14865 · (607) 210-4259 · Owner-operated in Schuyler County</p>
+    <p style="margin-top:10px;font-size:.78rem;color:#857f76">Preview concept prepared by Onyx Rise Media for review. Exact service list, service-area radius, and job photos to be confirmed and supplied by the owner. No pricing shown — quotes are by site visit.</p>
+  </div>
+</footer>
+</body>
+</html>

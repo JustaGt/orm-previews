@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monte's Small Engine — Fredonia, NY · Mower &amp; Snowblower Repair · Cub Cadet Sales</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#c4271f; --red-d:#9c1d17; --steel:#2a2e33; --steel2:#363b42; --steel3:#454b53;
+  --yellow:#f4c020; --grey:#5a626b; --line:#dfe3e8; --paper:#f4f6f8; --white:#fff; --ink:#1b1e22;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Barlow',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+h1,h2,h3,.disp{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.5px;line-height:1.05}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+.btn{display:inline-block;background:var(--red);color:#fff;font-family:'Barlow Condensed';font-weight:700;text-transform:uppercase;letter-spacing:1px;text-decoration:none;padding:13px 30px;font-size:1.1rem;border-radius:3px;transition:.13s}
+.btn:hover{background:var(--red-d)}
+.btn.yellow{background:var(--yellow);color:#3a2c00}
+.btn.yellow:hover{background:#e0ad12}
+.btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5)}
+.btn.ghost:hover{border-color:#fff}
+
+nav{background:var(--steel);position:sticky;top:0;z-index:30;border-bottom:3px solid var(--red)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand b{font-family:'Barlow Condensed';font-weight:700;color:#fff;font-size:1.5rem;display:block;line-height:.95;text-transform:uppercase}
+.brand small{color:var(--yellow);font-size:.66rem;letter-spacing:3px;text-transform:uppercase}
+.navlinks{display:flex;gap:24px;color:#bcc3cc;font-family:'Barlow Condensed';font-weight:600;text-transform:uppercase;font-size:.96rem;letter-spacing:.6px}
+.navlinks a{text-decoration:none}.navlinks a:hover{color:var(--yellow)}
+.navcall{color:#fff;font-family:'Barlow Condensed';font-size:1.2rem;text-decoration:none;font-weight:700}
+@media(max-width:880px){.navlinks{display:none}}
+
+.hero{background:
+  linear-gradient(180deg,rgba(27,30,34,.93),rgba(42,46,51,.93)),
+  repeating-linear-gradient(45deg,rgba(244,192,32,.05) 0 12px,transparent 12px 24px);
+  background-color:var(--steel);color:#fff;padding:78px 0 66px}
+.hero .wrap{max-width:960px}
+.badge{display:inline-flex;gap:8px;align-items:center;background:var(--red);color:#fff;font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:1.2px;font-weight:700;font-size:.82rem;padding:7px 15px;border-radius:3px}
+h1{font-size:3.5rem;margin:18px 0 12px;font-weight:700;max-width:16ch}
+.hero p.sub{font-family:'Barlow';text-transform:none;letter-spacing:0;font-size:1.2rem;max-width:54ch;color:#e3e7ec;margin-bottom:24px;line-height:1.55}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero .hrs{margin-top:22px;font-size:.96rem;color:#cfd5dc}
+.hero .hrs b{color:var(--yellow);font-family:'Barlow';font-weight:700}
+@media(max-width:560px){h1{font-size:2.6rem}}
+
+.cred{background:var(--yellow)}
+.cred .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.cred div{padding:16px 14px;text-align:center;border-right:1px solid rgba(0,0,0,.12)}
+.cred div:last-child{border-right:0}
+.cred b{font-family:'Barlow Condensed';font-size:1.7rem;display:block;color:#2a2000;line-height:1}
+.cred span{font-size:.8rem;color:#5a4500;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+@media(max-width:640px){.cred .wrap{grid-template-columns:1fr 1fr}.cred div:nth-child(2){border-right:0}}
+
+section{padding:58px 0}
+.eyebrow{color:var(--red);font-family:'Barlow Condensed';font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.92rem}
+h2{font-size:2.3rem;font-weight:700;margin:4px 0 8px}
+.lead{font-size:1.08rem;color:var(--grey);max-width:62ch}
+
+/* service list as a shop ticket */
+.ticket{background:var(--white);border:1px solid var(--line);border-radius:8px;margin-top:30px;overflow:hidden;box-shadow:0 2px 0 rgba(0,0,0,.04)}
+.ticket .thead{background:var(--steel);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:14px 22px}
+.ticket .thead b{font-family:'Barlow Condensed';font-size:1.25rem;letter-spacing:1px}
+.ticket .thead span{font-family:'Barlow Condensed';color:var(--yellow);letter-spacing:1px}
+.trow{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px dashed var(--line)}
+.titem{padding:18px 22px;border-right:1px dashed var(--line)}
+.titem h3{font-size:1.2rem;color:var(--steel);margin-bottom:3px}
+.titem p{font-size:.96rem;color:var(--grey);text-transform:none;letter-spacing:0}
+@media(max-width:640px){.trow{grid-template-columns:1fr}.titem{border-right:0}}
+
+.season{background:var(--red);color:#fff}
+.season .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:34px;align-items:center}
+.season h2{color:#fff}
+.season p{color:#ffe3e1;font-size:1.08rem;text-transform:none;letter-spacing:0}
+.season .box{background:rgba(0,0,0,.16);border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:22px}
+.season .box b{font-family:'Barlow Condensed';font-size:1.3rem;display:block;margin-bottom:8px;letter-spacing:.5px}
+.season .box span{display:block;color:#ffd9d6;font-size:.96rem;padding:5px 0;text-transform:none;letter-spacing:0}
+@media(max-width:740px){.season .wrap{grid-template-columns:1fr}}
+
+.cub{background:var(--steel);color:#fff}
+.cub .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.cub h2{color:#fff}
+.cub p{color:#cfd5dc;text-transform:none;letter-spacing:0}
+.cub .panel{background:var(--steel2);border:1px solid var(--steel3);border-left:5px solid var(--yellow);border-radius:8px;padding:26px}
+.cub .panel b{color:var(--yellow);font-family:'Barlow Condensed';font-size:1.3rem;letter-spacing:.5px}
+@media(max-width:740px){.cub .wrap{grid-template-columns:1fr}}
+
+.rev-sec{background:var(--paper)}
+.revgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.rev{background:#fff;border:1px solid var(--line);border-top:4px solid var(--yellow);border-radius:8px;padding:22px}
+.rev .stars{color:var(--yellow);letter-spacing:2px;font-size:1.1rem}
+.rev p{margin:8px 0;color:var(--ink);text-transform:none;letter-spacing:0}
+.rev .who{font-weight:700;font-size:.86rem;color:var(--grey)}
+.revnote{margin-top:16px;font-size:.86rem;color:var(--grey)}
+@media(max-width:760px){.revgrid{grid-template-columns:1fr}}
+
+.visit{background:var(--steel);color:#fff;padding:60px 0}
+.visit .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:42px;align-items:start}
+.visit h2{color:#fff}
+.vbig{font-family:'Barlow Condensed';font-size:2.1rem;margin:10px 0;letter-spacing:.5px}
+.vbig a{color:#fff;text-decoration:none}
+.vnote{color:#cfd5dc;text-transform:none;letter-spacing:0;font-size:.96rem}
+.vform{background:#fff;border-radius:8px;padding:26px;color:var(--ink)}
+.vform label{display:block;font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:.5px;font-size:.9rem;margin:11px 0 5px;color:var(--steel)}
+.vform input,.vform select,.vform textarea{width:100%;border:1px solid var(--line);border-radius:4px;padding:11px;font-family:inherit;font-size:.95rem;background:var(--paper)}
+.vform textarea{min-height:78px;resize:vertical}
+.vform .btn{width:100%;margin-top:15px;border:0;cursor:pointer;text-align:center}
+@media(max-width:760px){.visit .wrap{grid-template-columns:1fr}}
+
+footer{background:var(--ink);color:#aeb5be;padding:28px 0;font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer b{color:#fff;font-family:'Barlow Condensed';font-size:1.1rem;letter-spacing:.5px}
+.ph{color:var(--yellow);font-style:italic;text-transform:none;letter-spacing:0}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="brand"><b>Monte's Small Engine</b><small>Fredonia, New York</small></div>
+  <div class="navlinks">
+    <a href="#service">What We Service</a>
+    <a href="#season">Seasonal Service</a>
+    <a href="#cub">Cub Cadet</a>
+    <a href="#visit">Schedule a Repair</a>
+  </div>
+  <a class="navcall" href="tel:+17166793138">716-679-3138</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="badge">★ 4.7 across 100+ reviews · BBB A+ since 1994</span>
+  <h1>Thirty years of fixing what the big box store won't.</h1>
+  <p class="sub">Monte's Small Engine in Fredonia repairs and services mowers, riders, snowblowers, and the rest of your power equipment — and sells Cub Cadet with a real service department behind it. Drop it off with someone who's been doing this since before the warranty card.</p>
+  <div class="cta">
+    <a class="btn yellow" href="#visit">Schedule a repair</a>
+    <a class="btn ghost" href="tel:+17166793138">Call 716-679-3138</a>
+  </div>
+  <div class="hrs"><b>Hours:</b> Mon–Fri 8–5 · Sat 8–12 · 3405 S Roberts Rd, Fredonia</div>
+</div></header>
+
+<div class="cred"><div class="wrap">
+  <div><b>30+ yrs</b><span>In Fredonia</span></div>
+  <div><b>4.7★</b><span>100+ reviews</span></div>
+  <div><b>A+</b><span>BBB accredited</span></div>
+  <div><b>Cub Cadet</b><span>Authorized dealer</span></div>
+</div></div>
+
+<section id="service"><div class="wrap">
+  <span class="eyebrow">In the shop</span>
+  <h2>What we service</h2>
+  <p class="lead">If it's got a small engine and it runs your yard or your driveway, odds are we work on it. Tune-ups, repairs, blades, belts, carburetors, and the parts to back it up.</p>
+  <div class="ticket">
+    <div class="thead"><b>Service Bay</b><span>Drop-off &amp; repair</span></div>
+    <div class="trow">
+      <div class="titem"><h3>Riding mowers &amp; tractors</h3><p>Tune-ups, deck and blade work, belts, electrical, and won't-start repairs on lawn tractors and zero-turns.</p></div>
+      <div class="titem"><h3>Push &amp; self-propelled mowers</h3><p>Carburetor cleaning, blades, pull cords, and seasonal tune-ups to get a tired mower running right again.</p></div>
+    </div>
+    <div class="trow">
+      <div class="titem"><h3>Snowblowers</h3><p>Fall service, auger and belt work, carb rebuilds, and shear pins — ready before the first lake-effect storm.</p></div>
+      <div class="titem"><h3>Trimmers &amp; blowers</h3><p>String trimmers, leaf blowers, and hedge trimmers — two-cycle repairs and tune-ups done in-house.</p></div>
+    </div>
+    <div class="trow">
+      <div class="titem"><h3>Generators &amp; tillers</h3><p>Portable generators, rototillers, log splitters, and other small-engine equipment serviced and repaired.</p></div>
+      <div class="titem"><h3>Parts &amp; blades</h3><p>Belts, blades, filters, plugs, and common wear parts in stock so the fix doesn't wait two weeks on shipping.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="season" class="season"><div class="wrap">
+  <div>
+    <span class="eyebrow" style="color:#ffd9d6">Beat the rush</span>
+    <h2>Two seasons, two big rushes</h2>
+    <p>Everybody remembers the mower the first warm Saturday and the snowblower the first big storm — and that's when the shop is buried. Get yours in ahead of the crowd and you skip the two-week wait.</p>
+  </div>
+  <div class="box">
+    <b>Spring — mowers</b>
+    <span>Tune-up, blade, belt, and carb service so it starts on the first pull in April.</span>
+    <b style="margin-top:14px">Fall — snowblowers</b>
+    <span>Service it in October, not during the first storm in December.</span>
+  </div>
+</div></section>
+
+<section id="cub" class="cub"><div class="wrap">
+  <div>
+    <span class="eyebrow" style="color:var(--yellow)">Sales + service</span>
+    <h2>An authorized Cub Cadet dealer</h2>
+    <p>Buying a mower from a shop that also fixes them means the same people who sold it to you are the ones you bring it back to. No 1-800 number, no shipping it across the country — service stays here in Fredonia.</p>
+  </div>
+  <div class="panel">
+    <b>Why buy local</b>
+    <p style="margin-top:8px">Ask us about current Cub Cadet riders, zero-turns, and lawn tractors — and what it actually costs to keep one running over ten years, not just to buy it. <span class="ph">[Confirm current Cub Cadet model lineup &amp; any promotions before publishing.]</span></p>
+  </div>
+</div></section>
+
+<section class="rev-sec"><div class="wrap">
+  <span class="eyebrow">From the neighbors</span>
+  <h2>A 4.7★ reputation, finally on one page</h2>
+  <div class="revgrid">
+    <div class="rev"><div class="stars">★★★★★</div><p class="ph">[Placeholder — pull a real verified review from BBB / Birdeye / Angi before publishing.]</p><div class="who">— Customer, Fredonia</div></div>
+    <div class="rev"><div class="stars">★★★★★</div><p class="ph">[Placeholder — second verified review to be inserted before publishing.]</p><div class="who">— Customer, Dunkirk area</div></div>
+    <div class="rev"><div class="stars">★★★★★</div><p class="ph">[Placeholder — third verified review to be inserted before publishing.]</p><div class="who">— Customer, Chautauqua County</div></div>
+  </div>
+  <div class="revnote">Monte's currently shows about 4.7★ across roughly 100 reviews on Birdeye, plus an A+ BBB rating — swap the placeholders for exact quoted reviews before this page goes live.</div>
+</div></section>
+
+<section id="visit" class="visit"><div class="wrap">
+  <div>
+    <h2>Schedule a repair or seasonal service</h2>
+    <p class="vnote" style="margin-top:8px;max-width:42ch">Tell us what you've got and what it's doing. We'll let you know turnaround and whether it's worth fixing or replacing — straight answer, every time.</p>
+    <div class="vbig"><a href="tel:+17166793138">716-679-3138</a></div>
+    <div class="vnote">3405 S Roberts Rd, Fredonia, NY · Mon–Fri 8–5 · Sat 8–12</div>
+  </div>
+  <form class="vform" onsubmit="return false">
+    <label>Name</label><input type="text" placeholder="Your name">
+    <label>Phone</label><input type="tel" placeholder="Best number to reach you">
+    <label>Equipment</label>
+    <select><option>Riding mower / tractor</option><option>Push / self-propelled mower</option><option>Snowblower</option><option>Trimmer / blower</option><option>Generator / tiller / other</option><option>Shopping for a Cub Cadet</option></select>
+    <label>What's it doing?</label><textarea placeholder="e.g. won't start, runs rough, needs spring tune-up"></textarea>
+    <button class="btn">Request service</button>
+  </form>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b>Monte's Small Engine</b> · Fredonia, NY · 716-679-3138</div>
+  <div>Repair · Seasonal service · Cub Cadet sales · Parts</div>
+</div></footer>
+
+</body>
+</html>

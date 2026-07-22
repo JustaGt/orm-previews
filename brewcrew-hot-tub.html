@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BrewCrew Handyman &amp; Hot Tub Service — Little Valley &amp; Ellicottville, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --slate:#12212b; --slate2:#1b3040; --steam:#7fc4d8; --amber:#f0a340;
+    --paper:#f4f1ea; --line:#d9d2c5; --ink:#1a1a1a; --muted:#5d6b73;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  h1,h2,h3,.cond{font-family:'Barlow Condensed',sans-serif;letter-spacing:.01em;text-transform:uppercase}
+
+  /* top bar */
+  .bar{background:var(--slate);color:#e9f2f5;font-size:14px}
+  .bar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 22px;flex-wrap:wrap}
+  .bar b{color:#fff}
+  .bar .tag{color:var(--steam);font-weight:600}
+
+  /* hero */
+  header{background:linear-gradient(160deg,var(--slate) 0%,var(--slate2) 100%);color:#fff;padding:64px 0 72px;position:relative;overflow:hidden}
+  header:after{content:"";position:absolute;right:-90px;top:-60px;width:340px;height:340px;border:36px solid rgba(127,196,216,.10);border-radius:50%}
+  .kicker{display:inline-block;background:rgba(240,163,64,.15);border:1px solid rgba(240,163,64,.5);color:var(--amber);
+          font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border-radius:3px}
+  h1{font-size:56px;line-height:1;margin:18px 0 14px;max-width:16ch}
+  h1 em{font-style:normal;color:var(--steam)}
+  .sub{font-size:19px;color:#c6d6de;max-width:54ch}
+  .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+  .btn{display:inline-block;padding:15px 26px;border-radius:4px;font-weight:700;text-decoration:none;font-size:16px}
+  .btn-a{background:var(--amber);color:#20160a}
+  .btn-b{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.35)}
+  .stats{display:flex;gap:28px;margin-top:34px;flex-wrap:wrap;font-size:14px;color:#9fb6c1}
+  .stats b{display:block;font-family:'Barlow Condensed';font-size:30px;color:#fff;line-height:1}
+
+  section{padding:62px 0;border-bottom:1px solid var(--line)}
+  .eyebrow{font-size:12px;letter-spacing:.16em;font-weight:700;color:var(--muted);text-transform:uppercase}
+  h2{font-size:36px;margin:8px 0 8px}
+  .lede{color:var(--muted);max-width:60ch;margin-bottom:32px}
+
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:26px}
+  .card h3{font-size:24px;margin-bottom:6px}
+  .card .price{font-size:13px;color:var(--muted);font-weight:600}
+  ul.check{list-style:none;margin-top:14px}
+  ul.check li{padding-left:24px;position:relative;margin-bottom:7px;font-size:15px}
+  ul.check li:before{content:"";position:absolute;left:0;top:8px;width:9px;height:9px;background:var(--steam);border-radius:2px;transform:rotate(45deg)}
+
+  /* plan strip */
+  .plans{background:var(--slate);color:#fff;border-bottom:none}
+  .plans h2{color:#fff}
+  .plans .lede{color:#a9bec8}
+  .plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .plan{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:6px;padding:22px}
+  .plan h3{font-size:21px;color:var(--steam)}
+  .plan p{font-size:15px;color:#c6d6de;margin-top:8px}
+  .plan .ph{margin-top:14px;font-size:12px;color:#8aa2ad;border-top:1px dashed rgba(255,255,255,.2);padding-top:10px}
+
+  /* quotes */
+  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  blockquote{background:#fff;border-left:4px solid var(--amber);border-radius:0 6px 6px 0;padding:20px;font-size:15px}
+  blockquote cite{display:block;margin-top:12px;font-style:normal;font-weight:700;font-size:13px;color:var(--muted)}
+
+  .area{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .area span{background:#fff;border:1px solid var(--line);border-radius:20px;padding:6px 14px;font-size:14px;font-weight:500}
+
+  /* contact */
+  .contact{background:#fff;border-bottom:none}
+  .form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .form label{font-size:13px;font-weight:600;display:block;margin-bottom:5px}
+  .form input,.form select,.form textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:4px;font:inherit;background:var(--paper)}
+  .form .full{grid-column:1/-1}
+  .form button{grid-column:1/-1;background:var(--slate);color:#fff;border:0;padding:16px;border-radius:4px;font-weight:700;font-size:16px;cursor:pointer;font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:.06em}
+  .hours{font-size:15px;line-height:1.9}
+  .hours b{font-family:'Barlow Condensed';font-size:19px;display:block;margin-bottom:4px}
+
+  footer{background:var(--slate);color:#8aa2ad;padding:28px 0;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+  @media(max-width:860px){
+    h1{font-size:40px}
+    .split,.plan-grid,.quotes,.form{grid-template-columns:1fr}
+    section{padding:44px 0}
+  }
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap">
+  <span class="tag">Veteran-owned · Little Valley, NY</span>
+  <span>Mon–Fri 9–6 · <b>(716) 225-9874</b></span>
+</div></div>
+
+<header>
+  <div class="wrap">
+    <span class="kicker">Hot tub service &amp; property repairs</span>
+    <h1>Your tub is cold and the <em>guests arrive Friday</em>.</h1>
+    <p class="sub">BrewCrew services hot tubs and keeps homes running across Little Valley, Ellicottville and the Holiday Valley rental corridor — drain-and-fills, water balancing, heater and pump diagnostics, plus the deck, carpentry and plumbing work that comes with owning a house in the snowbelt.</p>
+    <div class="cta">
+      <a class="btn btn-a" href="#request">Request a service call</a>
+      <a class="btn btn-b" href="tel:7162259874">Call (716) 225-9874</a>
+    </div>
+    <div class="stats">
+      <div><b>5.0★</b>48 Google reviews</div>
+      <div><b>2</b>trades under one truck: spa service + handyman</div>
+      <div><b>Same-week</b>scheduling in season</div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">What we actually do</span>
+    <h2>Two call-outs, one crew</h2>
+    <p class="lede">Most spa companies won't touch your deck. Most handymen won't open a spa cabinet. BrewCrew does both, which is why rental owners keep the number.</p>
+    <div class="split">
+      <div class="card">
+        <h3>Hot tub &amp; spa service</h3>
+        <div class="price">Diagnostics · repair · seasonal care</div>
+        <ul class="check">
+          <li>Draining and refills, filter changes, shell clean-outs</li>
+          <li>Water balancing — sanitizer, pH, alkalinity, hardness</li>
+          <li>Equipment diagnostics: heaters, pumps, valves, control packs</li>
+          <li>Weekly and biweekly cleaning schedules for rented properties</li>
+          <li>Seasonal open/close so the tub survives a Cattaraugus County winter</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Handyman &amp; property repairs</h3>
+        <div class="price">General repairs through full renovations</div>
+        <ul class="check">
+          <li>Deck construction and deck repair</li>
+          <li>Carpentry, trim, doors, interior repairs</li>
+          <li>Plumbing repairs</li>
+          <li>Ongoing property maintenance for second homes</li>
+          <li>Full renovations — no job is turned away for being small</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="plans">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#8aa2ad">For rental &amp; second-home owners</span>
+    <h2>Keep the tub guest-ready without driving up from Buffalo</h2>
+    <p class="lede">If your place turns over every weekend, the spa is the first thing a guest complains about and the last thing you can check yourself. Pick a rhythm and we handle it.</p>
+    <div class="plan-grid">
+      <div class="plan">
+        <h3>Weekly</h3>
+        <p>Cleaning and full water chemistry between guest turnovers. Best for properties booked most weekends through ski season.</p>
+        <div class="ph">Pricing set after a first look at the tub</div>
+      </div>
+      <div class="plan">
+        <h3>Biweekly</h3>
+        <p>Every-other-week cleaning and balancing for lighter rental calendars and owner-use homes.</p>
+        <div class="ph">Pricing set after a first look at the tub</div>
+      </div>
+      <div class="plan">
+        <h3>On call</h3>
+        <p>No schedule — you call when the water goes cloudy, the heater quits, or a valve starts weeping. We come out.</p>
+        <div class="ph">Standard service-call rate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">What people say</span>
+    <h2>Fifty-something neighbors, five stars</h2>
+    <p class="lede">Verbatim from BrewCrew's Google reviews (5.0 average, 48 reviews as of this preview).</p>
+    <div class="quotes">
+      <blockquote>"Chad and his staff were very prompt and helpful to solve my issue with my hot tub. Highly recommend."<cite>Carolyn — Google</cite></blockquote>
+      <blockquote>"Very responsive and had my hot tub up and running only a couple days after they looked at it. So nice to have someone near by that wants the business!!"<cite>Mike Darling — Google</cite></blockquote>
+      <blockquote>"They kept me informed when parts were in and showed up when they said they would. Installation went great."<cite>John Graboski — Google</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Where we go</span>
+    <h2>Based on Rock City Street. Out the door by 9.</h2>
+    <p class="lede">The shop sits in Little Valley, ten minutes from the Ellicottville roundabout — which is why we can get to a dead heater the same week instead of putting you on a Buffalo company's route.</p>
+    <div class="area">
+      <span>Little Valley</span><span>Ellicottville</span><span>Great Valley</span><span>Salamanca</span>
+      <span>Cattaraugus</span><span>Franklinville</span><span>Randolph</span><span>Holiday Valley corridor</span>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="request">
+  <div class="wrap">
+    <span class="eyebrow">Book it</span>
+    <h2>Tell us what the tub is doing</h2>
+    <p class="lede">The more you can say about the make, the symptom and when it started, the more likely we arrive with the right part on the truck.</p>
+    <div class="split" style="align-items:start">
+      <form class="form" onsubmit="return false">
+        <div><label>Name</label><input placeholder="Your name"></div>
+        <div><label>Phone</label><input placeholder="(716) ___-____"></div>
+        <div class="full"><label>Property address / town</label><input placeholder="Street, town"></div>
+        <div><label>What do you need?</label>
+          <select>
+            <option>Hot tub — not heating</option>
+            <option>Hot tub — leak or pump noise</option>
+            <option>Hot tub — drain &amp; fill / cleaning</option>
+            <option>Recurring cleaning schedule (rental)</option>
+            <option>Deck repair or build</option>
+            <option>Carpentry / plumbing / general repair</option>
+          </select>
+        </div>
+        <div><label>Is this a rental property?</label>
+          <select><option>No — my home</option><option>Yes — short-term rental</option><option>Second home, not rented</option></select>
+        </div>
+        <div class="full"><label>Details (make/model, when it started)</label><textarea rows="4" placeholder="e.g. Jacuzzi J-375, heater stopped Sunday, panel shows FLO error"></textarea></div>
+        <button>Send it to BrewCrew</button>
+      </form>
+      <div>
+        <div class="card">
+          <div class="hours">
+            <b>Shop</b>605 Rock City St, Little Valley, NY 14755<br><br>
+            <b>Hours</b>Monday – Friday, 9:00am – 6:00pm<br>Closed Saturday &amp; Sunday<br><br>
+            <b>Phone</b><a href="tel:7162259874" style="color:var(--slate2);font-weight:700">(716) 225-9874</a><br><br>
+            <b>Owner</b>Chad Brewer — veteran-owned, incorporated 2024
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <span>BrewCrew Handyman &amp; Hot Tub Service, Inc. · Little Valley, NY</span>
+  <span>Concept preview prepared by Onyx Rise Media</span>
+</div></footer>
+
+</body>
+</html>

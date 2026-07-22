@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Riverview Salon &amp; Medspa | Newburgh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--espresso:#2a211d;--gold:#c6a15b;--ivory:#f6f1ea;--espresso-soft:#3a2e28;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Montserrat',sans-serif;color:var(--ivory);background:var(--espresso);line-height:1.65;}
+h1,h2,h3,.serif{font-family:'Playfair Display',serif;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:1140px;margin:0 auto;padding:0 28px;}
+.btn{display:inline-block;padding:14px 28px;border-radius:2px;font-weight:600;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;transition:.25s;}
+.btn-gold{background:var(--gold);color:var(--espresso);}
+.btn-gold:hover{background:#d8b873;}
+.btn-line{border:1px solid var(--gold);color:var(--gold);}
+.btn-line:hover{background:var(--gold);color:var(--espresso);}
+.kicker{color:var(--gold);letter-spacing:.32em;text-transform:uppercase;font-size:.72rem;font-weight:500;}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(30,24,21,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(198,161,91,.22);}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:18px;}
+.brand{font-family:'Playfair Display',serif;font-size:1.25rem;letter-spacing:.04em;}
+.brand span{color:var(--gold);}
+.navlinks{display:flex;gap:30px;align-items:center;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;}
+.navlinks a.lnk{opacity:.8;}.navlinks a.lnk:hover{opacity:1;color:var(--gold);}
+
+.hero{min-height:88vh;display:flex;align-items:center;background:linear-gradient(rgba(20,16,14,.72),rgba(20,16,14,.78)),url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:var(--espresso);}
+.hero-inner{max-width:680px;padding:90px 0;}
+.hero h1{font-size:3.4rem;line-height:1.1;margin:18px 0 20px;font-weight:600;}
+.hero p.sub{font-size:1.08rem;opacity:.88;font-weight:300;max-width:560px;margin-bottom:34px;}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;}
+.stats{display:flex;gap:48px;margin-top:54px;flex-wrap:wrap;}
+.stat .n{font-family:'Playfair Display',serif;font-size:2.1rem;color:var(--gold);}
+.stat .l{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;opacity:.7;}
+
+section{padding:92px 0;}
+.sec-head{text-align:center;max-width:620px;margin:0 auto 56px;}
+.sec-head h2{font-size:2.4rem;margin:14px 0 12px;}
+.sec-head p{opacity:.78;font-weight:300;}
+
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.tile{background:var(--espresso-soft);padding:40px 30px;border:1px solid rgba(198,161,91,.16);border-radius:3px;transition:.3s;}
+.tile:hover{border-color:var(--gold);transform:translateY(-4px);}
+.tile .ic{font-size:1.6rem;color:var(--gold);margin-bottom:14px;}
+.tile h3{font-size:1.25rem;margin-bottom:10px;}
+.tile p{font-size:.9rem;opacity:.78;font-weight:300;}
+
+.menu-sec{background:#241d19;}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 56px;}
+.mrow{display:flex;align-items:baseline;padding:18px 0;border-bottom:1px solid rgba(198,161,91,.14);}
+.mrow .name{font-family:'Playfair Display',serif;font-size:1.12rem;}
+.mrow .dots{flex:1;border-bottom:1px dotted rgba(198,161,91,.4);margin:0 12px;transform:translateY(-4px);}
+.mrow .price{color:var(--gold);font-weight:600;font-size:.95rem;}
+.mrow .desc{font-size:.8rem;opacity:.65;font-weight:300;width:100%;margin-top:4px;}
+
+.feature{display:grid;grid-template-columns:1.05fr .95fr;gap:0;align-items:stretch;}
+.feature .img{min-height:440px;background:linear-gradient(rgba(20,16,14,.25),rgba(20,16,14,.45)),url('https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:var(--espresso-soft);}
+.feature .txt{background:var(--espresso-soft);padding:64px 56px;display:flex;flex-direction:column;justify-content:center;}
+.feature .txt h2{font-size:2rem;margin:14px 0 18px;}
+.feature ul{list-style:none;margin-top:14px;}
+.feature li{padding:10px 0;border-bottom:1px solid rgba(198,161,91,.12);font-size:.92rem;opacity:.85;font-weight:300;}
+.feature li::before{content:"—";color:var(--gold);margin-right:12px;}
+
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;}
+.strip .g{height:240px;background-size:cover;background-position:center;background-color:var(--espresso-soft);}
+.g1{background-image:linear-gradient(rgba(20,16,14,.2),rgba(20,16,14,.4)),url('https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1400&q=80');}
+.g2{background-image:linear-gradient(rgba(20,16,14,.2),rgba(20,16,14,.4)),url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1400&q=80');}
+.g3{background-image:linear-gradient(rgba(20,16,14,.2),rgba(20,16,14,.4)),url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1400&q=80');}
+.g4{background-image:linear-gradient(rgba(20,16,14,.2),rgba(20,16,14,.4)),url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1400&q=80');}
+
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
+.contact h2{font-size:2.2rem;margin-bottom:18px;}
+.info p{margin-bottom:14px;opacity:.85;font-weight:300;}
+.info .label{color:var(--gold);letter-spacing:.12em;text-transform:uppercase;font-size:.72rem;display:block;margin-bottom:2px;}
+.hours{margin-top:20px;border-top:1px solid rgba(198,161,91,.14);padding-top:20px;}
+.hours div{display:flex;justify-content:space-between;padding:6px 0;font-size:.88rem;font-weight:300;}
+form{background:var(--espresso-soft);padding:38px;border:1px solid rgba(198,161,91,.16);border-radius:3px;}
+form label{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:14px 0 6px;}
+form input,form select,form textarea{width:100%;background:#1d1714;border:1px solid rgba(198,161,91,.25);color:var(--ivory);padding:12px 14px;border-radius:2px;font-family:inherit;font-size:.92rem;}
+form button{margin-top:24px;width:100%;cursor:pointer;border:none;}
+.thanks{display:none;text-align:center;padding:40px 20px;}
+.thanks.show{display:block;}
+.thanks h3{color:var(--gold);font-size:1.6rem;margin-bottom:10px;}
+
+footer{background:#1b1512;text-align:center;padding:44px 20px;border-top:1px solid rgba(198,161,91,.2);}
+footer .brand{font-size:1.3rem;margin-bottom:10px;}
+footer p{opacity:.6;font-size:.82rem;font-weight:300;}
+.orm{color:var(--gold);margin-top:14px;font-size:.74rem;letter-spacing:.1em;}
+
+@media(max-width:860px){
+.navlinks .lnk{display:none;}
+.hero h1{font-size:2.3rem;}
+.tiles,.menu-grid,.feature,.contact{grid-template-columns:1fr;}
+.feature .img{min-height:280px;}
+.feature .txt{padding:44px 30px;}
+.strip{grid-template-columns:1fr 1fr;}
+.stats{gap:30px;}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<div class="brand">Riverview <span>Salon &amp; Medspa</span></div>
+<div class="navlinks">
+<a class="lnk" href="#treatments">Treatments</a>
+<a class="lnk" href="#why">Why Riverview</a>
+<a class="lnk" href="#visit">Visit</a>
+<a class="btn btn-gold" href="#visit">Book a Consult</a>
+</div>
+</div></nav>
+
+<header class="hero"><div class="wrap"><div class="hero-inner">
+<span class="kicker">Newburgh · On the Hudson</span>
+<h1>Refined aesthetics, steps from the riverfront.</h1>
+<p class="sub">Injectables, advanced facials, and salon services delivered by licensed providers who believe results should look like you, only rested. Quiet rooms, natural light off the water, no rushing.</p>
+<div class="hero-ctas">
+<a class="btn btn-gold" href="#visit">Book a Consult</a>
+<a class="btn btn-line" href="#treatments">View Treatments</a>
+</div>
+<div class="stats">
+<div class="stat"><div class="n">12+</div><div class="l">Years on Broadway</div></div>
+<div class="stat"><div class="n">5,000+</div><div class="l">Treatments delivered</div></div>
+<div class="stat"><div class="n">100%</div><div class="l">Licensed injectors</div></div>
+</div>
+</div></div></header>
+
+<section id="why"><div class="wrap">
+<div class="sec-head">
+<span class="kicker">The Riverview Difference</span>
+<h2>Considered care, not a conveyor belt</h2>
+<p>Every visit starts with a real conversation about your face, your goals, and what you'd rather leave alone.</p>
+</div>
+<div class="tiles">
+<div class="tile"><div class="ic">✦</div><h3>Conservative by design</h3><p>We dose for balance. The compliment we hear most is "you look great," not "what did you have done."</p></div>
+<div class="tile"><div class="ic">✦</div><h3>Medical-grade, salon comfort</h3><p>Clinical standards for injectables and lasers, paired with the warmth of a neighborhood salon chair.</p></div>
+<div class="tile"><div class="ic">✦</div><h3>One team, start to finish</h3><p>The provider who plans your treatment is the one who performs it and checks in afterward.</p></div>
+</div>
+</div></section>
+
+<section id="treatments" class="menu-sec"><div class="wrap">
+<div class="sec-head">
+<span class="kicker">Treatment Menu</span>
+<h2>Injectables, skin &amp; salon</h2>
+<p>Pricing is a starting guide; your provider confirms a plan at consultation.</p>
+</div>
+<div class="menu-grid">
+<div class="mrow"><span class="name">Botox / Neuromodulator</span><span class="dots"></span><span class="price">$13 / unit</span><span class="desc">Forehead, frown lines, crow's feet — softened, not frozen.</span></div>
+<div class="mrow"><span class="name">Dermal Filler</span><span class="dots"></span><span class="price">from $650</span><span class="desc">Lip, cheek, and jawline contouring with hyaluronic acid.</span></div>
+<div class="mrow"><span class="name">Signature HydraFacial</span><span class="dots"></span><span class="price">$185</span><span class="desc">Cleanse, exfoliate, extract, and hydrate in one session.</span></div>
+<div class="mrow"><span class="name">Chemical Peel</span><span class="dots"></span><span class="price">from $140</span><span class="desc">Light to medium depth for tone, texture, and clarity.</span></div>
+<div class="mrow"><span class="name">Laser Hair Removal</span><span class="dots"></span><span class="price">from $90</span><span class="desc">Per-area pricing; packages available.</span></div>
+<div class="mrow"><span class="name">Cut, Color &amp; Style</span><span class="dots"></span><span class="price">from $65</span><span class="desc">Full salon services by senior stylists.</span></div>
+</div>
+</div></section>
+
+<section class="feature" style="padding:0;">
+<div class="img"></div>
+<div class="txt">
+<span class="kicker">Premium Injectables</span>
+<h2>Subtle work that holds up in daylight</h2>
+<p style="opacity:.85;font-weight:300;">Our injectors map your face at rest and in motion before a single unit is placed. We use only FDA-approved products, document every plan, and never upsell what your face doesn't need.</p>
+<ul>
+<li>Complimentary consult before any injectable</li>
+<li>Detailed before-and-after records kept on file</li>
+<li>Two-week follow-up included with every treatment</li>
+<li>Honest guidance on what to skip</li>
+</ul>
+</div>
+</section>
+
+<section style="padding-bottom:0;"><div class="wrap">
+<div class="sec-head">
+<span class="kicker">The Space</span>
+<h2>Calm rooms, river light</h2>
+</div>
+</div>
+<div class="strip">
+<div class="g g1"></div><div class="g g2"></div><div class="g g3"></div><div class="g g4"></div>
+</div>
+</section>
+
+<section id="visit"><div class="wrap">
+<div class="contact">
+<div class="info">
+<span class="kicker">Visit Us</span>
+<h2>Book on the Hudson</h2>
+<p>Tucked along Newburgh's riverfront, with easy parking and a view worth the trip.</p>
+<p><span class="label">Phone</span>(845) 569-0700</p>
+<p><span class="label">Area</span>Newburgh, NY · Hudson Riverfront</p>
+<div class="hours">
+<div><span>Tuesday – Friday</span><span>9:00 – 6:00</span></div>
+<div><span>Saturday</span><span>9:00 – 4:00</span></div>
+<div><span>Sunday – Monday</span><span>By appointment</span></div>
+</div>
+</div>
+<div>
+<form id="rvform" onsubmit="event.preventDefault();document.getElementById('rvform').style.display='none';document.getElementById('rvthx').classList.add('show');">
+<label>Name</label><input required type="text" placeholder="Your name">
+<label>Phone</label><input required type="tel" placeholder="(845) 000-0000">
+<label>Interested in</label>
+<select><option>Botox / Neuromodulator</option><option>Dermal Filler</option><option>Facial / Skin</option><option>Laser</option><option>Salon Services</option></select>
+<label>Anything we should know?</label><textarea rows="3" placeholder="First visit, goals, preferred times…"></textarea>
+<button class="btn btn-gold" type="submit">Request Appointment</button>
+</form>
+<div id="rvthx" class="thanks"><h3>Thank you.</h3><p style="opacity:.85;font-weight:300;">Your request is in. A Riverview team member will call (845) 569-0700 to confirm your time.</p></div>
+</div>
+</div>
+</div></section>
+
+<footer>
+<div class="brand">Riverview <span style="color:var(--gold);">Salon &amp; Medspa</span></div>
+<p>Newburgh, NY · (845) 569-0700</p>
+<p class="orm">Website preview by Onyx Rise Media</p>
+</footer>
+</body>
+</html>

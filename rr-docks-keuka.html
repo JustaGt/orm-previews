@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R and R Docks — Keuka Lake Dock, Boat House & Seawall Builder</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --deep:#0f2b3d; --water:#12506b; --wave:#1f7fa6; --steel:#5c6b73;
+    --cedar:#b6763f; --cedar-d:#8f5626; --sand:#f4efe7; --ink:#14232b; --line:#d9d2c6;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--sand);line-height:1.6}
+  h1,h2,h3,.eyebrow{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.04em}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  /* top bar */
+  .topbar{background:var(--deep);color:#dbe8ee;font-size:.86rem}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 22px;flex-wrap:wrap}
+  .topbar a{color:#fff;text-decoration:none;font-weight:600}
+  /* hero */
+  .hero{position:relative;color:#eaf4f8;
+    background:
+      linear-gradient(180deg,rgba(15,43,61,.55),rgba(15,43,61,.85)),
+      linear-gradient(120deg,#0f2b3d 0%,#12506b 55%,#1f7fa6 100%);
+    overflow:hidden}
+  .hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:60px;
+    background:repeating-linear-gradient(90deg,transparent 0 34px,rgba(182,118,63,.5) 34px 40px);opacity:.4}
+  .hero .wrap{padding:78px 22px 92px;position:relative;z-index:2}
+  .eyebrow{color:#9fd4ea;font-size:.95rem;font-weight:600;margin-bottom:14px}
+  .hero h1{font-size:clamp(2.1rem,5vw,3.5rem);line-height:1.04;max-width:16ch;color:#fff}
+  .hero p.sub{font-size:1.2rem;max-width:52ch;margin:20px 0 30px;color:#dbeaf1}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.05em;
+    font-weight:600;padding:15px 26px;border-radius:3px;text-decoration:none;font-size:1rem}
+  .btn-primary{background:var(--cedar);color:#fff}
+  .btn-primary:hover{background:var(--cedar-d)}
+  .btn-ghost{border:2px solid #9fd4ea;color:#eaf4f8}
+  .btn-ghost:hover{background:rgba(159,212,234,.15)}
+  /* strip */
+  .strip{background:var(--deep);color:#cfe2ea;padding:16px 0;font-family:'Oswald',sans-serif;letter-spacing:.03em}
+  .strip .wrap{display:flex;gap:26px;flex-wrap:wrap;justify-content:center;font-size:.98rem}
+  .strip b{color:var(--cedar)}
+  /* section */
+  section{padding:66px 0}
+  .sec-head{max-width:60ch;margin-bottom:34px}
+  .sec-head .eyebrow{color:var(--wave)}
+  .sec-head h2{font-size:clamp(1.6rem,3.6vw,2.3rem);color:var(--deep);margin:8px 0 12px}
+  .sec-head p{color:#40525b}
+  /* services grid */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+  .card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--wave);border-radius:5px;padding:22px}
+  .card h3{font-size:1.12rem;color:var(--deep);margin-bottom:8px}
+  .card p{font-size:.96rem;color:#46565e}
+  .card .tag{display:inline-block;font-family:'Oswald';font-size:.72rem;letter-spacing:.08em;
+    color:var(--cedar-d);background:#f6ecdf;padding:3px 9px;border-radius:20px;margin-bottom:12px}
+  /* ice band */
+  .ice{background:linear-gradient(120deg,#0f2b3d,#12506b);color:#eaf4f8}
+  .ice .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:34px;align-items:center;padding:60px 22px}
+  .ice h2{font-size:clamp(1.5rem,3.4vw,2.1rem);color:#fff;margin-bottom:14px}
+  .ice p{color:#d4e6ee;margin-bottom:10px}
+  .ice ul{list-style:none;margin-top:14px}
+  .ice li{padding:9px 0 9px 30px;position:relative;border-bottom:1px solid rgba(255,255,255,.12)}
+  .ice li::before{content:"▸";position:absolute;left:4px;color:var(--cedar)}
+  /* area */
+  .area .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+  .area .place{background:#fff;border:1px solid var(--line);border-left:4px solid var(--cedar);
+    padding:16px 18px;border-radius:4px;font-weight:600;color:var(--deep)}
+  /* gallery */
+  .gallery{background:#eee6d9}
+  .shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+  .shot{aspect-ratio:4/3;border-radius:5px;display:flex;align-items:flex-end;padding:14px;
+    color:#eaf4f8;font-family:'Oswald';font-size:.9rem;letter-spacing:.03em;
+    background:linear-gradient(160deg,#1f7fa6,#0f2b3d);border:1px solid #cdbfa6}
+  .ph-note{font-size:.82rem;color:#7a6a52;margin-top:12px;font-style:italic}
+  /* contact */
+  .contact{background:var(--deep);color:#e7f1f6}
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:64px 22px}
+  .contact h2{color:#fff;font-size:clamp(1.6rem,3.6vw,2.2rem);margin-bottom:12px}
+  .contact .big{font-family:'Oswald';font-size:1.9rem;color:var(--cedar);text-decoration:none;display:block;margin:6px 0}
+  .contact a{color:#9fd4ea}
+  form{display:grid;gap:12px}
+  input,select,textarea{font-family:inherit;padding:12px 14px;border:1px solid #35576a;border-radius:4px;
+    background:#0b2230;color:#eaf4f8;font-size:1rem}
+  input::placeholder,textarea::placeholder{color:#7f98a6}
+  form .btn-primary{border:none;cursor:pointer;text-align:center}
+  footer{background:#081a25;color:#7f98a6;font-size:.85rem;text-align:center;padding:22px}
+  @media(max-width:720px){.ice .wrap,.contact .wrap{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Family owned &amp; operated on Keuka Lake</span>
+  <span>Free on-site quotes · <a href="tel:16076616147">(607) 661-6147</a></span>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">Keuka Lake shoreline builders</div>
+  <h1>Docks, boat houses &amp; seawalls built to take Keuka's ice.</h1>
+  <p class="sub">Pile-driven docks, timber boat houses, steel and rock seawalls, lifts and hoists — set by one Keuka Lake crew that also handles the salvage when a winter takes its toll.</p>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="#quote">Get a free on-site quote</a>
+    <a class="btn btn-ghost" href="tel:16076616147">Call (607) 661-6147</a>
+  </div>
+</div></header>
+
+<div class="strip"><div class="wrap">
+  <span><b>Pile driving</b> — set to depth, not floated</span>
+  <span><b>Seawalls</b> — stone &amp; retaining</span>
+  <span><b>Boat houses &amp; lifts</b></span>
+  <span><b>Salvage &amp; recovery</b></span>
+</div></div>
+
+<section><div class="wrap">
+  <div class="sec-head">
+    <div class="eyebrow">What we build</div>
+    <h2>One crew for the whole shoreline</h2>
+    <p>From a new pile-driven dock to the seawall holding your lawn back from the water, R&amp;R does the driving, the carpentry, and the steel — so you're not stitching together three contractors for one waterfront.</p>
+  </div>
+  <div class="grid">
+    <div class="card"><span class="tag">Docks</span><h3>Pile-driven docks</h3><p>Permanent docks driven to depth for Keuka's water and ice — plus seasonal setups where the shoreline calls for it.</p></div>
+    <div class="card"><span class="tag">Boat houses</span><h3>Boat houses &amp; lifts</h3><p>Timber boat houses, plus boat lifts and hoists sized to your hull and your water depth.</p></div>
+    <div class="card"><span class="tag">Shoreline</span><h3>Seawalls &amp; retaining walls</h3><p>Stone and engineered seawalls to hold the bank and stop the wave-cut chewing your lawn each season.</p></div>
+    <div class="card"><span class="tag">Winter</span><h3>Ice breakers &amp; aerators</h3><p>Ice-eaters and aeration set to keep moving water off your dock pilings and boat house through freeze-up.</p></div>
+    <div class="card"><span class="tag">Access</span><h3>Accessories &amp; hardware</h3><p>Ladders, bumpers, cleats, and the fittings that make a dock actually livable — installed with the build.</p></div>
+    <div class="card"><span class="tag">Recovery</span><h3>Boat salvage &amp; recovery</h3><p>Sunk, swamped, or storm-tossed — we raise and recover boats and dock sections off the Keuka bottom.</p></div>
+  </div>
+</div></section>
+
+<div class="ice"><div class="wrap">
+  <div>
+    <div class="eyebrow" style="color:#9fd4ea">Why it matters on Keuka</div>
+    <h2>Ice-out is the real test of a dock.</h2>
+    <p>A dock that floats through summer can still be shoved, heaved, or snapped when Keuka freezes and lets go in spring. The pilings, the wall footing, and where the ice-eater sits are what decide whether you're rebuilding next May.</p>
+    <p>We build for the freeze first — then the sunny July afternoon takes care of itself.</p>
+  </div>
+  <div>
+    <ul>
+      <li>Pilings driven to holding depth for your section of shore</li>
+      <li>Seawall footings set below the frost and wave line</li>
+      <li>Ice breakers positioned to protect pilings, not just open water</li>
+      <li>One crew that also comes back for salvage if the lake wins</li>
+    </ul>
+  </div>
+</div></div>
+
+<section class="area"><div class="wrap" style="display:block">
+  <div class="sec-head">
+    <div class="eyebrow">Where we work</div>
+    <h2>The Keuka shoreline</h2>
+  </div>
+  <div class="wrap" style="padding:0">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px">
+    <div class="place">Hammondsport &amp; the south end</div>
+    <div class="place">Pulteney &amp; the west branch</div>
+    <div class="place">Wayne &amp; the east branch</div>
+    <div class="place">Branchport &amp; the Y</div>
+  </div></div>
+</div></section>
+
+<section class="gallery"><div class="wrap">
+  <div class="sec-head">
+    <div class="eyebrow">Recent work</div>
+    <h2>Docks, walls &amp; boat houses around the lake</h2>
+    <p>A look at builds up and down Keuka — from a single-slip dock to a full seawall-and-boat-house job.</p>
+  </div>
+  <div class="shots">
+    <div class="shot">Pile-driven dock — south end</div>
+    <div class="shot">Stone seawall &amp; steps</div>
+    <div class="shot">Boat house with lift</div>
+    <div class="shot">Retaining wall rebuild</div>
+  </div>
+  <p class="ph-note">Placeholder tiles — to be replaced with R&amp;R's own Keuka job photos before launch.</p>
+</div></section>
+
+<section class="contact" id="quote"><div class="wrap">
+  <div>
+    <div class="eyebrow" style="color:#9fd4ea">Get a quote</div>
+    <h2>Tell us about your shoreline.</h2>
+    <p>Send the basics and we'll set up a time to look at your section of the lake and price the job. Short build season — the earlier you're on the schedule, the better.</p>
+    <a class="big" href="tel:16076616147">(607) 661-6147</a>
+    <p>Email: <a href="mailto:rrdocks@hotmail.com">rrdocks@hotmail.com</a></p>
+    <p style="margin-top:8px;color:#9fb6c2">Keuka Lake, NY · family owned &amp; operated</p>
+  </div>
+  <form onsubmit="return false">
+    <input type="text" placeholder="Your name" required>
+    <input type="tel" placeholder="Phone" required>
+    <input type="text" placeholder="Where on Keuka? (town / road)" >
+    <select>
+      <option>What do you need?</option>
+      <option>New dock / pile driving</option>
+      <option>Boat house or lift</option>
+      <option>Seawall / retaining wall</option>
+      <option>Ice breaker / aerator</option>
+      <option>Salvage / recovery</option>
+    </select>
+    <textarea rows="3" placeholder="A few details about the site"></textarea>
+    <button class="btn btn-primary" type="submit">Request my on-site quote</button>
+  </form>
+</div></section>
+
+<footer>R and R Docks · Keuka Lake, NY · (607) 661-6147 · rrdocks@hotmail.com — preview concept by Onyx Rise Media</footer>
+
+</body>
+</html>

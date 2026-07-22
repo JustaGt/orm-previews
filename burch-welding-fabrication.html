@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Burch Welding &amp; Fabrication — Custom Metal, Railings, Gates &amp; Repairs | Schuylerville, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --steel:#1c1f24; --steel2:#262b32; --iron:#13161a; --spark:#ff7a18; --spark2:#ffb347;
+    --ash:#e9ebee; --grey:#aab2bd; --line:#333a43; --paper:#f5f6f8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',system-ui,sans-serif;color:#1c1f24;background:var(--paper);line-height:1.55}
+  h1,h2,h3,.cond{font-family:'Saira Condensed',sans-serif;text-transform:uppercase;letter-spacing:.5px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  /* topbar */
+  .top{background:var(--iron);color:var(--ash);font-size:.9rem;border-bottom:3px solid var(--spark)}
+  .top .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;align-items:center;padding:10px 22px}
+  .top b{color:var(--spark2)}
+  /* hero */
+  .hero{background:
+     radial-gradient(900px 360px at 80% -10%,rgba(255,122,24,.22),transparent),
+     linear-gradient(180deg,var(--steel),var(--iron));
+     color:var(--ash);padding:72px 0 60px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:0;background-image:
+     repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0 2px,transparent 2px 40px);pointer-events:none}
+  .kicker{display:inline-flex;gap:8px;align-items:center;color:var(--spark2);font-family:'Saira Condensed';
+     text-transform:uppercase;letter-spacing:2px;font-weight:700;font-size:.85rem;margin-bottom:16px}
+  .kicker::before{content:"";width:26px;height:3px;background:var(--spark)}
+  .hero h1{font-size:3.1rem;line-height:1;font-weight:700;max-width:16ch}
+  .hero h1 em{color:var(--spark);font-style:normal}
+  .hero p{font-size:1.18rem;color:#c9ced6;max-width:50ch;margin:18px 0 6px}
+  .btns{display:flex;flex-wrap:wrap;gap:13px;margin-top:26px}
+  .btn{font-family:'Saira Condensed';text-transform:uppercase;letter-spacing:1px;font-weight:700;font-size:1.02rem;
+     padding:13px 24px;border-radius:3px;text-decoration:none;display:inline-block}
+  .btn-spark{background:var(--spark);color:#1a1206}
+  .btn-spark:hover{background:var(--spark2)}
+  .btn-out{border:2px solid #4b535d;color:var(--ash)}
+  .badge{margin-top:24px;font-size:.92rem;color:var(--grey)}
+  .badge b{color:var(--ash)}
+  /* nosite callout */
+  .why{background:var(--steel2);color:var(--ash);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .why .wrap{padding:22px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:center;text-align:center;font-size:1.02rem}
+  .why b{color:var(--spark2)}
+  /* sections */
+  section.pad{padding:58px 0}
+  .eyebrow{font-family:'Saira Condensed';letter-spacing:2px;text-transform:uppercase;color:var(--spark);font-weight:700;font-size:.85rem}
+  h2.sec{font-size:2.1rem;margin:6px 0 10px}
+  .sub{color:#555c66;max-width:62ch;margin-bottom:28px}
+  .grid{display:grid;gap:16px}
+  .g4{grid-template-columns:repeat(4,1fr)}
+  .g2{grid-template-columns:1fr 1fr}
+  .svc{background:#fff;border:1px solid #e0e3e8;border-top:4px solid var(--spark);border-radius:6px;padding:20px}
+  .svc h3{font-size:1.18rem;margin-bottom:7px}
+  .svc p{font-size:.96rem;color:#555c66}
+  .steelbox{background:var(--steel);color:var(--ash);border-radius:8px;padding:30px}
+  .steelbox h3{color:var(--spark2);font-size:1.3rem;margin-bottom:12px}
+  .checks{list-style:none}
+  .checks li{padding:9px 0 9px 28px;position:relative;border-bottom:1px solid var(--line);color:#d6dae0}
+  .checks li::before{content:"\2713";position:absolute;left:0;color:var(--spark);font-weight:700}
+  .checks li:last-child{border-bottom:none}
+  /* gallery placeholders */
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .gal div{aspect-ratio:4/3;border-radius:6px;display:flex;align-items:center;justify-content:center;text-align:center;
+     font-family:'Saira Condensed';text-transform:uppercase;letter-spacing:1px;color:#cfd4db;font-size:.92rem;padding:14px;
+     background:repeating-linear-gradient(45deg,#2a2f36,#2a2f36 10px,#242930 10px,#242930 20px);border:1px solid var(--line)}
+  /* quote */
+  .quote{background:linear-gradient(180deg,#23272d,#15181c);color:var(--ash)}
+  .quote .wrap{padding:56px 22px;display:grid;grid-template-columns:1fr 1fr;gap:34px}
+  .quote h2{color:#fff;font-size:2rem}
+  form{display:grid;gap:11px}
+  input,textarea{font-family:inherit;font-size:1rem;padding:12px 14px;border:1px solid #3a414a;border-radius:4px;width:100%;background:#fff}
+  textarea{min-height:96px;resize:vertical}
+  .phone a{font-family:'Saira Condensed';font-size:1.8rem;color:var(--spark2);text-decoration:none;letter-spacing:1px}
+  .small{font-size:.86rem;color:var(--grey)}
+  footer{background:#0f1114;color:#8a929c;text-align:center;font-size:.85rem;padding:26px 22px}
+  @media(max-width:760px){
+    .hero h1{font-size:2.2rem}
+    .g4{grid-template-columns:1fr 1fr}
+    .g2,.quote .wrap{grid-template-columns:1fr}
+    .gal{grid-template-columns:1fr 1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <span><b>Burch Welding &amp; Fabrication, LLC</b> · 402 Wall St, Schuylerville, NY</span>
+  <span>Free estimates · custom builds &amp; repairs</span>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <span class="kicker">Custom welding &amp; metal fabrication</span>
+  <h1>If it's <em>steel, aluminum or iron</em> — we'll build it or fix it.</h1>
+  <p>A Schuylerville fab shop for railings, gates, custom metalwork, farm and contractor jobs, and the broken parts everyone else says to throw out.</p>
+  <div class="btns">
+    <a href="#quote" class="btn btn-spark">Send your project for a quote</a>
+    <a href="#work" class="btn btn-out">See what we make</a>
+  </div>
+  <p class="badge"><b>17 years</b> at the welding table · free estimates · credit cards accepted</p>
+</div></header>
+
+<div class="why"><div class="wrap">
+  <span>Right now there's nowhere online to send a customer or a photo of the job. <b>This page fixes that</b> — one place that shows the work and takes quote requests.</span>
+</div></div>
+
+<section class="pad" id="work"><div class="wrap">
+  <span class="eyebrow">What we make &amp; repair</span>
+  <h2 class="sec">Custom on one side. Repairs on the other.</h2>
+  <p class="sub">Two kinds of calls come into a fab shop: "can you build this?" and "can you fix this?" We take both.</p>
+  <div class="grid g4">
+    <div class="svc"><h3>Railings &amp; Gates</h3><p>Aluminum, steel and wrought-iron railings, gates and ornamental work — built to fit, installed clean.</p></div>
+    <div class="svc"><h3>Custom Fence</h3><p>Metal fence install and repair when an off-the-shelf panel won't do the job.</p></div>
+    <div class="svc"><h3>Custom Fabrication</h3><p>Brackets, frames, stands, structures and one-off metal parts made to your measurements.</p></div>
+    <div class="svc"><h3>Repairs &amp; Welding</h3><p>Cracked, broken or rusted-through steel and aluminum welded back together instead of replaced.</p></div>
+  </div>
+</div></section>
+
+<section class="pad" style="background:#eceef1"><div class="wrap">
+  <div class="grid g2" style="align-items:center">
+    <div>
+      <span class="eyebrow">Who calls us</span>
+      <h2 class="sec">Homeowners, farms and contractors</h2>
+      <p class="sub">Same shop, three kinds of customers — handled fast with a free estimate up front.</p>
+      <div class="steelbox">
+        <h3>What you can count on</h3>
+        <ul class="checks">
+          <li>Quick, free estimates before any work</li>
+          <li>Clean welds and tight fit-up — not "good enough"</li>
+          <li>Custom builds <em>and</em> repairs under one roof</li>
+          <li>Farm &amp; contractor fabrication on a working timeline</li>
+          <li>A real local shop with a real address in Schuylerville</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow">Recent work</span>
+      <h2 class="sec">Show the welds</h2>
+      <p class="sub">Drop in real photos of railings, gates and fabrication — the proof a metal shop needs and a Facebook feed buries.</p>
+      <div class="gal">
+        <div>Railing / gate photo</div>
+        <div>Custom fab photo</div>
+        <div>Repair before / after</div>
+        <div>Farm / contractor job</div>
+        <div>Ornamental ironwork</div>
+        <div>Shop / in progress</div>
+      </div>
+      <p class="small" style="color:#7a828c;margin-top:10px">Placeholders — swap in real job photos.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="quote pad" id="quote"><div class="wrap">
+  <div>
+    <span class="eyebrow">Free estimate</span>
+    <h2>Send the job, get a price</h2>
+    <p style="color:#c9ced6;margin:10px 0 18px">Tell us what you need built or fixed, snap a photo, and we'll get back with a free estimate. Custom railing, a gate, a broken part, a fabrication run — all fair game.</p>
+    <p class="phone"><span class="small" style="display:block">Prefer to call?</span><a href="#">Add shop phone here</a></p>
+    <p class="small" style="margin-top:14px">402 Wall Street, Schuylerville, NY 12871</p>
+  </div>
+  <div>
+    <form onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';">
+      <input type="text" placeholder="Your name" required>
+      <input type="text" placeholder="Phone or email" required>
+      <input type="text" placeholder="What is it? (railing, gate, repair, custom part...)">
+      <textarea placeholder="Describe the project — size, material, and what it's for. Mention if you can send a photo."></textarea>
+      <button class="btn btn-spark" type="submit" style="border:none;cursor:pointer">Request my free estimate</button>
+      <span class="ok small" style="display:none;color:#ffb347;font-weight:600">Thanks — we'll get back to you with an estimate.</span>
+    </form>
+  </div>
+</div></section>
+
+<footer>
+  Burch Welding &amp; Fabrication, LLC · 402 Wall St, Schuylerville, NY 12871 · Saratoga County<br>
+  Custom welding · railings &amp; gates · metal fabrication · repairs — free estimates.<br>
+  <span style="opacity:.6">Preview concept prepared by Onyx Rise Media — not the live site.</span>
+</footer>
+
+</body>
+</html>

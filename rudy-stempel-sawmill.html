@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rudy Stempel &amp; Family Sawmill — Rough-Cut Lumber &amp; Custom Sawing, East Berne NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bark:#3d2b1f;--timber:#7a5230;--sawdust:#e9ddc8;--cream:#f7f1e3;--ink:#26201a;--blade:#b3862d;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;}
+  h1,h2,h3{font-family:'Bitter',serif;}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px;}
+  /* hero */
+  header{background:linear-gradient(160deg,var(--bark) 0%,#5a3d26 70%,#6b4a2e 100%);color:var(--sawdust);padding:20px 0 74px;}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:10px 0 40px;}
+  .brand{font-family:'Bitter',serif;font-weight:800;font-size:1.05rem;letter-spacing:.06em;text-transform:uppercase;}
+  .brand span{color:var(--blade);}
+  nav a.call{background:var(--blade);color:#1f1509;text-decoration:none;font-weight:600;padding:10px 18px;border-radius:4px;}
+  .est{display:inline-block;border:1px solid rgba(233,221,200,.45);padding:5px 14px;border-radius:2px;letter-spacing:.22em;font-size:.72rem;text-transform:uppercase;margin-bottom:20px;}
+  h1{font-size:clamp(2rem,5vw,3.3rem);font-weight:800;line-height:1.12;max-width:14ch;}
+  .sub{max-width:52ch;margin:18px 0 30px;font-size:1.08rem;color:#efe6d2;}
+  .cta{display:inline-block;background:var(--blade);color:#1f1509;text-decoration:none;font-weight:600;font-size:1.05rem;padding:15px 28px;border-radius:4px;}
+  .cta.ghost{background:transparent;color:var(--sawdust);border:1px solid rgba(233,221,200,.5);margin-left:10px;}
+  /* board divider */
+  .board{height:14px;background:repeating-linear-gradient(90deg,var(--timber) 0 90px,#6b4527 90px 180px);}
+  /* sections */
+  section{padding:64px 0;}
+  .kicker{color:var(--timber);letter-spacing:.2em;text-transform:uppercase;font-size:.75rem;font-weight:600;margin-bottom:8px;}
+  h2{font-size:clamp(1.5rem,3.4vw,2.1rem);margin-bottom:14px;}
+  .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px;margin-top:30px;}
+  .card{background:#fff;border-top:5px solid var(--timber);padding:26px;box-shadow:0 1px 6px rgba(61,43,31,.12);}
+  .card h3{font-size:1.12rem;margin-bottom:8px;color:var(--bark);}
+  .dim{color:#5c4c3c;font-size:.95rem;}
+  /* custom sawing steps */
+  .steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:26px;}
+  .step{background:var(--sawdust);padding:24px;border-radius:4px;position:relative;}
+  .step::before{counter-increment:s;content:counter(s);position:absolute;top:-16px;left:20px;background:var(--bark);color:var(--sawdust);font-family:'Bitter',serif;font-weight:800;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+  .step h3{margin:10px 0 6px;font-size:1.02rem;}
+  /* heritage band */
+  .heritage{background:var(--bark);color:var(--sawdust);}
+  .heritage .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+  .ring{border:2px solid var(--blade);border-radius:50%;width:190px;height:190px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto;text-align:center;}
+  .ring strong{font-family:'Bitter',serif;font-size:2.4rem;color:var(--blade);}
+  .heritage p{color:#e5d8bf;}
+  /* visit */
+  .visit{background:#fff;}
+  .visit .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;}
+  .fact{padding:14px 0;border-bottom:1px solid #e4d9c4;}
+  .fact strong{display:block;color:var(--timber);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;}
+  .note{background:var(--sawdust);border-left:4px solid var(--blade);padding:16px 18px;font-size:.95rem;margin-top:22px;}
+  /* footer cta */
+  .final{background:linear-gradient(160deg,#5a3d26,var(--bark));color:var(--sawdust);text-align:center;}
+  .final h2{color:var(--sawdust);}
+  .tel{font-family:'Bitter',serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;color:var(--blade);display:block;margin:14px 0 22px;text-decoration:none;}
+  footer{background:#1f1509;color:#a89477;text-align:center;padding:26px 18px;font-size:.85rem;}
+  @media(max-width:760px){.heritage .wrap,.visit .wrap{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="brand">Rudy Stempel <span>&amp;</span> Family Sawmill</div>
+      <a class="call" href="tel:15188720431">(518) 872-0431</a>
+    </nav>
+    <div class="est">East Berne, New York · Sawing Since 1953</div>
+    <h1>Rough-cut lumber, sawn right here on the hill.</h1>
+    <p class="sub">Hardwood and softwood boards and timbers off our own mill — and custom sawing for Albany County landowners who'd rather see their logs come back as lumber than firewood.</p>
+    <a class="cta" href="tel:15188720431">Call the mill</a>
+    <a class="cta ghost" href="#custom">How custom sawing works</a>
+  </div>
+</header>
+<div class="board"></div>
+
+<section id="lumber">
+  <div class="wrap">
+    <div class="kicker">Off the mill</div>
+    <h2>What comes out of the stacks</h2>
+    <p class="dim">Rough lumber and timbers in mixed hardwood and mixed softwood, sawn to honest full dimension — not the planed-down sizes at the box store.</p>
+    <div class="cols">
+      <div class="card">
+        <h3>Rough-cut boards</h3>
+        <p class="dim">Full-thickness boards for barns, fences, sheds, raised beds, and repairs where real 1-inch stock matters. Ask what species are in the stacks this month.</p>
+      </div>
+      <div class="card">
+        <h3>Timbers &amp; beams</h3>
+        <p class="dim">Heavier stock for sills, posts, and headers. Tell us the lengths and depths your job calls for and we'll saw or pull to match.</p>
+      </div>
+      <div class="card">
+        <h3>Hardwood &amp; softwood</h3>
+        <p class="dim">Mixed local species from Helderberg woodlots. Availability changes with the logs that come in — call ahead for what's on hand.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="custom" style="background:var(--cream);padding-top:0;">
+  <div class="wrap">
+    <div class="kicker">Custom sawing</div>
+    <h2>Bring your logs. Take home lumber.</h2>
+    <p class="dim">If you own woods in the Hilltowns, storm-downed trees and thinned timber don't have to end up as firewood. We've been sawing landowners' logs for them for generations.</p>
+    <div class="steps">
+      <div class="step"><h3>Call before you haul</h3><p class="dim">Tell us species, rough diameters, and lengths. We'll tell you if they're worth sawing and how to trim them.</p></div>
+      <div class="step"><h3>Drop your logs</h3><p class="dim">Clean, straight logs saw best — no fence wire, no yard nails. We'll flag anything that won't make grade.</p></div>
+      <div class="step"><h3>Pick your cut</h3><p class="dim">Boards, dimensional stock, or beams — sawn to your cut list.</p></div>
+      <div class="step"><h3>Stack &amp; sticker</h3><p class="dim">Haul it home green and we'll show you how to sticker it so it dries flat.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="heritage">
+  <div class="wrap">
+    <div>
+      <div class="ring"><strong>1953</strong><span style="font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;">First logs sawn</span></div>
+    </div>
+    <div>
+      <div class="kicker" style="color:var(--blade);">The family behind the blade</div>
+      <h2>A Stempel has run this mill for over seventy years.</h2>
+      <p>The mill on Stempel Road has been sawing Helderberg timber since 1953 — through every building boom and every hard winter. It's still a family corporation, still answering its own phone, and still listed on New York State's official Wood Products directory of working mills.</p>
+    </div>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Find the mill</div>
+      <h2>Up Stempel Road, East Berne</h2>
+      <div class="fact"><strong>Address</strong>73 Stempel Rd, East Berne, NY 12059</div>
+      <div class="fact"><strong>Phone</strong>(518) 872-0431</div>
+      <div class="fact"><strong>Hours</strong>[Placeholder — confirm with the mill; call ahead before hauling logs]</div>
+      <div class="note">A small mill runs on sawing time, not store hours — a quick call saves you a trip up the hill.</div>
+    </div>
+    <div>
+      <div class="kicker">Why local rough-cut</div>
+      <h2 style="font-size:1.35rem;">Wood that grew within sight of the mill</h2>
+      <p class="dim">Every board here started as a Helderberg log. You're not paying freight from the Pacific Northwest, and you can ask the person who sawed it exactly what it is and where it came from. That's not nostalgia — it's just a shorter, more honest supply chain.</p>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <div class="kicker" style="color:var(--blade);">Get sawing</div>
+    <h2>Tell us about your job — or your logs.</h2>
+    <a class="tel" href="tel:15188720431">(518) 872-0431</a>
+    <a class="cta" href="tel:15188720431">Call Rudy Stempel &amp; Family Sawmill</a>
+  </div>
+</section>
+
+<footer>Rudy Stempel &amp; Family Sawmill, Inc. · 73 Stempel Rd, East Berne, NY 12059 · Sawing since 1953</footer>
+
+</body>
+</html>

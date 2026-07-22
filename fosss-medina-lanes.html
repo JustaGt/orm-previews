@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foss's Medina Lanes — 20 Lanes, Leagues, Parties & Fish Fry in Medina, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--wood:#c98a3b;--woodark:#8a5a22;--burg:#6e1f2a;--cream:#faf3e3;--night:#241a1c;--teal:#1e6f6a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Barlow',sans-serif;background:var(--cream);color:#33261f}
+h1,h2,h3{font-family:'Alfa Slab One',serif;font-weight:400}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+/* hero */
+header{background:var(--night);color:var(--cream);text-align:center;position:relative;overflow:hidden}
+header::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(201,138,59,.10) 0 46px,transparent 46px 92px)}
+.hero{position:relative;padding:66px 20px 60px}
+.est{display:inline-block;color:var(--wood);letter-spacing:.28em;text-transform:uppercase;font-size:.8rem;font-weight:700;margin-bottom:14px}
+.hero h1{font-size:clamp(2.2rem,6vw,4rem);line-height:1.04}
+.hero h1 span{color:var(--wood)}
+.hero p{max-width:56ch;margin:18px auto 26px;font-size:1.12rem;color:#e9ddc8}
+.btn{display:inline-block;background:var(--burg);color:#fff;text-decoration:none;font-weight:700;text-transform:uppercase;letter-spacing:.07em;padding:14px 28px;border-radius:40px;border:2px solid var(--burg)}
+.btn.alt{background:transparent;border-color:var(--wood);color:var(--wood);margin-left:10px}
+.pins{margin-top:34px;font-size:.85rem;color:#bda27d;letter-spacing:.12em;text-transform:uppercase}
+/* marquee strip */
+.strip{background:var(--burg);color:#fff;text-align:center;padding:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;font-size:.9rem}
+/* hours */
+section{padding:60px 0}
+h2.sec{font-size:1.8rem;color:var(--burg);margin-bottom:8px}
+p.lead{margin-bottom:28px;max-width:65ch}
+.hours{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.day{background:#fff;border:2px solid var(--wood);border-radius:8px;padding:14px 10px;text-align:center}
+.day b{display:block;font-family:'Alfa Slab One',serif;color:var(--woodark);font-size:.95rem;margin-bottom:6px;text-transform:uppercase}
+.day span{font-size:.86rem;line-height:1.35;display:block}
+.day.closed{opacity:.55;border-style:dashed}
+/* leagues */
+.leagues{background:var(--teal);color:#fff}
+.leagues h2.sec{color:#fff}
+.lg{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:8px}
+.lgcard{background:rgba(0,0,0,.22);border-radius:10px;padding:22px}
+.lgcard h3{font-size:1.05rem;margin-bottom:8px;color:#ffd9a0}
+.lgcard p{font-size:.95rem;line-height:1.5}
+.leagues .note{margin-top:22px;font-size:.9rem;color:#cfe8e6}
+/* parties + kitchen */
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:26px}
+.panel{background:#fff;border-radius:10px;border-top:8px solid var(--burg);padding:28px;box-shadow:0 3px 14px rgba(0,0,0,.08)}
+.panel.k{border-top-color:var(--wood)}
+.panel h3{color:var(--burg);font-size:1.2rem;margin-bottom:12px}
+.panel ul{list-style:none}
+.panel li{padding:8px 0 8px 26px;position:relative;border-bottom:1px solid #eee2cc}
+.panel li::before{content:"●";position:absolute;left:4px;color:var(--wood)}
+.panel li:last-child{border-bottom:none}
+.price{margin-top:14px;font-size:.85rem;color:#7a6a58;font-style:italic}
+/* story */
+.story{background:var(--night);color:#e9ddc8}
+.story h2.sec{color:var(--wood)}
+.story p{max-width:70ch;line-height:1.7;margin-bottom:14px}
+.story .stat{display:flex;gap:34px;flex-wrap:wrap;margin-top:26px}
+.story .stat div b{font-family:'Alfa Slab One',serif;font-size:2rem;color:#fff;display:block}
+.story .stat div span{font-size:.85rem;color:#bda27d;text-transform:uppercase;letter-spacing:.08em}
+/* contact */
+.contact{text-align:center}
+.contact .phone{font-family:'Alfa Slab One',serif;font-size:2.2rem;color:var(--burg);text-decoration:none;display:block;margin:10px 0 4px}
+.contact p.addr{color:#7a6a58}
+footer{background:var(--night);color:#8d7a67;text-align:center;font-size:.8rem;padding:18px}
+@media(max-width:640px){.btn.alt{margin-left:0;margin-top:10px}}
+</style>
+</head>
+<body>
+
+<header><div class="hero">
+<span class="est">Medina · New York · Family Owned</span>
+<h1>Twenty lanes.<br><span>One family that never left.</span></h1>
+<p>Jim Foss started here cleaning tables and chasing pins. Forty years later he owns the place with his son Chris — synthetic lanes, computerized scoring, a full kitchen, a bar, and league nights that pack a hundred bowlers in.</p>
+<a class="btn" href="tel:5853184474">Book a Lane — (585) 318-4474</a>
+<a class="btn alt" href="#parties">Birthday Parties</a>
+<div class="pins">Leagues · Open Bowling · Pizza & Wings · Friday Fish Fry · Live Bands</div>
+</div></header>
+
+<div class="strip">Wednesday & Thursday league nights — about 100 bowlers. Come watch, come eat, come join.</div>
+
+<section><div class="wrap">
+<h2 class="sec">Open bowling this week</h2>
+<p class="lead">No digging through Facebook posts — here's the week at a glance. Lanes fill on weekends; a quick call holds yours.</p>
+<div class="hours">
+<div class="day closed"><b>Mon</b><span>Closed</span></div>
+<div class="day"><b>Tue</b><span>3:15 – 8 PM</span></div>
+<div class="day"><b>Wed</b><span>9 AM – 1 PM<br>3:15 – 10:30 PM</span></div>
+<div class="day"><b>Thu</b><span>11 AM – 11 PM</span></div>
+<div class="day"><b>Fri</b><span>3:15 PM – Midnight</span></div>
+<div class="day"><b>Sat</b><span>9 AM – 1 AM</span></div>
+<div class="day"><b>Sun</b><span>Noon – 6 PM</span></div>
+</div>
+</div></section>
+
+<section class="leagues"><div class="wrap">
+<h2 class="sec">A league for every schedule</h2>
+<div class="lg">
+<div class="lgcard"><h3>Wednesday Morning — Women</h3><p>Daytime league with coffee-hour pacing and serious scores.</p></div>
+<div class="lgcard"><h3>Thursday Afternoon — Seniors</h3><p>Kicks off each October. Friendly competition, no rush.</p></div>
+<div class="lgcard"><h3>Saturday Morning — Youth</h3><p>Bumpers, coaching on grip and release, and a new generation on the lanes.</p></div>
+<div class="lgcard"><h3>Wed & Thu Nights — Open League</h3><p>The big nights. Around 100 bowlers, tables by the lanes, kitchen running hot.</p></div>
+</div>
+<p class="note">League openings change by season — call for current sign-ups. [Confirm current league lineup before season start.]</p>
+</div></section>
+
+<section id="parties"><div class="wrap">
+<div class="split">
+<div class="panel">
+<h3>Birthday parties, handled</h3>
+<ul>
+<li>Bowling, pizza and pop — one flat package</li>
+<li>Bumper lanes for the little ones</li>
+<li>Party of six, one booking call, zero cleanup at your house</li>
+</ul>
+<p class="price">[Package pricing available by phone — confirm current rates.]</p>
+</div>
+<div class="panel k">
+<h3>Kitchen & bar</h3>
+<ul>
+<li>Pizza and chicken wings, made here</li>
+<li>Friday fish fry — a Medina tradition in its own right</li>
+<li>Full bar, and live bands on Saturday nights</li>
+<li>Plenty come just for the food and the noise</li>
+</ul>
+</div>
+</div>
+</div></section>
+
+<section class="story"><div class="wrap">
+<h2 class="sec">From pin chaser to proprietor</h2>
+<p>Jim Foss, co-owner and manager, has worked at this bowling alley for about forty years — table cleaner, pin chaser, head mechanic, and now owner. He's the guy other alleys in the region call when their machines break. His name is on the 800-series wall of fame, and he still carries a 225 average.</p>
+<p>His son Chris grew up here and bowls a 212. They bought the lanes in 2021 from owners who'd already put in synthetic lanes and modern scoring — and they kept every bit of the place that makes it feel like Medina's living room.</p>
+<div class="stat">
+<div><b>20</b><span>lanes</span></div>
+<div><b>40 yrs</b><span>Jim at these lanes</span></div>
+<div><b>225</b><span>Jim's average</span></div>
+<div><b>7</b><span>staff running lanes & kitchen</span></div>
+</div>
+</div></section>
+
+<section class="contact"><div class="wrap">
+<h2 class="sec">Roll in, or call ahead</h2>
+<a class="phone" href="tel:5853184474">(585) 318-4474</a>
+<p class="addr">11249 Maple Ridge Rd., Medina, NY 14103 — next to the plaza, easy parking</p>
+</div></section>
+
+<footer>Foss's Medina Lanes · Family owned & operated · Medina, New York</footer>
+</body>
+</html>

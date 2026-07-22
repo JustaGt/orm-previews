@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acuafix Pools Solutions | Pool Build, Renovation &amp; Service | Newburgh NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pool:#0a7ea4;--aqua:#2dd4bf;--sand:#f3efe6;--ink:#0c2f3c;--mut:#5a6b72;--line:#dfe6e6;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:#fff;line-height:1.65;}
+h1,h2,h3,.disp{font-family:'Poppins',sans-serif;line-height:1.1;letter-spacing:-.3px;}
+a{text-decoration:none;color:inherit;}
+.wrap{max-width:1160px;margin:0 auto;padding:0 26px;}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(6px);}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:13px 26px;max-width:1160px;margin:0 auto;}
+.brand{font-family:'Poppins';font-weight:700;font-size:1.3rem;color:var(--pool);}
+.brand span{color:var(--aqua);}
+.nav-links{display:flex;gap:24px;align-items:center;font-size:.92rem;}
+.nav-links a.menu{color:var(--ink);}.nav-links a.menu:hover{color:var(--pool);}
+.callbtn{background:var(--pool);color:#fff;font-weight:600;padding:10px 18px;border-radius:30px;font-size:.9rem;}
+.callbtn:hover{background:#086683;}
+
+/* split hero C */
+.hero{background:linear-gradient(160deg,#eafafa,var(--sand));padding:64px 0 72px;}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center;}
+.kicker{font-weight:600;color:var(--pool);letter-spacing:3px;font-size:.8rem;text-transform:uppercase;margin-bottom:16px;}
+.hero h1{font-family:'Poppins';font-weight:700;font-size:3.5rem;color:var(--ink);margin-bottom:18px;}
+.hero h1 span{color:var(--pool);}
+.hero p.sub{font-size:1.1rem;color:var(--mut);max-width:470px;margin-bottom:30px;}
+.cta-row{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:36px;}
+.btn{display:inline-block;font-weight:600;padding:14px 26px;border-radius:30px;font-size:.95rem;}
+.btn-pri{background:var(--pool);color:#fff;}.btn-pri:hover{background:#086683;}
+.btn-sec{background:#fff;color:var(--pool);border:1.5px solid var(--pool);}.btn-sec:hover{background:var(--pool);color:#fff;}
+.stats{display:flex;gap:32px;flex-wrap:wrap;}
+.stat .n{font-family:'Poppins';font-weight:700;font-size:2rem;color:var(--pool);}
+.stat .l{font-size:.76rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--mut);}
+.photo-card{position:relative;overflow:hidden;border-radius:20px;min-height:460px;box-shadow:0 24px 50px rgba(10,126,164,.22);display:flex;align-items:center;justify-content:center;
+background:radial-gradient(120% 120% at 70% 18%,#16a6d2,#0a7ea4 46%,#0c2f3c 100%);}
+.photo-card::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 2px,transparent 2px 22px);}
+.photo-card .art{position:relative;width:64%;max-width:270px;color:#eafafa;opacity:.92;}
+.chip{position:absolute;right:-16px;top:34px;background:#fff;border-radius:14px;padding:16px 20px;box-shadow:0 14px 30px rgba(10,126,164,.22);}
+.chip .big{font-family:'Poppins';font-weight:700;font-size:1.5rem;color:var(--aqua);}
+.chip p{font-size:.82rem;color:var(--mut);}
+
+section{padding:76px 0;}
+.eyebrow{font-weight:600;color:var(--pool);letter-spacing:3px;font-size:.78rem;text-transform:uppercase;}
+.sec-h{font-family:'Poppins';font-weight:700;font-size:2.4rem;color:var(--ink);margin:8px 0 14px;}
+.lead{max-width:640px;color:var(--mut);margin-bottom:44px;}
+
+/* rounded cards */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.svc{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 24px;transition:.2s;}
+.svc:hover{box-shadow:0 14px 32px rgba(10,126,164,.12);transform:translateY(-3px);}
+.svc .ic{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--pool),var(--aqua));display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.3rem;margin-bottom:14px;}
+.svc h3{font-family:'Poppins';font-weight:600;font-size:1.2rem;margin-bottom:8px;}
+.svc p{font-size:.93rem;color:var(--mut);}
+
+/* horizontal stat band */
+.band{background:var(--pool);color:#fff;}
+.band .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding:54px 26px;}
+.tcard h3{font-family:'Poppins';color:var(--aqua);font-size:1.2rem;margin-bottom:7px;}
+.tcard p{color:#d4eef5;font-size:.93rem;}
+
+/* masonry gallery (before/after vibe) */
+.gal-wrap{background:var(--sand);}
+.gal{columns:3;column-gap:14px;}
+.tile{position:relative;overflow:hidden;break-inside:avoid;margin-bottom:14px;border-radius:14px;display:flex;align-items:flex-end;color:#fff;}
+.tile::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 2px,transparent 2px 20px);}
+.tile span{position:relative;font-family:'Poppins';font-weight:600;background:rgba(12,47,60,.8);padding:6px 13px;font-size:.86rem;margin:12px;border-radius:6px;}
+.g1{min-height:300px;background:linear-gradient(160deg,#16a6d2,#0c2f3c);}
+.g2{min-height:220px;background:linear-gradient(160deg,#2dd4bf,#0a7ea4);}
+.g3{min-height:260px;background:linear-gradient(160deg,#0a7ea4,#0c2f3c);}
+.g4{min-height:240px;background:linear-gradient(160deg,#16a6d2,#0a7ea4);}
+.g5{min-height:300px;background:linear-gradient(160deg,#2dd4bf,#0c2f3c);}
+.g6{min-height:220px;background:linear-gradient(160deg,#0a7ea4,#0c2f3c);}
+
+/* contact card */
+.contact{background:#fff;}
+.ccard{background:var(--sand);border-radius:22px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;box-shadow:0 18px 44px rgba(10,126,164,.1);}
+.cinfo{background:linear-gradient(160deg,var(--pool),#0c2f3c);color:#fff;padding:46px 40px;}
+.cinfo h2{font-family:'Poppins';font-weight:700;font-size:2rem;margin-bottom:14px;}
+.cinfo h3{font-family:'Poppins';margin:20px 0 4px;font-size:1.1rem;color:var(--aqua);}
+.cinfo .big{font-family:'Poppins';font-weight:700;font-size:1.7rem;display:block;}
+.cinfo a.em{color:#fff;}
+.cinfo p{color:#d4eef5;}
+.cform{padding:42px 40px;}
+.cform label{display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:1px;color:var(--pool);margin:13px 0 5px;font-weight:600;}
+.cform input,.cform select,.cform textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:10px;font-family:inherit;font-size:.95rem;background:#fff;}
+.cform button{margin-top:20px;width:100%;background:var(--pool);color:#fff;font-family:'Poppins';font-weight:600;padding:15px;border:none;border-radius:30px;cursor:pointer;font-size:1.02rem;}
+.cform button:hover{background:#086683;}
+.thanks{padding:50px 40px;text-align:center;}
+.thanks h3{font-family:'Poppins';color:var(--pool);font-size:1.5rem;margin-bottom:8px;}
+
+footer{background:var(--ink);color:#b9ccd3;padding:34px 0;text-align:center;font-size:.88rem;}
+footer .by{color:var(--aqua);font-family:'Poppins';font-weight:600;margin-top:8px;display:inline-block;}
+
+@media(max-width:860px){
+.nav-links .menu{display:none;}
+.hero .wrap{grid-template-columns:1fr;}
+.hero h1{font-size:2.5rem;}
+.svc-grid,.band .wrap,.ccard{grid-template-columns:1fr;}
+.gal{columns:2;}
+.chip{right:14px;}
+section{padding:52px 0;}
+}
+</style>
+</head>
+<body>
+<nav><div class="nav-in">
+<div class="brand">ACUAFIX <span>POOLS</span></div>
+<div class="nav-links">
+<a class="menu" href="#services">Services</a>
+<a class="menu" href="#work">Work</a>
+<a class="menu" href="#contact">Estimate</a>
+<a class="callbtn" href="tel:18453137752">(845) 313-7752</a>
+</div></div></nav>
+
+<header class="hero"><div class="wrap">
+<div>
+<div class="kicker">NEWBURGH &middot; HUDSON VALLEY</div>
+<h1>Pools Built Right, <span>Renovated Beautifully</span></h1>
+<p class="sub">Carlos Benitez and the Acuafix crew build new pools, bring tired ones back to life, and keep them swim-ready all season. New liners, openings, closings, and weekly service.</p>
+<div class="cta-row">
+<a class="btn btn-pri" href="#contact">Get a Free Estimate</a>
+<a class="btn btn-sec" href="#work">See Before &amp; After</a>
+</div>
+<div class="stats">
+<div class="stat"><div class="n">Build</div><div class="l">&amp; Renovation</div></div>
+<div class="stat"><div class="n">Weekly</div><div class="l">Service Plans</div></div>
+<div class="stat"><div class="n">Local</div><div class="l">Newburgh Based</div></div>
+</div>
+</div>
+<div class="photo-card">
+<svg class="art" viewBox="0 0 200 200" fill="none"><circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="2.5" opacity="0.22"/><circle cx="100" cy="100" r="82" fill="none" stroke="currentColor" stroke-width="1" opacity="0.13" stroke-dasharray="2 7"/><g fill="none" stroke="currentColor" transform="translate(45,50)"><g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 35 q14-13 28 0 t28 0 t28 0"/><path d="M12 55 q14-13 28 0 t28 0 t28 0"/><path d="M12 75 q14-13 28 0 t28 0 t28 0"/></g></g></svg>
+<div class="chip"><div class="big">Before / After</div><p>We turn worn, cracked pools into ones you'll want to swim in.</p></div>
+</div>
+</div></header>
+
+<section id="services"><div class="wrap">
+<div class="eyebrow">WHAT WE DO</div>
+<h2 class="sec-h">Pool Services, Start To Finish</h2>
+<p class="lead">From breaking ground on a new build to the weekly skim and chemical check&mdash;Acuafix handles every stage of pool ownership.</p>
+<div class="svc-grid">
+<div class="svc"><div class="ic">&#127754;</div><h3>Pool Construction</h3><p>New in-ground pools designed and built for your yard, with the decking, plumbing, and finish to match.</p></div>
+<div class="svc"><div class="ic">&#9874;</div><h3>Renovation</h3><p>Cracked plaster, dated tile, and old surfaces brought back to a clean, modern, swim-ready finish.</p></div>
+<div class="svc"><div class="ic">&#9636;</div><h3>Liner Replacement</h3><p>New vinyl liners measured and installed to fit tight&mdash;no wrinkles, no leaks, fresh look.</p></div>
+<div class="svc"><div class="ic">&#9728;</div><h3>Openings &amp; Closings</h3><p>Spring openings that get you swimming fast and fall closings that protect the pool through winter.</p></div>
+<div class="svc"><div class="ic">&#128167;</div><h3>Weekly Service</h3><p>Skimming, vacuuming, and balanced chemicals on a regular schedule so the water stays clear all summer.</p></div>
+<div class="svc"><div class="ic">&#128295;</div><h3>Repairs</h3><p>Pumps, filters, heaters, and leaks diagnosed and fixed before they turn into a bigger problem.</p></div>
+</div>
+</div></section>
+
+<section class="band"><div class="wrap">
+<div class="tcard"><h3>Honest Quotes</h3><p>We walk the pool with you and price the real scope&mdash;no padded estimates or surprise add-ons later.</p></div>
+<div class="tcard"><h3>Clean, On-Time Work</h3><p>We show up when scheduled, protect your yard and deck, and leave the site tidy when we're done.</p></div>
+<div class="tcard"><h3>Owner On The Job</h3><p>Carlos is hands-on with the crew. You're dealing with the owner, not a rotating cast of subs.</p></div>
+</div></section>
+
+<section id="work" class="gal-wrap"><div class="wrap">
+<div class="eyebrow">RECENT PROJECTS</div>
+<h2 class="sec-h">Before &amp; After</h2>
+<p class="lead">Builds, renovations, and liner swaps around Newburgh and the Hudson Valley.</p>
+<div class="gal">
+<div class="tile g1"><span>New Build &middot; Newburgh</span></div>
+<div class="tile g2"><span>Liner Replacement</span></div>
+<div class="tile g3"><span>Full Renovation</span></div>
+<div class="tile g4"><span>Tile &amp; Coping</span></div>
+<div class="tile g5"><span>Spring Opening</span></div>
+<div class="tile g6"><span>Deck &amp; Surround</span></div>
+</div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+<div class="ccard">
+<div class="cinfo">
+<div class="eyebrow" style="color:#9beadf">FREE ESTIMATE</div>
+<h2>Let's Talk About Your Pool</h2>
+<p>Serving Newburgh, New Windsor, Cornwall, Marlboro, and the surrounding Hudson Valley.</p>
+<h3>Call</h3>
+<a class="big" href="tel:18453137752">(845) 313-7752</a>
+<h3>Email</h3>
+<a class="em" href="mailto:acuafix21@gmail.com">acuafix21@gmail.com</a>
+<h3>Hours</h3>
+<p>Mon&ndash;Sat 8:00am &ndash; 6:00pm<br>Seasonal service scheduling</p>
+</div>
+<div>
+<div class="cform" id="formbox">
+<form id="qf" onsubmit="return ty(event)">
+<label>Name</label><input required placeholder="Your name">
+<label>Phone or Email</label><input required placeholder="Best way to reach you">
+<label>What You Need</label>
+<select><option>New Pool Construction</option><option>Renovation</option><option>Liner Replacement</option><option>Opening / Closing</option><option>Weekly Service</option><option>Repair</option></select>
+<label>Tell Us About Your Pool</label><textarea rows="4" placeholder="Size, current condition, what you'd like done..."></textarea>
+<button type="submit">Request My Estimate</button>
+</form>
+<div id="ty" class="thanks" style="display:none">
+<h3>Thanks!</h3>
+<p>We received your request and will reach out to set up a free on-site estimate.</p>
+</div>
+</div>
+</div>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+Acuafix Pools Solutions Inc &middot; Newburgh, NY &middot; (845) 313-7752 &middot; acuafix21@gmail.com<br>
+<span class="by">Website preview by Onyx Rise Media</span>
+</div></footer>
+<script>
+function ty(e){e.preventDefault();document.getElementById('qf').style.display='none';document.getElementById('ty').style.display='block';return false;}
+</script>
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           

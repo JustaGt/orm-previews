@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music Alley — Records & Guitars on Main Street, Wellsville NY</title>
+<meta name="description" content="Used vinyl, guitars, strings and drum sticks at 100 N Main St, Wellsville NY. The record store of Allegany County. We buy collections — call (585) 593-1877.">
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#181310; --paper:#f4ead8; --kraft:#e7d8bd; --orange:#c8551b;
+    --mustard:#d9a62a; --cream:#fdf7ea;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3{font-family:'Alfa Slab One',serif;font-weight:400;line-height:1.15}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+  /* top bar */
+  .bar{background:var(--ink);color:var(--cream);font-size:.85rem;padding:8px 0;text-align:center;letter-spacing:.04em}
+  .bar a{color:var(--mustard);text-decoration:none;font-weight:700}
+  /* header */
+  header{background:var(--paper);border-bottom:3px solid var(--ink);position:sticky;top:0;z-index:50}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+  .logo{font-family:'Alfa Slab One',serif;font-size:1.5rem;letter-spacing:.02em}
+  .logo span{color:var(--orange)}
+  .nav a.call{background:var(--orange);color:#fff;padding:10px 18px;border-radius:4px;text-decoration:none;font-weight:700;font-size:.95rem}
+  /* hero */
+  .hero{background:var(--kraft);border-bottom:3px solid var(--ink);padding:72px 0 64px;position:relative;overflow:hidden}
+  .hero .disc{position:absolute;right:-140px;top:50%;transform:translateY(-50%);width:460px;height:460px;border-radius:50%;
+    background:radial-gradient(circle,var(--kraft) 0 12%,var(--ink) 12.5% 100%);box-shadow:inset 0 0 0 6px var(--ink)}
+  .hero .disc::after{content:"";position:absolute;inset:36%;border-radius:50%;background:var(--orange);border:4px solid var(--paper)}
+  .hero-inner{position:relative;max-width:600px}
+  .kicker{display:inline-block;background:var(--ink);color:var(--mustard);padding:4px 12px;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
+  .hero h1{font-size:clamp(2.1rem,5.4vw,3.4rem);margin-bottom:18px}
+  .hero p{font-size:1.12rem;max-width:48ch;margin-bottom:28px}
+  .btn{display:inline-block;background:var(--orange);color:#fff;padding:14px 26px;border-radius:4px;text-decoration:none;font-weight:700;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink)}
+  .btn.ghost{background:var(--paper);color:var(--ink);margin-left:12px}
+  /* sections */
+  section{padding:66px 0}
+  .sec-title{font-size:clamp(1.6rem,3.6vw,2.2rem);margin-bottom:10px}
+  .sec-sub{max-width:60ch;margin-bottom:36px;font-size:1.02rem}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+  .card{background:var(--cream);border:3px solid var(--ink);border-radius:6px;padding:26px;box-shadow:6px 6px 0 var(--ink)}
+  .card h3{font-size:1.15rem;margin-bottom:10px;color:var(--orange)}
+  .card p{font-size:.97rem}
+  /* trade band */
+  .trade{background:var(--ink);color:var(--cream)}
+  .trade .sec-title{color:var(--mustard)}
+  .trade ol{margin:26px 0 30px;padding-left:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+  .trade li{background:#241c16;border:2px solid var(--mustard);border-radius:6px;padding:20px}
+  .trade li b{display:block;color:var(--mustard);font-size:1.05rem;margin-bottom:6px}
+  /* rsd */
+  .rsd{background:var(--orange);color:#fff;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);padding:40px 0;text-align:center}
+  .rsd h2{font-size:1.5rem;margin-bottom:8px}
+  /* about */
+  .about{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+  .about .photo{background:var(--kraft);border:3px solid var(--ink);border-radius:6px;min-height:260px;display:flex;align-items:center;justify-content:center;font-size:.85rem;color:#6b5d4a;text-align:center;padding:20px}
+  /* reviews */
+  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+  blockquote{background:var(--cream);border-left:6px solid var(--orange);padding:22px;font-size:1rem;border-radius:0 6px 6px 0}
+  blockquote footer{margin-top:10px;font-size:.85rem;font-weight:700;color:#6b5d4a}
+  /* visit */
+  .visit{background:var(--kraft);border-top:3px solid var(--ink)}
+  .visit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px}
+  .visit h3{font-size:1.05rem;margin-bottom:10px;color:var(--orange)}
+  table{border-collapse:collapse;width:100%;font-size:.95rem}
+  td{padding:6px 0;border-bottom:1px solid #cbb995}
+  td:last-child{text-align:right;font-weight:600}
+  /* footer */
+  footer.site{background:var(--ink);color:#b9a98d;padding:30px 0;font-size:.85rem;text-align:center}
+  @media(max-width:760px){
+    .about{grid-template-columns:1fr}
+    .hero .disc{opacity:.18}
+    .btn.ghost{margin-left:0;margin-top:12px}
+  }
+</style>
+</head>
+<body>
+
+<div class="bar">Buying records? Selling a collection? Call <a href="tel:5855931877">(585) 593-1877</a> — ask for Rick.</div>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">MUSIC <span>ALLEY</span></div>
+    <a class="call" href="tel:5855931877">(585) 593-1877</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="disc" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <span class="kicker">100 N Main St · Wellsville, NY</span>
+    <h1>Every crate holds a record somebody loved first.</h1>
+    <p>Used vinyl, guitars, strings and drum sticks on Main Street — the record store of Allegany County. Skip the algorithm. Come flip through the real thing.</p>
+    <a class="btn" href="tel:5855931877">Call the Shop</a>
+    <a class="btn ghost" href="#sell">Sell Us Your Records</a>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="sec-title">In the crates this week</h2>
+    <p class="sec-sub">Stock turns over constantly because it comes from local collections — not a distributor's catalog. If you're hunting something specific, call and Rick will set it aside.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Used Vinyl</h3>
+        <p>Rock, country, jazz, soul and the odd surprise — graded honestly and priced fairly. New arrivals hit the floor as fast as collections come in.</p>
+      </div>
+      <div class="card">
+        <h3>Guitars</h3>
+        <p>Playable, gig-ready guitars without the big-box markup. Honest advice on a first guitar for your kid — or your fifth for yourself.</p>
+      </div>
+      <div class="card">
+        <h3>Strings, Sticks & More</h3>
+        <p>Strings, drum sticks and player essentials in stock on Main Street — so a broken string on Thursday doesn't mean a 40-minute drive on Friday.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trade" id="sell">
+  <div class="wrap">
+    <h2 class="sec-title">Records boxed up in the attic? That's inventory to us.</h2>
+    <p>Downsizing, settling an estate, or clearing the basement — Music Alley buys and trades vinyl collections. Here's how it works:</p>
+    <ol>
+      <li><b>1. Call ahead</b> Tell us roughly what you have — genres, quantity, condition.</li>
+      <li><b>2. Bring them in</b> Rick looks through everything with you, in the shop, on the spot.</li>
+      <li><b>3. Cash or trade</b> Walk out with an honest offer — or trade toward anything in the store.</li>
+    </ol>
+    <a class="btn" href="tel:5855931877">Start With a Phone Call</a>
+  </div>
+</section>
+
+<section class="rsd">
+  <div class="wrap">
+    <h2>An official Record Store Day shop</h2>
+    <p>Music Alley is a registered Record Store Day participating store — mark the date and get here early.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap about">
+    <div>
+      <h2 class="sec-title">Rick knows what's in every crate.</h2>
+      <p class="sec-sub" style="margin-bottom:14px">Music Alley is a one-owner shop, and it shows. Customers don't get a clerk pointing at a bin — they get the guy who bought, graded and priced every record in the room, and who'd rather talk you out of the wrong guitar than sell it to you.</p>
+      <p>That's why the shop's Facebook reviews keep repeating the same two words: <em>helpful</em> and <em>honest</em>.</p>
+    </div>
+    <div class="photo">[Photo: Rick behind the counter — replace with real shop photography before publishing]</div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2 class="sec-title">What locals say</h2>
+    <p class="sec-sub">From the shop's Facebook page — 12 reviews, 100% recommend.</p>
+    <div class="quotes">
+      <blockquote>"Very helpful, nice, and honest about prices."<footer>— Facebook recommendation</footer></blockquote>
+      <blockquote>"Awesome place for vinyl and instruments."<footer>— Facebook recommendation</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap">
+    <h2 class="sec-title">Drop the needle. Drop by.</h2>
+    <div class="visit-grid" style="margin-top:30px">
+      <div>
+        <h3>Hours</h3>
+        <table>
+          <tr><td>Mon–Thu</td><td>10 AM – 6 PM</td></tr>
+          <tr><td>Fri–Sat</td><td>10 AM – 4 PM</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+        <p style="font-size:.8rem;margin-top:8px;color:#6b5d4a">Hours as listed on local directories — call to confirm holidays.</p>
+      </div>
+      <div>
+        <h3>Find the shop</h3>
+        <p>100 N Main St<br>Wellsville, NY 14895<br><br>Right on Main Street — an easy stop during the Main Street Festival, Wine Walk, or any Saturday.</p>
+      </div>
+      <div>
+        <h3>Get first dibs</h3>
+        <p>Want a heads-up when a fresh collection hits the floor?<br><br><a class="btn" href="tel:5855931877" style="font-size:.9rem">Call (585) 593-1877</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">Music Alley · 100 N Main St, Wellsville, NY 14895 · (585) 593-1877</div>
+</footer>
+
+</body>
+</html>

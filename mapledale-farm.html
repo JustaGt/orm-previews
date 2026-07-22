@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapledale Farm — Cave-Aged Farmhouse Cheddar Since 1853 · Berlin NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#faf6ee;--red:#8e3b2f;--green:#2e4a35;--gold:#c9a24b;--ink:#2b2620;--line:#e4dccb}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Lora',serif;background:var(--cream);color:var(--ink);line-height:1.7}
+h1,h2,h3{font-family:'Playfair Display',serif;color:var(--green)}
+.wrap{max-width:1020px;margin:0 auto;padding:0 22px}
+header{border-bottom:1px solid var(--line);padding:16px 0;background:var(--cream);position:sticky;top:0;z-index:5}
+header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.brand{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--green)}
+.brand em{color:var(--red);font-style:normal}
+header a.order{background:var(--red);color:#fff;text-decoration:none;padding:9px 20px;border-radius:3px;font-size:.95rem}
+.hero{text-align:center;padding:80px 0 66px;background:linear-gradient(180deg,#f3ecdd,var(--cream))}
+.est{letter-spacing:.28em;text-transform:uppercase;font-size:.78rem;color:var(--red);font-weight:600}
+.hero h1{font-size:clamp(2.1rem,5.2vw,3.5rem);line-height:1.12;margin:16px auto 18px;max-width:22ch}
+.hero p{max-width:58ch;margin:0 auto;font-size:1.1rem;color:#544c40}
+.hero .cta{margin-top:30px}
+.btn{display:inline-block;text-decoration:none;padding:13px 30px;border-radius:3px;font-weight:600}
+.btn.red{background:var(--red);color:#fff}
+.btn.line{border:1.5px solid var(--green);color:var(--green);margin-left:10px}
+.rule{width:70px;border-top:2px solid var(--gold);margin:0 auto}
+section{padding:64px 0}
+.sec-h{font-size:1.85rem;text-align:center;margin-bottom:10px}
+.sec-sub{text-align:center;color:#6b6255;max-width:60ch;margin:0 auto 40px}
+.cheeses{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.cheese{background:#fff;border:1px solid var(--line);padding:28px;border-radius:4px;text-align:center}
+.cheese .tag{display:inline-block;background:var(--green);color:#fff;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:12px;margin-bottom:14px}
+.cheese h3{font-size:1.2rem;margin-bottom:10px;color:var(--red)}
+.cheese p{font-size:.95rem;color:#544c40}
+.cave{background:var(--green);color:#efe9da}
+.cave h2{color:#fff}
+.cave .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:26px;counter-reset:step}
+.cave .step{border-top:2px solid var(--gold);padding-top:16px}
+.cave .step::before{counter-increment:step;content:counter(step,upper-roman);font-family:'Playfair Display',serif;color:var(--gold);font-size:1.4rem;display:block;margin-bottom:6px}
+.cave .step h3{color:#fff;font-size:1.02rem;margin-bottom:6px}
+.cave .step p{font-size:.92rem;color:#cfd9cc}
+.story{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.story .inner{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.story .years{font-family:'Playfair Display',serif;font-size:4.4rem;color:var(--red);line-height:1}
+.story p{margin-bottom:14px}
+.buy .ways{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.way{background:#fff;border:1px solid var(--line);border-left:4px solid var(--red);padding:24px;border-radius:4px}
+.way h3{font-size:1.05rem;margin-bottom:8px}
+.way p{font-size:.94rem;color:#544c40}
+form{max-width:520px;margin:34px auto 0;background:#fff;border:1px solid var(--line);padding:28px;border-radius:4px}
+form .row{margin-bottom:12px}
+input,textarea,select{width:100%;padding:11px;border:1px solid var(--line);border-radius:3px;font-family:inherit;font-size:.95rem;background:var(--cream)}
+textarea{min-height:80px}
+form button{border:none;cursor:pointer;width:100%;font-size:1rem}
+.note{font-size:.8rem;color:#9a9184;text-align:center;margin-top:14px}
+footer{background:var(--green);color:#cfd9cc;text-align:center;padding:26px 0;font-size:.9rem}
+footer a{color:#fff}
+@media(max-width:720px){.story .inner{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">Mapledale <em>Farm</em></div>
+    <a class="order" href="#reserve">Reserve cheese</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="est">Est. 1853 · Little Hoosick River Valley · Berlin, New York</div>
+    <h1>Cheddar that spends a year underground before it meets you.</h1>
+    <p>Every wheel starts as morning milk from our own Holsteins, is made by hand in the farm cheese house, and ages twelve months and more in our cheese cave in the Taconic Mountains. Seven generations of Greenes have farmed this brook — the cheddar tastes like it.</p>
+    <div class="cta">
+      <a class="btn red" href="#reserve">Reserve for farm pickup</a>
+      <a class="btn line" href="tel:+15186582419">(518) 658-2419</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="sec-h">The cheeses</h2>
+    <div class="rule"></div>
+    <p class="sec-sub" style="margin-top:14px">Made only from our herd's milk — never trucked in, never blended.</p>
+    <div class="cheeses">
+      <div class="cheese"><span class="tag">White Label</span><h3>Aged Farmhouse Cheddar</h3><p>Our flagship. Cave-aged past a full year for the sharp bite and crumble of a true aged cheddar. When a batch earns the White Label, it's ready — not before.</p></div>
+      <div class="cheese"><span class="tag">Flavored</span><h3>Garlic Cheddar</h3><p>The same farmhouse make with garlic worked through the curd, so the flavor lives in the cheese instead of sitting on top of it.</p></div>
+      <div class="cheese"><span class="tag">Flavored</span><h3>Garlic-Dill Cheddar</h3><p>Garlic and dill, balanced for sandwiches, omelets, and the cracker plate that empties first at the party.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cave">
+  <div class="wrap">
+    <h2 class="sec-h">From brook valley to cheese cave</h2>
+    <p class="sec-sub" style="color:#cfd9cc">Farmstead means one place does everything. Here's the year in a wheel's life.</p>
+    <div class="steps">
+      <div class="step"><h3>The herd</h3><p>Black-and-white Holsteins grazing the Little Hoosick valley supply 100% of the milk. No outside tankers.</p></div>
+      <div class="step"><h3>The make</h3><p>Small batches in the farm's own cheese house, made by the family that milked the cows that morning.</p></div>
+      <div class="step"><h3>The cave</h3><p>Wheels rest in our cheese cave, where the mountain keeps temperature and humidity steadier than any machine.</p></div>
+      <div class="step"><h3>The wait</h3><p>Twelve months minimum for the White Label. We taste; the calendar doesn't decide — the cheddar does.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap">
+    <div class="inner">
+      <div>
+        <div class="years">1853</div>
+        <p style="font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--green)">Seven generations on Greene's Brook.</p>
+      </div>
+      <div>
+        <p>The Greene family has worked this ground in the Taconic Mountains for over 170 years — through the sugarhouse years at the turn of the last century, through decades of dairying, and now through the cheese house that lets the farm's milk stay home and become something with the farm's name on it.</p>
+        <p>Making cheese here isn't a pivot or a brand exercise. It's the same idea the farm has always run on: take care of the land and the herd, and sell what the valley makes best.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="buy" id="reserve">
+  <div class="wrap">
+    <h2 class="sec-h">How to get it</h2>
+    <div class="rule"></div>
+    <p class="sec-sub" style="margin-top:14px">Wheels and blocks move fast when a batch comes out of the cave. Reserve ahead and yours will be waiting.</p>
+    <div class="ways">
+      <div class="way"><h3>Farm pickup</h3><p>103 Greene's Brook Rd, Berlin NY. Reserve below or call ahead and we'll have your order boxed at the farm.</p></div>
+      <div class="way"><h3>Farm-box delivery</h3><p>Find Mapledale cheddar in Field Goods farm boxes across the Capital Region.</p></div>
+      <div class="way"><h3>Gifts &amp; larger orders</h3><p>Aged cheddar ships well and keeps well. Ask about whole wheels and holiday orders — [additional retail locations: placeholder, confirm with farm].</p></div>
+    </div>
+    <form>
+      <div class="row"><input type="text" placeholder="Name"></div>
+      <div class="row"><input type="email" placeholder="Email"></div>
+      <div class="row"><select><option>White Label aged cheddar</option><option>Garlic cheddar</option><option>Garlic-dill cheddar</option><option>Mixed order</option></select></div>
+      <div class="row"><textarea placeholder="How much, and when would you like to pick it up?"></textarea></div>
+      <button class="btn red" type="submit">Send reservation request</button>
+      <p class="note">Requests go straight to the farm's inbox. Nothing is charged online.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Mapledale Farm · 103 Greene's Brook Rd, Berlin NY 12022 · <a href="tel:+15186582419">(518) 658-2419</a> · A family tradition since 1853</div>
+</footer>
+</body>
+</html>

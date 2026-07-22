@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ron Jones Excavation &amp; Trucking — Mayfield NY | Site Work, Septic, Driveways</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--char:#232019;--clay:#b4551f;--amber:#e0912b;--sand:#efe6d6;--stone:#6b6156;--ink:#211d16;--hi:#f2b134;--paper:#faf6ef;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Roboto',sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;}
+  h1,h2,h3{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.06;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px;}
+  .top{background:var(--char);color:#d9cdba;font-size:.9rem;padding:9px 0;}
+  .top .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;align-items:center;}
+  .top b{color:var(--amber);}
+  .top a{color:#fff;text-decoration:none;font-weight:700;}
+  .badge{background:var(--clay);color:#fff;font-family:'Oswald',sans-serif;font-size:.72rem;letter-spacing:.08em;padding:3px 8px;border-radius:3px;}
+  .hero{background:
+     linear-gradient(rgba(35,32,25,.86),rgba(35,32,25,.9)),
+     repeating-linear-gradient(135deg,#3a3427 0 18px,#2e2a20 18px 36px);
+     color:#fff;padding:90px 0 76px;border-bottom:8px solid var(--hi);}
+  .hero .kick{display:inline-block;background:var(--hi);color:#2a1e00;font-family:'Oswald',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.16em;padding:6px 14px;margin-bottom:20px;}
+  .hero h1{font-size:clamp(2.2rem,5.6vw,3.7rem);max-width:18ch;color:#fff;}
+  .hero p{max-width:56ch;margin-top:16px;font-size:1.08rem;color:#ddceba;}
+  .hero .est{margin-top:14px;font-family:'Oswald',sans-serif;font-size:1rem;letter-spacing:.05em;color:var(--amber);}
+  .btn{display:inline-block;margin-top:26px;background:var(--hi);color:#2a1e00;font-family:'Oswald',sans-serif;font-weight:700;font-size:1rem;padding:15px 32px;text-decoration:none;letter-spacing:.03em;}
+  .btn.line{background:transparent;color:#fff;border:2px solid #c9b89b;margin-left:10px;}
+  .strip{background:var(--clay);color:#fff;padding:16px 0;}
+  .strip .wrap{display:flex;flex-wrap:wrap;justify-content:space-around;gap:12px;text-align:center;}
+  .strip b{font-family:'Oswald',sans-serif;font-size:1.5rem;display:block;color:var(--hi);}
+  .strip span{font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;color:#f4dcc7;}
+  section{padding:60px 0;}
+  .h2{font-size:clamp(1.7rem,3.6vw,2.4rem);color:var(--char);margin-bottom:8px;}
+  .sub{color:var(--stone);max-width:62ch;margin-bottom:30px;}
+  .dig{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;}
+  .dcard{background:#fff;border:1px solid #e4d8c4;border-top:5px solid var(--clay);padding:22px;}
+  .dcard h3{font-size:1.35rem;color:var(--char);margin-bottom:8px;}
+  .dcard p{font-size:.95rem;color:#4d453a;}
+  .area{background:var(--char);color:#fff;}
+  .area .cols{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center;}
+  .area h2{color:var(--hi);font-size:clamp(1.6rem,3.4vw,2.2rem);margin-bottom:14px;}
+  .area p{color:#ddceba;margin-bottom:12px;}
+  .area .counties{list-style:none;}
+  .area .counties li{padding:11px 0;border-bottom:1px solid #3c372b;font-family:'Oswald',sans-serif;font-size:1.15rem;letter-spacing:.03em;}
+  .area .counties li span{color:var(--amber);font-size:.8rem;letter-spacing:.05em;display:block;font-family:'Roboto';text-transform:uppercase;}
+  .why{background:var(--sand);}
+  .why h2{color:var(--char);font-size:clamp(1.6rem,3.4vw,2.2rem);margin-bottom:22px;}
+  .wg{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px;}
+  .wg div{background:#fff;border-bottom:4px solid var(--clay);padding:20px;}
+  .wg h3{font-size:1.2rem;color:var(--char);margin-bottom:6px;}
+  .wg p{font-size:.93rem;color:#4d453a;}
+  .about .cols{display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:start;}
+  .about h2{color:var(--char);font-size:clamp(1.6rem,3.4vw,2.2rem);margin-bottom:14px;}
+  .about p{color:#4d453a;margin-bottom:12px;}
+  .facts{background:#fff;border:1px solid #e4d8c4;padding:22px;}
+  .facts table{width:100%;border-collapse:collapse;font-size:.92rem;}
+  .facts td{padding:9px 0;border-bottom:1px solid #eadfcd;vertical-align:top;}
+  .facts td:first-child{color:var(--clay);font-weight:700;font-family:'Oswald',sans-serif;letter-spacing:.03em;width:44%;}
+  .contact{background:var(--clay);color:#fff;text-align:center;border-top:8px solid var(--hi);}
+  .contact h2{color:#fff;font-size:clamp(1.9rem,4vw,2.6rem);}
+  .contact p{max-width:52ch;margin:12px auto 0;color:#f6e2d0;}
+  .contact .num{font-family:'Oswald',sans-serif;font-size:2.3rem;color:var(--hi);display:inline-block;margin-top:18px;text-decoration:none;}
+  .note{font-size:.82rem;color:#f0d3bd;margin-top:10px;}
+  footer{background:#1a1712;color:#9a8d78;font-size:.85rem;padding:20px 0;text-align:center;}
+  @media(max-width:760px){.area .cols,.about .cols{grid-template-columns:1fr;}.btn.line{margin-left:0;margin-top:12px;display:inline-block;}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><span><b>Ron Jones Excavation &amp; Trucking</b> · Mayfield, NY · <span class="badge">BBB A+</span></span><a href="tel:5186615931">(518) 661-5931</a></div></div>
+
+<header class="hero"><div class="wrap">
+  <span class="kick">Mayfield &amp; the Great Sacandaga building belt</span>
+  <h1>Cleared, dug, and graded — from the first tree to the finished driveway.</h1>
+  <p>One crew with its own trucks for the whole job: clear the lot, dig the foundation, set the septic, run the water and power, cut the driveway. Residential site work across Fulton, Montgomery and Hamilton counties.</p>
+  <div class="est">Working this ground since 1994.</div>
+  <a class="btn" href="#quote">Get on the schedule</a>
+  <a class="btn line" href="tel:5186615931">(518) 661-5931</a>
+</div></header>
+
+<div class="strip"><div class="wrap">
+  <div><b>31 yrs</b><span>digging locally</span></div>
+  <div><b>A+</b><span>BBB rating</span></div>
+  <div><b>3</b><span>counties served</span></div>
+  <div><b>Own trucks</b><span>hauling in-house</span></div>
+</div></div>
+
+<section id="dig"><div class="wrap">
+  <h2 class="h2">What we dig</h2>
+  <p class="sub">Mostly residential — new builds, camp lots and property projects around Mayfield and the lake. If it involves moving dirt or hauling it off, it's on the list.</p>
+  <div class="dig">
+    <div class="dcard"><h3>Site clearing</h3><p>Clear and rough-grade a wooded or overgrown lot so a house, garage or camp can go up on it.</p></div>
+    <div class="dcard"><h3>Foundation excavation</h3><p>Dig and prep for foundations, footings and slabs — cut to the builder's plan and backfilled clean.</p></div>
+    <div class="dcard"><h3>Septic systems</h3><p>Install and replace residential septic — tank, field and the excavation around it, for new builds and failed old systems.</p></div>
+    <div class="dcard"><h3>Driveways</h3><p>Cut, base and grade gravel driveways that hold up to lake-country winters and mud season.</p></div>
+    <div class="dcard"><h3>Water &amp; electric lines</h3><p>Trenching and backfill for water service and underground electric out to the house.</p></div>
+    <div class="dcard"><h3>Pond digging</h3><p>Dig and shape ponds — a request the box-store contractors don't touch and lake-property owners actually want.</p></div>
+    <div class="dcard"><h3>Grading &amp; drainage</h3><p>Final grade, swales and rough drainage so water runs away from the building, not toward it.</p></div>
+    <div class="dcard"><h3>Trucking &amp; hauling</h3><p>Own trucks to bring in fill, gravel and stone and haul spoil off — no waiting on a subbed-out hauler.</p></div>
+  </div>
+</div></section>
+
+<section class="area"><div class="wrap"><div class="cols">
+  <div>
+    <h2>Where we work</h2>
+    <p>Based in Mayfield, right on the building belt north of Amsterdam and around the Great Sacandaga Lake — the corridor where new homes and camps keep going up.</p>
+    <p>If your lot is in one of these counties, it's in the service area.</p>
+  </div>
+  <ul class="counties">
+    <li>Fulton County <span>Mayfield · Northville · Broadalbin · Gloversville</span></li>
+    <li>Montgomery County <span>Amsterdam &amp; surrounding towns</span></li>
+    <li>Hamilton County <span>southern Adirondack camp lots</span></li>
+  </ul>
+</div></div></section>
+
+<section class="why"><div class="wrap">
+  <h2>Why 31 years matters when you're picking an excavator</h2>
+  <div class="wg">
+    <div><h3>Still here</h3><p>Three decades at the same trade in the same towns — the crew that finishes the job and is around next year.</p></div>
+    <div><h3>A+ rated</h3><p>An A+ standing with the Better Business Bureau, earned over years of local work, not a fresh listing.</p></div>
+    <div><h3>Own the trucks</h3><p>Hauling is in-house, so fill, gravel and spoil move on our schedule — not a subcontractor's.</p></div>
+    <div><h3>One crew, whole job</h3><p>Clearing through driveway under one number, so nobody's pointing fingers between trades.</p></div>
+  </div>
+</div></section>
+
+<section class="about"><div class="wrap"><div class="cols">
+  <div>
+    <h2>A local outfit that's dug this ground for 31 years</h2>
+    <p>Ron Jones Excavation &amp; Trucking has run out of Mayfield since 1994, doing the site work that turns a wooded lot into a place you can build. Foundations, septic, driveways, utilities, ponds and the hauling that ties it all together.</p>
+    <p>It's residential-first work for the people building homes and camps around the Great Sacandaga Lake — the kind of job where you want a name the neighbors already know.</p>
+    <p class="note">Exact current equipment and scheduling are best confirmed on a call — reach out and we'll walk through your project.</p>
+  </div>
+  <div class="facts"><table>
+    <tr><td>In business</td><td>Since 1994 (31 years)</td></tr>
+    <tr><td>BBB rating</td><td>A+</td></tr>
+    <tr><td>Services</td><td>Clearing · foundations · septic · driveways · utilities · ponds · hauling</td></tr>
+    <tr><td>Serves</td><td>Fulton · Montgomery · Hamilton counties</td></tr>
+    <tr><td>Owner</td><td>Ron Jones</td></tr>
+    <tr><td>Location</td><td>1678 State Hwy 30, Mayfield, NY 12117</td></tr>
+    <tr><td>Phone</td><td>(518) 661-5931</td></tr>
+  </table></div>
+</div></div></section>
+
+<section class="contact" id="quote"><div class="wrap">
+  <h2>Got a lot to move on? Let's talk.</h2>
+  <p>Call with your project — clearing, foundation, septic, driveway, utilities or a pond — and get on the schedule with a crew that's dug this ground for 31 years.</p>
+  <a class="num" href="tel:5186615931">(518) 661-5931</a>
+  <p class="note">Mayfield, NY · serving Fulton, Montgomery &amp; Hamilton counties</p>
+</div></section>
+
+<footer><div class="wrap">Ron Jones Excavation &amp; Trucking · 1678 State Hwy 30, Mayfield, NY 12117 · (518) 661-5931 — site work, septic, driveways &amp; hauling since 1994</div></footer>
+</body>
+</html>

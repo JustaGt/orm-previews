@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Big E's Feed &amp; Seed — Feed, Nursery, Wild Bird &amp; Pet | Fort Plain, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=Karla:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --barn:#7d3b2e; --barn-dk:#5e2b21; --oat:#faf6ec; --kraft:#e9dfc7;
+    --ink:#2a241d; --mute:#7a7166; --leaf:#4f6b35; --line:#dccdae;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Karla',system-ui,sans-serif;color:var(--ink);background:var(--oat);line-height:1.6}
+  h1,h2,h3{font-family:'Bitter',serif;line-height:1.15}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+
+  .top{background:var(--barn-dk);color:#f3e6d5;font-size:.92rem;text-align:center;padding:9px 20px}
+  .top b{color:#fff}
+
+  header{background:var(--barn);color:#fff;padding:16px 0}
+  .nav{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  .logo{font-family:'Bitter';font-size:1.5rem}
+  .logo span{color:#f0c987}
+  .nav a{color:#f6e9d8;text-decoration:none;font-size:.95rem;margin-left:16px}
+  .nav .callbtn{background:#f0c987;color:var(--barn-dk);padding:9px 16px;border-radius:4px;font-weight:600;margin-left:16px}
+
+  .hero{background:var(--kraft);border-bottom:4px solid var(--barn);padding:52px 0}
+  .hero h1{font-size:clamp(2rem,5vw,3.1rem);max-width:17ch}
+  .hero p{margin-top:14px;max-width:56ch;font-size:1.1rem;color:#5c5346}
+  .hero .row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+  .btn{padding:14px 22px;border-radius:4px;text-decoration:none;font-weight:600;display:inline-block}
+  .b1{background:var(--barn);color:#fff}
+  .b2{background:#fff;color:var(--barn);border:2px solid var(--barn)}
+  .openline{margin-top:22px;font-size:.95rem;color:#6b6153}
+  .openline b{color:var(--leaf)}
+
+  section{padding:52px 0}
+  h2{font-size:clamp(1.5rem,3.2vw,2.05rem);margin-bottom:10px}
+  .lede{color:var(--mute);max-width:64ch;margin-bottom:26px}
+
+  .aisles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .aisle{background:#fff;border:1px solid var(--line);border-radius:6px;padding:20px}
+  .aisle h3{font-size:1.15rem;margin-bottom:8px;color:var(--barn-dk)}
+  .aisle p{font-size:.95rem;color:#645b4f}
+  .aisle .tag{display:inline-block;background:var(--kraft);font-size:.76rem;padding:3px 9px;border-radius:20px;margin:8px 6px 0 0;color:#6b5f4b}
+
+  .counter{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+  .steps{list-style:none;counter-reset:s}
+  .steps li{counter-increment:s;padding:12px 0 12px 46px;position:relative;border-bottom:1px dashed var(--line)}
+  .steps li:before{content:counter(s);position:absolute;left:0;top:11px;width:30px;height:30px;background:var(--leaf);color:#fff;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.9rem}
+  .steps b{display:block}
+  .steps span{color:var(--mute);font-size:.93rem}
+
+  .namebox{background:#fff8e6;border:1px solid #e3c874;border-radius:6px;padding:22px}
+  .namebox h3{color:#7a5c00;font-size:1.15rem;margin-bottom:8px}
+  .namebox p{font-size:.96rem;color:#6c5a2e}
+
+  .local{background:var(--kraft)}
+  .local .two{align-items:start}
+  .hours{background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+  .hours div{display:flex;justify-content:space-between;padding:12px 18px;border-top:1px solid var(--line)}
+  .hours div:first-child{border-top:0}
+  .hours b{font-weight:600}
+
+  form{background:#fff;border:1px solid var(--line);border-radius:6px;padding:24px}
+  label{display:block;font-weight:600;font-size:.88rem;margin:12px 0 5px}
+  input,select,textarea{width:100%;padding:11px;border:1px solid var(--line);border-radius:4px;font:inherit;background:#fdfcf8}
+  button{margin-top:18px;width:100%;background:var(--barn);color:#fff;border:0;padding:15px;border-radius:4px;font:600 1.05rem 'Karla';cursor:pointer}
+  .fine{font-size:.83rem;color:var(--mute);margin-top:10px}
+
+  .ph{display:inline-block;background:#fff3cd;border:1px dashed #c9a227;color:#7a5c00;font-size:.74rem;padding:2px 7px;border-radius:3px;margin-left:5px}
+
+  footer{background:var(--ink);color:#c3b9a8;padding:32px 0;font-size:.93rem}
+  footer strong{color:#fff}
+  footer .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  footer a{color:#f0c987}
+
+  @media(max-width:820px){.aisles,.two,footer .cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="top">Bagged feed, bird seed, bedding and nursery stock — <b>15 Herkimer St, Fort Plain</b> · call ahead and we'll have it on the loading side</div>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">Big E's <span>Feed &amp; Seed</span></div>
+    <nav>
+      <a href="#aisles">What we stock</a>
+      <a href="#order">Call-ahead orders</a>
+      <a class="callbtn" href="tel:5189934121">(518) 993-4121</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>A feed store where somebody actually knows your chickens.</h1>
+    <p>Layer pellets, horse grain, dog food, bird seed, straw, seed potatoes, bedding plants — carried out to your truck by whoever answered the phone. Fort Plain's counter for anything that eats, grows, or needs mucking out.</p>
+    <div class="row">
+      <a class="btn b1" href="#order">Reserve a pallet or a bag</a>
+      <a class="btn b2" href="tel:5189934121">Call the store</a>
+    </div>
+    <div class="openline">Open <b>Mon–Fri 8–5</b> · <b>Sat 8–3</b> · Closed Sunday <span class="ph">confirm — two sources disagree on Sat close</span></div>
+  </div>
+</div>
+
+<section id="aisles">
+  <div class="wrap">
+    <h2>Five aisles, no self-checkout</h2>
+    <p class="lede">Small enough to walk in ten minutes, stocked deep enough that you're not driving to Amsterdam or Herkimer for one bag.</p>
+    <div class="aisles">
+      <div class="aisle">
+        <h3>Livestock &amp; poultry feed</h3>
+        <p>Layer, starter and grower crumbles, scratch, horse grain, goat and rabbit pellets, minerals and blocks.</p>
+        <span class="tag">Bagged</span><span class="tag">By the pallet</span><span class="tag">Special order</span>
+      </div>
+      <div class="aisle">
+        <h3>Farm supplies &amp; bedding</h3>
+        <p>Shavings, straw, waterers, feeders, fencing odds and ends, and the small hardware that always goes missing at chore time.</p>
+        <span class="tag">Shavings</span><span class="tag">Straw</span>
+      </div>
+      <div class="aisle">
+        <h3>Nursery &amp; garden</h3>
+        <p>Spring bedding plants, vegetable starts, seed, soil, fertilizer, and mulch when the ground finally lets go of winter.</p>
+        <span class="tag">Seasonal</span><span class="tag">Local starts</span>
+      </div>
+      <div class="aisle">
+        <h3>Wild bird</h3>
+        <p>Black oil sunflower, mixes, suet and feeders — the aisle that keeps half of Fort Plain coming in through January.</p>
+        <span class="tag">Sunflower</span><span class="tag">Suet</span>
+      </div>
+      <div class="aisle">
+        <h3>Pet</h3>
+        <p>Dog and cat food, treats and the brands the big-box store quietly dropped last year.</p>
+        <span class="tag">Dog</span><span class="tag">Cat</span>
+      </div>
+      <div class="aisle">
+        <h3>Lawn &amp; property</h3>
+        <p>Grass seed, ice melt in season, and the practical things a house on two acres runs through.</p>
+        <span class="tag">Seed</span><span class="tag">Ice melt</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="counter">
+  <div class="wrap two">
+    <div>
+      <h2>Call ahead. Don't load it yourself.</h2>
+      <p class="lede">Fifty-pound bags stack better when somebody else is doing the stacking.</p>
+      <ol class="steps">
+        <li><b>Phone the order in</b><span>(518) 993-4121 — tell us what and how many.</span></li>
+        <li><b>We pull it and set it aside</b><span>Pallet orders staged by the door, not buried in the back.</span></li>
+        <li><b>Back your truck up</b><span>We load it. You settle up at the counter.</span></li>
+      </ol>
+    </div>
+    <div class="namebox">
+      <h3>One store, two names on the internet</h3>
+      <p>Depending on which map app you use, this store shows up as <b>Big E's Feed &amp; Seed</b> or as <b>My Farm Source LLC</b>, and at least one directory still files it under a long-gone Agway listing. Same building, same counter, same phone. <span class="ph">Sandro: confirm with the owner which name is current before this line goes live — this is the exact confusion the new site fixes.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="local">
+  <div class="wrap two">
+    <div>
+      <h2>Fifteen Herkimer Street, Fort Plain</h2>
+      <p class="lede">Right in the village — quicker than the drive to a big-box store for people farming the flats along the Mohawk, and worth the trip from Canajoharie, St. Johnsville, Nelliston, Palatine Bridge, Minden and Starkville.</p>
+      <div class="hours">
+        <div><b>Monday – Friday</b><span>8:00 am – 5:00 pm</span></div>
+        <div><b>Saturday</b><span>8:00 am – 3:00 pm <span class="ph">confirm</span></span></div>
+        <div><b>Sunday</b><span>Closed</span></div>
+      </div>
+    </div>
+    <div>
+      <h2>Delivery</h2>
+      <p class="lede">Bulk and pallet delivery in the immediate area. <span class="ph">Placeholder — confirm whether delivery is offered, radius, and any minimum before publishing.</span></p>
+      <p style="font-size:.95rem;color:#645b4f">If you're running a barn and going through feed on a schedule, ask about a standing weekly order so you're not calling every Thursday.</p>
+    </div>
+  </div>
+</section>
+
+<section id="order">
+  <div class="wrap two">
+    <div>
+      <h2>Reserve it before you drive over</h2>
+      <p class="lede">Especially worth doing for pallets, shavings by the bale-count, and anything seasonal.</p>
+      <p style="font-size:.95rem;color:#645b4f">15 Herkimer St, Fort Plain, NY 13339<br>(518) 993-4121<br>bigesfeedandseed@gmail.com</p>
+    </div>
+    <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Sent — we\'ll call to confirm';">
+      <label>Name</label>
+      <input required placeholder="Your name">
+      <label>Phone</label>
+      <input required type="tel" placeholder="(518) ___-____">
+      <label>What are you after?</label>
+      <select>
+        <option>Livestock / poultry feed</option>
+        <option>Shavings, straw, bedding</option>
+        <option>Nursery &amp; garden</option>
+        <option>Wild bird seed</option>
+        <option>Pet food</option>
+        <option>Something else</option>
+      </select>
+      <label>Quantity and details</label>
+      <textarea rows="4" placeholder="6 bags 16% layer pellets, 4 bales shavings — picking up Saturday morning"></textarea>
+      <button>Send the order</button>
+      <p class="fine">We'll call back to confirm price and pickup. Nothing is charged online.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap cols">
+    <div><strong>Big E's Feed &amp; Seed</strong><br>15 Herkimer Street<br>Fort Plain, NY 13339</div>
+    <div><strong>Phone</strong><br><a href="tel:5189934121">(518) 993-4121</a><br><strong>Email</strong><br>bigesfeedandseed@gmail.com</div>
+    <div><strong>Hours</strong><br>Mon–Fri 8–5 · Sat 8–3 <span class="ph">confirm</span><br>Closed Sunday</div>
+  </div>
+</footer>
+
+</body>
+</html>

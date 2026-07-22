@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaughan Electric — Wading River, NY | Frank Vaughan, Licensed Electrician Since 1995</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--char:#232629;--char2:#2e3236;--amber:#f0a531;--amber-d:#c77f14;--bone:#f7f5f1;--ink:#232629;--mut:#5d6166;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--bone);line-height:1.6;}
+h1,h2,h3{font-family:'Archivo',sans-serif;line-height:1.15;}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px;}
+/* header */
+header{background:var(--char);color:#fff;padding:18px 0;border-bottom:3px solid var(--amber);}
+header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.logo{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.45rem;}
+.logo em{color:var(--amber);font-style:normal;}
+header a.tel{color:#fff;text-decoration:none;font-weight:700;font-size:1.2rem;}
+header small{display:block;color:#9aa0a6;text-align:right;}
+/* hero */
+.hero{position:relative;background:var(--char);color:#fff;padding:80px 0 70px;overflow:hidden;}
+.hero::after{content:"";position:absolute;right:-40px;top:0;bottom:0;width:45%;
+ background:repeating-linear-gradient(90deg,transparent 0 46px,rgba(240,165,49,.12) 46px 48px),
+            repeating-linear-gradient(0deg,transparent 0 46px,rgba(240,165,49,.12) 46px 48px);}
+.hero .wrap{position:relative;z-index:1;}
+.kick{color:var(--amber);letter-spacing:.16em;text-transform:uppercase;font-weight:700;font-size:.85rem;}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);margin:14px 0 16px;max-width:21ch;}
+.hero p{max-width:56ch;color:#c9cdd1;font-size:1.12rem;}
+.cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:15px 28px;border-radius:6px;font-weight:700;text-decoration:none;}
+.btn-a{background:var(--amber);color:#231a06;}
+.btn-b{border:2px solid #55595e;color:#fff;}
+/* trust strip */
+.strip{background:var(--amber);color:#231a06;padding:14px 0;}
+.strip .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;font-weight:700;}
+/* services */
+.svcs{padding:70px 0;}
+.svcs h2,.owner h2,.small h2,.area h2,.contact h2{font-size:clamp(1.6rem,3.4vw,2.2rem);margin-bottom:10px;}
+.sub{color:var(--mut);max-width:62ch;margin-bottom:34px;}
+.s-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;}
+.s-card{background:#fff;border:1px solid #e4e0d8;border-radius:10px;padding:24px;}
+.s-card .tag{display:inline-block;background:#fdf1da;color:var(--amber-d);font-weight:700;font-size:.78rem;border-radius:999px;padding:3px 10px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;}
+.s-card h3{font-size:1.12rem;margin-bottom:6px;}
+.s-card p{font-size:.96rem;color:var(--mut);}
+/* owner band */
+.owner{background:var(--char2);color:#fff;padding:66px 0;}
+.owner .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;}
+.owner p{color:#c9cdd1;margin-bottom:14px;}
+.panel{background:#26292c;border:1px solid #3a3e42;border-radius:10px;padding:26px;}
+.panel .row{display:flex;justify-content:space-between;border-bottom:1px dashed #464a4e;padding:10px 0;font-size:.98rem;}
+.panel .row:last-child{border-bottom:none;}
+.panel .row b{color:var(--amber);}
+/* small jobs */
+.small{padding:66px 0;}
+.small .box{background:#fff;border-left:6px solid var(--amber);border-radius:8px;padding:28px;box-shadow:0 2px 10px rgba(35,38,41,.06);}
+.small .box p{color:#4a4e53;}
+/* area + contact */
+.area{background:var(--char);color:#fff;padding:46px 0;text-align:center;}
+.towns{display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:center;color:#d8dbde;font-weight:600;margin-top:10px;}
+.contact{padding:66px 0;}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
+.c-card{background:#fff;border:1px solid #e4e0d8;border-radius:10px;padding:30px;}
+.c-card .tel2{font-family:'Archivo',sans-serif;font-weight:800;font-size:2rem;color:var(--ink);text-decoration:none;display:block;margin:8px 0 14px;}
+.c-card p{color:var(--mut);margin-bottom:8px;}
+footer{background:var(--char);color:#8f959b;text-align:center;padding:24px 12px;font-size:.9rem;}
+@media(max-width:840px){.owner .wrap,.contact .wrap{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="wrap">
+  <div class="logo">VAUGHAN <em>ELECTRIC</em></div>
+  <div><a class="tel" href="tel:+16319295430">(631) 929-5430</a><small>Wading River, NY · Since 1995</small></div>
+ </div>
+</header>
+
+<section class="hero">
+ <div class="wrap">
+  <div class="kick">Licensed electrician · Wading River &amp; Shoreham</div>
+  <h1>The electrician your neighbors pass over the back fence.</h1>
+  <p>Frank Vaughan has wired, upgraded and rescued homes around Wading River for 31 years — panel upgrades, pool hook-ups, EV chargers, standby generators and the small jobs the big outfits won't book. One owner. One phone number. The same standard every time.</p>
+  <div class="cta">
+   <a class="btn btn-a" href="tel:+16319295430">Call Frank: (631) 929-5430</a>
+   <a class="btn btn-b" href="#services">What we do</a>
+  </div>
+ </div>
+</section>
+
+<div class="strip">
+ <div class="wrap"><span>Licensed &amp; insured</span><span>Owner on every job</span><span>In business since 1995</span><span>Fair, upfront estimates</span></div>
+</div>
+
+<section class="svcs" id="services">
+ <div class="wrap">
+  <h2>Today's houses pull twice the load they were wired for</h2>
+  <p class="sub">An EV in the driveway, a heat pump, a pool, a generator for outage season — most North Shore panels were never sized for any of it. This is the exact work Vaughan Electric does week in, week out.</p>
+  <div class="s-grid">
+   <div class="s-card"><span class="tag">Capacity</span><h3>Service &amp; panel upgrades</h3><p>200-amp upgrades and clean panel work for older Wading River and Shoreham homes.</p></div>
+   <div class="s-card"><span class="tag">Driveway</span><h3>EV charging stations</h3><p>Level 2 chargers installed with the circuit and load calc done right — not just a plug on a wall.</p></div>
+   <div class="s-card"><span class="tag">Outage season</span><h3>Generator hook-ups</h3><p>Transfer switches and standby hook-ups so the next LIPA outage is an inconvenience, not an emergency.</p></div>
+   <div class="s-card"><span class="tag">Backyard</span><h3>Pool &amp; hot tub wiring</h3><p>Pool hook-ups, heaters and bonding — done to code, inspected, safe for the kids in the water.</p></div>
+   <div class="s-card"><span class="tag">Smart home</span><h3>Nest, Ring &amp; lighting</h3><p>Doorbells, thermostats, high-intensity and landscape lighting, installed and actually working.</p></div>
+   <div class="s-card"><span class="tag">Renovations</span><h3>Remodels &amp; additions</h3><p>Rough-in through finish for kitchens, baths, basements and additions — coordinated with your GC.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="owner">
+ <div class="wrap">
+  <div>
+   <h2>One name on the truck. One name on the work.</h2>
+   <p>Vaughan Electric has been a one-owner shop since 1995. When you call, you talk to Frank. When the work's done, it's Frank's name on it — which is why the recommendations come from neighbors, not ad campaigns.</p>
+   <p>No dispatch fees, no rotating crew of strangers, no "technician visit" upsell. An honest look, a fair estimate, and work that passes inspection the first time.</p>
+  </div>
+  <div class="panel">
+   <div class="row"><span>Owner</span><b>Frank Vaughan</b></div>
+   <div class="row"><span>In business</span><b>Since 1995 — 31 years</b></div>
+   <div class="row"><span>Based at</span><b>Randall Rd, Wading River</b></div>
+   <div class="row"><span>Coverage</span><b>Licensed &amp; fully insured</b></div>
+  </div>
+ </div>
+</section>
+
+<section class="small">
+ <div class="wrap">
+  <div class="box">
+   <h2>Small jobs welcome</h2>
+   <p>A dead outlet, a breaker that keeps tripping, a ceiling fan, one new circuit in the garage — the jobs the franchises won't roll a truck for are the jobs a local shop is for. Call; if it's a five-minute fix, you'll hear that too.</p>
+  </div>
+ </div>
+</section>
+
+<section class="area">
+ <div class="wrap">
+  <h2>Serving the North Shore corridor</h2>
+  <div class="towns"><span>Wading River</span><span>Shoreham</span><span>Rocky Point</span><span>Sound Beach</span><span>Miller Place</span><span>Ridge</span><span>Calverton</span><span>Baiting Hollow</span></div>
+ </div>
+</section>
+
+<section class="contact">
+ <div class="wrap">
+  <div>
+   <h2>Get an estimate</h2>
+   <p class="sub">Describe the job when you call — panel size, what you're adding, what's acting up — and you'll get a straight answer on scope and price. Emergencies get moved to the front of the line.</p>
+  </div>
+  <div class="c-card">
+   <p><strong>Call or text</strong></p>
+   <a class="tel2" href="tel:+16319295430">(631) 929-5430</a>
+   <p>76 Randall Road, Wading River, NY 11792</p>
+   <p>Serving Wading River, Shoreham &amp; the North Shore since 1995</p>
+  </div>
+ </div>
+</section>
+
+<footer>Vaughan Electric · Frank Vaughan, Owner · 76 Randall Rd, Wading River, NY 11792 · (631) 929-5430 · Licensed &amp; Insured</footer>
+
+</body>
+</html>

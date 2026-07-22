@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hudson Valley Diamond Rock Inc | Saugerties, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --slate:#2b3036; --slate-dk:#1c2025; --tan:#b9a07a; --bone:#efe9dd;
+    --ink:#2b3036; --muted:#6c6a64; --line:#ddd6c8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--bone);line-height:1.7;font-weight:400}
+  h1,h2,h3,.disp{font-family:'Cormorant Garamond',serif;line-height:1.08;font-weight:600}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 30px}
+
+  nav{position:sticky;top:0;z-index:50;background:rgba(239,233,221,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .navbar{display:flex;align-items:center;justify-content:space-between;height:80px}
+  .brand{font-family:'Cormorant Garamond';font-weight:700;font-size:1.5rem;letter-spacing:.5px}
+  .brand span{color:var(--tan)}
+  .navcta{font-size:.78rem;letter-spacing:2px;text-transform:uppercase;border-bottom:1px solid var(--tan);padding-bottom:3px;font-weight:500}
+  .navcta:hover{color:var(--tan)}
+
+  /* EDITORIAL HERO (archetype E) */
+  .hero{padding:90px 0 80px}
+  .hero .kick{font-size:.8rem;letter-spacing:4px;text-transform:uppercase;color:var(--tan);font-weight:600;margin-bottom:26px}
+  .hero h1{font-size:clamp(3rem,8vw,6rem);font-weight:600;max-width:900px;letter-spacing:-1px}
+  .hero h1 em{font-style:italic;color:var(--tan)}
+  .hero .row{display:grid;grid-template-columns:1.4fr 1fr;gap:50px;align-items:end;margin-top:40px}
+  .hero p.sub{font-size:1.2rem;color:var(--muted);max-width:480px;font-weight:300}
+  .hero .meta{border-left:1px solid var(--line);padding-left:30px}
+  .hero .meta div{margin-bottom:20px}
+  .hero .meta .n{font-family:'Cormorant Garamond';font-size:2.2rem;font-weight:600;color:var(--slate);line-height:1}
+  .hero .meta .l{font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:4px}
+  .btns{display:flex;gap:18px;flex-wrap:wrap;margin-top:34px}
+  .btn{display:inline-block;font-size:.82rem;letter-spacing:2px;text-transform:uppercase;font-weight:600;padding:16px 30px}
+  .btn-primary{background:var(--slate);color:var(--bone)}
+  .btn-primary:hover{background:var(--slate-dk)}
+  .btn-ghost{border:1px solid var(--slate);color:var(--slate)}
+  .btn-ghost:hover{background:var(--slate);color:var(--bone)}
+
+  /* FULL BLEED FEATURE */
+  .bleed{min-height:520px;
+    background:linear-gradient(90deg,rgba(28,32,37,.7) 0%,rgba(28,32,37,.2) 70%),url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80');
+    background-size:cover;background-position:center;background-color:#2b3036;display:flex;align-items:center;color:var(--bone)}
+  .bleed .box{max-width:560px}
+  .bleed h2{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:600}
+  .bleed p{font-size:1.12rem;margin-top:18px;color:#d7d2c8;font-weight:300}
+
+  section{padding:90px 0}
+  .sec-kick{font-size:.78rem;letter-spacing:3px;text-transform:uppercase;color:var(--tan);font-weight:600}
+  .sec-title{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:600;margin:10px 0 16px}
+  .lead{max-width:620px;color:var(--muted);font-size:1.1rem;font-weight:300}
+
+  /* ASYMMETRIC STORY */
+  .story{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .story .photo{min-height:440px;
+    background:linear-gradient(0deg,rgba(28,32,37,.25),rgba(28,32,37,.05)),url('https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1400&q=80');
+    background-size:cover;background-position:center;background-color:#b9a07a}
+  .story p{color:var(--muted);margin-bottom:14px}
+
+  /* SHORT SERVICE LIST */
+  .svc{columns:2;column-gap:60px;margin-top:30px}
+  .svc .item{break-inside:avoid;padding:24px 0;border-top:1px solid var(--line)}
+  .svc h3{font-size:1.7rem;font-weight:600;margin-bottom:6px}
+  .svc p{color:var(--muted);font-size:.98rem;font-weight:300}
+
+  /* PORTFOLIO GRID */
+  .portfolio{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:200px;gap:12px;margin-top:44px}
+  .tile{position:relative;overflow:hidden;background-size:cover;background-position:center}
+  .tile span{position:absolute;left:16px;bottom:14px;color:#fff;font-family:'Cormorant Garamond';font-size:1.2rem;font-weight:600;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+  .p1{grid-column:span 4;grid-row:span 2;background:linear-gradient(0deg,rgba(28,32,37,.5),rgba(28,32,37,.05)),url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80');background-color:#2b3036}
+  .p2{grid-column:span 2;background:linear-gradient(0deg,rgba(28,32,37,.5),rgba(28,32,37,.05)),url('https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1400&q=80');background-color:#2b3036}
+  .p3{grid-column:span 2;background:linear-gradient(0deg,rgba(28,32,37,.5),rgba(28,32,37,.05)),url('https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1400&q=80');background-color:#2b3036}
+  .p4{grid-column:span 3;background:linear-gradient(0deg,rgba(28,32,37,.5),rgba(28,32,37,.05)),url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80');background-color:#2b3036}
+  .p5{grid-column:span 3;background:linear-gradient(0deg,rgba(28,32,37,.5),rgba(28,32,37,.05)),url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1400&q=80');background-color:#2b3036}
+
+  /* ESTIMATE NOTE */
+  .estimate{background:#fff;border-top:1px solid var(--line)}
+  .ecol{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+  .ecol .note p{margin:16px 0;color:var(--muted)}
+  .ecol .lbl{display:block;font-size:.74rem;letter-spacing:2px;text-transform:uppercase;color:var(--tan);font-weight:600}
+  .ecol a.big{font-family:'Cormorant Garamond';font-size:2.2rem;font-weight:600;color:var(--slate)}
+  .field{margin-bottom:16px}
+  label{display:block;font-size:.74rem;letter-spacing:1px;text-transform:uppercase;font-weight:600;margin-bottom:6px;color:var(--muted)}
+  input,textarea,select{width:100%;padding:13px 0;border:none;border-bottom:1px solid var(--line);font-family:inherit;font-size:1rem;background:transparent}
+  input:focus,textarea:focus,select:focus{outline:none;border-bottom-color:var(--tan)}
+  form button{background:var(--slate);color:var(--bone);font-size:.8rem;letter-spacing:2px;text-transform:uppercase;font-weight:600;padding:16px 36px;border:none;cursor:pointer;margin-top:8px}
+  form button:hover{background:var(--slate-dk)}
+  .thanks{display:none;padding:30px 0}
+  .thanks.show{display:block}
+  .thanks h3{font-size:2rem;color:var(--slate);margin-bottom:8px}
+
+  footer{background:var(--slate-dk);color:#a9a59c;text-align:center;padding:40px 0;font-size:.88rem}
+  footer .by{font-family:'Cormorant Garamond';font-size:1.05rem;color:var(--tan);margin-top:10px}
+
+  @media(max-width:860px){
+    .hero .row{grid-template-columns:1fr;gap:30px}
+    .hero .meta{border-left:none;border-top:1px solid var(--line);padding-left:0;padding-top:24px;display:flex;gap:30px;flex-wrap:wrap}
+    .hero .meta div{margin-bottom:0}
+    .story{grid-template-columns:1fr;gap:34px}
+    .story .photo{min-height:300px}
+    .svc{columns:1}
+    .portfolio{grid-template-columns:1fr 1fr;grid-auto-rows:160px}
+    .p1,.p2,.p3,.p4,.p5{grid-column:span 1}
+    .p1{grid-row:span 1}
+    .ecol{grid-template-columns:1fr;gap:36px}
+    .bleed{min-height:400px}
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap navbar">
+    <div class="brand">Hudson Valley <span>Diamond Rock</span></div>
+    <a class="navcta" href="tel:18455326887">(845) 532-6887</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kick">Stone &amp; Masonry &middot; Saugerties, NY</div>
+    <h1>Stone set to last <em>generations</em>, not seasons.</h1>
+    <div class="row">
+      <p class="sub">Denis builds patios, walls, walkways, and veneer the old way &mdash; properly graded base, tight joints, and stone laid so it still looks right decades from now.</p>
+      <div class="meta">
+        <div><div class="n">Hand-set</div><div class="l">Every course</div></div>
+        <div><div class="n">Patios &middot; Walls</div><div class="l">Walkways &amp; veneer</div></div>
+        <div><div class="n">Saugerties</div><div class="l">Hudson Valley</div></div>
+      </div>
+    </div>
+    <div class="btns">
+      <a class="btn btn-primary" href="#estimate">Get a Free Estimate</a>
+      <a class="btn btn-ghost" href="tel:18455326887">Call Denis</a>
+    </div>
+  </div>
+</header>
+
+<div class="bleed">
+  <div class="wrap">
+    <div class="box">
+      <h2>The base is the part you never see &mdash; and the reason it lasts.</h2>
+      <p>Anyone can stack stone for a season. A wall that stays plumb and a patio that doesn't heave come from the excavation, the compaction, and the drainage underneath. That's where the real work goes.</p>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap story">
+    <div class="photo"></div>
+    <div>
+      <div class="sec-kick">The approach</div>
+      <h2 class="sec-title">High-end stonework, done by the people who'll be on site</h2>
+      <p>Diamond Rock takes on a measured number of projects so each one gets the attention fine masonry needs. Denis is on the job, setting stone and making the calls &mdash; not running between six sites.</p>
+      <p>From dry-laid fieldstone walls to cut-bluestone patios and full stone veneer, every piece is selected and placed for the way it sits with the next. The result reads as one composition, not a pile of rock.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-kick">What we build</div>
+    <h2 class="sec-title">Selected services</h2>
+    <div class="svc">
+      <div class="item"><h3>Stone Patios</h3><p>Bluestone and pavers over a properly built base &mdash; level, draining, and made to host.</p></div>
+      <div class="item"><h3>Retaining &amp; Garden Walls</h3><p>Dry-laid and mortared walls that hold grade and hold their line.</p></div>
+      <div class="item"><h3>Walkways &amp; Steps</h3><p>Stone paths and entry steps that read intentional and feel solid underfoot.</p></div>
+      <div class="item"><h3>Stone Veneer</h3><p>Full and thin veneer on facades, piers, and chimneys, fit tight and pointed clean.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-kick">Portfolio</div>
+    <h2 class="sec-title">Recent stonework</h2>
+    <div class="portfolio">
+      <div class="tile p1"><span>Cut-bluestone patio</span></div>
+      <div class="tile p2"><span>Fieldstone wall</span></div>
+      <div class="tile p3"><span>Stone steps</span></div>
+      <div class="tile p4"><span>Veneer facade</span></div>
+      <div class="tile p5"><span>Garden border</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="estimate" id="estimate">
+  <div class="wrap ecol">
+    <div class="note">
+      <div class="sec-kick">A note on estimates</div>
+      <h2 class="sec-title" style="font-size:2.4rem">Tell us about the project</h2>
+      <p>Stone is priced by the work, not a flat rate &mdash; the base, the material, and the layout all matter. Send the details and Denis will come look at the site before quoting a real number.</p>
+      <p><span class="lbl">Call or text</span><a class="big" href="tel:18455326887">(845) 532-6887</a></p>
+      <p><span class="lbl">Service area</span>Saugerties, Woodstock, Kingston, Hurley, and surrounding Hudson Valley.</p>
+      <p><span class="lbl">Hours</span>By appointment, Mon&ndash;Sat. Site visits scheduled around current jobs.</p>
+    </div>
+    <div>
+      <form id="form" onsubmit="event.preventDefault();document.getElementById('form').style.display='none';document.getElementById('ty').classList.add('show');">
+        <div class="field"><label>Name</label><input type="text" required></div>
+        <div class="field"><label>Phone</label><input type="tel" required></div>
+        <div class="field"><label>Project type</label>
+          <select><option>Stone patio</option><option>Retaining / garden wall</option><option>Walkway or steps</option><option>Stone veneer</option><option>Multiple / not sure</option></select>
+        </div>
+        <div class="field"><label>Describe the project</label><textarea rows="3" placeholder="Location, rough size, stone you have in mind..."></textarea></div>
+        <button type="submit">Request Site Visit</button>
+      </form>
+      <div class="thanks" id="ty">
+        <h3>Thank you.</h3>
+        <p>Denis will reach out to arrange a site visit. For a quicker conversation, call <strong>(845) 532-6887</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Hudson Valley Diamond Rock Inc &middot; Saugerties, NY &middot; (845) 532-6887
+    <div class="by">Website preview by Onyx Rise Media</div>
+  </div>
+</footer>
+</body>
+</html>

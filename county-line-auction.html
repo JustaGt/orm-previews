@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!--
+NICHE IDENTITY BRIEF — County Line Auction (Jack Belknap), Gloversville NY (Fulton Co.) — FRESH NICHE: auction house/auctioneer (first in ORM DB)
+Business type: Family auction house + on-site estate/liquidation auctioneer, est. 1980. Owner Jack Belknap w/ Brenda, Rachele, John. 275 S Main St, Gloversville 12078. (518) 773-2247. Directory email jbelknap46@aol.com (CONFIRM — not draft-eligible).
+Target: estate executors/families, downsizers, farmers/tradespeople selling equipment, bidders/collectors.
+Local market: Fulton + neighboring counties (Montgomery/Hamilton/Saratoga/Herkimer).
+Tone: trustworthy, plain-spoken, steady hands during a stressful life event.
+Visual: navy + brass/gold, cream, lot-ticket motif, gavel without kitsch.
+Pain points: NO working owned website — countylineauctionsny.com dead; countylineauctions.com redirects to an AliExpress affiliate/parked page (VERIFIED live via browser). "When's the next sale?" / "sell my estate?" invisible; scattered across FB + HiBid + AuctionZip.
+Desires: see next sale/preview; understand consignment & on-site liquidation; reach the family to book a walkthrough.
+Trust: 45+ yrs (since 1980), family-operated, multi-county on-site liquidations, HiBid online bidding, licensed/bonded.
+Conversion goal: book an estate/liquidation consultation call + next-auction awareness.
+Sections: hero+book, what we auction, sell-with-us how-it-works, next auction, bidder/HiBid info, about family, area, contact.
+Cliches to avoid: ORM banned list; auction puns; no invented dates/lot counts/commission — placeholders.
+Unique: sells the calendar + estate-consult path a broken-domain, FB-only auctioneer can't; reclaimed web home fixes a hijacked/dead domain.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>County Line Auction — Estate &amp; On-Site Liquidation Auctioneers Since 1980 | Gloversville, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#13233f; --navy2:#1c3255; --ink:#182233; --brass:#c39a3f; --brass-d:#a67f2c;
+  --cream:#f6f1e6; --paper:#fbf8f1; --soft:#5d6a7d; --line:#e4dcc9; --white:#fff; --green:#4f6b4a;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3,.serif{font-family:'Playfair Display',serif}
+a{color:inherit}
+.note{background:#efe7d3;border-bottom:1px solid #e2d6ba;color:#7c6733;font-size:.8rem;text-align:center;padding:10px}
+.top{background:var(--ink);color:#c7d0dd;font-size:.85rem}
+.top .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;padding:9px 24px}
+.top b{color:var(--brass)}
+.bar{background:var(--navy);border-bottom:3px solid var(--brass)}
+.bar .wrap{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;flex-wrap:wrap;gap:10px}
+.brand{display:flex;align-items:center;gap:13px;color:#fff}
+.mark{width:50px;height:50px;border-radius:6px;background:var(--brass);color:var(--navy);display:flex;align-items:center;justify-content:center;font-size:1.7rem}
+.brand .nm{font-family:'Playfair Display';font-size:1.4rem;font-weight:800;line-height:1}
+.brand .nm small{display:block;font-family:'Source Sans 3';font-size:.6rem;letter-spacing:3px;color:var(--brass);font-weight:600;margin-top:6px;text-transform:uppercase}
+.nav{display:flex;gap:22px;align-items:center;font-size:.94rem}
+.nav a{text-decoration:none;color:#d3dae4}.nav a:hover{color:#fff}
+.nav .cta{background:var(--brass);color:var(--navy);padding:11px 19px;border-radius:5px;font-weight:700}
+.hero{background:linear-gradient(157deg,var(--navy2) 0%,var(--navy) 68%);color:#fff;padding:78px 0 72px;position:relative}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.kick{display:inline-block;background:rgba(195,154,63,.18);color:var(--brass);font-size:.76rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;padding:7px 14px;border-radius:4px;margin-bottom:20px}
+.hero h1{font-size:3.05rem;line-height:1.06;font-weight:800;margin-bottom:16px}
+.hero h1 em{color:var(--brass);font-style:italic}
+.hero p{font-size:1.12rem;color:#c4cedd;max-width:520px}
+.row{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:5px;font-size:.96rem}
+.btn-b{background:var(--brass);color:var(--navy)}.btn-b:hover{background:var(--brass-d)}
+.btn-o{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}.btn-o:hover{border-color:#fff}
+/* lot ticket */
+.ticket{background:var(--cream);color:var(--ink);border-radius:10px;padding:0;overflow:hidden;box-shadow:0 24px 50px rgba(0,0,0,.3)}
+.ticket .th{background:var(--navy);color:#fff;padding:14px 22px;display:flex;justify-content:space-between;align-items:center;border-bottom:2px dashed var(--brass)}
+.ticket .th b{font-family:'Playfair Display';font-size:1.05rem}
+.ticket .th span{font-size:.72rem;letter-spacing:2px;color:var(--brass);text-transform:uppercase}
+.ticket .tb{padding:20px 22px}
+.ticket .li{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;font-size:.94rem;color:#31404f}
+.ticket .li:last-child{margin-bottom:0}
+.ticket .li b{color:var(--brass-d)}
+.strip{background:var(--brass)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:22px 24px;text-align:center}
+.strip .s b{display:block;font-family:'Playfair Display';font-size:1.7rem;color:var(--navy);font-weight:800}
+.strip .s span{font-size:.82rem;color:#4a3c17;font-weight:600}
+section{padding:66px 0}
+.eyebrow{font-size:.78rem;letter-spacing:3px;text-transform:uppercase;color:var(--brass-d);font-weight:700;margin-bottom:10px}
+h2{font-size:2.35rem;color:var(--navy);line-height:1.12;margin-bottom:12px;font-weight:800}
+.lead{color:var(--soft);max-width:680px;font-size:1.04rem;margin-bottom:36px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.c{background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px;text-align:center}
+.c .ic{font-size:1.9rem;margin-bottom:10px}
+.c h3{font-size:1.12rem;color:var(--navy);margin-bottom:6px}
+.c p{color:var(--soft);font-size:.9rem}
+.sell{background:var(--navy);color:#d7dee8;border-radius:16px;padding:46px}
+.sell .eyebrow{color:var(--brass)}
+.sell h2{color:#fff}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.steps .g{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:22px}
+.steps .g b{display:block;font-family:'Playfair Display';font-size:1.7rem;color:var(--brass);font-weight:800;margin-bottom:8px}
+.steps .g h3{color:#fff;font-size:1.1rem;margin-bottom:5px}
+.steps .g span{font-size:.92rem;color:#c4cedd}
+.next{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.next .box{background:#fff;border:1px solid var(--line);border-left:5px solid var(--brass);border-radius:10px;padding:30px}
+.next .box .tag{display:inline-block;background:var(--cream);color:var(--brass-d);font-size:.72rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;padding:5px 12px;border-radius:4px;margin-bottom:14px}
+.next .box h3{font-size:1.6rem;color:var(--navy);margin-bottom:8px}
+.next .box p{color:var(--soft);font-size:.98rem;margin-bottom:8px}
+.next ul{list-style:none;margin-top:6px}
+.next li{padding:10px 0 10px 28px;position:relative;border-bottom:1px solid var(--line);font-size:1rem;color:#31404f}
+.next li:last-child{border:none}
+.next li:before{content:"\2713";position:absolute;left:0;top:10px;color:var(--green);font-weight:800}
+.about{background:var(--cream)}
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+.about .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:30px}
+.about .card .li{display:flex;gap:12px;margin-bottom:14px;font-size:.96rem;color:#31404f}
+.about .card .li:last-child{margin-bottom:0}
+.about .card .li b{color:var(--brass-d);font-size:1.2rem}
+.area{text-align:center}
+.towns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px}
+.towns span{background:#fff;color:var(--navy);padding:8px 16px;border-radius:5px;font-size:.9rem;font-weight:600;border:1px solid var(--line)}
+.cta{background:linear-gradient(157deg,var(--navy2),var(--navy));color:#fff;text-align:center;padding:76px 0}
+.cta h2{color:#fff;font-size:2.4rem;max-width:720px;margin:0 auto 14px}
+.cta p{color:#c4cedd;max-width:580px;margin:0 auto 24px;font-size:1.05rem}
+.cta .phone{font-family:'Playfair Display';font-size:2rem;font-weight:800;color:var(--brass);margin-top:18px}
+.foot{background:#0d1729;color:#8593a8;padding:30px 0;font-size:.86rem}
+.foot .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media(max-width:860px){
+  .nav{display:none}
+  .hero .wrap,.strip .wrap,.grid4,.steps,.next,.about .wrap{grid-template-columns:1fr}
+  .hero h1{font-size:2.3rem}h2{font-size:1.9rem}.sell{padding:28px}
+}
+</style>
+</head>
+<body>
+<div class="note">Preview concept prepared by Onyx Rise Media for County Line Auction — not the company's live website. Auction dates, lot details, photos, and any figures shown are placeholders pending the owner's own details.</div>
+<div class="top"><div class="wrap">
+  <div>📍 275 S. Main St., Gloversville, NY 12078</div>
+  <div>🔨 <b>Family auctioneers since 1980 · Online bidding via HiBid</b></div>
+</div></div>
+<header class="bar"><div class="wrap">
+  <div class="brand">
+    <div class="mark">🔨</div>
+    <div class="nm">County Line Auction<small>Gloversville, NY · Est. 1980</small></div>
+  </div>
+  <nav class="nav">
+    <a href="#auction">What We Auction</a>
+    <a href="#sell">Sell With Us</a>
+    <a href="#next">Next Auction</a>
+    <a href="#about">Our Family</a>
+    <a href="#contact" class="cta">Book a Consultation</a>
+  </nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="kick">Estate &amp; On-Site Liquidation Auctioneers · Fulton County</span>
+    <h1>When it's time to <em>settle an estate</em>, one call handles the whole property.</h1>
+    <p>For 45 years the Belknap family has run honest auctions across Fulton County and beyond — estates, farms, downsizings, and liquidations of every kind. We do the sorting, the selling, and the crowd, on site or online.</p>
+    <div class="row">
+      <a href="#contact" class="btn btn-b">Book an estate consultation</a>
+      <a href="#next" class="btn btn-o">See the next auction</a>
+    </div>
+  </div>
+  <div class="ticket">
+    <div class="th"><b>County Line Auction</b><span>Lot Ticket</span></div>
+    <div class="tb">
+      <div class="li"><b>✓</b><span>Full <b>on-site estate liquidations</b> — house, barn, and everything in it</span></div>
+      <div class="li"><b>✓</b><span>Farm equipment, tools, antiques, collectibles, real estate</span></div>
+      <div class="li"><b>✓</b><span>Live auctions <b>plus online bidding through HiBid</b></span></div>
+      <div class="li"><b>✓</b><span>Family-run since 1980 — straight answers, no runaround</span></div>
+    </div>
+  </div>
+</div></section>
+
+<div class="strip"><div class="wrap">
+  <div class="s"><b>1980</b><span>Family-run since</span></div>
+  <div class="s"><b>45+</b><span>Years auctioneering</span></div>
+  <div class="s"><b>On-site</b><span>&amp; online (HiBid)</span></div>
+  <div class="s"><b>Multi-county</b><span>Fulton &amp; beyond</span></div>
+</div></div>
+
+<section id="auction"><div class="wrap">
+  <div class="eyebrow">What comes across the block</div>
+  <h2>Estates, farms, and full liquidations</h2>
+  <p class="lead">If it has value, we can sell it — one lot or a whole property. Most of our work is helping a family turn an entire estate or farm into a fair, transparent sale without hauling it themselves.</p>
+  <div class="grid4">
+    <div class="c"><div class="ic">🏠</div><h3>Estate Sales</h3><p>Whole-household estates sold on site or moved to our gallery — furniture, tools, and everyday goods.</p></div>
+    <div class="c"><div class="ic">🚜</div><h3>Farm &amp; Equipment</h3><p>Tractors, implements, shop tools, and machinery sold to buyers who actually use them.</p></div>
+    <div class="c"><div class="ic">🕰️</div><h3>Antiques &amp; Collectibles</h3><p>Antiques, glassware, coins, and collections marketed to the right bidders, live and online.</p></div>
+    <div class="c"><div class="ic">🏡</div><h3>Real Estate &amp; Liquidations</h3><p>Property and business liquidations of all kinds across Fulton and neighboring counties.</p></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="sell" id="sell">
+    <div class="eyebrow">Selling an estate or downsizing?</div>
+    <h2 style="max-width:640px">We walk the property, set the plan, and run the sale</h2>
+    <p style="color:#c4cedd;max-width:660px">Settling a parent's home or clearing a farm is a lot to carry. Here's exactly how it goes when you hand it to us — no guessing.</p>
+    <div class="steps">
+      <div class="g"><b>1.</b><h3>Free walkthrough</h3><span>We come look at the property, talk through what you have, and recommend on-site vs. gallery.</span></div>
+      <div class="g"><b>2.</b><h3>We run the auction</h3><span>Cataloging, setup, marketing to our buyer list, and the sale itself — live and on HiBid online.</span></div>
+      <div class="g"><b>3.</b><h3>You get settled up</h3><span>Clean, itemized settlement after the sale. Terms and commission explained up front <em>(details to confirm)</em>.</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="next"><div class="wrap">
+  <div class="next">
+    <div>
+      <div class="eyebrow">Upcoming sale</div>
+      <h2>Never miss the next auction again</h2>
+      <p class="lead">Bidders shouldn't have to hunt across three websites to find out when you're selling. This is where the next sale date, preview time, and lot photos live — with a one-tap link to bid online.</p>
+      <a href="#contact" class="btn btn-b" style="color:#fff;background:var(--navy)">Ask about the next sale</a>
+    </div>
+    <div class="box">
+      <span class="tag">Next Auction — placeholder</span>
+      <h3>Date &amp; preview to be posted here</h3>
+      <p>Auction date, preview/inspection window, and featured lots will be listed here from the owner's schedule.</p>
+      <ul>
+        <li>Live at 275 S. Main St. + online on HiBid</li>
+        <li>Preview/inspection times posted per sale</li>
+        <li>Photo lot catalog linked before each auction</li>
+        <li>Text/email alerts for regular bidders</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="about" id="about"><div class="wrap">
+  <div>
+    <div class="eyebrow">The family behind the gavel</div>
+    <h2>Four decades of Belknap auctions</h2>
+    <p class="lead" style="margin-bottom:18px">County Line Auction has been run by Jack Belknap and his family — Brenda, Rachele, and John — since 1980. That longevity is the point: when you're trusting someone with a lifetime of a family's belongings, you want auctioneers who've done it for two generations and still answer the phone themselves.</p>
+    <a href="#contact" class="btn btn-b" style="background:var(--navy);color:#fff">Talk to the family</a>
+  </div>
+  <div class="card">
+    <div class="li"><b>★</b><span><strong>Since 1980</strong> — nearly half a century of local auctions</span></div>
+    <div class="li"><b>★</b><span><strong>Family-operated</strong> — Jack, Brenda, Rachele &amp; John</span></div>
+    <div class="li"><b>★</b><span><strong>On-site or gallery</strong> — we come to the property when it makes sense</span></div>
+    <div class="li"><b>★</b><span><strong>Live + online</strong> — every sale reaches HiBid's national bidder base</span></div>
+  </div>
+</div></section>
+
+<section class="area"><div class="wrap">
+  <div class="eyebrow" style="text-align:center">Where we work</div>
+  <h2>Fulton County and well beyond the line</h2>
+  <p class="lead" style="margin:0 auto">We run on-site estate and farm liquidations across Fulton County and into the neighboring counties.</p>
+  <div class="towns">
+    <span>Gloversville</span><span>Johnstown</span><span>Mayfield</span><span>Northville</span><span>Broadalbin</span>
+    <span>Fonda</span><span>Amsterdam</span><span>Caroga</span><span>Northampton</span>
+  </div>
+</div></section>
+
+<section class="cta" id="contact"><div class="wrap">
+  <div class="eyebrow" style="color:var(--brass)">Book a consultation</div>
+  <h2>Have an estate, farm, or collection to sell? Start with a free walkthrough.</h2>
+  <p>Call with what you're looking to sell and where it is. We'll set up a time to walk the property and lay out the plan — no obligation.</p>
+  <a href="#" class="btn btn-b">Call to schedule a walkthrough</a>
+  <div class="phone">(518) 773-2247</div>
+</div></section>
+
+<footer class="foot"><div class="wrap">
+  <div><strong>County Line Auction</strong> · 275 S. Main St., Gloversville, NY 12078 · (518) 773-2247</div>
+  <div>Estate &amp; on-site liquidation auctioneers since 1980 · Live &amp; online bidding via HiBid</div>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harts Cove Bait &amp; Tackle — Open at 6, right by the launch | East Moriches, NY</title>
+<style>
+  :root{
+    --night:#0f2230; --deep:#16384c; --bay:#2f6f8f; --steel:#5d7d8c;
+    --amber:#f2a73b; --amber2:#d98a1f; --foam:#eef4f6; --green:#3c7a4e; --ink:#0b1922;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Segoe UI",Roboto,Arial,sans-serif;color:#13262f;background:var(--foam);line-height:1.55}
+  h1,h2,h3{line-height:1.12;font-weight:800}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+  a{color:inherit}
+  .btn{display:inline-block;background:var(--amber);color:#15242c;text-decoration:none;font-weight:800;
+    padding:15px 28px;border-radius:6px;letter-spacing:.3px;text-transform:uppercase;font-size:.92rem}
+  .btn:hover{background:var(--amber2)}
+  .btn-ghost{background:transparent;border:2px solid var(--amber);color:var(--amber)}
+
+  .ribbon{background:var(--green);color:#eafaef;text-align:center;font-weight:700;font-size:.9rem;padding:8px 12px;letter-spacing:.4px}
+
+  .hero{position:relative;color:#eaf3f6;
+    background:linear-gradient(180deg,#0c1d29 0%, #143a4f 60%, #1f5570 100%);
+    padding:54px 0 50px;overflow:hidden}
+  .hero:before{content:"";position:absolute;left:0;right:0;bottom:0;height:60px;
+    background:repeating-linear-gradient(90deg,rgba(255,255,255,.05) 0 30px,transparent 30px 60px)}
+  .hero .wrap{position:relative}
+  .hero .kick{display:inline-block;background:rgba(242,167,59,.16);color:var(--amber);border:1px solid var(--amber);
+    padding:5px 12px;border-radius:20px;font-size:.76rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+  .hero h1{font-size:2.9rem;margin:16px 0 12px}
+  .hero h1 em{color:var(--amber);font-style:normal}
+  .hero p{max-width:560px;font-size:1.14rem;color:#cfe0e7}
+  .heroactions{margin-top:26px;display:flex;gap:13px;flex-wrap:wrap}
+
+  /* status strip */
+  .status{background:var(--night);color:#dfeaef;padding:18px 0}
+  .status .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:center}
+  .status .cell .v{font-size:1.35rem;font-weight:800;color:var(--amber)}
+  .status .cell .k{font-size:.74rem;letter-spacing:1.5px;text-transform:uppercase;color:#8fabb8;margin-top:3px}
+
+  /* what's in today */
+  .today{padding:58px 0;background:var(--foam)}
+  .today h2{font-size:2rem;color:var(--deep);text-align:center}
+  .today .sub{text-align:center;color:#577483;margin:8px 0 28px}
+  .baitgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .bait{background:#fff;border:1px solid #d3dee3;border-top:4px solid var(--bay);border-radius:8px;padding:20px}
+  .bait h3{font-size:1.05rem;color:var(--deep);margin-bottom:8px}
+  .bait ul{list-style:none;font-size:.95rem;color:#3f5763}
+  .bait li{padding:4px 0;border-bottom:1px dotted #d9e2e6}
+  .bait li:last-child{border:none}
+  .badge{display:inline-block;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.5px;
+    padding:2px 7px;border-radius:4px;background:#e8f1ec;color:var(--green);margin-left:6px}
+
+  /* report band */
+  .report{background:var(--deep);color:#dcebf1;padding:54px 0}
+  .report .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center}
+  .report h2{font-size:2rem;color:#fff}
+  .report p{margin:14px 0;color:#bcd3dd;font-size:1.05rem}
+  .tide{background:rgba(255,255,255,.05);border-left:4px solid var(--amber);border-radius:6px;padding:20px 22px}
+  .tide .row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #28526a;font-size:.98rem}
+  .tide .row:last-child{border:none}
+  .tide .row b{color:var(--amber)}
+  .tide .note{font-size:.76rem;color:#86a6b4;margin-top:10px;font-style:italic}
+
+  /* by the launch */
+  .launch{padding:56px 0;background:var(--foam)}
+  .launch .grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+  .launch h2{font-size:1.9rem;color:var(--deep)}
+  .launch p{margin:14px 0;color:#3f5763}
+  .pts{list-style:none}
+  .pts li{padding:10px 0 10px 30px;position:relative;border-bottom:1px solid #dde6ea}
+  .pts li:before{content:"⚓";position:absolute;left:0;color:var(--bay)}
+  .mapbox{background:var(--bay);color:#fff;border-radius:10px;padding:30px;text-align:center}
+  .mapbox .addr{font-size:1.25rem;font-weight:800;margin:8px 0}
+
+  .cta{background:var(--night);color:#fff;text-align:center;padding:50px 0}
+  .cta h2{font-size:1.9rem}
+  .cta p{color:#9fbac7;margin:10px 0 22px}
+
+  footer{background:#081420;color:#7d9aa8;text-align:center;padding:26px 0;font-size:.85rem}
+  footer b{color:#cfe0e7}
+
+  @media(max-width:780px){
+    .hero h1{font-size:2.1rem}
+    .baitgrid{grid-template-columns:1fr 1fr}
+    .report .grid,.launch .grid{grid-template-columns:1fr}
+    .status .wrap{grid-template-columns:1fr;gap:10px}
+  }
+</style>
+</head>
+<body>
+
+<div class="ribbon">⛅ Opens 6:00 AM for the morning bite — bait, ice &amp; gear before you hit Moriches Bay</div>
+
+<header class="hero"><div class="wrap">
+  <span class="kick">East Moriches · on Moriches Bay</span>
+  <h1>Open at six. <em>Bait's in. Ice is cold.</em></h1>
+  <p>The bait &amp; tackle shop right by the East Moriches launch — live and fresh bait, rigs, line and a straight answer on what's running in the bay. Stop in before the tide turns.</p>
+  <div class="heroactions">
+    <a class="btn" href="tel:16318787514">Call the shop — is the bait in?</a>
+    <a class="btn btn-ghost" href="#today">See what's in today</a>
+  </div>
+</div></header>
+
+<section class="status"><div class="wrap">
+  <div class="cell"><div class="v">6 AM – 5 PM</div><div class="k">Open daily, in season</div></div>
+  <div class="cell"><div class="v">By the launch</div><div class="k">27 Maple Ave, East Moriches</div></div>
+  <div class="cell"><div class="v">(631) 878-7514</div><div class="k">Call to confirm today's bait</div></div>
+</div></section>
+
+<section class="today" id="today"><div class="wrap">
+  <h2>What's on hand</h2>
+  <p class="sub">Bait stock turns with the season and the boats — call ahead for the live stuff</p>
+  <div class="baitgrid">
+    <div class="bait">
+      <h3>Live bait</h3>
+      <ul>
+        <li>Sandworms <span class="badge">live</span></li>
+        <li>Bloodworms <span class="badge">live</span></li>
+        <li>Killies / minnows</li>
+        <li>Green crabs</li>
+      </ul>
+    </div>
+    <div class="bait">
+      <h3>Fresh &amp; frozen</h3>
+      <ul>
+        <li>Fresh bunker</li>
+        <li>Clams &amp; squid</li>
+        <li>Spearing</li>
+        <li>Eels (seasonal)</li>
+      </ul>
+    </div>
+    <div class="bait">
+      <h3>Tackle &amp; rigs</h3>
+      <ul>
+        <li>Hooks, sinkers, swivels</li>
+        <li>Fluke &amp; bass rigs</li>
+        <li>Line &amp; leader</li>
+        <li>Bucktails &amp; lures</li>
+      </ul>
+    </div>
+    <div class="bait">
+      <h3>For the trip</h3>
+      <ul>
+        <li>Block &amp; bagged ice</li>
+        <li>Chum</li>
+        <li>Gloves, pliers, gaffs</li>
+        <li>Local tide know-how</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="report"><div class="wrap">
+  <div class="grid">
+    <div>
+      <h2>What's running in Moriches Bay</h2>
+      <p>Fluke on the flats, bass and blues around the inlet, porgies and sea bass when the water's right. We fish this bay too — so when you ask "what should I throw," you get a real answer, not a shrug.</p>
+      <p>Tell us where you're headed — bay, inlet, or surf — and we'll rig you for it before you leave.</p>
+    </div>
+    <div class="tide">
+      <div class="row"><span>Bay flats — fluke</span><b>drift the outgoing</b></div>
+      <div class="row"><span>Moriches Inlet — bass / blues</span><b>moving water</b></div>
+      <div class="row"><span>Bridges &amp; docks — porgy / sea bass</span><b>slack to incoming</b></div>
+      <div class="row"><span>Surf — bass</span><b>dawn &amp; dusk</b></div>
+      <div class="note">Sample bite guide — live "what's running this week" board to be kept current after launch.</div>
+    </div>
+  </div>
+</div></section>
+
+<section class="launch"><div class="wrap">
+  <div class="grid">
+    <div>
+      <h2>Steps from the water</h2>
+      <p>We're on Maple Ave right by the public launch — pull in, grab bait and ice, and you're on the bay in minutes. No detour to a chain store on the way out.</p>
+      <ul class="pts">
+        <li>Right by the East Moriches launch &amp; Moriches Bay</li>
+        <li>First open early — 6 a.m. for the morning bite</li>
+        <li>Live bait, ice, rigs and tackle under one roof</li>
+        <li>Local reports from people who fish here</li>
+      </ul>
+    </div>
+    <div class="mapbox">
+      <div>📍</div>
+      <div class="addr">27 Maple Ave<br>East Moriches, NY 11940</div>
+      <p style="color:#e8f3f7;font-size:.95rem">Open daily 6 AM – 5 PM in season</p>
+      <a class="btn" style="margin-top:6px" href="tel:16318787514">Call (631) 878-7514</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="cta"><div class="wrap">
+  <h2>Before you launch, call the shop</h2>
+  <p>Check the bait, the ice, and what's biting — then come grab it.</p>
+  <a class="btn" href="tel:16318787514">(631) 878-7514</a>
+</div></section>
+
+<footer><div class="wrap">
+  <b>Harts Cove Bait &amp; Tackle</b> · 27 Maple Ave, East Moriches, NY 11940 · (631) 878-7514 · Open daily 6 AM – 5 PM in season<br>
+  <span style="font-size:.78rem">Preview concept prepared by Onyx Rise Media. Not affiliated; for review only. Bait/tide details are samples to confirm with the shop.</span>
+</div></footer>
+
+</body>
+</html>

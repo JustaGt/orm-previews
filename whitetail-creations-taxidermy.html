@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whitetail Creations Taxidermy — Award-Winning Mounts, 90-Day Whitetail Turnaround | Shortsville, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--coal:#191714;--walnut:#2b241d;--bone:#efe9dd;--blaze:#e8641b;--brass:#b99a5f;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3',sans-serif;background:var(--coal);color:var(--bone);line-height:1.6}
+h1,h2,h3{font-family:'Bitter',serif;line-height:1.15}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:50;background:rgba(25,23,20,.96);border-bottom:1px solid #3a332a}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.logo{font-family:'Bitter',serif;font-weight:900;font-size:1.15rem;color:var(--bone)}
+.logo span{color:var(--blaze)}
+.nav a.call{background:var(--blaze);color:#fff;padding:10px 18px;border-radius:6px;font-weight:700;text-decoration:none;font-size:.9rem}
+.hero{padding:100px 0 80px;background:radial-gradient(ellipse at 70% 20%,#3a3025 0%,#191714 60%)}
+.badge{display:inline-block;border:1px solid var(--brass);color:var(--brass);padding:6px 14px;border-radius:4px;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:20px}
+.hero h1{font-size:clamp(2rem,5.2vw,3.4rem);max-width:17ch;font-weight:900}
+.hero p{max-width:54ch;margin:20px 0 32px;color:#cfc6b6;font-size:1.06rem}
+.btn{display:inline-block;background:var(--blaze);color:#fff;font-weight:700;padding:15px 28px;border-radius:6px;text-decoration:none}
+.btn.line{background:transparent;border:1.5px solid var(--bone);margin-left:12px;color:var(--bone)}
+.strip{background:var(--blaze);color:#fff;padding:16px 0;text-align:center;font-weight:700}
+.strip .wrap{display:flex;flex-wrap:wrap;gap:8px 30px;justify-content:center;font-size:.95rem}
+section{padding:70px 0}
+h2{font-size:1.9rem;color:var(--bone)}
+.sub{color:#a89d8a;margin-top:10px;max-width:60ch}
+.mounts{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:34px}
+.mount{background:var(--walnut);border:1px solid #3a332a;border-radius:10px;padding:26px}
+.mount h3{color:var(--brass);font-size:1.08rem;margin-bottom:8px}
+.mount p{font-size:.94rem;color:#cfc6b6}
+.turn{background:var(--walnut)}
+.turn .flex{display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;margin-top:8px}
+.turn .big{font-family:'Bitter',serif;font-weight:900;font-size:4.6rem;color:var(--blaze);line-height:1}
+.turn .big small{display:block;font-size:1rem;color:var(--brass);letter-spacing:.14em;text-transform:uppercase}
+.field{counter-reset:fc}
+.fsteps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:34px}
+.fs{border-left:3px solid var(--blaze);padding:6px 0 6px 18px}
+.fs h3{font-size:1rem;color:var(--bone);margin-bottom:6px}
+.fs h3::before{counter-increment:fc;content:counter(fc)". ";color:var(--blaze)}
+.fs p{font-size:.92rem;color:#a89d8a}
+.about{background:radial-gradient(ellipse at 20% 30%,#3a3025 0%,#191714 70%)}
+.about .grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.ph{border-radius:10px;min-height:300px;background:linear-gradient(160deg,#4a3d2c,#241f18);display:flex;align-items:flex-end;padding:16px;color:#8a7f6b;font-style:italic;font-size:.85rem}
+.awards{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}
+.aw{border:1px solid var(--brass);color:var(--brass);border-radius:4px;padding:8px 14px;font-size:.85rem}
+.visit{background:var(--walnut)}
+.visit .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;margin-top:8px}
+.visit .card{background:var(--coal);border:1px solid #3a332a;border-radius:10px;padding:28px;margin-top:24px}
+.visit .card b{color:var(--brass)}
+form{display:grid;gap:12px;margin-top:24px}
+input,select,textarea{padding:13px;border-radius:6px;border:1px solid #4a4234;background:#241f18;color:var(--bone);font-family:inherit;font-size:.95rem;width:100%}
+::placeholder{color:#8a7f6b}
+form .btn{border:none;cursor:pointer}
+.price{text-align:center}
+.price .box{border:2px dashed var(--brass);border-radius:10px;padding:30px;margin-top:28px}
+footer{background:#100e0c;color:#8a7f6b;text-align:center;padding:32px 20px;font-size:.88rem}
+footer a{color:var(--brass)}
+@media(max-width:760px){.about .grid,.visit .grid,.turn .flex{grid-template-columns:1fr}.btn.line{margin-left:0;margin-top:10px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">WHITETAIL <span>CREATIONS</span> TAXIDERMY</div>
+    <a class="call" href="tel:5857528248">Call / Text 585-752-8248</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="badge">State &amp; World Award Winner · 27 Years</div>
+    <h1>The buck of your life shouldn't wait a year on someone's shelf</h1>
+    <p>Cliff Weitzel mounts every trophy as if it were his own — and returns whitetail shoulder mounts in about 90 days, not next season. Find the studio and showroom inside FLX Outdoor Sports in Shortsville, ten minutes from Canandaigua.</p>
+    <a class="btn" href="#plan">Plan your mount</a>
+    <a class="btn line" href="#fieldcare">Field-care guide</a>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div>◆ 90-day whitetail turnaround</div>
+    <div>◆ Studio + live showroom inside FLX Outdoor Sports</div>
+    <div>◆ Authorized Tactacam dealer</div>
+  </div>
+</div>
+
+<section class="wrap">
+  <h2>Mount styles</h2>
+  <p class="sub">From a classic wall shoulder mount to a full pedestal that shows the animal from every side — built on quality forms, finished with museum-grade detail work.</p>
+  <div class="mounts">
+    <div class="mount"><h3>Shoulder mounts</h3><p>The classic whitetail presentation. Ear-butt detail, eye set, and brisket work are where awards are won — look closely in the showroom.</p></div>
+    <div class="mount"><h3>Pedestal mounts</h3><p>Freestanding, viewable from all angles, no wall studs required. The centerpiece option for a first buck or a booner.</p></div>
+    <div class="mount"><h3>European mounts</h3><p>Clean, bright skull mounts for the minimalist wall — or when the story matters more than the shoulder.</p></div>
+    <div class="mount"><h3>Camo dipping</h3><p>Hydro-dip your stock, bow riser, or gear in the pattern you hunt. Done in-house, ask for turnaround.</p></div>
+  </div>
+</section>
+
+<section class="turn">
+  <div class="wrap flex">
+    <div class="big">90<small>days*</small></div>
+    <div>
+      <h2>Tagged in November. On your wall by opening day of turkey season.</h2>
+      <p class="sub" style="margin-top:14px">Most studios quote 10–14 months on whitetails. Cliff's 90-day turnaround on shoulder mounts means your deer comes home while the story is still fresh at camp. *Ask about current capacity — slots fill during the rut. [Turnaround per studio's published offer — confirm current terms before launch.]</p>
+    </div>
+  </div>
+</section>
+
+<section class="field wrap" id="fieldcare">
+  <h2>Field care: the mount is won in the first hour</h2>
+  <p class="sub">Bring us a well-handled cape and the finished mount will show it. Four rules before you reach the truck:</p>
+  <div class="fsteps">
+    <div class="fs"><h3>Don't cut the throat or brisket</h3><p>Field dress from the sternum back. Every forward cut is a repair in the finished cape.</p></div>
+    <div class="fs"><h3>Leave more cape than you think</h3><p>Skin well behind the front shoulders — we can always trim, we can't add.</p></div>
+    <div class="fs"><h3>Cool it fast, keep it dry</h3><p>Heat and moisture slip hair. Get the hide cooled or frozen the same day; never store in a sealed plastic bag unfrozen.</p></div>
+    <div class="fs"><h3>Call before you drop off</h3><p>We're by appointment — call or text 585-752-8248 and Cliff will meet you at FLX Outdoor Sports.</p></div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap grid">
+    <div>
+      <h2>27 years behind the form</h2>
+      <p class="sub" style="margin-top:14px">Cliff Weitzel has been mounting Finger Lakes whitetails, turkeys, fish, and small game for 27 years. His competition work has taken state and world awards — and every client's trophy gets the same eye-set, the same seam work, the same standard.</p>
+      <p class="sub" style="margin-top:12px">In 2024 the studio moved into FLX Outdoor Sports on Route 96, where the showroom now runs through the whole store. Walk the aisles and judge the work in person before you commit.</p>
+      <div class="awards">
+        <div class="aw">State award winner</div>
+        <div class="aw">World-show honors</div>
+        <div class="aw">[List specific titles — confirm with Cliff]</div>
+      </div>
+    </div>
+    <div class="ph">[photo: Cliff at the bench / showroom wall of shoulder mounts]</div>
+  </div>
+</section>
+
+<section class="price wrap">
+  <h2>Price list</h2>
+  <div class="box">
+    <p><b style="color:var(--brass)">[Current price list — placeholder]</b><br>Carried over from your existing published price list before launch, with deposit terms stated plainly.</p>
+  </div>
+</section>
+
+<section class="visit" id="plan">
+  <div class="wrap grid">
+    <div>
+      <h2>Plan your mount</h2>
+      <p class="sub" style="margin-top:14px">Tell us what you harvested and how you want it finished. Cliff will reply with pricing, capacity, and drop-off timing.</p>
+      <div class="card">
+        <b>Whitetail Creations Taxidermy Studio</b><br>
+        Inside FLX Outdoor Sports<br>
+        4885 NY-96, Shortsville, NY 14548 — across from Serendipity Acres<br><br>
+        <b>Call/Text:</b> 585-752-8248<br>
+        <b>Email:</b> Cliffweitzel@yahoo.com<br>
+        <b>Hours:</b> By appointment, seven days
+      </div>
+    </div>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="tel" placeholder="Phone" required>
+      <select><option>Species</option><option>Whitetail deer</option><option>Turkey</option><option>Fish</option><option>Small game</option><option>Other / exotic</option></select>
+      <select><option>Mount style</option><option>Shoulder</option><option>Pedestal</option><option>European</option><option>Camo dipping</option><option>Not sure yet</option></select>
+      <input type="text" placeholder="Harvest date (or expected season)">
+      <textarea rows="3" placeholder="Anything else — antler damage, cape condition, deadline?"></textarea>
+      <button class="btn" type="submit">Send to Cliff</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  Whitetail Creations Taxidermy Studio · Inside FLX Outdoor Sports, 4885 NY-96, Shortsville, NY 14548 · <a href="tel:5857528248">585-752-8248</a> · <a href="mailto:Cliffweitzel@yahoo.com">Cliffweitzel@yahoo.com</a>
+</footer>
+
+</body>
+</html>

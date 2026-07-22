@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enck Excavating — Septic Systems, Ponds &amp; Site Work | Otego, NY</title>
+<style>
+  :root{
+    --soil:#2b2118; --soil2:#3d2e1f; --clay:#c2622b; --clay2:#a64f1d;
+    --steel:#324154; --steel2:#243140; --sky:#eef3f6; --paper:#f7f4ee;
+    --ink:#241d15; --line:#dcd2bf; --green:#46663f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3{font-family:"Arial Black","Segoe UI",sans-serif;line-height:1.12;letter-spacing:-.01em}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  /* utility bar */
+  .util{background:var(--steel2);color:#cdd8e2;font-size:.9rem}
+  .util .wrap{display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:space-between;align-items:center;padding:8px 22px}
+  .util strong{color:#fff}
+  /* nav */
+  nav{background:var(--soil);position:sticky;top:0;z-index:20}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:13px 22px}
+  .brand{color:#fff;font-family:"Arial Black",sans-serif;font-size:1.18rem;letter-spacing:.02em}
+  .brand span{color:var(--clay)}
+  .links{display:flex;gap:22px}
+  .links a{color:#e6ddcb;text-decoration:none;font-size:.94rem;font-weight:700}
+  .links a:hover{color:#fff}
+  .callbtn{background:var(--clay);color:#fff;padding:10px 18px;border-radius:3px;text-decoration:none;font-weight:800;font-size:.92rem}
+  .callbtn:hover{background:var(--clay2)}
+  /* hero */
+  .hero{position:relative;color:#fff;
+    background:
+      linear-gradient(rgba(24,18,12,.80),rgba(30,23,15,.66)),
+      linear-gradient(135deg,#5a4326 0%,#3a2c1b 55%,#324154 100%);
+    padding:88px 0 80px}
+  .hero h1{font-size:2.7rem;max-width:20ch}
+  .hero .sub{font-size:1.2rem;margin-top:18px;max-width:54ch;color:#ece4d6}
+  .hero .badges{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px}
+  .badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);padding:7px 13px;border-radius:3px;font-size:.86rem;font-weight:700}
+  .hero .cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:14px 26px;border-radius:3px;text-decoration:none;font-weight:800}
+  .btn-a{background:var(--clay);color:#fff}.btn-a:hover{background:var(--clay2)}
+  .btn-b{background:#fff;color:var(--soil)}.btn-b:hover{background:#efe7d6}
+  /* trust strip */
+  .strip{background:var(--clay);color:#fff;padding:16px 0;font-weight:700}
+  .strip .wrap{display:flex;flex-wrap:wrap;gap:10px 40px;justify-content:center;text-align:center}
+  /* sections */
+  section{padding:62px 0}
+  .eyebrow{color:var(--clay2);font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:.8rem}
+  h2{font-size:1.95rem;margin:8px 0 10px;color:var(--soil2)}
+  .lead{max-width:62ch;color:#473a28;font-size:1.05rem}
+  /* services grid */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}
+  .svc{background:#fff;border:1px solid var(--line);border-radius:6px;padding:22px;border-top:4px solid var(--steel)}
+  .svc h3{font-size:1.1rem;color:var(--steel2);margin-bottom:7px}
+  .svc p{font-size:.94rem;color:#4f4230}
+  /* spotlight */
+  .spot{background:var(--steel2);color:#e9eef3}
+  .spot h2{color:#fff}
+  .spot .two{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+  .spot .lead{color:#cdd8e2}
+  ul.checks{list-style:none;margin-top:16px}
+  ul.checks li{padding:9px 0 9px 30px;position:relative;font-size:1.02rem;color:#e3e9ef}
+  ul.checks li:before{content:"✓";position:absolute;left:0;top:8px;color:var(--clay);font-weight:900}
+  .callout{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:24px}
+  .callout h3{color:#fff;font-size:1.25rem;margin-bottom:8px}
+  .callout p{color:#cdd8e2;font-size:.98rem}
+  /* pond/arena band */
+  .band{background:var(--green);color:#eef3ea}
+  .band h2{color:#fff}
+  .band .lead{color:#d8e3d2}
+  .bandgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+  .bcard{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:20px}
+  .bcard h3{color:#fff;font-size:1.08rem;margin-bottom:6px}
+  .bcard p{color:#dceada;font-size:.94rem}
+  /* why */
+  .why .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .stats{display:flex;gap:34px;flex-wrap:wrap;margin-top:8px}
+  .stat .n{font-family:"Arial Black",sans-serif;font-size:2.1rem;color:var(--clay2)}
+  .stat .l{font-size:.86rem;color:#6a5a40;text-transform:uppercase;letter-spacing:.06em}
+  /* area */
+  .area{background:var(--sky)}
+  .area .wrap{text-align:center}
+  .towns{margin-top:16px;font-size:1.04rem;color:#3c4a59;max-width:74ch;margin-left:auto;margin-right:auto;line-height:1.9}
+  /* contact */
+  .contact{background:var(--soil)}
+  .contact h2{color:#fff}.contact .eyebrow{color:#e7b489}
+  .cbox{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:28px}
+  .cinfo{color:#e6ddcb}
+  .cinfo p{margin:10px 0;font-size:1.05rem}
+  .cinfo b{color:#fff}.cinfo a{color:#f0c79f;font-weight:700}
+  form{background:#fff;border-radius:6px;padding:24px}
+  form label{display:block;font-size:.84rem;font-weight:800;margin:12px 0 5px;color:var(--soil2)}
+  form input,form textarea,form select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:4px;font-family:inherit;font-size:.96rem;background:#fbf8f1}
+  form button{margin-top:18px;width:100%;background:var(--clay);color:#fff;border:0;padding:14px;border-radius:4px;font-weight:800;font-size:1rem;cursor:pointer}
+  form button:hover{background:var(--clay2)}
+  footer{background:#15100a;color:#a99a7c;font-size:.9rem;padding:24px 0}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+  @media(max-width:880px){
+    .links{display:none}
+    .hero h1{font-size:2rem}
+    .grid,.bandgrid{grid-template-columns:1fr}
+    .spot .two,.why .wrap,.cbox{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="util"><div class="wrap">
+  <span>Licensed, insured &amp; certified septic installer · No job too small</span>
+  <span><strong>607-988-6634</strong> · Otego, NY · Serving Otsego, Delaware &amp; Chenango</span>
+</div></div>
+
+<nav><div class="wrap">
+  <div class="brand">ENCK <span>EXCAVATING</span></div>
+  <div class="links">
+    <a href="#services">Site Work</a>
+    <a href="#septic">Septic &amp; Perc</a>
+    <a href="#ponds">Ponds &amp; Arenas</a>
+    <a href="#area">Service Area</a>
+    <a href="#contact">Request a Quote</a>
+  </div>
+  <a class="callbtn" href="tel:16079886634">Call Brian</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <h1>Septic systems, ponds, and driveways done right across the Leatherstocking region.</h1>
+  <p class="sub">A licensed, insured excavating contractor in Otego handling everything from a certified septic install to a new pond, a graded driveway, or a full house site — for homeowners, builders, and developers.</p>
+  <div class="badges">
+    <span class="badge">Certified septic installer</span>
+    <span class="badge">Perc testing</span>
+    <span class="badge">Residential · Commercial · Industrial</span>
+  </div>
+  <div class="cta">
+    <a class="btn btn-a" href="#contact">Request a Site Visit</a>
+    <a class="btn btn-b" href="#services">See What We Do</a>
+  </div>
+</div></header>
+
+<div class="strip"><div class="wrap">
+  <span>Septic &amp; drainfields</span><span>Ponds, lakes &amp; dams</span>
+  <span>Driveways &amp; roads</span><span>Land clearing &amp; grading</span><span>Demolition</span>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <span class="eyebrow">Complete site development</span>
+  <h2>One contractor from raw lot to finished grade</h2>
+  <p class="lead">Most jobs out here need more than one machine and one trade. Enck Excavating handles the whole site — clearing, the driveway in, the septic, the foundation dig, and the final grade — so you're not chasing three contractors to build one house.</p>
+  <div class="grid">
+    <div class="svc"><h3>Land Clearing &amp; House Sites</h3><p>Lot clearing, house pads, basements and footers, and right-of-way roads for subdivisions and new builds.</p></div>
+    <div class="svc"><h3>Driveways &amp; Culverts</h3><p>New driveway installation with proper culverts and drainage, plus subdivision and access roads built to hold up to mud season.</p></div>
+    <div class="svc"><h3>Septic &amp; Drainfields</h3><p>Conventional and alternative septic systems, perc testing, and restoration of failed leachfields — certified and inspected.</p></div>
+    <div class="svc"><h3>Ponds, Lakes &amp; Dams</h3><p>Farm ponds, recreational lakes, and dam work, shaped to drain and hold water the way the site allows.</p></div>
+    <div class="svc"><h3>Grading &amp; Drainage</h3><p>Grading of all types, yard prep with seed and straw, trenching, and water and sewer lines.</p></div>
+    <div class="svc"><h3>Demolition &amp; Cleanup</h3><p>Building demolition and hauling, storm-damage and debris cleanup, plus seasonal snow removal.</p></div>
+  </div>
+</div></section>
+
+<section id="septic" class="spot"><div class="wrap">
+  <span class="eyebrow" style="color:#e7b489">Septic &amp; perc testing</span>
+  <h2>The septic work most homeowners can't afford to get wrong</h2>
+  <div class="two" style="margin-top:26px">
+    <div>
+      <p class="lead">A failed leachfield or a system that won't pass inspection can stall a sale or a build for months. We're certified to install and perc-test, and we handle the repairs other crews walk away from.</p>
+      <ul class="checks">
+        <li>Perc testing for new construction &amp; lot sales</li>
+        <li>Conventional and alternative septic systems</li>
+        <li>Failed leachfield restoration and repair</li>
+        <li>Tank, line, and drainfield installation</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h3>Buying or selling land?</h3>
+      <p>If a lot needs a perc test before it closes, or a system needs to pass inspection, call before your deadline gets tight. We'll get out, test, and tell you straight what the ground can support.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="ponds" class="band"><div class="wrap">
+  <span class="eyebrow" style="color:#cfe3c7">Beyond the basics</span>
+  <h2>Ponds, riding arenas, and the projects nobody else takes</h2>
+  <p class="lead">Two centuries of farms and horse properties out here means a lot of jobs a standard driveway crew won't touch. These are some of ours.</p>
+  <div class="bandgrid">
+    <div class="bcard"><h3>Farm &amp; Recreational Ponds</h3><p>Dug, shaped, and built to hold — for livestock, fishing, irrigation, or fire protection.</p></div>
+    <div class="bcard"><h3>Custom Riding Arenas &amp; Round Pens</h3><p>Level, well-drained footing for horse properties, graded and prepped to ride year-round.</p></div>
+    <div class="bcard"><h3>Irrigation, Terracing &amp; Landscaping</h3><p>Irrigation systems installed and repaired, plus terracing and finish landscaping around the dig.</p></div>
+  </div>
+</div></section>
+
+<section class="why"><div class="wrap">
+  <div>
+    <span class="eyebrow">Why Enck</span>
+    <h2>A local contractor who answers the phone</h2>
+    <p class="lead">Enck Excavating is licensed, insured, and reputable — and Brian runs the jobs himself. Homeowners, builders, and developers all get the same answer when they call: no job too small, and a straight timeframe before the machines roll in.</p>
+    <div class="stats">
+      <div class="stat"><div class="n">3</div><div class="l">Counties served</div></div>
+      <div class="stat"><div class="n">20+</div><div class="l">Site-work services</div></div>
+      <div class="stat"><div class="n">Certified</div><div class="l">Septic &amp; perc</div></div>
+    </div>
+  </div>
+  <div class="callout" style="background:#fff;border:1px solid var(--line)">
+    <h3 style="color:var(--soil2)">What we handle, start to finish</h3>
+    <ul class="checks" style="margin-top:8px">
+      <li style="color:#473a28">Land clearing &amp; house sites</li>
+      <li style="color:#473a28">Driveways, roads &amp; culverts</li>
+      <li style="color:#473a28">Septic, perc testing &amp; leachfield repair</li>
+      <li style="color:#473a28">Ponds, lakes, dams &amp; riding arenas</li>
+      <li style="color:#473a28">Grading, trenching, water &amp; sewer lines</li>
+      <li style="color:#473a28">Demolition, hauling &amp; snow removal</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="area" class="area"><div class="wrap">
+  <span class="eyebrow">Service area</span>
+  <h2>Across Otsego, Delaware &amp; Chenango Counties</h2>
+  <p class="towns">Oneonta · Otego · Milford · Unadilla · Sidney · Franklin · Davenport · Jefferson · Walton · Delhi · Meredith · Maryland · Schenevus · Worcester · Portlandville · Cooperstown · Fly Creek · Masonville · Bainbridge · Mt. Upton · Afton — and the rest of the Leatherstocking and Catskill regions.</p>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <span class="eyebrow">Request a quote</span>
+  <h2>Tell us about your project</h2>
+  <div class="cbox">
+    <div class="cinfo">
+      <p>Whether it's a perc test on a deadline, a new septic, a driveway, or a pond you've been meaning to dig, send the details or call Brian directly. We'll set up a site visit and give you a clear price.</p>
+      <p><b>Phone:</b> <a href="tel:16079886634">607-988-6634</a></p>
+      <p><b>Email:</b> <a href="mailto:brianenck@yahoo.com">brianenck@yahoo.com</a></p>
+      <p><b>Mail:</b> PO Box 338, Otego, NY 13825</p>
+      <p><b>Inquiries:</b> Homeowners, builders &amp; developers welcome</p>
+    </div>
+    <form onsubmit="return false">
+      <label>Name</label><input type="text" placeholder="Your name">
+      <label>Phone</label><input type="tel" placeholder="Best number to reach you">
+      <label>Town</label><input type="text" placeholder="Where's the project?">
+      <label>Project type</label>
+      <select>
+        <option>Septic system or perc test</option>
+        <option>Failed leachfield repair</option>
+        <option>Driveway / road</option>
+        <option>Pond, lake or dam</option>
+        <option>Riding arena / round pen</option>
+        <option>Land clearing / house site</option>
+        <option>Demolition / cleanup</option>
+        <option>Something else</option>
+      </select>
+      <label>Details</label>
+      <textarea rows="4" placeholder="Tell us what you're planning and any deadlines."></textarea>
+      <button type="submit">Request a Site Visit</button>
+    </form>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>Enck Excavating · PO Box 338, Otego, NY 13825 · 607-988-6634</span>
+  <span>Licensed &amp; insured · Certified septic · Serving Otsego, Delaware &amp; Chenango</span>
+</div></footer>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fire Island Marine Services — Barging, Dredging &amp; Marine Construction · Bay Shore NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Roboto+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deck:#31363a; --deck-d:#1e2225; --sand:#e7e1d5; --paper:#f6f4f0;
+  --yellow:#e8b208; --mid:#6d757b; --line:#cfc9bd;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:#1e2225;background:var(--paper);font-size:17px;line-height:1.62}
+h1,h2,h3{font-family:Archivo,sans-serif;line-height:1.06;letter-spacing:-.015em;font-weight:800}
+.mono{font-family:"Roboto Mono",monospace;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+
+.hazard{height:9px;background:repeating-linear-gradient(45deg,var(--yellow) 0 14px,var(--deck-d) 14px 28px)}
+
+header{background:var(--deck-d);color:var(--sand)}
+.nav{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;padding:17px 0}
+.brand{font-family:Archivo;font-size:22px;font-weight:800;letter-spacing:-.02em;line-height:1.15}
+.brand span{display:block;font-family:"Roboto Mono";font-size:11px;letter-spacing:.19em;color:var(--yellow);font-weight:400;margin-top:3px}
+.nav a.tel{font-family:Archivo;font-size:21px;text-decoration:none;color:#fff}
+
+.hero{background:var(--deck);color:#fff;padding:76px 0 68px}
+.hero .mono{color:var(--yellow);margin-bottom:14px}
+.hero h1{font-size:clamp(33px,5.6vw,56px);max-width:18ch}
+.hero p{max-width:56ch;margin-top:20px;color:#ddd8ce;font-size:clamp(16.5px,2.2vw,20px)}
+.btn{display:inline-block;background:var(--yellow);color:var(--deck-d);text-decoration:none;font-family:Archivo;font-weight:700;font-size:18px;padding:14px 28px;margin-top:26px}
+.btn:hover{background:#cf9f06}
+
+.manifest{background:var(--deck-d);color:var(--sand);padding:0}
+.manifest .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr))}
+.manifest div{padding:20px 18px;border-right:1px solid #3d444a}
+.manifest b{display:block;font-family:Archivo;font-size:17px;color:#fff}
+.manifest span{font-size:14px;color:#9aa2a8}
+
+section{padding:60px 0}
+.eye{font-family:"Roboto Mono";font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#a8760a;margin-bottom:9px}
+h2{font-size:clamp(26px,4vw,38px);margin-bottom:13px}
+.lead{max-width:64ch;color:#454d53}
+
+.scope{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;background:var(--line);margin-top:32px;border:1px solid var(--line)}
+.scope article{background:#fff;padding:26px 24px}
+.scope .num{font-family:"Roboto Mono";font-size:12px;letter-spacing:.16em;color:var(--mid)}
+.scope h3{font-size:21px;margin:8px 0 9px}
+.scope p{font-size:15.5px;color:#4b545a}
+.scope ul{margin:11px 0 0 17px;font-size:15px;color:#4b545a}
+.scope li{margin-bottom:5px}
+
+.combo{background:var(--deck);color:#fff}
+.combo .lead{color:#d5cfc4}
+.combo .split{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:30px}
+.combo .split div{border-top:4px solid var(--yellow);padding-top:18px}
+.combo .split h3{font-size:20px;margin-bottom:8px}
+.combo .split p{color:#cdc7bc;font-size:16px}
+
+.steps{counter-reset:s;margin-top:30px;border-left:3px solid var(--line);padding-left:0;list-style:none}
+.steps li{counter-increment:s;position:relative;padding:0 0 24px 54px}
+.steps li:before{content:counter(s,decimal-leading-zero);position:absolute;left:-19px;top:0;background:var(--deck-d);color:var(--yellow);font-family:"Roboto Mono";font-size:12px;width:36px;height:36px;display:flex;align-items:center;justify-content:center}
+.steps b{display:block;font-family:Archivo;font-size:18px;margin-bottom:4px}
+.steps span{color:#4b545a;font-size:16px}
+
+.comms{background:var(--sand)}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+.chips span{background:#fff;border:1px solid var(--line);padding:8px 15px;font-size:15px}
+
+form{background:#fff;border:1px solid var(--line);padding:30px;margin-top:28px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+label{display:block;font-family:"Roboto Mono";font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);margin:15px 0 5px}
+input,select,textarea{width:100%;padding:12px;border:1px solid var(--line);font:inherit;font-size:16px;background:var(--paper)}
+textarea{min-height:100px;resize:vertical}
+.hint{font-size:14px;color:var(--mid);margin-top:14px}
+
+footer{background:var(--deck-d);color:#a5adb3;padding:44px 0;font-size:15px}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:26px}
+footer b{display:block;color:#fff;font-family:Archivo;font-size:18px;margin-bottom:8px}
+footer a{color:var(--yellow)}
+.note{font-size:12.5px;color:#6d757b;margin-top:26px}
+@media(max-width:760px){.combo .split,.row,.row3{grid-template-columns:1fr}.hero{padding:52px 0 48px}}
+</style>
+</head>
+<body>
+
+<div class="hazard"></div>
+<header>
+  <div class="wrap nav">
+    <div class="brand">FIRE ISLAND MARINE SERVICES<span>99 Maple Ave · Bay Shore, NY</span></div>
+    <a class="tel" href="tel:16316472774">631.647.2774</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="mono">Barging · Dredging · Marine construction</div>
+    <h1>There is no bridge. Everything your job needs crosses the bay on a deck.</h1>
+    <p>We barge machines, material and debris to and from the Fire Island communities — and we build the bulkheads and docks at the other end. One outfit, one schedule, from the Maple Avenue basin.</p>
+    <a class="btn" href="#load">Tell us what needs moving</a>
+  </div>
+</div>
+
+<div class="manifest">
+  <div class="wrap">
+    <div><b>40+ years</b><span>On the Great South Bay</span></div>
+    <div><b>99 Maple Ave</b><span>Bay Shore freight basin</span></div>
+    <div><b>Own equipment</b><span>Barge and marine plant</span></div>
+    <div><b>Both sides</b><span>Transport and construction</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="eye">Scope of work</div>
+    <h2>What we run out of Bay Shore</h2>
+    <p class="lead">Four lines of work that mostly end up on the same job: get it there, dig it out, build it, take the old one away.</p>
+    <div class="scope">
+      <article>
+        <div class="num">01 / TRANSPORT</div>
+        <h3>Barging &amp; marine transportation</h3>
+        <p>Bulk freight across the Great South Bay to the barrier beach and back.</p>
+        <ul><li>Excavators, skid steers and plant</li><li>Lumber, block, sand and stone</li><li>Oversized and awkward loads</li><li>Return trips loaded with debris</li></ul>
+      </article>
+      <article>
+        <div class="num">02 / DREDGING</div>
+        <h3>Dredging</h3>
+        <p>Depth back at slips, channels and private docks that have silted in.</p>
+        <ul><li>Private dock and slip dredging</li><li>Basin and channel work</li><li>Spoil handling and placement</li></ul>
+      </article>
+      <article>
+        <div class="num">03 / BUILD</div>
+        <h3>Bulkheads, docks &amp; marine construction</h3>
+        <p>Structures built where the equipment has to arrive by water.</p>
+        <ul><li>Bulkheads and retaining structures</li><li>Docks, piers and pilings</li><li>Waterfront construction</li><li>House and structure moves</li></ul>
+      </article>
+      <article>
+        <div class="num">04 / CLEAR</div>
+        <h3>Demolition &amp; removal</h3>
+        <p>Taking the old structure down and getting it off the island.</p>
+        <ul><li>Demolition of decks, docks and structures</li><li>Trash and debris removal by barge</li><li>Storm damage clearance</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="combo">
+  <div class="wrap">
+    <div class="eye" style="color:var(--yellow)">Why one call instead of two</div>
+    <h2>We carry our own machines to our own jobs</h2>
+    <p class="lead">Most marine contractors working the barrier beach have to hire a barge to get their equipment across, which means their schedule is set by somebody else's boat. We operate both sides of that job.</p>
+    <div class="split">
+      <div>
+        <h3>For contractors and builders</h3>
+        <p>Book the deck for your plant and material, and know the operator understands what happens at the other end — because we build there too. Tide windows, landing points and offload access get planned, not discovered.</p>
+      </div>
+      <div>
+        <h3>For homeowners</h3>
+        <p>If the bulkhead is going and the old one has to leave the island, that is normally three vendors and three invoices. Here it is one scope: demolition, transport, new structure, debris off.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eye">How it actually works</div>
+    <h2>Scheduling a barge job across the bay</h2>
+    <p class="lead">Worth understanding before you plan a build calendar around it.</p>
+    <ol class="steps">
+      <li><b>Tell us the load</b><span>Dimensions, weight, what it is, and where it has to land. That determines the vessel and the crew.</span></li>
+      <li><b>We check the landing</b><span>Not every community landing takes every machine. Access at the receiving end is usually the real constraint, not the deck.</span></li>
+      <li><b>Tide and window</b><span>Loaded draft and tide decide the departure window. This is why "any morning next week" is rarely a real answer.</span></li>
+      <li><b>Permits where needed</b><span>Dredging and marine construction are permitted work. We tell you at quote stage what applies to your scope.</span></li>
+      <li><b>Run and offload</b><span>Out of Maple Avenue, offloaded at the landing, and — if it is part of the scope — the old material comes back on the return.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="comms">
+  <div class="wrap">
+    <div class="eye">Where we work</div>
+    <h2>The barrier beach and the mainland shore</h2>
+    <p class="lead">Bay Shore-based, working the Great South Bay and the south shore of Long Island.</p>
+    <div class="chips">
+      <span>Ocean Beach</span><span>Saltaire</span><span>Kismet</span><span>Fair Harbor</span><span>Seaview</span><span>Ocean Bay Park</span><span>Atlantique</span><span>Dunewood</span><span>Bay Shore</span><span>West Islip</span><span>Islip</span><span>Great South Bay</span>
+    </div>
+    <p class="hint">Communities listed are the western Fire Island settlements served from the Bay Shore basin — to be confirmed against current operating area before publication.</p>
+  </div>
+</section>
+
+<section id="load">
+  <div class="wrap">
+    <div class="eye">Project enquiry</div>
+    <h2>Tell us the load</h2>
+    <p class="lead">Weight and dimensions turn an enquiry into a quote. If you do not know them yet, say so — we will tell you what to go and measure.</p>
+    <form onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';">
+      <div class="row">
+        <div><label for="n">Name</label><input id="n" required></div>
+        <div><label for="c">Company (if any)</label><input id="c"></div>
+      </div>
+      <div class="row">
+        <div><label for="p">Phone</label><input id="p" type="tel" required></div>
+        <div><label for="e">Email</label><input id="e" type="email" required></div>
+      </div>
+      <label for="k">Type of work</label>
+      <select id="k"><option>Barging / marine transport</option><option>Dredging</option><option>Bulkhead, dock or marine construction</option><option>Demolition &amp; debris removal</option><option>Combination — transport plus construction</option></select>
+      <div class="row">
+        <div><label for="f">Loading from</label><input id="f" placeholder="e.g. Maple Ave, Bay Shore"></div>
+        <div><label for="t">Delivering to</label><input id="t" placeholder="e.g. Fair Harbor"></div>
+      </div>
+      <div class="row3">
+        <div><label for="w">Approx. weight</label><input id="w" placeholder="tons / lbs"></div>
+        <div><label for="d">Approx. dimensions</label><input id="d" placeholder="L × W × H"></div>
+        <div><label for="wd">Target window</label><input id="wd" placeholder="e.g. week of 10 Aug"></div>
+      </div>
+      <label for="ds">Describe the job</label>
+      <textarea id="ds" placeholder="What's moving or being built, whether anything has to come back off the island, access at the landing, permits already in hand…"></textarea>
+      <p class="hint">Enquiries go to the Bay Shore office. We will come back with what it takes and when it can run.</p>
+      <button class="btn" type="submit">Send project details</button>
+      <p class="ok" style="display:none;margin-top:16px;color:#1f6b3a;font-weight:600">Received — we'll review the load and get back to you with a scope and a window.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div><b>Fire Island Marine Services, LLC</b>99 Maple Avenue<br>Bay Shore, NY 11706</div>
+      <div><b>Contact</b><a href="tel:16316472774" style="font-family:Archivo;font-size:25px;color:#fff;text-decoration:none;display:block">631.647.2774</a><a href="mailto:sales@fimarineservices.com">sales@fimarineservices.com</a></div>
+      <div><b>Work</b>Barging &amp; marine transport<br>Dredging<br>Bulkheads, docks &amp; construction<br>Demolition &amp; debris removal</div>
+      <div><b>Experience</b>40+ years working in and around the Great South Bay</div>
+    </div>
+    <p class="note">Concept page prepared by Onyx Rise Media for review. Vessel capacities, deck dimensions, community list and scheduling detail are placeholders written from publicly stated services — all to be confirmed by the owner before publication.</p>
+  </div>
+</footer>
+
+</body>
+</html>

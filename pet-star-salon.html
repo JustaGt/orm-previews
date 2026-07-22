@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pet Star Salon — Dog Grooming in Catskill, NY | Every Breed, 7am Drop-Offs</title>
+<meta name="description" content="Full grooms for every breed and nail trims for dogs, cats, ferrets and rabbits. Open from 7am, six days a week, at 40 Bushnell Ave in Catskill. Call (518) 669-4250.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;900&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fdf8f1;--coral:#e2694f;--cocoa:#5b4436;--butter:#f4c66f;--sage:#8ba888;--ink:#3a2e25;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--ink);line-height:1.65}
+h1,h2,h3{font-family:'Fraunces',serif;line-height:1.1}
+.wrap{max-width:1020px;margin:0 auto;padding:0 22px}
+/* hero */
+header{padding:64px 0 56px;background:radial-gradient(circle at 85% 15%,#f9e5c8 0%,var(--cream) 55%)}
+.header-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.pill{display:inline-block;background:var(--butter);color:var(--cocoa);font-weight:800;padding:7px 18px;border-radius:30px;font-size:.85rem;letter-spacing:.5px}
+header h1{font-size:clamp(2.4rem,5.5vw,3.7rem);margin:18px 0;color:var(--cocoa)}
+header h1 em{color:var(--coral);font-style:normal}
+header p{font-size:1.12rem;max-width:46ch}
+.cta{display:inline-block;margin-top:26px;background:var(--coral);color:#fff;font-weight:800;padding:16px 32px;border-radius:40px;text-decoration:none;font-size:1.08rem;box-shadow:0 6px 0 #b64c36}
+.cta.alt{background:transparent;color:var(--coral);box-shadow:none;border:2px solid var(--coral);margin-left:10px}
+.hero-card{background:#fff;border:2px solid #eadfce;border-radius:20px;padding:28px;text-align:center}
+.hero-card .big{font-family:'Fraunces';font-size:3rem;color:var(--coral);font-weight:900}
+.hero-card p{font-weight:600}
+.hero-card hr{border:none;border-top:2px dotted #eadfce;margin:16px 0}
+/* sections */
+section{padding:58px 0}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);color:var(--cocoa);margin-bottom:10px}
+.lead{max-width:60ch;margin-bottom:30px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.svc{background:#fff;border-radius:16px;padding:24px;border:2px solid #eadfce}
+.svc h3{color:var(--coral);font-size:1.25rem;margin-bottom:8px}
+.svc .price{float:right;font-weight:800;color:var(--cocoa);background:var(--cream);padding:2px 10px;border-radius:12px;font-size:.9rem}
+.tag{font-size:.78rem;color:#977;display:block;margin-top:10px}
+/* early bird band */
+.band{background:var(--cocoa);color:#f7ede2;border-radius:0}
+.band h2{color:var(--butter)}
+.band .wrap{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.clock{background:#6d5343;padding:28px;border-radius:16px}
+.clock b{color:var(--butter)}
+.clock table{width:100%;border-collapse:collapse;margin-top:10px}
+.clock td{padding:7px 0;border-bottom:1px solid #ffffff22;font-weight:600}
+.clock td:last-child{text-align:right}
+/* nail bar */
+.nails{background:#fff}
+.critters{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-top:24px}
+.critter{background:var(--cream);border:2px solid #eadfce;border-radius:16px;padding:20px;text-align:center;font-weight:800;color:var(--cocoa)}
+.critter span{display:block;font-size:2rem;margin-bottom:6px}
+/* gallery + reviews */
+.shots{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.shot{aspect-ratio:1;background:linear-gradient(135deg,#f2e2cc,#e9d3b8);border-radius:14px;display:flex;align-items:center;justify-content:center;color:#a08a6f;font-size:.85rem;text-align:center;padding:10px}
+.review{background:#fff;border:2px solid #eadfce;border-radius:16px;padding:22px;font-style:italic}
+.review small{display:block;font-style:normal;font-weight:800;margin-top:8px;color:var(--coral)}
+/* contact */
+.contact{background:var(--sage);color:#243324}
+.contact h2{color:#fff}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.ccard{background:#fff;border-radius:16px;padding:26px;color:var(--ink)}
+.ccard b{color:var(--coral)}
+footer{background:var(--cocoa);color:#cbb8a8;text-align:center;padding:22px;font-size:.88rem}
+@media(max-width:760px){.header-grid,.band .wrap,.contact .wrap{grid-template-columns:1fr}.cta.alt{margin-left:0;margin-top:12px}}
+</style>
+</head>
+<body>
+
+<header><div class="wrap header-grid">
+<div>
+<span class="pill">Catskill, NY · 40 Bushnell Ave</span>
+<h1>Every breed, every coat — <em>and yes, we do ferret nails.</em></h1>
+<p>Full grooms, baths, de-shedding and nail care from a small salon in the village that opens at 7am — so your dog is drop-dead gorgeous by pickup, and you're not late for work.</p>
+<a class="cta" href="tel:15186694250">Call (518) 669-4250</a>
+<a class="cta alt" href="#visit">Hours & directions</a>
+</div>
+<div class="hero-card">
+<div class="big">7am</div>
+<p>early drop-offs,<br>six days a week</p>
+<hr>
+<p><b>Dogs · Cats · Ferrets · Rabbits</b><br>nail trims, no appointment drama</p>
+</div>
+</div></header>
+
+<section><div class="wrap">
+<h2>Grooming, minus the guesswork</h2>
+<p class="lead">Every dog is priced by size, coat and temperament — the numbers below are a starting guide, and you'll get the real quote before we pick up the clippers. No surprises at pickup.</p>
+<div class="grid">
+<div class="svc"><span class="price">from $[XX]*</span><h3>Full groom</h3><p>Bath, blow-dry, haircut to your spec (or the breed standard), nails, ears and a bandana on the way out. Any breed — doodles to double coats.</p></div>
+<div class="svc"><span class="price">from $[XX]*</span><h3>Bath & tidy</h3><p>Wash, dry, brush-out, face-feet-fanny trim. The between-grooms reset for coats that just need order restored.</p></div>
+<div class="svc"><span class="price">from $[XX]*</span><h3>De-shedding treatment</h3><p>For the huskies, shepherds and barn cats redecorating your house twice a year. Undercoat out, sofa saved.</p></div>
+<div class="svc"><span class="price">$[XX]*</span><h3>Nail trim & grind</h3><p>Quick, calm, done right — for dogs, cats, ferrets and rabbits. Walk-in friendly.</p></div>
+</div>
+<span class="tag">*Placeholder pricing — final menu set with the owner before publishing.</span>
+</div></section>
+
+<section class="band"><div class="wrap">
+<div>
+<h2>In before work. Out before dinner.</h2>
+<p>Most groomers open mid-morning and want your whole day. We open at <b>7am</b>, so commuters can drop off on the way to the bridge and weekenders can grab the first slot before the farmers market. You'll get a text when your pup is fluffed and ready.</p>
+</div>
+<div class="clock">
+<b>Salon hours</b>
+<table>
+<tr><td>Monday</td><td>Closed</td></tr>
+<tr><td>Tuesday – Saturday</td><td>7am – 5pm</td></tr>
+<tr><td>Sunday</td><td>7am – 5pm</td></tr>
+</table>
+<span class="tag" style="color:#d9c7b4">Hours per current listings — confirm before publishing.</span>
+</div>
+</div></section>
+
+<section class="nails"><div class="wrap">
+<h2>The small-animal nail bar</h2>
+<p class="lead">Try finding someone within thirty miles who'll trim a rabbit's nails without a vet visit. Bring us the whole menagerie — gentle handling, quick visits, no overnight stress.</p>
+<div class="critters">
+<div class="critter"><span>🐕</span>Dogs</div>
+<div class="critter"><span>🐈</span>Cats</div>
+<div class="critter"><span>🦦</span>Ferrets</div>
+<div class="critter"><span>🐇</span>Rabbits</div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<h2>Fresh from the tub</h2>
+<p class="lead">There are 69 photos of our work on Yelp and more on Facebook — the finished site pulls the best of them right here.</p>
+<div class="shots">
+<div class="shot">[FB/Yelp photo]</div><div class="shot">[FB/Yelp photo]</div><div class="shot">[FB/Yelp photo]</div><div class="shot">[FB/Yelp photo]</div><div class="shot">[FB/Yelp photo]</div><div class="shot">[FB/Yelp photo]</div>
+</div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<h2>Word around the village</h2>
+<div class="grid" style="margin-top:20px">
+<div class="review">[Placeholder — verbatim review from Yelp/Facebook to be selected with the owner]<small>— Yelp review</small></div>
+<div class="review">[Placeholder — verbatim review from Yelp/Facebook to be selected with the owner]<small>— Facebook review</small></div>
+</div>
+</div></section>
+
+<section class="contact" id="visit"><div class="wrap">
+<div>
+<h2>Book your pup's next good hair day</h2>
+<p style="color:#f0f5ef">Call to book — first-time clients, tell us the breed, coat condition and anything we should know about temperament. Nail trims are walk-in friendly; a quick call ahead saves you a wait.</p>
+</div>
+<div class="ccard">
+<p><b>Pet Star Salon</b><br>40 Bushnell Ave, Floor 1<br>Catskill, NY 12414</p>
+<p style="margin-top:14px">📞 <a href="tel:15186694250" style="color:var(--ink);font-weight:800">(518) 669-4250</a></p>
+<p style="margin-top:14px">Find us on Facebook & Yelp — gift cards available.</p>
+</div>
+</div></section>
+
+<footer>© 2026 Pet Star Salon · 40 Bushnell Ave, Catskill, NY · (518) 669-4250</footer>
+
+</body>
+</html>

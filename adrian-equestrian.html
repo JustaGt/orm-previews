@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adrian Equestrian Center — Full-Care Boarding & Riding Lessons | Auburn, NY</title>
+<style>
+  :root{
+    --green:#334a35; --green-d:#26371f; --cream:#f6f1e6; --cream2:#efe7d6;
+    --leather:#8a5a32; --leather-d:#6f4623; --ink:#2c2a25; --muted:#6f6a5e;
+    --line:#ddd2bd; --white:#fff; --gold:#c69a4c;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Iowan Old Style",Georgia,"Times New Roman",serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  .sans{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+
+  header.top{position:sticky;top:0;z-index:20;background:rgba(246,241,230,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{font-size:1.2rem;font-weight:700;color:var(--green-d);letter-spacing:.3px}
+  .brand small{display:block;font-family:inherit;font-size:.62rem;letter-spacing:3px;text-transform:uppercase;color:var(--leather);font-weight:400}
+  .top nav{font-family:-apple-system,"Segoe UI",sans-serif}
+  .top nav a{font-size:.82rem;color:var(--muted);margin-left:22px;font-weight:600}
+  .top nav a:hover{color:var(--green-d)}
+  .top .tourbtn{background:var(--green);color:var(--cream);padding:9px 16px;border-radius:24px;font-size:.8rem;margin-left:22px}
+  @media(max-width:780px){.top nav a:not(.tourbtn){display:none}}
+
+  /* hero */
+  .hero{position:relative;background:linear-gradient(160deg,#3c5239,#26371f);color:var(--cream)}
+  .hero .wrap{padding:74px 24px 70px;max-width:880px}
+  .kick{font-family:-apple-system,sans-serif;font-size:.76rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .hero h1{font-size:3rem;line-height:1.08;margin:16px 0 18px;font-weight:700}
+  .hero p{font-size:1.18rem;max-width:54ch;color:#e9e2cf}
+  .hero .facts{display:flex;gap:30px;margin-top:30px;flex-wrap:wrap;font-family:-apple-system,sans-serif}
+  .hero .facts div b{display:block;font-size:1.9rem;color:var(--gold);font-weight:700}
+  .hero .facts div small{font-size:.78rem;letter-spacing:1px;text-transform:uppercase;color:#cdc6b3}
+  .hbtns{margin-top:32px;display:flex;gap:13px;flex-wrap:wrap;font-family:-apple-system,sans-serif}
+  .btn{padding:13px 24px;border-radius:26px;font-weight:700;font-size:.92rem;display:inline-block}
+  .btn-cream{background:var(--cream);color:var(--green-d)}
+  .btn-line{border:1.5px solid #6f7d62;color:var(--cream)}
+  .btn-line:hover{border-color:var(--gold)}
+  @media(max-width:600px){.hero h1{font-size:2.1rem}}
+
+  section{padding:62px 0}
+  .eyebrow{font-family:-apple-system,sans-serif;font-size:.74rem;letter-spacing:2px;text-transform:uppercase;color:var(--leather);font-weight:700}
+  h2{font-size:2rem;color:var(--green-d);margin:8px 0 10px;font-weight:700}
+  .intro{color:var(--muted);max-width:62ch;font-size:1.05rem}
+
+  /* board includes */
+  .care{background:var(--white)}
+  .care-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+  .care-item{border:1px solid var(--line);border-radius:12px;padding:22px;background:var(--cream)}
+  .care-item .ic{width:42px;height:42px;border-radius:50%;background:var(--green);color:var(--cream);display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-family:-apple-system,sans-serif}
+  .care-item b{display:block;margin:14px 0 6px;color:var(--green-d);font-size:1.1rem}
+  .care-item p{color:var(--muted);font-size:.94rem}
+  @media(max-width:780px){.care-grid{grid-template-columns:1fr}}
+
+  /* facility split */
+  .fac .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+  .fac .photo{border-radius:14px;height:330px;background:
+     linear-gradient(135deg,rgba(38,55,31,.18),rgba(138,90,50,.18)),
+     repeating-linear-gradient(45deg,#e7ddc8,#e7ddc8 14px,#e1d6bd 14px,#e1d6bd 28px);
+     display:flex;align-items:flex-end;padding:18px;color:#7a6f57;font-family:-apple-system,sans-serif;font-size:.78rem;font-weight:600}
+  .fac ul{list-style:none;margin-top:18px}
+  .fac li{padding:11px 0;border-bottom:1px dashed var(--line);display:flex;gap:12px;align-items:flex-start;font-size:1rem}
+  .fac li span{color:var(--leather);font-weight:800;font-family:-apple-system,sans-serif}
+  @media(max-width:780px){.fac .wrap{grid-template-columns:1fr}.fac .photo{height:220px}}
+
+  /* lessons + sales two cards */
+  .two{background:var(--green-d);color:var(--cream)}
+  .two h2{color:var(--cream)}
+  .twocards{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}
+  .tc{background:#33462c;border:1px solid #46583c;border-radius:14px;padding:28px}
+  .tc .eyebrow{color:var(--gold)}
+  .tc h3{font-size:1.35rem;margin:6px 0 10px}
+  .tc p{color:#d9d2bf;font-size:.98rem}
+  .tc a{display:inline-block;margin-top:16px;color:var(--gold);font-family:-apple-system,sans-serif;font-weight:700;font-size:.9rem}
+  @media(max-width:680px){.twocards{grid-template-columns:1fr}}
+
+  /* about + tour */
+  .tour{background:var(--cream2)}
+  .tour .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+  .tour h2{margin-bottom:14px}
+  .tour p{color:var(--muted);font-size:1.04rem;margin-bottom:12px}
+  .form{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:26px;font-family:-apple-system,sans-serif}
+  .form label{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin:13px 0 5px;font-weight:700}
+  .form label:first-child{margin-top:0}
+  .form input,.form select,.form textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:8px;font-size:.94rem;background:var(--cream);font-family:inherit;color:var(--ink)}
+  .form button{margin-top:18px;width:100%;background:var(--green);color:var(--cream);border:none;padding:14px;border-radius:24px;font-weight:700;font-size:.96rem;cursor:pointer}
+  .form .note{font-size:.74rem;color:#998f7c;margin-top:8px}
+  .callbox{margin-top:20px;background:var(--leather);color:var(--cream);border-radius:12px;padding:18px 20px;font-family:-apple-system,sans-serif}
+  .callbox b{font-size:1.3rem;display:block}
+  .callbox small{opacity:.85}
+  @media(max-width:780px){.tour .wrap{grid-template-columns:1fr}}
+
+  .reviews{background:var(--white)}
+  .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+  .rev{border-left:3px solid var(--gold);padding:6px 0 6px 18px}
+  .rev p{font-style:italic;color:#4a463c}
+  .rev small{font-family:-apple-system,sans-serif;color:var(--leather);font-weight:700;display:block;margin-top:8px;font-style:normal}
+  @media(max-width:780px){.rgrid{grid-template-columns:1fr}}
+
+  footer{background:var(--green-d);color:#c9c2af;padding:30px 0;font-family:-apple-system,sans-serif;font-size:.86rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  .flag{background:#fff7e2;border:1px solid var(--gold);color:#7a5f12;font-size:.78rem;padding:9px 13px;border-radius:8px;margin-top:14px;font-family:-apple-system,sans-serif}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">Adrian Equestrian Center<small>Auburn · New York</small></div>
+    <nav>
+      <a href="#care">Boarding</a>
+      <a href="#fac">Facility</a>
+      <a href="#two">Lessons &amp; Sales</a>
+      <a href="#tour" class="tourbtn">Request a tour</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="kick">Now boarding · lessons · horses for sale &amp; lease</span>
+    <h1>Full-care boarding on 64 acres, ten minutes from Auburn.</h1>
+    <p>A quiet, well-run barn where your horse gets daily turnout, attentive stall care, and room to be a horse — and where you always know who's looking after them.</p>
+    <div class="facts">
+      <div><b>64</b><small>Acres</small></div>
+      <div><b>42</b><small>Stalls</small></div>
+      <div><b>Owner</b><small>On-site care</small></div>
+    </div>
+    <div class="hbtns">
+      <a class="btn btn-cream" href="#tour">Check stall availability</a>
+      <a class="btn btn-line" href="#two">Riding lessons</a>
+    </div>
+  </div>
+</section>
+
+<section class="care" id="care">
+  <div class="wrap">
+    <span class="eyebrow">What full care includes</span>
+    <h2>Board that actually covers the day-to-day</h2>
+    <p class="intro">No guessing about who feeds, who turns out, who notices when something's off. Here's what a stall at Adrian includes — confirm current rates and specifics on your tour.</p>
+    <div class="care-grid">
+      <div class="care-item"><div class="ic">☀</div><b>Daily turnout</b><p>Time in the pasture every day on 64 acres of grass — not stuck in a stall.</p></div>
+      <div class="care-item"><div class="ic">🌾</div><b>Feed &amp; hay</b><p>Fed on a consistent schedule; we'll work with your horse's program and note changes.</p></div>
+      <div class="care-item"><div class="ic">🧹</div><b>Stall care</b><p>Clean, well-bedded stalls maintained daily, so you can ride instead of muck.</p></div>
+      <div class="care-item"><div class="ic">👁</div><b>Eyes on every horse</b><p>Owner-operated, so the same people who run the barn know your horse.</p></div>
+      <div class="care-item"><div class="ic">🏇</div><b>Arena access</b><p>Ride year-round and work on the things lessons leave you wanting to practice.</p></div>
+      <div class="care-item"><div class="ic">🌲</div><b>Trails &amp; pasture</b><p>Acreage to hack out and turn out — space most boarding barns can't offer.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="fac" id="fac">
+  <div class="wrap">
+    <div class="photo">Facility photo placeholder — arena, barn aisle, turnout</div>
+    <div>
+      <span class="eyebrow">The facility</span>
+      <h2>Come walk the barn before you decide</h2>
+      <p class="intro">Choosing where to board is a trust decision. See the footing, the stalls, and the turnout in person — here's what you'll find when you visit.</p>
+      <ul>
+        <li><span>42</span> 12&times;12-style stalls with daily care and bedding</li>
+        <li><span>64</span> acres of maintained grass pasture for turnout</li>
+        <li><span>↻</span> Riding arena for lessons and year-round work</li>
+        <li><span>✦</span> On-site owner — questions get answered by the person who runs the place</li>
+      </ul>
+      <a class="btn btn-cream sans" href="#tour" style="margin-top:22px">Book a walk-through</a>
+    </div>
+  </div>
+</section>
+
+<section class="two" id="two">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--gold)">Beyond boarding</span>
+    <h2>Lessons, and horses to buy or lease</h2>
+    <div class="twocards">
+      <div class="tc">
+        <span class="eyebrow">Riding lessons</span>
+        <h3>For new riders and returning ones</h3>
+        <p>Lessons for kids and adults at the level you're actually at — first time in the saddle, or getting back into it after years away. Tell us a bit about the rider and we'll match the start.</p>
+        <a href="#tour">Ask about lessons →</a>
+      </div>
+      <div class="tc">
+        <span class="eyebrow">Sales &amp; lease</span>
+        <h3>Horses for sale &amp; lease</h3>
+        <p>Looking for a sound, sensible horse, or a lease to test the commitment before you buy? We have horses available and can talk through what fits your goals and experience.</p>
+        <a href="#tour">See what's available →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <span class="eyebrow">From boarders &amp; riders</span>
+    <h2>Word travels in a horse community</h2>
+    <p class="intro">Placeholder quotes — swap in real boarder and lesson-family testimonials once confirmed.</p>
+    <div class="rgrid">
+      <div class="rev"><p>"My mare gets turned out every day and the care is consistent — I never worry when I can't make it out."</p><small>— Boarder placeholder</small></div>
+      <div class="rev"><p>"My daughter started here never having ridden. They met her where she was and she loves her lessons."</p><small>— Lesson family placeholder</small></div>
+      <div class="rev"><p>"Real acreage and an owner who's actually there. That's rare and it's why we stay."</p><small>— Boarder placeholder</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="tour" id="tour">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Visit</span>
+      <h2>Request a tour or check on a stall</h2>
+      <p>Tell us whether you're looking to board, take lessons, or buy or lease — and we'll get back to you with availability and a time to come see the barn.</p>
+      <p>The barn is in Auburn, in the Finger Lakes, easy to trailer to from Skaneateles, Moravia, and the surrounding towns.</p>
+      <div class="callbox">
+        Prefer to call?
+        <b><a href="tel:13154407910" style="color:var(--cream)">(315) 440-7910</a></b>
+        <small>Ask for Lisa</small>
+      </div>
+    </div>
+    <form class="form" onsubmit="return false">
+      <label>Your name</label>
+      <input type="text" placeholder="First and last">
+      <label>Phone or email</label>
+      <input type="text" placeholder="How should we reach you?">
+      <label>I'm interested in</label>
+      <select><option>Full-care boarding</option><option>Riding lessons</option><option>A horse for sale or lease</option><option>Just have a question</option></select>
+      <label>Anything we should know?</label>
+      <textarea rows="3" placeholder="Your horse, your riding level, or a good time to visit"></textarea>
+      <button>Send my request</button>
+      <p class="note">A working mockup — connects to the barn's inbox when the site goes live.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>Adrian Equestrian Center · Auburn, NY · Boarding · Lessons · Sales &amp; Lease</div>
+    <div>(315) 440-7910 · Owner-operated by Lisa Adrian</div>
+  </div>
+</footer>
+
+</body>
+</html>

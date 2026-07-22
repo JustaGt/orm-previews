@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stony Brook Motel — Clean Rooms Near Cooperstown · Richfield Springs, NY</title>
+<meta name="description" content="Family-owned, AAA-rated motel on Route 20 in Richfield Springs — 15 minutes from the Baseball Hall of Fame and Cooperstown Dreams Park. Open all year. Request a room.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#20423a; --forest-deep:#16302a; --brass:#c69a45; --brass-soft:#e6c988;
+    --cream:#f7f2e7; --paper:#fffdf8; --ink:#26332f; --brick:#8a4b3a;
+    --line:#e4dcc7; --shadow:0 12px 30px rgba(22,48,42,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+  h1,h2,h3,.disp{font-family:'Bitter',serif}
+  a{color:inherit}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--brass);color:#3a2a08;font-weight:700;font-family:'Bitter',serif;
+    padding:14px 28px;border-radius:6px;text-decoration:none;box-shadow:0 6px 16px rgba(198,154,69,.35);transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.line{background:transparent;border:2px solid var(--brass-soft);color:#fff;box-shadow:none}
+
+  .bar{background:var(--forest-deep);color:#e9e0c8;font-size:.9rem}
+  .bar .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;padding:9px 22px}
+  .bar a{color:#fff;font-weight:700;text-decoration:none}
+
+  header.hero{background:
+    linear-gradient(180deg, rgba(22,48,42,.86), rgba(22,48,42,.9)),
+    repeating-linear-gradient(135deg,#1d3d35 0 26px,#20423a 26px 52px);
+    color:#fff;position:relative}
+  .hero .wrap{padding:70px 22px;display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
+  .badge{display:inline-flex;gap:8px;align-items:center;background:rgba(230,201,136,.14);border:1px solid rgba(230,201,136,.4);
+    color:var(--brass-soft);padding:6px 14px;border-radius:30px;font-weight:700;font-size:.8rem;letter-spacing:.05em;margin-bottom:18px}
+  .hero h1{font-size:2.7rem;line-height:1.12;font-weight:800;margin-bottom:16px}
+  .hero h1 em{color:var(--brass-soft);font-style:normal}
+  .hero p.l{font-size:1.12rem;color:#e7ecdf;max-width:36ch}
+  .hero .cta{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+  .porch{background:var(--paper);color:var(--ink);border-radius:14px;padding:26px;box-shadow:var(--shadow);border-top:6px solid var(--brass)}
+  .porch h3{color:var(--forest);font-size:1.15rem;margin-bottom:14px}
+  .porch .row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-weight:600}
+  .porch .row:last-child{border-bottom:0}
+  .porch .row span:last-child{color:var(--brick)}
+
+  /* distance strip */
+  .miles{background:var(--brass);color:#3a2a08}
+  .miles .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0;text-align:center}
+  .miles .m{padding:20px 12px;border-right:1px solid rgba(58,42,8,.18)}
+  .miles .m:last-child{border-right:0}
+  .miles .m b{font-family:'Bitter';font-size:1.5rem;display:block}
+  .miles .m span{font-size:.9rem;font-weight:600}
+
+  section{padding:60px 0}
+  .kick{color:var(--brass);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.8rem;text-align:center;margin-bottom:8px}
+  h2.t{text-align:center;font-size:1.95rem;color:var(--forest);margin-bottom:10px}
+  .lead{text-align:center;max-width:58ch;margin:0 auto 38px;color:#4c5b54}
+
+  .rooms{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}
+  .amen{background:var(--paper);border-radius:14px;padding:30px;box-shadow:var(--shadow)}
+  .amen h3{color:var(--forest);margin-bottom:16px;font-size:1.3rem}
+  .amen ul{list-style:none;columns:2;column-gap:26px}
+  .amen li{padding:8px 0 8px 26px;position:relative;break-inside:avoid;font-weight:600}
+  .amen li::before{content:"✓";position:absolute;left:0;color:var(--brass);font-weight:800}
+  .story{background:var(--forest);color:#eef1e9;border-radius:14px;padding:32px}
+  .story h3{color:var(--brass-soft);font-size:1.35rem;margin-bottom:14px}
+  .story p{margin-bottom:12px;color:#dfe6da}
+
+  .rates{background:var(--paper)}
+  .rate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .rc{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:26px 20px;text-align:center}
+  .rc h3{color:var(--forest);font-size:1.05rem;margin-bottom:8px}
+  .rc .p{font-family:'Bitter';font-weight:800;font-size:1.7rem;color:var(--brick)}
+  .rc .p small{display:block;font-size:.74rem;color:#8a7f63;font-weight:700;margin-top:6px}
+  .disc{text-align:center;max-width:62ch;margin:22px auto 0;font-style:italic;color:#7a715a;font-size:.9rem}
+
+  .dir{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:stretch}
+  .dircard{background:var(--paper);border-radius:14px;padding:28px;box-shadow:var(--shadow)}
+  .dircard h3{color:var(--forest);margin-bottom:12px}
+  .dircard p{margin-bottom:10px}
+  .map{border-radius:14px;overflow:hidden;min-height:260px;background:
+    linear-gradient(135deg,#cbd8c9,#e7ead9);position:relative;display:flex;align-items:center;justify-content:center;
+    border:1px solid var(--line);color:#5b6b5c;font-weight:700;text-align:center;padding:20px}
+
+  .request{background:linear-gradient(160deg,var(--forest),var(--forest-deep));color:#fff}
+  .request .box{background:rgba(255,255,255,.06);border:1px solid rgba(230,201,136,.25);border-radius:16px;padding:34px;max-width:780px;margin:0 auto}
+  .request h2{color:#fff;text-align:center;font-size:1.85rem;margin-bottom:6px}
+  .request p.s{text-align:center;color:#e7ecdf;margin-bottom:24px}
+  form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  label{display:block;font-size:.82rem;font-weight:700;margin-bottom:5px;color:#e7ecdf}
+  input,select,textarea{width:100%;padding:12px 14px;border-radius:8px;border:1px solid rgba(255,255,255,.3);
+    background:#fffdf8;color:var(--ink);font-family:inherit;font-size:.95rem}
+  .full{grid-column:1/-1}
+  .request .btn{width:100%;border:0;cursor:pointer;font-size:1.05rem}
+  .callrow{text-align:center;margin-top:18px;color:#e7ecdf;font-weight:700}
+  .callrow a{color:#fff;font-family:'Bitter';font-weight:800;font-size:1.25rem;text-decoration:none}
+
+  footer{background:#12261f;color:#9db3a3;text-align:center;padding:34px 22px;font-size:.9rem}
+  footer .big{font-family:'Bitter';color:#fff;font-weight:700;font-size:1.15rem;margin-bottom:6px}
+  .ph{color:#b98a3a;font-style:italic;font-size:.85rem}
+
+  @media(max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;padding:52px 22px}
+    .hero h1{font-size:2.15rem}
+    .rooms,.dir{grid-template-columns:1fr}
+    .amen ul{columns:1}
+    .rate-grid{grid-template-columns:1fr}
+    .miles .wrap{grid-template-columns:1fr;}
+    .miles .m{border-right:0;border-bottom:1px solid rgba(58,42,8,.18)}
+    form{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap">
+  <span>232 E. Main St (US Rte 20) · Richfield Springs, NY · AAA Rated · Open all year</span>
+  <span>Reservations: <a href="tel:13158589929">315-858-9929</a></span>
+</div></div>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="badge">★ AAA Rated · Family owned since the Route 20 days</span>
+      <h1>A clean room, a fair price, <em>15 minutes from Cooperstown.</em></h1>
+      <p class="l">The Stony Brook is a family-run motel on Route 20 in Richfield Springs — the easy, honest place to stay when the Hall of Fame, Dreams Park, and the village fill up. Open every day of the year.</p>
+      <div class="cta">
+        <a class="btn" href="#request">Request a room</a>
+        <a class="btn line" href="tel:13158589929">Call 315-858-9929</a>
+      </div>
+    </div>
+    <div class="porch">
+      <h3>At a glance</h3>
+      <div class="row"><span>Open</span><span>All year, 7 days</span></div>
+      <div class="row"><span>To the Hall of Fame</span><span>~15 miles</span></div>
+      <div class="row"><span>Rooms</span><span>Two full beds, private bath</span></div>
+      <div class="row"><span>Parking</span><span>Free, right at your door</span></div>
+      <div class="row"><span>Pets</span><span>Sorry, no pets</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="miles"><div class="wrap">
+  <div class="m"><b>~15 mi</b><span>Baseball Hall of Fame &amp; Cooperstown village</span></div>
+  <div class="m"><b>~15 mi</b><span>Cooperstown Dreams Park / All Star Village</span></div>
+  <div class="m"><b>~12 mi</b><span>NYS Thruway Exit 30 &amp; Canadarago Lake</span></div>
+</div></div>
+
+<section>
+  <div class="wrap">
+    <div class="kick">The rooms</div>
+    <h2 class="t">Simple, spotless, and easy to get to</h2>
+    <p class="lead">No frills you'll pay for and never use — just a comfortable, well-kept room after a long day at the ballpark or on the road.</p>
+    <div class="rooms">
+      <div class="amen">
+        <h3>Every room has</h3>
+        <ul>
+          <li>Two full-size beds</li>
+          <li>Private bath</li>
+          <li>Room-controlled heat &amp; A/C</li>
+          <li>Extended cable TV</li>
+          <li>In-room phone</li>
+          <li>Door-front parking</li>
+          <li>Quiet Route 20 setting</li>
+          <li>Dining within walking distance</li>
+        </ul>
+      </div>
+      <div class="story">
+        <h3>Sit a while on the front porch</h3>
+        <p>The Stony Brook has been family owned and operated for years — the kind of roadside motel where the owners know the area and point you to the good diner down the street.</p>
+        <p>We keep the rooms clean, the rates honest, and the porch open for the quiet murmur of the brook the place is named for.</p>
+        <p style="color:var(--brass-soft);font-weight:700">Clean room. Fair price. Easy to reach. That's the whole idea.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rates">
+  <div class="wrap">
+    <div class="kick">Room rates</div>
+    <h2 class="t">Honest rates, updated for this season</h2>
+    <p class="lead">Rates shift a little between the quiet months and baseball season. Here's the shape of it — we'll confirm your exact rate when you request your dates.</p>
+    <div class="rate-grid">
+      <div class="rc"><h3>Off-Season Weeknight</h3><div class="p">$<span class="ph">__</span><small>1–2 guests — confirm</small></div></div>
+      <div class="rc"><h3>Summer / Baseball Season</h3><div class="p">$<span class="ph">__</span><small>1–2 guests — confirm</small></div></div>
+      <div class="rc"><h3>Extra Person / Cot</h3><div class="p">$<span class="ph">__</span><small>per night — confirm</small></div></div>
+    </div>
+    <p class="disc">Prices shown are placeholders pending confirmation with the owner — the current live page still displays a 1999–2000 rate card, so real rates will be set before this page goes public. Reservation deposit required; major cards accepted.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kick">Finding us</div>
+    <h2 class="t">Right on Route 20 in Richfield Springs</h2>
+    <div class="dir" style="margin-top:30px">
+      <div class="dircard">
+        <h3>Directions</h3>
+        <p><strong>From the west:</strong> Thruway Exit 30 → Route 28 south to Route 20 (~12 mi) → east on Route 20 about 1¼ miles to the motel.</p>
+        <p><strong>From the east:</strong> I-88 to the Duanesburg exit → Route 20 west roughly 50 miles into Richfield Springs.</p>
+        <p style="margin-top:14px"><strong>Address:</strong> 232 E. Main St (US Rte 20), Richfield Springs, NY 13439<br><strong>Reservations:</strong> <a href="tel:13158589929" style="color:var(--brick);font-weight:700">315-858-9929</a></p>
+      </div>
+      <div class="map">On the live site, an interactive Google Map pinned to 232 E. Main St, Richfield Springs — tap for turn-by-turn directions.</div>
+    </div>
+  </div>
+</section>
+
+<section class="request" id="request">
+  <div class="wrap">
+    <div class="box">
+      <h2>Request your room</h2>
+      <p class="s">Baseball-season weekends fill up early — send your dates and we'll confirm availability and your rate.</p>
+      <form onsubmit="event.preventDefault();alert('Thanks! This is a preview form. On the live site your request would reach the Stony Brook front desk.');">
+        <div><label>Your name</label><input required placeholder="First &amp; last"></div>
+        <div><label>Phone</label><input required placeholder="(  )  -"></div>
+        <div><label>Check-in date</label><input required placeholder="e.g. July 18"></div>
+        <div><label>Check-out date</label><input required placeholder="e.g. July 20"></div>
+        <div><label>Guests</label><select><option>1 adult</option><option>2 adults</option><option>2 adults + child</option><option>Family (4+)</option></select></div>
+        <div><label>Reason for visit</label><select><option>Baseball / Dreams Park</option><option>Hall of Fame visit</option><option>Passing through Route 20</option><option>Lake / outdoors</option><option>Other</option></select></div>
+        <div class="full"><label>Anything we should know?</label><textarea rows="3" placeholder="Two rooms side by side, late arrival, etc."></textarea></div>
+        <div class="full"><button class="btn" type="submit">Send my request</button></div>
+      </form>
+      <div class="callrow">Or call the desk directly: <a href="tel:13158589929">315-858-9929</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="big">Stony Brook Motel</div>
+  <div>232 E. Main St (US Rte 20) · PO Box 1466 · Richfield Springs, NY 13439 · 315-858-9929</div>
+  <div style="margin-top:8px">Family owned &amp; operated · AAA Rated · Open all year</div>
+  <div style="margin-top:14px;font-size:.8rem;color:#5f7d6c">Preview concept prepared by Onyx Rise Media for review. Rates shown are placeholders pending confirmation.</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Sutton Company — Silver-Plated Sutton Spoons, Handmade in Naples, NY Since 1867</title>
+<meta name="description" content="Sutton Spoons: genuine silver-plated flutter spoons made by hand in Naples, NY since 1867. Order direct from the shop at 120 S Main St — (585) 374-2628.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#101d2c;--navy2:#1b3049;--silver:#c8ccd2;--silver-hi:#eef1f4;--brass:#b08d3f;--ink:#1d2733;--paper:#f4f2ec}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+h1,h2,h3{font-family:'Playfair Display',serif}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.hatband{background:var(--navy);color:var(--silver);text-align:center;font-size:.9rem;padding:8px;letter-spacing:.06em}
+.hatband b{color:#fff}
+header{background:var(--navy2);padding:18px 0;border-bottom:4px solid var(--brass)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.brand{color:#fff;font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;letter-spacing:.04em}
+.brand small{display:block;font-family:'Inter',sans-serif;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--silver)}
+nav a{color:var(--silver-hi);text-decoration:none;margin-left:18px;font-size:.93rem;font-weight:600}
+nav a:hover{color:var(--brass)}
+nav .order{background:var(--brass);color:var(--navy);padding:9px 18px;border-radius:4px}
+.hero{background:linear-gradient(180deg,var(--navy2) 0%,var(--navy) 100%);color:var(--silver-hi);padding:80px 0 70px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;right:-120px;top:-40px;width:420px;height:560px;background:linear-gradient(135deg,rgba(200,204,210,.16),rgba(200,204,210,.02));border-radius:50% 50% 50% 50%/60% 60% 40% 40%;transform:rotate(18deg)}
+.hero .wrap{position:relative}
+.hero .est{letter-spacing:.34em;text-transform:uppercase;color:var(--brass);font-size:.85rem;font-weight:600}
+.hero h1{font-size:2.9rem;line-height:1.1;margin:14px 0 18px;max-width:15em}
+.hero h1 em{font-style:normal;color:var(--silver);border-bottom:3px solid var(--brass)}
+.hero p{max-width:36em;font-size:1.1rem;color:#c6d0dc}
+.hero .cta{margin-top:30px}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:4px}
+.btn.gold{background:var(--brass);color:var(--navy)}
+.btn.line{border:2px solid var(--silver);color:var(--silver-hi);margin-left:12px}
+.hero .factrow{display:flex;gap:38px;margin-top:44px;flex-wrap:wrap}
+.hero .fact b{display:block;font-family:'Playfair Display',serif;font-size:1.7rem;color:#fff}
+.hero .fact span{font-size:.85rem;color:var(--silver)}
+section{padding:66px 0}
+.kicker{letter-spacing:.26em;text-transform:uppercase;font-size:.78rem;color:var(--brass);font-weight:700}
+h2{font-size:2rem;color:var(--navy);margin:8px 0 16px}
+.silver .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.spoon-stack{background:var(--navy);border-radius:12px;padding:38px 30px;color:var(--silver-hi)}
+.spoon{height:44px;margin:14px 0;background:linear-gradient(100deg,#9aa2ad 0%,#e8ecf1 35%,#b9c0c9 60%,#f2f5f8 100%);border-radius:50%/100% 100% 100% 100%;position:relative;box-shadow:0 6px 16px rgba(0,0,0,.4)}
+.spoon:nth-child(2){width:88%}.spoon:nth-child(3){width:72%}.spoon:nth-child(4){width:56%}
+.spoon-stack p{font-size:.85rem;color:var(--silver);margin-top:18px;text-align:center;letter-spacing:.08em}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:30px}
+.card{background:#fff;border:1px solid #e2ddd0;border-top:4px solid var(--brass);border-radius:8px;padding:26px}
+.card h3{color:var(--navy);font-size:1.12rem;margin-bottom:8px}
+.card p{font-size:.95rem}
+.order-band{background:var(--navy);color:var(--silver-hi)}
+.order-band h2{color:#fff}
+.order-band .ways{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:30px}
+.way{background:rgba(255,255,255,.06);border:1px solid rgba(200,204,210,.25);border-radius:8px;padding:26px}
+.way b{display:block;color:var(--brass);font-size:1.05rem;margin-bottom:8px;font-family:'Playfair Display',serif}
+.way p{font-size:.93rem;color:#c6d0dc}
+.way a{color:#fff;font-weight:700;text-decoration:none}
+.timeline{background:#fff}
+.tl{margin-top:34px;border-left:3px solid var(--brass);padding-left:30px}
+.tl-item{margin-bottom:26px;position:relative}
+.tl-item:before{content:"";position:absolute;left:-39px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--navy);border:3px solid var(--brass)}
+.tl-item b{font-family:'Playfair Display',serif;color:var(--navy);font-size:1.1rem;display:block}
+.tl-item p{font-size:.96rem;max-width:52em}
+.creek .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.creek-art{background:linear-gradient(170deg,#2c4a63 0%,#16283a 60%,#0e1b28 100%);border-radius:12px;min-height:300px;position:relative;overflow:hidden}
+.creek-art:after{content:"";position:absolute;bottom:0;left:0;right:0;height:44%;background:linear-gradient(180deg,rgba(200,204,210,.14),rgba(200,204,210,.03));clip-path:polygon(0 40%,15% 55%,30% 35%,50% 60%,70% 40%,85% 58%,100% 44%,100% 100%,0 100%)}
+.creek-art span{position:absolute;bottom:14px;left:0;right:0;text-align:center;color:#9fb4c6;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase}
+.restore{background:var(--paper);border-top:1px solid #e2ddd0;border-bottom:1px solid #e2ddd0}
+.restore .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.restore .panel{background:#fff;border:1px solid #e2ddd0;border-radius:8px;padding:28px}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
+.visit-card{background:#fff;border:1px solid #e2ddd0;border-radius:8px;padding:28px}
+.visit-card h3{color:var(--navy);margin-bottom:10px}
+footer{background:var(--navy);color:var(--silver);padding:36px 0;font-size:.92rem;text-align:center}
+footer a{color:var(--brass);text-decoration:none}
+@media(max-width:840px){.silver .wrap,.creek .wrap,.restore .wrap{grid-template-columns:1fr}.grid3,.order-band .ways,.visit-grid{grid-template-columns:1fr}.hero h1{font-size:2.1rem}nav{display:none}}
+</style>
+</head>
+<body>
+<div class="hatband">Orders taken by phone, Tuesday through Saturday — <b>(585) 374-2628</b> · 120 S Main St, Naples, NY</div>
+<header>
+  <div class="wrap">
+    <div class="brand">The Sutton Company<small>Sutton Spoons · Naples, N.Y.</small></div>
+    <nav>
+      <a href="#silver">Why Silver</a>
+      <a href="#spoons">The Spoons</a>
+      <a href="#story">Since 1867</a>
+      <a href="#visit">Visit</a>
+      <a class="order" href="#order">Order Direct</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="est">Established 1867 · Naples, New York</div>
+    <h1>The silver spoon that's been fooling trout for <em>one hundred fifty-nine years.</em></h1>
+    <p>Scott Sutton was a jeweler who fished Canandaigua Lake. He plated his lures the way he plated his silverware — and anglers have never let the Sutton Company stop making them. Still cut, formed, and finished by hand at 120 South Main Street.</p>
+    <div class="cta">
+      <a class="btn gold" href="tel:5853742628">Order by Phone — (585) 374-2628</a>
+      <a class="btn line" href="#order">Request the Price List</a>
+    </div>
+    <div class="factrow">
+      <div class="fact"><b>1867</b><span>founded by a jeweler-angler</span></div>
+      <div class="fact"><b>3rd</b><span>generation of the Stafford family</span></div>
+      <div class="fact"><b>Genuine silver</b><span>plated, never chrome</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="silver" id="silver">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Why Silver</span>
+      <h2>Chrome flashes. Silver glows — and glows deeper.</h2>
+      <p>Mass-produced spoons wear chrome or nickel. Sutton Spoons are plated in genuine silver because of how it returns light in deep, low-light water — the reason trollers chasing lake trout, browns, and landlocked salmon tie one on when nothing else is moving.</p>
+      <p style="margin-top:12px">Each spoon is still blanked, formed, and polished with methods the shop has used since 1944 — some of the tools still carry toolmaker George Wells' name, and he learned the trade from Sutton himself around 1875.</p>
+    </div>
+    <div class="spoon-stack">
+      <div class="spoon"></div>
+      <div class="spoon"></div>
+      <div class="spoon"></div>
+      <div class="spoon"></div>
+      <p>THE FLUTTER SPOON FAMILY — FROM THE FAMOUS #44 ON DOWN</p>
+    </div>
+  </div>
+</section>
+
+<section id="spoons">
+  <div class="wrap">
+    <span class="kicker">The Spoons</span>
+    <h2>Every size has a job. Regulars order them by number.</h2>
+    <div class="grid3">
+      <div class="card"><h3>The #44 &amp; Creek Sizes</h3><p>The legend of Naples Creek — the spoon tied on for the opening-day Rainbow Trout Derby for generations. Light, thin, silver through and through.</p></div>
+      <div class="card"><h3>Trolling &amp; West River Series</h3><p>Jack Stafford's own designs, including the West River he developed in the 1930s — flutter spoons for downriggers, Seth Green rigs, and copper line.</p></div>
+      <div class="card"><h3>Spinners, Swivels &amp; More</h3><p>The tackle bench runs deeper than spoons — the same shop has made spinners and swivels since the jewelry-store days.</p></div>
+    </div>
+    <p style="margin-top:20px;font-size:.9rem;color:#6a6f78">Full size chart and current pricing available from the shop — <em>[placeholder: embed size chart + price table from the shop's current list before publishing]</em></p>
+  </div>
+</section>
+
+<section class="order-band" id="order">
+  <div class="wrap">
+    <span class="kicker">Order Direct</span>
+    <h2>Straight from the bench in Naples — no reseller in between.</h2>
+    <div class="ways">
+      <div class="way"><b>Call the Shop</b><p>Talk to the people who made your spoon. Orders are taken by phone and shipped anywhere in the country.</p><p style="margin-top:10px"><a href="tel:5853742628">(585) 374-2628</a></p></div>
+      <div class="way"><b>Request the Price List</b><p>Get the current size chart and price sheet by email, with restock timing for hard-to-find numbers.</p><p style="margin-top:10px"><a href="mailto:suttoncompany.das@gmail.com">suttoncompany.das@gmail.com</a></p></div>
+      <div class="way"><b>Stop at the Storefront</b><p>120 South Main Street, Naples — the same building since 1944. Racks of spoons, derby talk, and the workshop out back.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="timeline" id="story">
+  <div class="wrap">
+    <span class="kicker">The Lineage</span>
+    <h2>Six sets of hands. One way of making a spoon.</h2>
+    <div class="tl">
+      <div class="tl-item"><b>1867 — S.R. Sutton, Jeweler</b><p>Scott R. Sutton opens his jewelry shop in Naples and starts silver-plating the spoons he fishes on Canandaigua Lake. Other anglers demand them; a tackle line is born.</p></div>
+      <div class="tl-item"><b>1915 — George Wells carries it on</b><p>Sutton's toolmaker of forty years keeps the spoons in production; many of his hand tools are still on the bench today.</p></div>
+      <div class="tl-item"><b>1930 — The Staffords take the wheel</b><p>Four fishermen buy the tackle works to save their favorite lure. Jack Stafford buys out his partners within months, switches plating from nickel to silver, and grows production to tens of thousands of spoons a year.</p></div>
+      <div class="tl-item"><b>1944 — 120 South Main Street</b><p>The company moves into the Tobey building, where the storefront and workshop remain today.</p></div>
+      <div class="tl-item"><b>Today — Dierdre Stafford Stevenson</b><p>Jack's granddaughter runs the company with Debra Miles, forming spoons on the same presses — the third generation of Staffords behind the counter.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="creek">
+  <div class="wrap">
+    <div class="creek-art"><span>Naples Creek · Opening Day, Every April</span></div>
+    <div>
+      <span class="kicker">Local Waters</span>
+      <h2>Where the rainbows run, the derby registers at Sutton's.</h2>
+      <p>Every spring the Naples Creek rainbow run brings anglers from across the Northeast, and for decades the opening-day Rainbow Trout Derby has run through this storefront — registration, weigh-in stories, and the spoon that wins it more often than not.</p>
+      <p style="margin-top:12px">A 1950s tournament win on Lake Michigan with a Sutton 88 put the spoons on the national map. The reputation has traveled a long way from Academy Street — the spoons never had to.</p>
+    </div>
+  </div>
+</section>
+
+<section class="restore">
+  <div class="wrap">
+    <div>
+      <span class="kicker">The Restoration Project</span>
+      <h2>Keeping the 1944 building standing for the next generation.</h2>
+      <p>The Sutton Company is restoring its historic South Main Street home. Supporters can follow the project and contribute — every donation keeps a working piece of Finger Lakes fishing history on its foundations.</p>
+    </div>
+    <div class="panel">
+      <h3 style="color:var(--navy);font-family:'Playfair Display',serif;margin-bottom:8px">Support the Project</h3>
+      <p style="font-size:.95rem">Ask about the Restoration Project fundraiser when you call or write — updates are posted to the shop's Facebook page.</p>
+      <p style="margin-top:14px"><a class="btn gold" href="mailto:suttoncompany.das@gmail.com">Write to the Shop</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <span class="kicker">Visit</span>
+    <h2>The shop at 120 South Main.</h2>
+    <div class="visit-grid">
+      <div class="visit-card"><h3>The Sutton Company</h3><p>120 South Main Street<br>Naples, NY 14512</p><p style="margin-top:10px"><strong>(585) 374-2628</strong><br><a href="mailto:suttoncompany.das@gmail.com" style="color:var(--navy)">suttoncompany.das@gmail.com</a></p></div>
+      <div class="visit-card"><h3>Shop Hours</h3><p><em>[Placeholder: confirm current storefront hours with the shop before publishing]</em></p><p style="margin-top:10px">Follow along: <a href="https://www.facebook.com/p/The-Sutton-Company-100057395772437/" style="color:var(--navy);font-weight:700">The Sutton Company on Facebook</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:#fff">The Sutton Company</strong> · Makers of Sutton Spoons since 1867 · 120 S Main St, Naples, NY 14512 · <a href="tel:5853742628">(585) 374-2628</a></p>
+  </div>
+</footer>
+</body>
+</html>

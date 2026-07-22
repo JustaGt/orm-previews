@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Walter J Moretto Inc — Masonry Supply Yard in Glen Cove, NY (Since 1976)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --char:#23211f; --char2:#312e2b; --slate:#4a4742; --concrete:#c9c4bb;
+  --clay:#b4502e; --clay-d:#8f3c20; --amber:#d98a3d; --paper:#f4f1ea;
+  --ink:#1d1b19; --white:#fff; --line:#ddd7cc;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Roboto',sans-serif;color:var(--ink);background:var(--paper);line-height:1.62}
+.head-f{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.5px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+.btn{display:inline-block;background:var(--clay);color:#fff;font-weight:700;text-decoration:none;padding:14px 28px;border-radius:2px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:1px;border-bottom:3px solid var(--clay-d);transition:.12s}
+.btn:hover{background:var(--clay-d)}
+.btn.line{background:transparent;color:#fff;border:2px solid #fff;border-bottom:2px solid #fff}
+.btn.line:hover{background:#fff;color:var(--char)}
+
+nav{background:var(--char);border-bottom:4px solid var(--clay)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{color:#fff;line-height:1.05}
+.brand b{font-family:'Oswald',sans-serif;font-size:1.4rem;letter-spacing:1px;display:block}
+.brand small{color:var(--amber);font-size:.64rem;letter-spacing:3px;text-transform:uppercase}
+.navlinks{display:flex;gap:26px;color:#d8d2c8;font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:.92rem;letter-spacing:.5px}
+.navlinks a{text-decoration:none}.navlinks a:hover{color:var(--amber)}
+@media(max-width:840px){.navlinks{display:none}}
+
+.hero{position:relative;color:#fff;padding:96px 0 104px;
+  background:
+   linear-gradient(180deg,rgba(20,18,16,.74),rgba(20,18,16,.82)),
+   repeating-linear-gradient(135deg,#3a3733 0 18px,#332f2b 18px 36px)}
+.hero .est{display:inline-block;border:1px solid var(--amber);color:var(--amber);font-family:'Oswald',sans-serif;letter-spacing:3px;font-size:.72rem;padding:5px 12px;text-transform:uppercase;margin-bottom:18px}
+.hero h1{font-family:'Oswald',sans-serif;font-weight:700;font-size:3.3rem;line-height:1.04;text-transform:uppercase;max-width:18ch}
+.hero h1 span{color:var(--amber)}
+.hero p{font-size:1.2rem;max-width:54ch;margin:18px 0 26px;color:#e7e1d6}
+.hero .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+@media(max-width:600px){.hero h1{font-size:2.25rem}}
+
+.bar{background:var(--clay);color:#fff}
+.bar .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding:16px 22px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:1px;font-size:.92rem}
+.bar span b{color:#ffe2cf}
+
+section{padding:74px 0}
+.shead{margin-bottom:40px;border-left:5px solid var(--clay);padding-left:16px}
+.shead .k{color:var(--clay);font-family:'Oswald',sans-serif;letter-spacing:3px;text-transform:uppercase;font-size:.8rem}
+.shead h2{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:2.2rem;line-height:1.05;margin-top:4px}
+.shead p{color:#5a554d;max-width:62ch;margin-top:8px}
+
+.lines{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:860px){.lines{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--char);border-radius:2px;overflow:hidden}
+.card .ct{height:74px;background:var(--char);color:var(--amber);display:flex;align-items:center;padding:0 20px;font-family:'Oswald',sans-serif;font-size:1.25rem;text-transform:uppercase;letter-spacing:.5px;border-bottom:4px solid var(--clay)}
+.card .cb{padding:22px}
+.card ul{list-style:none;margin-top:6px}
+.card li{padding:6px 0 6px 22px;position:relative;color:#454039}
+.card li::before{content:"▪";position:absolute;left:0;color:var(--clay);font-size:1.1rem;top:4px}
+
+.trade{background:var(--char2);color:#fff}
+.trade .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center}
+@media(max-width:860px){.trade .wrap{grid-template-columns:1fr}}
+.trade .k{color:var(--amber);font-family:'Oswald',sans-serif;letter-spacing:3px;text-transform:uppercase;font-size:.8rem}
+.trade h2{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:2rem;margin:6px 0 14px}
+.trade p{color:#d8d2c8;margin-bottom:12px}
+.trade .panel{background:linear-gradient(160deg,#403c37,#2a2723);border:1px solid #534e47;border-radius:2px;padding:28px}
+.trade .panel h3{font-family:'Oswald',sans-serif;text-transform:uppercase;color:var(--amber);font-size:1.1rem;letter-spacing:1px}
+.trade .panel ul{list-style:none;margin-top:12px}
+.trade .panel li{padding:7px 0 7px 24px;position:relative;color:#e7e1d6;border-bottom:1px dashed #4c473f}
+.trade .panel li:last-child{border-bottom:0}
+.trade .panel li::before{content:"✓";position:absolute;left:0;color:var(--clay);font-weight:700}
+
+.why{background:var(--concrete)}
+.why .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media(max-width:860px){.why .grid{grid-template-columns:1fr 1fr}}
+.why .b{background:var(--paper);border-radius:2px;padding:24px;border-bottom:3px solid var(--clay)}
+.why .b .n{font-family:'Oswald',sans-serif;font-size:2rem;color:var(--clay)}
+.why .b h3{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:1.05rem;margin:6px 0 4px}
+.why .b p{color:#55504a;font-size:.95rem}
+
+.deliver .wrap{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+@media(max-width:860px){.deliver .wrap{grid-template-columns:1fr}}
+.deliver .map{background:var(--char);color:#fff;border-radius:2px;padding:30px;border-left:5px solid var(--clay)}
+.deliver .map .pin{font-size:2.2rem}
+.deliver .map b{font-family:'Oswald',sans-serif;font-size:1.25rem;color:var(--amber);display:block;margin-top:6px}
+.deliver .map .area{margin-top:14px;color:#cfc9bf;font-size:.95rem}
+
+.quote{background:var(--char);color:#fff;text-align:center}
+.quote h2{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:2.3rem}
+.quote p{color:#d8d2c8;max-width:50ch;margin:12px auto 22px}
+.quote .phone{font-family:'Oswald',sans-serif;font-size:2.1rem;color:var(--amber);letter-spacing:1px}
+.quote .addr{color:#cfc9bf;margin-top:8px}
+.quote .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.note{font-size:.8rem;color:#9b958c;font-style:italic;margin-top:28px;text-align:center}
+
+footer{background:#1a1816;color:#8d877e;text-align:center;padding:26px 0;font-size:.9rem}
+footer b{font-family:'Oswald',sans-serif;color:#cfc9bf;letter-spacing:1px}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="brand"><b>Walter J Moretto Inc</b><small>Masonry Supply · Glen Cove</small></div>
+  <div class="navlinks">
+    <a href="#lines">Yard</a>
+    <a href="#trade">Contractors</a>
+    <a href="#why">Why Moretto</a>
+    <a href="#quote">Get a Quote</a>
+  </div>
+  <a href="#quote" class="btn">Request a quote</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="est">Family-owned · Glen Cove · since 1976</div>
+  <h1>Block, brick, paver and stone — <span>loaded and out the gate.</span></h1>
+  <p>A real masonry yard on Sea Cliff Avenue. Pick your line, get it priced, and have it delivered across Nassau and Suffolk — or back the truck in and we'll load it.</p>
+  <div class="cta-row">
+    <a href="#quote" class="btn">Request a material quote</a>
+    <a href="#lines" class="btn line">See what we stock</a>
+  </div>
+</div></header>
+
+<div class="bar"><div class="wrap">
+  <span><b>Since 1976</b> · family-run yard</span>
+  <span><b>Nassau + Suffolk</b> delivery</span>
+  <span><b>Trade accounts</b> for masons</span>
+  <span><b>516-759-0722</b></span>
+</div></div>
+
+<section id="lines"><div class="wrap">
+  <div class="shead">
+    <div class="k">What's in the yard</div>
+    <h2>Three counters, one stop</h2>
+    <p>Everything a North Shore patio, wall, driveway or fireplace job needs — stocked, priced honestly, and ready to load the same day.</p>
+  </div>
+  <div class="lines">
+    <div class="card">
+      <div class="ct">Block · Paver · Brick</div>
+      <div class="cb">
+        <p>The hardscape lines masons reach for, in the sizes and colors that match what's already on the street.</p>
+        <ul>
+          <li>Concrete block &amp; CMU</li>
+          <li>Pavers &amp; Belgian block</li>
+          <li>Face brick &amp; thin brick</li>
+          <li>Retaining-wall units</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ct">Cement · Stone</div>
+      <div class="cb">
+        <p>Bagged and bulk goods plus natural stone for the parts of the job people actually walk on and look at.</p>
+        <ul>
+          <li>Portland, mortar &amp; mixes</li>
+          <li>Sand &amp; gravel</li>
+          <li>Granite, quartzite &amp; veneer stone</li>
+          <li>Steps, caps &amp; treads</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ct">Supplies · Rentals</div>
+      <div class="cb">
+        <p>The boxes-and-bits side of the job, so you're not making a second stop somewhere else.</p>
+        <ul>
+          <li>Drainage products</li>
+          <li>Metal flashings &amp; sealers</li>
+          <li>Precast &amp; drywall</li>
+          <li>Tool rentals</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="trade" id="trade"><div class="wrap">
+  <div>
+    <div class="k">For the trade</div>
+    <h2>Set up a contractor account</h2>
+    <p>If you lay block on the North Shore for a living, you shouldn't be reading off a credit card at the counter every morning. Run a tab, get your pricing, and get loaded fast.</p>
+    <p>Call a material list ahead and we'll have it staged when your truck pulls in — or we'll run it to the site.</p>
+    <a href="#quote" class="btn">Start an account</a>
+  </div>
+  <div class="panel">
+    <h3>What an account gets you</h3>
+    <ul>
+      <li>Contractor pricing on your regular lines</li>
+      <li>Call-ahead orders staged for pickup</li>
+      <li>Job-site delivery across Nassau &amp; Suffolk</li>
+      <li>One counter for block, stone, cement &amp; supplies</li>
+      <li>A yard that knows your name, not a kiosk</li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="why" id="why"><div class="wrap">
+  <div class="shead">
+    <div class="k">Why Moretto</div>
+    <h2>A yard, not a website that never loads</h2>
+  </div>
+  <div class="grid">
+    <div class="b"><div class="n">49</div><h3>Years in</h3><p>Same family running the Glen Cove yard since 1976.</p></div>
+    <div class="b"><div class="n">2</div><h3>Counties</h3><p>Delivery throughout Nassau and Suffolk.</p></div>
+    <div class="b"><div class="n">1</div><h3>Stop</h3><p>Block, stone, cement and supplies under one roof.</p></div>
+    <div class="b"><div class="n">$0</div><h3>To ask</h3><p>Free estimates on your material list — just call.</p></div>
+  </div>
+</div></section>
+
+<section class="deliver"><div class="wrap">
+  <div>
+    <div class="shead" style="margin-bottom:18px">
+      <div class="k">Find the yard</div>
+      <h2>59 Sea Cliff Avenue</h2>
+      <p>Come price a job in person, or call a list ahead and we'll have it ready. We deliver to job sites across the North Shore and beyond.</p>
+    </div>
+    <p style="color:#55504a">Serving Glen Cove, Sea Cliff, Locust Valley, Oyster Bay, and the rest of Nassau &amp; Suffolk.</p>
+  </div>
+  <div class="map">
+    <div class="pin">📍</div>
+    <b>Walter J Moretto Inc</b>
+    59 Sea Cliff Ave, Glen Cove, NY 11542
+    <div class="area">Nassau + Suffolk delivery · counter pickup · trade accounts welcome</div>
+  </div>
+</div></section>
+
+<section class="quote" id="quote"><div class="wrap">
+  <h2>Tell us the job — get a price</h2>
+  <p>Send a material list or a few photos of the project and we'll quote it. Contractors, ask about setting up an account.</p>
+  <div class="phone">📞 516-759-0722</div>
+  <div class="addr">59 Sea Cliff Ave, Glen Cove, NY · robert@morettomasonsupply.com</div>
+  <div class="cta-row">
+    <a href="tel:5167590722" class="btn">Call the yard</a>
+    <a href="mailto:robert@morettomasonsupply.com" class="btn line">Email a material list</a>
+  </div>
+  <p class="note">Hours and stocked lines shown here as placeholders — to be confirmed with the yard before the page goes live.</p>
+</div></section>
+
+<footer>
+  <b>WALTER J MORETTO INC</b><br>
+  Masonry Supply · 59 Sea Cliff Ave, Glen Cove, NY 11542 · 516-759-0722 · Family-owned since 1976
+</footer>
+
+</body>
+</html>

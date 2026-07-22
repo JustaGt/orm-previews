@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIP Nail Spa Pro — Newburgh, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0b0b0c; --black-2:#141416; --char:#1d1d20; --gold:#d9b56a; --gold-l:#ecd6a0;
+    --gold-d:#b8924a; --cream:#f4efe6; --fog:#b0aaa0; --line:#2c2c30;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Montserrat',sans-serif;color:var(--cream);background:var(--black);line-height:1.8;font-weight:300}
+  h1,h2,h3,.disp{font-family:'Playfair Display',serif;font-weight:600;line-height:1.1}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 30px}
+  a{color:inherit;text-decoration:none}
+  .btn{display:inline-block;background:linear-gradient(135deg,var(--gold-l),var(--gold-d));color:var(--black);font-weight:600;padding:14px 34px;letter-spacing:.1em;text-transform:uppercase;font-size:.78rem;font-family:'Montserrat';transition:.3s}
+  .btn:hover{filter:brightness(1.12);transform:translateY(-2px)}
+  .btn-out{background:transparent;border:1px solid var(--gold);color:var(--gold);background-image:none}
+  .btn-out:hover{background:var(--gold);color:var(--black)}
+  .tag{font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:500}
+  .gold-line{width:60px;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+
+  nav{position:sticky;top:0;z-index:40;background:rgba(11,11,12,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+  .logo{font-family:'Playfair Display';font-size:1.45rem;letter-spacing:.04em}
+  .logo b{color:var(--gold);font-weight:600}
+  .nl{display:flex;gap:32px;align-items:center}
+  .nl a{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--fog);font-weight:400}
+  .nl a:hover{color:var(--gold)}
+  @media(max-width:860px){.nl a:not(.btn){display:none}}
+
+  .hero{position:relative;text-align:center;background:
+    radial-gradient(ellipse at 50% 0%, rgba(217,181,106,.10), transparent 60%),
+    linear-gradient(rgba(11,11,12,.78),rgba(11,11,12,.92)),
+    url('https://images.unsplash.com/photo-1522338242992-e1a54906a8da?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;background-position:center}
+  .hero .wrap{padding:118px 30px 124px;max-width:880px}
+  .crown{font-size:2rem;color:var(--gold);margin-bottom:16px}
+  .hero h1{font-size:clamp(2.8rem,6.4vw,5.2rem)}
+  .hero h1 i{font-style:italic;color:var(--gold-l)}
+  .hero p{font-size:1.14rem;color:var(--fog);max-width:48ch;margin:24px auto 36px}
+  .hero .btn{margin:0 6px}
+  .gold-line.center{margin:24px auto}
+
+  section{padding:94px 0}
+  .center{text-align:center;max-width:60ch;margin:0 auto}
+  h2{font-size:clamp(2.2rem,4.6vw,3.4rem)}
+  h2 i{font-style:italic;color:var(--gold)}
+  .sub{color:var(--fog);font-size:1.05rem;margin-top:14px}
+
+  /* experience tiles */
+  .exp{background:var(--black-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:50px}
+  .tile{text-align:center;padding:10px}
+  .tile .ic{font-size:1.8rem;color:var(--gold)}
+  .tile h3{font-size:1.4rem;margin:14px 0 8px}
+  .tile p{color:var(--fog);font-size:.94rem}
+
+  /* services menu */
+  .menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 60px;margin-top:48px}
+  .m{display:flex;justify-content:space-between;gap:18px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--line)}
+  .m .nm{font-family:'Playfair Display';font-size:1.4rem}
+  .m .ds{display:block;font-family:'Montserrat';font-size:.82rem;color:var(--fog);margin-top:2px}
+  .m .dot{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-5px)}
+  .m .pr{font-family:'Playfair Display';font-size:1.35rem;color:var(--gold);white-space:nowrap}
+  @media(max-width:860px){.menu-grid{grid-template-columns:1fr;gap:0}.exp-grid{grid-template-columns:1fr;gap:24px}}
+
+  /* loyalty band */
+  .loyal{background:
+    linear-gradient(rgba(11,11,12,.86),rgba(11,11,12,.86)),
+    url('https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1500&q=80');
+    background-size:cover;background-position:center;text-align:center}
+  .loyal .wrap{max-width:720px}
+  .loyal h2{color:var(--cream)}
+  .card-vip{background:var(--char);border:1px solid var(--gold-d);border-radius:14px;padding:38px;margin-top:30px;display:inline-block;text-align:left;max-width:480px}
+  .card-vip .badge{font-family:'Montserrat';font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+  .card-vip h3{font-size:1.8rem;margin:8px 0 14px}
+  .card-vip ul{list-style:none}
+  .card-vip li{padding:9px 0;border-bottom:1px solid var(--line);color:var(--fog);font-size:.94rem}
+  .card-vip li::before{content:"✦  ";color:var(--gold)}
+
+  /* gallery */
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:46px}
+  .gi{height:300px;background-size:cover;background-position:center;background-color:var(--char);border:1px solid var(--line)}
+  .gi1{background-image:url('https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80')}
+  .gi2{background-image:url('https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=800&q=80')}
+  .gi3{background-image:url('https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80')}
+  .gi4{background-image:url('https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=800&q=80')}
+  .gi5{background-image:url('https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=80')}
+  .gi6{background-image:url('https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80')}
+  @media(max-width:860px){.gal{grid-template-columns:1fr 1fr}.gi{height:200px}}
+
+  /* visit */
+  .visit{background:var(--black-2);border-top:1px solid var(--line)}
+  .visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:54px}
+  .vline{padding:16px 0;border-bottom:1px solid var(--line)}
+  .vline .k{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:3px}
+  .vline .v{font-size:1.15rem;font-family:'Playfair Display'}
+  .hrs{list-style:none;margin-top:6px}
+  .hrs li{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line)}
+  .hrs b{font-family:'Playfair Display'}
+  form{display:grid;gap:13px;margin-top:8px}
+  input,textarea{padding:13px 15px;border:1px solid var(--line);background:var(--black);color:var(--cream);font-family:'Montserrat';font-size:.92rem}
+  input::placeholder,textarea::placeholder{color:#6f6a60}
+  input:focus,textarea:focus{outline:none;border-color:var(--gold)}
+  @media(max-width:860px){.visit .wrap{grid-template-columns:1fr;gap:30px}}
+
+  footer{background:#070708;color:#6f6a60;padding:40px 0;font-size:.82rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .pv{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">VIP <b>Nail Spa Pro</b></div>
+    <div class="nl">
+      <a href="#exp">The Experience</a>
+      <a href="#menu">Menu</a>
+      <a href="#loyal">VIP Card</a>
+      <a href="#visit">Visit</a>
+      <a href="#visit" class="btn">Reserve</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="crown">♛</div>
+    <span class="tag">Route 300 · Newburgh, NY</span>
+    <div class="gold-line center"></div>
+    <h1>Treat your hands like <i>first class.</i></h1>
+    <p>A polished, grown-up nail spa where the chairs recline, the tools are pristine, and an hour feels like the upgrade you deserve.</p>
+    <a href="#menu" class="btn">View the Menu</a>
+    <a href="#visit" class="btn btn-out">Reserve a Chair</a>
+  </div>
+</header>
+
+<section class="exp" id="exp">
+  <div class="wrap">
+    <div class="center">
+      <span class="tag">The Experience</span>
+      <h2 style="margin-top:10px">Spa-grade, <i>start to finish</i></h2>
+    </div>
+    <div class="exp-grid">
+      <div class="tile"><div class="ic">✦</div><h3>Pristine & Private</h3><p>Sterilized tools opened at your station, plush reclining chairs, and a calm, unrushed room.</p></div>
+      <div class="tile"><div class="ic">✦</div><h3>Detail-Obsessed Techs</h3><p>Clean cuticle work, even application, and shapes finished by hand — not cut corners.</p></div>
+      <div class="tile"><div class="ic">✦</div><h3>Premium Products</h3><p>Long-wear gels, quality acrylics, and nourishing soaks that leave skin soft, not stripped.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="center">
+      <span class="tag">The Menu</span>
+      <h2 style="margin-top:10px">Services & <i>pricing</i></h2>
+      <p class="sub">Starting prices. Length, art, and removal may adjust the final total — always quoted up front.</p>
+    </div>
+    <div class="menu-grid">
+      <div class="m"><div><span class="nm">Signature Gel Manicure</span><span class="ds">Two-week, high-shine finish</span></div><span class="dot"></span><span class="pr">$38</span></div>
+      <div class="m"><div><span class="nm">Luxe Spa Pedicure</span><span class="ds">Soak, scrub, mask, extended massage</span></div><span class="dot"></span><span class="pr">$58</span></div>
+      <div class="m"><div><span class="nm">Full Acrylic Set</span><span class="ds">Custom shape & length</span></div><span class="dot"></span><span class="pr">$48</span></div>
+      <div class="m"><div><span class="nm">Gel-X Extensions</span><span class="ds">Lightweight soft-gel</span></div><span class="dot"></span><span class="pr">$58</span></div>
+      <div class="m"><div><span class="nm">Dip Powder</span><span class="ds">Durable, lamp-free</span></div><span class="dot"></span><span class="pr">$45</span></div>
+      <div class="m"><div><span class="nm">Classic Manicure</span><span class="ds">Shape, cuticle, polish</span></div><span class="dot"></span><span class="pr">$24</span></div>
+      <div class="m"><div><span class="nm">Designer Nail Art</span><span class="ds">Chrome, hand-painted, per nail</span></div><span class="dot"></span><span class="pr">$6+</span></div>
+      <div class="m"><div><span class="nm">Waxing</span><span class="ds">Brow, lip, facial</span></div><span class="dot"></span><span class="pr">$12+</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="loyal" id="loyal">
+  <div class="wrap">
+    <span class="tag">For our regulars</span>
+    <h2 style="margin-top:10px">The <i>VIP Card</i></h2>
+    <p class="sub" style="max-width:46ch;margin:14px auto 0">Come back often? Keep your color on file and earn toward a treatment on the house.</p>
+    <div class="card-vip">
+      <div class="badge">VIP Member</div>
+      <h3>Perks, simply put</h3>
+      <ul>
+        <li>Every 10th manicure on us</li>
+        <li>Priority booking on busy weekends</li>
+        <li>Your shape & shade saved for next time</li>
+        <li>Birthday-month upgrade to a deluxe pedi</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="center"><span class="tag">Gallery</span><h2 style="margin-top:10px">Recent <i>sets</i></h2></div>
+    <div class="gal">
+      <div class="gi gi1"></div><div class="gi gi2"></div><div class="gi gi3"></div>
+      <div class="gi gi4"></div><div class="gi gi5"></div><div class="gi gi6"></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div>
+      <span class="tag">Visit</span>
+      <h2 style="margin-top:10px">Reserve your <i>chair</i></h2>
+      <div class="vline"><div class="k">Address</div><div class="v">1401 Route 300, Suite 1096, Newburgh, NY</div></div>
+      <div class="vline"><div class="k">Phone</div><div class="v">(845) 563-0418</div></div>
+      <ul class="hrs">
+        <li><span>Mon – Sat</span><b>9:30a – 7:30p</b></li>
+        <li><span>Sunday</span><b>11:00a – 5:00p</b></li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="font-size:1.7rem">Reserve a time</h3>
+      <p style="color:var(--fog);font-size:.92rem;margin-bottom:4px">We'll confirm by text. Walk-ins welcome when chairs are open.</p>
+      <form onsubmit="event.preventDefault();this.innerHTML='<p style=\'color:var(--gold);font-family:Playfair Display;font-size:1.4rem;font-style:italic\'>Thank you — your request is in. We\'ll confirm shortly.</p>'">
+        <input type="text" placeholder="Name" required>
+        <input type="tel" placeholder="Phone" required>
+        <input type="text" placeholder="Service (e.g. gel mani + luxe pedi)">
+        <textarea rows="3" placeholder="Preferred day & time"></textarea>
+        <button class="btn" type="submit">Request Reservation</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 VIP Nail Spa Pro · 1401 Route 300, Newburgh, NY</div>
+    <div class="pv">Website preview by Onyx Rise Media</div>
+  </div>
+</footer>
+
+</body>
+</html>

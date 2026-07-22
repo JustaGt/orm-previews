@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Romeo Mobile Marine — Boat Repair at Your Slip in Freeport, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0c2233; --navy2:#143a55; --tan:#d9c3a0; --rope:#b9986a;
+    --orange:#ff6b2c; --ink:#0c2233; --paper:#f5f1ea; --white:#fff; --line:#26465f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3,.cond{font-family:'Barlow Condensed','Inter',sans-serif;letter-spacing:.5px;text-transform:uppercase}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  /* top bar */
+  .topbar{background:var(--navy);color:var(--tan);font-size:.82rem}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:7px 22px;flex-wrap:wrap}
+  .topbar a{color:var(--orange);font-weight:700;text-decoration:none}
+  /* hero */
+  header.hero{background:linear-gradient(160deg,#0c2233 0%,#143a55 60%,#1d4d6e 100%);color:var(--white);position:relative;overflow:hidden}
+  .hero .wrap{padding:60px 22px 70px;position:relative;z-index:2}
+  .badge{display:inline-block;background:var(--orange);color:#fff;font-weight:700;font-size:.74rem;letter-spacing:1.5px;padding:6px 13px;border-radius:3px;text-transform:uppercase}
+  .hero h1{font-size:3.05rem;line-height:.98;margin:18px 0 14px;font-weight:700}
+  .hero h1 span{color:var(--orange)}
+  .hero p.lead{font-size:1.18rem;max-width:600px;color:#dce8f1}
+  .cta-row{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.12rem;letter-spacing:1px;text-transform:uppercase;text-decoration:none;padding:14px 26px;border-radius:4px}
+  .btn-orange{background:var(--orange);color:#fff}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid var(--rope)}
+  .hero .wave{position:absolute;bottom:-2px;left:0;width:100%;z-index:1;display:block}
+  .micro{margin-top:22px;font-size:.9rem;color:var(--tan);display:flex;gap:18px;flex-wrap:wrap}
+  .micro b{color:#fff}
+  /* sections */
+  section{padding:56px 0}
+  .eyebrow{color:var(--orange);font-weight:700;letter-spacing:2px;font-size:.78rem;text-transform:uppercase}
+  h2{font-size:2.05rem;margin:6px 0 8px;color:var(--navy)}
+  .sub{color:#4a5b69;max-width:640px;margin-bottom:30px}
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .step{background:var(--white);border:1px solid #e4dccd;border-radius:10px;padding:24px;position:relative}
+  .step .n{font-family:'Barlow Condensed',sans-serif;font-size:2.6rem;font-weight:700;color:var(--orange);line-height:1}
+  .step h3{font-size:1.18rem;margin:8px 0 6px;color:var(--navy)}
+  .step p{font-size:.95rem;color:#4a5b69}
+  /* services */
+  .svc-band{background:var(--navy);color:#dce8f1}
+  .svc-band h2{color:#fff}
+  .svc-band .sub{color:#9fb6c6}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .svc{background:var(--navy2);border:1px solid var(--line);border-radius:9px;padding:18px 18px 18px 18px}
+  .svc h3{font-size:1.04rem;color:#fff;margin-bottom:5px;border-left:3px solid var(--orange);padding-left:9px}
+  .svc p{font-size:.9rem;color:#a9c0d0}
+  /* winter band */
+  .winter{background:linear-gradient(100deg,#143a55,#0c2233);color:#fff;border-radius:14px;padding:34px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;border:1px solid var(--line)}
+  .winter h3{font-size:1.7rem;color:#fff}
+  .winter p{color:#bcd0de;max-width:520px}
+  /* area */
+  .area-list{display:flex;flex-wrap:wrap;gap:9px;margin-top:8px}
+  .area-list span{background:#efe7d7;border:1px solid var(--rope);color:var(--navy);border-radius:30px;padding:7px 15px;font-size:.9rem;font-weight:500}
+  /* form */
+  .form-band{background:var(--paper)}
+  form{background:var(--white);border:1px solid #e4dccd;border-radius:14px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  form .full{grid-column:1/-1}
+  label{display:block;font-size:.82rem;font-weight:600;color:var(--navy);margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px}
+  input,textarea{width:100%;padding:11px 13px;border:1px solid #cdbfa6;border-radius:7px;font-family:inherit;font-size:.96rem;background:#fbf8f2}
+  textarea{min-height:90px;resize:vertical}
+  .form-side{background:var(--navy);color:#fff;border-radius:14px;padding:30px}
+  .form-side h3{font-size:1.4rem;color:#fff}
+  .form-side .big{font-family:'Barlow Condensed',sans-serif;font-size:2.1rem;color:var(--orange);font-weight:700;margin:10px 0}
+  .form-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:22px;align-items:start}
+  /* footer */
+  footer{background:#081826;color:#8ba6b8;padding:34px 0;font-size:.9rem}
+  footer b{color:#fff}
+  footer a{color:var(--orange);text-decoration:none}
+  @media(max-width:760px){
+    .hero h1{font-size:2.3rem}
+    .steps,.grid,.form-grid{grid-template-columns:1fr}
+    form{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Mobile marine service across Nassau's South Shore &middot; 7 days incl. weekends</span>
+  <span>Call/text <a href="tel:5165600864">(516) 560-0864</a></span>
+</div></div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="badge">We come to your boat — land or water</span>
+    <h1>Your boat won't<br>start. <span>We're already<br>on the way.</span></h1>
+    <p class="lead">Romeo Mobile Marine fixes engines, electrical, and fiberglass right at your slip or in your driveway in Freeport and across the South Shore — so you're not trailering the boat to a yard and losing the weekend.</p>
+    <div class="cta-row">
+      <a href="#request" class="btn btn-orange">Request a service call</a>
+      <a href="tel:5165600864" class="btn btn-ghost">Call (516) 560-0864</a>
+    </div>
+    <div class="micro">
+      <span><b>15+ years</b> on South Shore boats</span>
+      <span><b>Saturday &amp; Sunday</b> service calls</span>
+      <span><b>One call</b> — engine to canvas</span>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,40 C240,75 480,5 720,30 C960,55 1200,15 1440,40 L1440,70 L0,70 Z" fill="#f5f1ea"/></svg>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">How a mobile call works</div>
+    <h2>No haul-out. No two-week wait.</h2>
+    <p class="sub">Most South Shore boaters lose summer weekends dropping the boat at a yard and waiting in line. We flip that — the mechanic comes to you.</p>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Tell us the boat</h3><p>Send the make/model, your slip or address, and what's going on — a photo or a short video of the problem helps us bring the right parts.</p></div>
+      <div class="step"><div class="n">2</div><h3>We roll to you</h3><p>We diagnose at your dock or driveway — including Saturdays and Sundays in season — and find the root cause, not just swap parts.</p></div>
+      <div class="step"><div class="n">3</div><h3>Back on the water</h3><p>Engine, electrical, fiberglass or canvas handled on-site wherever possible, so you keep the day instead of losing the season.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="svc-band">
+  <div class="wrap">
+    <div class="eyebrow">What we handle</div>
+    <h2>Engine to canvas, one rig</h2>
+    <p class="sub">A full mobile marine shop on wheels for outboards, I/Os and inboards.</p>
+    <div class="grid">
+      <div class="svc"><h3>Engine &amp; diagnostics</h3><p>Won't-start, overheating, rough running, tune-ups, and full diagnostics that chase the root cause.</p></div>
+      <div class="svc"><h3>Re-powers</h3><p>Tired engine swapped for new power, sized and rigged to your hull.</p></div>
+      <div class="svc"><h3>Electrical, GPS &amp; radar</h3><p>Wiring, batteries, and electronics installs so your helm actually works.</p></div>
+      <div class="svc"><h3>Fiberglass &amp; gelcoat</h3><p>Cracks, gouges and soft spots repaired and color-matched.</p></div>
+      <div class="svc"><h3>Body, paint &amp; detail</h3><p>Wash, wax, compound and topside paint to bring the finish back.</p></div>
+      <div class="svc"><h3>Canvas</h3><p>New canvas or repairs to covers, biminis and enclosures.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="winter">
+      <div>
+        <h3>Book winterizing &amp; shrink-wrap before the rush</h3>
+        <p>Winterizing, shrink-wrap and winter storage fill up fast every fall on the South Shore. Get on the schedule early and we'll handle it at your slip — then have you launch-ready in spring.</p>
+      </div>
+      <a href="#request" class="btn btn-orange">Reserve a winterizing slot</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Where we run</div>
+    <h2>Nassau's South Shore — boatside</h2>
+    <p class="sub">Based on Hudson Ave in Freeport, working the canals, marinas and driveways nearby. Not sure if you're in range? Ask.</p>
+    <div class="area-list">
+      <span>Freeport</span><span>Merrick</span><span>Bellmore</span><span>Wantagh</span><span>Seaford</span><span>Massapequa</span><span>Baldwin</span><span>Oceanside</span><span>Amityville</span>
+    </div>
+  </div>
+</section>
+
+<section class="form-band" id="request">
+  <div class="wrap">
+    <div class="form-grid">
+      <div>
+        <div class="eyebrow">Request a service call</div>
+        <h2>Tell us what's wrong</h2>
+        <p class="sub">The more you can tell us up front, the faster we show up with the right parts.</p>
+        <form onsubmit="return false">
+          <div><label>Your name</label><input type="text" placeholder="First &amp; last"></div>
+          <div><label>Phone</label><input type="tel" placeholder="(516) 000-0000"></div>
+          <div><label>Boat make &amp; model</label><input type="text" placeholder="e.g. 2014 Grady-White 232"></div>
+          <div><label>Engine</label><input type="text" placeholder="Outboard / I/O / inboard"></div>
+          <div class="full"><label>Where is the boat?</label><input type="text" placeholder="Marina &amp; slip, or street address"></div>
+          <div class="full"><label>What's going on?</label><textarea placeholder="Describe the problem — and mention if you can text a photo or video"></textarea></div>
+          <div class="full"><button class="btn btn-orange" style="width:100%;border:none;cursor:pointer">Send my service request</button></div>
+        </form>
+      </div>
+      <div class="form-side">
+        <h3>One call does it all</h3>
+        <div class="big">(516) 560-0864</div>
+        <p style="color:#bcd0de">Call or text for the fastest response. In season we run service calls Monday through Sunday.</p>
+        <p style="margin-top:18px;color:#bcd0de"><b style="color:#fff">Shop:</b><br>85 Hudson Ave, Freeport, NY 11520</p>
+        <p style="margin-top:14px;color:#bcd0de"><b style="color:#fff">Hours:</b><br>Mon–Fri 8–5 &middot; Sat 8–4 &middot; Sun by appointment</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>Romeo Mobile Marine Services Corp.</b> &middot; 85 Hudson Ave, Freeport, NY 11520<br>
+    Mobile marine repair across Nassau County's South Shore &middot; <a href="tel:5165600864">(516) 560-0864</a><br>
+    <span style="font-size:.82rem;opacity:.7">Preview concept prepared by Onyx Rise Media for review. Not the live site.</span>
+  </div>
+</footer>
+
+</body>
+</html>

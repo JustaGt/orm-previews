@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mindful Yoga With Liz · Poughkeepsie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--teal:#2a9d8f;--teal-d:#207d72;--sun:#ffd166;--off:#fbf8f0;--ink:#2c3e3b;--soft:#5c6f6b}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Nunito',sans-serif;color:var(--ink);background:var(--off);line-height:1.65}
+  h1,h2,h3,.head{font-family:'Baloo 2',cursive;line-height:1.18;font-weight:700}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 26px}
+
+  nav{position:sticky;top:0;z-index:50;background:rgba(251,248,240,.94);backdrop-filter:blur(8px);box-shadow:0 2px 14px rgba(42,157,143,.08)}
+  .navin{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{font-family:'Baloo 2',cursive;font-size:1.32rem;font-weight:800;color:var(--teal-d)}
+  .brand span{color:var(--sun)}
+  .navlinks{display:flex;gap:26px;align-items:center}
+  .navlinks a{font-weight:700;font-size:.95rem;color:var(--soft)}
+  .btn{display:inline-block;background:var(--teal);color:#fff;padding:12px 24px;border-radius:50px;font-family:'Baloo 2',cursive;font-weight:600;font-size:1rem;transition:.2s;border:none;cursor:pointer}
+  .btn:hover{background:var(--teal-d);transform:translateY(-2px)}
+  .btn-sun{background:var(--sun);color:var(--teal-d)}
+  .btn-sun:hover{background:#ffc233}
+
+  /* split hero */
+  .hero{padding:66px 0 60px}
+  .herogrid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+  .kicker{display:inline-block;background:#ffe7a6;color:var(--teal-d);padding:6px 16px;border-radius:30px;font-weight:800;font-size:.82rem;margin-bottom:18px}
+  .hero h1{font-size:clamp(2.4rem,5.5vw,3.9rem);font-weight:800;margin-bottom:18px}
+  .hero h1 em{font-style:normal;color:var(--teal)}
+  .hero p{font-size:1.14rem;color:var(--soft);margin-bottom:26px;max-width:46ch}
+  .ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .photocard{position:relative;border-radius:26px;min-height:400px;background:linear-gradient(rgba(42,157,143,.2),rgba(32,125,114,.35)),url('https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:var(--teal);box-shadow:0 24px 60px -28px rgba(42,157,143,.6)}
+  .chip{position:absolute;bottom:-18px;left:24px;background:#fff;border-radius:18px;padding:14px 20px;box-shadow:0 12px 30px -12px rgba(0,0,0,.25);font-family:'Baloo 2',cursive;font-weight:700;color:var(--teal-d)}
+  .chip b{color:var(--sun)}
+
+  .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:42px}
+  .stat{flex:1;min-width:150px;background:#fff;border-radius:18px;padding:22px 24px;box-shadow:0 10px 30px -20px rgba(0,0,0,.3)}
+  .stat b{font-family:'Baloo 2',cursive;font-size:2rem;color:var(--teal);display:block}
+  .stat span{color:var(--soft);font-weight:600;font-size:.92rem}
+
+  .section{padding:64px 0}
+  .eyebrow{font-family:'Baloo 2',cursive;color:var(--sun);font-weight:700;letter-spacing:.5px;margin-bottom:6px}
+  .eyebrow.t{color:var(--teal)}
+  .section h2{font-size:clamp(1.9rem,4vw,2.7rem);font-weight:800;margin-bottom:8px}
+
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px}
+  .card{background:#fff;border-radius:22px;padding:28px 26px;box-shadow:0 14px 40px -28px rgba(0,0,0,.4);border-top:6px solid var(--teal)}
+  .card:nth-child(2){border-top-color:var(--sun)}
+  .card:nth-child(3){border-top-color:#f4978e}
+  .card h3{font-size:1.35rem;margin-bottom:8px;color:var(--teal-d)}
+  .card .age{display:inline-block;background:#eafaf7;color:var(--teal-d);font-weight:700;font-size:.78rem;padding:4px 12px;border-radius:20px;margin-bottom:12px}
+  .card p{color:var(--soft);font-size:.96rem;margin-bottom:12px}
+  .card .price{font-family:'Baloo 2',cursive;font-weight:700;color:var(--teal)}
+
+  .band{background:var(--teal);color:#fff;border-radius:26px;padding:44px 40px;display:grid;grid-template-columns:1.3fr 1fr;gap:36px;align-items:center}
+  .band .eyebrow{color:var(--sun)}
+  .band h2{color:#fff}
+  .band p{color:#d7f1ec;margin-top:10px}
+  .award{background:rgba(255,255,255,.12);border-radius:16px;padding:20px;text-align:center}
+  .award b{font-family:'Baloo 2',cursive;font-size:1.05rem;display:block;color:var(--sun)}
+  .award span{font-size:.85rem;color:#d7f1ec}
+
+  .gallery{columns:3;column-gap:14px;margin-top:32px}
+  .gallery div{width:100%;border-radius:18px;margin-bottom:14px;background-size:cover;background-position:center;break-inside:avoid}
+  .g1{height:200px;background:linear-gradient(rgba(42,157,143,.12),rgba(32,125,114,.22)),url('https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&w=1400&q=80');background-color:var(--teal)}
+  .g2{height:260px;background:linear-gradient(rgba(255,209,102,.18),rgba(244,151,142,.25)),url('https://images.unsplash.com/photo-1588286840104-8957b019727f?auto=format&fit=crop&w=1400&q=80');background-color:var(--sun)}
+  .g3{height:180px;background:linear-gradient(rgba(42,157,143,.15),rgba(32,125,114,.25)),url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=1400&q=80');background-color:var(--teal)}
+  .g4{height:240px;background:linear-gradient(rgba(42,157,143,.15),rgba(32,125,114,.25)),url('https://images.unsplash.com/photo-1552196563-55cd4e45efb3?auto=format&fit=crop&w=1400&q=80');background-color:var(--teal)}
+  .g5{height:190px;background:linear-gradient(rgba(255,209,102,.18),rgba(244,151,142,.25)),url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1400&q=80');background-color:var(--sun)}
+  .g6{height:220px;background:linear-gradient(rgba(42,157,143,.15),rgba(32,125,114,.25)),url('https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1400&q=80');background-color:var(--teal)}
+
+  .contact{background:#fff;border-radius:26px;padding:46px 42px;box-shadow:0 20px 60px -34px rgba(0,0,0,.4);display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:8px}
+  label{display:block;font-weight:700;font-size:.9rem;margin:14px 0 6px;color:var(--teal-d)}
+  input,textarea{width:100%;padding:12px 15px;border:2px solid #e4ede9;border-radius:12px;font-family:inherit;font-size:1rem;background:var(--off)}
+  input:focus,textarea:focus{outline:none;border-color:var(--teal)}
+  .info p{margin-bottom:8px;color:var(--soft);font-weight:600}
+  .info .lbl{color:var(--teal);font-weight:800;font-size:.82rem;text-transform:uppercase;letter-spacing:1px;margin-top:16px}
+  .thanks{display:none;background:#eafaf7;border-radius:16px;padding:30px;text-align:center}
+  .thanks.show{display:block}
+
+  footer{text-align:center;padding:42px 0;color:var(--soft);font-weight:600;font-size:.9rem}
+  footer .fb{font-family:'Baloo 2',cursive;color:var(--teal-d);font-size:1.1rem;margin-bottom:8px}
+
+  @media(max-width:860px){
+    .navlinks a:not(.btn){display:none}
+    .herogrid,.contact,.band{grid-template-columns:1fr}
+    .cards{grid-template-columns:1fr}
+    .gallery{columns:2}
+    .photocard{min-height:300px}
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap navin">
+    <a href="#top" class="brand">Mindful Yoga <span>With Liz</span></a>
+    <div class="navlinks">
+      <a href="#classes">Classes</a>
+      <a href="#why">Awards</a>
+      <a href="#book">Contact</a>
+      <a href="#book" class="btn">Book a class</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero wrap" id="top">
+  <div class="herogrid">
+    <div>
+      <span class="kicker">Poughkeepsie · Hudson Valley</span>
+      <h1>Yoga & mindfulness made for <em>kids, teens & families.</em></h1>
+      <p>Liz Torres Zocchi has been teaching Poughkeepsie's youngest yogis to breathe, stretch, and settle their busy minds — together, the whole family, in one happy room.</p>
+      <div class="ctas">
+        <a href="#book" class="btn btn-sun">Book a family class</a>
+        <a href="#classes" class="btn">See all classes</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>Best of</b><span>Hudson Valley winner, multiple years</span></div>
+        <div class="stat"><b>All ages</b><span>Toddlers through teens</span></div>
+      </div>
+    </div>
+    <div class="photocard" role="img" aria-label="Family practicing yoga together">
+      <div class="chip">Breathe in… <b>and giggle out.</b></div>
+    </div>
+  </div>
+</header>
+
+<section class="section wrap" id="classes">
+  <div class="eyebrow t">What we teach</div>
+  <h2>Classes for every age</h2>
+  <div class="cards">
+    <div class="card">
+      <span class="age">Ages 3–6</span>
+      <h3>Tiny Yogis</h3>
+      <p>Songs, animal poses, and calm-down breathing for little ones with big feelings. Grown-ups join in.</p>
+      <span class="price">$14 / class</span>
+    </div>
+    <div class="card">
+      <span class="age">Ages 7–12</span>
+      <h3>Kids Yoga & Mindfulness</h3>
+      <p>Balance games, focus practice, and tools to handle a tough school day. They leave proud.</p>
+      <span class="price">$16 / class</span>
+    </div>
+    <div class="card">
+      <span class="age">Ages 13–17</span>
+      <h3>Teen Reset</h3>
+      <p>A pressure-free hour to stretch, breathe, and step away from the phone and the stress.</p>
+      <span class="price">$18 / class</span>
+    </div>
+    <div class="card">
+      <span class="age">All ages</span>
+      <h3>Family Flow</h3>
+      <p>Bring everyone. Partner poses, shared laughs, and a calmer ride home afterward.</p>
+      <span class="price">$30 / family</span>
+    </div>
+    <div class="card">
+      <span class="age">Schools & parties</span>
+      <h3>Mindful Visits</h3>
+      <p>Liz brings kid-yoga to classrooms, camps, and birthday parties around Poughkeepsie.</p>
+      <span class="price">Ask about rates</span>
+    </div>
+    <div class="card">
+      <span class="age">Save more</span>
+      <h3>Class Pack</h3>
+      <p>Ten classes to use across any age group in the family, on your own schedule.</p>
+      <span class="price">$140 / 10</span>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" id="why">
+  <div class="band">
+    <div>
+      <div class="eyebrow">Why families pick Liz</div>
+      <h2>Award-winning, and the kids actually want to come back.</h2>
+      <p>Parents around Dutchess County keep voting Mindful Yoga With Liz a "Best of Hudson Valley" pick — not because of a fancy studio, but because their kids leave calmer and ask when the next class is.</p>
+    </div>
+    <div>
+      <div class="award" style="margin-bottom:12px"><b>Best of Hudson Valley</b><span>Reader-voted winner, multiple years</span></div>
+      <div class="award"><b>Local & trusted</b><span>Years teaching Poughkeepsie families</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap">
+  <div class="eyebrow t">Happy chaos, calm endings</div>
+  <h2 style="margin-bottom:6px">Around the room</h2>
+  <div class="gallery">
+    <div class="g1" role="img" aria-label="Kids in a yoga pose"></div>
+    <div class="g2" role="img" aria-label="Family stretching together"></div>
+    <div class="g3" role="img" aria-label="Group class warm-up"></div>
+    <div class="g4" role="img" aria-label="Balance practice"></div>
+    <div class="g5" role="img" aria-label="Quiet breathing moment"></div>
+    <div class="g6" role="img" aria-label="Teens relaxing on mats"></div>
+  </div>
+</section>
+
+<section class="section wrap" id="book">
+  <div class="eyebrow t">Get in touch</div>
+  <h2 style="margin-bottom:6px">Book a class or ask Liz a question</h2>
+  <div class="contact">
+    <form onsubmit="lzDone(event)">
+      <label for="lzn">Parent / guardian name</label>
+      <input id="lzn" placeholder="Your name" required>
+      <label for="lze">Email</label>
+      <input id="lze" type="email" placeholder="you@email.com" required>
+      <label for="lza">Child's age(s)</label>
+      <input id="lza" placeholder="e.g. 5 and 9">
+      <label for="lzm">What are you looking for?</label>
+      <textarea id="lzm" rows="3" placeholder="A class for my anxious 9-year-old, a family session, a school visit…"></textarea>
+      <br><br><button type="submit" class="btn btn-sun">Send to Liz</button>
+    </form>
+    <div class="info">
+      <p class="lbl">Phone</p>
+      <p><a href="tel:+18452423319">(845) 242-3319</a></p>
+      <p class="lbl">Area</p>
+      <p>Poughkeepsie & Dutchess County, NY</p>
+      <p class="lbl">Best for</p>
+      <p>Kids, teens, and families — first-timers always welcome.</p>
+      <div class="thanks" id="lzThanks" style="margin-top:18px">
+        <h3 style="color:var(--teal-d)">Yay — got it!</h3>
+        <p style="color:var(--soft);font-weight:600">Liz will text or email you back with class times. Talk soon!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fb">Mindful Yoga With Liz · Poughkeepsie, NY</div>
+  Website preview by Onyx Rise Media
+</footer>
+
+<script>
+function lzDone(e){e.preventDefault();document.querySelector('#book form').style.display='none';document.getElementById('lzThanks').classList.add('show');}
+</script>
+</body>
+</html>

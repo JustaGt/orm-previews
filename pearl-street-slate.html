@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pearl Street Slate Company — Hand-Split Slate Serving Boards from the Slate Valley | Granville, NY</title>
+<meta name="description" content="Cheese boards, tapas slabs and etched gifts hand-split from Slate Valley stone. Quarried and finished by Pearl Street Slate Company, Granville NY / West Pawlet VT.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2b2e30; --slate:#3d4547; --seagreen:#5d7a6d; --purple:#6b5a6e;
+    --linen:#f6f3ec; --cream:#fcfaf5; --line:#ddd6c8; --accent:#8a6f4d;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+  h1,h2,h3{font-family:'Fraunces',serif;line-height:1.15}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  /* header */
+  header{background:var(--cream);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+  .logo{font-family:'Fraunces',serif;font-weight:700;font-size:1.25rem;color:var(--slate)}
+  .logo span{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--seagreen)}
+  .nav a.call{background:var(--slate);color:#fff;text-decoration:none;padding:10px 18px;border-radius:3px;font-weight:600;font-size:.85rem}
+  /* hero */
+  .hero{background:linear-gradient(160deg,var(--slate) 0%,#2f3839 55%,#39424a 100%);color:#fff;padding:84px 0 76px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(105deg,transparent 0 90px,rgba(255,255,255,.025) 90px 92px)}
+  .hero .wrap{position:relative;z-index:2;max-width:760px}
+  .kicker{letter-spacing:.24em;text-transform:uppercase;font-size:.72rem;color:#b9c9bf;font-weight:600}
+  .hero h1{font-size:clamp(2rem,5vw,3.3rem);font-weight:600;margin:16px 0 18px}
+  .hero p.sub{font-size:1.1rem;color:#d9d5c9;max-width:34em}
+  .cta-row{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;text-decoration:none;font-weight:600;padding:14px 26px;border-radius:3px;font-size:.95rem}
+  .btn.primary{background:var(--linen);color:var(--slate)}
+  .btn.ghost{border:1px solid #8b9a91;color:#e8e4d8}
+  /* stone strip */
+  .stones{display:flex}
+  .stones div{flex:1;height:10px}
+  .s1{background:#4a5654}.s2{background:#5d7a6d}.s3{background:#6b5a6e}.s4{background:#54616e}.s5{background:#7d7468}
+  /* story */
+  .story{padding:74px 0;background:var(--linen)}
+  .story .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  .story h2{font-size:2rem;color:var(--slate);margin-bottom:16px}
+  .story p{margin-bottom:14px;color:#4a4a44}
+  .ledge{background:var(--slate);color:#e8e4d8;padding:34px 30px;border-radius:4px}
+  .ledge h3{font-size:1.05rem;color:#fff;margin-bottom:14px;letter-spacing:.06em;text-transform:uppercase}
+  .ledge ol{list-style:none;counter-reset:step}
+  .ledge li{counter-increment:step;padding:10px 0 10px 44px;position:relative;border-bottom:1px solid rgba(255,255,255,.12);font-size:.92rem}
+  .ledge li:last-child{border-bottom:none}
+  .ledge li::before{content:counter(step,decimal-leading-zero);position:absolute;left:0;top:10px;font-family:'Fraunces',serif;font-size:1.15rem;color:#9db5a6}
+  /* products */
+  .products{padding:74px 0}
+  .products h2{font-size:2rem;color:var(--slate);text-align:center}
+  .products p.lead{text-align:center;max-width:44em;margin:12px auto 44px;color:#57574f}
+  .pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+  .pcard{background:var(--linen);border:1px solid var(--line);border-radius:4px;padding:26px 24px}
+  .pcard .chip{width:44px;height:44px;border-radius:3px;margin-bottom:16px}
+  .pcard h3{font-size:1.12rem;color:var(--slate);margin-bottom:8px}
+  .pcard p{font-size:.9rem;color:#57574f}
+  .pcard small{display:block;margin-top:12px;color:var(--accent);font-weight:600;letter-spacing:.04em}
+  /* etching */
+  .etch{background:var(--seagreen);color:#fff;padding:64px 0}
+  .etch .grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .etch h2{font-size:1.9rem;margin-bottom:14px}
+  .etch p{color:#eaf1ec;margin-bottom:12px}
+  .etch ul{list-style:none;margin-top:6px}
+  .etch li{padding:8px 0 8px 26px;position:relative;font-size:.93rem}
+  .etch li::before{content:"—";position:absolute;left:0;color:#cfe0d5}
+  /* stockists */
+  .trust{padding:70px 0;background:var(--linen)}
+  .trust h2{font-size:1.9rem;color:var(--slate);text-align:center;margin-bottom:38px}
+  .tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+  .tcard{background:var(--cream);border:1px solid var(--line);padding:24px;border-radius:4px;text-align:center}
+  .tcard strong{display:block;font-family:'Fraunces',serif;font-size:1.05rem;color:var(--slate);margin-bottom:6px}
+  .tcard span{font-size:.86rem;color:#57574f}
+  /* care */
+  .care{padding:70px 0}
+  .care .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start}
+  .care h2{font-size:1.9rem;color:var(--slate);margin-bottom:14px}
+  .care p{color:#4a4a44;margin-bottom:12px}
+  /* contact */
+  .contact{background:var(--slate);color:#fff;padding:70px 0}
+  .contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+  .contact h2{font-size:1.9rem;margin-bottom:14px}
+  .contact p{color:#d9d5c9;margin-bottom:10px}
+  .contact a{color:#cfe0d5}
+  form .row{margin-bottom:14px}
+  label{display:block;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#b9c9bf;margin-bottom:6px}
+  input,select,textarea{width:100%;padding:12px;border-radius:3px;border:1px solid #5a6668;background:#333c3e;color:#fff;font-family:'Inter',sans-serif;font-size:.95rem}
+  .submit{background:var(--linen);color:var(--slate);border:none;padding:14px 28px;border-radius:3px;font-weight:700;font-size:.95rem;cursor:pointer}
+  footer{background:#242a2b;color:#9aa39e;padding:26px 0;font-size:.82rem;text-align:center}
+  @media(max-width:820px){.story .grid,.etch .grid,.care .grid,.contact .grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">Pearl Street Slate Co.<span>Granville, NY · Slate Valley</span></div>
+    <a class="call" href="tel:15183612666">(518) 361-2666</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="kicker">Hand-split in the Colored Slate Capital of the World</div>
+    <h1>The cheese board that was a mountain ledge last month.</h1>
+    <p class="sub">Pearl Street Slate Company splits serving boards, tapas slabs and etched gifts straight from Slate Valley stone — sea green, unfading green and purple rock pulled from our own quarry on the New York–Vermont line.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="#order">Shop the boards</a>
+      <a class="btn ghost" href="#wholesale">Wholesale line sheet</a>
+    </div>
+  </div>
+</section>
+<div class="stones"><div class="s1"></div><div class="s2"></div><div class="s3"></div><div class="s4"></div><div class="s5"></div></div>
+
+<section class="story">
+  <div class="wrap grid">
+    <div>
+      <h2>From ledge to table, four miles.</h2>
+      <p>Granville has shipped colored slate to the world since the 1850s — it's the only place in the country where sea green, purple and mottled slate come out of the same hills. Most of that rock becomes roofs and floors.</p>
+      <p>Ours becomes the middle of your table. Owner Paul Labas has spent his working life in Slate Valley rock, and every Pearl Street board starts as quarry ledge on Warren Switch Road, gets cleaved by hand with the same rivet-and-chisel technique quarrymen have used here for 170 years, then trimmed, eased and oiled in the shop.</p>
+      <p>No two boards split the same. That's the point.</p>
+    </div>
+    <div class="ledge">
+      <h3>How a board is made</h3>
+      <ol>
+        <li>Block is cleaved from the ledge and brought down to the saws.</li>
+        <li>Hand-split along the grain — the face you serve on is the natural cleft.</li>
+        <li>Trimmed to size, edges eased so it handles like a board, not a shingle.</li>
+        <li>Finished with slate oil; ready for cheese, charcuterie or the chalk line with your guests' names on it.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="order">
+  <div class="wrap">
+    <h2>What comes out of the shop</h2>
+    <p class="lead">Every piece is food-safe natural stone in the valley's true colors — grey-black, sea green, unfading green and purple. Sizes below are our standards; custom cuts are a phone call away.</p>
+    <div class="pgrid">
+      <div class="pcard"><div class="chip" style="background:#3d4547"></div>
+        <h3>Cheese &amp; serving boards</h3><p>Hand-trimmed rounds and rectangles for the classic spread. Chalk a label right on the stone and wipe it clean after.</p><small>Most popular</small></div>
+      <div class="pcard"><div class="chip" style="background:#5d7a6d"></div>
+        <h3>Tapas &amp; appetizer slabs</h3><p>Long, narrow hand-cleft slates for small plates, oysters and dessert flights. Stackable, restaurant-tough.</p><small>Loved by restaurants</small></div>
+      <div class="pcard"><div class="chip" style="background:#6b5a6e"></div>
+        <h3>Coasters &amp; trivets</h3><p>Purple and sea-green sets cut from the same ledges — the colors only this valley produces.</p><small>Gift-ready sets</small></div>
+      <div class="pcard"><div class="chip" style="background:#54616e"></div>
+        <h3>Soapstone chalk &amp; slate oil</h3><p>The two things every board owner runs out of: chalk sticks that write clean on stone, and oil that brings the color back.</p><small>Stocking stuffers</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="etch" id="etching">
+  <div class="wrap grid">
+    <div>
+      <h2>Laser-etched, one or one hundred.</h2>
+      <p>A monogram for a wedding, a logo for the tasting room, a retirement date that isn't going anywhere — etched into stone that's already 400 million years old.</p>
+      <ul>
+        <li>Wedding &amp; anniversary boards with names and dates</li>
+        <li>Corporate gifts etched with your logo — quoted by quantity</li>
+        <li>Tasting-room and restaurant serving slates with your mark</li>
+        <li>Artwork etching — send the file, we'll proof it before it burns</li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="font-size:1.2rem">Ask about an etching quote</h2>
+      <p>Tell us the piece, the quantity and the artwork. Etching orders typically turn around in two weeks.</p>
+      <p><strong>Call (518) 361-2666</strong> or use the order form below — attach nothing, just describe it. We'll take it from there.</p>
+    </div>
+  </div>
+</section>
+
+<section class="trust" id="wholesale">
+  <div class="wrap">
+    <h2>Where you'll find our stone</h2>
+    <div class="tgrid">
+      <div class="tcard"><strong>Common Deer — Burlington, VT</strong><span>Our chalk and slate oil sit on the shelves of Vermont's American-made goods shop.</span></div>
+      <div class="tcard"><strong>Granville Area Chamber</strong><span>Member maker in the Slate Valley business community, 15 Pearl Street, Granville.</span></div>
+      <div class="tcard"><strong>Retail &amp; wholesale</strong><span>Kitchen shops, wineries and cheesemongers: ask for the wholesale line sheet — standard sizes, case quantities, etching add-ons.</span></div>
+      <div class="tcard"><strong>Two states, one quarry family</strong><span>Shop in Granville, NY; quarry side in West Pawlet, VT. The valley doesn't care about the state line and neither do we.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="care">
+  <div class="wrap grid">
+    <div>
+      <h2>Slate is the easy houseguest.</h2>
+      <p>Rinse it, dry it, oil it a couple times a year. No polish, no sealant, no fuss — this is the same stone that shrugs off a century of weather on a roof.</p>
+      <p>Chalk wipes off with a damp cloth. Scratches? A drop of slate oil and they disappear into the cleft.</p>
+    </div>
+    <div class="ledge" style="background:var(--purple)">
+      <h3>Good to know</h3>
+      <ol>
+        <li>Food-safe natural stone — serve cheese, bread, oysters, dessert directly on it.</li>
+        <li>Hand-split faces vary — your board is literally one of a kind.</li>
+        <li>Slate holds cold: 20 minutes in the fridge before serving keeps cheese happy.</li>
+        <li>It will outlast the table you put it on.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap grid">
+    <div>
+      <h2>Order a board, or a hundred.</h2>
+      <p><strong>Pearl Street Slate Company</strong><br>15 Pearl Street, Granville, NY 12832<br>Quarry: Warren Switch Rd, West Pawlet, VT</p>
+      <p>Phone: <a href="tel:15183612666">(518) 361-2666</a></p>
+      <p>Retail, wholesale and custom etching — one call or one form reaches the person who splits the stone.</p>
+    </div>
+    <div>
+      <form onsubmit="event.preventDefault();this.innerHTML='<p><strong>Thanks — your inquiry is in.</strong> We will get back to you within one business day.</p>';">
+        <div class="row"><label>Name</label><input type="text" required></div>
+        <div class="row"><label>Email or phone</label><input type="text" required></div>
+        <div class="row"><label>I'm interested in</label>
+          <select><option>Serving boards / gifts</option><option>Custom etching</option><option>Wholesale / stocking Pearl Street Slate</option><option>Something else</option></select></div>
+        <div class="row"><label>Tell us about it</label><textarea rows="4"></textarea></div>
+        <button class="submit" type="submit">Send inquiry</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Pearl Street Slate Company · Granville, NY · Slate Valley stone, hand-split since the ledge was opened. — Website preview by Onyx Rise Media</div>
+</footer>
+
+</body>
+</html>

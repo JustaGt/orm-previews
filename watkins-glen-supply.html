@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Watkins Glen Supply — Hardware, Paint, Tools & Garden | Watkins Glen, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --steel:#2c3138; --steel-d:#1c2026; --gray:#5a626c; --pale:#eef1f4; --paper:#f7f9fb;
+    --yellow:#f6c026; --yellow-d:#d49e00; --red:#b8392b; --red-d:#8f2a1f; --green:#3f7d3a;
+    --ink:#23272d; --soft:#6a7178; --line:#d9dee4;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3,.disp{font-family:'Oswald',sans-serif;letter-spacing:.5px;text-transform:uppercase}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .announce{background:var(--yellow);color:#3a2c00;text-align:center;padding:9px;font-size:.9rem;font-weight:800}
+  .nav{background:var(--steel);padding:14px 0}
+  .nav .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  .brand{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.5rem;color:#fff;display:flex;align-items:center;gap:11px}
+  .brand .mark{width:40px;height:40px;background:var(--yellow);color:var(--steel);display:inline-flex;align-items:center;justify-content:center;font-size:1.3rem;border-radius:5px;font-weight:700}
+  .brand small{display:block;font-family:'Source Sans 3';font-size:.62rem;color:var(--yellow);letter-spacing:2px;font-weight:700;text-transform:uppercase}
+  .nav a.call{background:var(--red);color:#fff;text-decoration:none;font-weight:800;padding:10px 18px;border-radius:6px;font-size:.95rem;font-family:'Source Sans 3'}
+  .hero{background:linear-gradient(180deg,var(--steel),var(--steel-d));color:#eef1f4;padding:62px 0 56px;position:relative;overflow:hidden}
+  .hero:before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:repeating-linear-gradient(45deg,var(--yellow) 0 22px,var(--steel-d) 22px 44px)}
+  .hero .pill{display:inline-block;background:rgba(246,192,38,.16);border:1px solid var(--yellow);color:var(--yellow);font-weight:700;font-size:.76rem;letter-spacing:1.5px;padding:5px 14px;border-radius:5px;text-transform:uppercase}
+  .hero h1{font-size:clamp(2.2rem,5.6vw,3.7rem);font-weight:700;margin:18px 0 10px;line-height:1.02;color:#fff}
+  .hero h1 em{font-style:normal;color:var(--yellow)}
+  .hero p{font-size:1.16rem;max-width:560px;color:#c6cdd4;margin-bottom:24px}
+  .btn{display:inline-block;text-decoration:none;font-weight:800;padding:14px 26px;border-radius:6px;font-size:1rem}
+  .btn.y{background:var(--yellow);color:var(--steel-d);border-bottom:3px solid var(--yellow-d)}
+  .btn.o{background:transparent;border:2px solid #6a7178;color:#eef1f4;margin-left:8px}
+  .stats{display:flex;gap:30px;flex-wrap:wrap;margin-top:30px}
+  .stat b{font-family:'Oswald';color:var(--yellow);font-size:1.5rem;display:block;line-height:1}
+  .stat span{font-size:.8rem;color:#aeb6bd;font-weight:600}
+  section{padding:58px 0}
+  .head{max-width:660px}
+  .head.ctr{margin:0 auto;text-align:center}
+  .eyebrow{color:var(--red);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:.78rem}
+  h2{font-size:clamp(1.7rem,4.2vw,2.5rem);font-weight:700;margin:7px 0 10px}
+  .head p{color:var(--soft);font-size:1.05rem}
+  .depts{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:14px;margin-top:36px}
+  .dept{background:#fff;border:1px solid var(--line);border-left:5px solid var(--yellow);border-radius:8px;padding:20px 18px}
+  .dept .ic{font-size:1.7rem;margin-bottom:8px}
+  .dept h3{font-size:1.05rem;font-weight:700;margin-bottom:4px;color:var(--steel)}
+  .dept p{font-size:.9rem;color:var(--soft)}
+  .brands{background:var(--steel);color:#dfe4e9}
+  .brands h2{color:#fff}
+  .brands .head p{color:#aeb6bd}
+  .blist{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:30px}
+  .blist span{background:rgba(255,255,255,.07);border:1px solid #424a53;color:#eef1f4;font-family:'Oswald';font-weight:600;letter-spacing:1px;padding:11px 20px;border-radius:6px;font-size:1rem}
+  .pellet{background:var(--pale)}
+  .pelletbox{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}
+  .pelletbox .copy h2{text-align:left}
+  .pelletbox .copy p{color:var(--gray);margin-top:10px;font-size:1.05rem}
+  .pelletbox .copy ul{list-style:none;margin-top:14px}
+  .pelletbox .copy li{padding:5px 0 5px 26px;position:relative;font-weight:600}
+  .pelletbox .copy li:before{content:"▸";position:absolute;left:4px;color:var(--red);font-weight:800}
+  .seasoncard{background:var(--red);color:#fff;border-radius:12px;padding:30px}
+  .seasoncard h3{font-size:1.4rem;color:#fff;margin-bottom:8px}
+  .seasoncard p{color:#ffdcd6;font-size:.98rem}
+  .ph{background:#fff3cf;color:#7a5a00;font-size:.7rem;padding:2px 7px;border-radius:4px;font-weight:800;white-space:nowrap}
+  .find{background:#fff}
+  .findgrid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:20px}
+  .findgrid .col h2{text-align:left}
+  .info{margin-top:8px}
+  .info .row{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);align-items:baseline}
+  .info .row b{font-family:'Oswald';color:var(--steel);min-width:88px;font-size:.95rem;letter-spacing:1px}
+  .info .row span{color:var(--gray)}
+  .ask{background:var(--pale);border:2px solid var(--steel);border-radius:12px;padding:26px}
+  .ask h3{color:var(--steel);font-size:1.3rem;margin-bottom:4px}
+  .ask p.sub{font-size:.9rem;color:var(--soft);margin-bottom:8px}
+  .ask label{display:block;font-size:.78rem;font-weight:800;color:var(--gray);margin:11px 0 4px;text-transform:uppercase;letter-spacing:.5px}
+  .ask input,.ask textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:7px;font-size:.95rem;font-family:inherit}
+  .ask button{margin-top:15px;width:100%;background:var(--red);color:#fff;border:none;padding:13px;border-radius:7px;font-weight:800;font-size:1rem;cursor:pointer;font-family:'Oswald';letter-spacing:1px;text-transform:uppercase}
+  .ask .note{font-size:.74rem;color:var(--soft);margin-top:8px;text-align:center}
+  .endcta{background:var(--yellow);color:#3a2c00;text-align:center}
+  .endcta h2{color:#3a2c00}
+  .endcta a{display:inline-block;background:var(--steel);color:#fff;font-weight:800;text-decoration:none;padding:14px 30px;border-radius:6px;margin-top:16px;font-size:1.05rem;font-family:'Oswald';letter-spacing:1px;text-transform:uppercase}
+  footer{background:var(--steel-d);color:#9aa2aa;text-align:center;padding:34px 0;font-size:.9rem}
+  footer .disp{color:var(--yellow);font-size:1.4rem;margin-bottom:6px}
+  @media(max-width:760px){.pelletbox,.findgrid{grid-template-columns:1fr}.btn.o{margin-left:0;margin-top:10px}.pelletbox .copy h2,.findgrid .col h2{text-align:center}}
+</style>
+</head>
+<body>
+<div class="announce">🔥 Wood-pellet season is here — Barefoot pellets in stock. Call to check the skid count before you drive over.</div>
+
+<div class="nav">
+  <div class="wrap">
+    <div class="brand"><span class="mark">WG</span><div>Watkins Glen Supply<small>Hardware · Paint · Tools · Garden</small></div></div>
+    <a class="call" href="tel:6075352454">📞 (607) 535-2454</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="pill">Locally owned in Schuyler County since 1992</span>
+    <h1>Don't drive to the big box.<br><em>It's probably on our shelf.</em></h1>
+    <p>Paint, plumbing and electrical parts, power tools, lawn-and-garden, fasteners and wood pellets — stocked right here on Route 14, with someone at the counter who can tell you exactly which one you need.</p>
+    <a class="btn y" href="#ask">Ask if we have it</a>
+    <a class="btn o" href="#depts">See our departments</a>
+    <div class="stats">
+      <div class="stat"><b>1992</b><span>Serving Schuyler County</span></div>
+      <div class="stat"><b>Locally owned</b><span>Your neighbors, not a chain</span></div>
+      <div class="stat"><b>On Route 14</b><span>Watkins Glen</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="depts">
+  <div class="wrap">
+    <div class="head ctr">
+      <p class="eyebrow">What we carry</p>
+      <h2>Departments under one roof</h2>
+      <p>The everyday stuff a project stalls without — without a 40-minute round trip to Horseheads or Elmira.</p>
+    </div>
+    <div class="depts">
+      <div class="dept"><div class="ic">🎨</div><h3>Paint &amp; stain</h3><p>Valspar interior &amp; exterior, primers, brushes, rollers and sundries.</p></div>
+      <div class="dept"><div class="ic">🔧</div><h3>Plumbing &amp; heating</h3><p>Fittings, valves, PEX and copper, and the odd part that ends a project.</p></div>
+      <div class="dept"><div class="ic">💡</div><h3>Electrical</h3><p>Wire, boxes, breakers, switches, bulbs and the connectors you ran out of.</p></div>
+      <div class="dept"><div class="ic">🛠️</div><h3>Power tools</h3><p>Honda, Makita, Milwaukee and DeWalt — plus blades, bits and batteries.</p></div>
+      <div class="dept"><div class="ic">🌱</div><h3>Lawn &amp; garden</h3><p>Seed, soil, fertilizer and seasonal yard goods when the weather turns.</p></div>
+      <div class="dept"><div class="ic">🔩</div><h3>Hardware &amp; fasteners</h3><p>The nuts, bolts, screws and brackets you need by the handful, not the case.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="brands">
+  <div class="wrap">
+    <div class="head ctr">
+      <p class="eyebrow" style="color:var(--yellow)">Names you already run</p>
+      <h2>Brands on the shelf</h2>
+      <p>The tools and finishes you'd drive out of the county for — kept in stock right here.</p>
+    </div>
+    <div class="blist">
+      <span>Valspar Paint</span><span>Honda</span><span>Makita</span><span>Milwaukee</span><span>DeWalt</span><span>Barefoot Pellets</span>
+    </div>
+  </div>
+</section>
+
+<section class="pellet">
+  <div class="wrap">
+    <div class="pelletbox">
+      <div class="copy">
+        <p class="eyebrow">Heating season</p>
+        <h2>Wood pellets, by the bag or the skid</h2>
+        <p>Barefoot wood pellets in stock through the cold months. Pellet supply moves fast once the temperature drops — a quick call tells you what's on hand before you load the truck.</p>
+        <ul>
+          <li>By the bag or full skid</li>
+          <li>Call ahead to reserve a skid</li>
+          <li><span class="ph">PLACEHOLDER</span> current per-bag &amp; per-skid pricing</li>
+        </ul>
+      </div>
+      <div class="seasoncard">
+        <h3>Spring &amp; summer too</h3>
+        <p>When the snow's gone, the same counter handles your lawn-and-garden, paint and project runs. One local stop, all four seasons — no highway trip for a $6 part.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="find" id="find">
+  <div class="wrap">
+    <div class="findgrid">
+      <div class="col">
+        <p class="eyebrow">Find us &amp; hours</p>
+        <h2>Right on Route 14</h2>
+        <div class="info">
+          <div class="row"><b>Address</b><span>2768 State Route 14, Watkins Glen, NY 14891</span></div>
+          <div class="row"><b>Phone</b><span>(607) 535-2454</span></div>
+          <div class="row"><b>Fax</b><span>(607) 535-6515</span></div>
+          <div class="row"><b>Hours</b><span><span class="ph">PLACEHOLDER</span> store hours — confirm before publishing</span></div>
+        </div>
+        <p style="font-size:.8rem;color:var(--soft);margin-top:12px">A live Google map and current weekly hours would go here so a customer can confirm you're open before heading over.</p>
+      </div>
+      <div class="ask" id="ask">
+        <h3>Do you carry it?</h3>
+        <p class="sub">Tell us what you're after — we'll check the shelf and call you back, so the trip's not wasted.</p>
+        <form onsubmit="return false">
+          <label>Your name</label>
+          <input type="text" placeholder="First &amp; last name">
+          <label>Phone</label>
+          <input type="tel" placeholder="(607) 000-0000">
+          <label>What are you looking for?</label>
+          <textarea rows="3" placeholder="e.g. exterior Valspar in a gallon, 3/4&quot; PEX fittings, a skid of pellets…"></textarea>
+          <button>Check the shelf for me</button>
+        </form>
+        <p class="note">Or just call <a href="tel:6075352454" style="color:var(--red);font-weight:800">(607) 535-2454</a> — no automated menus, a real person picks up.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="endcta">
+  <div class="wrap">
+    <h2>Need it today? Call before you drive.</h2>
+    <p style="max-width:540px;margin:10px auto 0">One quick call and you'll know it's on the shelf and the doors are open.</p>
+    <a href="tel:6075352454">Call (607) 535-2454</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="disp">Watkins Glen Supply</div>
+    <p>2768 State Route 14, Watkins Glen, NY 14891 · (607) 535-2454 · Locally owned since 1992</p>
+    <p style="margin-top:10px;font-size:.78rem;color:#7c848c">Preview concept prepared by Onyx Rise Media for review. Store hours, pellet and product pricing, and full department/brand list to be confirmed by the owner. Address also listed in some directories as Montour Falls 14865 (same Route 14 location) — confirm preferred mailing form.</p>
+  </div>
+</footer>
+</body>
+</html>

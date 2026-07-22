@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interlaken Auto Repair — Honest Repairs &amp; NYS Inspections, Interlaken NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --steel:#26404f; --steeldark:#1a2e39; --yellow:#f2b705; --asphalt:#e8eaea;
+    --ink:#1e262b; --paper:#f7f8f8; --linegray:#cdd5d8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+  h1,h2,h3{font-family:'Saira Condensed',sans-serif;text-transform:uppercase;letter-spacing:.5px}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+
+  .hazard{height:10px;background:repeating-linear-gradient(135deg,var(--yellow) 0 16px,var(--steeldark) 16px 32px)}
+
+  header{background:var(--steel);color:#fff;padding:16px 0}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+  .logo{font-family:'Saira Condensed',sans-serif;font-weight:800;font-size:1.5rem;text-transform:uppercase;letter-spacing:1px}
+  .logo span{color:var(--yellow)}
+  header a.phone{color:var(--steeldark);background:var(--yellow);padding:9px 18px;border-radius:4px;font-weight:800;text-decoration:none;font-size:.95rem}
+
+  /* hero */
+  .hero{background:var(--steel);color:#fff;padding:64px 0 70px}
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+  .tagchip{display:inline-block;background:rgba(242,183,5,.15);border:1px solid var(--yellow);color:var(--yellow);font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 12px;border-radius:3px;margin-bottom:18px}
+  .hero h1{font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.05}
+  .hero p{margin:16px 0 28px;color:#c3d2da;max-width:50ch;font-size:1.05rem}
+  .btn{display:inline-block;background:var(--yellow);color:var(--steeldark);font-weight:800;text-decoration:none;padding:14px 26px;border-radius:4px;text-transform:uppercase;letter-spacing:.5px;font-size:.92rem}
+  .btn:hover{filter:brightness(1.08)}
+  .btn.ghost{background:transparent;border:2px solid #fff;color:#fff;margin-left:10px}
+
+  /* inspection tag card */
+  .tagcard{background:#fff;color:var(--ink);border-radius:6px;padding:0;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.3);transform:rotate(1.5deg)}
+  .tagcard .hole{height:34px;background:var(--asphalt);position:relative;border-bottom:2px dashed var(--linegray)}
+  .tagcard .hole::after{content:"";position:absolute;left:50%;top:9px;transform:translateX(-50%);width:16px;height:16px;border-radius:50%;background:var(--steel)}
+  .tagcard .body{padding:22px 26px 26px}
+  .tagcard h3{font-size:1.15rem;color:var(--steel);margin-bottom:10px}
+  .tagcard table{width:100%;font-size:.93rem;border-collapse:collapse}
+  .tagcard td{padding:7px 2px;border-bottom:1px dashed var(--linegray)}
+  .tagcard td:last-child{text-align:right;font-weight:700}
+  .tagcard p{font-size:.82rem;color:#67757c;margin-top:12px}
+
+  section{padding:62px 0}
+  .kicker{color:var(--steel);letter-spacing:2.5px;font-size:.76rem;font-weight:800;text-transform:uppercase;margin-bottom:8px}
+  .kicker::before{content:"■ ";color:var(--yellow)}
+  h2{font-size:clamp(1.6rem,3.4vw,2.3rem);color:var(--steeldark);margin-bottom:12px}
+
+  /* review wall */
+  .reviews{background:var(--asphalt)}
+  .revgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px;margin-top:26px}
+  .rev{background:#fff;border-radius:6px;padding:24px;border-top:4px solid var(--yellow)}
+  .rev .stars{color:var(--yellow);letter-spacing:3px;font-size:1rem;margin-bottom:10px}
+  .rev p{font-size:.97rem;color:#33404a}
+  .rev small{display:block;margin-top:12px;color:#7b8a92;font-size:.8rem;text-transform:uppercase;letter-spacing:1px}
+  .revfoot{margin-top:18px;font-size:.85rem;color:#5b6b74}
+
+  /* services */
+  .svcgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:26px}
+  .svc{background:#fff;border:1px solid var(--linegray);border-left:6px solid var(--steel);padding:20px;border-radius:4px}
+  .svc h3{font-size:1.05rem;color:var(--steel);margin-bottom:6px}
+  .svc p{font-size:.92rem;color:#4a565e}
+
+  /* inspection band */
+  .inspect{background:var(--steeldark);color:#fff}
+  .inspect .wrap{display:flex;justify-content:space-between;align-items:center;gap:26px;flex-wrap:wrap}
+  .inspect h2{color:#fff;max-width:24ch}
+  .inspect p{color:#b9c8d1;max-width:46ch}
+
+  /* visit + form */
+  .visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+  .infobox{background:#fff;border:1px solid var(--linegray);border-radius:6px;padding:26px}
+  .infobox h3{color:var(--steel);font-size:1.05rem;margin-bottom:12px}
+  .infobox table{width:100%;font-size:.95rem;border-collapse:collapse}
+  .infobox td{padding:7px 2px;border-bottom:1px dashed var(--linegray)}
+  .infobox td:last-child{text-align:right;font-weight:600}
+  form{display:grid;gap:12px}
+  input,select,textarea{width:100%;padding:12px;border:1px solid var(--linegray);border-radius:4px;font-family:'Inter',sans-serif;font-size:.95rem;background:#fff}
+  label{font-size:.85rem;font-weight:700}
+  .formnote{font-size:.8rem;color:#67757c}
+
+  footer{background:var(--steeldark);color:#8fa1ab;text-align:center;padding:22px 0;font-size:.85rem}
+  @media(max-width:840px){
+    .hero .wrap,.visit .wrap{grid-template-columns:1fr}
+    .tagcard{transform:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="hazard"></div>
+<header>
+  <div class="wrap">
+    <div class="logo">Interlaken <span>Auto Repair</span></div>
+    <a class="phone" href="tel:16075324866">(607) 532-4866</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="tagchip">Main Street &middot; Interlaken, NY</div>
+      <h1>The village garage your neighbors already vouch for.</h1>
+      <p>Diagnostics, repairs, and NYS inspections done right the first time — at prices reviewers keep calling fair. One shop, on Main Street, open weekdays 7:30 to 5:30.</p>
+      <a class="btn" href="#appointment">Request an appointment</a>
+      <a class="btn ghost" href="#reviews">Read the reviews</a>
+    </div>
+    <div class="tagcard">
+      <div class="hole"></div>
+      <div class="body">
+        <h3>Shop tag</h3>
+        <table>
+          <tr><td>Mon–Fri</td><td>7:30am – 5:30pm</td></tr>
+          <tr><td>Sat–Sun</td><td>Closed</td></tr>
+          <tr><td>Address</td><td>8260 N Main St</td></tr>
+          <tr><td>Phone</td><td>(607) 532-4866</td></tr>
+        </table>
+        <p>Calling ahead is the fastest way onto the lift — inspections often same-week. [PLACEHOLDER — confirm typical wait]</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="kicker">The review wall</div>
+    <h2>Don't take our word for it. Take theirs.</h2>
+    <div class="revgrid">
+      <div class="rev">
+        <div class="stars">★★★★★</div>
+        <p>"Awesome service, very pleasant to deal with and extremely fair pricing. Couldn't ask for much more, would highly recommend to anyone."</p>
+        <small>Public customer review — Aug 2025</small>
+      </div>
+      <div class="rev">
+        <div class="stars">★★★★★</div>
+        <p>"Excellent customer service! They diagnosed and fixed my Jeep's issues without costing me an arm and a leg. I will definitely bring my Jeep back when needed."</p>
+        <small>Public customer review — Apr 2024</small>
+      </div>
+      <div class="rev">
+        <div class="stars">★★★★★</div>
+        <p>"We go here to get our car inspected. They are very nice people that work there... they always make sure your vehicle is fixed correctly."</p>
+        <small>Public customer review — Feb 2024</small>
+      </div>
+    </div>
+    <p class="revfoot">Quotes from publicly posted customer reviews (Loc8NearMe/Yelp listings for Interlaken Auto Repair).</p>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="kicker">What we do</div>
+    <h2>From check-engine light to inspection sticker.</h2>
+    <div class="svcgrid">
+      <div class="svc"><h3>Diagnostics</h3><p>Find the actual problem before touching a wrench — reviewers mention tricky Jeep issues traced and fixed.</p></div>
+      <div class="svc"><h3>General repair</h3><p>Brakes, steering, suspension, and the everyday fixes that keep a commuter car on Route 96. [PLACEHOLDER — confirm full service list]</p></div>
+      <div class="svc"><h3>NYS inspections</h3><p>Annual inspections done in the village — no trip to Trumansburg or Ovid required.</p></div>
+      <div class="svc"><h3>Maintenance</h3><p>Oil changes, tires, and scheduled service. [PLACEHOLDER — confirm offerings before publish]</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="inspect">
+  <div class="wrap">
+    <div>
+      <div class="kicker" style="color:#f2b705">Sticker due?</div>
+      <h2>Your inspection month sneaks up. We don't.</h2>
+      <p>Check the sticker on your windshield — if the month is close, one call gets you scheduled at the only garage in the village.</p>
+    </div>
+    <a class="btn" href="tel:16075324866">Call (607) 532-4866</a>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Find the shop</div>
+      <h2>Right on Main Street.</h2>
+      <div class="infobox" style="margin-top:18px">
+        <h3>Interlaken Auto Repair</h3>
+        <table>
+          <tr><td>Address</td><td>8260 N Main St, Interlaken, NY 14847</td></tr>
+          <tr><td>Phone</td><td>(607) 532-4866</td></tr>
+          <tr><td>Hours</td><td>Mon–Fri 7:30–5:30</td></tr>
+          <tr><td>Serving</td><td>Interlaken &middot; Covert &middot; Lodi &middot; Ovid &middot; Trumansburg</td></tr>
+        </table>
+      </div>
+    </div>
+    <div id="appointment">
+      <div class="kicker">Appointment request</div>
+      <h2>Tell us what it's doing.</h2>
+      <form style="margin-top:18px">
+        <div><label>Name</label><input type="text" placeholder="Your name"></div>
+        <div><label>Phone</label><input type="tel" placeholder="Best callback number"></div>
+        <div><label>Vehicle</label><input type="text" placeholder="Year / make / model"></div>
+        <div><label>What do you need?</label>
+          <select><option>NYS inspection</option><option>Diagnostics — something's not right</option><option>Repair</option><option>Maintenance / oil change</option></select>
+        </div>
+        <div><label>Notes</label><textarea rows="3" placeholder="Noise, warning light, when it happens…"></textarea></div>
+        <button class="btn" type="button">Send request</button>
+        <p class="formnote">We confirm every appointment by phone — this form just starts the conversation.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Interlaken Auto Repair &middot; 8260 N Main St, Interlaken, NY &middot; (607) 532-4866 — Preview concept by Onyx Rise Media
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forest Iron Works — Railings, Gates &amp; Estate Ironwork | Locust Valley, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --iron:#1a1c1f; --iron-2:#2a2d32; --forge:#b4652a; --brass:#c9a227;
+    --paper:#faf8f5; --stone:#eceae5; --ink:#22252a; --mute:#6d7178; --hair:#ddd9d2;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Jost,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;font-weight:300}
+  .wrap{max-width:1130px;margin:0 auto;padding:0 24px}
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;letter-spacing:.2px}
+
+  .top{background:var(--iron);color:#9aa0a8;font-size:.8rem;padding:9px 0;letter-spacing:.6px}
+  .top .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .top b{color:var(--brass);font-weight:500}
+
+  header{background:var(--paper);border-bottom:1px solid var(--hair);position:sticky;top:0;z-index:20}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 0;flex-wrap:wrap}
+  .brand{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;line-height:1;letter-spacing:.5px}
+  .brand span{display:block;font-family:Jost,sans-serif;font-size:.62rem;letter-spacing:3.4px;text-transform:uppercase;color:var(--mute);font-weight:400;margin-top:5px}
+  .nav ul{list-style:none;display:flex;gap:24px;font-size:.86rem;letter-spacing:.6px;align-items:center;flex-wrap:wrap;text-transform:uppercase;font-weight:400}
+  .nav a{color:var(--ink);text-decoration:none}
+  .nav a:hover{color:var(--forge)}
+  .visit{border:1px solid var(--iron);padding:9px 16px;letter-spacing:1.4px;font-size:.76rem}
+
+  .hero{background:var(--iron);color:#f2efe9;padding:84px 0;position:relative;overflow:hidden}
+  .hero:before{content:"";position:absolute;inset:0;opacity:.15;
+    background-image:repeating-linear-gradient(90deg,transparent 0 46px,#c9a227 46px 47px),
+                     repeating-linear-gradient(0deg,transparent 0 46px,#c9a227 46px 47px);}
+  .hero .wrap{position:relative}
+  h1{font-size:clamp(2.3rem,5.4vw,3.9rem);line-height:1.06;max-width:15ch}
+  h1 em{font-style:italic;color:var(--brass)}
+  .lede{margin-top:20px;max-width:52ch;color:#c4c8ce;font-size:1.08rem}
+  .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+  .btn{display:inline-block;padding:14px 26px;text-decoration:none;font-size:.82rem;letter-spacing:2px;text-transform:uppercase;font-weight:500}
+  .btn-p{background:var(--forge);color:#fff}
+  .btn-s{border:1px solid #5c6068;color:#f2efe9}
+  .est{margin-top:34px;font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:#8f959d;font-style:italic}
+
+  section{padding:76px 0}
+  .kick{font-size:.68rem;letter-spacing:3.6px;text-transform:uppercase;color:var(--forge);font-weight:500}
+  h2{font-size:clamp(1.8rem,3.6vw,2.6rem);margin-top:10px;line-height:1.15}
+  .lead{color:var(--mute);max-width:64ch;margin-top:12px}
+
+  /* work grid */
+  .work{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair);margin-top:36px;border:1px solid var(--hair)}
+  .w{background:#fff;padding:30px 26px}
+  .w h3{font-size:1.35rem}
+  .w p{color:var(--mute);font-size:.94rem;margin-top:8px}
+  .w .n{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--hair);line-height:1}
+
+  /* showroom */
+  .showroom{background:var(--stone);border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+  .sgrid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .swatch{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .swatch div{aspect-ratio:1;background:linear-gradient(135deg,#2a2d32,#43474e);position:relative}
+  .swatch div:nth-child(2){background:linear-gradient(135deg,#8c6a2f,#c9a227)}
+  .swatch div:nth-child(3){background:linear-gradient(135deg,#5d6169,#9aa0a8)}
+  .swatch div:nth-child(5){background:linear-gradient(135deg,#7a4a20,#b4652a)}
+  .swatch div:nth-child(8){background:linear-gradient(135deg,#3b3f45,#6d7178)}
+  .swatch span{position:absolute;bottom:6px;left:8px;font-size:.6rem;letter-spacing:1.4px;color:rgba(255,255,255,.75);text-transform:uppercase}
+
+  /* estate / restoration */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--hair);border:1px solid var(--hair)}
+  .half{background:#fff;padding:38px 32px}
+  .half h3{font-size:1.5rem}
+  .half p{color:var(--mute);margin-top:10px;font-size:.97rem}
+  .half ul{margin-top:14px;list-style:none;display:grid;gap:8px}
+  .half li{padding-left:18px;position:relative;font-size:.95rem;color:var(--ink)}
+  .half li:before{content:"—";position:absolute;left:0;color:var(--forge)}
+
+  /* estimate */
+  .quote{background:var(--iron-2);color:#f2efe9;border-radius:0;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .quote h2{color:#fff;margin-top:6px}
+  .quote p{color:#b5bac1}
+  form{display:grid;gap:12px}
+  label{font-size:.66rem;letter-spacing:2px;text-transform:uppercase;color:#9aa0a8}
+  input,select,textarea{width:100%;padding:12px;background:#20232700;border:1px solid #4c5058;color:#fff;font-family:inherit;font-size:.95rem;background:#22262b}
+  input::placeholder,textarea::placeholder{color:#7d838b}
+  button{background:var(--brass);color:#1a1c1f;border:0;padding:14px;font-family:inherit;font-weight:500;letter-spacing:2px;text-transform:uppercase;font-size:.8rem;cursor:pointer}
+  .r2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+  /* family */
+  .family{text-align:center}
+  .family .years{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,8vw,5rem);color:var(--forge);line-height:1}
+  .family p{max-width:60ch;margin:16px auto 0;color:var(--mute)}
+  .lineage{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+  .lineage div{border-top:2px solid var(--forge);padding-top:12px;min-width:210px;text-align:left}
+  .lineage b{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;display:block}
+  .lineage span{font-size:.86rem;color:var(--mute)}
+
+  .visitrow{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-top:30px}
+  .visitrow div{border-left:2px solid var(--forge);padding-left:16px}
+  .visitrow h4{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600}
+  .visitrow p{color:var(--mute);font-size:.94rem;margin-top:4px}
+
+  footer{background:var(--iron);color:#8f959d;padding:46px 0;font-size:.9rem}
+  .fg{display:grid;grid-template-columns:2fr 1fr 1fr;gap:26px}
+  footer strong{display:block;color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;margin-bottom:10px}
+  footer a{color:#8f959d}
+  .disc{border-top:1px solid #33373d;margin-top:28px;padding-top:16px;font-size:.74rem;color:#5c6068}
+
+  @media(max-width:900px){
+    .work,.sgrid,.split,.quote,.visitrow,.fg,.r2{grid-template-columns:1fr}
+    .hero{padding:56px 0}
+    section{padding:52px 0}
+  }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="wrap">
+    <span>Showroom open Mon–Fri 7:30–4:00 · Sat 7:30–2:00 — <b>several dozen railing samples you can touch</b></span>
+    <span>3 Elm Street, Locust Valley · (516) 671-4161</span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">Forest Iron Works<span>Locust Valley · est. 1967</span></div>
+    <ul>
+      <li><a href="#work">Our Work</a></li>
+      <li><a href="#showroom">Showroom</a></li>
+      <li><a href="#restore">Restoration</a></li>
+      <li><a href="#family">The Gallos</a></li>
+      <li><a href="#estimate" class="visit">Start a project</a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>The railing, the gate, and the <em>estate sign</em> at the end of the drive.</h1>
+    <p class="lede">Decorative and structural ironwork made by hand on the Gold Coast — railings, driveway gates, lanterns, restoration and repair. Every piece fabricated in our own shop on Elm Street, not ordered from a catalog.</p>
+    <div class="cta">
+      <a class="btn btn-p" href="#estimate">Tell us about the project</a>
+      <a class="btn btn-s" href="#showroom">Visit the showroom</a>
+    </div>
+    <div class="est">Founded 1967 by Joseph Gallo. Run today by his son, Mario.</div>
+  </div>
+</div>
+
+<section id="work">
+  <div class="wrap">
+    <div class="kick">What comes out of the shop</div>
+    <h2>Six things we make, and one we rescue</h2>
+    <p class="lead">Homeowners, architects, builders — and townships, schools and hospitals, who need iron that passes code as well as inspection by eye.</p>
+    <div class="work">
+      <div class="w">
+        <div class="n">01</div>
+        <h3>Railings</h3>
+        <p>Interior stair rails, exterior handrails, balcony and terrace rails. Code-compliant, drawn to your stair.</p>
+      </div>
+      <div class="w">
+        <div class="n">02</div>
+        <h3>Driveway &amp; garden gates</h3>
+        <p>From a single pedestrian gate to a pair of estate gates hung on masonry piers — fabricated, finished and hung.</p>
+      </div>
+      <div class="w">
+        <div class="n">03</div>
+        <h3>Estate signs &amp; plaques</h3>
+        <p>The name at the end of the drive. Cut, formed, lettered and mounted, in iron, bronze or brass.</p>
+      </div>
+      <div class="w">
+        <div class="n">04</div>
+        <h3>Lanterns &amp; light fixtures</h3>
+        <p>Custom lanterns fabricated to a drawing — or the original brass fixture repaired and polished back.</p>
+      </div>
+      <div class="w">
+        <div class="n">05</div>
+        <h3>Table bases &amp; furniture</h3>
+        <p>Iron bases built to a top you already own, sized to the room, finished to match the house.</p>
+      </div>
+      <div class="w">
+        <div class="n">06</div>
+        <h3>Metal stock</h3>
+        <p>Brass, bronze, steel, aluminum, stainless and <strong>marine-grade</strong> stock — sold over the counter to trades.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="showroom" class="showroom">
+  <div class="wrap sgrid">
+    <div>
+      <div class="kick">The showroom</div>
+      <h2>Iron is a material you decide about with your hands.</h2>
+      <p class="lead">A photograph flattens a picket. The Elm Street showroom is stocked with several dozen railing samples you can put your hand on — pattern, weight, scroll, finish — before anything is cut.</p>
+      <p class="lead">Bring the stair photo and the measurements. You'll leave knowing what it will look like and roughly what it costs.</p>
+      <div class="cta">
+        <a class="btn btn-p" href="#estimate">Book a showroom visit</a>
+      </div>
+    </div>
+    <div class="swatch">
+      <div><span>Wrought</span></div>
+      <div><span>Brass</span></div>
+      <div><span>Stainless</span></div>
+      <div><span>Steel</span></div>
+      <div><span>Bronze</span></div>
+      <div><span>Aluminum</span></div>
+      <div><span>Marine</span></div>
+      <div><span>Powder</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="restore">
+  <div class="wrap">
+    <div class="kick">Two doors into the shop</div>
+    <h2>New work, and old work brought back</h2>
+    <div class="split" style="margin-top:30px">
+      <div class="half">
+        <h3>New fabrication</h3>
+        <p>Drawn, cut, welded and finished on Elm Street by craftsmen who have been doing it for decades.</p>
+        <ul>
+          <li>Site measure before anything is fabricated</li>
+          <li>Shop drawing you sign off on</li>
+          <li>Finish chosen from real samples, not a screen</li>
+          <li>We hang it — no "installer to be arranged"</li>
+        </ul>
+      </div>
+      <div class="half">
+        <h3>Repair &amp; restoration</h3>
+        <p>Gold Coast houses come with iron that is older than everyone in it. Broken scrolls, rusted feet, a gate that has dropped an inch, brass gone green.</p>
+        <ul>
+          <li>Rusted rail feet cut out and re-set</li>
+          <li>Gates re-hung and re-squared</li>
+          <li>Brass and bronze polished and re-lacquered</li>
+          <li>Missing sections matched to the original pattern</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="estimate">
+  <div class="wrap">
+    <div class="quote">
+      <div>
+        <div class="kick">Estimates</div>
+        <h2>Send us a photo and a measurement. That's usually enough.</h2>
+        <p>Most jobs can be scoped from three photographs and one dimension. Tell us what it is and where it lives, and we'll come back with a real number and a lead time — not a call-back to schedule a call-back.</p>
+      </div>
+      <form onsubmit="return false;">
+        <div class="r2">
+          <div>
+            <label for="nm">Name</label>
+            <input id="nm" placeholder="Your name">
+          </div>
+          <div>
+            <label for="tw">Town</label>
+            <input id="tw" placeholder="Locust Valley, Oyster Bay…">
+          </div>
+        </div>
+        <div>
+          <label for="tp">What is it</label>
+          <select id="tp">
+            <option>Interior stair railing</option>
+            <option>Exterior handrail / terrace rail</option>
+            <option>Driveway gate</option>
+            <option>Garden / pedestrian gate</option>
+            <option>Estate sign or plaque</option>
+            <option>Lantern / light fixture</option>
+            <option>Repair or restoration of existing iron</option>
+            <option>Table base or furniture</option>
+            <option>Counter sale — metal stock</option>
+          </select>
+        </div>
+        <div>
+          <label for="ds">Describe it</label>
+          <textarea id="ds" rows="3" placeholder="e.g. 12 ft of exterior rail on bluestone steps, plus a gate that's dropped and won't latch"></textarea>
+        </div>
+        <div>
+          <label for="ct">Phone or email</label>
+          <input id="ct" placeholder="How we reach you">
+        </div>
+        <button>Send it to the shop</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="family" class="family">
+  <div class="wrap">
+    <div class="years">1967</div>
+    <div class="kick" style="margin-top:10px">Family owned, second generation</div>
+    <h2>Fifty-nine years on the same lot</h2>
+    <p>Joseph Gallo started Forest Iron Works on a small lot in Locust Valley in 1967. His son Mario runs it now. In between, the shop has railed, gated and restored houses, schools, hospitals and municipal buildings across Long Island and into the city — and donated a good deal of iron back to the villages that kept it going.</p>
+    <div class="lineage">
+      <div><b>Joseph Gallo</b><span>Founder, 1967</span></div>
+      <div><b>Mario Gallo</b><span>Second generation, today</span></div>
+      <div><b>The shop</b><span>Artisan fabricators, decades each</span></div>
+    </div>
+    <p style="margin-top:24px;font-size:.86rem"><em>Placeholder — customer testimonials and project photographs to be pulled from the existing gallery with the owner's approval.</em></p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kick">Visit</div>
+    <h2>3 Elm Street, Locust Valley</h2>
+    <div class="visitrow">
+      <div>
+        <h4>Showroom</h4>
+        <p>3 Elm Street<br>Locust Valley, NY 11560</p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Mon–Fri 7:30am – 4:00pm<br>Sat 7:30am – 2:00pm</p>
+      </div>
+      <div>
+        <h4>Reach us</h4>
+        <p>(516) 671-4161<br><a href="mailto:sales@forestironworks.com" style="color:var(--forge)">sales@forestironworks.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fg">
+    <div>
+      <strong>Forest Iron Works</strong>
+      3 Elm Street, Locust Valley, NY 11560<br>
+      (516) 671-4161 · <a href="mailto:sales@forestironworks.com">sales@forestironworks.com</a><br>
+      Founded 1967 · Second-generation family owned
+    </div>
+    <div>
+      <strong>Make</strong>
+      Railings<br>Gates<br>Estate signs<br>Lanterns<br>Table bases
+    </div>
+    <div>
+      <strong>Mend</strong>
+      Iron repair<br>Restoration<br>Brass polishing<br>Metal stock
+    </div>
+  </div>
+  <div class="wrap disc">Concept page prepared for Forest Iron Works by Onyx Rise Media. Not a live site. Testimonials, photography and pricing are placeholders pending owner input.</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Papa Bears Riverside Stoves — Stoves, Fireplaces &amp; Spas · Marathon, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ember:#d96b2b;--deep:#26201b;--coal:#3a3129;--cream:#faf3e8;--paper:#fff9f0;--rust:#a34a1e}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3',sans-serif;color:var(--deep);background:var(--paper);line-height:1.6}
+h1,h2,h3{font-family:'Fraunces',serif}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+/* top bar */
+.bar{background:var(--deep);color:var(--cream);font-size:.9rem;padding:8px 0}
+.bar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.bar a{color:#f4c08f;text-decoration:none;font-weight:600}
+/* hero */
+header.hero{background:radial-gradient(ellipse at 50% 115%,#e8833a 0%,#8a3c14 34%,#3a2417 62%,#26201b 100%);color:var(--cream);padding:84px 0 70px;text-align:center}
+.hero .kicker{letter-spacing:.22em;text-transform:uppercase;font-size:.8rem;color:#f4c08f;font-weight:700}
+.hero h1{font-size:clamp(2rem,5vw,3.3rem);margin:14px auto 18px;max-width:820px;line-height:1.15}
+.hero p.sub{max-width:640px;margin:0 auto 30px;font-size:1.12rem;color:#eeddc8}
+.cta{display:inline-block;background:var(--ember);color:#fff;padding:15px 34px;border-radius:6px;font-weight:700;text-decoration:none;font-size:1.05rem;box-shadow:0 6px 18px rgba(217,107,43,.4)}
+.cta.ghost{background:transparent;border:2px solid #f4c08f;color:#f4c08f;box-shadow:none;margin-left:10px}
+.hero .note{margin-top:16px;font-size:.9rem;color:#cbb79c}
+/* season strip */
+.season{background:var(--rust);color:#fff;padding:14px 0;text-align:center;font-weight:600}
+/* aisles */
+.aisles{padding:70px 0}
+.aisles h2{font-size:2rem;text-align:center;margin-bottom:8px}
+.aisles p.lead{text-align:center;max-width:620px;margin:0 auto 40px;color:#5c5044}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.tile{background:#fff;border:1px solid #eadfce;border-radius:10px;padding:26px 22px;border-top:5px solid var(--ember)}
+.tile h3{font-size:1.15rem;margin-bottom:8px}
+.tile p{font-size:.95rem;color:#5c5044}
+.tile .aisle{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rust);font-weight:700}
+/* brands */
+.brands{background:var(--deep);color:var(--cream);padding:56px 0;text-align:center}
+.brands h2{font-size:1.6rem;margin-bottom:8px}
+.brands p{color:#cbb79c;max-width:600px;margin:0 auto 26px}
+.plaques{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.plq{border:1px solid #6b5a45;border-radius:6px;padding:10px 20px;font-family:'Fraunces',serif;font-size:1rem;color:#f4c08f}
+/* services */
+.svc{padding:70px 0;background:var(--cream)}
+.svc .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px;margin-top:34px}
+.svc h2{font-size:2rem;text-align:center}
+.step{background:#fff;border-radius:10px;padding:26px;border:1px solid #eadfce}
+.step .n{width:38px;height:38px;border-radius:50%;background:var(--ember);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;margin-bottom:12px}
+.step h3{margin-bottom:8px;font-size:1.1rem}
+.step p{font-size:.95rem;color:#5c5044}
+/* showroom band */
+.show{padding:66px 0}
+.show .inner{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+.show h2{font-size:1.9rem;margin-bottom:14px}
+.show p{margin-bottom:12px;color:#463c31}
+.factcard{background:var(--deep);color:var(--cream);border-radius:12px;padding:30px}
+.factcard h3{color:#f4c08f;font-size:1.05rem;margin-bottom:14px;letter-spacing:.08em;text-transform:uppercase}
+.factcard ul{list-style:none}
+.factcard li{padding:9px 0;border-bottom:1px solid #46392b;font-size:.97rem}
+.factcard li:last-child{border-bottom:none}
+/* contact */
+.contact{background:linear-gradient(180deg,var(--deep),#171310);color:var(--cream);padding:70px 0}
+.contact .inner{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.contact h2{font-size:1.9rem;margin-bottom:12px}
+.contact p{color:#cbb79c;margin-bottom:16px}
+.contact .info{font-size:1rem;line-height:2}
+.contact .info strong{color:#f4c08f}
+form .row{margin-bottom:14px}
+label{display:block;font-size:.85rem;font-weight:600;margin-bottom:5px;color:#e8d9c2}
+input,select,textarea{width:100%;padding:12px;border-radius:6px;border:1px solid #5a4a37;background:#332a21;color:var(--cream);font-family:inherit;font-size:.95rem}
+button{width:100%;background:var(--ember);border:none;color:#fff;padding:15px;border-radius:6px;font-weight:700;font-size:1.05rem;cursor:pointer}
+footer{background:#171310;color:#8a7a66;text-align:center;font-size:.85rem;padding:22px 0}
+@media(max-width:820px){.show .inner,.contact .inner{grid-template-columns:1fr}.cta.ghost{margin-left:0;margin-top:10px}}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap"><span>Papa Bears Riverside Stoves &amp; Outdoor Living · 96 Cortland St, Marathon NY</span><a href="tel:6078496605">(607) 849-6605</a></div></div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Wood · Pellet · Gas · Coal · Spas</div>
+    <h1>The stove you pick out in summer is the one keeping you warm in January.</h1>
+    <p class="sub">Papa Bears is Marathon's hearth showroom — stoves, fireplaces, inserts, furnaces and spas you can stand next to before you buy, installed and serviced by our own technicians.</p>
+    <a class="cta" href="#quote">Plan My Install</a><a class="cta ghost" href="#aisles">Browse the Showroom</a>
+    <div class="note">Serving Marathon, Cortland, Ithaca, Binghamton, Syracuse and everywhere between.</div>
+  </div>
+</header>
+
+<div class="season"><div class="wrap">Install calendars fill up before the first frost — the earlier you choose your unit, the sooner it's burning.</div></div>
+
+<section class="aisles" id="aisles">
+  <div class="wrap">
+    <h2>Walk the aisles</h2>
+    <p class="lead">Full lines on the floor at 96 Cortland Street — come turn the handles, open the doors, feel the build.</p>
+    <div class="grid">
+      <div class="tile"><div class="aisle">Aisle 1</div><h3>Wood &amp; Pellet Stoves</h3><p>Long-burn wood stoves and thermostat-driven pellet stoves for whole-house heat on a rural winter budget.</p></div>
+      <div class="tile"><div class="aisle">Aisle 2</div><h3>Gas &amp; Coal Stoves</h3><p>Push-button gas heat and steady, hot-burning coal units — including options for rooms without a chimney.</p></div>
+      <div class="tile"><div class="aisle">Aisle 3</div><h3>Fireplaces &amp; Inserts</h3><p>Turn an open, drafty fireplace into a sealed heater — wood, pellet or gas inserts sized to your masonry.</p></div>
+      <div class="tile"><div class="aisle">Aisle 4</div><h3>Furnaces &amp; Boilers</h3><p>Wood and coal furnaces plus indoor/outdoor boilers for barns, shops and whole-home central heat.</p></div>
+      <div class="tile"><div class="aisle">Aisle 5</div><h3>Cook Stoves</h3><p>Wood-fired cook stoves that heat the kitchen and make dinner when the power doesn't cooperate.</p></div>
+      <div class="tile"><div class="aisle">Aisle 6</div><h3>Spas, Grills &amp; Outdoor</h3><p>Hot tubs, grills, smokers and outdoor-living gear — the warm-weather half of the showroom.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="brands">
+  <div class="wrap">
+    <h2>Brand plaques on our floor</h2>
+    <p>We carry the lines serious burners ask for by name.</p>
+    <div class="plaques">
+      <span class="plq">Blaze King</span><span class="plq">Hearthstone</span><span class="plq">Mendota</span><span class="plq">Kozy Heat</span><span class="plq">Enviro</span><span class="plq">Morsø</span><span class="plq">Rais</span><span class="plq">St&nbsp;Croix</span><span class="plq">Drolet</span><span class="plq">Elmira Stove Works</span>
+    </div>
+  </div>
+</section>
+
+<section class="svc">
+  <div class="wrap">
+    <h2>Sold. Installed. Serviced. By the same shop.</h2>
+    <div class="cols">
+      <div class="step"><div class="n">1</div><h3>Fit &amp; quote</h3><p>Tell us the room, the fuel and the chimney situation. We size the unit to the space instead of selling you the biggest box.</p></div>
+      <div class="step"><div class="n">2</div><h3>Professional install</h3><p>Our own technicians handle the install — including chimney liners and caps — so the flue is right the day the fire is lit.</p></div>
+      <div class="step"><div class="n">3</div><h3>Service for life of the unit</h3><p>Gas appliance service, pellet stove cleanings, wood appliance maintenance and repairs, season after season.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="show">
+  <div class="wrap inner">
+    <div>
+      <h2>Why buy a stove from a showroom, not a search result?</h2>
+      <p>A stove is a twenty-year purchase you live beside every winter day. Photos can't show you how a door latch feels, how a firebox is welded, or how a flame pattern actually looks.</p>
+      <p>Papa Bears is part of the We Love Fire expert network — and we're a family shop on Cortland Street, not a call center. Ask us the awkward questions: what it really costs to run, what maintenance it really needs, what we'd put in our own house.</p>
+    </div>
+    <div class="factcard">
+      <h3>The shop at a glance</h3>
+      <ul>
+        <li>96 Cortland St, Marathon NY 13803</li>
+        <li>Tue–Fri 10–5 · Sat 10–2 · closed Sun–Mon</li>
+        <li>Wood · pellet · gas · coal · electric lines</li>
+        <li>Install + chimney liner &amp; cap service</li>
+        <li>We Love Fire® dealer network member</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="quote">
+  <div class="wrap inner">
+    <div>
+      <h2>Plan your install before the rush</h2>
+      <p>Tell us what you're heating and we'll follow up with options and a straight answer on lead times.</p>
+      <div class="info">
+        <strong>Showroom:</strong> 96 Cortland St, Marathon NY 13803<br>
+        <strong>Phone:</strong> (607) 849-6605<br>
+        <strong>Hours:</strong> Tue–Fri 10–5 · Sat 10–2
+      </div>
+    </div>
+    <form>
+      <div class="row"><label>Name</label><input type="text" placeholder="Your name"></div>
+      <div class="row"><label>Phone or email</label><input type="text" placeholder="Best way to reach you"></div>
+      <div class="row"><label>What are you heating?</label><select><option>Whole house</option><option>One room / addition</option><option>Barn or shop</option><option>Fireplace upgrade (insert)</option><option>Spa / outdoor living</option></select></div>
+      <div class="row"><label>Anything we should know?</label><textarea rows="3" placeholder="Fuel preference, chimney situation, timing…"></textarea></div>
+      <button type="button">Send to the Showroom</button>
+    </form>
+  </div>
+</section>
+
+<footer>Papa Bears Riverside Stoves &amp; Outdoor Living · Marathon, New York · Preview concept by Onyx Rise Media</footer>
+</body>
+</html>

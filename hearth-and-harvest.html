@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hearth &amp; Harvest — Fresh Food on Main Street, Ovid NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fdf8ef; --brick:#9e3b26; --brickdeep:#7c2c1b; --awning:#3f6b3f;
+    --ink:#2c2620; --straw:#e9dcc0; --chalk:#2f3a2f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Nunito Sans',sans-serif;background:var(--cream);color:var(--ink);line-height:1.65}
+  h1,h2,h3{font-family:'Fraunces',serif}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+
+  /* awning header */
+  .awning{height:14px;background:repeating-linear-gradient(90deg,var(--awning) 0 34px,#fdf8ef 34px 68px)}
+  header{padding:20px 0;border-bottom:1px solid #e3d7bd}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+  .logo{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:700}
+  .logo em{color:var(--brick);font-style:normal}
+  .logo small{display:block;font-family:'Nunito Sans',sans-serif;font-size:.72rem;letter-spacing:2.5px;text-transform:uppercase;color:#8a7d68;font-weight:700}
+  nav a{color:var(--ink);text-decoration:none;margin-left:16px;font-weight:700;font-size:.9rem}
+  nav a:hover{color:var(--brick)}
+
+  /* hero */
+  .hero{padding:66px 0 58px;background:
+    radial-gradient(ellipse at 85% 10%, rgba(158,59,38,.08), transparent 50%), var(--cream)}
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+  .pill{display:inline-block;background:var(--awning);color:#fdf8ef;font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:7px 14px;border-radius:30px;margin-bottom:18px}
+  .hero h1{font-size:clamp(2rem,4.8vw,3.2rem);line-height:1.12}
+  .hero h1 em{color:var(--brick);font-style:italic}
+  .hero p{margin:18px 0 28px;font-size:1.07rem;max-width:52ch;color:#4d4437}
+  .btn{display:inline-block;background:var(--brick);color:#fff;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:6px}
+  .btn:hover{background:var(--brickdeep)}
+  .btn.line{background:transparent;color:var(--brick);border:2px solid var(--brick);margin-left:10px}
+  .hourscard{background:var(--chalk);color:#f2ecdc;border-radius:10px;padding:30px;box-shadow:6px 6px 0 var(--straw)}
+  .hourscard h3{font-size:1.05rem;letter-spacing:1.5px;text-transform:uppercase;color:#cfe3c2;margin-bottom:14px}
+  .hourscard table{width:100%;font-size:.98rem;border-collapse:collapse}
+  .hourscard td{padding:7px 2px;border-bottom:1px dashed #55624f}
+  .hourscard td:last-child{text-align:right;font-weight:700}
+  .hourscard p{font-size:.85rem;color:#b9c7ad;margin-top:12px}
+
+  /* store board */
+  .board{background:var(--chalk);color:#f2ecdc;padding:64px 0}
+  .kicker{color:var(--brick);letter-spacing:2.5px;font-size:.76rem;font-weight:800;text-transform:uppercase;margin-bottom:10px}
+  .board .kicker{color:#e8c98e}
+  h2{font-size:clamp(1.5rem,3.2vw,2.15rem);margin-bottom:12px}
+  .board h2{color:#fff}
+  .boardgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+  .chalkcard{border:2px solid #55624f;border-radius:10px;padding:24px;background:rgba(255,255,255,.03)}
+  .chalkcard h3{color:#e8c98e;font-size:1.1rem;margin-bottom:10px}
+  .chalkcard ul{list-style:none;font-size:.95rem}
+  .chalkcard li{padding:6px 0;border-bottom:1px dashed #4a574a}
+  .chalkcard li:last-child{border:none}
+  .board .foot{margin-top:20px;font-size:.85rem;color:#a9b89e;font-style:italic}
+
+  section{padding:64px 0}
+
+  /* story band */
+  .story{background:linear-gradient(rgba(44,38,32,.55),rgba(44,38,32,.55)),
+    repeating-linear-gradient(0deg,#8a3a26 0 14px,#93412c 14px 28px);color:#fdf5e8;padding:70px 0}
+  .story h2{color:#fff;max-width:24ch}
+  .story p{max-width:58ch;margin-top:14px;color:#f3e3d2}
+  .story .cred{margin-top:18px;font-size:.85rem;color:#dcc2ae;font-style:italic}
+
+  /* makers */
+  .makers .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center}
+  .shelf{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .tag{background:#fff;border:1px solid #e3d7bd;border-left:6px solid var(--awning);padding:16px;border-radius:6px;font-size:.92rem}
+  .tag b{display:block;font-family:'Fraunces',serif;margin-bottom:3px}
+
+  /* visitors */
+  .visit{background:var(--straw)}
+  .visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .maproute{background:#fff;border-radius:10px;padding:26px;border:1px solid #d8c9a5}
+  .maproute h3{font-size:1rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--awning);margin-bottom:12px}
+  .maproute ol{margin-left:20px;font-size:.95rem}
+  .maproute li{padding:5px 0}
+
+  /* contact */
+  .contact{text-align:center}
+  .contact p{max-width:56ch;margin:14px auto 26px;color:#4d4437}
+  .sociallinks a{display:inline-block;margin:0 8px;color:var(--brick);font-weight:800;text-decoration:none;border-bottom:2px solid var(--brick)}
+
+  footer{background:var(--chalk);color:#a9b89e;text-align:center;padding:22px 0;font-size:.85rem}
+  @media(max-width:840px){
+    .hero .wrap,.makers .wrap,.visit .wrap{grid-template-columns:1fr}
+    .boardgrid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="awning"></div>
+<header>
+  <div class="wrap">
+    <div class="logo">Hearth <em>&amp;</em> Harvest<small>7194 Main Street &middot; Ovid, NY</small></div>
+    <nav>
+      <a href="#board">In the Store</a>
+      <a href="#makers">Local Makers</a>
+      <a href="#story">Our Story</a>
+      <a href="#visit">Visit</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="pill">Fresh food is back on Main Street</div>
+      <h1>Fresh meats, produce &amp; a hot cup of coffee — <em>right here in Ovid.</em></h1>
+      <p>No more planning your week around a 20-mile grocery run. Hearth &amp; Harvest keeps the fresh case stocked with local meats and produce, the coffee hot, and grab-and-go meals ready — six days a week on Main Street.</p>
+      <a class="btn" href="#visit">Plan your visit</a>
+      <a class="btn line" href="#board">What's in the store</a>
+    </div>
+    <div class="hourscard">
+      <h3>Store hours</h3>
+      <table>
+        <tr><td>Monday – Saturday</td><td>8am – 6pm</td></tr>
+        <tr><td>Sunday</td><td>Closed</td></tr>
+      </table>
+      <p>7194 Main St, Ovid, NY 14521 — the storefront with the goods in the window, mid-village.</p>
+    </div>
+  </div>
+</section>
+
+<section class="board" id="board">
+  <div class="wrap">
+    <div class="kicker">The store board</div>
+    <h2>What you'll find inside this week.</h2>
+    <div class="boardgrid">
+      <div class="chalkcard">
+        <h3>The fresh case</h3>
+        <ul>
+          <li>Fresh meats, locally sourced</li>
+          <li>Seasonal produce</li>
+          <li>[PLACEHOLDER — this week's case list]</li>
+        </ul>
+      </div>
+      <div class="chalkcard">
+        <h3>Grab &amp; go</h3>
+        <ul>
+          <li>Prepared meals, ready to heat</li>
+          <li>Snack wraps — the ones people talk about</li>
+          <li>[PLACEHOLDER — current lineup]</li>
+        </ul>
+      </div>
+      <div class="chalkcard">
+        <h3>Pantry &amp; coffee</h3>
+        <ul>
+          <li>Hot coffee, poured all day</li>
+          <li>Everyday grocery essentials</li>
+          <li>Locally made goods</li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot">This board updates with the store — follow along on Facebook for what just came in.</p>
+  </div>
+</section>
+
+<section class="makers" id="makers">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Local makers</div>
+      <h2>One storefront, a county's worth of good food.</h2>
+      <p style="margin-top:12px;color:#4d4437">The idea was simple: bring the food that's already grown, raised, and made around Seneca County together under one roof — so buying local doesn't take five separate trips.</p>
+    </div>
+    <div class="shelf">
+      <div class="tag"><b>Local meats</b>raised on farms nearby</div>
+      <div class="tag"><b>Seasonal produce</b>picked close to home</div>
+      <div class="tag"><b>Made-here goods</b>from area makers</div>
+      <div class="tag"><b>[PLACEHOLDER]</b>featured supplier roster to confirm with Ellen</div>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="wrap">
+    <div class="kicker" style="color:#e8c98e">Why this store exists</div>
+    <h2>The block burned. The village didn't.</h2>
+    <p>In January 2025, a fire took out an entire block of Ovid's Main Street — including the Big M, the only full grocery for miles. For over a year, "running to the store" meant driving twenty miles. Hearth &amp; Harvest opened in spring 2026 to put fresh food back within walking distance, stocked from the farms and kitchens that were here all along.</p>
+    <p class="cred">"This has helped a lot — the fresh meats, and some produce in there as well." — Ovid Local Development Corporation board member, on the store's opening (WHAM-TV, May 2026)</p>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Between the lakes</div>
+      <h2>On the wine trail? Ovid is your halfway stop.</h2>
+      <p style="margin-top:12px;color:#4d4437">Route 96 runs straight through the village, midway between Seneca and Cayuga lakes. Stock the cottage kitchen, grab lunch for the tasting-room loop, or just get a real cup of coffee before the next stop.</p>
+    </div>
+    <div class="maproute">
+      <h3>Finding us</h3>
+      <ol>
+        <li>7194 Main St (Route 96), mid-village Ovid</li>
+        <li>10 minutes from the Cayuga wine trail (Rt 89)</li>
+        <li>15 minutes from the Seneca side (Rt 414)</li>
+        <li>Open Mon–Sat, 8am–6pm</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <div class="kicker">Say hello</div>
+    <h2>See what came in today.</h2>
+    <p>The quickest way to reach the store is a message on Facebook or Instagram — or just come by. [PLACEHOLDER — phone &amp; email to be added once confirmed]</p>
+    <div class="sociallinks">
+      <a href="https://www.facebook.com/hearthharvestny/">Facebook</a>
+      <a href="https://www.instagram.com/hearthharvestny/">Instagram @hearthharvestny</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Hearth &amp; Harvest &middot; 7194 Main St, Ovid, NY 14521 &middot; Mon–Sat 8–6 — Preview concept by Onyx Rise Media
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delfiore Italian Pork Store — Homemade Since 1971 · Patchogue, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ox:#6e1a1c; --ox-d:#511113; --wine:#8a2226; --gold:#c79a3e; --gold-d:#a67c26;
+    --cream:#f7f0e4; --cream-2:#fbf6ec; --char:#241a14; --ink:#2c211a; --muted:#6b5a4c;
+    --line:#e4d8c3; --olive:#5c6a3a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+  h1,h2,h3,.script,.brand{font-family:'Playfair Display',serif}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  /* top bar */
+  .top{background:var(--ox-d);color:#f2dcc9;font-size:.9rem}
+  .top .wrap{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 22px;flex-wrap:wrap}
+  .top b{color:#fff}
+  .top .hrs{color:#e9c9ae}
+  /* header */
+  header{background:var(--ox);color:#fff;position:sticky;top:0;z-index:20;border-bottom:3px solid var(--gold)}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;padding:12px 22px;gap:14px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand .seal{width:46px;height:46px;border-radius:50%;background:var(--cream);color:var(--ox);
+    display:grid;place-items:center;font-family:'Playfair Display';font-weight:700;font-size:1.5rem;border:2px solid var(--gold)}
+  .brand b{font-family:'Playfair Display';font-size:1.4rem;font-weight:700;line-height:1;display:block}
+  .brand span{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+  nav a{color:#f4e6d7;text-decoration:none;font-weight:600;font-size:.94rem;margin-left:20px}
+  nav a:hover{color:var(--gold)}
+  nav{display:flex;align-items:center}
+  .btn{display:inline-block;font-weight:700;font-size:.98rem;padding:12px 22px;border-radius:4px;text-decoration:none;text-align:center;letter-spacing:.02em}
+  .btn-gold{background:var(--gold);color:var(--ox-d)}
+  .btn-gold:hover{background:#d9ae4e}
+  .btn-ox{background:var(--ox);color:#fff}
+  .btn-ox:hover{background:var(--wine)}
+  .btn-ghost{border:2px solid rgba(255,255,255,.55);color:#fff}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+  nav .btn{margin-left:20px}
+  @media(max-width:820px){nav a:not(.btn){display:none}}
+  /* hero */
+  .hero{position:relative;color:#f6e7d5;background:
+    linear-gradient(180deg,rgba(40,10,11,.72),rgba(40,10,11,.82)),
+    linear-gradient(135deg,#6e1a1c 0%,#511113 60%,#3a0d0e 100%)}
+  .hero::after{content:"";position:absolute;inset:0;opacity:.08;
+    background:repeating-linear-gradient(45deg,#fff 0 2px,transparent 2px 22px)}
+  .hero .wrap{position:relative;z-index:2;padding:76px 22px 84px;max-width:900px;text-align:center}
+  .est{display:inline-block;border:1px solid var(--gold);color:var(--gold);border-radius:30px;
+    padding:6px 18px;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:22px}
+  .hero h1{font-size:clamp(2.3rem,5.6vw,4rem);line-height:1.04;color:#fff;font-weight:700}
+  .hero h1 i{color:var(--gold);font-style:italic}
+  .hero p.sub{font-size:1.2rem;color:#e6cdb6;max-width:52ch;margin:22px auto 30px}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+  .madefresh{margin-top:26px;font-family:'Playfair Display';font-style:italic;font-size:1.05rem;color:#e9c9ae}
+  /* counter strip */
+  .counter{background:var(--cream-2);border-bottom:1px solid var(--line)}
+  .counter .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 26px;padding:16px 22px;
+    font-family:'Playfair Display';font-size:1.02rem;color:var(--ox);font-weight:600}
+  .counter span{display:flex;align-items:center;gap:8px}
+  .counter span::before{content:"•";color:var(--gold)}
+  /* sections */
+  section{padding:66px 0}
+  .head{max-width:60ch;margin:0 auto 40px;text-align:center}
+  .kicker{font-size:.86rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-d);font-weight:700;margin-bottom:8px}
+  .head h2{font-size:clamp(1.8rem,4vw,2.7rem);color:var(--ox);line-height:1.06}
+  .head p{color:var(--muted);font-size:1.06rem;margin-top:10px}
+  /* case / specialties */
+  .case{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .item{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;transition:.15s}
+  .item:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(80,17,19,.14)}
+  .item .band{height:6px;background:linear-gradient(90deg,var(--ox),var(--gold))}
+  .item .body{padding:22px}
+  .item h3{font-size:1.35rem;color:var(--ox);margin-bottom:7px}
+  .item p{font-size:.96rem;color:var(--muted)}
+  .item .daily{display:inline-block;background:#f4e7cf;color:var(--gold-d);font-weight:700;font-size:.72rem;
+    letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:14px;margin-top:12px}
+  /* catering feature */
+  .cater{background:linear-gradient(135deg,var(--ox),var(--ox-d));color:#f6e7d5}
+  .cater .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+  .cater h2{font-size:clamp(1.7rem,3.7vw,2.5rem);color:#fff;line-height:1.08;margin-bottom:14px}
+  .cater h2 i{color:var(--gold);font-style:italic}
+  .cater p{color:#e6cdb6;margin-bottom:16px}
+  .cater ul{list-style:none;display:grid;gap:10px;margin-bottom:22px}
+  .cater li{display:flex;gap:11px;align-items:flex-start;font-size:1rem;color:#f2ddca}
+  .cater li::before{content:"❯";color:var(--gold);font-weight:700}
+  .cater-card{background:var(--cream);color:var(--ink);border-radius:14px;padding:28px;box-shadow:0 20px 44px rgba(30,7,8,.4)}
+  .cater-card h3{font-size:1.5rem;color:var(--ox);margin-bottom:8px}
+  .cater-card p{color:var(--muted);font-size:.96rem;margin-bottom:16px}
+  .cater-card .price-note{font-size:.82rem;color:var(--gold-d);background:#f4e7cf;padding:8px 12px;border-radius:8px;margin-bottom:16px}
+  @media(max-width:820px){.cater .wrap{grid-template-columns:1fr;gap:26px}}
+  /* story */
+  .story{background:var(--cream-2)}
+  .story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .story h2{font-size:clamp(1.7rem,3.6vw,2.4rem);color:var(--ox);margin-bottom:16px;line-height:1.1}
+  .story p{color:var(--muted);margin-bottom:14px}
+  .story .names{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;text-align:center}
+  .story .names .old{font-family:'Playfair Display';font-style:italic;font-size:1.3rem;color:var(--ox);margin-bottom:6px}
+  .story .names .cap{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .story .names .arrow{color:var(--gold);font-size:1.5rem;margin:10px 0}
+  .story .names .now{font-family:'Playfair Display';font-size:1.25rem;color:var(--char)}
+  @media(max-width:820px){.story .wrap{grid-template-columns:1fr;gap:26px}}
+  /* hours + contact */
+  .visit{background:var(--char);color:#efe3d4}
+  .visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+  .visit h2{font-size:clamp(1.7rem,3.6vw,2.4rem);color:#fff;margin-bottom:14px}
+  .visit p{color:#d3c2b0;margin-bottom:20px;max-width:42ch}
+  .hours{list-style:none;border-top:1px solid rgba(255,255,255,.14)}
+  .hours li{display:flex;justify-content:space-between;padding:11px 2px;border-bottom:1px solid rgba(255,255,255,.14);font-size:1rem}
+  .hours li b{font-family:'Playfair Display';color:var(--gold)}
+  .hours li.closed{color:#b39c88}
+  .visit .addr{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:24px;margin-top:18px}
+  .visit .addr b{color:#fff;font-family:'Playfair Display';font-size:1.15rem}
+  .big-call{display:inline-flex;align-items:center;gap:11px;background:var(--gold);color:var(--ox-d);
+    font-family:'Playfair Display';font-weight:700;font-size:1.5rem;padding:14px 26px;border-radius:10px;text-decoration:none;margin-top:16px}
+  .big-call:hover{background:#d9ae4e}
+  @media(max-width:820px){.visit .wrap{grid-template-columns:1fr;gap:26px}}
+  /* footer */
+  footer{background:var(--ox-d);color:#e0bfa4;font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:26px 22px}
+  footer b{color:#fff;font-family:'Playfair Display'}
+  footer a{color:var(--gold);text-decoration:none}
+</style>
+</head>
+<body>
+  <div class="top"><div class="wrap">
+    <span><b>Delfiore Italian Pork Store</b> · 51 N Ocean Ave, Patchogue</span>
+    <span class="hrs">Tue–Fri 9–5 · Sat 9–4 · Sun 9–3 · <b>Closed Monday</b></span>
+  </div></div>
+
+  <header><div class="wrap">
+    <div class="brand">
+      <div class="seal">D</div>
+      <div><b>Delfiore</b><span>Italian Pork Store · Est. 1971</span></div>
+    </div>
+    <nav>
+      <a href="#case">The Case</a>
+      <a href="#catering">Catering</a>
+      <a href="#story">Our Family</a>
+      <a class="btn btn-gold" href="tel:16314756080">Order · (631) 475-6080</a>
+    </nav>
+  </div></header>
+
+  <section class="hero"><div class="wrap">
+    <span class="est">Patchogue, New York · Since 1971</span>
+    <h1>One of the last <i>real</i> pork stores on Long Island.</h1>
+    <p class="sub">Mozzarella pulled fresh every morning. Sausage and soppressata made in-house. Prime steaks, prepared foods, imported goods — and a Delfiore behind the counter, same as 1971.</p>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="#catering">Plan a catering or holiday order</a>
+      <a class="btn btn-ghost" href="tel:16314756080">Call (631) 475-6080</a>
+    </div>
+    <p class="madefresh">"What we make is going to please even the toughest Italian food critic — i.e., nonna."</p>
+  </div></section>
+
+  <div class="counter"><div class="wrap">
+    <span>Fresh mozzarella daily</span>
+    <span>House-made sausage</span>
+    <span>Dry soppressata</span>
+    <span>Prime steaks</span>
+    <span>Prepared foods</span>
+    <span>Imported Italian goods</span>
+  </div></div>
+
+  <section id="case"><div class="wrap">
+    <div class="head">
+      <div class="kicker">What's in the case</div>
+      <h2>Made here, by hand, the way it should be</h2>
+      <p>Supermarket deli counters carry it. We make it — most of it in this building, a lot of it that morning.</p>
+    </div>
+    <div class="case">
+      <div class="item"><div class="band"></div><div class="body"><h3>Fresh Mozzarella</h3><p>Pulled fresh every day — the reason regulars plan their week around when we open. Ask for it in salt water, smoked, or braided.</p><span class="daily">Made daily</span></div></div>
+      <div class="item"><div class="band"></div><div class="body"><h3>House Sausage</h3><p>Fresh Italian sausage made in-house — sweet, hot, fennel, cheese &amp; parsley. Trays for the grill, the oven, or Sunday gravy.</p><span class="daily">Made in-house</span></div></div>
+      <div class="item"><div class="band"></div><div class="body"><h3>Dry Sausage &amp; Soppressata</h3><p>Cured the slow way. Soppressata, dry sausage and salumi for the board, the sandwich, or the antipasto table.</p></div></div>
+      <div class="item"><div class="band"></div><div class="body"><h3>Prime Steaks &amp; Meats</h3><p>A real butcher case — prime cuts, roasts, and the specialty meats for a holiday table, cut to order.</p></div></div>
+      <div class="item"><div class="band"></div><div class="body"><h3>Prepared Foods</h3><p>Rice balls, eggplant, chicken cutlets, sides and Sunday-ready trays — the "I don't have time to cook" heroes of the neighborhood.</p></div></div>
+      <div class="item"><div class="band"></div><div class="body"><h3>Custom Heros &amp; Imports</h3><p>Made-to-order sandwiches on real bread, plus imported olive oils, pasta and cheeses to finish the meal at home.</p></div></div>
+    </div>
+    <p style="text-align:center;color:var(--muted);font-size:.9rem;margin-top:24px">Full case &amp; pricing shown in-store and by phone — printed selection/prices to be finalized with the family at build.</p>
+  </div></section>
+
+  <section class="cater" id="catering"><div class="wrap">
+    <div>
+      <h2>The tray that makes the <i>party</i></h2>
+      <p>Christmas Eve, Easter, a christening, an office lunch, the big game — this is what a real pork store is for. Hot and cold catering, antipasto and salumi boards, sandwich platters, and holiday specialties, made from the same case you shop every week.</p>
+      <ul>
+        <li>Hot &amp; cold catering for parties, offices and holidays</li>
+        <li>Antipasto, salumi &amp; mozzarella boards</li>
+        <li>Sandwich &amp; hero platters, sized to your headcount</li>
+        <li>Holiday pre-orders — reserve your mozzarella, sausage &amp; trays before the rush</li>
+      </ul>
+      <a class="btn btn-gold" href="tel:16314756080">Start a catering order</a>
+    </div>
+    <div class="cater-card">
+      <h3>Reserve ahead for the holidays</h3>
+      <p>The days before Christmas and Easter are the busiest of the year — and the ones you don't want to walk in and find sold out. Tell us your date and headcount and we'll have it ready.</p>
+      <div class="price-note">Tray sizes &amp; pricing confirmed by phone — no figures invented here.</div>
+      <a class="btn btn-ox" href="tel:16314756080" style="display:block;text-align:center">Call to reserve · (631) 475-6080</a>
+    </div>
+  </div></section>
+
+  <section class="story" id="story"><div class="wrap">
+    <div>
+      <h2>Three names on the wall, one family behind the counter</h2>
+      <p>Delfiore opened in 1971 — and more than fifty years later it's still one of the last family-owned and operated pork stores on Long Island. That's not a marketing line; it's a headcount. Most of them are gone.</p>
+      <p>Come in and you'll find a member of the family working the counter, same as always. That's the difference you can taste, and the reason people who moved away still stop in when they're back on the Island.</p>
+      <p style="color:var(--ox);font-family:'Playfair Display';font-style:italic;font-size:1.15rem">— The Delfiore Family, Patchogue</p>
+    </div>
+    <div class="names">
+      <div class="old">Salvatore · Carmine · Felice</div>
+      <div class="cap">The original purveyors, 50+ years ago</div>
+      <div class="arrow">↓</div>
+      <div class="now">The Delfiore Family today</div>
+      <div class="cap" style="margin-top:8px">Still on Ocean Avenue · Still made by hand</div>
+    </div>
+  </div></section>
+
+  <section class="visit"><div class="wrap">
+    <div>
+      <h2>Come by the counter</h2>
+      <p>We're on North Ocean Avenue in downtown Patchogue. There's almost always a family member here to help — that's the point.</p>
+      <div class="addr">
+        <b>Delfiore Italian Pork Store</b><br>
+        51 N Ocean Ave, Patchogue, NY 11772<br>
+        <a href="tel:16314756080" style="color:var(--gold);text-decoration:none">(631) 475-6080</a>
+      </div>
+      <a class="big-call" href="tel:16314756080">📞 (631) 475-6080</a>
+    </div>
+    <div>
+      <ul class="hours">
+        <li><span>Tuesday</span><b>9:00 – 5:00</b></li>
+        <li><span>Wednesday</span><b>9:00 – 5:00</b></li>
+        <li><span>Thursday</span><b>9:00 – 5:00</b></li>
+        <li><span>Friday</span><b>9:00 – 5:00</b></li>
+        <li><span>Saturday</span><b>9:00 – 4:00</b></li>
+        <li><span>Sunday</span><b>9:00 – 3:00</b></li>
+        <li class="closed"><span>Monday</span><span>Closed</span></li>
+      </ul>
+      <p style="font-size:.86rem;color:#b39c88;margin-top:14px">Holiday hours vary — call ahead the week of Christmas &amp; Easter.</p>
+    </div>
+  </div></section>
+
+  <footer><div class="wrap">
+    <div><b>Delfiore Italian Pork Store Inc.</b><br>Homemade Italian foods since 1971 · Patchogue, NY</div>
+    <div>51 N Ocean Ave, Patchogue, NY 11772<br><a href="tel:16314756080">(631) 475-6080</a></div>
+    <div style="color:#b98d6f">Fresh mozzarella daily · Catering<br>Closed Mondays</div>
+  </div></footer>
+</body>
+</html>

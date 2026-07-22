@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hanes Excavation — Septic, Site Work & Earthmoving | Ransomville, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1c1f22; --graphite:#2b2f33; --steel:#3a4046; --amber:#f5a623; --amber-d:#d98a05;
+  --sand:#e9e4dc; --paper:#f6f4f1; --line:#d7d2c9; --white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Barlow',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+h1,h2,h3,.eyebrow{font-family:'Oswald',sans-serif;letter-spacing:.5px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+
+/* top bar */
+.topbar{background:var(--ink);color:#cfd3d7;font-size:.84rem}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:42px;flex-wrap:wrap;gap:6px}
+.topbar b{color:#fff}
+.topbar .amber{color:var(--amber)}
+
+/* nav */
+nav{background:var(--graphite);position:sticky;top:0;z-index:20;border-bottom:3px solid var(--amber)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;font-family:'Oswald';font-weight:700;font-size:1.25rem;text-transform:uppercase}
+.brand .mark{width:34px;height:34px;background:var(--amber);clip-path:polygon(0 100%,40% 0,60% 0,100% 100%);}
+.navlinks{display:flex;gap:26px;font-family:'Oswald';font-weight:500;font-size:.95rem;text-transform:uppercase;color:#dfe3e7}
+.navlinks a{text-decoration:none}
+.navlinks a:hover{color:var(--amber)}
+.btn{display:inline-block;background:var(--amber);color:#1c1f22;font-family:'Oswald';font-weight:700;text-transform:uppercase;text-decoration:none;padding:13px 22px;border-radius:3px;letter-spacing:.6px;transition:.15s}
+.btn:hover{background:var(--amber-d)}
+.btn.lg{padding:16px 30px;font-size:1.05rem}
+.navbtn{padding:10px 18px}
+@media(max-width:760px){.navlinks{display:none}}
+
+/* hero */
+.hero{position:relative;background:
+  linear-gradient(180deg,rgba(20,22,24,.78),rgba(20,22,24,.86)),
+  repeating-linear-gradient(45deg,#26292c 0 28px,#222528 28px 56px);
+  color:#fff;padding:96px 0 88px}
+.hero .eyebrow{color:var(--amber);text-transform:uppercase;font-weight:600;font-size:.95rem;margin-bottom:14px}
+.hero h1{font-size:3.2rem;line-height:1.04;text-transform:uppercase;max-width:15ch}
+.hero p.lead{font-size:1.25rem;max-width:54ch;margin:20px 0 30px;color:#e7e9eb}
+.hero .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.hero .phone{font-family:'Oswald';font-weight:600;font-size:1.15rem}
+.hero .phone span{color:var(--amber)}
+@media(max-width:600px){.hero h1{font-size:2.25rem}}
+
+/* trust strip */
+.trust{background:var(--ink);color:#e7e9eb}
+.trust .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:18px 22px;text-align:center}
+.trust div{flex:1;min-width:140px}
+.trust b{font-family:'Oswald';color:var(--amber);font-size:1.05rem;display:block;text-transform:uppercase}
+
+/* sections */
+section.pad{padding:74px 0}
+.eyebrow.sec{color:var(--amber-d);text-transform:uppercase;font-weight:600;font-size:.9rem}
+h2.title{font-size:2.2rem;text-transform:uppercase;margin:6px 0 8px;line-height:1.1}
+.intro{max-width:62ch;color:#454b50;font-size:1.08rem}
+
+/* services split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:38px}
+@media(max-width:780px){.split{grid-template-columns:1fr}}
+.card{background:var(--white);border:1px solid var(--line);border-top:5px solid var(--amber);border-radius:5px;padding:30px}
+.card h3{font-size:1.5rem;text-transform:uppercase}
+.card .sub{color:#8a8278;font-family:'Oswald';font-size:.85rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.card ul{list-style:none;margin-top:6px}
+.card li{padding:7px 0 7px 26px;position:relative;border-bottom:1px dashed var(--line)}
+.card li:last-child{border-bottom:0}
+.card li::before{content:"";position:absolute;left:0;top:14px;width:11px;height:11px;background:var(--amber);clip-path:polygon(0 100%,50% 0,100% 100%)}
+
+/* septic band */
+.septic{background:var(--steel);color:#fff}
+.septic .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:34px;align-items:center;padding:60px 22px}
+@media(max-width:780px){.septic .wrap{grid-template-columns:1fr}}
+.septic h2{font-size:2rem;text-transform:uppercase}
+.septic p{color:#e3e6e8;margin-top:12px}
+.septic .stat{background:#2f3439;border-left:4px solid var(--amber);padding:18px 20px;border-radius:4px}
+.septic .stat b{font-family:'Oswald';font-size:1.6rem;color:var(--amber);display:block}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
+@media(max-width:780px){.why{grid-template-columns:1fr 1fr}}
+.why .b{background:var(--white);border:1px solid var(--line);border-radius:5px;padding:22px}
+.why .b h3{font-size:1.05rem;text-transform:uppercase;color:var(--graphite)}
+.why .b p{font-size:.95rem;color:#5a605f;margin-top:6px}
+
+/* area */
+.area{background:var(--sand)}
+.area .towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.area .towns span{background:#fff;border:1px solid var(--line);font-family:'Oswald';text-transform:uppercase;font-size:.85rem;padding:8px 14px;border-radius:30px}
+
+/* gallery placeholder */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
+@media(max-width:780px){.gal{grid-template-columns:1fr 1fr}}
+.gal .ph{aspect-ratio:4/3;background:repeating-linear-gradient(45deg,#dcd6cc 0 14px,#d3cdc2 14px 28px);border-radius:5px;display:flex;align-items:flex-end;padding:12px;font-family:'Oswald';text-transform:uppercase;font-size:.8rem;color:#7a7367}
+.note{font-size:.82rem;color:#9a9286;margin-top:10px;font-style:italic}
+
+/* quote form */
+.quote{background:var(--ink);color:#fff}
+.quote .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:66px 22px}
+@media(max-width:780px){.quote .wrap{grid-template-columns:1fr}}
+.quote h2{font-size:2.1rem;text-transform:uppercase}
+.quote p{color:#cfd3d7;margin-top:12px}
+.quote .phoneblock{margin-top:22px;font-family:'Oswald';font-size:1.5rem}
+.quote .phoneblock span{color:var(--amber)}
+form .f{margin-bottom:14px}
+form label{display:block;font-family:'Oswald';text-transform:uppercase;font-size:.78rem;letter-spacing:1px;margin-bottom:5px;color:#b9bec3}
+form input,form select,form textarea{width:100%;padding:12px;border:1px solid #44494e;background:#23272b;color:#fff;border-radius:4px;font-family:'Barlow';font-size:1rem}
+form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:480px){form .row{grid-template-columns:1fr}}
+
+/* footer */
+footer{background:#141618;color:#9aa0a6;padding:30px 0;font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer b{color:#fff;font-family:'Oswald';text-transform:uppercase}
+.tag{color:var(--amber);font-family:'Oswald';font-style:italic}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Family owned &amp; operated in Ransomville since <b>2017</b> · Fully insured</span>
+  <span class="amber"><b>24/7</b> service · Call (716) 425-6576</span>
+</div></div>
+
+<nav><div class="wrap">
+  <div class="brand"><span class="mark"></span>Hanes Excavation</div>
+  <div class="navlinks">
+    <a href="#services">Services</a>
+    <a href="#septic">Septic</a>
+    <a href="#why">Why Hanes</a>
+    <a href="#area">Service Area</a>
+    <a href="#quote">Get a Quote</a>
+  </div>
+  <a href="#quote" class="btn navbtn">Request a Quote</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">Excavation · Septic · Site Work — Niagara, Orleans &amp; Erie County</div>
+  <h1>Ground broken right the first time.</h1>
+  <p class="lead">From a single foundation dig to a full subdivision — land clearing, septic systems, drainage, ponds and driveways, graded clean and done when we say.</p>
+  <div class="cta-row">
+    <a href="#quote" class="btn lg">Request a site quote</a>
+    <span class="phone">or call <span>(716) 425-6576</span></span>
+  </div>
+</div></header>
+
+<div class="trust"><div class="wrap">
+  <div><b>Fully Insured</b>residential &amp; commercial</div>
+  <div><b>24/7</b>emergency &amp; storm work</div>
+  <div><b>Owner-Run</b>Kevin Hanes II on every job</div>
+  <div><b>Local</b>based in Ransomville, NY</div>
+</div></div>
+
+<section class="pad" id="services"><div class="wrap">
+  <div class="eyebrow sec">What we dig</div>
+  <h2 class="title">Two crews, one standard</h2>
+  <p class="intro">Whether it's a homeowner adding a septic field or a builder breaking ground on a multi-family site, the same equipment and the same operator handle it from clearing to final grade.</p>
+  <div class="split">
+    <div class="card">
+      <h3>Residential</h3>
+      <div class="sub">Homes · camps · rural properties</div>
+      <ul>
+        <li>Foundation &amp; basement excavation</li>
+        <li>Septic systems — install, repair &amp; perc</li>
+        <li>Land clearing &amp; earthmoving</li>
+        <li>Driveways, road base &amp; culverts</li>
+        <li>Drainage, grading &amp; ponds</li>
+        <li>Paving &amp; concrete</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Commercial</h3>
+      <div class="sub">Builders · developers · site work</div>
+      <ul>
+        <li>Full site development &amp; grading</li>
+        <li>Subdivision &amp; multi-family earthwork</li>
+        <li>Stormwater management</li>
+        <li>Site utilities &amp; retaining walls</li>
+        <li>Retention ponds</li>
+        <li>Paving &amp; concrete flatwork</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="septic" id="septic"><div class="wrap">
+  <div>
+    <h2>Septic done by the code, not the corner</h2>
+    <p>A failed or undersized septic system is the most expensive shortcut a property owner can take. We install, repair and locate systems across Niagara and Orleans County, handle the perc and the paperwork, and backfill so your yard looks like we were never there.</p>
+    <p>New build, replacement, or a system that finally quit — call and we'll come look before you dig.</p>
+  </div>
+  <div class="stat">
+    <b>Install · Repair · Perc</b>
+    Residential &amp; commercial septic, drainage and sewer lines — fully insured, 24/7.
+  </div>
+</div></section>
+
+<section class="pad" id="why"><div class="wrap">
+  <div class="eyebrow sec">Why property owners call Hanes</div>
+  <h2 class="title">No surprises in the dirt</h2>
+  <div class="why">
+    <div class="b"><h3>One owner, every job</h3><p>Kevin Hanes II quotes it and runs it. You're not handed off to a sub.</p></div>
+    <div class="b"><h3>Insured &amp; reliable</h3><p>Fully insured, on time, and the site left graded and clean.</p></div>
+    <div class="b"><h3>Any scale</h3><p>Single-family lot to a full subdivision — same equipment, same standard.</p></div>
+    <div class="b"><h3>Around the clock</h3><p>24/7 for storm damage, washouts and emergency digs.</p></div>
+  </div>
+</div></section>
+
+<section class="pad area" id="area"><div class="wrap">
+  <div class="eyebrow sec">Where we work</div>
+  <h2 class="title">Lower Niagara County &amp; beyond</h2>
+  <p class="intro">Based in Ransomville and working across three counties. If your town isn't listed, call — odds are we're already nearby.</p>
+  <div class="towns">
+    <span>Ransomville</span><span>Youngstown</span><span>Wilson</span><span>Lewiston</span>
+    <span>Lockport</span><span>Newfane</span><span>Barker</span><span>Medina</span>
+    <span>Niagara County</span><span>Orleans County</span><span>Erie County</span>
+  </div>
+  <div class="gal">
+    <div class="ph">Foundation dig — placeholder</div>
+    <div class="ph">Septic install — placeholder</div>
+    <div class="ph">Pond &amp; grading — placeholder</div>
+  </div>
+  <p class="note">Gallery to be filled with Hanes Excavation's own project photos (currently shown on their Facebook page).</p>
+</div></section>
+
+<section class="quote" id="quote"><div class="wrap">
+  <div>
+    <h2>Tell us what you're digging</h2>
+    <p>Send the job type and your town and Kevin will get back to you with next steps and a time to look at the site. Need it now? Call — we answer 24/7.</p>
+    <div class="phoneblock">Call <span>(716) 425-6576</span></div>
+    <p style="margin-top:10px">Ransomville, NY · Serving Niagara, Orleans &amp; Erie County</p>
+  </div>
+  <form onsubmit="return false">
+    <div class="row">
+      <div class="f"><label>Name</label><input type="text" placeholder="Your name"></div>
+      <div class="f"><label>Phone</label><input type="tel" placeholder="(716) 000-0000"></div>
+    </div>
+    <div class="row">
+      <div class="f"><label>Town</label><input type="text" placeholder="e.g. Wilson"></div>
+      <div class="f"><label>Job type</label>
+        <select><option>Septic system</option><option>Foundation / excavation</option><option>Driveway / road base</option><option>Drainage / pond</option><option>Land clearing</option><option>Commercial site work</option><option>Other</option></select>
+      </div>
+    </div>
+    <div class="f"><label>Details</label><textarea rows="3" placeholder="Tell us about the site and the timeline"></textarea></div>
+    <button class="btn lg" style="border:none;cursor:pointer" type="submit">Send my request</button>
+  </form>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b>Hanes Excavation</b> · <span class="tag">"We make dirt look good"</span></div>
+  <div>Ransomville, NY · (716) 425-6576 · Fully insured · 24/7</div>
+</div></footer>
+
+</body>
+</html>

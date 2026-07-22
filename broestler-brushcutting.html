@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Broestler BrushCutting — Reclaim Overgrown Land | Easton & Greenwich, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bark:#2e2a20; --moss:#3f5a2e; --moss2:#4f7038; --field:#8aa86b;
+    --clay:#b9622e; --bone:#f4f1e8; --line:#d8d2c2; --ink:#23211b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Source Sans 3',system-ui,sans-serif;color:var(--ink);background:var(--bone);line-height:1.55}
+  h1,h2,h3,.dt{font-family:'Oswald',sans-serif;letter-spacing:.5px;text-transform:uppercase}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  /* top bar */
+  .bar{background:var(--bark);color:var(--bone);font-size:.92rem}
+  .bar .wrap{display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between;align-items:center;padding:9px 22px}
+  .bar b{color:#f0c27a}
+  /* hero */
+  .hero{position:relative;background:
+      linear-gradient(180deg,rgba(20,24,14,.72),rgba(20,24,14,.80)),
+      linear-gradient(120deg,#34431f,#26301a 60%,#1a2113);
+      color:var(--bone);padding:74px 0 64px}
+  .tag{display:inline-block;background:var(--clay);color:#fff;font-weight:700;font-size:.78rem;letter-spacing:1px;
+      text-transform:uppercase;padding:5px 12px;border-radius:2px;margin-bottom:18px}
+  .hero h1{font-size:3rem;line-height:1.02;font-weight:700;max-width:15ch}
+  .hero p.lead{font-size:1.22rem;max-width:46ch;margin:18px 0 8px;color:#ece8da}
+  .quip{font-style:italic;color:#cdd8b6;margin-top:6px}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+  .btn{display:inline-block;font-family:'Oswald';text-transform:uppercase;letter-spacing:.6px;font-weight:600;
+      padding:14px 24px;border-radius:3px;text-decoration:none;font-size:1rem}
+  .btn-main{background:var(--clay);color:#fff}
+  .btn-ghost{background:transparent;color:var(--bone);border:2px solid #cdd8b6}
+  .btn-main:hover{background:#a3531f}
+  /* strip */
+  .strip{background:var(--moss);color:var(--bone)}
+  .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:18px 22px;text-align:center}
+  .strip .dt{font-size:1.5rem;color:#f0c27a}
+  .strip small{display:block;font-size:.82rem;color:#e3e9d4;text-transform:uppercase;letter-spacing:.5px}
+  /* sections */
+  section.pad{padding:60px 0}
+  .eyebrow{color:var(--moss2);font-weight:700;font-size:.8rem;letter-spacing:1.4px;text-transform:uppercase}
+  h2.sec{font-size:2rem;margin:6px 0 8px;color:var(--bark)}
+  .sub{color:#5a5648;max-width:60ch;margin-bottom:30px}
+  .grid{display:grid;gap:18px}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g2{grid-template-columns:1.1fr .9fr}
+  .card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:22px}
+  .card h3{font-size:1.12rem;color:var(--moss);margin-bottom:8px}
+  .clearlist{columns:2;column-gap:30px;list-style:none;margin-top:6px}
+  .clearlist li{padding:7px 0 7px 26px;position:relative;border-bottom:1px dashed var(--line)}
+  .clearlist li::before{content:"";position:absolute;left:0;top:13px;width:11px;height:11px;background:var(--field);
+      transform:rotate(45deg)}
+  /* before/after */
+  .ba{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+  .ba div{padding:54px 18px;text-align:center;font-family:'Oswald';text-transform:uppercase;letter-spacing:1px;color:#fff;position:relative}
+  .ba .before{background:repeating-linear-gradient(45deg,#4a4a32,#4a4a32 12px,#414129 12px,#414129 24px)}
+  .ba .after{background:linear-gradient(135deg,#5d7f3a,#6f9447)}
+  .ba span{display:block;font-size:.78rem;opacity:.85;margin-top:6px;font-family:'Source Sans 3';text-transform:none;letter-spacing:0}
+  .note{font-size:.82rem;color:#8a8472;font-style:italic;margin-top:10px}
+  /* area */
+  .area{background:var(--bark);color:var(--bone)}
+  .area .wrap{padding:54px 22px}
+  .towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+  .towns span{border:1px solid #5a553f;border-radius:30px;padding:7px 16px;font-size:.92rem;color:#e8e3d2}
+  /* contact */
+  .contact{background:linear-gradient(135deg,#4f7038,#385227);color:var(--bone)}
+  .contact .wrap{padding:56px 22px;display:grid;grid-template-columns:1fr 1fr;gap:34px}
+  .contact h2{color:#fff;font-size:1.9rem}
+  form{display:grid;gap:12px}
+  input,textarea{font-family:inherit;font-size:1rem;padding:12px 14px;border:none;border-radius:4px;width:100%}
+  textarea{min-height:96px;resize:vertical}
+  .phoneblock a{display:block;font-family:'Oswald';font-size:1.7rem;color:#f0c27a;text-decoration:none;margin:4px 0;letter-spacing:1px}
+  footer{background:#1b1812;color:#b7b09a;font-size:.85rem;text-align:center;padding:26px 22px}
+  @media(max-width:760px){
+    .hero h1{font-size:2.2rem}
+    .strip .wrap{grid-template-columns:1fr 1fr}
+    .g3,.g2,.contact .wrap{grid-template-columns:1fr}
+    .clearlist{columns:1}
+  }
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap">
+  <span><b>Broestler BrushCutting, LLC</b> · Easton, NY</span>
+  <span>Call or leave a voicemail — we're usually out on a job: <b>518-692-9074</b></span>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <span class="tag">Forestry mulching &amp; land reclamation</span>
+  <h1>The brush is winning. We bring the machine that takes it back.</h1>
+  <p class="lead">Overgrown pasture, grown-in hedgerows, wet bottoms and steep banks — cleared by a track machine built for ground a tractor or weed-whacker can't touch.</p>
+  <p class="quip">"Tackling the Weird and the Wild." Easton &amp; Greenwich, NY since 2009.</p>
+  <div class="cta-row">
+    <a href="#reach" class="btn btn-main">Tell us about your land</a>
+    <a href="tel:5186929074" class="btn btn-ghost">Call 518-692-9074</a>
+  </div>
+</div></header>
+
+<div class="strip"><div class="wrap">
+  <div><div class="dt">Wet &amp; steep</div><small>Ground a tractor can't reach</small></div>
+  <div><div class="dt">No mess</div><small>Mulched in place, not piled</small></div>
+  <div><div class="dt">Local</div><small>Washington Co. &amp; Capital District</small></div>
+  <div><div class="dt">Owner-run</div><small>One operator, your job</small></div>
+</div></div>
+
+<section class="pad"><div class="wrap">
+  <span class="eyebrow">What we clear and cut</span>
+  <h2 class="sec">If it's grown in, swampy, or too steep — that's the job</h2>
+  <p class="sub">Our machines navigate wet, swampy areas, hillsides and rough terrain to keep brush at bay and reclaim land you'd written off.</p>
+  <ul class="clearlist">
+    <li>Overgrown pastures &amp; fields</li>
+    <li>Grown-in hedgerows &amp; fence lines</li>
+    <li>Thick, heavy brush</li>
+    <li>Snowmobile &amp; horse trails</li>
+    <li>Ditches &amp; drainage edges</li>
+    <li>Steep banks &amp; rough terrain</li>
+    <li>Wet &amp; swampy ground</li>
+    <li>Overgrown backyards near house &amp; barns</li>
+  </ul>
+  <p class="note">Brush trimming also clears out homes for animal pests and disease-spreading insects — one less thing living in the thicket.</p>
+</div></section>
+
+<section class="pad" style="background:#efeada"><div class="wrap">
+  <span class="eyebrow">See the difference</span>
+  <h2 class="sec">Before it's cleared, and after</h2>
+  <p class="sub">This is the part buyers want to see most — and the one thing the current site is missing. Drop your real before/after photos straight into this gallery.</p>
+  <div class="ba">
+    <div class="before">Before<span>[ Placeholder — add a real "before" photo of overgrown ground ]</span></div>
+    <div class="after">After<span>[ Placeholder — add the matching "after" cleared shot ]</span></div>
+  </div>
+  <p class="note">Placeholder panels — swap in actual job photos. (Your current site still reads "Photos coming soon.")</p>
+</div></section>
+
+<section class="pad"><div class="wrap">
+  <span class="eyebrow">Beyond the brush</span>
+  <h2 class="sec">Mini-excavation &amp; hauling, same crew</h2>
+  <div class="grid g3" style="margin-top:8px">
+    <div class="card"><h3>Trenching</h3><p>Mini-excavator runs for power and water lines with little damage to the rest of your property.</p></div>
+    <div class="card"><h3>Drainage &amp; reclaim</h3><p>Cut drainage ditches and help reclaim wet, unusable areas so the ground drains and works again.</p></div>
+    <div class="card"><h3>Hauling &amp; removal</h3><p>Move and haul off manure, debris, gravel and compost — clearing tied off in one visit.</p></div>
+  </div>
+</div></section>
+
+<div class="area"><div class="wrap">
+  <span class="eyebrow" style="color:#f0c27a">Where we work</span>
+  <h2 class="sec" style="color:#fff">Based in Easton — out across the region</h2>
+  <p style="max-width:56ch;color:#d8d2bf">We live in Easton, New York and travel to the Capital District, the southern Adirondacks, western Vermont and Massachusetts.</p>
+  <div class="towns">
+    <span>Easton</span><span>Greenwich</span><span>Cambridge</span><span>Schuylerville</span>
+    <span>Saratoga County</span><span>Washington County</span><span>Southern Adirondacks</span><span>Western VT</span><span>Western MA</span>
+  </div>
+</div></div>
+
+<section class="contact" id="reach"><div class="wrap">
+  <div>
+    <span class="eyebrow" style="color:#f0c27a">Get it on the schedule</span>
+    <h2>Tell us about the land, get a visit</h2>
+    <p style="color:#e7ecd9;margin:10px 0 18px">The best way to reach us is by phone — leave a voicemail if we don't pick up, we're probably out working. Or send the details here and we'll call you back to set up a look.</p>
+    <div class="phoneblock">
+      <a href="tel:5186929074">518-692-9074</a>
+      <a href="tel:5187918716">518-791-8716</a>
+    </div>
+  </div>
+  <div>
+    <form onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';">
+      <input type="text" placeholder="Your name" required>
+      <input type="tel" placeholder="Best phone number" required>
+      <input type="text" placeholder="Town / where the land is">
+      <textarea placeholder="What needs clearing? (acres, how grown-in, wet or steep, trail or pasture...)"></textarea>
+      <button class="btn btn-main" type="submit" style="border:none;cursor:pointer">Request a site visit</button>
+      <span class="ok" style="display:none;color:#fff;font-weight:600">Thanks — we'll call you back to set up a look.</span>
+    </form>
+  </div>
+</div></section>
+
+<footer>
+  Broestler BrushCutting, LLC · Easton, NY · 518-692-9074 / 518-791-8716<br>
+  Land clearing · brush cutting · reclamation · mini-excavation — Washington County &amp; the Capital District.<br>
+  <span style="opacity:.6">Preview concept prepared by Onyx Rise Media — not the live site.</span>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cottrell's Farm Market — Six Greenhouses &amp; a Roadside Stand on Route 96, Waterloo NY</title>
+<meta name="description" content="Cottrell's Farm Market on Route 96 west of Waterloo, NY — six greenhouses of geraniums, hanging baskets, annuals, perennials and vegetable plants, plus a seasonal roadside produce stand. See what's ready and when we're open.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#4b8b3b; --green-d:#356328; --green-l:#7cb85f; --meadow:#a6d18a;
+    --tomato:#d1462f; --tomato-d:#ad3420; --geranium:#e0533a;
+    --cream:#fcf9f0; --paper:#f3efe0; --sky:#eaf3f8; --ink:#2f382a; --bark:#4c3d2c;
+    --muted:#5e6b52; --white:#fff; --shadow:0 14px 34px rgba(53,99,40,.16);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Nunito Sans',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+  h1,h2,h3,.disp{font-family:'Bitter',serif}
+  a{color:inherit}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--tomato);color:#fff;font-weight:700;padding:14px 30px;border-radius:40px;
+    text-decoration:none;box-shadow:0 8px 20px rgba(209,70,47,.32);transition:transform .15s,background .15s}
+  .btn:hover{transform:translateY(-2px);background:var(--tomato-d)}
+  .btn.leaf{background:var(--green)}
+  .btn.leaf:hover{background:var(--green-d)}
+  .btn.ghost{background:transparent;border:2px solid rgba(255,255,255,.72);color:#fff;box-shadow:none}
+
+  .top{background:var(--green-d);color:#dcecd2;font-size:.9rem}
+  .top .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;padding:9px 22px}
+  .top a{color:#fff;font-weight:700;text-decoration:none}
+
+  header.hero{position:relative;color:#fff;overflow:hidden;background:linear-gradient(160deg,var(--green) 0%,var(--green-d) 100%)}
+  .hero .wrap{position:relative;z-index:2;padding:60px 22px 96px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+  .eyebrow{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.32);
+    padding:6px 15px;border-radius:30px;font-weight:700;font-size:.82rem;margin-bottom:16px}
+  .hero h1{font-size:3rem;line-height:1.06;font-weight:700}
+  .hero h1 em{font-style:italic;color:#ffdca9}
+  .hero p.lede{font-size:1.15rem;max-width:42ch;margin-top:16px;color:#eaf5e3}
+  .hero .cta{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+  .statuscard{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:26px}
+  .statuscard h3{font-family:'Nunito Sans';text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;color:#ffdca9;margin-bottom:12px}
+  .statuscard .season{font-family:'Bitter';font-size:1.6rem;line-height:1.2;margin-bottom:8px}
+  .statuscard .dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:#9ce88f;box-shadow:0 0 0 4px rgba(156,232,143,.28);margin-right:8px;vertical-align:middle}
+  .statuscard p{color:#e8f3e2;font-size:.95rem}
+  .statuscard .ph{color:#ffd59a;font-style:italic;font-size:.82rem}
+  .wave{position:absolute;left:0;right:0;bottom:-1px;height:56px;display:block}
+
+  .banner{background:var(--tomato);color:#fff;text-align:center;font-weight:700}
+  .banner .wrap{padding:14px 22px;font-family:'Bitter';font-size:1.02rem}
+
+  section{padding:58px 0}
+  .kick{color:var(--tomato);font-weight:700;letter-spacing:.11em;text-transform:uppercase;font-size:.8rem;text-align:center;margin-bottom:6px}
+  h2.t{text-align:center;font-family:'Bitter';font-size:2.1rem;color:var(--green-d);margin-bottom:8px}
+  .sub{text-align:center;max-width:60ch;margin:0 auto 38px;color:var(--muted)}
+
+  .beds{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .bed{background:#fff;border-radius:16px;padding:24px 20px;text-align:center;box-shadow:var(--shadow);border-bottom:5px solid var(--meadow)}
+  .bed .ic{font-size:2rem;margin-bottom:8px}
+  .bed h3{font-family:'Bitter';color:var(--green-d);font-size:1.18rem;margin-bottom:6px}
+  .bed p{color:#5a6a4f;font-size:.92rem}
+
+  .split{background:var(--sky)}
+  .split .row{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .panel{background:#fff;border-radius:18px;padding:32px;box-shadow:var(--shadow);border-top:6px solid var(--green)}
+  .panel.market{border-top-color:var(--geranium)}
+  .panel h3{font-family:'Bitter';font-size:1.5rem;color:var(--green-d);margin-bottom:8px}
+  .panel.market h3{color:var(--tomato-d)}
+  .panel p{color:#54634a}
+  .panel ul{list-style:none;margin-top:12px}
+  .panel li{padding:7px 0 7px 26px;position:relative;color:var(--bark);font-size:.96rem}
+  .panel li::before{content:"🌿";position:absolute;left:0;top:6px;font-size:.9rem}
+  .panel.market li::before{content:"🍅"}
+
+  .why{background:var(--paper)}
+  .why .row{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+  .why .card{background:var(--green-d);color:#eaf5e3;border-radius:20px;padding:34px}
+  .why .card h2{font-family:'Bitter';color:#fff;font-size:1.75rem;margin-bottom:10px}
+  .why ul{list-style:none}
+  .why li{padding:11px 0 11px 32px;position:relative;border-bottom:1px solid #e2dcc8;color:var(--bark);font-weight:600}
+  .why li:last-child{border-bottom:0}
+  .why li::before{content:"✔";position:absolute;left:0;top:11px;color:var(--green);font-weight:900}
+
+  .visit{background:var(--green)}
+  .visit .grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:32px}
+  .vcard{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.24);border-radius:18px;padding:30px;color:#fff}
+  .vcard h3{font-family:'Bitter';color:#ffdca9;font-size:1.4rem;margin-bottom:14px}
+  .vcard .r{display:flex;gap:12px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.16)}
+  .vcard .r:last-child{border-bottom:0}
+  .vcard .r b{min-width:82px;color:#d3e8c9;font-weight:700}
+  .vcard .callbig{font-family:'Bitter';font-size:1.7rem;color:#fff;text-decoration:none;display:inline-block;margin-top:8px}
+  .vcard .ph{color:#ffd59a;font-style:italic;font-size:.82rem}
+  .visit form{display:grid;gap:12px;margin-top:6px}
+  .visit label{font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#d3e8c9;margin-bottom:4px;display:block}
+  .visit input,.visit textarea{width:100%;padding:11px 13px;border-radius:10px;border:1px solid rgba(255,255,255,.3);background:#fff;color:var(--ink);font-family:inherit;font-size:.95rem}
+  .visit .btn{width:100%;text-align:center;border:0;cursor:pointer}
+
+  footer{background:#22301c;color:#a7bd97;text-align:center;padding:36px 22px;font-size:.9rem}
+  footer .big{font-family:'Bitter';color:#fff;font-size:1.4rem;margin-bottom:6px}
+  .note{margin-top:14px;font-size:.8rem;color:#7d9070;max-width:70ch;margin-left:auto;margin-right:auto}
+
+  @media(max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;padding:46px 22px 84px}
+    .hero h1{font-size:2.2rem}
+    .beds{grid-template-columns:1fr 1fr}
+    .split .row,.why .row,.visit .grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <span>1200 State Route 96 · West of Waterloo village, NY 13165</span>
+  <span>Call the market: <a href="tel:13155390238">(315) 539-0238</a></span>
+</div></div>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">🌿 Six greenhouses on Route 96</span>
+      <h1>Baskets, bedding plants &amp; <em>homegrown produce</em> — right on Route 96.</h1>
+      <p class="lede">West of Waterloo village, six greenhouses fill up every spring with geraniums, hanging baskets, annuals, perennials and vegetable plants — and the roadside stand keeps going with produce through the growing season.</p>
+      <div class="cta">
+        <a class="btn" href="#visit">Hours &amp; directions</a>
+        <a class="btn ghost" href="#greenhouses">See what's growing</a>
+      </div>
+    </div>
+    <div class="statuscard">
+      <h3>Right now at Cottrell's</h3>
+      <div class="season"><span class="dot"></span>In season on Route 96</div>
+      <p>Greenhouse plants in spring, homegrown produce as it comes ripe. <span class="ph">Live "open today / what's ready now" status to be kept current by the family once this page is live.</span></p>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 56" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,28 C240,54 480,4 720,26 C960,48 1200,8 1440,30 L1440,56 L0,56 Z" fill="#fcf9f0"/>
+  </svg>
+</header>
+
+<div class="banner"><div class="wrap">Grown in our own greenhouses — you're buying from the family that raised it, not a big-box pallet.</div></div>
+
+<section id="greenhouses">
+  <div class="wrap">
+    <div class="kick">Under six houses of glass</div>
+    <h2 class="t">What's growing in the greenhouses</h2>
+    <p class="sub">Six greenhouses, filled a little differently every week as spring turns into summer. Here's the range — call ahead if you're after a certain plant or color.</p>
+    <div class="beds">
+      <div class="bed"><div class="ic">🌸</div><h3>Geraniums &amp; Annuals</h3><p>Geraniums, petunias, marigolds and porch-pot color, grown on-site.</p></div>
+      <div class="bed"><div class="ic">🪴</div><h3>Hanging Baskets</h3><p>Full, ready-to-hang baskets — the kind you can't rush into being.</p></div>
+      <div class="bed"><div class="ic">🍅</div><h3>Vegetable &amp; Herb Plants</h3><p>Tomatoes, peppers, herbs and garden starts, ready for your rows.</p></div>
+      <div class="bed"><div class="ic">🌼</div><h3>Perennials</h3><p>Hardy plants that come back year after year for the long-game garden.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="split">
+  <div class="wrap">
+    <div class="kick">Two reasons to pull in</div>
+    <h2 class="t">A greenhouse and a farm stand, one stop</h2>
+    <div class="row">
+      <div class="panel">
+        <h3>The Greenhouses</h3>
+        <p>Six houses of plants started right here — spring's the busy season, but the tables turn over as the weeks go.</p>
+        <ul>
+          <li>Geraniums, annuals &amp; bedding flats</li>
+          <li>Hanging baskets grown on the premises</li>
+          <li>Vegetable, tomato &amp; herb starts</li>
+          <li>Perennials for beds and borders</li>
+        </ul>
+      </div>
+      <div class="panel market">
+        <h3>The Farm Market</h3>
+        <p>When the plants slow down, the produce picks up — the roadside stand runs through the growing season with what's coming off local fields.</p>
+        <ul>
+          <li>Seasonal homegrown fruits &amp; vegetables</li>
+          <li>Pick-of-the-week produce as it ripens</li>
+          <li>A quick Route 96 stop on the way through</li>
+          <li><span style="font-style:italic;color:#8a795f">Exact produce &amp; seasons to confirm with the family</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <div class="row">
+      <div class="card">
+        <h2>Why buy from a grower, not a garden department?</h2>
+        <p>When plants are started a few miles from where they'll live, they're already used to Finger Lakes weather — no shock from a cross-country truck, no picked-over end-of-week racks. And the person ringing you up actually grew the thing and can tell you how to keep it going.</p>
+      </div>
+      <div>
+        <ul>
+          <li>Grown on-site in six greenhouses — not shipped in and marked up</li>
+          <li>Hardened to local weather, ready for your garden</li>
+          <li>Real growing advice from the family that raised it</li>
+          <li>Fresh, unpicked-over plants coming on all spring</li>
+          <li>Plants and produce in one Route 96 stop</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="kick" style="color:#ffdca9">Find us on Route 96</div>
+    <h2 class="t" style="color:#fff">Come see what's ready</h2>
+    <p class="sub" style="color:#e8f3e2">We run with the seasons, so hours shift between the spring plant rush and the summer produce weeks. Call before you drive out and we'll tell you what's open and what's ready.</p>
+    <div class="grid">
+      <div class="vcard">
+        <h3>Where &amp; when</h3>
+        <div class="r"><b>Address</b><span>1200 State Route 96, Waterloo, NY 13165 (west of the village)</span></div>
+        <div class="r"><b>Season</b><span>Spring plants → summer produce <span class="ph">(confirm dates)</span></span></div>
+        <div class="r"><b>Hours</b><span class="ph">To be confirmed by the family &amp; kept current here</span></div>
+        <div class="r"><b>Family</b><span>The Cottrell family <span class="ph">(confirm)</span></span></div>
+        <a class="callbig" href="tel:13155390238">(315) 539-0238</a>
+        <div class="ph">Second line on some listings: (315) 730-0189 — confirm current number</div>
+      </div>
+      <div class="vcard">
+        <h3>Ask what's ready</h3>
+        <p style="color:#e8f3e2;margin-bottom:4px">After a certain basket, color, or the first sweet corn? Send a quick note and we'll tell you if it's on the tables.</p>
+        <form onsubmit="event.preventDefault();alert('Thanks! This is a preview form. On the live site your note would reach Cottrell\'s directly.');">
+          <div><label>Name</label><input required placeholder="First name"></div>
+          <div><label>Phone or email</label><input required placeholder="Best way to reach you"></div>
+          <div><label>What are you after?</label><textarea rows="2" placeholder="Do you have big geranium baskets / Roma tomato starts / sweet corn yet?"></textarea></div>
+          <button class="btn" type="submit">Send my note</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="big">Cottrell's Farm Market</div>
+  <div>1200 State Route 96 · Waterloo, NY 13165 · (315) 539-0238</div>
+  <div style="margin-top:8px">Six greenhouses of homegrown plants &amp; a seasonal roadside farm stand</div>
+  <div class="note">Preview concept prepared by Onyx Rise Media for review. Hours, exact seasons, produce list and the current phone number are placeholders to be confirmed with the family before this page goes live.</div>
+</footer>
+
+</body>
+</html>

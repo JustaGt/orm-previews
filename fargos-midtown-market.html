@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fargo's Midtown Market — Deli, Pizza &amp; Wings on Route 11, Adams NY · Call It In</title>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Caveat:wght@600&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--red:#b3271e;--red-dark:#8c1c15;--mustard:#e0a51f;--paper:#faf5ea;--kraft:#efe4cd;--ink:#26211a;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+/* header */
+header{background:var(--red);color:#fff;padding:12px 0;position:sticky;top:0;z-index:40}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.brand{font-family:'Alfa Slab One',serif;font-size:1.25rem;letter-spacing:.5px}
+.brand small{display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:#f5cdc9}
+.callnow{background:#fff;color:var(--red);text-decoration:none;font-weight:800;padding:10px 18px;border-radius:999px}
+/* hero */
+.hero{background:var(--kraft);padding:66px 0 58px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;bottom:-40px;right:-40px;width:220px;height:220px;border-radius:50%;background:var(--mustard);opacity:.18}
+.hero h1{font-family:'Alfa Slab One',serif;font-size:clamp(1.9rem,5vw,3.2rem);line-height:1.1;color:var(--red-dark);max-width:620px}
+.hero .hand{font-family:'Caveat',cursive;font-size:1.5rem;color:var(--red);margin-top:8px}
+.hero p.sub{max-width:520px;margin:16px 0 26px;font-size:1.08rem}
+.btn{display:inline-block;text-decoration:none;font-weight:800;padding:15px 30px;border-radius:999px}
+.btn-red{background:var(--red);color:#fff;font-size:1.05rem}
+.btn-line{border:3px solid var(--red);color:var(--red);margin-left:10px}
+.hero .hours{margin-top:26px;font-size:.92rem;font-weight:600;color:#5c5342}
+/* specials strip */
+.specials{background:var(--ink);color:#fff;padding:16px 0}
+.specials .wrap{display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center;text-align:center}
+.specials .tag{background:var(--mustard);color:var(--ink);font-weight:800;font-size:.78rem;letter-spacing:1.5px;padding:6px 12px;border-radius:4px;text-transform:uppercase}
+.specials .hand{font-family:'Caveat',cursive;font-size:1.35rem}
+/* menu board */
+section{padding:60px 0}
+.kicker{color:var(--red);text-transform:uppercase;letter-spacing:2.5px;font-weight:800;font-size:.78rem}
+h2.sec{font-family:'Alfa Slab One',serif;font-size:clamp(1.5rem,3.4vw,2.2rem);color:var(--ink);margin:6px 0 24px}
+.board{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+.panel{background:var(--ink);color:#f4eee2;border-radius:10px;padding:26px;border-top:6px solid var(--mustard)}
+.panel h3{font-family:'Alfa Slab One',serif;color:var(--mustard);letter-spacing:1px;font-size:1.05rem;margin-bottom:14px;text-transform:uppercase}
+.panel li{list-style:none;padding:7px 0;border-bottom:1px dashed #4a4438;font-size:.95rem;display:flex;justify-content:space-between;gap:10px}
+.panel li em{font-family:'Caveat',cursive;font-style:normal;color:#d8cfba;font-size:1.05rem}
+.note{font-size:.8rem;color:#877a60;margin-top:14px}
+/* about */
+.about{background:var(--kraft)}
+.about .wrap{display:grid;gap:34px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));align-items:center}
+.about .photo{background:#fff;border:10px solid #fff;box-shadow:0 6px 18px rgba(38,33,26,.2);transform:rotate(-1.5deg);min-height:250px;display:flex;align-items:center;justify-content:center;color:#877a60;font-size:.85rem;text-align:center;padding:14px}
+.about p{margin-bottom:12px}
+/* find */
+.find .cards{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.fcard{background:#fff;border-radius:10px;padding:26px;box-shadow:0 2px 12px rgba(38,33,26,.08);border-left:6px solid var(--red)}
+.fcard h3{margin-bottom:8px;color:var(--red-dark)}
+.fcard a{color:var(--red);font-weight:800}
+/* footer cta */
+.bigcall{background:var(--red);color:#fff;text-align:center}
+.bigcall h2{font-family:'Alfa Slab One',serif;font-size:clamp(1.6rem,4vw,2.4rem);margin-bottom:10px}
+.bigcall p{color:#f5cdc9;margin-bottom:24px}
+.bigcall .btn{background:#fff;color:var(--red)}
+footer{background:var(--ink);color:#877a60;text-align:center;padding:22px 12px;font-size:.85rem}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">FARGO'S MIDTOWN MARKET<small>Route 11 · Adams, NY</small></div>
+    <a class="callnow" href="tel:+13152323333">☎ (315) 232-3333</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>The lunch line on Route 11 moves fast. Calling ahead moves faster.</h1>
+    <div class="hand">— sandwiches, wraps, soups, pizza &amp; wings, made at the counter</div>
+    <p class="sub">Fargo's is Adams' market-and-deli: a full deli case, hot pizza and wings, grab-n-go for the road, and the drinks-and-snacks aisles that finish the job.</p>
+    <a class="btn btn-red" href="tel:+13152323333">Call it in</a>
+    <a class="btn btn-line" href="#menu">See the board</a>
+    <div class="hours">Open Tue–Sun · [confirm current hours with owner] · 10412 US Route 11, Suite 2, Adams</div>
+  </div>
+</section>
+
+<div class="specials">
+  <div class="wrap">
+    <span class="tag">Today at the counter</span>
+    <span class="hand">[Daily special goes here — updated as often as the deli case changes]</span>
+  </div>
+</div>
+
+<section id="menu">
+  <div class="wrap">
+    <p class="kicker">The board</p>
+    <h2 class="sec">Read it in five seconds. Order it in one call.</h2>
+    <div class="board">
+      <div class="panel">
+        <h3>Deli Counter</h3>
+        <ul>
+          <li>Stacked sandwiches <em>built to order</em></li>
+          <li>Wraps &amp; salads <em>lunch-break sized</em></li>
+          <li>Soups <em>ask what's on</em></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Pizza &amp; Wings</h3>
+        <ul>
+          <li>Hot pizza <em>family night, solved</em></li>
+          <li>Wings <em>sauced your way</em></li>
+          <li>Munchies <em>game-day trays</em></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Grab-n-Go</h3>
+        <ul>
+          <li>Ready-made meals <em>no waiting</em></li>
+          <li>Drinks &amp; snacks <em>for the road</em></li>
+          <li>Market staples <em>skip the extra stop</em></li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">[Menu items and prices to be filled from the real counter menu — nothing invented, nothing scraped from third-party sites.]</p>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <div class="photo">[Photo placeholder — the counter, the case, the crew. Real photos beat stock every time in a village this size.]</div>
+    <div>
+      <p class="kicker">The market</p>
+      <h2 class="sec">A Fargo's counter, in the middle of Adams.</h2>
+      <p>The Fargo name has fed the South Jeff area for years, and the Midtown Market carries it on: a small market with a serious deli in the village of Adams, minutes off the I-81 exit on Route 11.</p>
+      <p>Regulars know the drill — check the specials, call it in, walk past the line. Now the specials live here instead of buried in a feed.</p>
+    </div>
+  </div>
+</section>
+
+<section class="find">
+  <div class="wrap">
+    <p class="kicker">Find us</p>
+    <h2 class="sec">Right on Route 11, easy off I-81.</h2>
+    <div class="cards">
+      <div class="fcard"><h3>Address</h3><p>10412 US Route 11, Suite 2<br>Adams, NY 13605</p></div>
+      <div class="fcard"><h3>Call ahead</h3><p><a href="tel:+13152323333">(315) 232-3333</a><br>Order by phone — pick it up hot.</p></div>
+      <div class="fcard"><h3>Hours</h3><p>Tue–Sun<br>[Confirm hours — online listings disagree; this page becomes the answer]</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bigcall">
+  <div class="wrap">
+    <h2>Hungry now?</h2>
+    <p>One call and it's waiting at the counter.</p>
+    <a class="btn" href="tel:+13152323333">☎ (315) 232-3333</a>
+  </div>
+</section>
+
+<footer>Fargo's Midtown Market · 10412 US Route 11, Suite 2, Adams, NY 13605 · (315) 232-3333<br>Website concept by Onyx Rise Media</footer>
+
+</body>
+</html>

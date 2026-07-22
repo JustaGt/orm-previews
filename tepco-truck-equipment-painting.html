@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TEPCO Truck &amp; Equipment Painting — Sandblasting, Refinishing &amp; Fabrication — Bainbridge, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--steel:#1e2328;--panel:#2b3238;--hazard:#f3a712;--paint:#c2410c;--fog:#eceff1;--line:#3c454d;--txt:#0f1418}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Roboto',sans-serif;background:var(--fog);color:var(--txt);line-height:1.6}
+h1,h2,h3,.cond{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.02em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.stripe{height:10px;background:repeating-linear-gradient(45deg,var(--hazard) 0 18px,var(--steel) 18px 36px)}
+header{background:var(--steel);color:#fff;padding:14px 0}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.mark{font-family:'Barlow Condensed';font-size:1.55rem;font-weight:700;letter-spacing:.06em}
+.mark em{font-style:normal;color:var(--hazard)}
+.tel{background:var(--hazard);color:var(--steel);padding:10px 18px;font-weight:700;text-decoration:none;border-radius:2px;font-size:1rem}
+.hero{background:linear-gradient(180deg,var(--steel),var(--panel));color:#fff;padding:70px 0 60px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-60px;bottom:-40px;width:340px;height:340px;border:28px solid rgba(243,167,18,.07);border-radius:50%}
+.eyebrow{color:var(--hazard);font-weight:700;font-size:.85rem;letter-spacing:.18em}
+.hero h1{font-size:clamp(2.1rem,5.4vw,3.5rem);line-height:1.05;margin:14px 0 16px;max-width:20ch}
+.hero p{max-width:56ch;color:#c6ced4;font-size:1.06rem}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;text-decoration:none;padding:15px 26px;font-weight:700;border-radius:2px;font-size:1rem}
+.btn.primary{background:var(--paint);color:#fff}
+.btn.ghost{border:2px solid var(--hazard);color:var(--hazard)}
+.bar{background:var(--hazard);color:var(--steel);padding:14px 0;font-weight:700}
+.bar .wrap{display:flex;gap:26px;flex-wrap:wrap;justify-content:space-between;font-size:.95rem}
+section{padding:64px 0}
+.k{color:var(--paint);font-weight:700;font-size:.8rem;letter-spacing:.18em;font-family:'Barlow Condensed';text-transform:uppercase}
+h2{font-size:clamp(1.7rem,4vw,2.5rem);margin:6px 0 12px}
+.lede{max-width:60ch;color:#3f4a52}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:30px}
+.job{background:#fff;border-left:5px solid var(--paint);padding:24px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.job h3{font-size:1.3rem;margin-bottom:6px}
+.job p{font-size:.94rem;color:#4b565e}
+.booth{background:var(--steel);color:#fff}
+.booth h2{color:#fff}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:2px;margin-top:32px;border:1px solid var(--line)}
+.step{padding:26px 22px;background:var(--panel);position:relative}
+.step:before{counter-increment:s;content:"0" counter(s);font-family:'Barlow Condensed';font-size:2.4rem;color:var(--hazard);display:block;line-height:1}
+.step h3{font-size:1.1rem;margin:6px 0 6px}
+.step p{font-size:.9rem;color:#aeb8bf}
+.two{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:start}
+.spec{background:#fff;border:1px solid #d5dbdf;padding:26px}
+.spec h3{font-size:1.25rem;margin-bottom:12px}
+.spec ul{list-style:none}
+.spec li{padding:9px 0;border-bottom:1px dashed #dde2e6;font-size:.95rem;display:flex;gap:10px}
+.spec li:last-child{border:0}
+.spec li b{color:var(--paint)}
+.area{background:#fff;border-top:6px solid var(--hazard)}
+.towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.town{background:var(--fog);border:1px solid #d5dbdf;padding:9px 16px;font-weight:500;font-size:.92rem}
+.quote{background:var(--panel);color:#fff}
+.quote h2{color:#fff}
+.form{background:var(--steel);border:1px solid var(--line);padding:30px;margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form label{display:block;font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:.1em;font-size:.82rem;color:var(--hazard);margin-bottom:6px}
+.form input,.form select,.form textarea{width:100%;padding:12px;background:#fff;border:0;font-family:inherit;font-size:.95rem}
+.form .full{grid-column:1/-1}
+.form button{grid-column:1/-1;background:var(--paint);color:#fff;border:0;padding:16px;font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:.1em;font-weight:700;font-size:1.15rem;cursor:pointer}
+.note{font-size:.85rem;color:#9aa5ac;margin-top:12px}
+footer{background:var(--steel);color:#8f9aa2;padding:40px 0;font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer b{color:#fff;display:block;font-size:1.05rem;margin-bottom:4px}
+footer a{color:var(--hazard);text-decoration:none}
+@media(max-width:820px){.two{grid-template-columns:1fr}.form{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="stripe"></div>
+<header><div class="wrap">
+  <div class="mark">TEP<em>CO</em> <span style="font-size:.85rem;letter-spacing:.14em;color:#8f9aa2">TRUCK &amp; EQUIPMENT PAINTING</span></div>
+  <a class="tel" href="tel:6079675000">CALL (607) 967-5000</a>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="eyebrow">1 FRONT ST · BAINBRIDGE, NY · OFF ROUTE 7</div>
+  <h1>Blasted to bare metal. Painted to stay that way.</h1>
+  <p>Dump bodies, plow trucks, trailers, tanks and equipment get stripped, sandblasted, primed and refinished in Bainbridge — then go back on the road looking like the day they were spec'd. Truck reconditioning, metal fabrication and repair under one roof.</p>
+  <div class="cta-row">
+    <a class="btn primary" href="#quote">Send photos → get a blast &amp; paint quote</a>
+    <a class="btn ghost" href="tel:6079675000">Call the shop</a>
+  </div>
+</div></div>
+
+<div class="bar"><div class="wrap">
+  <span>SANDBLASTING</span><span>TRUCK &amp; EQUIPMENT REFINISHING</span><span>METAL FABRICATION</span><span>BODY &amp; FRAME REPAIR</span>
+</div></div>
+
+<section><div class="wrap">
+  <div class="k">What rolls into the shop</div>
+  <h2>Work trucks, not show cars</h2>
+  <p class="lede">Rust doesn't care that the truck still runs. When the box is pitted, the frame is scaling and the paint is chalking off, TEPCO takes it down to clean steel and builds the finish back up — so the unit earns another decade instead of getting traded at a loss.</p>
+  <div class="grid">
+    <div class="job"><h3>Dump bodies &amp; plow gear</h3><p>Beds, hoists, wings and plow frames blasted out of the salt damage and recoated before they eat through.</p></div>
+    <div class="job"><h3>Trailers &amp; equipment</h3><p>Flatbeds, tanks, excavators, loaders, farm equipment — repainted in the color and number scheme you actually run.</p></div>
+    <div class="job"><h3>Fleet color matching</h3><p>Running six trucks that should all be the same shade? We match to the fleet, not to a chart on a wall.</p></div>
+    <div class="job"><h3>Fab &amp; repair first</h3><p>Cracked cross-members, rotted floors, broken brackets get welded and fabricated in-house before the primer coat goes on.</p></div>
+  </div>
+</div></section>
+
+<section class="booth"><div class="wrap">
+  <div class="k" style="color:var(--hazard)">Our process</div>
+  <h2>Four stages, no shortcuts in between</h2>
+  <div class="steps">
+    <div class="step"><h3>Strip &amp; blast</h3><p>Old coating, rust and scale come off. Bare, profiled steel is the only surface worth painting.</p></div>
+    <div class="step"><h3>Repair &amp; fabricate</h3><p>Welding, patch panels, brackets, floors — the metalwork is fixed before it's hidden under paint.</p></div>
+    <div class="step"><h3>Prime</h3><p>Primer that suits the unit and the abuse it takes — road salt, gravel, hydraulic fluid, sun.</p></div>
+    <div class="step"><h3>Topcoat &amp; reassemble</h3><p>Finish coat, decals and lights back on, and the truck leaves ready to work Monday morning.</p></div>
+  </div>
+  <p class="note">Coating systems, cure times and turnaround windows vary by unit — call with the make, model and what it hauls. [Confirm current turnaround before publishing.]</p>
+</div></section>
+
+<section><div class="wrap"><div class="two">
+  <div>
+    <div class="k">Why owners bring trucks here</div>
+    <h2>A repaint is cheaper than a replacement</h2>
+    <p class="lede">A new dump truck is a six-figure decision. A blast-and-repaint on a sound frame is a fraction of that, and it buys years. TEPCO has been doing exactly this kind of work on Front Street in Bainbridge — for contractors, farms, municipalities and owner-operators who need the unit back, not a sales pitch.</p>
+    <p class="lede" style="margin-top:14px">Shop crew of roughly 5–9 people. Small enough that the person who quotes your truck is the person who blasts it.</p>
+  </div>
+  <div class="spec">
+    <h3>Straight answers</h3>
+    <ul>
+      <li><b>Where:</b> 1 Front St, Bainbridge NY 13733</li>
+      <li><b>Phone:</b> (607) 967-5000</li>
+      <li><b>Hours:</b> Mon–Fri [CONFIRM: listings show both 8:00–4:30 and 9:00–5:00 — one true set of hours goes here]</li>
+      <li><b>Drop-off:</b> Call first so the booth is open when you arrive</li>
+      <li><b>Estimates:</b> Photos by text or email, or drive it in</li>
+    </ul>
+  </div>
+</div></div></section>
+
+<section class="area"><div class="wrap">
+  <div class="k">Service area</div>
+  <h2>Within a tank of diesel of Bainbridge</h2>
+  <p class="lede">Right off Route 7 and minutes from I-88 — an easy run for fleets across Chenango, Delaware, Otsego and Broome counties.</p>
+  <div class="towns">
+    <span class="town">Bainbridge</span><span class="town">Afton</span><span class="town">Sidney</span><span class="town">Unadilla</span><span class="town">Norwich</span><span class="town">Oxford</span><span class="town">Greene</span><span class="town">Walton</span><span class="town">Oneonta</span><span class="town">Binghamton</span>
+  </div>
+</div></section>
+
+<section class="quote" id="quote"><div class="wrap">
+  <div class="k" style="color:var(--hazard)">Get a number</div>
+  <h2>Tell us what it is and what it's for</h2>
+  <p class="lede" style="color:#c6ced4">Photos of the worst corner of the truck get you the most accurate quote. Send them over and we'll come back with a realistic price and a slot in the schedule.</p>
+  <form class="form" onsubmit="return false">
+    <div><label>Name</label><input type="text" placeholder="Your name"></div>
+    <div><label>Phone</label><input type="tel" placeholder="(607) 000-0000"></div>
+    <div><label>Unit type</label>
+      <select><option>Dump body / plow truck</option><option>Trailer</option><option>Tank</option><option>Excavator / loader</option><option>Farm equipment</option><option>Other</option></select>
+    </div>
+    <div><label>Work needed</label>
+      <select><option>Sandblast + repaint</option><option>Repaint only</option><option>Fabrication / repair</option><option>Not sure — take a look</option></select>
+    </div>
+    <div class="full"><label>What's wrong with it?</label><textarea rows="4" placeholder="Rusted-out box floor, frame is scaling, need it back before plow season…"></textarea></div>
+    <button>Request a blast &amp; paint quote</button>
+  </form>
+  <p class="note">Prefer to talk it through? Call (607) 967-5000 during shop hours.</p>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b>TEPCO Truck &amp; Equipment Painting</b>1 Front St, Bainbridge, NY 13733<br><a href="tel:6079675000">(607) 967-5000</a></div>
+  <div><b>Also on Front Street</b>TEPCO Automotive — parts counter<br>[Confirm how the two businesses should be presented]</div>
+  <div><b>Concept preview</b>Prepared by Onyx Rise Media<br>Not a live site — for review only</div>
+</div></footer>
+<div class="stripe"></div>
+</body>
+</html>

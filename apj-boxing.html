@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>APJ Boxing Club — Poughkeepsie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{ --charcoal:#14181f; --red:#e23b2e; --bone:#f2efe9; --grey:#9aa0aa; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',sans-serif;background:var(--charcoal);color:var(--bone);line-height:1.6;overflow-x:hidden}
+  h1,h2,h3,.display{font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:.02em;line-height:.95}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  nav{position:sticky;top:0;z-index:50;background:rgba(20,24,31,.92);backdrop-filter:blur(8px);border-bottom:2px solid var(--red)}
+  .navin{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;max-width:1180px;margin:0 auto}
+  .brand{font-family:'Bebas Neue';font-size:30px;letter-spacing:.06em}
+  .brand span{color:var(--red)}
+  .navcta{display:flex;align-items:center;gap:18px}
+  .navlinks{display:flex;gap:26px;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.08em}
+  .navlinks a:hover{color:var(--red)}
+  .btn{display:inline-block;background:var(--red);color:#fff;padding:13px 22px;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.1em;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);transition:.2s}
+  .btn:hover{background:#fff;color:var(--charcoal)}
+  .btn-ghost{background:transparent;border:2px solid var(--bone);color:var(--bone);clip-path:none}
+  .btn-ghost:hover{background:var(--bone);color:var(--charcoal)}
+  .hero{position:relative;min-height:88vh;display:grid;grid-template-columns:1.15fr .85fr;align-items:stretch}
+  .hero-l{padding:72px 28px 72px 0;display:flex;flex-direction:column;justify-content:center;max-width:660px;margin-left:auto;padding-left:28px}
+  .kicker{color:var(--red);font-weight:700;text-transform:uppercase;letter-spacing:.28em;font-size:13px;margin-bottom:18px}
+  .hero h1{font-size:clamp(64px,9vw,128px)}
+  .hero h1 .out{-webkit-text-stroke:2px var(--bone);color:transparent}
+  .hero p.sub{font-size:19px;color:var(--grey);margin:22px 0 30px;max-width:480px}
+  .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-r{position:relative;background:linear-gradient(180deg,rgba(20,24,31,.5),rgba(20,24,31,.78)),url('https://images.unsplash.com/photo-1517438322307-e67111335449?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:#1d222b}
+  .hero-r::after{content:"EST. 2011";position:absolute;bottom:26px;right:26px;z-index:2;font-family:'Bebas Neue';font-size:26px;letter-spacing:.1em;background:var(--red);padding:6px 14px}
+  .stats{display:flex;gap:38px;margin-top:38px}
+  .stat .n{font-family:'Bebas Neue';font-size:46px;color:var(--red);line-height:1}
+  .stat .l{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--grey)}
+  .ribbon{background:var(--red);color:#fff;overflow:hidden;white-space:nowrap;padding:12px 0;border-top:2px solid #14181f;border-bottom:2px solid #14181f}
+  .ribbon .track{display:inline-block;animation:scroll 22s linear infinite;font-family:'Bebas Neue';font-size:26px;letter-spacing:.14em}
+  .ribbon .track span{margin:0 26px}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  section{padding:84px 0}
+  .sec-h{font-size:clamp(40px,6vw,76px);margin-bottom:8px}
+  .sec-k{color:var(--red);font-weight:700;text-transform:uppercase;letter-spacing:.22em;font-size:13px;margin-bottom:10px}
+  .prog{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid #262b34;margin-top:40px}
+  .prog .item{padding:32px 30px;border:1px solid #262b34;display:flex;flex-direction:column;gap:8px;transition:.2s}
+  .prog .item:hover{background:#1b2029}
+  .prog .item .top{display:flex;justify-content:space-between;align-items:baseline}
+  .prog .item h3{font-size:34px}
+  .prog .item .price{font-family:'Bebas Neue';font-size:26px;color:var(--red)}
+  .prog .item p{color:var(--grey);font-size:14.5px}
+  .feature{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:0;border:1px solid #262b34}
+  .feature .ph{min-height:440px;background:linear-gradient(140deg,rgba(20,24,31,.35),rgba(20,24,31,.7)),url('https://images.unsplash.com/photo-1651707999601-cba87015439c?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:#23282f}
+  .feature .txt{padding:54px 50px}
+  .feature .txt h2{font-size:54px;margin-bottom:14px}
+  .feature .txt p{color:#c8ccd2;margin-bottom:16px}
+  .checks{list-style:none;margin-top:18px}
+  .checks li{padding:8px 0;border-bottom:1px solid #262b34;font-weight:600;font-size:14px}
+  .checks li::before{content:"›";color:var(--red);font-weight:800;margin-right:12px}
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px}
+  .gal .tile{position:relative;overflow:hidden;aspect-ratio:1/1;display:flex;flex-direction:column;justify-content:flex-end;padding:20px;background-size:cover;background-position:center;background-color:#23282f;transition:.3s}
+  .gal .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,24,31,.15) 0%,rgba(20,24,31,.82) 100%)}
+  .gal .tile:hover{transform:translateY(-3px)}
+  .gal .tile b{position:relative;z-index:1;font-family:'Bebas Neue';font-weight:400;font-size:38px;color:var(--red);line-height:1}
+  .gal .tile span{position:relative;z-index:1;font-family:'Bebas Neue';font-size:23px;letter-spacing:.06em;color:var(--bone)}
+  .t1{background-image:url('https://images.unsplash.com/photo-1716307046875-4c4ba2f43cab?auto=format&fit=crop&w=900&q=80')}
+  .t2{background-image:url('https://images.unsplash.com/photo-1716306886418-f84f6d4c2f3a?auto=format&fit=crop&w=900&q=80')}
+  .t3{background-image:url('https://images.unsplash.com/photo-1636302925863-6ad504baaf3c?auto=format&fit=crop&w=900&q=80')}
+  .t4{background-image:url('https://images.unsplash.com/photo-1561532325-7d5231a2dede?auto=format&fit=crop&w=900&q=80')}
+  .t5{background-image:url('https://images.unsplash.com/photo-1557564437-0995702f88fc?auto=format&fit=crop&w=900&q=80')}
+  .t6{background-image:url('https://images.unsplash.com/photo-1726867863287-aba3393812d0?auto=format&fit=crop&w=900&q=80')}
+  .contact{background:#0e1117;border-top:2px solid var(--red)}
+  .cgrid{display:grid;grid-template-columns:.85fr 1.15fr;gap:46px;margin-top:40px}
+  .info p{margin-bottom:14px;color:#c8ccd2}
+  .info .lab{color:var(--red);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:12px;display:block;margin-bottom:2px}
+  form{display:grid;gap:14px}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  input,textarea{width:100%;padding:14px;background:#171c25;border:1px solid #2a313c;color:var(--bone);font-family:inherit;font-size:15px}
+  input:focus,textarea:focus{outline:none;border-color:var(--red)}
+  button{cursor:pointer;border:none;font-family:inherit}
+  .thanks{padding:40px;background:#171c25;border-left:4px solid var(--red);text-align:center}
+  .thanks h3{font-size:40px;margin-bottom:8px}
+  footer{background:#0a0c10;padding:30px;text-align:center;color:var(--grey);font-size:13px;letter-spacing:.05em}
+  @media(max-width:860px){
+    .navlinks{display:none}
+    .hero{grid-template-columns:1fr}
+    .hero-l{padding:48px 24px;max-width:none}
+    .hero-r{min-height:320px;order:-1}
+    .stats{gap:24px}
+    .prog,.feature,.cgrid{grid-template-columns:1fr}
+    .feature .ph{min-height:280px}
+    .feature .txt{padding:36px 28px}
+    .gal{grid-template-columns:1fr 1fr}
+    .row2{grid-template-columns:1fr}
+    section{padding:56px 0}
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="navin">
+    <div class="brand">APJ<span>•</span>BOXING</div>
+    <div class="navcta">
+      <div class="navlinks">
+        <a href="#programs">Programs</a>
+        <a href="#why">Why APJ</a>
+        <a href="#gym">The Gym</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a href="tel:+18455053059" class="btn">Call (845) 505-3059</a>
+    </div>
+  </div>
+</nav>
+<header class="hero">
+  <div class="hero-l">
+    <div class="kicker">Poughkeepsie • Dutchess Turnpike</div>
+    <h1>WE BUILD<br><span class="out">CHAMPIONS</span></h1>
+    <p class="sub">Real boxing on Dutchess Turnpike since 2011. Amateurs stepping into their first bout, pros chasing a title, and folks who just want to hit something hard after work — everybody trains here.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn">Book Free Trial</a>
+      <a href="#programs" class="btn btn-ghost">See Programs</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="n">2011</div><div class="l">Building Champs</div></div>
+      <div class="stat"><div class="n">40+</div><div class="l">Amateur Bouts</div></div>
+      <div class="stat"><div class="n">6</div><div class="l">Days A Week</div></div>
+    </div>
+  </div>
+  <div class="hero-r"></div>
+</header>
+<div class="ribbon">
+  <div class="track">
+    <span>AMATEUR &amp; PRO</span>•<span>FITNESS BOXING</span>•<span>BABY BOXING</span>•<span>CLUB-X KICKBOXING</span>•<span>WE BUILD CHAMPIONS</span>•<span>AMATEUR &amp; PRO</span>•<span>FITNESS BOXING</span>•<span>BABY BOXING</span>•<span>CLUB-X KICKBOXING</span>•<span>WE BUILD CHAMPIONS</span>•
+  </div>
+</div>
+<section id="programs" class="wrap">
+  <div class="sec-k">Step In The Ring</div>
+  <h2 class="sec-h">PROGRAMS</h2>
+  <div class="prog">
+    <div class="item">
+      <div class="top"><h3>Amateur &amp; Pro Boxing</h3><div class="price">$140/mo</div></div>
+      <p>Sparring-track coaching for fighters who want to compete. Footwork, ring IQ, conditioning and corner work that gets you bout-ready.</p>
+    </div>
+    <div class="item">
+      <div class="top"><h3>Fitness Boxing</h3><div class="price">$110/mo</div></div>
+      <p>Heavy bag rounds, mitt work and conditioning — no contact required. The hardest, most honest workout in Poughkeepsie.</p>
+    </div>
+    <div class="item">
+      <div class="top"><h3>Baby Boxing (Kids)</h3><div class="price">$95/mo</div></div>
+      <p>Ages 6–12 learn the fundamentals — balance, focus and respect — in a fun, structured class that burns off all that energy.</p>
+    </div>
+    <div class="item">
+      <div class="top"><h3>Club-X Women's Kickboxing</h3><div class="price">$120/mo</div></div>
+      <p>Women-only kickboxing built for power and stress relief. Strong crew, loud music, zero judgment. Bring a friend.</p>
+    </div>
+  </div>
+</section>
+<section id="why" class="wrap">
+  <div class="feature">
+    <div class="ph"></div>
+    <div class="txt">
+      <div class="sec-k">Why APJ</div>
+      <h2>A real gym,<br>not a trend.</h2>
+      <p>We've been on Dutchess Turnpike since 2011, and the coaching shows it. You learn the sweet science the right way — head movement, distance, and the kind of conditioning that only comes from honest rounds.</p>
+      <ul class="checks">
+        <li>Coaches who've worked real corners, amateur to pro</li>
+        <li>Programs for every age — kids to competitors</li>
+        <li>Tight-knit crew that pushes you and has your back</li>
+        <li>Free trial class before you commit to anything</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section id="gym" class="wrap">
+  <div class="sec-k">Inside The Club</div>
+  <h2 class="sec-h">THE GYM</h2>
+  <div class="gal">
+    <div class="tile t1"><b>01</b><span>The Ring</span></div>
+    <div class="tile t2"><b>02</b><span>Heavy Bag Room</span></div>
+    <div class="tile t3"><b>03</b><span>Mitt &amp; Pad Work</span></div>
+    <div class="tile t4"><b>04</b><span>Gloves Up</span></div>
+    <div class="tile t5"><b>05</b><span>Conditioning</span></div>
+    <div class="tile t6"><b>06</b><span>The Crew</span></div>
+  </div>
+</section>
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="sec-k">Come Train</div>
+    <h2 class="sec-h">FIND US</h2>
+    <div class="cgrid">
+      <div class="info">
+        <p><span class="lab">Address</span>677 Dutchess Turnpike<br>Poughkeepsie, NY</p>
+        <p><span class="lab">Phone</span><a href="tel:+18455053059">(845) 505-3059</a></p>
+        <p><span class="lab">Email</span><a href="mailto:info@apjboxing.com">info@apjboxing.com</a></p>
+        <p><span class="lab">Hours</span>Mon–Fri 6am–9pm<br>Sat 8am–2pm • Sun by appointment</p>
+      </div>
+      <div>
+        <form id="apjform" onsubmit="apjThx(event)">
+          <div class="row2">
+            <input type="text" placeholder="Your name" required>
+            <input type="tel" placeholder="Phone" required>
+          </div>
+          <input type="email" placeholder="Email">
+          <textarea rows="4" placeholder="Which program are you interested in? (Amateur, fitness, kids, Club-X…)" required></textarea>
+          <button type="submit" class="btn">Claim My Free Trial</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>Website preview by Onyx Rise Media</footer>
+<script>
+function apjThx(e){e.preventDefault();
+  var f=document.getElementById('apjform');
+  f.outerHTML='<div class="thanks"><h3>GLOVES UP.</h3><p>Thanks — we got your message. A coach from APJ will call you to set up your free trial. See you on Dutchess Turnpike.</p></div>';
+}
+</script>
+</body>
+</html>

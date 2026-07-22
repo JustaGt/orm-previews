@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sandy Pond Marina &amp; Campground — North Sandy Pond, Sandy Creek, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sky:#2e7fa8; --sky-deep:#1c5876; --sand:#f2e8d5; --sand-dk:#e5d5b5;
+    --buoy:#d94f30; --grass:#6d8f5a; --ink:#243640; --white:#fdfcf8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Nunito',sans-serif;color:var(--ink);background:var(--white);line-height:1.65}
+  h1,h2,h3{font-family:'Fredoka',sans-serif;font-weight:600}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+  header{background:var(--white);border-bottom:3px solid var(--sand-dk);padding:14px 0;position:sticky;top:0;z-index:5}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  .brand{font-family:'Fredoka',sans-serif;font-size:1.2rem;color:var(--sky-deep)}
+  .brand span{color:var(--buoy)}
+  header a.tel{color:var(--buoy);font-weight:700;text-decoration:none}
+
+  .hero{background:linear-gradient(180deg,var(--sky) 0%,var(--sky-deep) 100%);color:var(--white);padding:80px 0 0;text-align:center;overflow:hidden}
+  .hero h1{font-size:clamp(1.9rem,4.8vw,3rem);max-width:22ch;margin:0 auto;line-height:1.18}
+  .hero .kick{text-transform:uppercase;letter-spacing:.2em;font-size:.76rem;color:#ffd9a8;margin-bottom:14px}
+  .hero p.sub{max-width:58ch;margin:18px auto 28px;font-size:1.05rem;color:#dcecf4}
+  .cta{display:inline-block;background:var(--buoy);color:#fff;text-decoration:none;font-weight:700;padding:14px 30px;border-radius:30px;margin:0 6px 46px}
+  .cta.o{background:transparent;border:2px solid #fff}
+  .wave{display:block;width:100%;height:52px;background:var(--white);clip-path:ellipse(60% 100% at 50% 100%)}
+
+  .season-strip{background:var(--sand);text-align:center;padding:14px 0;font-weight:700;color:var(--sky-deep)}
+
+  section{padding:60px 0}
+  h2{color:var(--sky-deep);font-size:1.65rem;margin-bottom:8px}
+  .lead{color:#5b6b74;margin-bottom:30px;max-width:64ch}
+
+  .tri{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+  .block{background:var(--white);border:2px solid var(--sand-dk);border-radius:14px;padding:26px;position:relative}
+  .block::before{content:"";position:absolute;top:0;left:24px;right:24px;height:5px;border-radius:0 0 6px 6px}
+  .block.slips::before{background:var(--sky)}
+  .block.camp::before{background:var(--grass)}
+  .block.stay::before{background:var(--buoy)}
+  .block h3{font-size:1.15rem;margin-bottom:10px}
+  .block ul{list-style:none;font-size:.94rem}
+  .block li{padding:5px 0 5px 22px;position:relative}
+  .block li::before{content:"•";position:absolute;left:6px;color:var(--buoy);font-weight:900}
+
+  .pond{background:var(--sky-deep);color:var(--white)}
+  .pond h2{color:#ffd9a8}
+  .pond .twocol{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .pond p{color:#d7e7ef}
+
+  .inquiry{background:var(--sand)}
+  form{background:var(--white);border-radius:14px;padding:30px;max-width:620px;display:grid;gap:14px}
+  label{font-weight:700;font-size:.9rem}
+  input,select,textarea{width:100%;padding:11px;border:2px solid var(--sand-dk);border-radius:8px;font-family:inherit;font-size:.95rem}
+  button{background:var(--buoy);color:#fff;border:0;padding:14px;border-radius:30px;font-weight:800;font-size:1rem;cursor:pointer}
+  .fine{font-size:.8rem;color:#7c8a92}
+
+  footer{background:var(--sky-deep);color:#bdd5e2;text-align:center;font-size:.85rem;padding:22px 0}
+  footer a{color:#ffd9a8}
+  @media(max-width:720px){.pond .twocol{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">SANDY POND <span>MARINA</span> &amp; CAMPGROUND</div>
+    <a class="tel" href="tel:+13153875318">(315) 387-5318</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="kick">North Sandy Pond · Sandy Creek, New York</div>
+  <h1>Calm water to tie up in. Big water two minutes out.</h1>
+  <p class="sub">North Sandy Pond is the protected harbor of Lake Ontario's east shore — flat moorage behind the dunes, with the lake's trout and salmon grounds just through the outlet. Slips, campsites and rooms, May through October.</p>
+  <a class="cta" href="#inquiry">Ask About a Slip or Site</a>
+  <a class="cta o" href="tel:+13153875318">Call the Marina</a>
+  <span class="wave"></span>
+</div>
+
+<div class="season-strip">Open May 1 – November 1 · Seasonal &amp; weekly slips · Seasonal campsites · Summer &amp; fall lodging</div>
+
+<section>
+  <div class="wrap">
+    <h2>Three ways to stay on the pond</h2>
+    <p class="lead">Some folks keep a boat here all summer. Some camp the same site every year. Some just need a bed near the estuary when the salmon show up in September. All three work.</p>
+    <div class="tri">
+      <div class="block slips">
+        <h3>⚓ Boat Slips</h3>
+        <ul>
+          <li>Seasonal slips — one price, all summer, your spot waiting</li>
+          <li>Weekly slips for vacation trailering</li>
+          <li>Protected pond moorage — no lake-chop beating on your hull</li>
+          <li>[PLACEHOLDER — slip count, power/dock details &amp; rates]</li>
+        </ul>
+      </div>
+      <div class="block camp">
+        <h3>⛺ Campsites</h3>
+        <ul>
+          <li>Seasonal sites for the May-to-fall crowd</li>
+          <li>Walk to your boat — camp and slip in one place</li>
+          <li>Quiet pond-side setting behind the Lake Ontario dunes</li>
+          <li>[PLACEHOLDER — hookups &amp; site details]</li>
+        </ul>
+      </div>
+      <div class="block stay">
+        <h3>🛏 Lodging</h3>
+        <ul>
+          <li>Summer stays on the water</li>
+          <li>Fall rooms minutes from the Salmon River estuary at Port Ontario</li>
+          <li>Book early for September–October — run season fills first</li>
+          <li>[PLACEHOLDER — unit types &amp; rates]</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pond">
+  <div class="wrap twocol">
+    <div>
+      <h2>Why the pond beats a lakefront slip</h2>
+      <p>Lake Ontario makes its own weather. When a northwest blow shuts down every exposed dock on the shore, North Sandy Pond stays flat — the barrier dunes take the beating so your boat doesn't. You launch when others watch whitecaps.</p>
+    </div>
+    <div>
+      <h2>Where you can get to</h2>
+      <p>Through the outlet: the east-shore trout and salmon grounds. Ten minutes down Route 3: the Salmon River estuary, Selkirk Shores and Pulaski's fall run. On the pond itself: perch, bass and pike water the locals have fished for generations.</p>
+    </div>
+  </div>
+</section>
+
+<section class="inquiry" id="inquiry">
+  <div class="wrap">
+    <h2>Check availability</h2>
+    <p class="lead">Tell us what you're after and we'll get back to you — or skip the form and call <a href="tel:+13153875318" style="color:var(--buoy);font-weight:800">(315) 387-5318</a>.</p>
+    <form>
+      <div><label>Name</label><input type="text" placeholder="Your name"></div>
+      <div><label>Phone or email</label><input type="text" placeholder="Best way to reach you"></div>
+      <div><label>I'm asking about</label>
+        <select><option>Seasonal boat slip</option><option>Weekly slip</option><option>Seasonal campsite</option><option>Summer lodging</option><option>Fall (salmon run) lodging</option></select>
+      </div>
+      <div><label>Dates / details</label><textarea rows="3" placeholder="Boat length, dates, party size…"></textarea></div>
+      <button type="submit">Send Inquiry</button>
+      <div class="fine">Season runs May 1 – November 1. We'll reply as soon as we're off the dock.</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Sandy Pond Marina &amp; Campground · 3303 County Route 15, Sandy Creek, NY 13145 · <a href="tel:+13153875318">(315) 387-5318</a> · © <span id="y"></span></div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Feeley's Custom Fabrication &amp; Welding — Aluminum &amp; Mobile Welding, Newfane NY</title>
+<meta name="description" content="Feeley's Custom Fabrication &amp; Welding in Newfane, NY — certified aluminum, MIG &amp; TIG welding and on-site mobile repair. Boat, dock, trailer, railing &amp; custom metal work. Send a photo of your job for a quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --steel:#20272e; --steel2:#2b333c; --gun:#161b21; --iron:#3a444e;
+    --spark:#ff7a1a; --spark-d:#e0620c; --arc:#4db3e6; --paper:#eef1f4;
+    --ink:#1a1f24; --white:#fff; --line:#d3dae1;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Barlow',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3,.disp{font-family:'Barlow Condensed',sans-serif;letter-spacing:.01em;text-transform:uppercase}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--spark);color:#1a1207;font-family:'Barlow Condensed',sans-serif;font-weight:700;
+    text-transform:uppercase;letter-spacing:.05em;font-size:1.05rem;padding:14px 30px;border-radius:4px;text-decoration:none;
+    box-shadow:0 8px 20px rgba(255,122,26,.35);transition:transform .15s}
+  .btn:hover{transform:translateY(-2px);background:var(--spark-d);color:#fff}
+  .btn.dark{background:transparent;border:2px solid rgba(255,255,255,.55);color:#fff;box-shadow:none}
+
+  .top{background:var(--gun);color:#9fb0bf;font-size:.9rem}
+  .top .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;padding:9px 22px}
+  .top a{color:#fff;font-weight:600;text-decoration:none}
+  .top .tag{color:var(--spark);font-family:'Barlow Condensed';font-weight:700;letter-spacing:.06em}
+
+  header.hero{background:
+    linear-gradient(180deg,rgba(22,27,33,.86),rgba(22,27,33,.94)),
+    repeating-linear-gradient(135deg,#232b33 0 26px,#20272e 26px 52px);
+    color:#fff;position:relative;overflow:hidden}
+  .hero .wrap{padding:74px 22px 84px;position:relative;z-index:2}
+  .badge{display:inline-block;border:1px solid var(--spark);color:var(--spark);font-family:'Barlow Condensed';
+    font-weight:700;letter-spacing:.08em;padding:6px 14px;border-radius:3px;font-size:.82rem;margin-bottom:20px}
+  .hero h1{font-size:3.3rem;line-height:.98;font-weight:700;max-width:18ch}
+  .hero h1 em{color:var(--spark);font-style:normal}
+  .hero p{font-family:'Barlow';text-transform:none;font-size:1.16rem;max-width:48ch;margin-top:18px;color:#cfd9e1}
+  .hero .cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+  .weldline{position:absolute;left:0;right:0;bottom:0;height:6px;background:
+    repeating-linear-gradient(90deg,var(--spark) 0 14px,transparent 14px 26px)}
+
+  .cred{background:var(--gun);color:#cbd5dd}
+  .cred .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;text-align:center}
+  .cred div{padding:20px 14px;border-left:1px solid #2b333c}
+  .cred div:first-child{border-left:0}
+  .cred b{display:block;font-family:'Barlow Condensed';font-size:1.5rem;color:var(--spark);font-weight:700}
+  .cred span{font-size:.82rem;letter-spacing:.03em}
+
+  section{padding:64px 0}
+  .kick{color:var(--spark-d);font-family:'Barlow Condensed';font-weight:700;letter-spacing:.12em;font-size:.86rem;margin-bottom:6px}
+  h2.t{font-size:2.3rem;color:var(--steel);margin-bottom:10px}
+  .lead{max-width:62ch;color:#495661}
+
+  .mats{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:34px}
+  .mat{background:#fff;border-radius:12px;box-shadow:0 12px 30px rgba(26,31,36,.09);padding:28px;border-top:5px solid var(--arc)}
+  .mat.alu{border-top-color:var(--spark)}
+  .mat h3{font-size:1.5rem;color:var(--steel);margin-bottom:8px}
+  .mat p{color:#4a5762}
+  .mat .flag{display:inline-block;background:#fff2e6;color:var(--spark-d);font-family:'Barlow Condensed';font-weight:700;
+    letter-spacing:.04em;font-size:.78rem;padding:3px 10px;border-radius:3px;margin-bottom:10px}
+
+  .work{background:var(--steel);color:#fff}
+  .work h2.t{color:#fff}.work .kick{color:var(--spark)}.work .lead{color:#c3cdd6}
+  .chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+  .chip{background:var(--iron);border:1px solid #47535e;border-left:4px solid var(--spark);border-radius:6px;
+    padding:12px 18px;font-family:'Barlow Condensed';font-weight:600;letter-spacing:.03em;font-size:1.05rem;text-transform:uppercase}
+
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:34px;align-items:stretch}
+  .box{background:#fff;border-radius:12px;box-shadow:0 12px 30px rgba(26,31,36,.09);padding:30px}
+  .box h3{font-size:1.55rem;color:var(--steel);margin-bottom:10px}
+  .box .mobile{color:var(--spark-d)}
+  .box li{list-style:none;padding:8px 0 8px 28px;position:relative;color:#48555f;border-bottom:1px solid #eef1f4}
+  .box li:last-child{border-bottom:0}
+  .box li::before{content:"▹";position:absolute;left:4px;color:var(--spark);font-weight:700}
+
+  /* quote */
+  .quote{background:linear-gradient(160deg,var(--steel2),var(--gun));color:#fff}
+  .quote .card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:34px;max-width:780px;margin:0 auto}
+  .quote h2{font-size:2.1rem;text-align:center;margin-bottom:6px}
+  .quote p.s{text-align:center;color:#c3cdd6;font-family:'Barlow';text-transform:none;margin-bottom:22px}
+  form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  label{display:block;font-size:.76rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:#aab7c1;margin-bottom:4px;font-family:'Barlow Condensed'}
+  input,select,textarea{width:100%;padding:12px 14px;border-radius:6px;border:1px solid rgba(255,255,255,.22);
+    background:#fff;color:var(--ink);font-family:inherit;font-size:.95rem}
+  .full{grid-column:1/-1}
+  .quote .btn{width:100%;text-align:center;border:0;cursor:pointer;margin-top:2px}
+  .callrow{text-align:center;margin-top:16px;color:#c3cdd6}
+  .callrow a{color:#fff;font-family:'Barlow Condensed';font-weight:700;font-size:1.4rem;text-decoration:none}
+
+  .area{text-align:center}
+  .area .towns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:22px}
+  .area .towns span{background:#fff;border:1px solid var(--line);border-radius:30px;padding:8px 18px;font-weight:600;color:#3a444e}
+
+  footer{background:#10151a;color:#8593a0;text-align:center;padding:36px 22px;font-size:.9rem}
+  footer .big{font-family:'Barlow Condensed';color:#fff;font-size:1.4rem;text-transform:uppercase;margin-bottom:6px}
+  .ph{color:var(--spark-d);font-style:italic;font-size:.85rem}
+
+  @media(max-width:860px){
+    .hero h1{font-size:2.35rem}
+    .cred .wrap{grid-template-columns:1fr 1fr}
+    .cred div:nth-child(3){border-left:0}
+    .mats,.split{grid-template-columns:1fr}
+    form{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <span class="tag">◆ Certified MIG &amp; TIG · Fully insured · On-site mobile</span>
+  <span>Newfane, NY · <a href="tel:17167788821">(716) 778-8821</a></span>
+</div></div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="badge">Aluminum specialist — not every shop welds it</span>
+    <h1>Custom &amp; <em>aluminum</em> welding — in the shop or at your dock.</h1>
+    <p>Patrick Feeley has been fabricating and repairing metal in Newfane since 2004. Boat and dock aluminum, trailers, railings, gates, farm equipment, custom pieces — MIG, TIG, and a mobile rig that comes to the job when the part can't come to the shop.</p>
+    <div class="cta">
+      <a class="btn" href="#quote">Send a photo of your job</a>
+      <a class="btn dark" href="tel:17167788821">Call (716) 778-8821</a>
+    </div>
+  </div>
+  <div class="weldline"></div>
+</header>
+
+<div class="cred"><div class="wrap">
+  <div><b>2004</b><span>In business</span></div>
+  <div><b>MIG · TIG</b><span>Certified welder</span></div>
+  <div><b>Aluminum</b><span>&amp; steel specialty</span></div>
+  <div><b>Mobile</b><span>On-site &amp; insured</span></div>
+</div></div>
+
+<section>
+  <div class="wrap">
+    <div class="kick">What comes off the table</div>
+    <h2 class="t">Two things most local welders won't touch</h2>
+    <p class="lead">Plenty of shops MIG mild steel and call it a day. On a lake-and-farm shoreline like Newfane and Olcott, the jobs that actually pile up are aluminum — and the ones too big or too stuck to haul in. Those are the two Patrick built the shop around.</p>
+    <div class="mats">
+      <div class="mat alu">
+        <span class="flag">Specialty</span>
+        <h3>Aluminum welding</h3>
+        <p>Aluminum boats and jon boats, dock frames and ladders, pontoon parts, rails and brackets, trailers and ramps — TIG and spool-gun work that a steel-only shop turns away. If it's the light silvery metal that "won't weld," it's what he does.</p>
+      </div>
+      <div class="mat">
+        <span class="flag" style="background:#e6f4fb;color:#1f7fb0">On-site</span>
+        <h3>Mobile welding</h3>
+        <p>Some jobs can't move — a gate post, a bucket on a machine, structural steel already bolted in place, a trailer stuck on the lot. The mobile rig comes to your dock, farm, or job site, fully insured, and fixes it where it sits.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="work">
+  <div class="wrap">
+    <div class="kick">Jobs he takes</div>
+    <h2 class="t">Repair it, build it, or fabricate it from scratch</h2>
+    <p class="lead">One set of hands, start to finish — you talk to the person doing the weld, not a service writer.</p>
+    <div class="chips">
+      <span class="chip">Boat &amp; dock aluminum</span>
+      <span class="chip">Trailers &amp; ramps</span>
+      <span class="chip">Railings &amp; gates</span>
+      <span class="chip">Farm &amp; equipment repair</span>
+      <span class="chip">Structural steel</span>
+      <span class="chip">Custom brackets &amp; parts</span>
+      <span class="chip">Repairs &amp; broken welds</span>
+      <span class="chip">Custom metal decor</span>
+    </div>
+    <div class="split">
+      <div class="box">
+        <h3>In the shop</h3>
+        <ul>
+          <li>Bring the part, the trailer, the boat, the piece</li>
+          <li>TIG &amp; MIG on aluminum and steel</li>
+          <li>Custom fabrication from your sketch or sample</li>
+          <li>Clean repairs on cracked or broken welds</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3 class="mobile">Mobile / on-site</h3>
+        <ul>
+          <li>He comes to your dock, farm, or job site</li>
+          <li>Fully insured for on-property work</li>
+          <li>Structural &amp; equipment welds in place</li>
+          <li>Emergency fixes that can't wait for a haul-in</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div class="card">
+      <h2>Send a photo, get a straight answer</h2>
+      <p class="s">The fastest way to a real quote is a picture of the part. Tell Patrick what broke or what you want built.</p>
+      <form onsubmit="event.preventDefault();alert('Thanks! This is a preview form. On the live site your request — and a photo upload — would reach Feeley\'s directly.');">
+        <div><label>Name</label><input required placeholder="First &amp; last"></div>
+        <div><label>Phone</label><input required placeholder="(   )   -"></div>
+        <div><label>Metal</label>
+          <select><option>Aluminum</option><option>Steel</option><option>Not sure</option><option>Both</option></select></div>
+        <div><label>Shop or on-site?</label>
+          <select><option>I can bring it in</option><option>Needs to be done on-site</option><option>Not sure</option></select></div>
+        <div class="full"><label>What's the job?</label><textarea rows="3" placeholder="Cracked aluminum dock ladder, broken trailer frame, custom railing…"></textarea></div>
+        <div class="full"><button class="btn" type="submit">Request a quote</button></div>
+      </form>
+      <div class="callrow">Rather just call? <a href="tel:17167788821">(716) 778-8821</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="area">
+  <div class="wrap">
+    <div class="kick">Where he works</div>
+    <h2 class="t">Newfane &amp; the Niagara lakeshore</h2>
+    <p class="lead" style="margin:0 auto">Shop-based in Newfane on Brown Road, with the mobile rig covering the surrounding lake-and-farm country.</p>
+    <div class="towns">
+      <span>Newfane</span><span>Olcott</span><span>Lockport</span><span>Wilson</span>
+      <span>Barker</span><span>Burt</span><span>Ransomville</span><span>Niagara County</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="big">Feeley's Custom Fabrication &amp; Welding</div>
+  <div>2867 Brown Road · Newfane, NY 14108 · (716) 778-8821</div>
+  <div style="margin-top:8px">Owner-operated by Patrick Feeley since 2004 · Certified MIG &amp; TIG · Aluminum · Fully insured · Mobile</div>
+  <div style="margin-top:14px;font-size:.8rem;color:#5c6874">Preview concept prepared by Onyx Rise Media for review. Hours, service details &amp; a monitored email to be confirmed with the owner before this page goes live.</div>
+</footer>
+
+</body>
+</html>

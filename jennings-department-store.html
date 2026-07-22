@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jennings Department Store — Workwear &amp; Footwear on Main Street, Moravia NY since 1860</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1d2a3a;--paper:#faf6ec;--rule:#c9bfa8;--duck:#a5652a;--duck-dk:#7c4a1d;--cream:#fffdf6}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Serif 4',Georgia,serif;background:var(--paper);color:var(--ink);line-height:1.6}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+/* top rule bar */
+.mast{border-bottom:3px double var(--rule);background:var(--cream)}
+.mast .wrap{display:flex;justify-content:space-between;align-items:baseline;padding-top:14px;padding-bottom:14px;flex-wrap:wrap;gap:6px}
+.mast .name{font-family:'Playfair Display',serif;font-weight:800;font-size:1.25rem;letter-spacing:.04em}
+.mast .est{font-size:.85rem;letter-spacing:.18em;text-transform:uppercase;color:var(--duck-dk)}
+/* hero as ledger page */
+.hero{padding:64px 0 46px;background:
+ repeating-linear-gradient(var(--cream) 0 31px, var(--rule) 31px 32px);}
+.hero .inner{background:var(--cream);border:1px solid var(--rule);box-shadow:4px 4px 0 rgba(29,42,58,.12);padding:46px 42px;max-width:760px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4.6vw,3rem);line-height:1.15;font-weight:800}
+.hero h1 em{color:var(--duck);font-style:normal}
+.hero p.sub{margin-top:16px;font-size:1.08rem;max-width:56ch}
+.cta-row{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 26px;text-decoration:none;font-weight:600;font-size:1rem;border:2px solid var(--ink)}
+.btn.solid{background:var(--ink);color:var(--cream)}
+.btn.ghost{color:var(--ink)}
+.btn.solid:hover{background:var(--duck-dk);border-color:var(--duck-dk)}
+/* ledger entries = timeline */
+.ledger{padding:58px 0}
+h2.rule{font-family:'Playfair Display',serif;font-size:1.6rem;padding-bottom:8px;border-bottom:1px solid var(--rule);margin-bottom:28px}
+h2.rule span{font-size:.8rem;font-family:'Source Serif 4';letter-spacing:.2em;color:var(--duck-dk);display:block;text-transform:uppercase;margin-bottom:4px}
+.entry{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:16px 0;border-bottom:1px dotted var(--rule)}
+.entry .yr{font-family:'Playfair Display',serif;font-weight:800;font-size:1.3rem;color:var(--duck-dk)}
+.entry p{max-width:66ch}
+/* brand wall */
+.brands{background:var(--ink);color:var(--cream);padding:48px 0}
+.brands h2{font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:8px}
+.brands p.note{color:#cfc6b2;max-width:60ch}
+.brandgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:26px}
+.brand{border:1px solid #46566b;padding:22px 18px}
+.brand b{font-size:1.15rem;letter-spacing:.06em;display:block}
+.brand span{font-size:.9rem;color:#cfc6b2}
+/* stock rack */
+.rack{padding:58px 0}
+.rackgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.shelf{background:var(--cream);border:1px solid var(--rule);border-top:6px solid var(--duck);padding:24px 20px}
+.shelf h3{font-family:'Playfair Display',serif;font-size:1.12rem;margin-bottom:8px}
+.shelf p{font-size:.95rem}
+/* press band */
+.press{background:var(--duck);color:var(--cream);padding:44px 0}
+.press blockquote{font-family:'Playfair Display',serif;font-size:clamp(1.15rem,2.6vw,1.5rem);max-width:34ch;line-height:1.4}
+.press cite{display:block;margin-top:12px;font-style:normal;font-size:.9rem;letter-spacing:.08em}
+.press .second{margin-top:18px;font-size:.98rem;max-width:64ch}
+/* visit */
+.visit{padding:58px 0 70px}
+.visitgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.vcard{border:1px solid var(--rule);background:var(--cream);padding:26px 22px}
+.vcard h3{font-size:.85rem;letter-spacing:.18em;text-transform:uppercase;color:var(--duck-dk);margin-bottom:10px}
+.vcard p{font-size:1.02rem}
+.vcard a{color:var(--ink)}
+.ph{font-size:.8rem;color:#8a7f66;display:block;margin-top:6px}
+footer{border-top:3px double var(--rule);padding:22px 0 34px;font-size:.9rem;color:#6d6350}
+@media(max-width:640px){.entry{grid-template-columns:1fr}.hero .inner{padding:30px 22px}}
+</style>
+</head>
+<body>
+
+<div class="mast"><div class="wrap">
+  <span class="name">JENNINGS DEPARTMENT STORE</span>
+  <span class="est">Main Street, Moravia · Est. 1860</span>
+</div></div>
+
+<section class="hero"><div class="wrap"><div class="inner">
+  <h1>Three families have kept this counter since 1860. <em>Your boots are behind it.</em></h1>
+  <p class="sub">Carhartt jackets and overalls, Muck and Carolina boots, sturdy clothing for work and every day — sized, stocked, and sold in person at 147 Main Street, the way it's been done in Moravia for 165 years.</p>
+  <div class="cta-row">
+    <a class="btn solid" href="tel:+13154971341">Call (315) 497-1341 to check a size</a>
+    <a class="btn ghost" href="#visit">Plan your visit</a>
+  </div>
+</div></div></section>
+
+<section class="ledger"><div class="wrap">
+  <h2 class="rule"><span>The store ledger</span>165 years, one storefront, three families</h2>
+  <div class="entry"><div class="yr">1860</div><p>Jennings opens as Moravia's dry-goods and clothing store, in the decade before the transcontinental railroad.</p></div>
+  <div class="entry"><div class="yr">1870s</div><p>The store moves into its present building at 147 Main Street — and never leaves.</p></div>
+  <div class="entry"><div class="yr">Today</div><p>Mark and Lynette Wood, the third family to keep the store, stock it for the people who actually shop here: farmers, tradespeople, and families from every corner of southern Cayuga County.</p></div>
+</div></section>
+
+<section class="brands"><div class="wrap">
+  <h2>Brands that earn their shelf space</h2>
+  <p class="note">A store doesn't last 165 years selling things that fall apart. The racks carry working brands, in working sizes.</p>
+  <div class="brandgrid">
+    <div class="brand"><b>Carhartt</b><span>Jackets, overalls, thermals</span></div>
+    <div class="brand"><b>Muck</b><span>Barn &amp; field boots</span></div>
+    <div class="brand"><b>Carolina</b><span>Work boots</span></div>
+    <div class="brand"><b>Timberland</b><span>Boots &amp; footwear</span></div>
+  </div>
+</div></section>
+
+<section class="rack"><div class="wrap">
+  <h2 class="rule"><span>On the racks</span>What you'll find at 147 Main</h2>
+  <div class="rackgrid">
+    <div class="shelf"><h3>Workwear</h3><p>Carhartt duck jackets, bib overalls, and thermal layers for barn, site, and woodlot — the department the county knows us for.</p></div>
+    <div class="shelf"><h3>Footwear</h3><p>Muck, Carolina, and Timberland boots, plus casual shoes and sandals. Bring your worn pair; we'll match the fit.</p></div>
+    <div class="shelf"><h3>Everyday clothing</h3><p>Practical men's, women's, and children's clothing at fair prices — no trip to Auburn required.</p></div>
+  </div>
+</div></section>
+
+<section class="press"><div class="wrap">
+  <blockquote>"One of the last of a dying breed."<cite>— The Citizen (Auburn), on Jennings' place among New York's surviving small-town department stores</cite></blockquote>
+  <p class="second">Recognized by the New York State Senate in 2010 for a century and a half of service to Moravia — and listed by travelers as a destination worth the drive off the Cayuga Lake byway.</p>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <h2 class="rule"><span>Visit</span>Find the store</h2>
+  <div class="visitgrid">
+    <div class="vcard"><h3>Where</h3><p>147 Main Street<br>Moravia, NY 13118<br>Five minutes from Fillmore Glen State Park</p></div>
+    <div class="vcard"><h3>Call ahead</h3><p><a href="tel:+13154971341">(315) 497-1341</a><br>We'll check your size before you drive out.</p></div>
+    <div class="vcard"><h3>Hours</h3><p>[PLACEHOLDER — confirm current store hours with the Woods before publishing]</p><span class="ph">Hours not published online today — a problem this page fixes.</span></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Jennings Department Store · 147 Main Street, Moravia, NY 13118 · (315) 497-1341 · Est. 1860</div></footer>
+
+</body>
+</html>

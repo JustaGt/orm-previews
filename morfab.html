@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MorFab Inc — ASME Code Welding & Pressure-Vessel Fabrication | Moravia, NY</title>
+<style>
+  :root{
+    --steel:#1f2730; --steel2:#2b3540; --ink:#11161c; --line:#3c4753;
+    --paper:#eef1f4; --paper2:#dfe4ea; --yellow:#f6c343; --yellow-d:#caa01f;
+    --txt:#e7ecf1; --muted:#9aa6b2; --white:#fff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
+  .mono{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+  /* top bar */
+  header.bar{background:var(--ink);color:var(--txt);border-bottom:3px solid var(--yellow)}
+  .bar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-weight:800;letter-spacing:.5px;font-size:1.25rem}
+  .logo span{color:var(--yellow)}
+  .bar nav a{color:var(--muted);font-size:.84rem;font-weight:600;text-transform:uppercase;letter-spacing:.6px;margin-left:20px}
+  .bar nav a:hover{color:var(--white)}
+  .bar .call{color:var(--ink);background:var(--yellow);padding:8px 14px;border-radius:3px;font-weight:700;font-size:.82rem;margin-left:22px}
+  @media(max-width:760px){.bar nav{display:none}}
+
+  /* hero */
+  .hero{background:linear-gradient(180deg,var(--steel),var(--steel2));color:var(--txt);border-bottom:1px solid var(--line)}
+  .hero .wrap{padding:62px 22px 56px;display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center}
+  .tag{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink);background:var(--yellow);padding:5px 10px;border-radius:2px}
+  .hero h1{font-size:2.5rem;line-height:1.1;margin:18px 0 14px;font-weight:800}
+  .hero h1 em{color:var(--yellow);font-style:normal}
+  .hero p{color:var(--muted);font-size:1.06rem;max-width:48ch}
+  .cta-row{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{padding:13px 22px;border-radius:3px;font-weight:700;font-size:.92rem;display:inline-block}
+  .btn-y{background:var(--yellow);color:var(--ink)}
+  .btn-y:hover{background:var(--yellow-d)}
+  .btn-o{border:1px solid var(--line);color:var(--txt)}
+  .btn-o:hover{border-color:var(--yellow);color:var(--white)}
+  /* cert stamps */
+  .stamps{background:var(--ink);border:1px solid var(--line);border-radius:6px;padding:22px}
+  .stamps h3{font-size:.72rem;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  .stamp{display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px dashed var(--line)}
+  .stamp:first-of-type{border-top:none}
+  .seal{flex:0 0 44px;height:44px;border:2px solid var(--yellow);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--yellow);font-weight:800;font-size:.72rem;text-align:center;line-height:1}
+  .stamp b{display:block;font-size:.92rem;color:var(--white)}
+  .stamp small{color:var(--muted);font-size:.78rem}
+  @media(max-width:760px){.hero .wrap{grid-template-columns:1fr;padding:44px 22px}.hero h1{font-size:1.95rem}}
+
+  /* capability spec rows */
+  section{padding:54px 0}
+  .eyebrow{font-size:.74rem;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--yellow-d)}
+  h2{font-size:1.7rem;font-weight:800;margin:8px 0 8px}
+  .lead{color:#46505b;max-width:62ch}
+  .spec{margin-top:26px;border:1px solid var(--paper2);border-radius:8px;overflow:hidden;background:var(--white)}
+  .spec .row{display:grid;grid-template-columns:200px 1fr;gap:0;border-top:1px solid var(--paper2)}
+  .spec .row:first-child{border-top:none}
+  .spec .k{background:#f5f7f9;padding:15px 18px;font-weight:700;font-size:.86rem;letter-spacing:.3px;border-right:1px solid var(--paper2)}
+  .spec .v{padding:15px 18px;color:#36404a;font-size:.95rem}
+  @media(max-width:620px){.spec .row{grid-template-columns:1fr}.spec .k{border-right:none;border-bottom:1px solid var(--paper2)}}
+
+  /* process */
+  .proc{background:var(--ink);color:var(--txt)}
+  .proc h2{color:var(--white)}
+  .proc .lead{color:var(--muted)}
+  .steps{margin-top:30px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .step{border:1px solid var(--line);border-radius:8px;padding:20px;background:var(--steel2)}
+  .step .n{font-family:monospace;color:var(--yellow);font-weight:700;font-size:.8rem;letter-spacing:1px}
+  .step b{display:block;margin:8px 0 6px;color:var(--white);font-size:1.02rem}
+  .step p{color:var(--muted);font-size:.86rem}
+  @media(max-width:760px){.steps{grid-template-columns:1fr 1fr}}
+  @media(max-width:440px){.steps{grid-template-columns:1fr}}
+
+  /* industries */
+  .inds{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .ind{border:1px solid var(--paper2);background:var(--white);border-radius:30px;padding:9px 16px;font-weight:600;font-size:.9rem;color:#2c353e}
+  .ind span{color:var(--yellow-d);font-weight:800;margin-right:6px}
+
+  /* portfolio placeholders */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+  .pcard{border:1px solid var(--paper2);border-radius:8px;overflow:hidden;background:var(--white)}
+  .pcard .ph{height:150px;background:repeating-linear-gradient(45deg,#e7ebef,#e7ebef 11px,#dde3e8 11px,#dde3e8 22px);display:flex;align-items:center;justify-content:center;color:#8593a0;font-size:.78rem;font-weight:600;letter-spacing:.4px;text-transform:uppercase}
+  .pcard .cap{padding:13px 15px}
+  .pcard b{font-size:.96rem}
+  .pcard small{color:#69737d;display:block;margin-top:3px;font-size:.82rem}
+  @media(max-width:760px){.grid3{grid-template-columns:1fr}}
+
+  /* RFQ */
+  .rfq{background:linear-gradient(180deg,var(--steel2),var(--ink));color:var(--txt)}
+  .rfq .wrap{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:start}
+  .rfq h2{color:var(--white)}
+  .rfq p.lead{color:var(--muted)}
+  .form{background:var(--ink);border:1px solid var(--line);border-radius:10px;padding:24px}
+  .form label{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);margin:14px 0 6px;font-weight:700}
+  .form label:first-child{margin-top:0}
+  .form input,.form textarea,.form select{width:100%;padding:11px 12px;background:var(--steel2);border:1px solid var(--line);border-radius:4px;color:var(--white);font-size:.92rem;font-family:inherit}
+  .form .note{font-size:.74rem;color:#76808b;margin-top:6px}
+  .form button{margin-top:18px;width:100%;background:var(--yellow);color:var(--ink);border:none;padding:14px;border-radius:4px;font-weight:800;font-size:.95rem;cursor:pointer}
+  .contactline{margin-top:20px;border-top:1px solid var(--line);padding-top:18px}
+  .contactline div{margin:6px 0;color:var(--txt);font-size:.95rem}
+  .contactline span{color:var(--yellow);font-weight:700;display:inline-block;width:84px}
+  @media(max-width:760px){.rfq .wrap{grid-template-columns:1fr}}
+
+  footer{background:var(--ink);color:var(--muted);padding:26px 0;border-top:3px solid var(--yellow)}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.84rem}
+  .flag{background:#fff7e2;border:1px solid var(--yellow);color:#7a5f12;font-size:.78rem;padding:10px 14px;border-radius:6px;margin-top:18px}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <div class="logo">Mor<span>Fab</span> <span style="color:var(--muted);font-weight:600;font-size:.8rem;letter-spacing:1px">INC</span></div>
+    <nav>
+      <a href="#cap">Capabilities</a>
+      <a href="#equip">Equipment</a>
+      <a href="#ind">Industries</a>
+      <a href="#work">Work</a>
+      <a href="#rfq">RFQ</a>
+    </nav>
+    <a class="call" href="tel:13154979877">(315) 497-9877</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="tag">ASME Sec. VIII · UA Label · Moravia, NY</span>
+      <h1>Code welding and <em>pressure-vessel fabrication</em> — engineered, stamped, delivered.</h1>
+      <p>MorFab is a code shop run by an ASME engineer, with journeyman pipefitters and boilermakers on the floor. We hold the certifications, weld the exotic alloys, and document the work — for plants that can't afford a weld to fail.</p>
+      <div class="cta-row">
+        <a class="btn btn-y" href="#rfq">Send a print for quote</a>
+        <a class="btn btn-o" href="#cap">See capabilities</a>
+      </div>
+    </div>
+    <div class="stamps">
+      <h3>Credentials on file</h3>
+      <div class="stamp"><div class="seal">ASME<br>VIII</div><div><b>ASME Section VIII</b><small>Pressure-vessel fabrication to code</small></div></div>
+      <div class="stamp"><div class="seal">UA<br>LABEL</div><div><b>UA Label</b><small>Qualified union pipe & welding label</small></div></div>
+      <div class="stamp"><div class="seal">CERT<br>WELD</div><div><b>Multiple welding certifications</b><small>TIG · MIG · stick · submerged-arc</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="cap">
+  <div class="wrap">
+    <span class="eyebrow">Capabilities</span>
+    <h2>What we can hold, weld, and build</h2>
+    <p class="lead">A vendor-qualification snapshot — the answers a procurement engineer needs before sending a drawing. Confirm exact ratings and capacities with the shop on your specific job.</p>
+    <div class="spec">
+      <div class="row"><div class="k">Processes</div><div class="v">TIG, MIG, stick, and submerged-arc welding — qualified procedures across thin gauge to heavy wall.</div></div>
+      <div class="row"><div class="k">Materials</div><div class="v">Carbon &amp; stainless steel, aluminum, and exotic alloys. Cross-trained crews from petro-chemical, food &amp; beverage, and pharmaceutical work.</div></div>
+      <div class="row"><div class="k">Pressure vessels</div><div class="v">ASME Section VIII fabrication; weldments built for design-critical, code-stamped applications.</div></div>
+      <div class="row"><div class="k">Trades on floor</div><div class="v">Journeyman pipefitters and boilermakers — pipe spools, vessels, and structural weldments under one roof.</div></div>
+      <div class="row"><div class="k">Scope</div><div class="v">Turn-key, design-to-delivery: engineering, fabrication, and finishing on one purchase order.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="proc" id="equip">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--yellow)">How a job runs</span>
+    <h2>From your print to a stamped weldment</h2>
+    <p class="lead">One shop, one accountable path — no handing your vessel between a designer, a fabricator, and a finisher who never talk.</p>
+    <div class="steps">
+      <div class="step"><div class="n">01 · ENGINEER</div><b>Review &amp; design</b><p>Your drawing or spec is reviewed by an ASME engineer; we engineer the weldment to code before metal moves.</p></div>
+      <div class="step"><div class="n">02 · QUALIFY</div><b>Procedure &amp; material</b><p>Right alloy, right qualified procedure, the welders certified for it — matched to the application.</p></div>
+      <div class="step"><div class="n">03 · FABRICATE</div><b>Weld &amp; build</b><p>Fit, weld, and assemble in-house — pressure vessels, pipe spools, and structural weldments.</p></div>
+      <div class="step"><div class="n">04 · DELIVER</div><b>Document &amp; ship</b><p>Code documentation with the work, finished and delivered turn-key.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="ind">
+  <div class="wrap">
+    <span class="eyebrow">Industries served</span>
+    <h2>Built for plants that run on uptime</h2>
+    <p class="lead">Our crews are cross-trained in the industries where a weld is inspected, logged, and held to a code.</p>
+    <div class="inds">
+      <div class="ind"><span>›</span>Petro-chemical</div>
+      <div class="ind"><span>›</span>Food &amp; beverage</div>
+      <div class="ind"><span>›</span>Pharmaceutical</div>
+      <div class="ind"><span>›</span>Industrial maintenance</div>
+      <div class="ind"><span>›</span>OEM &amp; EPC contractors</div>
+    </div>
+  </div>
+</section>
+
+<section class="proc" id="work">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--yellow)">Selected work</span>
+    <h2>Weldments, vessels, and spools</h2>
+    <p class="lead">Swap these placeholders for real shop photos — the one thing an engineer wants to see before awarding code work.</p>
+    <div class="grid3">
+      <div class="pcard"><div class="ph">Photo placeholder</div><div class="cap"><b>Pressure vessel</b><small>ASME Sec. VIII fabrication</small></div></div>
+      <div class="pcard"><div class="ph">Photo placeholder</div><div class="cap"><b>Pipe spool assembly</b><small>Stainless, qualified procedure</small></div></div>
+      <div class="pcard"><div class="ph">Photo placeholder</div><div class="cap"><b>Exotic-alloy weldment</b><small>Design-critical application</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="rfq" id="rfq">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow" style="color:var(--yellow)">Request for quote</span>
+      <h2>Send us your print.</h2>
+      <p class="lead">Tell us the material, the code, the sizes, and the schedule — we'll come back with a quote and a straight answer on whether it's a fit. Quotes go to a real person, not a form that disappears.</p>
+      <div class="contactline">
+        <div><span>Shop</span> Moravia, New York (Cayuga County)</div>
+        <div><span>Phone</span> <a href="tel:13154979877" style="color:var(--white)">(315) 497-9877</a></div>
+        <div><span>Email</span> <a href="mailto:gary.green@morfabinc.com" style="color:var(--white)">gary.green@morfabinc.com</a></div>
+      </div>
+    </div>
+    <form class="form" onsubmit="return false">
+      <label>Company / contact</label>
+      <input type="text" placeholder="Name and company">
+      <label>Email or phone</label>
+      <input type="text" placeholder="How should we reach you?">
+      <label>Material &amp; code</label>
+      <input type="text" placeholder="e.g. 316L stainless, ASME Sec. VIII">
+      <label>Scope of work</label>
+      <textarea rows="3" placeholder="Sizes, quantity, schedule — and attach a drawing when we follow up"></textarea>
+      <button>Request a quote</button>
+      <p class="note">Drawing/print upload is set up when the site goes live. Fields here are a working mockup.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© <span class="mono">MorFab Inc</span> · Moravia, NY · Code welding &amp; pressure-vessel fabrication</div>
+    <div>(315) 497-9877 · gary.green@morfabinc.com</div>
+  </div>
+</footer>
+
+</body>
+</html>

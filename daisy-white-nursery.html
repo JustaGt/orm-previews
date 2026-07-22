@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daisy White Nursery — 8 acres of plants we grew ourselves · Mount Sinai, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bark:#2f3327; --leaf:#3f6b3f; --leaf-dk:#2c4d2c; --moss:#87a06d;
+    --terra:#b5643c; --terra-dk:#8f4c2c;
+    --cream:#faf7f0; --paper:#fffdf8; --stone:#e6e0d2; --ink:#4a4f42; --mute:#8b9082;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Karla',system-ui,sans-serif;color:var(--bark);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;line-height:1.12;font-weight:600}
+  .wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 22px}
+
+  /* ---- nav ---- */
+  nav{background:var(--paper);border-bottom:1px solid var(--stone);padding:16px 0}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+  .brand{font-family:'Fraunces';font-size:1.24rem;font-weight:700;letter-spacing:-.01em}
+  .brand small{display:block;font-family:'Karla';font-size:.68rem;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--moss);font-weight:600;margin-top:2px}
+  nav .call{font-weight:700;text-decoration:none;color:var(--leaf-dk);font-size:1.02rem}
+  nav .call small{display:block;font-size:.68rem;color:var(--mute);font-weight:500;text-align:right;letter-spacing:.08em}
+
+  /* ---- hero ---- */
+  .hero{padding:74px 0 66px;background:
+    radial-gradient(ellipse at 78% 12%, rgba(135,160,109,.22), transparent 58%),
+    linear-gradient(180deg,var(--paper),var(--cream));border-bottom:1px solid var(--stone)}
+  .hero .eyebrow{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);font-weight:700;margin-bottom:18px}
+  h1{font-size:clamp(2.1rem,5.6vw,3.5rem);max-width:17ch;letter-spacing:-.02em}
+  h1 i{font-style:italic;color:var(--leaf)}
+  .hero p.sub{font-size:clamp(1.02rem,2.2vw,1.16rem);color:var(--ink);max-width:54ch;margin-top:20px}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+  .btn{display:inline-block;text-decoration:none;padding:15px 26px;border-radius:2px;font-weight:700;
+    font-size:.98rem;transition:.15s;border:2px solid transparent}
+  .btn-p{background:var(--leaf);color:#fff}
+  .btn-p:hover{background:var(--leaf-dk)}
+  .btn-s{border-color:var(--bark);color:var(--bark)}
+  .btn-s:hover{background:var(--bark);color:var(--cream)}
+  .hero-facts{display:flex;flex-wrap:wrap;gap:32px;margin-top:44px;padding-top:26px;border-top:1px solid var(--stone)}
+  .fact .n{font-family:'Fraunces';font-size:1.8rem;font-weight:700;color:var(--leaf-dk)}
+  .fact .l{font-size:.86rem;color:var(--mute)}
+
+  section{padding:68px 0}
+  .kicker{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);font-weight:700;margin-bottom:10px}
+  h2{font-size:clamp(1.55rem,3.6vw,2.2rem);margin-bottom:12px;letter-spacing:-.01em}
+  .lede{color:var(--ink);max-width:60ch;margin-bottom:36px}
+
+  /* ---- screening price list ---- */
+  .screen{background:var(--paper);border-top:1px solid var(--stone);border-bottom:1px solid var(--stone)}
+  .plist{border:1px solid var(--stone);background:#fff}
+  .prow{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;border-bottom:1px solid var(--stone)}
+  .prow:last-child{border-bottom:0}
+  .prow > div{padding:16px 18px;border-right:1px solid var(--stone);font-size:.95rem}
+  .prow > div:last-child{border-right:0}
+  .prow.head{background:var(--bark);color:var(--cream)}
+  .prow.head > div{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;border-right-color:rgba(255,255,255,.14)}
+  .prow .plant{font-family:'Fraunces';font-weight:600;font-size:1.02rem}
+  .prow .plant span{display:block;font-family:'Karla';font-size:.8rem;color:var(--mute);font-weight:400;margin-top:2px}
+  .prow .p{font-weight:700;color:var(--leaf-dk)}
+  .prow .bulk{color:var(--terra);font-weight:600}
+  .special{background:rgba(181,100,60,.08)}
+  .datestamp{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+    margin-top:14px;font-size:.85rem;color:var(--mute)}
+  .datestamp .live{color:var(--leaf-dk);font-weight:700}
+  .warn{margin-top:18px;background:rgba(181,100,60,.09);border-left:4px solid var(--terra);
+    padding:14px 18px;font-size:.88rem;color:var(--ink)}
+
+  /* ---- how many do I need ---- */
+  .calc{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:start;margin-top:44px}
+  .calcbox{background:var(--bark);color:var(--cream);padding:30px}
+  .calcbox h3{font-size:1.24rem;margin-bottom:8px;color:#fff}
+  .calcbox p{color:#c3c9b9;font-size:.93rem;margin-bottom:20px}
+  .calcbox label{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--moss);font-weight:700;margin:14px 0 6px}
+  .calcbox input,.calcbox select{width:100%;padding:12px;border:0;border-radius:2px;font-family:inherit;font-size:.95rem}
+  .calcbox button{margin-top:20px;width:100%;background:var(--terra);color:#fff;border:0;padding:14px;
+    font-weight:700;font-size:.98rem;cursor:pointer;border-radius:2px;font-family:inherit}
+  .calcbox button:hover{background:var(--terra-dk)}
+  .spacing{border:1px solid var(--stone);background:#fff;padding:26px}
+  .spacing h3{font-size:1.1rem;margin-bottom:14px}
+  .spacing table{width:100%;border-collapse:collapse;font-size:.92rem}
+  .spacing td{padding:10px 0;border-bottom:1px dashed var(--stone)}
+  .spacing td:last-child{text-align:right;font-weight:700;color:var(--leaf-dk)}
+  .spacing tr:last-child td{border-bottom:0}
+  .spacing .fine{font-size:.8rem;color:var(--mute);margin-top:14px;font-style:italic}
+
+  /* ---- grown here ---- */
+  .grown{background:var(--leaf-dk);color:#eef2e6}
+  .grown h2{color:#fff}
+  .grown .lede{color:#c8d6bd}
+  .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:34px}
+  .g3 .item{border-top:2px solid var(--moss);padding-top:18px}
+  .g3 h3{font-size:1.1rem;color:#fff;margin-bottom:8px}
+  .g3 p{font-size:.93rem;color:#bccdb0}
+
+  /* ---- rare + accents ---- */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .panel{background:var(--paper);border:1px solid var(--stone);padding:30px}
+  .panel h3{font-size:1.3rem;margin-bottom:12px}
+  .panel ul{list-style:none;margin-top:16px}
+  .panel li{padding:9px 0 9px 22px;position:relative;border-bottom:1px dashed var(--stone);font-size:.95rem}
+  .panel li:last-child{border-bottom:0}
+  .panel li:before{content:"✦";position:absolute;left:0;color:var(--moss)}
+
+  /* ---- design help ---- */
+  .design{background:var(--paper);border-top:1px solid var(--stone);border-bottom:1px solid var(--stone)}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:34px}
+  .step{position:relative;padding-top:44px}
+  .step .num{position:absolute;top:0;left:0;width:34px;height:34px;border-radius:50%;background:var(--terra);
+    color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.95rem}
+  .step h3{font-size:1rem;margin-bottom:6px}
+  .step p{font-size:.9rem;color:var(--ink)}
+
+  /* ---- visit ---- */
+  .visit{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+  .hours{border:1px solid var(--stone);background:#fff;padding:28px}
+  .hours h3{font-size:1.14rem;margin-bottom:14px}
+  .hours table{width:100%;border-collapse:collapse;font-size:.96rem}
+  .hours td{padding:10px 0;border-bottom:1px dashed var(--stone)}
+  .hours td:last-child{text-align:right;font-weight:600}
+  .hours tr:last-child td{border-bottom:0}
+  .landmark{margin-top:20px;padding-top:18px;border-top:2px solid var(--bark);font-size:.92rem;color:var(--ink)}
+  .form label{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--mute);font-weight:700;margin:16px 0 6px}
+  .form input,.form select,.form textarea{width:100%;padding:12px;border:1px solid var(--stone);
+    font-family:inherit;font-size:.95rem;border-radius:2px;background:#fff}
+  .form textarea{min-height:92px;resize:vertical}
+  .form button{margin-top:22px;width:100%;background:var(--leaf);color:#fff;border:0;padding:15px;
+    font-weight:700;font-size:1rem;cursor:pointer;border-radius:2px;font-family:inherit}
+  .form button:hover{background:var(--leaf-dk)}
+
+  footer{background:var(--bark);color:#b9bfae;padding:36px 0;font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+  footer b{color:#fff}
+
+  @media(max-width:880px){
+    .calc,.two,.visit{grid-template-columns:1fr}
+    .g3,.steps{grid-template-columns:1fr 1fr}
+    .prow{grid-template-columns:1fr 1fr}
+    .prow.head{display:none}
+    .prow > div{border-right:0;border-bottom:1px dashed var(--stone)}
+    .prow > div:before{content:attr(data-l);display:block;font-size:.66rem;letter-spacing:.12em;
+      text-transform:uppercase;color:var(--mute);font-weight:700;margin-bottom:3px}
+    .prow .plant{grid-column:1/-1}
+    .prow .plant:before{display:none}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">Daisy White Nursery
+      <small>Mount Sinai · Growers, not resellers</small>
+    </div>
+    <a class="call" href="tel:6314749225">631-474-9225<small>185 N Country Rd</small></a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">On the original Davis Peach Farm · Around the corner from Cedar Beach</div>
+    <h1>Eight acres of plants we <i>grew ourselves</i>.</h1>
+    <p class="sub">Not trucked in the night before. Grown here, watered here, and walked past every day by the people who'll sell them to you — which is why we can tell you what will actually live in your yard.</p>
+    <div class="hero-cta">
+      <a class="btn btn-p" href="#screening">Price a privacy screen</a>
+      <a class="btn btn-s" href="#visit">Hours &amp; directions</a>
+    </div>
+    <div class="hero-facts">
+      <div class="fact"><div class="n">8 acres</div><div class="l">of growing ground in Mount Sinai</div></div>
+      <div class="fact"><div class="n">50 years</div><div class="l">growing our own stock</div></div>
+      <div class="fact"><div class="n">100+</div><div class="l">contractor tier on screening trees</div></div>
+    </div>
+  </div>
+</div>
+
+<section class="screen" id="screening">
+  <div class="wrap">
+    <div class="kicker">Privacy screening</div>
+    <h2>What a hedge costs, in writing</h2>
+    <p class="lede">Most nurseries make you drive over to find out. Here's the screening list — arborvitae, laurel, cypress and holly, by container size, with the bulk tier for anyone planting a whole property line.</p>
+
+    <div class="plist">
+      <div class="prow head">
+        <div>Plant</div><div>Size</div><div>Each</div><div>100 or more</div>
+      </div>
+      <div class="prow">
+        <div class="plant">Green Giant Arborvitae<span>Fast, deer-resistant, the workhorse screen</span></div>
+        <div data-l="Size">5 gal</div><div class="p" data-l="Each">$25</div><div class="bulk" data-l="100 or more">—</div>
+      </div>
+      <div class="prow">
+        <div class="plant">Green Giant Arborvitae</div>
+        <div data-l="Size">7 gal</div><div class="p" data-l="Each">$45</div><div class="bulk" data-l="100 or more">—</div>
+      </div>
+      <div class="prow">
+        <div class="plant">Green Giant Arborvitae</div>
+        <div data-l="Size">15 gal · 5 ft</div><div class="p" data-l="Each">$79</div><div class="bulk" data-l="100 or more">$75</div>
+      </div>
+      <div class="prow">
+        <div class="plant">Green Giant Arborvitae</div>
+        <div data-l="Size">15 gal · 6 ft</div><div class="p" data-l="Each">$99</div><div class="bulk" data-l="100 or more">$95</div>
+      </div>
+      <div class="prow">
+        <div class="plant">Emerald Arborvitae<span>Tighter, slower, for a narrow bed</span></div>
+        <div data-l="Size">4–5 ft</div><div class="p" data-l="Each">$75</div><div class="bulk" data-l="100 or more">—</div>
+      </div>
+      <div class="prow">
+        <div class="plant">Emerald Arborvitae</div>
+        <div data-l="Size">5–6 ft</div><div class="p" data-l="Each">$99</div><div class="bulk" data-l="100 or more">—</div>
+      </div>
+      <div class="prow">
+        <div class="plant">Skip Laurel<span>Broadleaf, handles shade better than arborvitae</span></div>
+        <div data-l="Size">10 gal</div><div class="p" data-l="Each">$149</div><div class="bulk" data-l="100 or more">—</div>
+      </div>
+      <div class="prow">
+        <div class="plant">Leyland Cypress<span>Fastest growth, wants sun</span></div>
+        <div data-l="Size">7 gal</div><div class="p" data-l="Each">$45</div><div class="bulk" data-l="100 or more">—</div>
+      </div>
+      <div class="prow special">
+        <div class="plant">Holly — Mary Nell · Nellie Stevens · Oakleaf<span>Berries, structure, evergreen</span></div>
+        <div data-l="Size">15 gal</div><div class="p" data-l="Each">$98 <span style="font-weight:400;color:var(--mute);text-decoration:line-through">$124</span></div><div class="bulk" data-l="100 or more">Ask</div>
+      </div>
+    </div>
+
+    <div class="datestamp">
+      <span class="live">Prices current as of <strong>[DATE TO CONFIRM]</strong></span>
+      <span>Other screening plants available — call for what's on the ground this week.</span>
+    </div>
+
+    <div class="warn">
+      <strong>Note for Daisy White — please read before this goes live.</strong> Every figure in the table above is carried over verbatim from the price list currently published on your own site, which is stamped <em>"Prices as of April 2025"</em> — including the holly special ($124 → $98). <strong>They are almost certainly out of date and must be re-confirmed before this page is published.</strong> That staleness is exactly the problem: a contractor pricing a hundred-tree property line this summer has nothing he can work from, and the page just tells him to call. This block is built to be re-dated in about ninety seconds — change the numbers, change the date, and it's live.
+    </div>
+
+    <div class="calc">
+      <div class="calcbox">
+        <h3>How many do I need?</h3>
+        <p>Tell us the run of fence line and how much sun it gets. We'll come back with a plant count, a variety that suits the light, and a current price.</p>
+        <label>Length of the line you're screening</label>
+        <input type="text" placeholder="e.g. 60 feet along the back fence">
+        <label>How much sun does it get?</label>
+        <select>
+          <option>Full sun — most of the day</option>
+          <option>Part sun / part shade</option>
+          <option>Mostly shade</option>
+          <option>Not sure — I'll send a photo</option>
+        </select>
+        <label>How tall do you need it, roughly?</label>
+        <select>
+          <option>Block a neighbour's window (8–12 ft)</option>
+          <option>Block a road or a pool (6–8 ft)</option>
+          <option>Full property screen (12 ft +)</option>
+        </select>
+        <label>Deer pressure?</label>
+        <select>
+          <option>Heavy — they eat everything</option>
+          <option>Some</option>
+          <option>None that I've seen</option>
+        </select>
+        <button>Get a plant count &amp; price</button>
+      </div>
+
+      <div class="spacing">
+        <h3>Rough spacing, so you can do the math yourself</h3>
+        <table>
+          <tr><td>Green Giant Arborvitae</td><td>5–6 ft apart</td></tr>
+          <tr><td>Emerald Arborvitae</td><td>3–4 ft apart</td></tr>
+          <tr><td>Skip Laurel</td><td>4–5 ft apart</td></tr>
+          <tr><td>Leyland Cypress</td><td>6–8 ft apart</td></tr>
+          <tr><td>Holly (Nellie Stevens)</td><td>5–6 ft apart</td></tr>
+        </table>
+        <p class="fine">[CONFIRM spacing figures before publishing — these are the standard ranges for each variety and should be replaced with whatever Daisy White actually recommends for North Shore soil and deer pressure.]</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="grown">
+  <div class="wrap">
+    <div class="kicker" style="color:var(--moss)">Why grown-here matters</div>
+    <h2>A plant that was already living in Mount Sinai has one less thing to survive</h2>
+    <p class="lede">The screening trees on a big-box lot were dug somewhere warmer, trucked overnight, and stood on asphalt in the sun for a week before you got there. Ours have been in this ground, in this weather.</p>
+    <div class="g3">
+      <div class="item">
+        <h3>We grow the stock</h3>
+        <p>Fifty years of growing on this ground. We know which varieties get through a North Shore winter and which sulk.</p>
+      </div>
+      <div class="item">
+        <h3>We maintain it constantly</h3>
+        <p>Plants get watered, cared for and looked at every day they're on the lot — not stacked and forgotten.</p>
+      </div>
+      <div class="item">
+        <h3>We'll say no</h3>
+        <p>If the spot is too shady for what you picked out, we'll tell you before you buy it, not after it dies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="two">
+      <div class="panel">
+        <div class="kicker">Worth the drive</div>
+        <h3>Rare and unusual</h3>
+        <p style="color:var(--ink);font-size:.96rem">The things you won't find on a garden-centre rack: uncommon annuals, perennials you have to hunt for, and new varieties as they come in.</p>
+        <ul>
+          <li>Rare &amp; unusual annuals</li>
+          <li>Perennials you can't get at a big-box</li>
+          <li>New varieties as they arrive</li>
+          <li>Deer-resistant selections</li>
+        </ul>
+        <p class="fine" style="font-size:.82rem;color:var(--mute);margin-top:16px;font-style:italic">A "what's on the ground this week" list belongs here — the single thing most likely to get a gardener in the car.</p>
+      </div>
+      <div class="panel">
+        <div class="kicker">The rest of the yard</div>
+        <h3>Garden accents, stone &amp; antiques</h3>
+        <p style="color:var(--ink);font-size:.96rem">The nursery is laid out as a walk-through, with pieces set among the plantings rather than stacked in a shed.</p>
+        <ul>
+          <li>Wrought-iron gates</li>
+          <li>Stone sculpture &amp; pedestals</li>
+          <li>Fountains and planters</li>
+          <li>Birdhouses &amp; weather vanes</li>
+          <li>Flower vases and home accents</li>
+          <li>Antiques throughout the center</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="design">
+  <div class="wrap">
+    <div class="kicker">Design help</div>
+    <h2>Start the conversation before you get in the car</h2>
+    <p class="lede">The counter advice already works — bring photos, bring measurements, note the sun. The only problem is that it can't start until you've driven over. Now it can.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Photograph the spot</h3>
+        <p>Stand where you'd stand to look at it. One wide shot is enough.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Measure it</h3>
+        <p>Length of the bed or fence line, and how deep you can plant.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Note the light</h3>
+        <p>Sun all day, morning only, or shade. This decides half the answer.</p>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <h3>Send it over</h3>
+        <p>We'll come back with a plant list, a count and a price before you visit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="kicker">Visit</div>
+    <h2>185 North Country Road, Mount Sinai</h2>
+    <p class="lede">Eight acres on the old Davis Peach Farm, around the corner from Cedar Beach. Come walk it.</p>
+    <div class="visit">
+      <div class="hours">
+        <h3>Hours</h3>
+        <table>
+          <tr><td>Monday – Saturday</td><td>9:00am – 6:00pm</td></tr>
+          <tr><td>Sunday</td><td>10:00am – 5:00pm</td></tr>
+        </table>
+        <p class="fine" style="font-size:.82rem;color:var(--mute);margin-top:12px;font-style:italic">[CONFIRM — a second set of hours (8:00am open) is currently showing on the existing site. We'll publish whichever is right, once.]</p>
+        <div class="landmark">
+          <strong>Finding us:</strong> 185 N Country Rd, Mt Sinai, NY 11766. If you know Cedar Beach, we're around the corner — the nursery sits on the original Davis Peach Farm.
+        </div>
+        <div class="landmark">
+          <strong>Contractors:</strong> screening stock in quantity, with a 100+ tier on Green Giant. Call the yard and ask what's ready to go.
+        </div>
+      </div>
+      <div>
+        <form class="form" onsubmit="return false;">
+          <label>Your name</label>
+          <input type="text" placeholder="Name">
+          <label>Phone or email</label>
+          <input type="text" placeholder="How should we get back to you?">
+          <label>What are you planting?</label>
+          <select>
+            <option>Privacy screening — a hedge or a property line</option>
+            <option>Contractor / bulk screening order</option>
+            <option>Perennials &amp; annuals for a bed</option>
+            <option>Garden accents, stone or antiques</option>
+            <option>Design help — I'll send photos</option>
+          </select>
+          <label>Tell us about the spot</label>
+          <textarea placeholder="Length of the line, sun or shade, how tall you need it, deer&hellip;"></textarea>
+          <button>Send it to the nursery</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <b>Daisy White Nursery</b><br>
+      185 N Country Rd, Mount Sinai, NY 11766
+    </div>
+    <div>
+      <b>631-474-9225</b><br>
+      Growing our own stock on the old Davis Peach Farm
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

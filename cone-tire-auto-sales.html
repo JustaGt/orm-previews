@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cone Tire &amp; Auto Sales — Tires, Autos &amp; Storage on Route 22, Eagle Bridge NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--asphalt:#23262a;--asphalt-2:#2e3238;--line:#f2b705;--fog:#e9eaec;--steel:#9aa1ab;--red:#c8442c}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Barlow',sans-serif;background:var(--asphalt);color:var(--fog);line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.12}
+/* tread divider */
+.tread{height:14px;background:repeating-linear-gradient(90deg,var(--line) 0 26px,transparent 26px 40px);opacity:.85}
+/* top */
+.top{display:flex;justify-content:space-between;align-items:center;padding:16px 0;flex-wrap:wrap;gap:10px}
+.top .logo{font-family:'Oswald',sans-serif;font-size:1.3rem;font-weight:700;text-transform:uppercase}
+.top .logo em{color:var(--line);font-style:normal}
+.top a{color:var(--line);text-decoration:none;font-weight:600;font-size:1.05rem}
+/* hero */
+.hero{padding:66px 0 60px;background:linear-gradient(180deg,var(--asphalt) 0%,var(--asphalt-2) 100%);position:relative}
+.hero .route{display:inline-flex;align-items:center;gap:10px;border:2px solid var(--steel);border-radius:50px;padding:6px 18px;font-weight:600;color:var(--steel);letter-spacing:.1em;font-size:.8rem;text-transform:uppercase;margin-bottom:20px}
+.hero .route b{color:var(--line);font-size:1rem}
+.hero h1{font-size:clamp(2.1rem,5.4vw,3.6rem);max-width:22ch}
+.hero h1 span{color:var(--line)}
+.hero p{max-width:56ch;margin:18px 0 0;font-size:1.12rem;color:#c6cad0}
+.btn{display:inline-block;margin-top:28px;background:var(--line);color:var(--asphalt);text-decoration:none;padding:15px 32px;font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:1rem;letter-spacing:.05em;border-radius:3px}
+.btn.dark{background:transparent;color:var(--fog);border:2px solid var(--steel);margin-left:12px}
+.hours{margin-top:32px;display:inline-flex;gap:0;border:2px solid var(--steel);border-radius:6px;overflow:hidden;flex-wrap:wrap}
+.hours div{padding:10px 20px;font-size:.92rem}
+.hours div+div{border-left:2px solid var(--steel)}
+.hours b{color:var(--line);display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em}
+/* doors */
+section{padding:60px 0}
+.kicker{color:var(--line);text-transform:uppercase;letter-spacing:.16em;font-weight:600;font-size:.78rem}
+h2{font-size:clamp(1.5rem,3.4vw,2.3rem);margin:8px 0 28px}
+.doors{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
+.door{background:repeating-linear-gradient(180deg,var(--asphalt-2) 0 34px,#343941 34px 36px);border:2px solid #3c424b;border-top:8px solid var(--line);border-radius:6px;padding:26px}
+.door h3{font-size:1.25rem;margin-bottom:10px}
+.door p{font-size:.95rem;color:#c6cad0}
+.door .tag{display:inline-block;margin-top:14px;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--asphalt);background:var(--line);padding:4px 10px;border-radius:3px;font-weight:600}
+/* winter callout */
+.winter{background:var(--fog);color:var(--asphalt)}
+.winter h2{color:var(--asphalt)}
+.winter .kicker{color:var(--red)}
+.winter p{max-width:60ch}
+.winter .snowline{margin-top:18px;font-weight:600;color:var(--red)}
+/* storage spec */
+.spec{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+@media(max-width:760px){.spec{grid-template-columns:1fr}.btn.dark{margin-left:0;margin-top:10px}}
+.speccard{background:var(--asphalt-2);border:2px solid #3c424b;border-radius:6px;padding:28px}
+.speccard ul{list-style:none}
+.speccard li{padding:10px 0 10px 30px;position:relative;border-bottom:1px solid #3c424b;font-size:.98rem}
+.speccard li::before{content:"▣";position:absolute;left:0;color:var(--line)}
+/* about */
+.about p{max-width:64ch;color:#c6cad0}
+.about .years{font-family:'Oswald',sans-serif;font-size:4rem;color:var(--line);line-height:1}
+/* call strip */
+.callstrip{background:var(--line);color:var(--asphalt);text-align:center;padding:40px 20px}
+.callstrip h2{color:var(--asphalt);margin-bottom:6px}
+.callstrip a{color:var(--asphalt);font-family:'Oswald',sans-serif;font-size:2rem;text-decoration:none;border-bottom:3px solid var(--asphalt)}
+footer{text-align:center;padding:20px;font-size:.85rem;color:var(--steel)}
+</style>
+</head>
+<body>
+<div class="wrap"><div class="top"><span class="logo">Cone <em>Tire</em> &amp; Auto Sales</span><a href="tel:+15186773321">(518) 677-3321</a></div></div>
+<div class="tread"></div>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="route">NY Route <b>22</b> · Eagle Bridge</span>
+    <h1>Tires, a fair used car, and a dry storage unit — <span>one stop on the same corner for 40 years.</span></h1>
+    <p>The Cone family has run this stretch of Route 22 since the 1980s: tire sales and mounting, straight-dealing used autos, and Cone Storage Solutions right on the property. No phone menus. No upsell script.</p>
+    <a class="btn" href="tel:+15186773321">Call for a tire quote</a>
+    <a class="btn dark" href="#storage">Check storage availability</a>
+    <div class="hours"><div><b>Mon–Fri</b>8am–5pm</div><div><b>Saturday</b>9am–1pm</div><div><b>Sunday</b>Closed</div></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">Three doors, one property</span>
+    <h2>What's behind each one</h2>
+    <div class="doors">
+      <div class="door"><h3>Tires</h3><p>Sales, mounting, and seasonal changeovers for cars, pickups, and farm rigs. Studded snow tires when the calendar calls for them.</p><span class="tag">Most sizes ordered fast</span></div>
+      <div class="door"><h3>Auto sales</h3><p>A small lot of used vehicles the shop would put its own name behind — because it does.</p><span class="tag">[PLACEHOLDER: current inventory]</span></div>
+      <div class="door" id="storage"><h3>Storage</h3><p>Cone Storage Solutions: clean self-storage units on the same lot, minutes from Cambridge and Hoosick Falls.</p><span class="tag">Insulated · Heated · Lighted</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="winter">
+  <section>
+    <div class="wrap">
+      <span class="kicker">The Route 22 winter rule</span>
+      <h2>Swap before the first storm, not after it</h2>
+      <p>This corridor gets real winter. Studded and snow tires go on fastest in early season — call ahead, and your set is mounted while the coffee's still warm. Locals have been doing the October/April swap here for decades.</p>
+      <p class="snowline">Snow-tire season books up: call (518) 677-3321 early.</p>
+    </div>
+  </section>
+</div>
+
+<section>
+  <div class="wrap spec">
+    <div>
+      <span class="kicker">Storage that isn't an afterthought</span>
+      <h2>Units built for this climate</h2>
+      <p style="color:#c6cad0;max-width:52ch">Between moves, between seasons, or just between projects — units are insulated, heated, and lighted, so what you store in November comes out the same in March.</p>
+    </div>
+    <div class="speccard">
+      <ul>
+        <li>Insulated &amp; heated units</li>
+        <li>Lighting in every unit</li>
+        <li>Same-lot owner — questions get answered at the shop counter</li>
+        <li>[PLACEHOLDER: unit sizes &amp; monthly rates — confirm with Bill]</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="tread"></div>
+
+<section class="about">
+  <div class="wrap">
+    <div class="years">40</div>
+    <span class="kicker">Years on the corner</span>
+    <h2>A family shop, not a franchise</h2>
+    <p>Customers describe the service the same way across forty years: prompt, friendly, reasonably priced. That reputation is the whole business plan — on a rural highway, word of mouth is the only advertising that matters, and the Cones have kept theirs good since the 1980s.</p>
+    <p style="margin-top:12px;font-size:.9rem;color:var(--steel)">Service quotes paraphrased from public customer reviews.</p>
+  </div>
+</section>
+
+<div class="callstrip">
+  <h2>430 State Route 22, Eagle Bridge</h2>
+  <a href="tel:+15186773321">(518) 677-3321</a>
+  <p style="margin-top:12px">Tires · Auto sales · Storage — say which door you need.</p>
+</div>
+<footer>Cone Tire &amp; Auto Sales · Cone Storage Solutions · Eagle Bridge, NY 12057 · Website concept preview by Onyx Rise Media</footer>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valley View Gardens &amp; The Cinnamon Apple Cottage — Little York / Cortland, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#2f5135; --green-dk:#223d28; --leaf:#5a7d4d;
+    --terra:#c0623d; --cinnamon:#9a4a28; --cream:#f7f1e6; --paper:#fffdf8;
+    --ink:#2b2a26; --muted:#6c6a61; --line:#e3dcca; --gold:#d8a13a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3,.disp{font-family:'Fraunces',serif;font-weight:600;line-height:1.12}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  /* season bar */
+  .season{background:var(--green-dk);color:#f3ead8;font-size:.92rem;text-align:center;padding:9px 16px}
+  .season b{color:#fff}
+  /* nav */
+  .nav{position:sticky;top:0;z-index:30;background:rgba(255,253,248,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{font-family:'Fraunces',serif;font-weight:600;color:var(--green);font-size:1.12rem;letter-spacing:.2px}
+  .brand small{display:block;font-family:'Inter';font-weight:500;color:var(--cinnamon);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase}
+  .nav ul{display:flex;gap:24px;list-style:none;font-size:.92rem;font-weight:500}
+  .nav a{text-decoration:none;color:var(--ink)}
+  .nav a:hover{color:var(--terra)}
+  .cta{display:inline-block;background:var(--terra);color:#fff;text-decoration:none;font-weight:600;padding:11px 20px;border-radius:30px;font-size:.92rem;transition:.2s}
+  .cta:hover{background:var(--cinnamon)}
+  @media(max-width:780px){.nav ul{display:none}}
+  /* hero */
+  .hero{background:linear-gradient(160deg,#33563a 0%,#27432c 70%);color:#f4ecd9;padding:64px 0 0}
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:end}
+  .hero .kicker{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .hero h1{font-size:3rem;color:#fff;margin:14px 0 16px}
+  .hero p.lead{font-size:1.12rem;color:#e2d8c2;max-width:34ch}
+  .hbtns{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0 40px}
+  .btn-ghost{display:inline-block;border:1.5px solid #c9b88f;color:#f4ecd9;text-decoration:none;padding:11px 20px;border-radius:30px;font-weight:600;font-size:.92rem}
+  .btn-ghost:hover{background:rgba(255,255,255,.08)}
+  .twopath{display:grid;gap:0;background:var(--cream);border-radius:14px 14px 0 0;overflow:hidden;color:var(--ink);transform:translateY(1px)}
+  .twopath div{padding:18px 20px}
+  .twopath .p1{background:#eef2e6;border-bottom:3px solid var(--leaf)}
+  .twopath .p2{background:#f6e8da;border-bottom:3px solid var(--terra)}
+  .twopath h3{font-size:1.05rem;color:var(--green)}
+  .twopath .p2 h3{color:var(--cinnamon)}
+  .twopath small{color:var(--muted);font-size:.84rem}
+  @media(max-width:780px){.hero .wrap{grid-template-columns:1fr}.hero h1{font-size:2.3rem}}
+  /* section base */
+  section{padding:58px 0}
+  .eyebrow{font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);font-weight:600}
+  .h2{font-size:2rem;color:var(--green);margin:8px 0 6px}
+  .sub{color:var(--muted);max-width:60ch;margin-bottom:30px}
+  /* in-season grid */
+  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}
+  .card .ic{width:40px;height:40px;border-radius:9px;background:#eef2e6;display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:12px}
+  .card h3{font-size:1.04rem;color:var(--green-dk);margin-bottom:4px}
+  .card p{font-size:.9rem;color:var(--muted)}
+  @media(max-width:860px){.cards{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.cards{grid-template-columns:1fr}}
+  /* design / quote split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+  .split.alt{background:#eef2e6}
+  .panel{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:30px}
+  .ul{list-style:none;margin-top:14px}
+  .ul li{padding:8px 0 8px 28px;position:relative;border-bottom:1px dashed var(--line);font-size:.96rem}
+  .ul li:before{content:"❧";position:absolute;left:0;color:var(--terra)}
+  .quote{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px}
+  .quote h3{color:var(--green);font-size:1.3rem;margin-bottom:4px}
+  label{display:block;font-size:.82rem;font-weight:600;color:var(--green-dk);margin:12px 0 5px}
+  input,select,textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:9px;font-family:inherit;font-size:.94rem;background:#fcfbf7}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .formbtn{margin-top:16px;width:100%;background:var(--terra);color:#fff;border:none;padding:13px;border-radius:30px;font-weight:600;font-size:1rem;cursor:pointer}
+  .formbtn:hover{background:var(--cinnamon)}
+  @media(max-width:780px){.split{grid-template-columns:1fr}}
+  /* cottage */
+  .cottage{background:linear-gradient(160deg,#9a4a28,#7d3a1f);color:#f7e9dc}
+  .cottage .h2{color:#fff}
+  .cottage .sub{color:#eccdb8}
+  .rooms{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+  .chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:7px 13px;border-radius:20px;font-size:.86rem}
+  /* story */
+  .story p{max-width:70ch;color:#43413a;margin-bottom:14px}
+  .stat{display:flex;gap:30px;flex-wrap:wrap;margin-top:22px}
+  .stat div{border-left:3px solid var(--terra);padding-left:14px}
+  .stat b{font-family:'Fraunces',serif;font-size:1.9rem;color:var(--green);display:block;line-height:1}
+  .stat span{font-size:.84rem;color:var(--muted)}
+  /* contact */
+  .contact{background:var(--green-dk);color:#e9e0cd}
+  .contact .h2{color:#fff}
+  .cgrid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:24px}
+  .cgrid a{color:#f3d99a}
+  .hours-note{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:16px 18px;font-size:.92rem}
+  .ph{display:inline-block;font-size:.7rem;background:rgba(216,161,58,.2);color:#f3d99a;border:1px solid #b98e3a;padding:2px 8px;border-radius:20px;margin-left:6px;vertical-align:middle}
+  @media(max-width:780px){.cgrid{grid-template-columns:1fr}}
+  footer{background:#1c2f21;color:#9fb09a;text-align:center;padding:26px;font-size:.84rem}
+  .preview-flag{background:#222;color:#ffd66e;text-align:center;font-size:.74rem;padding:5px}
+</style>
+</head>
+<body>
+<div class="preview-flag">PREVIEW CONCEPT — Onyx Rise Media · not the live site · sample layout for Valley View Gardens</div>
+<div class="season">🌿 <b>Nursery open April–October</b> · The Cinnamon Apple Cottage gift shop open year-round through the holidays · <b>Call (607) 749-3130 for this week's hours &amp; spring opening date</b></div>
+
+<nav class="nav"><div class="wrap">
+  <div class="brand">Valley View Gardens<small>Nursery · Landscaping · Gift Cottage · Little York</small></div>
+  <ul>
+    <li><a href="#season">In Season</a></li>
+    <li><a href="#design">Landscape Design</a></li>
+    <li><a href="#cottage">Gift Cottage</a></li>
+    <li><a href="#visit">Visit</a></li>
+  </ul>
+  <a href="#quote" class="cta">Get a design quote</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div>
+    <div class="kicker">Family-grown in Cortland County since the 1990s</div>
+    <h1>Locally grown plants and a gift cottage worth the drive to Luker Road.</h1>
+    <p class="lead">Five greenhouses of annuals, baskets and perennials, a landscape crew that designs and plants it for you, and a ten-room gift shop next door.</p>
+    <div class="hbtns">
+      <a href="#quote" class="cta">Request a landscape quote</a>
+      <a href="#season" class="btn-ghost">See what's in season</a>
+    </div>
+  </div>
+  <div class="twopath">
+    <div class="p1"><h3>The Nursery &amp; Landscaping</h3><small>Shrubs, shade &amp; ornamental trees, perennials, annuals + design &amp; install. April–Oct.</small></div>
+    <div class="p2"><h3>The Cinnamon Apple Cottage</h3><small>A ten-room gift shop — décor, candles, toys, edibles, Willow Tree &amp; more. Open into the holidays.</small></div>
+  </div>
+</div></header>
+
+<section id="season"><div class="wrap">
+  <div class="eyebrow">Right now at the nursery</div>
+  <h2 class="h2">What's ready to plant this season</h2>
+  <p class="sub">Truckloads of locally grown, superior-quality stock arrive through spring and summer — stronger, healthier plants than the department-store garden center, a few minutes off Route 281.</p>
+  <div class="cards">
+    <div class="card"><div class="ic">🌸</div><h3>Annuals &amp; baskets</h3><p>Hanging baskets, bedding annuals, mums, plus vegetables &amp; herbs in season.</p></div>
+    <div class="card"><div class="ic">🌳</div><h3>Trees</h3><p>Evergreens, oak, maple, linden, spruce, arborvitae, fruit &amp; ornamentals.</p></div>
+    <div class="card"><div class="ic">🌿</div><h3>Shrubs &amp; perennials</h3><p>Flowering &amp; deciduous shrubs, ornamental grasses, vines, sedum, roses.</p></div>
+    <div class="card"><div class="ic">🎍</div><h3>Specialty</h3><p>Topiaries, Japanese maples and hard-to-find picks for that one tricky corner.</p></div>
+  </div>
+</div></section>
+
+<section id="design" class="split-wrap"><div class="wrap split">
+  <div>
+    <div class="eyebrow">Design &amp; installation</div>
+    <h2 class="h2">We'll plan it, plant it, and make it last</h2>
+    <p class="sub" style="margin-bottom:0">Forty-plus years of designing landscapes for new construction and homes that need a fresh look — including curb-appeal work for owners getting ready to sell. Tell us the spot and we'll match the right plant to it.</p>
+    <ul class="ul">
+      <li>Full landscape design for new builds &amp; renovations</li>
+      <li>Foundation plantings, beds, trees &amp; screening</li>
+      <li>Pre-sale curb-appeal refresh</li>
+      <li>Right-plant-right-place guidance for CNY (Zone 4–5) conditions</li>
+    </ul>
+  </div>
+  <div class="quote" id="quote">
+    <h3>Request a landscape quote</h3>
+    <p style="font-size:.9rem;color:var(--muted)">Send the details and Valley View will follow up to set a visit.</p>
+    <form onsubmit="event.preventDefault();this.querySelector('.formbtn').textContent='Thanks — we\'ll be in touch!';">
+      <div class="row"><div><label>Name</label><input required></div><div><label>Phone</label><input required></div></div>
+      <label>Your town</label><input placeholder="Cortland, Homer, Dryden…">
+      <label>What are you planning?</label>
+      <select><option>New-construction landscape</option><option>Refresh existing beds / trees</option><option>Curb appeal before selling</option><option>Just plants / pickup</option></select>
+      <label>Tell us about the space</label><textarea rows="3" placeholder="Front yard, full sun, looking for low-maintenance shrubs…"></textarea>
+      <button class="formbtn" type="submit">Send my request</button>
+    </form>
+  </div>
+</div></section>
+
+<section id="cottage" class="cottage"><div class="wrap">
+  <div class="eyebrow" style="color:#f3d99a">Next door at the gift shop</div>
+  <h2 class="h2">The Cinnamon Apple Cottage</h2>
+  <p class="sub">A ten-room shop people drive in for — each room its own world of fragrance, color and sound. New giftware arrives weekly, and it carries the holiday season after the nursery closes for winter.</p>
+  <div class="rooms">
+    <span class="chip">Home décor &amp; artwork</span>
+    <span class="chip">Candles &amp; fragrance</span>
+    <span class="chip">Willow Tree figurines</span>
+    <span class="chip">Jams, fruit butter &amp; mixes</span>
+    <span class="chip">Children's books &amp; toys</span>
+    <span class="chip">Amish-made birdhouses</span>
+    <span class="chip">Lang calendars</span>
+    <span class="chip">Gift certificates (never expire)</span>
+  </div>
+</div></section>
+
+<section class="story"><div class="wrap">
+  <div class="eyebrow">The Mones family</div>
+  <h2 class="h2">Three decades on the Route 281 corridor</h2>
+  <p>Valley View Gardens has served Central New York for around three decades and has spent more than twenty years at 3797 Luker Road — just off NYS Route 281, opposite Builder's Best. The nursery and the Cinnamon Apple Cottage are run by the Mones family, who would rather grow you a stronger plant and point you to the right one than sell you a flat that won't make it.</p>
+  <div class="stat">
+    <div><b>~30 yrs</b><span>serving CNY</span></div>
+    <div><b>5</b><span>greenhouses</span></div>
+    <div><b>10</b><span>gift-shop rooms</span></div>
+    <div><b>40+ yrs</b><span>landscape-design experience</span></div>
+  </div>
+</div></section>
+
+<section id="visit" class="contact"><div class="wrap">
+  <div class="eyebrow" style="color:#f3d99a">Find us</div>
+  <h2 class="h2">Visit, call, or send a quote request</h2>
+  <div class="cgrid">
+    <div>
+      <p style="margin-bottom:10px"><strong>Valley View Gardens &amp; The Cinnamon Apple Cottage</strong><br>3797 Luker Road, Cortland, NY 13045<br>Off NYS Route 281, opposite Builder's Best</p>
+      <p>Phone: <a href="tel:6077493130">(607) 749-3130</a><br>Email: <a href="mailto:vvg607@yahoo.com">vvg607@yahoo.com</a></p>
+      <p style="margin-top:10px;font-size:.86rem">Cards accepted: Discover, MasterCard, Visa, AMEX.</p>
+    </div>
+    <div class="hours-note">
+      <strong>Seasonal hours</strong> <span class="ph">confirm current hours by phone</span><br>
+      <em>Nursery:</em> open April–October (closed Nov 1–Mar 31; call in late March for the weather-dependent spring opening date).<br>
+      <em>Gift Cottage:</em> open April–October plus the Nov–Dec holiday season.<br>
+      Sunday &amp; holiday hours vary — please call ahead.
+    </div>
+  </div>
+</div></section>
+
+<footer>
+  Valley View Gardens &amp; The Cinnamon Apple Cottage · 3797 Luker Road, Cortland (Little York), NY 13045 · (607) 749-3130<br>
+  Preview concept prepared by Onyx Rise Media. Hours, selection and product lines shown are illustrative — confirm directly with the nursery.
+</footer>
+</body>
+</html>

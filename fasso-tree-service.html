@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fasso Tree Service — Tree Removal, Trimming & Lot Clearing | Angola & Gowanda, NY — Since 1960</title>
+<meta name="description" content="Three generations of tree removal, trimming, stump grinding and lot clearing across the Southtowns. Angola & Gowanda, NY. 24-hour storm response. Free tree assessments.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pine:#1d3a24; --pine-deep:#122718; --bark:#4a3426; --saw:#e8630a;
+    --paper:#f4f1ea; --cream:#faf8f2; --ink:#1a1f1b; --stone:#8a8f87;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Archivo',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  h1,h2,h3,.disp{font-family:'Archivo Black',sans-serif;line-height:1.08;text-transform:uppercase;letter-spacing:.01em}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  /* emergency band */
+  .storm{background:var(--saw);color:#fff;text-align:center;padding:10px 16px;font-weight:700;font-size:.95rem}
+  .storm a{color:#fff;text-decoration:underline}
+  /* nav */
+  nav{background:var(--pine-deep);padding:14px 0;position:sticky;top:0;z-index:50}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center}
+  .logo{color:#fff;font-family:'Archivo Black',sans-serif;font-size:1.15rem;text-transform:uppercase}
+  .logo span{color:var(--saw)}
+  .navlinks{display:flex;gap:22px;align-items:center}
+  .navlinks a{color:#cfd8cf;text-decoration:none;font-size:.9rem;font-weight:600}
+  .btn{display:inline-block;background:var(--saw);color:#fff;padding:12px 26px;text-decoration:none;font-weight:700;border-radius:4px;border:none;cursor:pointer;font-size:1rem}
+  .btn.ghost{background:transparent;border:2px solid #fff}
+  /* hero */
+  header{background:linear-gradient(160deg,var(--pine-deep) 0%,var(--pine) 70%,#2a4d33 100%);color:#fff;padding:84px 0 72px;position:relative;overflow:hidden}
+  header::after{content:"";position:absolute;right:-80px;top:-40px;width:420px;height:520px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.04) 0 14px,transparent 14px 34px);transform:rotate(8deg)}
+  .kicker{color:var(--saw);font-weight:700;text-transform:uppercase;letter-spacing:.18em;font-size:.8rem;margin-bottom:18px}
+  h1{font-size:clamp(2.1rem,5.4vw,3.6rem);max-width:19ch}
+  .sub{margin:22px 0 30px;font-size:1.12rem;color:#dfe7de;max-width:56ch}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .proofrow{display:flex;gap:34px;margin-top:44px;flex-wrap:wrap}
+  .proof strong{display:block;font-family:'Archivo Black';font-size:1.6rem;color:var(--saw)}
+  .proof span{font-size:.85rem;color:#b9c4b8}
+  /* services */
+  section{padding:72px 0}
+  .sect-k{color:var(--saw);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem}
+  h2{font-size:clamp(1.6rem,3.6vw,2.3rem);margin:10px 0 34px;color:var(--pine-deep)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+  .card{background:#fff;border:1px solid #e4e0d5;border-left:5px solid var(--pine);padding:26px}
+  .card h3{font-size:1.02rem;margin-bottom:10px;color:var(--pine-deep)}
+  .card p{font-size:.95rem;color:#4b514b}
+  .card.hot{border-left-color:var(--saw)}
+  /* generations */
+  .gens{background:var(--pine-deep);color:#fff}
+  .gens h2{color:#fff}
+  .timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;margin-top:8px}
+  .era{border-top:4px solid var(--saw);padding-top:16px}
+  .era .yr{font-family:'Archivo Black';font-size:1.5rem;color:var(--saw)}
+  .era h3{font-size:1rem;margin:8px 0}
+  .era p{font-size:.92rem;color:#c9d3c8}
+  /* area */
+  .area{background:var(--paper)}
+  .towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+  .towns span{background:#fff;border:1px solid #ddd7c8;padding:8px 16px;border-radius:100px;font-weight:600;font-size:.9rem}
+  .area p.note{margin-top:18px;color:#5a5f57;font-size:.95rem;max-width:60ch}
+  /* reviews */
+  .rev blockquote{background:#fff;border:1px solid #e4e0d5;padding:26px;font-size:1rem;font-style:italic;color:#3c423c}
+  .rev cite{display:block;margin-top:12px;font-style:normal;font-weight:700;font-size:.85rem;color:var(--pine)}
+  .rev .grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .plchold{font-size:.78rem;color:var(--stone);margin-top:14px}
+  /* form */
+  .quote{background:linear-gradient(160deg,var(--pine) 0%,var(--pine-deep) 100%);color:#fff}
+  .quote h2{color:#fff}
+  .quote form{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:720px}
+  .quote input,.quote select,.quote textarea{padding:14px;border:none;border-radius:4px;font-family:inherit;font-size:.95rem;width:100%}
+  .quote textarea{grid-column:1/-1;min-height:110px}
+  .quote .full{grid-column:1/-1}
+  .quote p.hint{grid-column:1/-1;font-size:.85rem;color:#c9d3c8}
+  footer{background:#0d1c11;color:#93a193;padding:34px 0;font-size:.85rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
+  @media(max-width:640px){.navlinks a:not(.btn){display:none}.quote form{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="storm">⛈ Storm damage? Tree on a line, a roof, or leaning where it shouldn't? We answer 24 hours — <a href="tel:7162250055">(716) 225-0055</a></div>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">Fasso <span>Tree Service</span></div>
+    <div class="navlinks">
+      <a href="#services">Services</a>
+      <a href="#gens">Since 1960</a>
+      <a href="#area">Service Area</a>
+      <a href="#quote" class="btn">Free Assessment</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">Angola · Gowanda · The Southtowns — est. 1960</p>
+    <h1>Three generations of taking down the trees nobody else will touch.</h1>
+    <p class="sub">Dead ash over the garage. A silver maple splitting at the crotch. Sixty acres that need to be a building lot by fall. Fasso crews have handled the Southtowns' worst-placed trees for 66 years — with the climbers, cranes and iron to do it without breaking anything underneath.</p>
+    <div class="hero-ctas">
+      <a class="btn" href="#quote">Request a free tree assessment</a>
+      <a class="btn ghost" href="tel:7162250055">(716) 225-0055</a>
+    </div>
+    <div class="proofrow">
+      <div class="proof"><strong>1960</strong><span>founded by Angelo Fasso Sr.</span></div>
+      <div class="proof"><strong>3</strong><span>generations on the same crews</span></div>
+      <div class="proof"><strong>24 hr</strong><span>storm &amp; emergency response</span></div>
+      <div class="proof"><strong>2</strong><span>yards — Angola &amp; Gowanda</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <p class="sect-k">What we do</p>
+    <h2>From one bad limb to a whole wooded lot</h2>
+    <div class="grid">
+      <div class="card hot"><h3>Hazard &amp; Emergency Removal</h3><p>Storm-split, wind-thrown, or hanging over the house. We rig, section and lower trees in tight quarters where felling isn't an option — day or night.</p></div>
+      <div class="card"><h3>Tree Removal &amp; Trimming</h3><p>Full removals, crown reductions, deadwooding and clearance pruning that keeps the tree healthy and your roofline, drive and service lines clear.</p></div>
+      <div class="card"><h3>Stump Grinding</h3><p>Stumps ground below grade so you can seed, sod or pave over them — not mow around them for the next decade.</p></div>
+      <div class="card"><h3>Lot Clearing &amp; Site Development</h3><p>Building lots, driveways, pond sites and fence lines cleared, graded and ready for the next contractor — one crew, start to finish.</p></div>
+      <div class="card"><h3>Retaining Walls &amp; Stone Setting</h3><p>The same crews that clear your slope can hold it back — engineered retaining walls, stone steps and landscape structure.</p></div>
+      <div class="card"><h3>Spring &amp; Storm Cleanup</h3><p>Brush hauled, limbs chipped, yards raked back to usable after a Lake Erie winter does what it does.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="gens" id="gens">
+  <div class="wrap">
+    <p class="sect-k">The name on the truck</p>
+    <h2>Same family. Same standard. Since 1960.</h2>
+    <div class="timeline">
+      <div class="era"><div class="yr">1960</div><h3>Angelo Fasso Sr.</h3><p>Starts the company in Angola with a saw, a truck and a reputation for showing up when the weather turned.</p></div>
+      <div class="era"><div class="yr">Today</div><h3>Christopher Fasso</h3><p>Second generation, running the operation and still on job sites — not behind a desk.</p></div>
+      <div class="era"><div class="yr">Next</div><h3>Zach &amp; Chris Jr.</h3><p>Third generation leading crews. When a Fasso quotes your tree, a Fasso takes it down.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="area" id="area">
+  <div class="wrap">
+    <p class="sect-k">Where we work</p>
+    <h2>The Southtowns are home turf</h2>
+    <div class="towns">
+      <span>Angola</span><span>Evans</span><span>Gowanda</span><span>Eden</span><span>North Collins</span><span>Derby</span><span>Lake View</span><span>Hamburg</span><span>Springville</span><span>Collins</span>
+    </div>
+    <p class="note">Two equipment yards — Southwestern Blvd in Angola and Point Peter Rd in Gowanda — mean the crane, chipper and crew are minutes away, not coming from Buffalo at highway-mileage rates.</p>
+  </div>
+</section>
+
+<section class="rev">
+  <div class="wrap">
+    <p class="sect-k">Word around town</p>
+    <h2>Neighbors who've watched us work</h2>
+    <div class="grid">
+      <blockquote>"They took a massive oak off the corner of our house in an afternoon and you couldn't tell a crew had been in the yard."<cite>— Homeowner review, Angola [representative placeholder — replace with verbatim review before publishing]</cite></blockquote>
+      <blockquote>"Called after the windstorm, they were here the next morning while everyone else was quoting three weeks out."<cite>— Homeowner review, Eden [representative placeholder — replace with verbatim review before publishing]</cite></blockquote>
+    </div>
+    <p class="plchold">Rated 4.4★ across 34 public reviews (Birdeye). Quotes above are placeholders to be swapped for the customer's exact words.</p>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="wrap">
+    <p class="sect-k">No-obligation</p>
+    <h2>Get a free tree assessment</h2>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="tel" placeholder="Phone" required>
+      <input type="text" placeholder="Town" required>
+      <select><option>What's going on?</option><option>Dangerous / leaning tree</option><option>Storm damage — urgent</option><option>Removal quote</option><option>Trimming / pruning</option><option>Stump grinding</option><option>Lot clearing / site work</option><option>Retaining wall / stone</option></select>
+      <textarea placeholder="Tell us about the tree — size, where it's leaning, what's under it. Photos help; we'll text you a number to send them to."></textarea>
+      <p class="hint">We'll call back within one business day — same day in storm season.</p>
+      <button class="btn full" type="submit">Send it to the crew</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><strong style="color:#fff">Fasso Tree Service</strong> · est. 1960<br>9440 Southwestern Blvd, Angola, NY 14006 · 9802 Point Peter Rd, Gowanda, NY 14070</div>
+    <div>(716) 225-0055 · 24-hour emergency<br>Website preview by Onyx Rise Media</div>
+  </div>
+</footer>
+
+</body>
+</html>

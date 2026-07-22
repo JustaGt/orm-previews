@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crane Truck &amp; Auto — Towing, Recovery &amp; Heavy Truck Repair | Salamanca, NY</title>
+<meta name="description" content="Local towing, recovery, road service, tires and heavy truck & auto repair on Broad Street in Salamanca, NY. USDOT 2054745. Call (716) 945-2020.">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{--coal:#1b1d21;--steel:#2a2e35;--amber:#ffb400;--amber2:#e09a00;--paper:#f4f4f2;--gray:#9aa1ad;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Inter',sans-serif;background:var(--paper);color:#23262b;}
+  h1,h2,h3{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.8px;}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px;}
+  /* call bar */
+  .callbar{background:var(--amber);display:flex;justify-content:center;gap:10px;align-items:center;padding:10px 16px;font-weight:800;color:#1b1d21;font-size:1rem;flex-wrap:wrap;text-align:center;}
+  .callbar a{color:#1b1d21;text-decoration:none;border-bottom:2px solid #1b1d21;}
+  /* header */
+  header{background:var(--coal);color:#fff;}
+  .topnav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;}
+  .brand{font-family:'Oswald';font-weight:700;font-size:1.3rem;text-transform:uppercase;letter-spacing:1px;}
+  .brand span{color:var(--amber);}
+  .dot{font-size:.72rem;color:var(--gray);letter-spacing:1.5px;}
+  .hero{padding:58px 0 66px;background:
+     linear-gradient(105deg, rgba(27,29,33,.97) 45%, rgba(27,29,33,.75)),
+     repeating-linear-gradient(45deg,#26292f 0 14px,#202329 14px 28px);}
+  .hero .tag{display:inline-block;background:var(--amber);color:var(--coal);font-weight:800;padding:5px 13px;border-radius:4px;font-size:.8rem;letter-spacing:1.6px;text-transform:uppercase;}
+  .hero h1{font-size:clamp(2rem,5.5vw,3.5rem);line-height:1.05;margin:18px 0;}
+  .hero h1 b{color:var(--amber);}
+  .hero p{max-width:600px;font-size:1.13rem;line-height:1.65;color:#c9cfd8;}
+  .hero .btns{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{padding:16px 28px;font-weight:800;text-decoration:none;font-size:1.05rem;border-radius:6px;font-family:'Oswald';letter-spacing:1px;text-transform:uppercase;}
+  .btn.call{background:var(--amber);color:var(--coal);}
+  .btn.fleet{border:2px solid #555c68;color:#e8ebef;}
+  .proof{display:flex;gap:26px;margin-top:36px;flex-wrap:wrap;}
+  .proof div{border-left:3px solid var(--amber);padding-left:14px;}
+  .proof b{display:block;font-family:'Oswald';font-size:1.25rem;}
+  .proof span{font-size:.85rem;color:var(--gray);}
+  /* services */
+  section{padding:62px 0;}
+  h2{font-size:clamp(1.5rem,3.5vw,2.2rem);color:var(--coal);}
+  .rule{width:64px;height:5px;background:var(--amber);margin:14px 0 8px;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:30px;}
+  .svc{background:#fff;border:1px solid #e2e2de;border-top:4px solid var(--amber);padding:24px;border-radius:8px;}
+  .svc h3{font-size:1.05rem;margin-bottom:9px;}
+  .svc p{line-height:1.6;color:#4b5058;font-size:.97rem;}
+  /* local vs 800 */
+  .local{background:var(--coal);color:#fff;}
+  .local h2{color:#fff;}
+  .vs{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:30px;}
+  .vs .col{border-radius:10px;padding:26px;}
+  .vs .them{background:#24272d;border:1px dashed #4a4f58;color:#aab1bb;}
+  .vs .us{background:linear-gradient(160deg,#33373f,#2a2e35);border:1px solid var(--amber);}
+  .vs h3{font-size:1.02rem;margin-bottom:12px;color:var(--amber);}
+  .vs .them h3{color:#8d939d;}
+  .vs li{margin:9px 0 9px 20px;line-height:1.5;font-size:.97rem;}
+  /* area */
+  .area p.lead{max-width:640px;line-height:1.65;margin-top:14px;color:#4b5058;font-size:1.05rem;}
+  .towns{margin-top:24px;display:flex;flex-wrap:wrap;gap:10px;}
+  .towns span{background:#fff;border:1px solid #ddd;border-radius:999px;padding:8px 16px;font-size:.9rem;font-weight:600;color:#33373f;}
+  /* fleet form */
+  .fleetform{background:#fff;border:1px solid #e2e2de;border-radius:10px;padding:28px;margin-top:30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;}
+  .fleetform input,.fleetform select{padding:13px;border:1px solid #cfcfc9;border-radius:6px;font-family:inherit;font-size:.97rem;}
+  .fleetform button{grid-column:1/-1;background:var(--coal);color:var(--amber);border:none;padding:16px;border-radius:6px;font-family:'Oswald';letter-spacing:1.2px;text-transform:uppercase;font-size:1.05rem;cursor:pointer;}
+  /* footer */
+  footer{background:#111317;color:#aab1bb;padding:46px 0;}
+  .fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px;}
+  footer h3{color:var(--amber);font-size:.95rem;margin-bottom:10px;}
+  footer a{color:#e8ebef;text-decoration:none;}
+  .fine{margin-top:30px;font-size:.78rem;color:#5c636d;text-align:center;}
+</style>
+</head>
+<body>
+
+<div class="callbar">BROKE DOWN? CALL THE SHOP, NOT A CALL CENTER → <a href="tel:+17169452020">(716) 945-2020</a></div>
+
+<header>
+  <div class="wrap topnav">
+    <div>
+      <div class="brand">CRANE <span>TRUCK &amp; AUTO</span></div>
+      <div class="dot">749 BROAD ST · SALAMANCA NY · USDOT 2054745</div>
+    </div>
+    <a class="btn call" href="tel:+17169452020" style="padding:11px 18px;">CALL NOW</a>
+  </div>
+  <div class="hero">
+    <div class="wrap">
+      <span class="tag">Towing · Recovery · Road Service · Shop Repair</span>
+      <h1>Off the road on I-86?<br><b>We're five minutes out,</b> not fifty.</h1>
+      <p>Crane Truck &amp; Auto has been pulling Salamanca out of ditches, snowbanks, and dead-battery mornings since 2004 — with our own wreckers, our own drivers, and a real shop on Broad Street that can finish the job the tow started.</p>
+      <div class="btns">
+        <a class="btn call" href="tel:+17169452020">(716) 945-2020</a>
+        <a class="btn fleet" href="#fleet">Fleet Service</a>
+      </div>
+      <div class="proof">
+        <div><b>Since 2004</b><span>same shop, same name</span></div>
+        <div><b>4 trucks / 4 drivers</b><span>USDOT 2054745 — active</span></div>
+        <div><b>One stop</b><span>tow it in, fix it here</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>What we roll out for</h2>
+    <div class="rule"></div>
+    <div class="grid">
+      <div class="svc"><h3>Towing &amp; Recovery</h3><p>Cars, pickups, and the stuff other trucks won't touch. Winch-outs from the shoulder of I-86, Route 219 ditch recoveries, and winter pull-outs when the hill wins.</p></div>
+      <div class="svc"><h3>Road Service</h3><p>Jump starts in the casino lot, tire changes on the Expressway shoulder, fuel runs, lockouts. If it can be fixed where it sits, we fix it there and save you the hook.</p></div>
+      <div class="svc"><h3>Heavy Truck &amp; Auto Repair</h3><p>A working shop behind the wreckers — brakes, suspension, diagnostics, and heavy-truck work that the quick-lube places wave off.</p></div>
+      <div class="svc"><h3>Tires &amp; Fleet Service</h3><p>Tires on hand, mounted while you wait. Local fleets get one number for breakdowns, scheduled service, and DOT-ready maintenance.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="local">
+  <div class="wrap">
+    <h2>The 800-number sells your breakdown. We answer it.</h2>
+    <div class="vs">
+      <div class="col them">
+        <h3>The lead-gen towing sites</h3>
+        <ul>
+          <li>Take your call in another state</li>
+          <li>Auction your job to whoever bids</li>
+          <li>Quote you a price they don't control</li>
+          <li>Leave you guessing on arrival time</li>
+        </ul>
+      </div>
+      <div class="col us">
+        <h3>The shop on Broad Street</h3>
+        <ul>
+          <li>The phone rings in Salamanca</li>
+          <li>Our own driver, our own wrecker</li>
+          <li>A price from the person sending the truck</li>
+          <li>Five minutes from I-86 exit 20</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="area">
+  <div class="wrap">
+    <h2>Where we run</h2>
+    <div class="rule"></div>
+    <p class="lead">Home base is Broad Street in Salamanca — minutes from the Seneca Allegany Casino, the Allegany State Park entrances, and the I-86/Route 219 interchange that keeps our winches busy every winter.</p>
+    <div class="towns">
+      <span>Salamanca</span><span>Kill Buck</span><span>Great Valley</span><span>Little Valley</span><span>Ellicottville</span><span>Allegany</span><span>Olean</span><span>Randolph</span><span>I-86 corridor</span>
+    </div>
+  </div>
+</section>
+
+<section id="fleet">
+  <div class="wrap">
+    <h2>Fleet &amp; commercial accounts</h2>
+    <div class="rule"></div>
+    <p style="max-width:620px;line-height:1.65;color:#4b5058;margin-top:12px;">Run trucks in Cattaraugus County? Get a direct line for breakdowns and a shop that keeps your equipment moving. Leave your details — Aaron's crew will call you back.</p>
+    <form class="fleetform" onsubmit="alert('Thanks — we\'ll call you back about your fleet.');return false;">
+      <input type="text" placeholder="Company name" required>
+      <input type="text" placeholder="Contact name" required>
+      <input type="tel" placeholder="Phone" required>
+      <select><option>2–5 vehicles</option><option>6–15 vehicles</option><option>16+ vehicles</option></select>
+      <button type="submit">Request Fleet Callback</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fgrid">
+    <div><h3>Crane Truck &amp; Auto</h3><p>749 Broad Street<br>Salamanca, NY 14779<br><a href="tel:+17169452020">(716) 945-2020</a></p></div>
+    <div><h3>Credentials</h3><p>USDOT 2054745 — Active<br>In business since 2004<br>Towing · recovery · repair · tires</p></div>
+    <div><h3>Breakdown?</h3><p>Save this number before you need it:<br><a href="tel:+17169452020" style="font-size:1.3rem;font-weight:800;color:#ffb400;">(716) 945-2020</a></p></div>
+  </div>
+  <p class="fine">© 2026 Crane Truck &amp; Auto · Salamanca NY · Preview concept by Onyx Rise Media</p>
+</footer>
+
+</body>
+</html>

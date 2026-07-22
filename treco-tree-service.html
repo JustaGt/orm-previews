@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Treco Inc. | Tree Removal &amp; Crane Takedowns | Newburgh &amp; Cornwall NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bark:#33291f;--leaf:#4e7a3a;--birch:#efe9dc;--ink:#241d15;--mut:#6f6557;--line:#ddd4c4;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--birch);line-height:1.65;}
+h1,h2,h3,.disp{font-family:'Fraunces',serif;line-height:1.06;}
+a{text-decoration:none;color:inherit;}
+.wrap{max-width:1160px;margin:0 auto;padding:0 26px;}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(239,233,220,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(6px);}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:14px 26px;max-width:1160px;margin:0 auto;}
+.brand{font-family:'Fraunces';font-weight:700;font-size:1.5rem;color:var(--bark);}
+.brand span{color:var(--leaf);}
+.nav-links{display:flex;gap:26px;align-items:center;font-size:.92rem;}
+.nav-links a.menu{color:var(--bark);}.nav-links a.menu:hover{color:var(--leaf);}
+.callbtn{background:var(--leaf);color:#fff;font-weight:600;padding:10px 18px;border-radius:30px;font-size:.92rem;}
+.callbtn:hover{background:#3f6630;}
+
+/* split hero C */
+.hero{padding:64px 0 70px;}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center;}
+.kicker{font-family:'Inter';font-weight:600;color:var(--leaf);letter-spacing:3px;font-size:.82rem;text-transform:uppercase;margin-bottom:18px;}
+.hero h1{font-family:'Fraunces';font-weight:600;font-size:3.7rem;color:var(--bark);margin-bottom:20px;}
+.hero p.sub{font-size:1.12rem;color:var(--mut);max-width:480px;margin-bottom:30px;}
+.cta-row{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:38px;}
+.btn{display:inline-block;font-weight:600;padding:14px 26px;border-radius:30px;font-size:.95rem;}
+.btn-pri{background:var(--bark);color:#fff;}.btn-pri:hover{background:#241d15;}
+.btn-sec{background:transparent;color:var(--bark);border:1.5px solid var(--bark);}.btn-sec:hover{background:var(--bark);color:#fff;}
+.stats{display:flex;gap:34px;flex-wrap:wrap;}
+.stat .n{font-family:'Fraunces';font-weight:700;font-size:2.2rem;color:var(--leaf);}
+.stat .l{font-size:.78rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--mut);}
+/* photo card + floating chip */
+.photo-card{position:relative;border-radius:18px;min-height:480px;box-shadow:0 24px 50px rgba(51,41,31,.22);
+background:linear-gradient(160deg,rgba(51,41,31,.12),rgba(51,41,31,.45)),url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1400&q=80');
+background-size:cover;background-position:center;background-color:#33291f;}
+.chip{position:absolute;left:-18px;bottom:34px;background:#fff;border-radius:14px;padding:18px 22px;box-shadow:0 14px 30px rgba(51,41,31,.2);max-width:230px;}
+.chip .big{font-family:'Fraunces';font-weight:700;font-size:1.7rem;color:var(--leaf);}
+.chip p{font-size:.86rem;color:var(--mut);}
+
+section{padding:78px 0;}
+.eyebrow{font-family:'Inter';font-weight:600;color:var(--leaf);letter-spacing:3px;font-size:.8rem;text-transform:uppercase;}
+.sec-h{font-family:'Fraunces';font-weight:600;font-size:2.5rem;color:var(--bark);margin:8px 0 14px;}
+.lead{max-width:640px;color:var(--mut);margin-bottom:44px;}
+
+/* rounded cards */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.svc{background:#fff;border-radius:16px;padding:30px 26px;box-shadow:0 8px 22px rgba(51,41,31,.07);}
+.svc h3{font-family:'Fraunces';font-weight:600;font-size:1.35rem;color:var(--bark);margin-bottom:9px;}
+.svc p{font-size:.94rem;color:var(--mut);}
+.svc .ic{font-size:1.7rem;margin-bottom:12px;}
+
+/* horizontal stat band */
+.band{background:var(--bark);color:var(--birch);}
+.band .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding:56px 26px;}
+.tcard h3{font-family:'Fraunces';color:#9fc486;font-size:1.4rem;margin-bottom:7px;}
+.tcard p{color:#d8cfbf;font-size:.94rem;}
+
+/* masonry gallery */
+.gal{columns:3;column-gap:14px;}
+.tile{break-inside:avoid;margin-bottom:14px;border-radius:12px;display:flex;align-items:flex-end;color:#fff;}
+.tile span{font-family:'Fraunces';font-weight:600;background:rgba(51,41,31,.78);padding:7px 13px;font-size:.9rem;margin:12px;border-radius:6px;}
+.g1{min-height:300px;background:linear-gradient(rgba(51,41,31,.15),rgba(51,41,31,.5)),url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:#33291f;}
+.g2{min-height:220px;background:linear-gradient(rgba(51,41,31,.15),rgba(51,41,31,.5)),url('https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:#4e7a3a;}
+.g3{min-height:260px;background:linear-gradient(rgba(51,41,31,.15),rgba(51,41,31,.5)),url('https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:#5a4632;}
+.g4{min-height:240px;background:linear-gradient(rgba(51,41,31,.15),rgba(51,41,31,.5)),url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:#3f6630;}
+.g5{min-height:300px;background:linear-gradient(rgba(51,41,31,.15),rgba(51,41,31,.5)),url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:#33291f;}
+.g6{min-height:220px;background:linear-gradient(rgba(51,41,31,.15),rgba(51,41,31,.5)),url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:#4e7a3a;}
+
+/* contact card */
+.contact{background:var(--birch);}
+.ccard{background:#fff;border-radius:20px;box-shadow:0 18px 44px rgba(51,41,31,.12);display:grid;grid-template-columns:1fr 1fr;overflow:hidden;}
+.cinfo{background:var(--leaf);color:#fff;padding:46px 40px;}
+.cinfo h2{font-family:'Fraunces';font-weight:600;font-size:2.1rem;margin-bottom:14px;}
+.cinfo h3{font-family:'Fraunces';margin:22px 0 4px;font-size:1.2rem;}
+.cinfo .big{font-family:'Fraunces';font-weight:700;font-size:1.9rem;}
+.cinfo p{color:#e6f0df;}
+.cform{padding:42px 40px;}
+.cform label{display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:1px;color:var(--bark);margin:13px 0 5px;font-weight:600;}
+.cform input,.cform select,.cform textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:8px;font-family:inherit;font-size:.95rem;background:var(--birch);}
+.cform button{margin-top:20px;width:100%;background:var(--bark);color:#fff;font-family:'Fraunces';font-weight:600;padding:15px;border:none;border-radius:30px;cursor:pointer;font-size:1.05rem;}
+.cform button:hover{background:#241d15;}
+.thanks{padding:50px 40px;text-align:center;}
+.thanks h3{font-family:'Fraunces';color:var(--leaf);font-size:1.6rem;margin-bottom:8px;}
+
+footer{background:var(--ink);color:#c9bfae;padding:34px 0;text-align:center;font-size:.88rem;}
+footer .by{color:#9fc486;font-family:'Fraunces';font-weight:600;margin-top:8px;display:inline-block;}
+
+@media(max-width:860px){
+.nav-links .menu{display:none;}
+.hero .wrap{grid-template-columns:1fr;}
+.hero h1{font-size:2.7rem;}
+.svc-grid,.band .wrap,.ccard{grid-template-columns:1fr;}
+.gal{columns:2;}
+.chip{left:14px;}
+section{padding:52px 0;}
+}
+</style>
+</head>
+<body>
+<nav><div class="nav-in">
+<div class="brand">TRECO<span>.</span> TREE SERVICE</div>
+<div class="nav-links">
+<a class="menu" href="#services">Services</a>
+<a class="menu" href="#work">Work</a>
+<a class="menu" href="#contact">Estimate</a>
+<a class="callbtn" href="tel:18455641111">(845) 564-1111</a>
+</div></div></nav>
+
+<header class="hero"><div class="wrap">
+<div>
+<div class="kicker">NEWBURGH &middot; CORNWALL</div>
+<h1>Big Trees Down Safely&mdash;No Damage, No Drama</h1>
+<p class="sub">John Grzibowski and crew have been climbing, cutting, and craning trees for over 35 years. Hazard removals, careful pruning, and clean stump grinding across Orange County.</p>
+<div class="cta-row">
+<a class="btn btn-pri" href="#contact">Get a Free Estimate</a>
+<a class="btn btn-sec" href="#work">See Takedowns</a>
+</div>
+<div class="stats">
+<div class="stat"><div class="n">35+</div><div class="l">Years Climbing</div></div>
+<div class="stat"><div class="n">Fully</div><div class="l">Insured</div></div>
+<div class="stat"><div class="n">Crane</div><div class="l">Takedowns</div></div>
+</div>
+</div>
+<div class="photo-card">
+<div class="chip"><div class="big">35+ yrs</div><p>Of tight, technical removals over houses, wires, and pools.</p></div>
+</div>
+</div></header>
+
+<section id="services"><div class="wrap">
+<div class="eyebrow">SERVICES</div>
+<h2 class="sec-h">Tree Work, Done Carefully</h2>
+<p class="lead">From a single hazard limb over the roof to a full crane takedown in a tight yard&mdash;we plan the cut before we make it.</p>
+<div class="svc-grid">
+<div class="svc"><div class="ic">&#127794;</div><h3>Tree Removal</h3><p>Hazardous, dead, and overgrown trees taken down in sections so nothing below ever takes a hit.</p></div>
+<div class="svc"><div class="ic">&#9988;</div><h3>Pruning &amp; Trimming</h3><p>Proper cuts that improve structure, clear the house and wires, and keep trees healthy for years.</p></div>
+<div class="svc"><div class="ic">&#128679;</div><h3>Crane Takedowns</h3><p>Large or compromised trees lifted out by crane&mdash;the safest way to remove what can't be climbed.</p></div>
+<div class="svc"><div class="ic">&#9881;</div><h3>Stump Grinding</h3><p>Stumps ground below grade and the chips hauled or backfilled, leaving you a clean, usable yard.</p></div>
+<div class="svc"><div class="ic">&#9889;</div><h3>Storm Damage</h3><p>Fallen limbs and split trees cleared after a storm, with the worst-risk trees handled first.</p></div>
+<div class="svc"><div class="ic">&#127795;</div><h3>Lot Clearing</h3><p>Brush and trees cleared for new construction, views, or defensible space around the home.</p></div>
+</div>
+</div></section>
+
+<section class="band"><div class="wrap">
+<div class="tcard"><h3>Fully Insured</h3><p>General liability and workers' comp in place&mdash;ask for the certificate before any crew sets foot on your property.</p></div>
+<div class="tcard"><h3>35+ Years Climbing</h3><p>John has been in the trees since the 1980s. That experience is what keeps a takedown precise instead of risky.</p></div>
+<div class="tcard"><h3>Clean Cleanup</h3><p>Wood, brush, and chips hauled away. We leave the yard rake-clean, not littered with debris.</p></div>
+</div></section>
+
+<section id="work"><div class="wrap">
+<div class="eyebrow">RECENT REMOVALS</div>
+<h2 class="sec-h">From The Field</h2>
+<p class="lead">Takedowns, prunings, and cleanups around Newburgh, Cornwall, and Orange County.</p>
+<div class="gal">
+<div class="tile g1"><span>Crane Takedown</span></div>
+<div class="tile g2"><span>Roof Clearance Prune</span></div>
+<div class="tile g3"><span>Hazard Removal</span></div>
+<div class="tile g4"><span>Stump Grinding</span></div>
+<div class="tile g5"><span>Storm Cleanup &middot; Cornwall</span></div>
+<div class="tile g6"><span>Lot Clearing</span></div>
+</div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+<div class="ccard">
+<div class="cinfo">
+<div class="eyebrow" style="color:#cfe3c2">FREE ESTIMATE</div>
+<h2>Let's Look At Your Trees</h2>
+<p>Serving Newburgh, Cornwall, New Windsor, Cornwall-on-Hudson, and the surrounding Orange County towns.</p>
+<h3>Call Us</h3>
+<a class="big" href="tel:18455641111">(845) 564-1111</a>
+<h3>Hours</h3>
+<p>Mon&ndash;Sat 7:00am &ndash; 6:00pm<br>Emergency storm calls answered</p>
+<h3>Service Area</h3>
+<p>Newburgh, Cornwall &amp; Orange County</p>
+</div>
+<div>
+<div class="cform" id="formbox">
+<form id="qf" onsubmit="return ty(event)">
+<label>Name</label><input required placeholder="Your name">
+<label>Phone</label><input required placeholder="(845) 000-0000">
+<label>What You Need</label>
+<select><option>Tree Removal</option><option>Pruning / Trimming</option><option>Crane Takedown</option><option>Stump Grinding</option><option>Storm Damage</option><option>Lot Clearing</option></select>
+<label>Details</label><textarea rows="4" placeholder="How many trees, size, location near house/wires..."></textarea>
+<button type="submit">Request My Estimate</button>
+</form>
+<div id="ty" class="thanks" style="display:none">
+<h3>Thanks!</h3>
+<p>We'll reach out to schedule a free on-site look at your trees.</p>
+</div>
+</div>
+</div>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+Treco Inc. &middot; Newburgh / Cornwall, NY &middot; (845) 564-1111<br>
+<span class="by">Website preview by Onyx Rise Media</span>
+</div></footer>
+<script>
+function ty(e){e.preventDefault();document.getElementById('qf').style.display='none';document.getElementById('ty').style.display='block';return false;}
+</script>
+</body>
+</html>

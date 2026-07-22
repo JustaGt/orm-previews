@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Companionshep — Dog Daycare, Grooming &amp; Training | Great Valley, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#faf6ef; --sage:#7f9271; --sage-dk:#54654a; --clay:#c4703f;
+    --charcoal:#2b2823; --muted:#726c62; --line:#e2dad0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Karla',system-ui,sans-serif;background:var(--cream);color:var(--charcoal);line-height:1.65}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:700;line-height:1.12}
+
+  nav{position:sticky;top:0;background:rgba(250,246,239,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:9}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;gap:12px;flex-wrap:wrap}
+  .logo{font-family:'Fraunces';font-size:22px;font-weight:700}
+  .logo em{font-style:normal;color:var(--sage)}
+  nav a.book{background:var(--sage);color:#fff;padding:10px 18px;border-radius:30px;text-decoration:none;font-weight:700;font-size:15px}
+  nav .links{display:flex;gap:18px;font-size:15px;font-weight:600}
+  nav .links a{color:var(--muted);text-decoration:none}
+
+  header{padding:66px 0 60px}
+  .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+  .pill{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:30px;padding:6px 14px;font-size:13px;font-weight:700;color:var(--sage-dk)}
+  h1{font-size:52px;margin:16px 0 16px}
+  h1 em{font-style:italic;color:var(--clay)}
+  header p{font-size:19px;color:var(--muted);max-width:46ch}
+  .hero-cta{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+  .btn{padding:14px 24px;border-radius:30px;text-decoration:none;font-weight:700;display:inline-block}
+  .btn-p{background:var(--charcoal);color:#fff}
+  .btn-s{background:#fff;color:var(--charcoal);border:1px solid var(--line)}
+  .hero-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px}
+  .hero-card h3{font-size:20px;margin-bottom:12px}
+  .hero-card dl{font-size:15px}
+  .hero-card dt{font-weight:700;margin-top:10px}
+  .hero-card dd{color:var(--muted)}
+  .hero-card .note{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);font-size:14px;color:var(--clay);font-weight:600}
+
+  section{padding:60px 0}
+  .alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sage)}
+  h2{font-size:36px;margin:8px 0 12px}
+  .lede{color:var(--muted);max-width:58ch;margin-bottom:32px;font-size:17px}
+
+  .services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .svc{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:26px}
+  .alt .svc{background:var(--cream)}
+  .svc h3{font-size:23px;margin-bottom:8px}
+  .svc p{font-size:15px;color:var(--muted)}
+  .svc ul{list-style:none;margin-top:14px;font-size:15px}
+  .svc li{padding-left:20px;position:relative;margin-bottom:6px}
+  .svc li:before{content:"•";position:absolute;left:4px;color:var(--clay);font-weight:700}
+
+  .facility{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:10px}
+  .fact{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:22px;text-align:center}
+  .fact b{display:block;font-family:'Fraunces';font-size:30px;color:var(--sage-dk);line-height:1.1}
+  .fact span{font-size:14px;color:var(--muted)}
+
+  .visitors{background:var(--sage-dk);color:#fff;padding:64px 0}
+  .visitors h2{color:#fff}
+  .visitors .lede{color:#d5ddce}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s}
+  .step{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:22px}
+  .step:before{counter-increment:s;content:"0" counter(s);font-family:'Fraunces';font-size:26px;color:#c9d6bf;display:block;margin-bottom:6px}
+  .step h3{font-size:19px;margin-bottom:6px;color:#fff}
+  .step p{font-size:15px;color:#d5ddce}
+
+  .hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+  .hours{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .hours div{display:flex;justify-content:space-between;padding:13px 18px;border-bottom:1px solid var(--line);font-size:15px}
+  .hours div:last-child{border-bottom:0}
+  .hours .closed{color:var(--clay);font-weight:700}
+  .form{display:grid;gap:12px}
+  .form label{font-size:13px;font-weight:700;display:block;margin-bottom:4px}
+  .form input,.form select,.form textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff}
+  .form button{background:var(--clay);color:#fff;border:0;padding:15px;border-radius:30px;font-weight:700;font-size:16px;cursor:pointer}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+  footer{background:var(--charcoal);color:#a49c90;padding:30px 0;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:#fff;text-decoration:none;font-weight:600}
+
+  @media(max-width:880px){
+    h1{font-size:36px}
+    .hero,.services,.steps,.hours-grid,.row2{grid-template-columns:1fr}
+    .facility{grid-template-columns:1fr 1fr}
+    nav .links{display:none}
+  }
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <span class="logo">Companion<em>shep</em></span>
+  <span class="links">
+    <a href="#daycare">Daycare</a><a href="#grooming">Grooming</a><a href="#training">Training</a><a href="#visit">Visiting</a><a href="#book">Hours</a>
+  </span>
+  <a class="book" href="#book">Reserve a day</a>
+</div></nav>
+
+<header>
+  <div class="wrap hero">
+    <div>
+      <span class="pill">Great Valley, NY · 10 minutes from Holiday Valley</span>
+      <h1>Your dog gets a <em>full day</em>, not a kennel run.</h1>
+      <p>Daycare, cage-free grooming and certified behavioral training on Killbuck Road — 2,500+ square feet of indoor and outdoor play space with radiant floor heat, so a February drop-off is as comfortable as a July one.</p>
+      <div class="hero-cta">
+        <a class="btn btn-p" href="#book">Reserve a daycare day</a>
+        <a class="btn btn-s" href="tel:7168011471">Call or text (716) 801-1471</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>Before you drive out</h3>
+      <dl>
+        <dt>Daycare</dt><dd>Tuesday – Friday, 7:30am – 5:00pm</dd>
+        <dt>Grooming &amp; training</dt><dd>Saturdays &amp; Sundays by appointment</dd>
+        <dt>Boarding</dt><dd>Currently offered to daycare clients only</dd>
+        <dt>Closed</dt><dd>Mondays</dd>
+      </dl>
+      <div class="note">Skiing for the day? Book the dog in before you book the lift line — daycare fills fast on Holiday Valley weekends.</div>
+    </div>
+  </div>
+</header>
+
+<section class="alt" id="daycare">
+  <div class="wrap">
+    <span class="eyebrow">What we do</span>
+    <h2>Three services, one building, one staff who knows your dog</h2>
+    <p class="lede">You don't hand your dog to a rotating cast. The same people who play with him at daycare are the ones who groom him and know when something's off.</p>
+    <div class="services">
+      <div class="svc">
+        <h3>Daycare &amp; boarding</h3>
+        <p>Structured play with dogs matched by temperament, indoors on heated floors and out in the yard.</p>
+        <ul>
+          <li>2,500+ sq ft of indoor and outdoor space</li>
+          <li>Radiant floor heat through the winter</li>
+          <li>Tuesday – Friday, 7:30am – 5:00pm</li>
+          <li>Boarding available to daycare clients</li>
+        </ul>
+      </div>
+      <div class="svc" id="grooming">
+        <h3>Cage-free grooming</h3>
+        <p>One-on-one, single-focus grooming — your dog isn't crated for four hours waiting a turn.</p>
+        <ul>
+          <li>All-inclusive, cage-free, one dog at a time</li>
+          <li>Show-line products chosen to the coat</li>
+          <li>Weekends by appointment</li>
+        </ul>
+      </div>
+      <div class="svc" id="training">
+        <h3>Behavioral training</h3>
+        <p>A Certified Behavioral Dog Trainer on staff — private sessions, Zoom sessions and group classes through the year.</p>
+        <ul>
+          <li>Leash pulling and reactivity</li>
+          <li>Anxiety and confidence work</li>
+          <li>Puppy classes and group work</li>
+          <li>Any dog, any age</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">The building</span>
+    <h2>Purpose-built, not a converted garage</h2>
+    <p class="lede">Cattaraugus County winters are long, and a dog that can't burn energy indoors doesn't get exercised at all from December to March. That's what the space was built around.</p>
+    <div class="facility">
+      <div class="fact"><b>2,500+</b><span>sq ft indoor &amp; outdoor play space</span></div>
+      <div class="fact"><b>Heated</b><span>radiant floors, not concrete slab</span></div>
+      <div class="fact"><b>1:1</b><span>grooming — cage free, single focus</span></div>
+      <div class="fact"><b>Certified</b><span>behavioral trainer on staff</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="visitors" id="visit">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#c9d6bf">Up for the weekend?</span>
+    <h2>Bring the dog to Ellicottville. Ski anyway.</h2>
+    <p class="lede">Half the dogs on our floor belong to people who came up for the mountain and didn't want to leave a dog crated in a rental all day. Here's how a visitor day works.</p>
+    <div class="steps">
+      <div class="step">
+        <h3>Book before you drive</h3>
+        <p>Call or text (716) 801-1471 with your dates. Daycare runs Tuesday through Friday — weekend visitors should ask us early, since weekend care is by arrangement.</p>
+      </div>
+      <div class="step">
+        <h3>Send vaccination records</h3>
+        <p>Rabies, distemper and bordetella from your vet, emailed ahead so drop-off is a handshake and not paperwork.</p>
+      </div>
+      <div class="step">
+        <h3>Drop off, then go</h3>
+        <p>Killbuck Road is a short run from the village and the slopes. Pick up by 5:00pm, tired dog, no guilt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <span class="eyebrow">The chew bar</span>
+    <h2>The lobby is a small shop, on purpose</h2>
+    <p class="lede">Grab-and-go single-ingredient chews — bully sticks, beef tendon, trachea — plus skin, coat and allergy supplements, freeze-dried liver, Norwegian salmon oil, kongs, peanut butter and rechargeable LED collars for the dogs walking dark roads in December. Prices in-store; ask us to hold something with a pickup.</p>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <div class="hours-grid">
+      <div>
+        <span class="eyebrow">Hours &amp; location</span>
+        <h2>Killbuck Road, Great Valley</h2>
+        <p class="lede">4269 Killbuck Rd, Great Valley, NY 14741 · Call or text (716) 801-1471 · companionshep1@gmail.com</p>
+        <div class="hours">
+          <div><span>Monday</span><span class="closed">Closed</span></div>
+          <div><span>Tuesday – Friday</span><span>7:30am – 5:00pm · Daycare</span></div>
+          <div><span>Saturday</span><span>Grooming &amp; training by appointment</span></div>
+          <div><span>Sunday</span><span>Grooming &amp; training by appointment</span></div>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">New here?</span>
+        <h2 style="font-size:28px">Start a dog with us</h2>
+        <form class="form" onsubmit="return false">
+          <div class="row2">
+            <div><label>Your name</label><input placeholder="Name"></div>
+            <div><label>Phone</label><input placeholder="(716) ___-____"></div>
+          </div>
+          <div class="row2">
+            <div><label>Dog's name</label><input placeholder="Dog"></div>
+            <div><label>Breed &amp; age</label><input placeholder="e.g. Aussie, 3 yrs"></div>
+          </div>
+          <div><label>What do you need?</label>
+            <select>
+              <option>Daycare — regular days</option>
+              <option>Daycare — visiting for a ski weekend</option>
+              <option>Boarding (current daycare client)</option>
+              <option>Grooming appointment</option>
+              <option>Training — private session</option>
+              <option>Training — group class or puppy class</option>
+            </select>
+          </div>
+          <div><label>Anything we should know?</label><textarea rows="3" placeholder="Reactivity, anxiety, medical needs, first time in daycare…"></textarea></div>
+          <button>Send to Companionshep</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <span>Companionshep LLC · 4269 Killbuck Rd, Great Valley, NY 14741 · <a href="tel:7168011471">(716) 801-1471</a></span>
+  <span>Concept preview prepared by Onyx Rise Media</span>
+</div></footer>
+
+</body>
+</html>

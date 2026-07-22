@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wakin Land Surveying — Boundary, Mortgage & Topographic Surveys in Delaware County, NY</title>
+<style>
+  :root{
+    --ink:#0f2438; --steel:#1d4e7a; --blueprint:#2f6db0; --flag:#e8731c;
+    --paper:#f5f3ec; --line:#cdd6df; --grid:rgba(47,109,176,.10); --muted:#5a6b7a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  .mono{font-family:"Courier New",monospace;letter-spacing:.04em}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  /* top bar */
+  .topbar{background:var(--ink);color:#cfe0ef;font-size:.82rem}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 22px;flex-wrap:wrap}
+  .topbar a{color:#fff;text-decoration:none;font-weight:700}
+  /* hero */
+  .hero{position:relative;background:
+      linear-gradient(rgba(15,36,56,.86),rgba(15,36,56,.92)),
+      repeating-linear-gradient(0deg,transparent,transparent 38px,var(--grid) 38px,var(--grid) 39px),
+      repeating-linear-gradient(90deg,transparent,transparent 38px,var(--grid) 38px,var(--grid) 39px),
+      var(--steel);
+    color:#fff;padding:64px 0 70px}
+  .badge{display:inline-block;border:1px solid var(--flag);color:var(--flag);border-radius:3px;padding:5px 12px;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.13em;margin-bottom:20px}
+  .hero h1{font-size:2.5rem;line-height:1.12;max-width:18ch;margin-bottom:14px}
+  .hero h1 span{color:#7fb6e8}
+  .hero p.lede{font-size:1.12rem;color:#d4e3f1;max-width:54ch;margin-bottom:26px}
+  .corner{display:inline-block;color:var(--flag);font-weight:800}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;border-radius:4px;padding:14px 24px;font-weight:800;text-decoration:none;font-size:.98rem}
+  .btn-primary{background:var(--flag);color:#fff}
+  .btn-ghost{border:1.5px solid #7fb6e8;color:#fff}
+  .hero-meta{margin-top:30px;display:flex;gap:26px;flex-wrap:wrap;font-size:.86rem;color:#9fc0de}
+  .hero-meta b{color:#fff}
+  /* backlog strip */
+  .strip{background:var(--flag);color:#fff;text-align:center;padding:12px 22px;font-weight:700;font-size:.96rem}
+  /* sections */
+  section{padding:56px 0}
+  .eyebrow{color:var(--blueprint);font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:.74rem;margin-bottom:10px}
+  h2{font-size:1.8rem;margin-bottom:8px}
+  .sub{color:var(--muted);max-width:60ch;margin-bottom:30px}
+  /* survey types */
+  .grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+  .card{background:#fff;border:1px solid var(--line);border-top:4px solid var(--blueprint);border-radius:6px;padding:22px}
+  .card .tag{font-family:"Courier New",monospace;font-size:.72rem;color:var(--flag);font-weight:700;letter-spacing:.08em}
+  .card h3{font-size:1.12rem;margin:6px 0 8px}
+  .card p{font-size:.92rem;color:var(--muted)}
+  /* steps */
+  .steps{background:var(--ink);color:#fff;border-radius:10px;padding:34px 26px}
+  .steps h2{color:#fff}
+  .step-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-top:24px}
+  .step{position:relative;padding-left:46px}
+  .step .n{position:absolute;left:0;top:-2px;width:34px;height:34px;border:2px solid var(--flag);color:var(--flag);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:"Courier New",monospace}
+  .step h4{font-size:1rem;margin-bottom:5px}
+  .step p{font-size:.86rem;color:#b9cbdb}
+  /* area */
+  .area-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+  .towns{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .towns span{background:#fff;border:1px solid var(--line);border-radius:3px;padding:6px 11px;font-size:.84rem;font-family:"Courier New",monospace;color:var(--steel)}
+  .note-card{background:#eef3f8;border-left:4px solid var(--flag);padding:18px 20px;border-radius:0 6px 6px 0;font-size:.95rem}
+  /* form */
+  .form-sec{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  label{font-size:.8rem;font-weight:700;color:var(--ink);display:block;margin-bottom:5px}
+  input,select,textarea{width:100%;border:1px solid var(--line);border-radius:5px;padding:11px 12px;font-size:.95rem;font-family:inherit;background:var(--paper)}
+  .full{grid-column:1/-1}
+  .placeholder-flag{font-size:.74rem;color:var(--flag);font-family:"Courier New",monospace;margin-top:4px}
+  /* footer */
+  footer{background:var(--ink);color:#aebfce;padding:38px 0;font-size:.9rem}
+  footer a{color:#fff;text-decoration:none}
+  footer .fgrid{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  @media(max-width:760px){.hero h1{font-size:1.95rem}.area-wrap{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span class="mono">NYS-Licensed Professional Land Surveyor &nbsp;·&nbsp; Delhi, NY</span>
+  <span>Schedule a survey: <a href="tel:6077463676">(607) 746-3676</a></span>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <span class="badge">Boundary · Mortgage · Topographic · Subdivision</span>
+  <h1>The corner pin tells the truth. <span>Find out exactly where your land lines run.</span></h1>
+  <p class="lede">Wakin Land Surveying has marked boundaries, staked building sites, and mapped acreage across Delaware County since 1985. Tell us which survey you need and which parcel — we'll get you on the schedule.</p>
+  <div class="cta-row">
+    <a href="#request" class="btn btn-primary">Request a survey</a>
+    <a href="tel:6077463676" class="btn btn-ghost">Call (607) 746-3676</a>
+  </div>
+  <div class="hero-meta">
+    <span><b>Surveying Delaware County since</b> 1985</span>
+    <span><b>Owner:</b> Dave Wakin, PLS</span>
+    <span><b>Based in</b> Delhi, NY</span>
+  </div>
+</div></header>
+
+<div class="strip">County surveyors are booking weeks out — if you have a closing, permit, or build date, get your parcel on the schedule early.</div>
+
+<section><div class="wrap">
+  <div class="eyebrow">Which survey do you actually need?</div>
+  <h2>Four jobs people call us for</h2>
+  <p class="sub">Not sure which one your bank, town, or attorney is asking for? Describe what you're doing in the form below and we'll tell you.</p>
+  <div class="grid4">
+    <div class="card">
+      <div class="tag">TYPE 01</div>
+      <h3>Boundary survey</h3>
+      <p>We locate and mark your true property lines and corners — for fences, disputes, splitting off a lot, or just knowing what you own. Filed map available.</p>
+    </div>
+    <div class="card">
+      <div class="tag">TYPE 02</div>
+      <h3>Mortgage / closing survey</h3>
+      <p>The survey your bank or title company needs before a purchase or refinance closes — structures, setbacks, easements, and encroachments shown.</p>
+    </div>
+    <div class="card">
+      <div class="tag">TYPE 03</div>
+      <h3>Topographic / site survey</h3>
+      <p>Elevations, contours, and existing features for engineers, septic design, driveways, and new construction on Catskill hillside lots.</p>
+    </div>
+    <div class="card">
+      <div class="tag">TYPE 04</div>
+      <h3>Subdivision / lot split</h3>
+      <p>Dividing acreage into building lots or carving out a parcel — laid out and mapped to meet town and county filing requirements.</p>
+    </div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="steps">
+    <div class="eyebrow" style="color:#7fb6e8">From your call to a stamped map</div>
+    <h2>How a survey job goes</h2>
+    <div class="step-row">
+      <div class="step"><div class="n">1</div><h4>Tell us the parcel</h4><p>Town, tax-map number or deed, and what you're doing — buying, building, splitting, or settling a line.</p></div>
+      <div class="step"><div class="n">2</div><h4>Records &amp; deed research</h4><p>We pull prior deeds, old filed maps, and adjoiner records — the part that makes a Delaware County survey hold up.</p></div>
+      <div class="step"><div class="n">3</div><h4>Field work</h4><p>We locate monuments, run the lines, and set or recover your corner pins on the ground.</p></div>
+      <div class="step"><div class="n">4</div><h4>Map &amp; stamp</h4><p>You get a signed, sealed survey map you can file, hand your bank, or take to the town for a permit.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="area-wrap">
+    <div>
+      <div class="eyebrow">Service area</div>
+      <h2>Delaware County and the towns around Delhi</h2>
+      <p class="sub">If your parcel is in or near these towns, we can survey it. Not listed? Ask — we cover most of the county.</p>
+      <div class="towns">
+        <span>Delhi</span><span>Walton</span><span>Hamden</span><span>Bovina</span>
+        <span>Andes</span><span>Meredith</span><span>Franklin</span><span>Sidney</span>
+        <span>Stamford</span><span>Hobart</span><span>Bloomville</span><span>Margaretville</span>
+        <span>Downsville</span><span>Roxbury</span>
+      </div>
+    </div>
+    <div class="note-card">
+      <b>Most land out here has never been surveyed.</b><br>
+      A lot of Delaware County acreage changes hands on old deed descriptions and stone-wall lines that were never mapped or filed. Before you build, fence, log, or close — find out where the lines really are.
+    </div>
+  </div>
+</div></section>
+
+<section class="form-sec" id="request"><div class="wrap">
+  <div class="eyebrow">Request a survey</div>
+  <h2>Get your parcel on the schedule</h2>
+  <p class="sub">Send the details and Dave will get back to you with the survey type, what's involved, and timing. The more you tell us about the parcel, the faster we can quote it.</p>
+  <form onsubmit="return false">
+    <div class="form-grid">
+      <div><label>Your name</label><input type="text" placeholder="First and last"></div>
+      <div><label>Phone</label><input type="tel" placeholder="(607) 000-0000"></div>
+      <div><label>Email</label><input type="email" placeholder="you@email.com"></div>
+      <div><label>Parcel town</label><input type="text" placeholder="e.g. Hamden"></div>
+      <div><label>Survey type (if known)</label>
+        <select><option>Not sure — please advise</option><option>Boundary survey</option><option>Mortgage / closing survey</option><option>Topographic / site survey</option><option>Subdivision / lot split</option></select>
+      </div>
+      <div><label>Tax-map # or deed reference (optional)</label><input type="text" placeholder="e.g. 123.-1-45"></div>
+      <div class="full"><label>What are you doing, and is there a deadline?</label><textarea rows="3" placeholder="Closing date, building permit, fence line, splitting off a lot, boundary question with a neighbor…"></textarea></div>
+    </div>
+    <div style="margin-top:16px"><button class="btn btn-primary" type="submit">Send survey request</button></div>
+    <div class="placeholder-flag">// Form is a demo — wire to Sandro's GHL form / email on the live build.</div>
+  </form>
+</div></section>
+
+<footer><div class="wrap fgrid">
+  <div>
+    <strong style="color:#fff;font-size:1.05rem">Wakin Land Surveying</strong><br>
+    32 Franklin Street, Delhi, NY 13753<br>
+    <a href="tel:6077463676">(607) 746-3676</a>
+  </div>
+  <div class="mono" style="text-align:right">
+    NYS-Licensed Professional Land Surveyor<br>
+    Serving Delaware County since 1985<br>
+    <span style="color:#e8731c">Boundary · Mortgage · Topographic · Subdivision</span>
+  </div>
+</div></footer>
+
+</body>
+</html>

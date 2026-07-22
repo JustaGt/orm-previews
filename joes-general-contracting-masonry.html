@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joe's General Contracting &amp; Masonry — Rocky Point, NY | Stoops, Pavers, Chimneys, Retaining Walls</title>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--brick:#8c3b2e;--brick-dark:#6e2d23;--mortar:#efeae3;--slate:#2f3438;--sand:#c9b8a3;--ink:#26221f;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--mortar);line-height:1.6;}
+h1,h2,h3{font-family:'Zilla Slab',serif;line-height:1.15;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px;}
+/* top bar */
+.topbar{background:var(--slate);color:#fff;padding:10px 0;font-size:.95rem;}
+.topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;}
+.topbar a{color:#f3c9a5;text-decoration:none;font-weight:700;}
+/* hero — coursed brick bands */
+.hero{background:
+ linear-gradient(rgba(38,27,23,.82),rgba(38,27,23,.82)),
+ repeating-linear-gradient(0deg,var(--brick) 0 42px,var(--brick-dark) 42px 46px);
+ color:#fff;padding:84px 0 72px;}
+.hero .kicker{letter-spacing:.18em;text-transform:uppercase;font-size:.85rem;color:var(--sand);font-weight:700;}
+.hero h1{font-size:clamp(2rem,5vw,3.3rem);margin:14px 0 18px;max-width:19ch;}
+.hero p{max-width:56ch;font-size:1.13rem;color:#e8ddd2;}
+.cta-row{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:15px 28px;border-radius:4px;font-weight:700;text-decoration:none;font-size:1.05rem;}
+.btn-brick{background:#e0703a;color:#241610;}
+.btn-line{border:2px solid var(--sand);color:#fff;}
+/* trades grid */
+.trades{padding:70px 0;}
+.trades h2, .base h2, .why h2, .gallery h2, .contact h2{font-size:clamp(1.6rem,3.5vw,2.3rem);margin-bottom:10px;}
+.sub{color:#5c5348;max-width:62ch;margin-bottom:36px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;}
+.card{background:#fff;border-top:5px solid var(--brick);padding:24px;border-radius:0 0 6px 6px;box-shadow:0 2px 8px rgba(38,34,31,.08);}
+.card h3{font-size:1.15rem;margin-bottom:8px;color:var(--brick-dark);}
+.card p{font-size:.98rem;color:#4c453d;}
+/* basement callout */
+.base{background:var(--slate);color:#fff;padding:66px 0;}
+.base .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:center;}
+.base p{color:#d4d9dc;margin-bottom:14px;}
+.base .stat{background:rgba(255,255,255,.07);border-left:4px solid #e0703a;padding:22px;font-family:'Zilla Slab',serif;font-size:1.25rem;}
+/* why band */
+.why{padding:70px 0;}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px;margin-top:8px;}
+.why-item{border-left:4px solid var(--brick);padding-left:18px;}
+.why-item h3{font-size:1.08rem;margin-bottom:6px;}
+.why-item p{font-size:.96rem;color:#4c453d;}
+/* service area */
+.area{background:var(--brick-dark);color:#fff;padding:44px 0;text-align:center;}
+.area h2{font-size:1.4rem;margin-bottom:10px;}
+.towns{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:center;font-weight:600;color:#f0ddcf;}
+/* gallery */
+.gallery{padding:70px 0;}
+.g-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;}
+.g-ph{aspect-ratio:4/3;border-radius:6px;display:flex;align-items:flex-end;padding:14px;color:#fff;font-weight:700;font-size:.95rem;background:
+ linear-gradient(rgba(38,27,23,.35),rgba(38,27,23,.75)),
+ repeating-linear-gradient(90deg,#9c4a38 0 60px,#7d382a 60px 64px);}
+.g-ph.alt{background:linear-gradient(rgba(38,27,23,.35),rgba(38,27,23,.75)),repeating-linear-gradient(45deg,#7b7f83 0 34px,#5f6467 34px 38px);}
+.g-note{font-size:.85rem;color:#766d61;margin-top:10px;}
+/* contact */
+.contact{background:#fff;padding:70px 0;}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;}
+.c-box{background:var(--mortar);padding:28px;border-radius:6px;}
+.c-box p{margin-bottom:10px;}
+.c-box a{color:var(--brick-dark);font-weight:700;text-decoration:none;}
+.big-tel{font-family:'Zilla Slab',serif;font-size:1.7rem;display:block;margin:6px 0 14px;}
+footer{background:var(--slate);color:#aeb6bb;text-align:center;padding:26px 12px;font-size:.9rem;}
+@media(max-width:820px){.base .wrap,.contact .wrap{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+ <div class="wrap">
+  <span>Licensed &amp; Insured · Family Owned, 2nd Generation</span>
+  <span>Free estimates: <a href="tel:+16317440752">(631) 744-0752</a></span>
+ </div>
+</div>
+
+<section class="hero">
+ <div class="wrap">
+  <div class="kicker">Rocky Point · Masonry &amp; General Contracting · 45+ Years</div>
+  <h1>A stoop should outlast the storm door. Ours do.</h1>
+  <p>Joe's General Contracting &amp; Masonry has laid brick, block and stone across the North Shore for more than 45 years — stoops, pavers, chimneys, retaining walls and repointing, done by the same family, from the footing up.</p>
+  <div class="cta-row">
+   <a class="btn btn-brick" href="tel:+16317440752">Call (631) 744-0752</a>
+   <a class="btn btn-line" href="mailto:joe@joesgeneralcontracting.com">Email your project</a>
+  </div>
+ </div>
+</section>
+
+<section class="trades">
+ <div class="wrap">
+  <h2>The work we're asked back for</h2>
+  <p class="sub">Every job starts with the base — compacted, pitched and square — because on Rocky Point's sandy, sloped lots, that's the difference between a patio that settles and one that doesn't.</p>
+  <div class="grid">
+   <div class="card"><h3>Stoops &amp; Steps</h3><p>New brick and bluestone stoops, or rebuilds of the cracked, salted-out steps this coastline is famous for.</p></div>
+   <div class="card"><h3>Pavers &amp; Patios</h3><p>Driveways, walkways and patios set on a proper compacted base — not laid over yesterday's grade.</p></div>
+   <div class="card"><h3>Retaining Walls</h3><p>Engineered block and stone walls that hold Rocky Point's slopes and drain the water instead of fighting it.</p></div>
+   <div class="card"><h3>Chimneys &amp; Repointing</h3><p>Rebuilds, crowns and joint-by-joint repointing where salt air has eaten the mortar out of older homes.</p></div>
+   <div class="card"><h3>Culture Stone &amp; Brick Veneer</h3><p>Stone facings that turn a plain foundation line or fireplace wall into the face of the house.</p></div>
+   <div class="card"><h3>Sidewalks &amp; Concrete</h3><p>Flatwork poured and finished right — commercial and residential.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="base">
+ <div class="wrap">
+  <div>
+   <h2>The job most masons won't touch: a full basement under your existing house</h2>
+   <p>Raising a bungalow and building a full foundation beneath it is structural masonry at its hardest — footing, block, waterproofing, all under a live load. It's been part of our trade for decades, from small homes to warehouses.</p>
+   <p>If you're planning to lift, extend or dig out, talk to us before you talk to anyone else.</p>
+  </div>
+  <div class="stat">"No job too big or too small — from a new home to a warehouse."<br><span style="font-size:.9rem;font-family:'Source Sans 3',sans-serif;color:#c8ced2;">— the rule the shop was built on</span></div>
+ </div>
+</section>
+
+<section class="why">
+ <div class="wrap">
+  <h2>Why the name has lasted 45 years</h2>
+  <div class="why-grid">
+   <div class="why-item"><h3>Referral-built</h3><p>The business grew on client referrals and standing behind the work — not on ad spend.</p></div>
+   <div class="why-item"><h3>Second generation</h3><p>Old-world European craftsmanship, passed down and still on every job site.</p></div>
+   <div class="why-item"><h3>Licensed &amp; insured</h3><p>Real coverage, real license, free estimates in writing.</p></div>
+   <div class="why-item"><h3>One crew, start to finish</h3><p>The people who quote your job are the people who build it.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="area">
+ <div class="wrap">
+  <h2>Based on Broadway in Rocky Point — serving the North Shore</h2>
+  <div class="towns"><span>Rocky Point</span><span>Sound Beach</span><span>Miller Place</span><span>Shoreham</span><span>Wading River</span><span>Mount Sinai</span><span>Ridge</span><span>All of Long Island</span></div>
+ </div>
+</section>
+
+<section class="gallery">
+ <div class="wrap">
+  <h2>Recent work</h2>
+  <p class="sub">[PLACEHOLDER — pull project photos from Joe's archive: pavers &amp; patios, chimneys, brick work, stone &amp; brick categories from the current site]</p>
+  <div class="g-grid">
+   <div class="g-ph">Pavers &amp; Patios</div>
+   <div class="g-ph alt">Chimneys</div>
+   <div class="g-ph">Brick &amp; Block</div>
+   <div class="g-ph alt">Stone &amp; Retaining Walls</div>
+  </div>
+ </div>
+</section>
+
+<section class="contact">
+ <div class="wrap">
+  <div>
+   <h2>Tell us about your project</h2>
+   <p class="sub">Send a few lines about what you're planning — a cracked stoop, a wall that's leaning, a patio, a lift — and we'll come take a look and price it fairly. Free estimates, commercial and residential.</p>
+  </div>
+  <div class="c-box">
+   <p><strong>Call or text</strong><a class="big-tel" href="tel:+16317440752">(631) 744-0752</a></p>
+   <p>Second line: <a href="tel:+16312366718">(631) 236-6718</a></p>
+   <p>Email: <a href="mailto:joe@joesgeneralcontracting.com">joe@joesgeneralcontracting.com</a></p>
+   <p>49 Broadway, Rocky Point, NY 11778</p>
+  </div>
+ </div>
+</section>
+
+<footer>Joe's General Contracting &amp; Masonry · 49 Broadway, Rocky Point, NY 11778 · (631) 744-0752 · Licensed &amp; Insured</footer>
+
+</body>
+</html>

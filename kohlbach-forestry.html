@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kohlbach Forestry — Standing Timber, Firewood &amp; Excavating · Windsor, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--spruce:#1d3b2a;--spruce-deep:#122619;--moss:#5a7d5a;--bark:#3d3227;--paper:#f2efe6;--saw:#d9a441;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Source Sans 3',sans-serif;background:var(--paper);color:var(--bark);line-height:1.65;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px;}
+  header{background:var(--spruce-deep);color:var(--paper);padding:1rem 0;}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.6rem;}
+  .logo{font-family:'Zilla Slab',serif;font-weight:700;font-size:1.3rem;}
+  .logo small{display:block;font-family:'Source Sans 3',sans-serif;font-weight:400;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--saw);}
+  header a.call{color:var(--spruce-deep);background:var(--saw);font-weight:700;text-decoration:none;padding:.5rem 1rem;border-radius:3px;}
+  .hero{background:linear-gradient(rgba(18,38,25,.88),rgba(18,38,25,.88)),repeating-linear-gradient(45deg,#1d3b2a 0 22px,#16301f 22px 44px);color:var(--paper);padding:4.5rem 0;}
+  .hero h1{font-family:'Zilla Slab',serif;font-size:clamp(1.9rem,4.6vw,3rem);line-height:1.15;max-width:20ch;margin-bottom:1.1rem;}
+  .hero h1 span{color:var(--saw);}
+  .hero p{max-width:60ch;font-size:1.12rem;margin-bottom:1.6rem;}
+  .btn{display:inline-block;background:var(--saw);color:var(--spruce-deep);font-weight:700;padding:.85rem 1.7rem;border-radius:3px;text-decoration:none;margin:0 .6rem .6rem 0;}
+  .btn.line{background:transparent;color:var(--saw);border:2px solid var(--saw);}
+  .strip{background:var(--spruce);color:var(--paper);font-size:.95rem;padding:.7rem 0;text-align:center;}
+  section{padding:3.6rem 0;}
+  h2{font-family:'Zilla Slab',serif;font-size:clamp(1.5rem,3.2vw,2.1rem);color:var(--spruce-deep);margin-bottom:1.5rem;}
+  .lede{max-width:66ch;margin-bottom:2rem;}
+  .trades{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.3rem;}
+  .trade{background:#fff;border-top:6px solid var(--spruce);padding:1.7rem;box-shadow:0 1px 4px rgba(0,0,0,.08);}
+  .trade h3{font-family:'Zilla Slab',serif;font-size:1.2rem;color:var(--spruce-deep);margin-bottom:.6rem;}
+  .trade p{font-size:.97rem;}
+  .steps{counter-reset:step;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem;}
+  .step{background:#fff;padding:1.6rem 1.4rem 1.4rem;border:1px solid #d8d2c2;position:relative;}
+  .step::before{counter-increment:step;content:counter(step);position:absolute;top:-18px;left:16px;background:var(--saw);color:var(--spruce-deep);font-family:'Zilla Slab',serif;font-weight:700;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.15rem;}
+  .step h4{font-size:1rem;color:var(--spruce-deep);margin:.3rem 0 .5rem;}
+  .step p{font-size:.92rem;}
+  .dark{background:var(--spruce-deep);color:var(--paper);}
+  .dark h2{color:var(--saw);}
+  .wood-card{background:var(--spruce);border:1px solid var(--moss);border-radius:4px;padding:1.6rem;max-width:520px;}
+  .wood-card table{width:100%;border-collapse:collapse;margin-top:.6rem;}
+  .wood-card td{padding:.5rem 0;border-bottom:1px solid rgba(242,239,230,.25);font-size:.97rem;}
+  .wood-card td:last-child{text-align:right;font-weight:600;color:var(--saw);}
+  .area{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem;}
+  .area span{background:#fff;border:1px solid #d8d2c2;border-radius:20px;padding:.35rem .95rem;font-size:.9rem;}
+  .about{display:grid;grid-template-columns:1.2fr .8fr;gap:2.2rem;align-items:center;}
+  @media(max-width:720px){.about{grid-template-columns:1fr;}}
+  .about-badge{background:#fff;border:1px solid #d8d2c2;padding:1.7rem;text-align:center;}
+  .about-badge strong{font-family:'Zilla Slab',serif;font-size:2.4rem;color:var(--spruce);display:block;}
+  .cta{background:var(--spruce);color:var(--paper);text-align:center;padding:3.8rem 0;}
+  .cta h2{color:#fff;}
+  .cta .phone{font-family:'Zilla Slab',serif;font-size:clamp(1.7rem,4vw,2.5rem);color:var(--saw);display:block;margin:.7rem 0 1.3rem;text-decoration:none;}
+  footer{background:var(--spruce-deep);color:#9db39d;font-size:.85rem;text-align:center;padding:1.1rem 0;}
+  .ph{outline:2px dashed #b8860b;outline-offset:2px;font-size:.8rem;}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="logo">Kohlbach Forestry<small>Logging · Firewood · Excavating — Windsor, NY</small></div>
+    <a class="call" href="tel:6076553943">(607) 655-3943</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>Selling timber off your land shouldn't feel like <span>a leap in the dark.</span></h1>
+    <p>Kohlbach Forestry has been cutting, hauling, and buying standing timber out of the Windsor hills since 2004. Before anything is marked or cut, Beau walks the woodlot with you and explains what's merchantable, what should stay, and how you get paid — in plain English, on your ground.</p>
+    <a class="btn" href="tel:6076553943">Book a free woodlot walk-through</a>
+    <a class="btn line" href="#firewood">Order firewood</a>
+  </div>
+</div>
+<div class="strip">73 Barton Road, Windsor · Mon–Fri 8–5 · Serving eastern Broome &amp; the Susquehanna valley</div>
+
+<section>
+  <div class="wrap">
+    <h2>Three trades, one crew</h2>
+    <div class="trades">
+      <div class="trade">
+        <h3>Standing timber &amp; logging</h3>
+        <p>Select harvests and timber purchases on private woodlots. Marked trees, agreed price, tidy skid trails — and the landowner sees the tally.</p>
+      </div>
+      <div class="trade">
+        <h3>Firewood by the cord</h3>
+        <p>Hardwood firewood cut and split from our own log supply — no middleman between the woodlot and your stack. Delivery within our service area.</p>
+      </div>
+      <div class="trade">
+        <h3>Excavating &amp; land clearing</h3>
+        <p>Driveways, building-site prep, and clearing work that pairs naturally with a harvest — the equipment is already on your land.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <h2>How a timber sale actually works</h2>
+    <p class="lede">Most landowners sell timber once or twice in a lifetime. Here's the whole process, so you know what fair looks like before anyone quotes you a number.</p>
+    <div class="steps">
+      <div class="step"><h4>Walk the lot</h4><p>We cruise the woods together and flag what's ready — and what's worth more if it grows another ten years.</p></div>
+      <div class="step"><h4>Straight offer</h4><p>You get a clear price and scope in writing: which trees, which trails, what the ground gets left like.</p></div>
+      <div class="step"><h4>Careful harvest</h4><p>Cut and skidded to minimize damage to the trees that stay — they're your next sale.</p></div>
+      <div class="step"><h4>You get paid</h4><p>Payment as agreed, no surprises at the landing. Questions during the job go straight to Beau's cell.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="firewood">
+  <div class="wrap">
+    <h2>Firewood, without the phone tag</h2>
+    <p class="lede">Seasoned hardwood from the same hills we log. Call for current availability — early orders get first stacks each fall.</p>
+    <div class="wood-card" style="background:#fff;border:1px solid #d8d2c2;">
+      <table>
+        <tr><td>Full cord, delivered</td><td><span class="ph">[$ PLACEHOLDER — confirm]</span></td></tr>
+        <tr><td>Face cord, delivered</td><td><span class="ph">[$ PLACEHOLDER — confirm]</span></td></tr>
+        <tr><td>Log-length loads</td><td><span class="ph">[ask — confirm]</span></td></tr>
+      </table>
+    </div>
+    <div class="area">
+      <span>Windsor</span><span>Harpursville</span><span>Kirkwood</span><span>Colesville</span><span>Deposit</span><span>Afton</span><span>Binghamton east side</span>
+    </div>
+    <p style="margin-top:.8rem;font-size:.85rem;"><span class="ph">[service-area towns to confirm with Beau]</span></p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap about">
+    <div>
+      <h2>Who you're dealing with</h2>
+      <p>Kohlbach Forestry is Beau Kohlbach and a small crew working out of Barton Road in Windsor — not a broker reselling your stumpage, and not an out-of-county outfit that disappears when the landing is empty. The person who quotes your timber is the person running the job.</p>
+    </div>
+    <div class="about-badge">
+      <strong>2004</strong>
+      working Windsor's woodlots since
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>Have a woodlot, a wood stove, or a driveway that needs cutting in?</h2>
+    <a class="phone" href="tel:6076553943">(607) 655-3943</a>
+    <a class="btn" href="tel:6076553943">Call Beau</a>
+  </div>
+</div>
+<footer>Kohlbach Forestry · 73 Barton Road, Windsor, NY 13865 · (607) 655-3943</footer>
+</body>
+</html>

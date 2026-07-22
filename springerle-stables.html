@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!--
+NICHE IDENTITY BRIEF — Springerle Stables (Auburn, Cayuga Co., NY)  [ORM prospect #160]
+Business type: Family-run boarding & lesson barn since 2003. Hunters/jumpers focus + dressage trainer on site + POLO (Springerle Polo / CNY Polo Club). 4160 Franklin Street Rd, Auburn NY 13021. Phone 315-440-2871. Contact Kaytlin (K. Bell). Email kbell@springerlestables.com.
+Target customers: (1) Parents seeking safe beginner riding lessons for kids; (2) intermediate/advanced English & dressage riders wanting a coached program; (3) horse owners needing full-service board near Auburn/Skaneateles; (4) the small, high-value pool of people who want to learn or play POLO in Central NY.
+Local market: Auburn / Skaneateles / Finger Lakes — affluent Skaneateles horse country nearby; a genuinely rare polo offering (CNY Polo Club, Skaneateles Polo) that almost no other barn in the region has.
+Emotional tone: welcoming and family-run, but credible and polished — safe for a first-timer, serious enough for a competitive rider. Green-and-gold, hunter-country refinement without stuffiness.
+Visual style: hunter green + warm gold + cream/paper; serif headers; clean equestrian photography feel; airy and current (the opposite of the 2017 site).
+Pain points / EVIDENCE (fetched live 07-01): the existing WordPress/Divi site (content modified 2017, images 2015-16) is dated and broken in ways a visitor sees: the "Prepay Your Board" box prints "Error! Missing PayPal API credentials. Please configure the PayPal API credentials..."; the Lessons & Boarding "Learn More" buttons point at ...?page_id=44&preview=true / ?page_id=336&preview=true DRAFT-PREVIEW urls, not real pages; the events calendar says "There are no upcoming events"; viewport is user-scalable=0 (pinch-zoom disabled); site is served on http (canonical http://). So the barn's disciplines, lesson levels, boarding details, prices and a real "book a visit" path are all hard to reach or broken.
+Customer desires: know the disciplines (hunter/jumper, dressage, English, polo); see lesson levels & how to start; understand full-service board (stalls, turnout, arenas, care); see the facility (indoor/outdoor arenas); trust it's safe & well-run; an easy, working "schedule a visit / first lesson" contact — on mobile.
+Trust signals: family-run since 2003; hunters/jumpers program; top dressage trainer on site; polo program + club ties; real facility (indoor + outdoor arenas per directory listings); named contact (Kaytlin).
+Conversion goal: "schedule a visit / book a first lesson" inquiries (working form + call), and boarding inquiries.
+Sections needed: hero (disciplines + book-a-visit); disciplines (hunter-jumper / dressage / English / polo); lessons (beginner->advanced, how to start); boarding (full-service); the facility (arenas); about the family; working contact form + map + real phone; note polo as the differentiator.
+Cliches to avoid: banned ORM list; also "unbridled passion," "where champions are made," "your equestrian journey."
+Unique to niche: the concept leads with the discipline range AND foregrounds POLO as the rare regional draw, fixes the exact broken pieces (a real working "schedule a visit" form replacing the dead PayPal/preview-link buttons), and is built mobile-first (undoing user-scalable=0). Lesson pricing/board rates/arena dimensions shown as clearly-labeled placeholders.
+DATA NOTES: Email kbell@springerlestables.com is published on the barn's own live site -> verified public, Gmail DRAFT created (not sent). Existing site weaknesses were DIRECTLY OBSERVED via fetch (PayPal error string, preview-link nav, user-scalable=0, http, empty events). Prices, rates, arena sizes, staff names beyond "Kaytlin/K. Bell" = placeholders to confirm.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Springerle Stables — Lessons, Boarding, Dressage &amp; Polo | Auburn, NY</title>
+<style>
+  :root{
+    --green:#20402a; --green-dk:#152b1c; --green-mid:#3a6b45; --gold:#c39433; --gold-lt:#e4c477;
+    --cream:#f7f3ea; --paper:#fcf9f2; --ink:#22261f; --muted:#63685c; --line:#e6ddca;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+  h1,h2,h3{font-family:'Georgia','Palatino Linotype',serif;line-height:1.2}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .top{background:var(--green-dk);color:#d6e2d8;font-size:.9rem}
+  .top .wrap{display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:space-between;align-items:center;padding:9px 22px}
+  .top b{color:#fff}
+  .top .ph{color:var(--gold-lt);font-weight:700}
+  /* hero */
+  .hero{background:linear-gradient(rgba(21,43,28,.8),rgba(21,43,28,.9)),repeating-linear-gradient(120deg,#274d33 0 40px,#20402a 40px 80px);color:#fff;padding:70px 0 62px}
+  .hero .wrap{max-width:880px}
+  .kick{text-transform:uppercase;letter-spacing:3px;font-size:.76rem;color:var(--gold-lt);font-weight:700}
+  .hero h1{font-size:3rem;margin:14px 0 14px}
+  .hero p.lede{font-size:1.22rem;color:#e3ece2;max-width:640px}
+  .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+  .btn{display:inline-block;padding:15px 30px;border-radius:5px;font-weight:700;text-decoration:none;font-size:1.03rem;border:none;cursor:pointer}
+  .btn-gold{background:var(--gold);color:#231a06}
+  .btn-ghost{border:2px solid #a7c3ac;color:#fff;background:transparent}
+  /* disciplines */
+  section.pad{padding:58px 0}
+  h2.big{font-size:2.15rem;color:var(--green);text-align:center;margin-bottom:8px}
+  .lead-c{text-align:center;color:var(--muted);max-width:660px;margin:0 auto 36px}
+  .disc{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+  .dcard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px;border-bottom:4px solid var(--green-mid)}
+  .dcard.polo{border-bottom-color:var(--gold);background:linear-gradient(#fffdf6,#fff)}
+  .dcard h3{font-size:1.3rem;color:var(--green);margin-bottom:8px}
+  .dcard.polo h3{color:var(--gold)}
+  .dcard p{font-size:.97rem;color:var(--muted)}
+  .dcard .flag{display:inline-block;background:var(--gold);color:#231a06;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;padding:3px 9px;border-radius:20px;margin-bottom:10px}
+  /* lessons */
+  .lessons{background:var(--cream)}
+  .levels{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-top:8px}
+  .lv{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px;text-align:center}
+  .lv .ic{width:46px;height:46px;border-radius:50%;background:var(--green);color:var(--gold-lt);display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-size:1.3rem;font-weight:700;margin:0 auto 12px}
+  .lv h3{font-size:1.12rem;color:var(--green);margin-bottom:6px}
+  .lv p{font-size:.92rem;color:var(--muted)}
+  .startbox{background:var(--green);color:#fff;border-radius:12px;padding:26px 28px;margin-top:30px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px}
+  .startbox h3{color:#fff;font-size:1.35rem;margin-bottom:4px}
+  .startbox p{color:#cfe0d2;font-size:.98rem}
+  .startbox a{background:var(--gold);color:#231a06;padding:13px 24px;border-radius:6px;font-weight:800;text-decoration:none;white-space:nowrap}
+  /* boarding + facility */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .panel{background:#fff;border:1px solid var(--line);border-radius:12px;padding:28px}
+  .panel h3{color:var(--green);font-size:1.35rem;margin-bottom:12px}
+  .panel li{list-style:none;padding-left:26px;position:relative;margin:9px 0;color:var(--muted)}
+  .panel li::before{content:"❧";position:absolute;left:0;color:var(--gold);font-weight:700}
+  .panel .ph{font-size:.83rem;font-style:italic;color:#9a9384}
+  /* about */
+  .about{background:var(--green-dk);color:#e8efe8}
+  .about .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:36px;align-items:center}
+  .about h2{color:#fff;font-size:2rem;margin-bottom:14px}
+  .about p{color:#cadbcd;margin-bottom:12px}
+  .about .est{color:var(--gold-lt);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.8rem}
+  .about .side{background:#1c3a26;border:1px solid #2c4d34;border-radius:12px;padding:24px}
+  .about .side h3{color:var(--gold-lt);font-size:1.05rem;margin-bottom:10px}
+  .about .side li{list-style:none;margin:8px 0;padding-left:24px;position:relative;color:#dbe7dc;font-size:.95rem}
+  .about .side li::before{content:"✓";position:absolute;left:0;color:var(--gold)}
+  /* contact */
+  .contact{background:var(--paper)}
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+  .contact h2{color:var(--green);font-size:2rem;margin-bottom:10px;text-align:left}
+  .contact p{color:var(--muted);margin-bottom:14px}
+  .infoline{display:flex;gap:12px;align-items:center;margin:10px 0;font-size:1rem}
+  .infoline b{color:var(--green)}
+  form{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}
+  form label{display:block;font-size:.82rem;font-weight:700;color:var(--green);margin:10px 0 4px;text-transform:uppercase;letter-spacing:.5px}
+  form input,form select,form textarea{width:100%;padding:11px;border:1px solid var(--line);border-radius:6px;font-family:inherit;font-size:.95rem;background:#fff}
+  form button{width:100%;margin-top:16px;background:var(--gold);color:#231a06;border:none;padding:15px;border-radius:6px;font-weight:800;font-size:1.02rem;cursor:pointer}
+  form .hint{font-size:.8rem;color:var(--muted);margin-top:8px}
+  footer{background:var(--green-dk);color:#a9bdac;text-align:center;padding:24px;font-size:.85rem}
+  @media(max-width:760px){.hero h1{font-size:2.15rem}.two,.about .wrap,.contact .wrap{grid-template-columns:1fr}.startbox{flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+  <div class="top"><div class="wrap"><span><b>Springerle Stables</b> · Boarding &amp; Lessons since 2003</span><span>4160 Franklin Street Rd, Auburn NY · <a class="ph" href="tel:13154402871">(315) 440-2871</a></span></div></div>
+
+  <header class="hero">
+    <div class="wrap">
+      <span class="kick">Auburn · Finger Lakes horse country</span>
+      <h1>From a child's first lesson to a chukker of polo.</h1>
+      <p class="lede">A family-run barn in Auburn since 2003 — hunters and jumpers, dressage, English lessons for every level, and one of Central New York's few places to actually learn polo.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#visit">Schedule a visit</a>
+        <a class="btn btn-ghost" href="#lessons">Start riding lessons</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="pad">
+    <div class="wrap">
+      <h2 class="big">What you can ride here</h2>
+      <p class="lead-c">A real range under one roof — start as a beginner, train seriously, or try something almost no one else in the region offers.</p>
+      <div class="disc">
+        <div class="dcard">
+          <h3>Hunters &amp; jumpers</h3>
+          <p>Our home discipline. Coached flatwork and jumping for riders building toward the show ring, in a program that's grown here for two decades.</p>
+        </div>
+        <div class="dcard">
+          <h3>Dressage</h3>
+          <p>A dressage trainer on site for riders who want precision and partnership with their horse — from your first tests to more advanced work.</p>
+        </div>
+        <div class="dcard">
+          <h3>English lessons</h3>
+          <p>Beginner, intermediate and advanced lesson packages at a fair price, taught in a safe, friendly setting for kids and adults alike.</p>
+        </div>
+        <div class="dcard polo">
+          <span class="flag">Rare in Central NY</span>
+          <h3>Polo</h3>
+          <p>Springerle Polo and the CNY Polo Club call this barn home. If you've always wanted to try the game, this is one of the only places near the Finger Lakes to learn.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad lessons" id="lessons">
+    <div class="wrap">
+      <h2 class="big">Lessons for every level</h2>
+      <p class="lead-c">Never been on a horse, or coming back to riding? There's a place for you here. Ridden for years? There's room to push.</p>
+      <div class="levels">
+        <div class="lv"><div class="ic">1</div><h3>Beginner</h3><p>Safe, patient intro lessons — the basics of handling, seat and control.</p></div>
+        <div class="lv"><div class="ic">2</div><h3>Intermediate</h3><p>Build flatwork, start jumping, and develop a real seat and feel.</p></div>
+        <div class="lv"><div class="ic">3</div><h3>Advanced</h3><p>Refine your riding across hunters/jumpers or dressage with focused coaching.</p></div>
+        <div class="lv"><div class="ic">★</div><h3>Try polo</h3><p>An intro to the game with the club — no experience assumed.</p></div>
+      </div>
+      <div class="startbox">
+        <div>
+          <h3>Ready for a first lesson?</h3>
+          <p>Tell us a little about the rider and we'll help you pick a starting point. <span class="ph">[Lesson package pricing to be confirmed.]</span></p>
+        </div>
+        <a href="#visit">Book a first lesson</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad">
+    <div class="wrap two">
+      <div class="panel">
+        <h3>Full-service boarding</h3>
+        <p style="color:var(--muted);margin-bottom:8px">Board your horse where the whole barn is looked after by people who ride themselves.</p>
+        <li>Full-care board with daily turnout</li>
+        <li>Clean stalls &amp; consistent feeding</li>
+        <li>Access to arenas &amp; a coached community</li>
+        <li>On-site training across disciplines</li>
+        <p class="ph" style="margin-top:12px">[Board rates, stall sizes &amp; turnout details to be confirmed.]</p>
+      </div>
+      <div class="panel">
+        <h3>The facility</h3>
+        <p style="color:var(--muted);margin-bottom:8px">Room to ride year-round, whatever the Central NY weather does.</p>
+        <li>Indoor arena for winter &amp; wet days</li>
+        <li>Outdoor arena(s) for flat &amp; jump work</li>
+        <li>Turnout paddocks</li>
+        <li>A polo field / practice space</li>
+        <p class="ph" style="margin-top:12px">[Arena dimensions &amp; amenities to be confirmed.]</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad about">
+    <div class="wrap">
+      <div>
+        <span class="est">A hands-on family barn since 2003</span>
+        <h2>Built by a family who's still in the barn every day</h2>
+        <p>Since the farm was finished in 2003, Springerle Stables has been a hands-on, family-run operation with a simple emphasis: a safe, friendly place to board, train and ride. That's held true whether you're leading a pony for the first time or schooling for a show.</p>
+        <p>Between our hunter/jumper roots, a dressage trainer on site, and a real polo program, there aren't many barns near Auburn that offer this much in one place.</p>
+      </div>
+      <div class="side">
+        <h3>Why riders choose Springerle</h3>
+        <ul>
+          <li>All levels — first lesson to advanced</li>
+          <li>Hunters, jumpers &amp; dressage coaching</li>
+          <li>One of the region's only polo programs</li>
+          <li>Full-service, well-run boarding</li>
+          <li>Family-owned &amp; on site since 2003</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad contact" id="visit">
+    <div class="wrap">
+      <div>
+        <h2>Schedule a visit</h2>
+        <p>Come see the barn, meet Kaytlin, and talk about lessons, boarding or polo. Fill this out or just give us a call — we'll get right back to you.</p>
+        <div class="infoline">📍 <span><b>4160 Franklin Street Rd</b>, Auburn, NY 13021</span></div>
+        <div class="infoline">📞 <span><b><a href="tel:13154402871">(315) 440-2871</a></b> — ask for Kaytlin</span></div>
+        <div class="infoline">✉️ <span><a href="mailto:kbell@springerlestables.com">kbell@springerlestables.com</a></span></div>
+      </div>
+      <form onsubmit="return false">
+        <label>Your name</label>
+        <input type="text" placeholder="Name">
+        <label>Phone or email</label>
+        <input type="text" placeholder="How should we reach you?">
+        <label>I'm interested in</label>
+        <select>
+          <option>Riding lessons (beginner)</option>
+          <option>Riding lessons (intermediate / advanced)</option>
+          <option>Dressage</option>
+          <option>Trying polo</option>
+          <option>Boarding my horse</option>
+        </select>
+        <label>Tell us a little more</label>
+        <textarea rows="3" placeholder="Rider's age / experience, or what you're looking for"></textarea>
+        <button type="submit">Request my visit</button>
+        <p class="hint">This preview form isn't wired up yet — the phone and email above are live.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    Springerle Stables · 4160 Franklin Street Rd, Auburn NY 13021 · (315) 440-2871 · kbell@springerlestables.com<br>
+    <span style="font-size:.8rem;opacity:.7">Preview concept prepared by Onyx Rise Media. Pricing, board rates and arena details are placeholders pending confirmation.</span>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Patricia Holtz, L.Ac. | Path Acupuncture | Poughkeepsie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,400;9..144,0,500;9..144,0,600;9..144,1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--aubergine:#3a2742;--aubergine-dk:#2c1d33;--rosegold:#c98b86;--oat:#f4eee6;--ink:#352a3b;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Jost',sans-serif;background:var(--oat);color:var(--ink);line-height:1.75;font-weight:300;}
+h1,h2,h3,.serif{font-family:'Fraunces',serif;font-weight:500;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+.btn{display:inline-block;padding:13px 28px;border-radius:32px;font-weight:500;font-size:.82rem;letter-spacing:.08em;transition:.25s;}
+.btn-fill{background:var(--aubergine);color:var(--oat);}.btn-fill:hover{background:var(--aubergine-dk);}
+.btn-rose{background:var(--rosegold);color:#fff;}.btn-rose:hover{background:#b87873;}
+.btn-line{border:1px solid var(--aubergine);color:var(--aubergine);}.btn-line:hover{background:var(--aubergine);color:var(--oat);}
+.kicker{color:var(--rosegold);letter-spacing:.28em;text-transform:uppercase;font-size:.72rem;font-weight:500;}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(244,238,230,.95);backdrop-filter:blur(8px);border-bottom:1px solid rgba(58,39,66,.14);}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;}
+.brand{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:600;}
+.brand span{color:var(--rosegold);font-weight:400;font-style:italic;}
+.navlinks{display:flex;gap:28px;align-items:center;font-size:.85rem;}
+.navlinks a.lnk:hover{color:var(--rosegold);}
+
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;padding:84px 0;}
+.hero h1{font-size:3.2rem;line-height:1.1;margin:16px 0 18px;font-weight:600;}
+.hero h1 em{font-style:italic;color:var(--rosegold);}
+.hero p.sub{font-size:1.06rem;color:#54475a;max-width:480px;margin-bottom:30px;}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
+.photocard{position:relative;}
+.photocard .img{min-height:460px;border-radius:20px;background:linear-gradient(rgba(44,29,51,.2),rgba(44,29,51,.34)),url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:var(--aubergine-dk);box-shadow:0 24px 60px rgba(58,39,66,.22);}
+.chip{position:absolute;bottom:24px;left:-22px;background:#fff;border-radius:16px;padding:18px 22px;box-shadow:0 14px 36px rgba(58,39,66,.16);}
+.chip .big{font-family:'Fraunces',serif;font-size:1.6rem;color:var(--aubergine);}
+.chip .small{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--rosegold);}
+
+.statband{background:var(--aubergine);color:var(--oat);}
+.statband .wrap{display:flex;justify-content:space-around;flex-wrap:wrap;gap:24px;padding:36px 28px;}
+.statband .s{text-align:center;}
+.statband .n{font-family:'Fraunces',serif;font-size:1.9rem;color:var(--rosegold);}
+.statband .l{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;opacity:.85;}
+
+section{padding:84px 0;}
+.sec-head{text-align:center;max-width:600px;margin:0 auto 48px;}
+.sec-head h2{font-size:2.4rem;margin:10px 0;font-weight:600;}
+.sec-head p{color:#54475a;}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.card{background:#fff;border-radius:18px;padding:34px 28px;box-shadow:0 12px 30px rgba(58,39,66,.07);transition:.3s;}
+.card:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(58,39,66,.12);}
+.card .ic{width:48px;height:48px;border-radius:50%;background:rgba(201,139,134,.18);color:var(--rosegold);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:16px;}
+.card h3{font-size:1.3rem;margin-bottom:8px;font-weight:600;}
+.card p{font-size:.92rem;color:#5a4d60;}
+.card .price{margin-top:14px;color:var(--rosegold);font-weight:500;letter-spacing:.04em;font-size:.85rem;}
+
+.masonry{columns:3;column-gap:14px;}
+.masonry .g{width:100%;border-radius:14px;margin-bottom:14px;background-size:cover;background-position:center;background-color:var(--aubergine-dk);break-inside:avoid;}
+.g1{height:280px;background-image:linear-gradient(rgba(44,29,51,.16),rgba(44,29,51,.32)),url('https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1400&q=80');}
+.g2{height:200px;background-image:linear-gradient(rgba(44,29,51,.16),rgba(44,29,51,.32)),url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1400&q=80');}
+.g3{height:240px;background-image:linear-gradient(rgba(44,29,51,.16),rgba(44,29,51,.32)),url('https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=1400&q=80');}
+.g4{height:200px;background-image:linear-gradient(rgba(44,29,51,.16),rgba(44,29,51,.32)),url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1400&q=80');}
+.g5{height:280px;background-image:linear-gradient(rgba(44,29,51,.16),rgba(44,29,51,.32)),url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1400&q=80');}
+.g6{height:220px;background-image:linear-gradient(rgba(44,29,51,.16),rgba(44,29,51,.32)),url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1400&q=80');}
+
+.contact-card{background:#fff;border-radius:24px;box-shadow:0 20px 50px rgba(58,39,66,.1);overflow:hidden;display:grid;grid-template-columns:.85fr 1.15fr;}
+.contact-card .left{background:var(--aubergine);color:var(--oat);padding:46px 40px;}
+.contact-card .left h2{font-size:2rem;margin-bottom:16px;font-weight:600;color:var(--oat);}
+.contact-card .left p{margin-bottom:12px;opacity:.9;}
+.contact-card .label{color:var(--rosegold);letter-spacing:.12em;text-transform:uppercase;font-size:.7rem;display:block;}
+.hours{margin-top:18px;border-top:1px solid rgba(201,139,134,.3);padding-top:16px;}
+.hours div{display:flex;justify-content:space-between;padding:6px 0;font-size:.9rem;opacity:.9;}
+.contact-card .right{padding:46px 40px;}
+form label{display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--aubergine);margin:13px 0 5px;}
+form input,form select,form textarea{width:100%;border:1px solid rgba(58,39,66,.2);background:var(--oat);padding:11px 13px;border-radius:9px;font-family:inherit;font-size:.92rem;}
+form button{margin-top:22px;width:100%;border:none;cursor:pointer;}
+.thanks{display:none;text-align:center;padding:40px 18px;}
+.thanks.show{display:block;}
+.thanks h3{color:var(--rosegold);font-size:1.6rem;margin-bottom:8px;font-weight:600;}
+
+footer{background:var(--aubergine-dk);color:var(--oat);text-align:center;padding:44px 20px;}
+footer .brand{color:var(--oat);margin-bottom:8px;}
+footer p{opacity:.78;font-size:.85rem;}
+.orm{color:var(--rosegold);margin-top:12px;font-size:.74rem;letter-spacing:.1em;}
+
+@media(max-width:860px){
+.navlinks .lnk{display:none;}
+.hero{grid-template-columns:1fr;}
+.hero h1{font-size:2.3rem;}
+.photocard .img{min-height:320px;}
+.chip{left:14px;}
+.cards{grid-template-columns:1fr;}
+.masonry{columns:2;}
+.contact-card{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap" style="padding:16px 0;">
+<div class="brand">Path Acupuncture <span>· Patricia Holtz, L.Ac.</span></div>
+<div class="navlinks">
+<a class="lnk" href="#services">Services</a>
+<a class="lnk" href="#space">The Space</a>
+<a class="lnk" href="#book">Book</a>
+<a class="btn btn-fill" href="#book">Book a Visit</a>
+</div>
+</div></nav>
+
+<header><div class="wrap"><div class="hero">
+<div>
+<span class="kicker">Poughkeepsie, NY</span>
+<h1>Acupuncture, cosmetic microneedling &amp; <em>energy work</em>, under one roof.</h1>
+<p class="sub">Patricia Holtz, L.Ac., blends classical acupuncture with cosmetic microneedling and subtle energy medicine — care for how you feel and how you look, on a path that's genuinely yours.</p>
+<div class="hero-ctas">
+<a class="btn btn-rose" href="#book">Book a Visit</a>
+<a class="btn btn-line" href="#services">View Services</a>
+</div>
+</div>
+<div class="photocard">
+<div class="img"></div>
+<div class="chip"><div class="big">L.Ac.</div><div class="small">Licensed Acupuncturist</div></div>
+</div>
+</div></div></header>
+
+<div class="statband"><div class="wrap">
+<div class="s"><div class="n">3-in-1</div><div class="l">Acupuncture · Cosmetic · Energy</div></div>
+<div class="s"><div class="n">1:1</div><div class="l">Private sessions</div></div>
+<div class="s"><div class="n">Calm</div><div class="l">Unhurried care</div></div>
+</div></div>
+
+<section id="services"><div class="wrap">
+<div class="sec-head"><span class="kicker">Services</span><h2>Three ways to feel more like yourself</h2><p>Each begins with a conversation; pricing is confirmed at your first visit.</p></div>
+<div class="cards">
+<div class="card"><div class="ic">✷</div><h3>Acupuncture</h3><p>Fine-needle treatment for pain, stress, sleep, and digestion — restoring flow where it's stuck.</p><div class="price">from $90 / session</div></div>
+<div class="card"><div class="ic">❋</div><h3>Cosmetic Microneedling</h3><p>Collagen-stimulating facial work for tone, texture, and a naturally refreshed look.</p><div class="price">from $175 / session</div></div>
+<div class="card"><div class="ic">✺</div><h3>Energy Medicine</h3><p>Gentle, hands-on energy work to settle the nervous system and support deeper healing.</p><div class="price">from $85 / session</div></div>
+</div>
+</div></section>
+
+<section id="space" style="padding-bottom:0;"><div class="wrap">
+<div class="sec-head"><span class="kicker">The Space</span><h2>A quiet room to exhale in</h2></div>
+<div class="masonry">
+<div class="g g1"></div><div class="g g2"></div><div class="g g3"></div><div class="g g4"></div><div class="g g5"></div><div class="g g6"></div>
+</div>
+</div></section>
+
+<section id="book"><div class="wrap">
+<div class="contact-card">
+<div class="left">
+<span class="kicker" style="color:var(--rosegold);">Book a Visit</span>
+<h2>Find your time</h2>
+<p>New clients welcome. Send a note and we'll reach out to schedule.</p>
+<p><span class="label">Phone</span>(845) 233-8683</p>
+<p><span class="label">Location</span>Poughkeepsie, NY</p>
+<div class="hours">
+<div><span>Tuesday – Friday</span><span>By appointment</span></div>
+<div><span>Saturday</span><span>Limited hours</span></div>
+<div><span>Sun – Mon</span><span>Closed</span></div>
+</div>
+</div>
+<div class="right">
+<form id="phform" onsubmit="event.preventDefault();document.getElementById('phform').style.display='none';document.getElementById('phthx').classList.add('show');">
+<label>Name</label><input required type="text" placeholder="Your name">
+<label>Phone</label><input required type="tel" placeholder="(845) 000-0000">
+<label>Service</label>
+<select><option>Acupuncture</option><option>Cosmetic Microneedling</option><option>Energy Medicine</option><option>Not sure — let's talk</option></select>
+<label>Notes</label><textarea rows="3" placeholder="What you'd like to work on, and good times to reach you."></textarea>
+<button class="btn btn-rose" type="submit">Request Appointment</button>
+</form>
+<div id="phthx" class="thanks"><h3>Thank you.</h3><p style="color:#54475a;">Your request is in. We'll call (845) 233-8683 to confirm your appointment.</p></div>
+</div>
+</div>
+</div></section>
+
+<footer>
+<div class="brand" style="font-family:'Fraunces',serif;font-size:1.2rem;">Path Acupuncture · Patricia Holtz, L.Ac.</div>
+<p>Acupuncture · Microneedling · Energy Medicine · Poughkeepsie, NY · (845) 233-8683</p>
+<p class="orm">Website preview by Onyx Rise Media</p>
+</footer>
+</body>
+</html>

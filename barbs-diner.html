@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barb's Diner — Open at 5 a.m., Mon–Sat · 891 Main St, Locke NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--butter:#f7d878;--coffee:#4a2f1e;--cream:#fdf8ee;--red:#c23b22;--green:#3e6b4f;--check:#e8dcc2}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Chivo',sans-serif;background:var(--cream);color:var(--coffee);line-height:1.55}
+.wrap{max-width:1020px;margin:0 auto;padding:0 22px}
+.checker{height:18px;background:repeating-conic-gradient(var(--coffee) 0 25%, var(--butter) 0 50%) 0 0/36px 36px}
+/* hero = answer card */
+.hero{background:var(--butter);padding:58px 0 50px}
+.hero .kicker{font-family:'Caveat',cursive;font-size:1.6rem;color:var(--red)}
+.hero h1{font-weight:900;font-size:clamp(2rem,5.2vw,3.4rem);line-height:1.08;max-width:20ch}
+.hero p{margin-top:14px;font-size:1.1rem;max-width:52ch}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:32px}
+.fact{background:var(--cream);border:3px solid var(--coffee);padding:18px 16px;box-shadow:5px 5px 0 var(--coffee)}
+.fact b{display:block;font-size:1.25rem;font-weight:900}
+.fact span{font-size:.92rem}
+/* three things */
+.know{padding:60px 0}
+h2.h{font-weight:900;font-size:1.7rem;margin-bottom:6px}
+p.sub{color:#7a6a58;margin-bottom:26px;max-width:60ch}
+/* chalkboard */
+.chalk{background:var(--coffee);color:var(--cream);padding:64px 0}
+.chalkboard{background:#3a2417;border:10px solid #6b4a2f;border-radius:8px;max-width:640px;margin:26px auto 0;padding:36px 32px}
+.chalkboard h3{font-family:'Caveat',cursive;color:var(--butter);font-size:2rem;text-align:center;margin-bottom:20px}
+.dish{display:flex;justify-content:space-between;gap:12px;padding:11px 4px;border-bottom:1px dashed #6b4a2f;font-size:1.02rem}
+.dish em{font-family:'Caveat',cursive;font-size:1.15rem;color:var(--butter);font-style:normal}
+.chalk .note{text-align:center;font-size:.85rem;color:#c9b49a;margin-top:16px;max-width:60ch;margin-left:auto;margin-right:auto}
+/* reviews */
+.rev{padding:60px 0}
+.revgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:22px}
+.rcard{background:#fff;border:2px solid var(--check);padding:24px 20px;border-radius:4px}
+.rcard .stars{color:var(--red);font-weight:900;letter-spacing:2px;margin-bottom:8px}
+.rcard p{font-style:italic;font-size:.98rem}
+.rcard cite{display:block;margin-top:10px;font-style:normal;font-size:.82rem;color:#7a6a58}
+/* years band */
+.years{background:var(--green);color:var(--cream);padding:46px 0;text-align:center}
+.years h2{font-weight:900;font-size:clamp(1.3rem,3vw,1.9rem);max-width:30ch;margin:0 auto}
+.years p{margin-top:10px;font-family:'Caveat',cursive;font-size:1.5rem;color:var(--butter)}
+/* visit */
+.visit{padding:60px 0 72px}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:24px}
+.vcard{background:#fff;border-top:8px solid var(--red);padding:24px 20px;box-shadow:0 3px 10px rgba(74,47,30,.08)}
+.vcard h3{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:10px}
+.vcard p{font-size:1rem}
+.vcard a{color:var(--coffee);font-weight:700}
+.btn{display:inline-block;margin-top:26px;background:var(--red);color:#fff;text-decoration:none;font-weight:900;padding:15px 30px;font-size:1.05rem}
+.btn:hover{background:var(--coffee)}
+footer{background:var(--coffee);color:#c9b49a;text-align:center;font-size:.86rem;padding:20px}
+</style>
+</head>
+<body>
+
+<div class="checker"></div>
+
+<section class="hero"><div class="wrap">
+  <div class="kicker">Locke, New York — Route 38</div>
+  <h1>Open at 5. Home fries till 1:30.</h1>
+  <p>Barb's has been feeding Locke's early risers for 41 years — farmers before first light, crews before the job, and anyone on Route 38 smart enough to stop.</p>
+  <div class="facts">
+    <div class="fact"><b>5:00 a.m.</b><span>Doors open Monday–Saturday. Food's usually on your table in five minutes.</span></div>
+    <div class="fact"><b>Cash only</b><span>Worth the ATM stop — most plates are diner-priced.</span></div>
+    <div class="fact"><b>Closed Sunday</b><span>Even the griddle rests. Plan the detour Mon–Sat, 5:00–1:30.</span></div>
+  </div>
+</div></section>
+
+<section class="know"><div class="wrap">
+  <h2 class="h">Everything you need to know before the screen door bangs</h2>
+  <p class="sub">This page answers the three questions travelers ask about Barb's — when, how to pay, and what to order. No apps, no ordering widgets. Just don't come hungry at 2 p.m.</p>
+</div></section>
+
+<section class="chalk"><div class="wrap">
+  <h2 class="h" style="text-align:center;color:#fdf8ee">The board</h2>
+  <div class="chalkboard">
+    <h3>Regulars swear by...</h3>
+    <div class="dish"><span>The home fries</span><em>the reason people write reviews</em></div>
+    <div class="dish"><span>Housemade fried chicken</span><em>lunch, while it lasts</em></div>
+    <div class="dish"><span>The Super Melt</span><em>a Locke institution</em></div>
+    <div class="dish"><span>Homemade cherry pie</span><em>save room</em></div>
+    <div class="dish"><span>3 eggs, home fries, toast &amp; bacon</span><em>the standard order</em></div>
+  </div>
+  <p class="note">Dishes drawn from public customer reviews. Prices intentionally omitted — [PLACEHOLDER: confirm current menu &amp; prices with Sue before publishing].</p>
+</div></section>
+
+<section class="rev"><div class="wrap">
+  <h2 class="h">82 reviews, 4.5 stars — and nobody complains about the wait</h2>
+  <div class="revgrid">
+    <div class="rcard"><div class="stars">★★★★★</div><p>"Warm, friendly staff, good simple food, fantastic prices."</p><cite>Public review (paraphrased) — chamberofcommerce.com, 4.5★/82</cite></div>
+    <div class="rcard"><div class="stars">★★★★★</div><p>"Generous portions, and the food shows up in about five minutes."</p><cite>Public review (paraphrased) — TripAdvisor, 4.5★</cite></div>
+    <div class="rcard"><div class="stars">★★★★★</div><p>"Sue and her crew make everyone feel like a regular."</p><cite>Public review (paraphrased) — Google, ~4.6★</cite></div>
+  </div>
+</div></section>
+
+<section class="years"><div class="wrap">
+  <h2>Forty-one years of 5 a.m. mornings on Main Street.</h2>
+  <p>That's a lot of coffee.</p>
+</div></section>
+
+<section class="visit"><div class="wrap">
+  <h2 class="h">Stop in</h2>
+  <div class="vgrid">
+    <div class="vcard"><h3>Where</h3><p>891 Main Street (Route 38)<br>Locke, NY 13092<br>20 min from Ithaca's north end, 25 from Auburn</p></div>
+    <div class="vcard"><h3>Hours</h3><p>Monday–Saturday<br>5:00 a.m. – 1:30 p.m.<br>Closed Sunday</p></div>
+    <div class="vcard"><h3>Call</h3><p><a href="tel:+13154979583">(315) 497-9583</a><br>Cash only — there's your reminder.</p></div>
+  </div>
+  <a class="btn" href="https://maps.google.com/?q=891+Main+St+Locke+NY+13092" rel="noopener">Point me to Locke →</a>
+</div></section>
+
+<footer>Barb's Diner · 891 Main St, Locke, NY 13092 · (315) 497-9583 · Mon–Sat 5:00–1:30 · Cash only</footer>
+
+<div class="checker"></div>
+
+</body>
+</html>

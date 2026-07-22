@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emery Masiker Excavation — Stockton, NY · Septic Systems, Ponds, Foundations &amp; Site Work</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --clay:#9c5a2c; --clay-d:#7c4621; --amber:#d98a2b; --orange:#e8721f;
+  --slate:#2b2f36; --slate2:#373c45; --steel:#5d6570;
+  --sand:#f3ece1; --paper:#f8f4ec; --ink:#221f1a; --line:#e0d6c6; --grey:#55514a;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+h1,h2,h3,.disp{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.5px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+.btn{display:inline-block;background:var(--orange);color:#fff;font-weight:600;text-decoration:none;padding:13px 28px;font-family:'Oswald';text-transform:uppercase;letter-spacing:1px;font-size:.95rem;border-radius:2px;transition:.13s}
+.btn:hover{background:#cf6011}
+.btn.dark{background:var(--slate);color:#fff}
+.btn.dark:hover{background:#11141a}
+.btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55)}
+.btn.ghost:hover{border-color:#fff}
+
+.topo{background-image:
+  radial-gradient(circle at 20% 30%,transparent 38px,rgba(217,138,43,.10) 39px 40px,transparent 41px),
+  radial-gradient(circle at 20% 30%,transparent 70px,rgba(217,138,43,.08) 71px 72px,transparent 73px),
+  radial-gradient(circle at 20% 30%,transparent 104px,rgba(217,138,43,.06) 105px 106px,transparent 107px),
+  radial-gradient(circle at 78% 72%,transparent 30px,rgba(217,138,43,.09) 31px 32px,transparent 33px),
+  radial-gradient(circle at 78% 72%,transparent 60px,rgba(217,138,43,.07) 61px 62px,transparent 63px)}
+
+nav{background:var(--slate);position:sticky;top:0;z-index:30;border-bottom:3px solid var(--orange)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand b{font-family:'Oswald';font-weight:700;color:#fff;font-size:1.28rem;display:block;line-height:1;text-transform:uppercase}
+.brand small{color:var(--amber);font-size:.64rem;letter-spacing:3px;text-transform:uppercase}
+.navlinks{display:flex;gap:24px;color:#c2c8d0;font-family:'Oswald';font-weight:500;text-transform:uppercase;font-size:.84rem;letter-spacing:.6px}
+.navlinks a{text-decoration:none}.navlinks a:hover{color:var(--amber)}
+.navcall{color:#fff;font-family:'Oswald';font-size:1.05rem;text-decoration:none;letter-spacing:.5px}
+@media(max-width:880px){.navlinks{display:none}}
+
+.hero{background:linear-gradient(180deg,rgba(34,31,26,.9),rgba(43,47,54,.94));background-color:var(--slate);color:#fff;padding:80px 0 70px}
+.hero .wrap{max-width:960px}
+.badge{display:inline-block;background:var(--clay);color:#fff;font-family:'Oswald';text-transform:uppercase;letter-spacing:1.5px;font-size:.76rem;padding:7px 14px;border-radius:2px}
+h1{font-size:3.1rem;line-height:1.04;margin:18px 0 14px;font-weight:700;max-width:17ch}
+.hero p.sub{font-family:'Inter';text-transform:none;letter-spacing:0;font-size:1.18rem;max-width:56ch;color:#e4e7ec;margin-bottom:26px;line-height:1.55}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero .credline{margin-top:22px;font-size:.95rem;color:#cfae84;font-weight:500}
+@media(max-width:560px){h1{font-size:2.3rem}}
+
+.facts{background:var(--clay-d);color:#fff}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.14)}
+.fact{background:var(--clay-d);padding:18px 16px;text-align:center}
+.fact b{font-family:'Oswald';font-size:1.5rem;display:block}
+.fact span{font-size:.82rem;color:#f0dcc4}
+@media(max-width:640px){.facts .wrap{grid-template-columns:1fr 1fr}}
+
+section{padding:60px 0}
+.eyebrow{color:var(--clay);font-family:'Oswald';font-weight:600;letter-spacing:2px;text-transform:uppercase;font-size:.82rem}
+h2{font-size:2.1rem;font-weight:700;margin:6px 0 10px}
+.lead{font-size:1.08rem;color:var(--grey);max-width:62ch;text-transform:none;letter-spacing:0}
+
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.scard{background:#fff;border:1px solid var(--line);border-radius:6px;padding:24px 22px;position:relative;overflow:hidden}
+.scard::after{content:"";position:absolute;left:0;top:0;width:6px;height:100%;background:var(--orange)}
+.scard:nth-child(2)::after{background:var(--amber)}
+.scard:nth-child(3)::after{background:var(--clay)}
+.scard:nth-child(4)::after{background:var(--steel)}
+.scard:nth-child(5)::after{background:var(--clay-d)}
+.scard:nth-child(6)::after{background:var(--orange)}
+.scard h3{font-size:1.12rem;margin-bottom:7px;color:var(--slate)}
+.scard p{font-size:.96rem;color:var(--grey);text-transform:none;letter-spacing:0}
+@media(max-width:820px){.svc{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){.svc{grid-template-columns:1fr}}
+
+.septic{background:var(--sand)}
+.septic .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.septic .panel{background:#fff;border:1px solid var(--line);border-left:6px solid var(--clay);border-radius:6px;padding:28px}
+.septic .panel h3{color:var(--clay-d);font-size:1.2rem;margin-bottom:10px}
+.septic ul{list-style:none;margin-top:8px}
+.septic li{padding:8px 0 8px 28px;position:relative;color:var(--grey);text-transform:none;letter-spacing:0}
+.septic li::before{content:"▸";position:absolute;left:4px;color:var(--orange);font-weight:700}
+@media(max-width:740px){.septic .wrap{grid-template-columns:1fr}}
+
+.steps-sec{background:var(--slate);color:#fff}
+.steps-sec h2{color:#fff}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.step{background:var(--slate2);border:1px solid #454b55;border-radius:6px;padding:24px;border-top:4px solid var(--orange)}
+.step b{font-family:'Oswald';color:var(--amber);font-size:1.6rem}
+.step h3{font-size:1.08rem;margin:8px 0 6px;color:#fff}
+.step p{font-size:.95rem;color:#c8cdd5;text-transform:none;letter-spacing:0}
+@media(max-width:740px){.steps{grid-template-columns:1fr}}
+
+.area .towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.area .towns span{background:var(--sand);border:1px solid var(--line);padding:8px 15px;border-radius:3px;font-weight:600;font-size:.95rem;font-family:'Oswald';text-transform:uppercase;letter-spacing:.5px;color:var(--slate)}
+
+.contact{background:
+  linear-gradient(180deg,rgba(124,70,33,.94),rgba(124,70,33,.94));background-color:var(--clay-d);color:#fff;padding:60px 0}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+.contact h2{color:#fff}
+.cbig{font-family:'Oswald';font-size:2rem;margin:10px 0}
+.cbig a{color:#fff;text-decoration:none}
+.cnote{color:#f1ddc6;font-size:.95rem;text-transform:none;letter-spacing:0}
+.cform{background:#fff;border-radius:8px;padding:26px;color:var(--ink)}
+.cform label{display:block;font-family:'Oswald';text-transform:uppercase;letter-spacing:.5px;font-size:.78rem;margin:11px 0 5px;color:var(--slate)}
+.cform input,.cform select,.cform textarea{width:100%;border:1px solid var(--line);border-radius:4px;padding:11px;font-family:inherit;font-size:.95rem;background:var(--paper)}
+.cform textarea{min-height:80px;resize:vertical}
+.cform .btn{width:100%;margin-top:15px;border:0;cursor:pointer;text-align:center}
+@media(max-width:760px){.contact .wrap{grid-template-columns:1fr}}
+
+footer{background:var(--ink);color:#bdb2a3;padding:28px 0;font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer b{color:#fff;font-family:'Oswald'}
+.ph{color:var(--amber);font-style:italic;text-transform:none;letter-spacing:0}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="brand"><b>Emery Masiker</b><small>Excavation · Stockton, NY</small></div>
+  <div class="navlinks">
+    <a href="#services">Services</a>
+    <a href="#septic">Septic</a>
+    <a href="#how">How It Works</a>
+    <a href="#contact">Request a Visit</a>
+  </div>
+  <a class="navcall" href="tel:+17166802157">716-680-2157</a>
+</div></nav>
+
+<header class="hero topo"><div class="wrap">
+  <span class="badge">On the Chautauqua County septic contractor list</span>
+  <h1>Septic, ponds, and site work — dug right the first time.</h1>
+  <p class="sub">Emery Masiker runs excavation out of Stockton for the central Chautauqua County towns: new and repaired septic systems, farm and recreation ponds, foundations, driveways, and drainage. One operator, the right iron, work that passes inspection.</p>
+  <div class="cta">
+    <a class="btn" href="#contact">Request a site visit</a>
+    <a class="btn ghost" href="tel:+17166802157">Call 716-680-2157</a>
+  </div>
+  <div class="credline">Based on Bear Lake Rd, Stockton · serving Cassadaga, Sinclairville, Gerry &amp; the surrounding towns</div>
+</div></header>
+
+<div class="facts"><div class="wrap">
+  <div class="fact"><b>Septic</b><span>Install &amp; repair</span></div>
+  <div class="fact"><b>Ponds</b><span>Dug &amp; shaped</span></div>
+  <div class="fact"><b>Sitework</b><span>Foundations &amp; grading</span></div>
+  <div class="fact"><b>County</b><span>Listed contractor</span></div>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <span class="eyebrow">What we dig</span>
+  <h2>Excavation for homes, farms, and land</h2>
+  <p class="lead">Most of what we do is the work nobody sees once it's done — the septic field under the lawn, the footing under the house, the pond that holds water through August.</p>
+  <div class="svc">
+    <div class="scard"><h3>Septic systems</h3><p>New system installs and repairs — tank, field, and grading — done to code and ready for the county inspection.</p></div>
+    <div class="scard"><h3>Ponds</h3><p>Farm, livestock, and recreation ponds dug, shaped, and sealed where the ground allows, with proper drainage.</p></div>
+    <div class="scard"><h3>Foundations &amp; footings</h3><p>Excavation for new builds, additions, and garages — dug to depth, square, and on grade for the builder.</p></div>
+    <div class="scard"><h3>Driveways &amp; culverts</h3><p>New driveways, gravel work, culvert and ditch installs that keep water moving off your road and lot.</p></div>
+    <div class="scard"><h3>Drainage &amp; grading</h3><p>Footing drains, swales, and final grading to pull water away from the house and stop the wet-basement calls.</p></div>
+    <div class="scard"><h3>Land &amp; lot clearing</h3><p>Brush, stumps, and rough grading to turn a wooded or overgrown lot into a buildable, usable site.</p></div>
+  </div>
+</div></section>
+
+<section id="septic" class="septic"><div class="wrap">
+  <div>
+    <span class="eyebrow">Why it matters who you hire</span>
+    <h2>Septic is the one you don't want done wrong</h2>
+    <p class="lead">A bad septic install is a five-figure problem you find out about the hard way. Emery Masiker is on the Chautauqua County onsite-wastewater contractor list, so the system gets put in the way the county expects — and signed off.</p>
+  </div>
+  <div class="panel">
+    <h3>What a septic job includes</h3>
+    <ul>
+      <li>Perc/soil conditions reviewed before any digging</li>
+      <li>Tank set and field laid to the approved design</li>
+      <li>Grading and cover so the field drains and stays dry</li>
+      <li>Coordinated with the county inspection process</li>
+      <li>Repairs and replacements for failing older systems</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="how" class="steps-sec"><div class="wrap">
+  <span class="eyebrow" style="color:var(--amber)">From call to backfill</span>
+  <h2>How a job gets done</h2>
+  <div class="steps">
+    <div class="step"><b>1</b><h3>Site visit</h3><p>We come look at the property, the ground, and the access, and talk through what the job actually needs.</p></div>
+    <div class="step"><b>2</b><h3>Written quote</h3><p>You get a clear scope and price — septic, pond, foundation, or sitework — before any machine shows up.</p></div>
+    <div class="step"><b>3</b><h3>Dug &amp; finished</h3><p>We dig it, set it, grade it, and leave the site clean and ready for inspection or the next trade.</p></div>
+  </div>
+</div></section>
+
+<section class="area"><div class="wrap">
+  <span class="eyebrow">Service area</span>
+  <h2>Central Chautauqua County</h2>
+  <p class="lead">Working out of Stockton across the lake-and-farm towns. Not sure if you're in range? Call and ask.</p>
+  <div class="towns">
+    <span>Stockton</span><span>Cassadaga</span><span>Sinclairville</span><span>Gerry</span>
+    <span>Charlotte</span><span>Arkwright</span><span>Ellington</span><span>Fredonia area</span>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <div>
+    <h2>Request a site visit</h2>
+    <p class="cnote" style="margin-top:8px;max-width:40ch">Tell us what you're looking at — a new septic, a pond, a foundation, or a wet yard — and we'll come take a look.</p>
+    <div class="cbig"><a href="tel:+17166802157">716-680-2157</a></div>
+    <div class="cnote">Second line: 716-595-3778 · 8021 Bear Lake Rd, Stockton, NY</div>
+  </div>
+  <form class="cform" onsubmit="return false">
+    <label>Name</label><input type="text" placeholder="Your name">
+    <label>Phone</label><input type="tel" placeholder="Best number to reach you">
+    <label>Town</label><input type="text" placeholder="e.g. Stockton, Cassadaga, Gerry">
+    <label>Type of work</label>
+    <select><option>Septic — new system</option><option>Septic — repair</option><option>Pond</option><option>Foundation / footing</option><option>Driveway / culvert</option><option>Drainage / grading</option><option>Other / not sure</option></select>
+    <label>Details</label><textarea placeholder="Tell us about the property and what you need"></textarea>
+    <button class="btn">Send request</button>
+  </form>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b>Emery Masiker Excavation</b> · Stockton, NY · 716-680-2157</div>
+  <div>Septic · Ponds · Foundations · Driveways · Drainage</div>
+</div></footer>
+
+</body>
+</html>

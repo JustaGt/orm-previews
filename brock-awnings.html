@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brock Awnings — Awnings &amp; shade made on the East End since 1972 | Hampton Bays, NY</title>
+<style>
+  :root{
+    --canvas:#f6f1e6; --sand:#e6d9c0; --marine:#1f5f74; --marine2:#16485a;
+    --terra:#c2693f; --teak:#7a5a3a; --ink:#23303a; --line:#ddd2bb; --stripe:#13495a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Avenir Next",Corbel,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--canvas);line-height:1.58}
+  h1,h2,h3{font-family:"Palatino Linotype",Palatino,Georgia,serif;line-height:1.14}
+  .wrap{max-width:1090px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .btn{display:inline-block;background:var(--terra);color:#fff;text-decoration:none;font-weight:700;
+    padding:15px 28px;border-radius:4px;letter-spacing:.3px}
+  .btn:hover{background:#a8542f}
+  .btn-line{background:transparent;border:2px solid #fff;color:#fff}
+
+  /* utility bar */
+  .util{background:var(--marine2);color:#e8f0f1;font-size:.86rem;padding:9px 0}
+  .util .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 20px;align-items:center}
+  .util a{font-weight:700;color:#ffd9a8}
+
+  /* stripe top */
+  .stripebar{height:12px;background:repeating-linear-gradient(90deg,var(--marine) 0 26px,var(--canvas) 26px 52px)}
+
+  /* hero */
+  .hero{background:
+    linear-gradient(rgba(20,72,90,.72),rgba(20,72,90,.82)),
+    repeating-linear-gradient(180deg,#1c5567 0 40px,#19505f 40px 80px);
+    color:#fff;padding:72px 0 60px}
+  .hero .est{font-size:.82rem;letter-spacing:3px;text-transform:uppercase;color:#ffd9a8;font-weight:700}
+  .hero h1{font-size:3rem;margin:14px 0 16px;max-width:760px}
+  .hero p{font-size:1.18rem;max-width:600px;color:#e3eef0}
+  .hero .cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero .free{margin-top:18px;font-size:.92rem;color:#cfe2e5}
+
+  /* numbers band (the fix for the blank counters) */
+  .nums{background:var(--sand);padding:34px 0}
+  .nums .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
+  .nums .n{font-family:Palatino,Georgia,serif;font-size:2.4rem;color:var(--marine);font-weight:700;line-height:1}
+  .nums .l{font-size:.8rem;letter-spacing:1px;text-transform:uppercase;color:#6b5b41;margin-top:8px}
+  .nums .star{font-size:.72rem;color:#8a7a5e;margin-top:6px;font-style:italic}
+
+  /* three lanes */
+  .lanes{padding:62px 0;background:var(--canvas)}
+  .lanes h2{text-align:center;font-size:2.1rem;color:var(--marine2)}
+  .lanes .sub{text-align:center;color:#6b6150;margin:8px 0 30px}
+  .lanegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .lane{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .lane .cap{height:10px;background:repeating-linear-gradient(90deg,var(--terra) 0 18px,#e8c9b3 18px 36px)}
+  .lane.b .cap{background:repeating-linear-gradient(90deg,var(--marine) 0 18px,#bcd6dd 18px 36px)}
+  .lane.c .cap{background:repeating-linear-gradient(90deg,var(--teak) 0 18px,#d8c6ac 18px 36px)}
+  .lane .body{padding:24px}
+  .lane h3{font-size:1.3rem;color:var(--marine2);margin-bottom:8px}
+  .lane p{font-size:.98rem;color:#4c5560}
+  .lane ul{list-style:none;margin-top:12px;font-size:.93rem;color:#4c5560}
+  .lane li{padding:5px 0 5px 22px;position:relative}
+  .lane li:before{content:"›";position:absolute;left:4px;color:var(--terra);font-weight:800}
+
+  /* fabric picker */
+  .fab{background:var(--marine2);color:#eaf3f4;padding:58px 0}
+  .fab h2{font-size:2rem;color:#fff;text-align:center}
+  .fab .sub{text-align:center;color:#bcd3d8;margin:8px 0 28px}
+  .swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .sw{background:rgba(255,255,255,.05);border-radius:8px;padding:18px;text-align:center}
+  .sw .chip{height:54px;border-radius:6px;margin-bottom:12px}
+  .sw h4{font-family:inherit;font-weight:800;font-size:1rem;color:#fff}
+  .sw p{font-size:.82rem;color:#a9c4ca;margin-top:4px}
+  .c1{background:repeating-linear-gradient(90deg,#1f5f74 0 12px,#f1e7d3 12px 24px)}
+  .c2{background:repeating-linear-gradient(90deg,#c2693f 0 12px,#f1e7d3 12px 24px)}
+  .c3{background:repeating-linear-gradient(90deg,#3c5a3e 0 12px,#e9e2cf 12px 24px)}
+  .c4{background:linear-gradient(135deg,#7a5a3a,#b89160)}
+  .fabnote{text-align:center;font-size:.82rem;color:#a9c4ca;margin-top:22px;font-style:italic}
+
+  /* motor note */
+  .motor{padding:54px 0;background:var(--canvas)}
+  .motor .grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+  .motor h2{font-size:1.9rem;color:var(--marine2)}
+  .motor p{margin:14px 0;color:#4c5560}
+  .feat{list-style:none}
+  .feat li{padding:9px 0 9px 30px;position:relative;border-bottom:1px solid var(--line)}
+  .feat li:before{content:"⚙";position:absolute;left:0;color:var(--terra)}
+
+  /* service area */
+  .area{background:var(--sand);padding:46px 0;text-align:center}
+  .area h2{font-size:1.7rem;color:var(--marine2)}
+  .area .towns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px}
+  .area .towns span{background:#fff;border:1px solid var(--line);border-radius:20px;padding:8px 16px;font-size:.9rem;color:#5a5141}
+
+  /* contact (the fix for broken mailto) */
+  .contact{background:var(--marine2);color:#fff;padding:56px 0}
+  .contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+  .contact h2{font-size:2rem;color:#fff}
+  .contact p{color:#cfe2e5;margin:12px 0}
+  .ways a{display:block;background:rgba(255,255,255,.06);border-radius:6px;padding:16px 18px;margin-bottom:12px;
+    text-decoration:none;color:#fff;font-weight:700}
+  .ways a span{display:block;font-weight:400;font-size:.84rem;color:#bcd3d8;margin-top:2px}
+  .form{background:#fff;border-radius:8px;padding:24px;color:var(--ink)}
+  .form label{display:block;font-size:.82rem;font-weight:700;margin:10px 0 4px;color:#4c5560}
+  .form input,.form select,.form textarea{width:100%;padding:11px;border:1px solid var(--line);border-radius:5px;font-size:.95rem;font-family:inherit}
+  .form .btn{margin-top:16px;border:none;cursor:pointer;width:100%}
+
+  footer{background:#13222a;color:#9fbac2;padding:28px 0;font-size:.85rem;text-align:center}
+  footer b{color:#eaf3f4}
+
+  @media(max-width:800px){
+    .hero h1{font-size:2.2rem}
+    .nums .wrap{grid-template-columns:1fr 1fr}
+    .lanegrid,.swatches{grid-template-columns:1fr 1fr}
+    .motor .grid,.contact .grid{grid-template-columns:1fr}
+  }
+  @media(max-width:480px){.swatches{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<div class="util"><div class="wrap">
+  <span>📍 211-1 East Montauk Hwy, Hampton Bays, NY 11946 · Awnings since 1972</span>
+  <span>Free measure &amp; estimate · <a href="tel:16317283367">(631) 728-3367</a> · <a href="mailto:sales@brockawnings.com">sales@brockawnings.com</a></span>
+</div></div>
+<div class="stripebar"></div>
+
+<header class="hero"><div class="wrap">
+  <div class="est">Hampton Bays · serving Great Neck to Montauk</div>
+  <h1>Awnings and shade built on the East End for over fifty years.</h1>
+  <p>Retractable and fixed-frame awnings, pergolas and custom canvas — measured, made, and installed by a Hampton Bays shop that's done it since 1972. Pick a fabric, pick a style, and we'll come measure for free.</p>
+  <div class="cta">
+    <a class="btn" href="#measure">Book a free measure</a>
+    <a class="btn btn-line" href="tel:16317283367">Call (631) 728-3367</a>
+  </div>
+  <div class="free">No-charge in-home consultation across the South Fork &amp; North Fork.</div>
+</div></header>
+
+<section class="nums"><div class="wrap">
+  <div><div class="n">1972</div><div class="l">Building awnings since</div></div>
+  <div><div class="n">50+ yrs</div><div class="l">On the East End</div></div>
+  <div><div class="n">Res / Com / Custom</div><div class="l">Every project type</div></div>
+  <div><div class="n">Free</div><div class="l">Measure &amp; estimate</div><div class="star">Awning/install counts to be filled with verified figures</div></div>
+</div></section>
+
+<section class="lanes"><div class="wrap">
+  <h2>Find the shade that fits</h2>
+  <p class="sub">Three ways to cover a patio, deck, window or storefront</p>
+  <div class="lanegrid">
+    <div class="lane">
+      <div class="cap"></div>
+      <div class="body">
+        <h3>Retractable awnings</h3>
+        <p>Roll the shade out when the sun's high, pull it back when you want the sky. Motorized or manual.</p>
+        <ul><li>Somfy motors &amp; Telis remotes</li><li>Wind &amp; rain sensors</li><li>Wall, board or roof mounting</li><li>Drop valances for low sun</li></ul>
+      </div>
+    </div>
+    <div class="lane b">
+      <div class="cap"></div>
+      <div class="body">
+        <h3>Fixed-frame awnings</h3>
+        <p>Permanent shade and a finished look for windows, doors, entries and storefronts — residential or commercial.</p>
+        <ul><li>Custom-color frames</li><li>Storefront &amp; restaurant signage awnings</li><li>Window &amp; doorway covers</li><li>Built to your opening</li></ul>
+      </div>
+    </div>
+    <div class="lane c">
+      <div class="cap"></div>
+      <div class="body">
+        <h3>Pergolas &amp; custom</h3>
+        <p>Bigger structures and one-off jobs — covered outdoor rooms, club and yacht-club canvas, custom shapes.</p>
+        <ul><li>Pergola shade systems</li><li>Commercial &amp; club projects</li><li>Custom shapes &amp; spans</li><li>Warranty &amp; weather packages</li></ul>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="fab"><div class="wrap">
+  <h2>Pick your fabric &amp; color</h2>
+  <p class="sub">Marine-grade canvas that holds its color through East End sun and salt</p>
+  <div class="swatches">
+    <div class="sw"><div class="chip c1"></div><h4>Sunbrella</h4><p>Fade-resistant classic stripes &amp; solids</p></div>
+    <div class="sw"><div class="chip c2"></div><h4>Dickson</h4><p>Deep solution-dyed colors</p></div>
+    <div class="sw"><div class="chip c3"></div><h4>Sattler</h4><p>Heavy-duty weatherproof acrylic</p></div>
+    <div class="sw"><div class="chip c4"></div><h4>Recacril</h4><p>Warm tones &amp; textured weaves</p></div>
+  </div>
+  <div class="fabnote">Bring us a photo of your space and we'll match fabric, stripe and color on site — swatches shown are illustrative.</div>
+</div></section>
+
+<section class="motor"><div class="wrap">
+  <div class="grid">
+    <div>
+      <h2>Motorized, sensored, and set to weather</h2>
+      <p>Most of our retractables run on Somfy motors with Telis remotes — open the awning from a switch, a remote, or set it to pull itself in when the wind picks up.</p>
+      <p>Every awning ships with the hardware and warranty package matched to where it lives, so a salt-air patio in Montauk gets built differently than a sheltered courtyard inland.</p>
+    </div>
+    <div>
+      <ul class="feat">
+        <li>Somfy motors — switch, remote or wireless wall control</li>
+        <li>Wind sensors that retract the awning automatically</li>
+        <li>Wind &amp; rain packages for exposed sites</li>
+        <li>Drop valances for low-angle sun</li>
+        <li>Manufacturer warranties on motors &amp; fabric</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="area"><div class="wrap">
+  <h2>Measuring from Great Neck to Montauk</h2>
+  <div class="towns">
+    <span>Hampton Bays</span><span>Southampton</span><span>East Hampton</span><span>Montauk</span>
+    <span>Sag Harbor</span><span>Bridgehampton</span><span>North Fork</span><span>Riverhead</span><span>Nassau County</span>
+  </div>
+</div></section>
+
+<section class="contact" id="measure"><div class="wrap">
+  <div class="grid">
+    <div>
+      <h2>Book a free measure</h2>
+      <p>Tell us the space and the project type — we'll come out, measure, talk fabric, and leave you an estimate. No charge, no pressure.</p>
+      <div class="ways">
+        <a href="tel:16317283367">Call the shop — (631) 728-3367<span>Hampton Bays · ask for a free measure</span></a>
+        <a href="mailto:sales@brockawnings.com">Email sales@brockawnings.com<span>Send photos of your patio, deck or storefront</span></a>
+      </div>
+    </div>
+    <form class="form" onsubmit="return false">
+      <label>Name</label><input type="text" placeholder="Your name">
+      <label>Phone or email</label><input type="text" placeholder="Best way to reach you">
+      <label>Project type</label>
+      <select><option>Retractable awning</option><option>Fixed-frame awning</option><option>Pergola</option><option>Commercial / storefront</option><option>Custom / not sure</option></select>
+      <label>Where &amp; what</label><textarea rows="3" placeholder="Town + what you'd like shaded (patio, deck, windows, storefront…)"></textarea>
+      <button class="btn">Request my free measure</button>
+    </form>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <b>Brock Awnings Ltd.</b> · 211-1 East Montauk Hwy, Hampton Bays, NY 11946 · (631) 728-3367 · sales@brockawnings.com · Awnings &amp; shade since 1972<br>
+  <span style="font-size:.78rem">Preview concept prepared by Onyx Rise Media. Not affiliated; for review only. Numbers/figures shown are placeholders to confirm before launch.</span>
+</div></footer>
+
+</body>
+</html>

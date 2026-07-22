@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wilbert Fruit Farm — U-Pick Sour Cherries &amp; Berries, Walworth NY</title>
+<meta name="description" content="Wilbert Fruit Farm in Walworth, NY — pick-your-own sour cherries, strawberries, blueberries and raspberries in season, 20 minutes east of Rochester. Call ahead at (315) 986-1382 to see what's ready.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cherry:#c62839; --cherry-d:#9e1b2b; --berry:#7a3b8c; --straw:#e8536a;
+    --leaf:#5a8a3c; --leaf-d:#436a2c; --sky:#eaf4ff; --sun:#ffc94d;
+    --cream:#fff8ef; --paper:#fffdf8; --ink:#332a2a; --gray:#7a6f6b; --white:#fff;
+    --line:#f0e2d4; --shadow:0 14px 36px rgba(158,27,43,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Nunito',sans-serif;color:var(--ink);background:var(--paper);line-height:1.62}
+  h1,h2,h3,.disp{font-family:'Fredoka',sans-serif;line-height:1.08}
+  a{color:inherit}
+  .wrap{max-width:1050px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--cherry);color:#fff;font-weight:700;padding:14px 30px;border-radius:40px;
+    text-decoration:none;box-shadow:0 10px 22px rgba(198,40,57,.32);transition:transform .15s,background .15s}
+  .btn:hover{transform:translateY(-2px);background:var(--cherry-d)}
+  .btn.leaf{background:var(--leaf)}
+  .btn.leaf:hover{background:var(--leaf-d)}
+  .btn.ghost{background:transparent;border:2px solid rgba(255,255,255,.7);color:#fff;box-shadow:none}
+
+  .bar{background:var(--cherry-d);color:#ffe3e6;font-size:.92rem}
+  .bar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;padding:8px 22px}
+  .bar a{color:#fff;text-decoration:none;font-weight:700}
+
+  header.nav{background:var(--white);color:var(--ink);position:sticky;top:0;z-index:20;box-shadow:0 2px 14px rgba(158,27,43,.1)}
+  header.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 22px}
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand .mark{width:42px;height:42px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ff5a6b,var(--cherry));display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Fredoka';font-weight:700;font-size:1.1rem;box-shadow:0 4px 10px rgba(198,40,57,.4)}
+  .brand b{font-family:'Fredoka';font-size:1.4rem;color:var(--cherry-d)}
+  .brand span{display:block;font-size:.72rem;letter-spacing:.14em;color:var(--leaf);text-transform:uppercase;font-weight:700}
+  nav.links{display:flex;gap:24px;font-weight:700;font-size:.96rem}
+  nav.links a{text-decoration:none}
+  nav.links a:hover{color:var(--cherry)}
+  @media(max-width:760px){nav.links{display:none}}
+
+  .hero{background:
+     linear-gradient(rgba(67,106,44,.28),rgba(67,106,44,.42)),
+     radial-gradient(circle at 82% 20%,#ffd1d7 0,transparent 46%),
+     linear-gradient(135deg,#8fb96a,#5a8a3c);
+     color:#fff;padding:80px 0 72px}
+  .hero .kick{background:rgba(255,255,255,.2);display:inline-block;padding:6px 16px;border-radius:20px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:.76rem;margin-bottom:16px}
+  .hero h1{font-size:clamp(2.5rem,6vw,4.3rem);max-width:15ch;text-shadow:0 3px 14px rgba(50,30,20,.28)}
+  .hero p.lead{margin:18px 0 28px;font-size:1.22rem;max-width:52ch;color:#fff;font-weight:600}
+  .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero .note{margin-top:26px;font-size:.98rem;color:#f2ffe8;font-weight:700}
+
+  section{padding:60px 0}
+  .eyebrow{color:var(--cherry);font-weight:800;letter-spacing:.15em;text-transform:uppercase;font-size:.8rem;margin-bottom:10px}
+  h2.big{font-size:clamp(1.9rem,4.4vw,2.9rem);margin-bottom:12px;color:var(--cherry-d)}
+  .sub{max-width:58ch;color:var(--gray);font-size:1.06rem}
+
+  .season{background:var(--cream)}
+  .calrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:30px}
+  .fruit{background:#fff;border:2px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow);text-align:center}
+  .fruit .dot{width:54px;height:54px;border-radius:50%;margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-size:1.6rem}
+  .fruit h3{font-size:1.35rem;margin-bottom:4px}
+  .fruit .when{font-weight:800;font-size:.86rem;letter-spacing:.06em;text-transform:uppercase}
+  .fruit p{color:var(--gray);font-size:.94rem;margin-top:8px}
+  .f-cherry .dot{background:#ffd9dd}.f-cherry h3{color:var(--cherry)}.f-cherry .when{color:var(--cherry)}
+  .f-straw .dot{background:#ffe0e6}.f-straw h3{color:var(--straw)}.f-straw .when{color:var(--straw)}
+  .f-blue .dot{background:#e2e6ff}.f-blue h3{color:#3b5bbf}.f-blue .when{color:#3b5bbf}
+  .f-rasp .dot{background:#f3ddf0}.f-rasp h3{color:var(--berry)}.f-rasp .when{color:var(--berry)}
+  .flag{background:#fff2e6;border:1px solid #ffcf9c;color:#8a5510;font-size:.8rem;padding:9px 14px;border-radius:8px;margin-top:22px;display:inline-block}
+
+  .visit{background:var(--leaf-d);color:#f2ffe8}
+  .visit .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center}
+  .visit h2{font-size:clamp(1.8rem,4vw,2.6rem);color:#fff;margin-bottom:14px}
+  .visit p{color:#e2f2d4;margin-bottom:12px;font-size:1.05rem}
+  .vcard{background:#fff;color:var(--ink);border-radius:16px;padding:30px;box-shadow:0 16px 40px rgba(0,0,0,.25)}
+  .vcard h3{color:var(--leaf-d);font-size:1.5rem;margin-bottom:14px}
+  .vcard .row{display:flex;gap:12px;margin-bottom:12px;font-size:1rem}
+  .vcard .row b{font-family:'Fredoka';color:var(--cherry-d);min-width:74px}
+  .vcard .call{margin-top:8px}
+  @media(max-width:800px){.visit .wrap{grid-template-columns:1fr}}
+
+  .why{background:var(--paper)}
+  .whyrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:28px}
+  .wc{background:var(--sky);border-radius:16px;padding:26px}
+  .wc h3{color:var(--cherry-d);font-size:1.25rem;margin-bottom:6px}
+  .wc p{color:#4d5a63;font-size:.97rem}
+
+  .cta-band{background:linear-gradient(135deg,var(--cherry),var(--cherry-d));color:#fff;text-align:center}
+  .cta-band h2{font-size:clamp(1.9rem,4.5vw,2.8rem);margin-bottom:12px}
+  .cta-band p{max-width:48ch;margin:0 auto 20px;color:#ffe4e7;font-size:1.1rem;font-weight:600}
+  .cta-band .big-phone{font-family:'Fredoka';font-size:2.3rem}
+  .cta-band .big-phone a{color:#fff;text-decoration:none}
+
+  footer{background:#3a2a2a;color:#d9c8c4;padding:30px 0;font-size:.92rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap">
+  <span>Walworth, NY · pick-your-own · 20 minutes east of Rochester</span>
+  <a href="tel:3159861382">Call ahead · (315) 986-1382</a>
+</div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">
+    <div class="mark">W</div>
+    <div><b>Wilbert Fruit Farm</b><span>U-Pick · Walworth NY</span></div>
+  </div>
+  <nav class="links">
+    <a href="#season">What's Ripe</a>
+    <a href="#visit">Plan a Visit</a>
+    <a href="#why">Why U-Pick</a>
+    <a href="#visit">Contact</a>
+  </nav>
+  <a href="tel:3159861382" class="btn leaf" style="padding:10px 20px">Call Ahead</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <span class="kick">Pick-your-own · in season</span>
+  <h1>Sour cherries and berries, picked off the branch in Walworth.</h1>
+  <p class="lead">Wilbert Fruit Farm is a family pick-your-own farm on Ontario Center Road — sour cherries, strawberries, blueberries and raspberries, ready for a few short weeks each summer. Call ahead to catch them.</p>
+  <div class="cta">
+    <a href="#season" class="btn">See what's ready</a>
+    <a href="#visit" class="btn ghost">Plan your visit</a>
+  </div>
+  <p class="note">Sour cherry season is short — often just a week or two. A quick call tells you if it's on.</p>
+</div></section>
+
+<section class="season" id="season"><div class="wrap">
+  <p class="eyebrow">The picking calendar</p>
+  <h2 class="big">What's ripe, and roughly when</h2>
+  <p class="sub">Fruit runs on its own clock and the weather moves it every year. These are the usual windows — always call ahead the day you want to come.</p>
+  <div class="calrow">
+    <div class="fruit f-straw"><div class="dot">🍓</div><h3>Strawberries</h3><div class="when">Early–mid June</div><p>First berries of the season, best picked cool in the morning.</p></div>
+    <div class="fruit f-cherry"><div class="dot">🍒</div><h3>Sour cherries</h3><div class="when">Late June–July</div><p>The one to watch — a tight window and the reason to call ahead.</p></div>
+    <div class="fruit f-blue"><div class="dot">🫐</div><h3>Blueberries</h3><div class="when">July</div><p>Easy picking for kids once they're on.</p></div>
+    <div class="fruit f-rasp"><div class="dot">🍇</div><h3>Raspberries</h3><div class="when">Summer, in season</div><p>Delicate — bring a small container and pick gently.</p></div>
+  </div>
+  <span class="flag">Season windows are typical estimates. Exact dates and what's open on a given day are confirmed by phone — (315) 986-1382 — before you drive out.</span>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <div>
+    <h2>Plan your visit</h2>
+    <p>Wilbert Fruit Farm is an easy drive from Rochester's east side and all of western Wayne County. Call ahead, come out, and pick what's ready that day.</p>
+    <p>Picking is weather- and crop-dependent, so a quick call saves a wasted trip — especially for the short sour-cherry window.</p>
+  </div>
+  <div class="vcard">
+    <h3>Wilbert Fruit Farm</h3>
+    <div class="row"><b>Call</b><span><a href="tel:3159861382" style="color:var(--cherry-d);font-weight:800;text-decoration:none">(315) 986-1382</a></span></div>
+    <div class="row"><b>Where</b><span>418 Ontario Center Rd, Walworth, NY 14568</span></div>
+    <div class="row"><b>Pick</b><span>Sour cherries · strawberries · blueberries · raspberries</span></div>
+    <div class="row"><b>Season</b><span>Roughly June–July — call to confirm</span></div>
+    <div class="call"><a href="tel:3159861382" class="btn leaf">Call to check what's ripe</a></div>
+  </div>
+</div></section>
+
+<section class="why" id="why"><div class="wrap">
+  <p class="eyebrow">A morning worth the drive</p>
+  <h2 class="big">Why families come out to pick</h2>
+  <div class="whyrow">
+    <div class="wc"><h3>Fresher than a store</h3><p>Fruit picked off the branch that morning, not trucked and shelved for days.</p></div>
+    <div class="wc"><h3>Sour cherries you can't buy</h3><p>Pie cherries are hard to find fresh anywhere — here you pick them yourself.</p></div>
+    <div class="wc"><h3>An outing, not an errand</h3><p>A simple, cheap summer trip the whole family can do together.</p></div>
+  </div>
+</div></section>
+
+<section class="cta-band"><div class="wrap">
+  <h2>Wondering if the cherries are on?</h2>
+  <p>One call tells you what's ripe and whether picking is open today.</p>
+  <div class="big-phone"><a href="tel:3159861382">(315) 986-1382</a></div>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b style="font-family:'Fredoka';font-size:1.3rem;color:#ffd9dd">Wilbert Fruit Farm</b><br>418 Ontario Center Rd, Walworth, NY 14568 · (315) 986-1382</div>
+  <div style="text-align:right">Pick-your-own sour cherries &amp; berries<br>Family farm · western Wayne County</div>
+</div></footer>
+
+</body>
+</html>

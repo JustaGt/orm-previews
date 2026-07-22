@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--
+NICHE IDENTITY BRIEF — Twin Brook Farm (Owego, Tioga Co., NY)  [ORM prospect #163]
+Business type: Family regenerative farm, direct-to-consumer: 100% grass-fed beef (piece/quarter/half/whole), pastured pork/bacon, eggs, raw honey, farm-made maple syrup. 304 Lainhart Rd, Owego NY 13827. Phone (607) 687-4053. Email twinbrookfarm@peoplepc.com (directory-listed — confirm). ~9-5, closed Sunday; call ahead.
+Target customers: local families buying freezer beef; health-conscious buyers wanting no-hormone/no-antibiotic grass-finished meat; folks who want to know their farmer; maple/honey/egg regulars.
+Local market: Tioga County / greater Binghamton — real farm-to-table interest & freezer-beef buyers, but a specific small farm's products/prices are hard to find online. Competes w/ grocery beef + other small farms mostly by word of mouth.
+Emotional tone: honest, rooted, plainspoken; pasture-and-family, "know where your food comes from" without preachiness.
+Visual style: warm pasture greens + cream + barn-red accent; big photo space for cattle-on-grass & farmstand; friendly serif headings; unfussy, trustworthy.
+Pain points (VERIFIED): no owned website — presence is Facebook + directory cards (Experience Tioga literally says "Call ahead to purchase products"; plus Yelp, localmint, BOTW, Nextdoor; the sound-alike .com domains belong to DIFFERENT farms in Camillus etc.). A buyer can't see what's in stock, how quarter/half pricing & freezer-space works, cut options, or when the stand is open without calling blind.
+Customer desires: understand how buying a quarter/half/whole works (hanging weight, cut sheet, freezer space, deposit); see what's available now; know hours & call-ahead; trust the grass-fed/no-hormone claims; get directions to the Lainhart Rd stand.
+Trust signals: 100% grass-fed & finished, no hormones/antibiotics, regenerative practices, family farm, on-farm maple & honey, real address & hours.
+Conversion goal: call-ahead orders + freezer-beef ("reserve a quarter") inquiries + farmstand visits.
+Sections needed: hero (cattle on grass), what's available, "how buying a quarter/half works" explainer, our practices, visit + hours + call-ahead, reserve-a-share contact form.
+Cliches to avoid: ORM banned list; also "farm to table" as a slogan, "pasture to plate," "wholesome goodness," generic cattle stock.
+Unique to niche: centerpiece is a plain "how buying a quarter/half/whole beef actually works" explainer (hanging weight -> cut sheet -> freezer space -> deposit) that first-time freezer-beef buyers never get from a directory card, plus a "what's available now" board and a "reserve a share" call-ahead flow tuned to a call-ahead farm.
+DATA NOTES: Email twinbrookfarm@peoplepc.com is directory-listed (legacy PeoplePC/EarthLink ISP address) -> treated "confirm," body-only, NO auto-draft (consistent w/ #90/#108/#154). Weakness confirmed by multi-directory consensus incl. Experience Tioga "call ahead" note; sound-alike .com's are different farms. Prices/cut lists/exact hours/current stock = CLEARLY-LABELED PLACEHOLDERS.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Twin Brook Farm — Grass-Fed Beef by the Quarter · Owego, NY</title>
+<style>
+  :root{
+    --pasture:#3f6b34; --pasture-dk:#2c4d24; --cream:#f7f3e8; --paper:#fbf9f1; --barn:#a8402e;
+    --gold:#d99a2b; --ink:#2a2e22; --muted:#5f6653; --line:#e2dcc9; --card:#fffefa;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+  h1,h2,h3{font-family:'Georgia','Times New Roman',serif;line-height:1.14}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .top{background:var(--pasture-dk);color:#cfd8c2;font-size:.9rem}
+  .top .wrap{display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:space-between;align-items:center;padding:9px 22px}
+  .top b{color:#fff}
+  .top .ph{color:#ffe08a;font-weight:700;text-decoration:none}
+  /* hero */
+  .hero{background:linear-gradient(rgba(44,77,36,.82),rgba(44,77,36,.78)),linear-gradient(160deg,#4f7d3f,#2c4d24);color:#fff;padding:66px 0 58px;border-bottom:5px solid var(--gold)}
+  .hero .wrap{max-width:900px}
+  .kick{display:inline-block;background:var(--barn);color:#fff;text-transform:uppercase;letter-spacing:1.5px;font-size:.72rem;font-weight:800;padding:6px 13px;border-radius:2px}
+  .hero h1{font-size:3rem;margin:18px 0 14px;color:#fff}
+  .hero h1 span{color:#ffe08a}
+  .hero p.lede{font-size:1.18rem;color:#e4ead9;max-width:600px}
+  .cta{display:flex;flex-wrap:wrap;gap:13px;margin-top:26px}
+  .btn{display:inline-block;padding:15px 26px;border-radius:5px;font-weight:800;text-decoration:none;font-size:1.02rem;border:none;cursor:pointer;font-family:'Segoe UI',sans-serif}
+  .btn-g{background:var(--gold);color:#2a2408}
+  .btn-o{border:2px solid #7a9a68;color:#fff;background:transparent}
+  /* available now board */
+  .board{background:var(--barn);color:#fff;padding:20px 0}
+  .board .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:10px 20px;justify-content:center}
+  .board b{font-family:'Georgia',serif;font-size:1.1rem;letter-spacing:.5px}
+  .pill{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);border-radius:30px;padding:7px 16px;font-weight:700;font-size:.92rem}
+  /* sections */
+  section.pad{padding:56px 0}
+  h2.big{font-size:2.15rem;text-align:center;margin-bottom:8px;color:var(--pasture)}
+  .lead-c{text-align:center;color:var(--muted);max-width:660px;margin:0 auto 34px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px;text-align:center;border-bottom:5px solid var(--pasture)}
+  .card:nth-child(even){border-bottom-color:var(--gold)}
+  .card .ico{font-size:1.7rem;margin-bottom:8px}
+  .card h3{font-size:1.14rem;margin-bottom:7px;color:var(--pasture)}
+  .card p{font-size:.94rem;color:var(--muted)}
+  /* how buying works */
+  .how{background:var(--cream)}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:14px}
+  .step{background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px 22px;position:relative;border-top:5px solid var(--barn)}
+  .step .n{position:absolute;top:-16px;left:20px;width:34px;height:34px;background:var(--barn);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:'Georgia',serif}
+  .step h3{font-size:1.06rem;margin:6px 0 6px;color:var(--pasture)}
+  .step p{font-size:.92rem;color:var(--muted)}
+  .sharekey{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:26px}
+  .share{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 22px;text-align:center;min-width:150px}
+  .share b{display:block;color:var(--pasture);font-family:'Georgia',serif;font-size:1.15rem}
+  .share span{font-size:.85rem;color:var(--muted)}
+  .how .note{text-align:center;margin-top:24px;color:var(--muted);font-style:italic;font-size:.9rem}
+  /* practices */
+  .prac{background:var(--pasture);color:#fff}
+  .prac h2{color:#fff}
+  .prac .lead-c{color:#d7e2cd}
+  .pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;margin-top:8px}
+  .pcard{background:#365d2b;border:1px solid #4b7a3c;border-radius:10px;padding:22px}
+  .pcard h3{color:#ffe08a;font-size:1.1rem;margin-bottom:7px}
+  .pcard p{color:#dbe6d1;font-size:.94rem}
+  /* visit */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px}
+  .panel h3{color:var(--pasture);font-size:1.3rem;margin-bottom:12px}
+  .panel p{color:var(--muted)}
+  .panel .big-ph{font-family:'Georgia',serif;font-size:1.35rem;color:var(--barn);margin:4px 0 2px}
+  .ph-note{font-size:.82rem;color:var(--muted);font-style:italic;margin-top:12px}
+  /* contact */
+  .contact{background:var(--pasture-dk);color:#fff}
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+  .contact h2{color:#fff;font-size:2rem;margin-bottom:10px}
+  .contact p{color:#cfd8c2;margin-bottom:16px}
+  .cbtn{display:block;background:#33552a;border:1px solid #4a7439;border-radius:10px;padding:15px 18px;margin-bottom:12px;text-decoration:none;color:#fff}
+  .cbtn b{color:#ffe08a;font-size:1.08rem}
+  .cbtn span{display:block;color:#c6d2ba;font-size:.86rem}
+  form{background:#fff;border-radius:12px;padding:24px;color:var(--ink)}
+  form label{display:block;font-size:.8rem;font-weight:700;color:var(--pasture);margin:10px 0 4px;text-transform:uppercase;letter-spacing:.5px}
+  form input,form textarea,form select{width:100%;padding:11px;border:1px solid var(--line);border-radius:7px;font-family:inherit;font-size:.95rem}
+  form button{width:100%;margin-top:16px;background:var(--barn);color:#fff;border:none;padding:15px;border-radius:8px;font-weight:800;font-size:1.02rem;cursor:pointer}
+  form .hint{font-size:.8rem;color:var(--muted);margin-top:9px}
+  footer{background:#1c2f16;color:#93a086;text-align:center;padding:22px;font-size:.85rem}
+  @media(max-width:760px){.hero h1{font-size:2.2rem}.two,.contact .wrap{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+  <div class="top"><div class="wrap"><span><b>Twin Brook Farm</b> · 304 Lainhart Rd, Owego NY · grass-fed &amp; family-run</span><span><a class="ph" href="tel:16076874053">(607) 687-4053</a> · call ahead</span></div></div>
+
+  <header class="hero">
+    <div class="wrap">
+      <span class="kick">Owego, NY · 100% grass-fed &amp; finished</span>
+      <h1>A year of beef, raised on grass <span>a few miles up Lainhart Road.</span></h1>
+      <p class="lede">Twin Brook Farm sells 100% grass-fed beef by the quarter, half or whole — plus pastured pork, eggs, raw honey and our own maple syrup. Fill the freezer with meat you can trace to one pasture.</p>
+      <div class="cta">
+        <a class="btn btn-g" href="#reserve">Reserve a share of beef</a>
+        <a class="btn btn-o" href="#buying">How buying works</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="board"><div class="wrap">
+    <b>At the farm now:</b>
+    <span class="pill">Grass-fed beef</span>
+    <span class="pill">Pastured pork &amp; bacon</span>
+    <span class="pill">Farm eggs</span>
+    <span class="pill">Raw honey</span>
+    <span class="pill">Maple syrup</span>
+    <span class="pill" style="background:rgba(0,0,0,.2)">[Current stock updated by the farm]</span>
+  </div></div>
+
+  <section class="pad">
+    <div class="wrap">
+      <h2 class="big">From our pasture to your freezer</h2>
+      <p class="lead-c">Everything is raised or made here on the farm in Owego — no hormones, no antibiotics, no mystery.</p>
+      <div class="grid">
+        <div class="card"><div class="ico">🐄</div><h3>Grass-fed beef</h3><p>100% grass-fed and grass-finished. Buy a single cut or a quarter, half or whole for the freezer.</p></div>
+        <div class="card"><div class="ico">🥓</div><h3>Pastured pork</h3><p>Pork and farm-cured bacon from pigs raised outdoors, not in confinement.</p></div>
+        <div class="card"><div class="ico">🥚</div><h3>Farm eggs</h3><p>Eggs from hens on pasture — the kind with the deep-orange yolks.</p></div>
+        <div class="card"><div class="ico">🍯</div><h3>Raw honey</h3><p>Unfiltered raw honey from the farm's own hives.</p></div>
+        <div class="card"><div class="ico">🍁</div><h3>Maple syrup</h3><p>Pure maple syrup, tapped and boiled right here on the property.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad how" id="buying">
+    <div class="wrap">
+      <h2 class="big">Never bought a quarter of beef? Here's how it works</h2>
+      <p class="lead-c">Buying beef by the share is cheaper per pound and fills a freezer — but it's confusing the first time. It's really just four steps.</p>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><h3>Pick your share</h3><p>Quarter, half or whole. A quarter suits a small family; a half or whole is better value per pound for bigger freezers.</p></div>
+        <div class="step"><div class="n">2</div><h3>Reserve with a deposit</h3><p>We put your name on an animal. The balance is figured on hanging weight when it's processed. [Deposit &amp; pricing to be confirmed.]</p></div>
+        <div class="step"><div class="n">3</div><h3>Choose your cuts</h3><p>You fill out a cut sheet — steak thickness, roast sizes, how much ground, bacon options. We'll walk you through it.</p></div>
+        <div class="step"><div class="n">4</div><h3>Pick up &amp; freeze</h3><p>Your beef comes back cut, wrapped and frozen, ready to load into the freezer.</p></div>
+      </div>
+      <div class="sharekey">
+        <div class="share"><b>Quarter</b><span>~1 medium freezer shelf · small family</span></div>
+        <div class="share"><b>Half</b><span>~a chest-freezer drawer · best value</span></div>
+        <div class="share"><b>Whole</b><span>a full chest freezer · split with family</span></div>
+      </div>
+      <p class="note">[Approximate freezer space &amp; per-pound pricing — Twin Brook Farm will confirm exact weights, prices and deposit.]</p>
+    </div>
+  </section>
+
+  <section class="pad prac">
+    <div class="wrap">
+      <h2 class="big">How the animals are raised</h2>
+      <p class="lead-c">The reason grass-fed regulars keep coming back to Lainhart Road.</p>
+      <div class="pgrid">
+        <div class="pcard"><h3>100% grass-fed &amp; finished</h3><p>Our cattle are on grass their whole lives — never grain-finished in a feedlot.</p></div>
+        <div class="pcard"><h3>No hormones or antibiotics</h3><p>Completely natural, hormone-free beef raised without routine antibiotics.</p></div>
+        <div class="pcard"><h3>Regenerative pastures</h3><p>We manage the land to keep the soil and grass healthy season after season.</p></div>
+        <div class="pcard"><h3>One farm, one family</h3><p>Raised, and much of it processed and made, right here — so you know exactly where it came from.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad">
+    <div class="wrap two">
+      <div class="panel">
+        <h3>Visit the farm</h3>
+        <p>Twin Brook Farm · <b>304 Lainhart Road, Owego, NY 13827</b>. It's a call-ahead farm — ring first so we can have your order ready and make sure we're here.</p>
+        <p class="big-ph">Open ~9am–5pm · closed Sunday</p>
+        <p class="ph-note">[Please confirm current hours &amp; seasonal availability with the farm.]</p>
+      </div>
+      <div class="panel">
+        <h3>Why buy direct</h3>
+        <p>You get better beef at a better per-pound price, your money stays with a local Tioga County family, and you can ask the people who raised it exactly how it was raised. That's the trade grocery beef can't make.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad contact" id="reserve">
+    <div class="wrap">
+      <div>
+        <h2>Reserve your beef</h2>
+        <p>Call ahead to reserve a quarter, half or whole, or to check what's in the farmstand this week. We'll walk you through shares and cut sheets.</p>
+        <a class="cbtn" href="tel:16076874053"><b>(607) 687-4053</b><span>Call the farm — best way to order</span></a>
+        <a class="cbtn" href="#"><b>Find us on Facebook: Twin Brook Farm</b><span>See seasonal updates &amp; what's available</span></a>
+      </div>
+      <form onsubmit="return false">
+        <label>Your name</label>
+        <input type="text" placeholder="Name">
+        <label>Phone</label>
+        <input type="text" placeholder="Best number to reach you">
+        <label>What are you after?</label>
+        <select><option>Quarter of beef</option><option>Half of beef</option><option>Whole beef</option><option>Individual cuts</option><option>Pork / bacon</option><option>Eggs, honey or syrup</option></select>
+        <label>Anything else?</label>
+        <textarea rows="3" placeholder="Freezer size, timing, questions about cuts…"></textarea>
+        <button type="submit">Request my share</button>
+        <p class="hint">This preview form isn't wired up yet — calling the farm is the live way to order.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    Twin Brook Farm · 304 Lainhart Rd, Owego, NY 13827 · (607) 687-4053 · grass-fed beef · pork · eggs · honey · maple<br>
+    <span style="font-size:.8rem;opacity:.7">Preview concept prepared by Onyx Rise Media. Prices, share weights, cut options, current stock and hours are placeholders pending confirmation with the farm.</span>
+  </footer>
+</body>
+</html>

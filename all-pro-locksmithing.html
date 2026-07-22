@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Pro Locksmithing — Hank Fuller, C.P.L. | Elmira, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Source+Serif+4:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#152238;--navy2:#1e3050;--brass:#b98d34;--brass-l:#d9b366;--paper:#f7f4ee;--ink:#22252b;--mut:#6b7280;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Source Serif 4',Georgia,serif;color:var(--ink);background:var(--paper);line-height:1.65;}
+  h1,h2,h3,.btn,nav,.kicker{font-family:'Archivo',sans-serif;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px;}
+  /* key-bitting divider */
+  .keyline{height:14px;background:var(--brass);clip-path:polygon(0 100%,0 55%,6% 55%,6% 20%,11% 20%,11% 55%,18% 55%,18% 0,24% 0,24% 55%,31% 55%,31% 30%,37% 30%,37% 55%,45% 55%,45% 10%,52% 10%,52% 55%,60% 55%,60% 35%,66% 35%,66% 55%,73% 55%,73% 15%,79% 15%,79% 55%,86% 55%,86% 40%,92% 40%,92% 55%,100% 55%,100% 100%);}
+  header{background:var(--navy);color:#fff;padding:14px 0;}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+  .logo{font-family:'Archivo';font-weight:900;font-size:1.25rem;letter-spacing:.02em;}
+  .logo span{color:var(--brass-l);}
+  .call-strip{font-family:'Archivo';font-weight:700;}
+  .call-strip a{color:var(--brass-l);text-decoration:none;font-size:1.15rem;}
+  .call-strip small{display:block;color:#9fb0cc;font-weight:500;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;text-align:right;}
+  .hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;padding:72px 0 64px;}
+  .kicker{color:var(--brass-l);text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;font-weight:700;margin-bottom:16px;}
+  .hero h1{font-size:clamp(1.9rem,4.6vw,3.1rem);font-weight:900;line-height:1.12;max-width:16ch;}
+  .hero p.lede{margin:20px 0 30px;font-size:1.12rem;color:#cfd8e6;max-width:52ch;}
+  .btn{display:inline-block;padding:14px 26px;border-radius:6px;text-decoration:none;font-weight:700;font-size:1rem;}
+  .btn-brass{background:var(--brass);color:#fff;}
+  .btn-ghost{border:2px solid #46608c;color:#fff;margin-left:10px;}
+  .hero .note{margin-top:14px;font-size:.85rem;color:#8fa2c0;font-style:italic;}
+  section{padding:64px 0;}
+  h2{font-size:1.7rem;font-weight:900;color:var(--navy);margin-bottom:10px;}
+  .sub{color:var(--mut);max-width:60ch;margin-bottom:36px;}
+  .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;}
+  .pillar{background:#fff;border:1px solid #e5e0d5;border-top:4px solid var(--brass);border-radius:8px;padding:26px;}
+  .pillar h3{color:var(--navy);font-size:1.08rem;margin-bottom:10px;}
+  .pillar ul{list-style:none;margin-top:8px;}
+  .pillar li{padding:5px 0 5px 20px;position:relative;font-size:.95rem;}
+  .pillar li::before{content:"";position:absolute;left:0;top:13px;width:10px;height:4px;background:var(--brass);}
+  .one{background:var(--navy);color:#fff;}
+  .one h2{color:#fff;}
+  .one .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:44px;align-items:center;}
+  .one p{color:#cfd8e6;margin-bottom:14px;}
+  .credbox{background:var(--navy2);border:1px solid #2c4368;border-radius:8px;padding:26px;}
+  .credbox div{padding:13px 0;border-bottom:1px solid #2c4368;}
+  .credbox div:last-child{border-bottom:none;}
+  .credbox strong{font-family:'Archivo';color:var(--brass-l);display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;}
+  .areas{background:#efe9dd;}
+  .towns{display:flex;flex-wrap:wrap;gap:10px;}
+  .towns span{background:#fff;border:1px solid #ddd3bf;border-radius:999px;padding:7px 16px;font-family:'Archivo';font-weight:500;font-size:.85rem;color:var(--navy);}
+  .appt{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;}
+  .appt blockquote{border-left:4px solid var(--brass);padding-left:20px;font-style:italic;color:#4a4f58;}
+  .contact{background:var(--navy);color:#fff;text-align:center;}
+  .contact h2{color:#fff;}
+  .contact .big{font-family:'Archivo';font-weight:900;font-size:2rem;margin:16px 0 4px;}
+  .contact .big a{color:var(--brass-l);text-decoration:none;}
+  .contact p{color:#cfd8e6;}
+  footer{background:#0e1728;color:#7d8ba3;font-size:.82rem;padding:22px 0;text-align:center;}
+  @media(max-width:760px){.one .grid,.appt{grid-template-columns:1fr;}.btn-ghost{margin-left:0;margin-top:10px;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo">ALL PRO <span>LOCKSMITHING</span></div>
+    <div class="call-strip"><small>Call or text Hank directly</small><a href="tel:6077425095">(607) 742-5095</a></div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="kicker">Second-generation locksmith · Elmira, New York</div>
+    <h1>The locksmith who answers is the locksmith who shows up.</h1>
+    <p class="lede">No dispatch center, no subcontractor, no surprise van. Hank Fuller, C.P.L., has been rekeying, repairing, and opening the Twin Tiers' locks for thirty years — cars, homes, and storefronts from Elmira to Corning to Sayre.</p>
+    <a class="btn btn-brass" href="tel:6077425095">Call or Text (607) 742-5095</a>
+    <a class="btn btn-ghost" href="#book">Request an Appointment</a>
+    <div class="note">By appointment — a one-man shop means the certified pro does every job himself.</div>
+  </div>
+</div>
+<div class="keyline"></div>
+
+<section>
+  <div class="wrap">
+    <h2>Three kinds of locks. One set of hands.</h2>
+    <p class="sub">Every job below is done personally by a Certified Professional Locksmith — not farmed out to whoever's nearest.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <h3>Automotive Keys &amp; Fobs</h3>
+        <p>Lost your only key? Before you pay dealership prices and wait a week, get it cut and programmed locally.</p>
+        <ul><li>Replacement car keys, cut &amp; programmed</li><li>Key fobs and transponders</li><li>Broken-key extraction</li></ul>
+      </div>
+      <div class="pillar">
+        <h3>Residential Rekey &amp; Repair</h3>
+        <p>Just moved in? Rekeying costs a fraction of new locks — and you'll know exactly how many keys exist.</p>
+        <ul><li>Rekeying after a move or a lost key</li><li>Deadbolt installation &amp; repair</li><li>Sticky, worn, or misaligned locks fixed</li></ul>
+      </div>
+      <div class="pillar">
+        <h3>Commercial Hardware</h3>
+        <p>Storefronts, offices, and rentals — hardware that meets code, keyed the way your business actually runs.</p>
+        <ul><li>Commercial-grade lock hardware installed</li><li>Master-key systems for landlords</li><li>Tenant turnover rekeying</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="one">
+  <div class="wrap grid">
+    <div>
+      <h2>Why a one-man shop is the safest call you can make</h2>
+      <p>Search "locksmith near me" and the top results are national lead-generation sites: a $19 quote on the phone, a stranger in an unmarked van, and a very different number on the invoice.</p>
+      <p>All Pro Locksmithing is the opposite of that. One certified, second-generation locksmith with a real shop address on Carpenter Road, a direct line you can text, and a reputation in this valley that took two generations to build. The price discussed is the price charged.</p>
+    </div>
+    <div class="credbox">
+      <div><strong>Certification</strong>C.P.L. — Certified Professional Locksmith</div>
+      <div><strong>Experience</strong>30 years in the trade, second generation</div>
+      <div><strong>Direct line</strong>Call or text (607) 742-5095 — you reach Hank, not a call center</div>
+      <div><strong>Real address</strong>175 Carpenter Rd, Elmira, NY 14903</div>
+    </div>
+  </div>
+</section>
+<div class="keyline"></div>
+
+<section class="areas">
+  <div class="wrap">
+    <h2>Serving the Twin Tiers</h2>
+    <p class="sub">Based in Elmira, on the road across Chemung and Steuben counties and over the Pennsylvania line.</p>
+    <div class="towns">
+      <span>Elmira</span><span>Horseheads</span><span>Big Flats</span><span>Corning</span><span>Waverly</span><span>Addison</span><span>Bath</span><span>Athens, PA</span><span>Sayre, PA</span><span>+ surrounding areas</span>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap appt">
+    <div>
+      <h2>How appointments work</h2>
+      <p>All Pro is a one-person shop — that's a feature, not a limitation. Every service call and every shop job is scheduled so the certified locksmith can give it full attention. Call or text with what you need, and you'll get a real answer on timing and an honest price before any work starts.</p>
+      <p><strong>Shop hours:</strong> Monday–Friday, 9am–5pm, by appointment.</p>
+    </div>
+    <blockquote>"Hank did a wonderful job installing our new lock. He was extremely helpful in choosing the appropriate lock."<br><small>— local customer review</small></blockquote>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <h2>Locked out, moving in, or rekeying a rental?</h2>
+    <div class="big"><a href="tel:6077425095">(607) 742-5095</a></div>
+    <p>Call or text · hank@allprolocksmithing.com · 175 Carpenter Rd, Elmira, NY 14903</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">All Pro Locksmithing · Hank Fuller, C.P.L. · Elmira, New York — serving the Twin Tiers</div>
+</footer>
+
+</body>
+</html>

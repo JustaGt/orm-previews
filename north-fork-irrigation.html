@@ -1,0 +1,221 @@
+<!--
+NICHE IDENTITY BRIEF — North Fork Irrigation (#156)
+Business type: North Fork sprinkler/irrigation contractor — new-system install, repair, spring start-up & fall blow-out, plus drip lines for gardens/vineyards and landscape water supply (YP categories: Irrigation Consultants, Irrigation Systems & Equipment, Landscape Contractors, Water Supply Systems).
+Target customers: Southold-area homeowners & second-home owners, property managers, and North Fork farms/vineyards/big vegetable gardens needing drip.
+Local market: North Fork Suffolk — Southold, Peconic, Cutchogue, Mattituck, Laurel, Greenport, Orient, East Marion, Shelter Island.
+Emotional tone: Local, dependable, seasonal-rhythm — "book the blow-out before the first freeze." Calm, not flashy.
+Visual style: Peconic-water blue + North Fork field green + sky; clean, seasonal, lots of breathing room.
+Pain points: Nobody can find them online (only unclaimed directory cards); no way to book seasonal service or a repair; unclear service area & scope; missing the start-up/winterize window costs frozen, cracked lines.
+Desires: Book spring start-up / fall winterization on a date, get a repair fast, confirm my town is covered, request a new-system or drip quote.
+Trust signals: North Fork-based crew; knows local soil/water; seasonal-timing expertise. (No reviews/years/license verified — kept modest, none fabricated.)
+Conversion goal: Seasonal service booking (start-up / blow-out) + repair request + new-system/drip quote form.
+Sections: hero (book seasonal service), services, North Fork seasonal calendar, service-area towns, why local, quote/booking form, contact.
+Clichés to avoid: transform, innovative, we help you grow, experience excellence, AI-powered, trusted partner, modern digital presence, digital solutions, cutting-edge, revolutionary; generic "beautiful lawn" filler.
+Unique to niche: a booking screen tuned to the North Fork freeze calendar (blow-out reminders) + drip irrigation for the region's vineyards and vegetable gardens — not a generic sprinkler page.
+CURRENT WEAKNESS (verified 2026-07-01): no owned website. YP listing is UNCLAIMED ("Is this your business? Claim This Business"), no hours, no reviews, no photos; presence is scattered directory cards (Yelp/YP/Nextdoor/Justdial/Manta/Cortera/Yahoo). Phone (631) 734-2204, 100 Eds Rd, Southold NY 11971.
+NOTE: No verified public email — outreach body saved to .email.txt, NO Gmail draft.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>North Fork Irrigation — Sprinkler Start-Ups, Repairs &amp; Winterizing from Southold to Orient</title>
+<style>
+  :root{
+    --water:#0f6d8c; --water-deep:#0a4a60; --spray:#4bb3cf; --field:#4c7a3f;
+    --sky:#eaf6fa; --paper:#ffffff; --ink:#132228; --muted:#4a5b62; --line:#d5e6ec;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--sky);line-height:1.62}
+  h1,h2,h3{line-height:1.16;letter-spacing:-.01em}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .btn{display:inline-block;background:var(--water);color:#fff;font-weight:700;padding:14px 24px;border-radius:30px;text-decoration:none}
+  .btn:hover{background:var(--water-deep)}
+  .btn-o{display:inline-block;color:var(--water-deep);font-weight:700;padding:14px 24px;border:2px solid var(--water);border-radius:30px;text-decoration:none}
+
+  .top{background:var(--water-deep);color:#dff2f7;font-size:.88rem}
+  .top .wrap{display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:space-between;align-items:center;padding:8px 22px}
+  .top b{color:#8fe0f2}
+
+  header.hero{background:linear-gradient(160deg,#0a4a60 0%,#0f6d8c 60%,#2f93ad 100%);color:#fff;position:relative;overflow:hidden}
+  .wave{position:absolute;bottom:-2px;left:0;width:100%;height:60px;display:block}
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+  .logo{font-weight:800;font-size:1.18rem}
+  .logo small{display:block;font-weight:400;font-size:.62rem;letter-spacing:.22em;color:#bfe7f0;text-transform:uppercase}
+  .nav .navlink{display:none}
+  .hero-inner{padding:44px 0 76px;max-width:60ch}
+  .kick{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);padding:5px 14px;border-radius:30px;font-size:.76rem;letter-spacing:.05em}
+  .hero-inner h1{font-size:2.6rem;margin:16px 0 12px}
+  .hero-inner p{font-size:1.16rem;color:#e2f4f9;max-width:50ch}
+  .ctas{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+  .seasonbadge{margin-top:26px;display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);border-radius:10px;padding:12px 16px;font-size:.95rem}
+  .seasonbadge b{color:#ffe08a}
+
+  section{padding:54px 0}
+  .eyebrow{font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--water);font-weight:700;margin-bottom:10px}
+  h2{font-size:1.95rem;color:var(--water-deep);margin-bottom:8px}
+  .lead{font-size:1.06rem;color:var(--muted);max-width:64ch}
+
+  .svc{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+  .svc .card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:22px}
+  .svc .card h3{font-size:1.14rem;color:var(--water-deep);margin-bottom:6px}
+  .svc .card p{font-size:.95rem;color:var(--muted)}
+  .ic{width:42px;height:42px;border-radius:10px;background:var(--sky);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:12px}
+
+  .season{background:var(--water-deep);color:#eaf6fa}
+  .season h2{color:#fff}
+  .season .lead{color:#bfe0e9}
+  .cal{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
+  .mon{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:18px}
+  .mon .s{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#8fe0f2;font-weight:700}
+  .mon h3{font-size:1.05rem;color:#fff;margin:4px 0 6px}
+  .mon p{font-size:.88rem;color:#cfe7ee}
+
+  .area{background:var(--field);color:#fff}
+  .area h2{color:#fff}
+  .towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .towns span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:8px 15px;border-radius:30px;font-size:.95rem}
+  .area .fine{margin-top:16px;font-size:.9rem;color:#e4efe0}
+
+  .why{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center}
+  .why ul{list-style:none;margin-top:14px}
+  .why li{padding:10px 0 10px 30px;position:relative;border-bottom:1px solid var(--line);color:#2b3a40}
+  .why li::before{content:"✓";position:absolute;left:0;color:var(--field);font-weight:800}
+
+  .book{background:var(--paper)}
+  form{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px;background:var(--sky);border:1px solid var(--line);padding:24px;border-radius:14px}
+  form .full{grid-column:1/-1}
+  label{display:block;font-size:.8rem;letter-spacing:.03em;text-transform:uppercase;color:var(--water-deep);margin-bottom:5px}
+  input,select,textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);font-size:1rem;font-family:inherit}
+  .note{font-size:.82rem;color:var(--muted);margin-top:8px}
+
+  footer{background:#08323f;color:#a9cdd6;padding:32px 0;font-size:.92rem}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+  footer b{color:#dff2f7}
+
+  @media(max-width:820px){
+    .svc,.cal{grid-template-columns:1fr 1fr}
+    .why{grid-template-columns:1fr}
+    form{grid-template-columns:1fr}
+    .hero-inner h1{font-size:2.05rem}
+  }
+  @media(max-width:520px){ .svc,.cal{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <span>Serving the North Fork · Southold to Orient &amp; Shelter Island</span>
+  <span>Call / text the crew: <b>(631) 734-2204</b></span>
+</div></div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="nav">
+      <div class="logo">North Fork Irrigation<small>Southold, New York</small></div>
+      <a class="btn" href="#book" style="background:#fff;color:var(--water-deep)">Book service</a>
+    </div>
+    <div class="hero-inner">
+      <span class="kick">Sprinkler install · repair · seasonal start-up &amp; blow-out</span>
+      <h1>Your sprinklers, dialed in for a North Fork season.</h1>
+      <p>From spring start-up to the fall blow-out that keeps your lines from freezing solid, we keep Southold-area systems running right — lawns, garden beds, and drip for vineyards and vegetable plots.</p>
+      <div class="ctas">
+        <a class="btn" href="#book" style="background:#fff;color:var(--water-deep)">Book start-up or blow-out</a>
+        <a class="btn-o" href="tel:6317342204" style="color:#fff;border-color:rgba(255,255,255,.7)">Call (631) 734-2204</a>
+      </div>
+      <div class="seasonbadge">💧 <span>Zone check &amp; repair visits booked by phone or the form below — <b>most North Fork towns same week</b></span></div>
+    </div>
+  </div>
+</header>
+
+<section><div class="wrap">
+  <div class="eyebrow">What we do</div>
+  <h2>Sprinkler work, start to finish</h2>
+  <p class="lead">One crew for the whole system — putting it in, fixing what's broken, and getting it on and off for the season so nothing cracks over winter.</p>
+  <div class="svc">
+    <div class="card"><div class="ic">🌱</div><h3>New system install</h3><p>Design and install of a zoned sprinkler system sized to your property, sun exposure, and water pressure — laid out so every bed and lawn actually gets covered.</p></div>
+    <div class="card"><div class="ic">🔧</div><h3>Repairs &amp; troubleshooting</h3><p>Broken heads, cut lines, a zone that won't fire, a controller that lost its schedule, or a leak spiking your water bill — found and fixed on one visit where we can.</p></div>
+    <div class="card"><div class="ic">☀️</div><h3>Spring start-up</h3><p>We charge the system, walk every zone, reset heads and timers, and catch winter damage before it soaks your lawn or your basement.</p></div>
+    <div class="card"><div class="ic">❄️</div><h3>Fall blow-out / winterize</h3><p>Compressed-air blow-out that clears every line before the first hard freeze — the one visit that saves a spring full of cracked pipes and failed valves.</p></div>
+    <div class="card"><div class="ic">🍇</div><h3>Drip for gardens &amp; vineyards</h3><p>Low-flow drip lines for vegetable rows, raised beds, and North Fork vines — water at the root, less waste, fewer weeds, and steadier growth through a dry August.</p></div>
+    <div class="card"><div class="ic">📋</div><h3>Seasonal service plan</h3><p>Get on the list once and we'll reach out each spring and fall so the start-up and blow-out are booked before the calendar sneaks up on you.</p></div>
+  </div>
+</div></section>
+
+<section class="season"><div class="wrap">
+  <div class="eyebrow" style="color:#8fe0f2">The North Fork year</div>
+  <h2>Time it right and nothing freezes</h2>
+  <p class="lead">The East End runs on a tight seasonal clock. Here's when to have us out — reserve the spot before the rush.</p>
+  <div class="cal">
+    <div class="mon"><div class="s">Apr – May</div><h3>Start-up</h3><p>Turn the system on, pressure-test, fix winter damage, set the schedule for the season.</p></div>
+    <div class="mon"><div class="s">Jun – Aug</div><h3>Peak &amp; repairs</h3><p>Dry stretch = heaviest run time. This is when leaks and dead zones show up — call the moment one does.</p></div>
+    <div class="mon"><div class="s">Sep – Oct</div><h3>Adjust</h3><p>Dial back run times as the season cools; tune drip on the fall garden and late vines.</p></div>
+    <div class="mon"><div class="s">Late Oct – Nov</div><h3>Blow-out</h3><p>Book the winterize before the first hard freeze. Miss it and lines crack — this is the one not to skip.</p></div>
+  </div>
+</div></section>
+
+<section class="area"><div class="wrap">
+  <div class="eyebrow" style="color:#d7ecca">Where we work</div>
+  <h2>Across the North Fork</h2>
+  <p class="lead" style="color:#eaf5e4">Based in Southold, out to the ends of both the North Fork and Shelter Island.</p>
+  <div class="towns">
+    <span>Southold</span><span>Peconic</span><span>Cutchogue</span><span>Mattituck</span><span>Laurel</span><span>Greenport</span><span>Orient</span><span>East Marion</span><span>Shelter Island</span>
+  </div>
+  <div class="fine">Not sure you're in range? Call (631) 734-2204 or send the form — we'll tell you straight.</div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="why">
+    <div>
+      <div class="eyebrow">Why homeowners here call us</div>
+      <h2>Local crew, local water</h2>
+      <p class="lead">We're not a franchise van driving out from up-island for the day. We're on the North Fork, we know the sandy East-End soil and the well-and-town-water mix out here, and we show up when the freeze or the dry spell says it's time.</p>
+      <ul>
+        <li>North Fork–based — short drive, quick callbacks</li>
+        <li>Seasonal reminders so you never miss a blow-out</li>
+        <li>Drip know-how for gardens, beds &amp; vineyard rows</li>
+        <li>One crew handles install, repair &amp; seasonal service</li>
+      </ul>
+    </div>
+    <div>
+      <div class="card" style="background:var(--water-deep);color:#fff;border-radius:14px;padding:26px">
+        <div style="font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:#8fe0f2">Fastest way to reach us</div>
+        <div style="font-size:2rem;font-weight:800;margin:8px 0">(631) 734-2204</div>
+        <p style="color:#cfe7ee;font-size:.96rem">Call or text with your town and what the system's doing. Booking a seasonal start-up or blow-out? Use the form below and we'll lock a date.</p>
+        <div style="margin-top:14px;font-size:.9rem;color:#bfe0e9">100 Eds Rd · Southold, NY 11971</div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="book" id="book"><div class="wrap">
+  <div class="eyebrow">Book a visit</div>
+  <h2>Start-up, blow-out, repair, or a new-system quote</h2>
+  <p class="lead">Tell us your town and what you need. We'll confirm a date and a rough window. For anything urgent — a running leak or a dead zone in July — call instead.</p>
+  <form onsubmit="return false">
+    <div><label>Name</label><input type="text" placeholder="Your name"></div>
+    <div><label>Phone</label><input type="tel" placeholder="(631) 000-0000"></div>
+    <div><label>Town</label>
+      <select><option>Southold</option><option>Peconic</option><option>Cutchogue</option><option>Mattituck</option><option>Laurel</option><option>Greenport</option><option>Orient</option><option>East Marion</option><option>Shelter Island</option><option>Other North Fork</option></select>
+    </div>
+    <div><label>What do you need?</label>
+      <select><option>Spring start-up</option><option>Fall blow-out / winterize</option><option>Repair (leak / dead zone / controller)</option><option>New system quote</option><option>Drip for garden / vineyard</option><option>Seasonal service plan</option></select>
+    </div>
+    <div class="full"><label>Details</label><textarea rows="3" placeholder="How many zones (if you know), what it's doing, and the best days for you."></textarea></div>
+    <div class="full"><button class="btn" type="submit">Request my date</button>
+      <div class="note">We'll follow up to confirm the visit and pricing. Nothing charged online.</div>
+    </div>
+  </form>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b>North Fork Irrigation</b><br>100 Eds Rd, Southold, NY 11971<br>(631) 734-2204</div>
+  <div>Sprinkler install · repair · spring start-up · fall blow-out · drip<br>Southold · Cutchogue · Mattituck · Greenport · Orient · Shelter Island<br>
+    <span style="font-size:.8rem;color:#6f97a2">Concept preview prepared for North Fork Irrigation — not the live site.</span>
+  </div>
+</div></footer>
+
+</body>
+</html>

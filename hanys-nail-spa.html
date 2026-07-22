@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hany's Nail Spa — Newburgh, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#1f9e92; --teal-d:#137a70; --coral:#ff7a59; --coral-d:#f4623f;
+    --cream:#fbfaf6; --mint:#e7f5f2; --peach:#ffeee7; --ink:#243734; --muted:#5e716d;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Sora',sans-serif;color:var(--ink);background:var(--cream);line-height:1.7}
+  h1,h2,h3,.disp{font-family:'Poppins',sans-serif;font-weight:700;line-height:1.12}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+  a{color:inherit;text-decoration:none}
+  .btn{display:inline-block;background:var(--coral);color:#fff;font-weight:600;padding:14px 30px;border-radius:999px;font-family:'Poppins';transition:.25s;box-shadow:0 8px 22px rgba(244,98,63,.32)}
+  .btn:hover{background:var(--coral-d);transform:translateY(-2px)}
+  .btn-teal{background:var(--teal);box-shadow:0 8px 22px rgba(19,122,112,.3)}
+  .btn-teal:hover{background:var(--teal-d)}
+  .btn-out{background:#fff;color:var(--teal-d);box-shadow:none;border:2px solid var(--teal)}
+  .btn-out:hover{background:var(--mint);transform:translateY(-2px)}
+  .pill{display:inline-block;background:var(--mint);color:var(--teal-d);font-weight:600;font-size:.78rem;letter-spacing:.04em;padding:7px 16px;border-radius:999px;font-family:'Poppins'}
+
+  nav{position:sticky;top:0;z-index:40;background:rgba(251,250,246,.92);backdrop-filter:blur(8px);border-bottom:1px solid #eee}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{font-family:'Poppins';font-weight:800;font-size:1.4rem;color:var(--teal-d)}
+  .logo span{color:var(--coral)}
+  .nl{display:flex;gap:30px;align-items:center}
+  .nl a{font-size:.92rem;font-weight:500;color:var(--muted)}
+  .nl a:hover{color:var(--teal-d)}
+  @media(max-width:860px){.nl a:not(.btn){display:none}}
+
+  /* hero split */
+  .hero{padding:70px 0 80px}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+  .hero h1{font-size:clamp(2.5rem,5.4vw,4rem)}
+  .hero h1 span{color:var(--teal)}
+  .hero h1 em{color:var(--coral);font-style:normal}
+  .hero p{font-size:1.14rem;color:var(--muted);margin:20px 0 30px;max-width:46ch}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-stats{display:flex;gap:28px;margin-top:34px}
+  .hero-stats b{font-family:'Poppins';font-size:1.5rem;color:var(--teal-d);display:block}
+  .hero-stats span{font-size:.84rem;color:var(--muted)}
+  .hero-art{position:relative}
+  .hero-img{border-radius:30px;height:480px;background-size:cover;background-position:center;background-color:var(--mint);box-shadow:0 30px 60px rgba(19,122,112,.18);background-image:url('https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1000&q=80')}
+  .blob{position:absolute;width:150px;height:150px;border-radius:40% 60% 55% 45%;background:var(--peach);z-index:-1}
+  .blob.a{top:-26px;left:-26px}
+  .float{position:absolute;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:0 14px 34px rgba(36,55,52,.14);font-family:'Poppins';font-weight:600;font-size:.9rem}
+  .float.b{bottom:24px;left:-24px;color:var(--coral-d)}
+  .float.b small{display:block;color:var(--muted);font-weight:400;font-size:.78rem}
+  @media(max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:36px}.hero-img{height:340px}.float.b{left:8px}}
+
+  section{padding:84px 0}
+  .center{text-align:center;max-width:60ch;margin:0 auto}
+  h2{font-size:clamp(2rem,4.4vw,3rem)}
+  h2 span{color:var(--teal)}
+  .sub{color:var(--muted);font-size:1.05rem;margin-top:12px}
+
+  /* services cards */
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .card{border-radius:24px;padding:30px;background:#fff;border:1px solid #eee;transition:.25s}
+  .card:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(36,55,52,.12)}
+  .card .ic{width:54px;height:54px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:16px}
+  .card:nth-child(odd) .ic{background:var(--mint)}
+  .card:nth-child(even) .ic{background:var(--peach)}
+  .card h3{font-size:1.25rem;margin-bottom:8px}
+  .card p{color:var(--muted);font-size:.95rem}
+  .card .price{margin-top:14px;font-family:'Poppins';font-weight:600;color:var(--teal-d)}
+  @media(max-width:860px){.svc-grid{grid-template-columns:1fr}}
+
+  /* why band */
+  .why{background:var(--mint)}
+  .why .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+  .why .n{font-family:'Poppins';font-weight:800;font-size:2.4rem;color:var(--teal)}
+  .why p{font-size:.92rem;color:var(--muted)}
+
+  /* gallery */
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+  .gi{border-radius:20px;height:260px;background-size:cover;background-position:center;background-color:var(--peach)}
+  .gi1{background-image:url('https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=800&q=80')}
+  .gi2{background-image:url('https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80')}
+  .gi3{background-image:url('https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=800&q=80')}
+  .gi4{background-image:url('https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=80')}
+  .gi5{background-image:url('https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=800&q=80')}
+  .gi6{background-image:url('https://images.unsplash.com/photo-1522338242992-e1a54906a8da?auto=format&fit=crop&w=800&q=80')}
+  @media(max-width:860px){.gal{grid-template-columns:1fr 1fr}.gi{height:170px}}
+
+  /* visit */
+  .visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .vcard{background:var(--teal);color:#fff;border-radius:28px;padding:40px}
+  .vcard h3{font-size:1.6rem;margin-bottom:14px}
+  .vrow{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+  .vrow .k{font-weight:600;font-family:'Poppins';min-width:80px}
+  .hrs{list-style:none;margin-top:8px}
+  .hrs li{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed #e0ded7}
+  .hrs b{font-family:'Poppins'}
+  form{display:grid;gap:13px;margin-top:18px}
+  input,textarea{padding:13px 16px;border-radius:12px;border:1px solid #d9e6e3;font-family:'Sora';font-size:.93rem}
+  input:focus,textarea:focus{outline:none;border-color:var(--teal)}
+  @media(max-width:860px){.visit .wrap{grid-template-columns:1fr;gap:30px}.why .wrap{grid-template-columns:1fr 1fr;gap:30px}}
+
+  footer{background:var(--ink);color:#a9c2bd;padding:38px 0;font-size:.84rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .pv{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;opacity:.6}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">Hany's<span>.</span></div>
+    <div class="nl">
+      <a href="#svc">Services</a>
+      <a href="#why">Why Hany's</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit</a>
+      <a href="#visit" class="btn btn-teal">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="pill">Route 300 · Newburgh, NY</span>
+      <h1 style="margin-top:18px">Fresh nails, <span>zero fuss,</span> <em>every time</em> you sit down.</h1>
+      <p>Your friendly neighborhood nail spa on Route 300. Quick when you're busy, relaxing when you've got time, clean either way.</p>
+      <div class="hero-actions">
+        <a href="#visit" class="btn">Book an Appointment</a>
+        <a href="#svc" class="btn btn-out">See Services</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>48+</b><span>Happy regulars review us</span></div>
+        <div><b>7 days</b><span>Open all week</span></div>
+        <div><b>Walk-ins</b><span>Welcome anytime</span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="blob a"></div>
+      <div class="hero-img"></div>
+      <div class="float b">In & out on your lunch break<small>Express gel in ~30 min</small></div>
+    </div>
+  </div>
+</header>
+
+<section id="svc">
+  <div class="wrap">
+    <div class="center">
+      <span class="pill">What we do</span>
+      <h2>Everything your nails <span>need</span></h2>
+      <p class="sub">Simple menu, fair prices, no upselling. Pick what you want and we'll take care of it.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="card"><div class="ic">💅</div><h3>Gel Manicure</h3><p>Glossy, chip-resistant color that lasts two weeks of real life — dishes, work, and all.</p><div class="price">from $35</div></div>
+      <div class="card"><div class="ic">✨</div><h3>Acrylic Full Set</h3><p>Any length, any shape. French, ombré, or bring a photo and we'll recreate it.</p><div class="price">from $40</div></div>
+      <div class="card"><div class="ic">🦶</div><h3>Spa Pedicure</h3><p>Warm soak, scrub, and a real leg-and-foot massage in our comfy spa chairs.</p><div class="price">from $40</div></div>
+      <div class="card"><div class="ic">🌿</div><h3>Dip Powder</h3><p>Strong, lightweight, and no lamp needed. Great if your nails need a break from gel.</p><div class="price">from $40</div></div>
+      <div class="card"><div class="ic">🎨</div><h3>Nail Art</h3><p>Chrome, glitter, hand-painted designs, seasonal sets — as simple or extra as you like.</p><div class="price">from $5</div></div>
+      <div class="card"><div class="ic">💧</div><h3>Waxing</h3><p>Quick, gentle brow, lip, and facial waxing while you're already in the chair.</p><div class="price">from $10</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap">
+    <div><div class="n">7</div><p>Days a week — including evenings and weekends</p></div>
+    <div><div class="n">~30m</div><p>Express gel when you're short on time</p></div>
+    <div><div class="n">100%</div><p>Single-use files and fresh tools every visit</p></div>
+    <div><div class="n">$10+</div><p>Honest pricing, posted before you sit down</p></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="center">
+      <span class="pill">Our work</span>
+      <h2>A peek at <span>recent sets</span></h2>
+    </div>
+    <div class="gal">
+      <div class="gi gi1"></div><div class="gi gi2"></div><div class="gi gi3"></div>
+      <div class="gi gi4"></div><div class="gi gi5"></div><div class="gi gi6"></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div>
+      <span class="pill">Plan your visit</span>
+      <h2 style="margin:10px 0">Come see us on <span>Route 300</span></h2>
+      <p class="sub" style="margin-bottom:18px">Book ahead to skip the wait, or walk in whenever you're passing by.</p>
+      <ul class="hrs">
+        <li><span>Monday – Friday</span><b>9:30a – 7:30p</b></li>
+        <li><span>Saturday</span><b>9:30a – 7:00p</b></li>
+        <li><span>Sunday</span><b>10:00a – 5:00p</b></li>
+      </ul>
+      <form onsubmit="event.preventDefault();this.innerHTML='<p style=\'color:var(--teal-d);font-family:Poppins;font-weight:600\'>Got it! We\'ll text you to confirm your spot. 💅</p>'">
+        <input type="text" placeholder="Your name" required>
+        <input type="tel" placeholder="Phone number" required>
+        <textarea rows="2" placeholder="What and when? (e.g. gel mani Saturday afternoon)"></textarea>
+        <button class="btn btn-teal" type="submit">Request Appointment</button>
+      </form>
+    </div>
+    <div class="vcard">
+      <h3>Hany's Nail Spa</h3>
+      <div class="vrow"><div class="k">Address</div><div>1433 Route 300, Newburgh, NY 12550</div></div>
+      <div class="vrow"><div class="k">Phone</div><div>(845) 566-0007</div></div>
+      <div class="vrow"><div class="k">Parking</div><div>Free lot out front</div></div>
+      <div class="vrow" style="border:none"><div class="k">Walk-ins</div><div>Always welcome</div></div>
+      <a href="tel:8455660007" class="btn" style="margin-top:22px;background:#fff;color:var(--teal-d);box-shadow:none">Call (845) 566-0007</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Hany's Nail Spa · 1433 Route 300, Newburgh, NY</div>
+    <div class="pv">Website preview by Onyx Rise Media</div>
+  </div>
+</footer>
+
+</body>
+</html>

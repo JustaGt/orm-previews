@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Power Barn — Factory-Certified Small-Engine Repair | LaFayette, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Source+Serif+4:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--red:#8f2b1e;--dark:#26211d;--cream:#f6f1e7;--tan:#d9c9a8;--yellow:#e0a112;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Source Serif 4',Georgia,serif;color:var(--dark);background:var(--cream);line-height:1.6;}
+  h1,h2,h3,.btn,nav,.tag{font-family:'Archivo',sans-serif;}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px;}
+  header{background:var(--dark);color:var(--cream);padding:14px 0;position:sticky;top:0;z-index:50;}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;}
+  .logo{font-family:'Archivo';font-weight:900;font-size:1.25rem;letter-spacing:.5px;}
+  .logo span{color:var(--yellow);}
+  .call-strip{background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:10px 18px;border-radius:4px;font-family:'Archivo';}
+  .hero{background:linear-gradient(160deg,#26211d 0%,#3a2c22 60%,#57392a 100%);color:var(--cream);padding:72px 0 64px;}
+  .tag{display:inline-block;background:var(--yellow);color:var(--dark);font-weight:700;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:3px;margin-bottom:18px;}
+  .hero h1{font-size:clamp(1.9rem,4.6vw,3.1rem);font-weight:900;line-height:1.12;max-width:19ch;}
+  .hero p{max-width:56ch;margin:20px 0 30px;font-size:1.12rem;color:#e8ddc9;}
+  .btn{display:inline-block;background:var(--yellow);color:var(--dark);font-weight:700;padding:15px 28px;border-radius:4px;text-decoration:none;font-size:1.05rem;}
+  .btn.ghost{background:transparent;border:2px solid var(--tan);color:var(--cream);margin-left:10px;}
+  .certs{background:var(--dark);padding:22px 0;border-top:1px solid #4a3d31;}
+  .certs .wrap{display:flex;gap:10px 26px;flex-wrap:wrap;justify-content:center;align-items:center;color:var(--tan);font-family:'Archivo';font-weight:700;letter-spacing:.06em;font-size:.92rem;}
+  .certs em{font-style:normal;color:var(--yellow);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;width:100%;text-align:center;}
+  section{padding:64px 0;}
+  h2{font-size:clamp(1.5rem,3.2vw,2.2rem);font-weight:900;margin-bottom:14px;max-width:24ch;}
+  .sub{color:#5c5347;max-width:60ch;margin-bottom:36px;font-size:1.05rem;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;}
+  .card{background:#fff;border:1px solid #e4dac6;border-left:5px solid var(--red);border-radius:6px;padding:24px;}
+  .card h3{font-size:1.08rem;margin-bottom:8px;}
+  .card p{font-size:.97rem;color:#4c443a;}
+  .season{background:var(--red);color:#fff;}
+  .season .inner{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;}
+  .season h2{color:#fff;}
+  .season .slot{background:rgba(0,0,0,.18);border-radius:6px;padding:26px;}
+  .season .slot strong{font-family:'Archivo';font-size:1.1rem;display:block;margin-bottom:8px;color:var(--yellow);}
+  .steps{counter-reset:s;}
+  .steps .card{border-left-color:var(--yellow);position:relative;padding-left:70px;}
+  .steps .card::before{counter-increment:s;content:counter(s);position:absolute;left:20px;top:22px;font-family:'Archivo';font-weight:900;font-size:1.6rem;color:var(--red);}
+  .about{background:#efe6d3;}
+  .about .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:center;}
+  .barnbox{background:var(--dark);color:var(--tan);border-radius:8px;padding:30px;font-family:'Archivo';}
+  .barnbox li{list-style:none;padding:9px 0;border-bottom:1px solid #4a3d31;font-size:.95rem;}
+  .barnbox li:last-child{border:none;}
+  .towns{background:var(--dark);color:var(--cream);text-align:center;}
+  .towns h2{margin:0 auto 10px;}
+  .towns p{color:var(--tan);max-width:60ch;margin:0 auto 22px;}
+  .townlist{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;font-family:'Archivo';font-weight:700;}
+  .townlist span{border:1px solid #4a3d31;padding:7px 16px;border-radius:99px;font-size:.9rem;}
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  .contact h2{margin-bottom:20px;}
+  .biginfo{font-family:'Archivo';font-size:1.05rem;}
+  .biginfo a{color:var(--red);font-weight:900;font-size:1.7rem;text-decoration:none;display:block;margin:6px 0 18px;}
+  form{display:grid;gap:12px;}
+  input,select,textarea{padding:13px;border:1px solid #cbbfa6;border-radius:5px;font-family:inherit;font-size:1rem;background:#fff;width:100%;}
+  button{background:var(--red);color:#fff;border:none;padding:15px;border-radius:5px;font-family:'Archivo';font-weight:700;font-size:1.05rem;cursor:pointer;}
+  footer{background:var(--dark);color:#9b8d79;padding:26px 0;font-size:.88rem;text-align:center;}
+  .note{font-size:.8rem;color:#8a7c66;font-style:italic;}
+  @media(max-width:760px){.about .wrap,.contact .wrap{grid-template-columns:1fr;}.btn.ghost{margin-left:0;margin-top:10px;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo">THE POWER <span>BARN</span></div>
+    <a class="call-strip" href="tel:3156960109">(315) 696-0109</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">Apulia Road · LaFayette, NY · Since 2007</span>
+    <h1>Mower down in May? Snowblower dead in November? Bring it to the barn.</h1>
+    <p>The Power Barn is a factory-certified small-engine shop on Apulia Road — certified by Kohler, Honda, Kawasaki, Briggs&nbsp;&amp;&nbsp;Stratton and MTD. Warranty-caliber repair for the hill towns, without a dealership service line.</p>
+    <a class="btn" href="tel:3156960109">Call Before the Rush</a>
+    <a class="btn ghost" href="#dropoff">How Drop-Off Works</a>
+  </div>
+</section>
+
+<div class="certs">
+  <div class="wrap">
+    <em>Factory certifications</em>
+    <span>KOHLER</span><span>HONDA</span><span>KAWASAKI</span><span>BRIGGS &amp; STRATTON</span><span>MTD PRODUCTS</span>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>If it has a small engine and it earns its keep, it comes through this barn.</h2>
+    <p class="sub">Nineteen years of carburetors, coils, decks and augers — the equipment that keeps an acre-and-a-half LaFayette property livable in both of Central New York's real seasons.</p>
+    <div class="grid">
+      <div class="card"><h3>Mowers &amp; Zero-Turns</h3><p>Won't start, won't cut level, or quits under load — diagnosis and repair on walk-behinds, riders and zero-turns before the grass gets away from you.</p></div>
+      <div class="card"><h3>Snowblowers</h3><p>Auger, drive and starting problems fixed before the first lake-effect band arrives. The line forms in November — beat it in October.</p></div>
+      <div class="card"><h3>Generators &amp; More</h3><p>Generators, tillers, trimmers, chainsaws and other outdoor power equipment — serviced by a shop certified on the engines inside them.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="season">
+  <div class="wrap">
+    <h2>Two seasons decide everything up here.</h2>
+    <div class="inner">
+      <div class="slot"><strong>First mow — April/May</strong>Fuel gone stale over winter, decks dull, belts cracked. Spring tune-ups keep Saturday for mowing, not for pulling a cord forty times.</div>
+      <div class="slot"><strong>First snow — often before Thanksgiving</strong>Onondaga County's hill towns don't get a practice storm. A snowblower that hasn't run since March gets found out at 5 a.m. in a whiteout. Bring it in early.</div>
+    </div>
+  </div>
+</section>
+
+<section id="dropoff">
+  <div class="wrap">
+    <h2>Drop-off, the simple way</h2>
+    <div class="grid steps">
+      <div class="card"><h3>Call the barn</h3><p>Tell Peter what the machine is doing — or not doing. (315) 696-0109.</p></div>
+      <div class="card"><h3>Bring it by</h3><p>1424 Apulia Road, LaFayette — minutes off Route 11 and I-81. <span class="note">[Hours to be confirmed with owner]</span></p></div>
+      <div class="card"><h3>Get it back running</h3><p>Straight talk on what failed and what it costs — and whether the machine is worth fixing at all.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <div>
+      <h2>A real barn, a certified bench</h2>
+      <p class="sub" style="margin-bottom:16px;">The Power Barn has been Peter Winniczuk's shop since 2007. The certifications on the wall — Kohler, Honda, Kawasaki, Briggs &amp; Stratton, MTD — are the same ones dealership service departments hold. The difference is you're handing your machine to the person who actually fixes it.</p>
+      <p class="sub" style="margin-bottom:0;">Listed on the Town of LaFayette Business Network. Nineteen years serving the hill towns.</p>
+    </div>
+    <div class="barnbox">
+      <ul>
+        <li>📍 1424 Apulia Rd, LaFayette, NY 13084</li>
+        <li>📞 (315) 696-0109</li>
+        <li>🔧 Certified: Kohler · Honda · Kawasaki · B&amp;S · MTD</li>
+        <li>📅 In business since 2007</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="towns">
+  <div class="wrap">
+    <h2>Serving the southern hill towns</h2>
+    <p>If you're within a tank of gas of Apulia Road, you're in range.</p>
+    <div class="townlist">
+      <span>LaFayette</span><span>Tully</span><span>Fabius</span><span>Pompey</span><span>Onondaga Hill</span><span>Nedrow</span><span>Jamesville</span><span>Apulia Station</span>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <div>
+      <h2>Get on the bench before your season does</h2>
+      <div class="biginfo">
+        Call or text the shop:
+        <a href="tel:3156960109">(315) 696-0109</a>
+        1424 Apulia Road, LaFayette, NY 13084<br>
+        <span class="note">Map embed + confirmed hours here in build</span>
+      </div>
+    </div>
+    <form>
+      <input type="text" placeholder="Name">
+      <input type="tel" placeholder="Phone">
+      <select><option>What needs fixing?</option><option>Mower / zero-turn</option><option>Snowblower</option><option>Generator</option><option>Chainsaw / trimmer / tiller</option><option>Something else</option></select>
+      <textarea rows="3" placeholder="What's it doing (or not doing)?"></textarea>
+      <button type="button">Request a Bench Slot</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">The Power Barn · 1424 Apulia Rd, LaFayette, NY 13084 · (315) 696-0109</div>
+</footer>
+
+</body>
+</html>

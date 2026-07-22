@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lake Country Welding — Equipment &amp; Repair Welding | Penn Yan, NY</title>
+<style>
+  :root{
+    --steel:#1f2429; --steel2:#2c333a; --plate:#3a434c; --arc:#ff7a1a; --arc2:#e2630a;
+    --spark:#ffb33e; --mist:#eef1f4; --paper:#f7f9fb; --ink:#1b1f23; --line:#d4dbe1;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3{font-family:"Arial Black","Segoe UI",sans-serif;line-height:1.08;letter-spacing:-.01em;text-transform:uppercase}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .util{background:#11151a;color:#aab6c0;font-size:.9rem}
+  .util .wrap{display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:space-between;align-items:center;padding:8px 22px}
+  .util strong{color:#fff}
+  nav{background:var(--steel);position:sticky;top:0;z-index:20;border-bottom:3px solid var(--arc)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:13px 22px}
+  .brand{color:#fff;font-family:"Arial Black",sans-serif;font-size:1.14rem;letter-spacing:.02em}
+  .brand span{color:var(--arc)}
+  .links{display:flex;gap:18px}
+  .links a{color:#c4cdd6;text-decoration:none;font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+  .links a:hover{color:#fff}
+  .callbtn{background:var(--arc);color:#1b1206;padding:10px 17px;border-radius:2px;text-decoration:none;font-weight:800;font-size:.88rem;text-transform:uppercase}
+  .callbtn:hover{background:var(--arc2)}
+  .hero{position:relative;color:#fff;
+    background:
+      linear-gradient(rgba(15,18,22,.86),rgba(20,24,29,.74)),
+      linear-gradient(120deg,#2a3138 0%,#171b1f 55%,#3a434c 100%);
+    padding:90px 0 80px}
+  .hero h1{font-size:2.7rem;max-width:18ch}
+  .hero .sub{font-size:1.18rem;margin-top:18px;max-width:54ch;color:#dde4ea;text-transform:none;font-family:"Segoe UI",sans-serif;font-weight:400}
+  .hero .cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:14px 26px;border-radius:2px;text-decoration:none;font-weight:800;text-transform:uppercase;font-size:.92rem}
+  .btn-a{background:var(--arc);color:#1b1206}.btn-a:hover{background:var(--arc2)}
+  .btn-b{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6)}.btn-b:hover{background:rgba(255,255,255,.12)}
+  .bar{background:var(--arc);color:#1b1206;padding:15px 0;font-weight:800;letter-spacing:.02em}
+  .bar .wrap{display:flex;flex-wrap:wrap;gap:8px 34px;justify-content:center;text-align:center;text-transform:uppercase;font-size:.92rem}
+  section{padding:60px 0}
+  .eyebrow{color:var(--arc2);font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:.78rem}
+  h2{font-size:1.9rem;margin:8px 0 10px;color:var(--steel)}
+  .lead{max-width:62ch;color:#3c454d;font-size:1.05rem}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:4px;padding:22px;border-top:4px solid var(--steel)}
+  .card h3{font-size:1.04rem;color:var(--steel);margin-bottom:7px}
+  .card p{font-size:.93rem;color:#46505a;text-transform:none}
+  .how{background:var(--steel2);color:#dfe6ec}
+  .how h2{color:#fff}.how .lead{color:#c4cdd6}
+  .howgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+  .hcard{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);border-radius:6px;padding:24px}
+  .hcard h3{color:var(--spark);font-size:1.1rem;margin-bottom:8px}
+  .hcard p{color:#cfd8e0;font-size:.97rem;text-transform:none}
+  .who{background:var(--mist)}
+  .whogrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:24px}
+  .w{background:#fff;border:1px solid var(--line);border-radius:4px;padding:18px;text-align:center}
+  .w h3{font-size:.98rem;color:var(--steel);margin-bottom:5px}
+  .w p{font-size:.86rem;color:#54606a;text-transform:none}
+  .why .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  ul.checks{list-style:none;margin-top:12px}
+  ul.checks li{padding:9px 0 9px 30px;position:relative;font-size:1.02rem;color:#33414b;text-transform:none}
+  ul.checks li:before{content:"";position:absolute;left:4px;top:13px;width:12px;height:12px;background:var(--arc);transform:rotate(45deg)}
+  .panel{background:var(--steel);color:#dfe6ec;border-radius:6px;padding:26px}
+  .panel h3{color:#fff;font-size:1.18rem;margin-bottom:8px}
+  .panel p{color:#c4cdd6;text-transform:none}
+  .contact{background:#11151a}
+  .contact h2{color:#fff}.contact .eyebrow{color:var(--spark)}
+  .cbox{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:26px}
+  .cinfo{color:#c4cdd6}.cinfo p{margin:10px 0;font-size:1.04rem;text-transform:none}
+  .cinfo b{color:#fff}.cinfo a{color:var(--arc);font-weight:700;text-decoration:none}
+  form{background:#fff;border-radius:6px;padding:24px}
+  form label{display:block;font-size:.82rem;font-weight:800;margin:12px 0 5px;color:var(--steel);text-transform:uppercase;letter-spacing:.03em}
+  form input,form textarea,form select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:4px;font-family:inherit;font-size:.95rem;background:#f7f9fb}
+  form button{margin-top:18px;width:100%;background:var(--arc);color:#1b1206;border:0;padding:14px;border-radius:2px;font-weight:800;font-size:1rem;cursor:pointer;text-transform:uppercase}
+  form button:hover{background:var(--arc2)}
+  footer{background:#0b0e11;color:#8e9aa4;font-size:.9rem;padding:24px 0}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+  @media(max-width:900px){
+    .links{display:none}
+    .hero h1{font-size:2rem}
+    .grid{grid-template-columns:1fr}
+    .howgrid{grid-template-columns:1fr}
+    .whogrid{grid-template-columns:1fr 1fr}
+    .why .wrap,.cbox{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="util"><div class="wrap">
+  <span>Equipment &amp; repair welding · Yates County · Drop it off or call about on-site</span>
+  <span><strong>315-536-0787</strong> · 3307 Bath Rd, Penn Yan, NY</span>
+</div></div>
+
+<nav><div class="wrap">
+  <div class="brand">LAKE COUNTRY <span>WELDING</span></div>
+  <div class="links">
+    <a href="#repairs">Repairs</a>
+    <a href="#how">Drop-off &amp; On-site</a>
+    <a href="#who">Who We Help</a>
+    <a href="#why">Why Local</a>
+    <a href="#contact">Get a Quote</a>
+  </div>
+  <a class="callbtn" href="tel:13155360787">Call the Shop</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <h1>Down equipment? Bring it to the shop and get it welded back together.</h1>
+  <p class="sub">A Penn Yan welding shop that fixes the broken steel a farm or a job site can't run without — buckets, racks, trailers, implements, and the cracks nobody else wants to touch. In season, every day it's down costs you.</p>
+  <div class="cta">
+    <a class="btn btn-a" href="#contact">Describe Your Repair</a>
+    <a class="btn btn-b" href="#repairs">What We Weld</a>
+  </div>
+</div></header>
+
+<div class="bar"><div class="wrap">
+  <span>Repair welding</span><span>Steel · Aluminum · Cast</span><span>Farm &amp; equipment</span><span>Fast turnaround in season</span>
+</div></div>
+
+<section id="repairs"><div class="wrap">
+  <span class="eyebrow">What we fix</span>
+  <h2>The repairs that keep equipment working</h2>
+  <p class="lead">Most of what rolls into the shop isn't a showpiece — it's a piece of working metal that broke at the worst time. We weld it strong enough to go back to work, not just look patched.</p>
+  <div class="grid">
+    <div class="card"><h3>Farm &amp; Ag Equipment</h3><p>Cracked frames, bucket edges, hitches, augers, plows, and implement repairs to get gear back in the field.</p></div>
+    <div class="card"><h3>Trailers &amp; Racks</h3><p>Trailer frames, tongues, gates, ramps, and custom racks — repaired and reinforced where they keep failing.</p></div>
+    <div class="card"><h3>Structural &amp; Heavy Steel</h3><p>Beams, brackets, posts, and load-bearing repairs welded to hold under real weight and use.</p></div>
+    <div class="card"><h3>Bucket &amp; Attachment Builds</h3><p>Worn bucket lips, broken pins and ears, and reinforcement on excavator and loader attachments.</p></div>
+    <div class="card"><h3>Aluminum &amp; Cast Repairs</h3><p>The harder welds — aluminum and cast pieces other shops turn away — handled in house.</p></div>
+    <div class="card"><h3>Shop &amp; Custom Fab</h3><p>One-off brackets, stands, gates, and fixes fabricated to fit when an off-the-shelf part doesn't exist.</p></div>
+  </div>
+</div></section>
+
+<section id="how" class="how"><div class="wrap">
+  <span class="eyebrow" style="color:var(--spark)">How it works</span>
+  <h2>Two ways to get it fixed</h2>
+  <div class="howgrid">
+    <div class="hcard">
+      <h3>Drop it off</h3>
+      <p>Haul the piece — or the whole implement — to the shop on Bath Road. Tell us what failed and how it's used, and we'll weld it to take the load again. Call ahead in busy season so we can fit you in.</p>
+    </div>
+    <div class="hcard">
+      <h3>Too big to move?</h3>
+      <p>Some repairs have to happen where the equipment sits. Call and describe the job — size, location, and what broke — and we'll talk through whether it's a shop job or one we come to.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="who" class="who"><div class="wrap">
+  <span class="eyebrow">Who we work with</span>
+  <h2>Built for the people who run on equipment</h2>
+  <p class="lead">Penn Yan and Yates County run on farms, trades, and the lake. When their steel breaks, it comes here.</p>
+  <div class="whogrid">
+    <div class="w"><h3>Farmers</h3><p>Implements, frames, and field gear back in service fast.</p></div>
+    <div class="w"><h3>Contractors</h3><p>Buckets, trailers, racks, and jobsite steel repaired.</p></div>
+    <div class="w"><h3>Marinas &amp; Lake</h3><p>Trailers, lifts, and dock hardware welded and reinforced.</p></div>
+    <div class="w"><h3>Homeowners</h3><p>That one broken metal thing nobody else will fix.</p></div>
+  </div>
+</div></section>
+
+<section id="why" class="why"><div class="wrap">
+  <div>
+    <span class="eyebrow">Why local</span>
+    <h2>A real crew, in the county, who picks up</h2>
+    <p class="lead">Lake Country Welding is an established Penn Yan shop with a working crew — not a one-truck side job and not a number three counties away. When your equipment is down in the middle of a season, that proximity is the whole difference.</p>
+    <ul class="checks">
+      <li>Established Yates County repair shop</li>
+      <li>Repair-focused — we fix it, not just quote new</li>
+      <li>Steel, aluminum, and cast under one roof</li>
+      <li>Turnaround that respects your season</li>
+    </ul>
+  </div>
+  <div class="panel">
+    <h3>Tell us what broke</h3>
+    <p>Send a couple of photos and a line about how the piece is used, and we'll come back with what the repair takes and roughly when we can get to it. Urgent and in season? Call the shop direct.</p>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <span class="eyebrow">Get a quote</span>
+  <h2>Describe your repair</h2>
+  <div class="cbox">
+    <div class="cinfo">
+      <p>Tell us what failed, what it's off of, and how soon you need it. We'll get back with a plan and a turnaround. For a job that can't wait, the phone is fastest.</p>
+      <p><b>Phone:</b> <a href="tel:13155360787">315-536-0787</a></p>
+      <p><b>Shop:</b> 3307 Bath Rd, Penn Yan, NY 14527</p>
+      <p><b>Area:</b> Penn Yan &amp; greater Yates County</p>
+    </div>
+    <form onsubmit="return false">
+      <label>Name</label><input type="text" placeholder="Your name">
+      <label>Phone</label><input type="tel" placeholder="Best number to reach you">
+      <label>What broke?</label>
+      <select>
+        <option>Farm / ag equipment</option>
+        <option>Trailer or rack</option>
+        <option>Bucket / attachment</option>
+        <option>Structural / heavy steel</option>
+        <option>Aluminum or cast repair</option>
+        <option>Custom fabrication</option>
+      </select>
+      <label>Details</label>
+      <textarea rows="4" placeholder="What failed, what it's off of, drop-off or on-site, and how soon you need it."></textarea>
+      <button type="submit">Send Repair Details</button>
+    </form>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>Lake Country Welding · 3307 Bath Rd, Penn Yan, NY 14527 · 315-536-0787</span>
+  <span>Equipment &amp; repair welding · Steel · Aluminum · Cast · Serving Yates County</span>
+</div></footer>
+
+</body>
+</html>

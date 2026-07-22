@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palmer's Firewood — Seasoned Cords Delivered in the Queensbury & Lake George Area</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --char:#211c18; --char2:#2e2722; --bark:#3d342c; --ember:#e1611d; --ember-d:#b94c12;
+  --ash:#f4efe9; --ash2:#e7ded3; --line:#d2c6b7; --ink:#241f1b; --soft:#6c5f53; --cream:#fbf8f4; --gold:#d99a3a;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+h1,h2,h3,.dispo{font-family:'Oswald',sans-serif;letter-spacing:.5px;text-transform:uppercase}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+/* top bar */
+.top{background:var(--char);color:#f0e7dc;font-size:.92rem}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;padding:9px 22px;flex-wrap:wrap;gap:6px}
+.top b{color:var(--gold);font-family:'Oswald';letter-spacing:1px}
+.top a.call{color:#fff;font-weight:700;text-decoration:none}
+/* hero */
+.hero{background:linear-gradient(rgba(20,16,13,.78),rgba(20,16,13,.86)),repeating-linear-gradient(90deg,#2c241d 0 14px,#332a22 14px 28px);color:#f6efe6;padding:78px 0 70px;border-bottom:5px solid var(--ember)}
+.hero .tag{display:inline-block;background:var(--ember);color:#fff;font-family:'Oswald';letter-spacing:2px;font-size:.8rem;padding:6px 14px;border-radius:2px;margin-bottom:20px}
+.hero h1{font-size:3rem;line-height:1.02;margin-bottom:16px}
+.hero h1 span{color:var(--gold)}
+.hero p.lead{font-size:1.22rem;max-width:640px;color:#e6dacb}
+.cta-row{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;font-family:'Oswald';letter-spacing:1px;text-decoration:none;padding:15px 28px;border-radius:3px;font-size:1.02rem}
+.btn-pri{background:var(--ember);color:#fff}
+.btn-pri:hover{background:var(--ember-d)}
+.btn-gh{background:transparent;color:#f6efe6;border:2px solid #6b5c4d}
+.hero .micro{margin-top:18px;font-size:.95rem;color:#cdbfae}
+/* strip */
+.strip{background:var(--char2);color:#efe5d8}
+.strip .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.strip div{padding:18px 14px;text-align:center;border-right:1px solid #443a31}
+.strip div:last-child{border-right:none}
+.strip b{display:block;font-family:'Oswald';font-size:1.5rem;color:var(--gold)}
+.strip small{color:#c3b6a6;font-size:.86rem;text-transform:uppercase;letter-spacing:1px}
+/* sections */
+section{padding:60px 0}
+.eyebrow{color:var(--ember-d);font-family:'Oswald';letter-spacing:2px;font-size:.82rem;margin-bottom:8px}
+h2{font-size:2rem;margin-bottom:10px;color:var(--char)}
+.sub{color:var(--soft);max-width:620px;margin-bottom:34px;font-size:1.05rem}
+/* product cards */
+.grades{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.grade{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
+.grade .head{padding:20px 22px;color:#fff}
+.grade.semi .head{background:linear-gradient(135deg,#5d4a39,#3d342c)}
+.grade.full .head{background:linear-gradient(135deg,var(--ember),var(--ember-d))}
+.grade .head h3{font-size:1.4rem}
+.grade .head .price{font-family:'Oswald';font-size:2rem;margin-top:4px}
+.grade .head .price small{font-size:.9rem;opacity:.85;font-family:'Source Sans 3'}
+.grade .body{padding:20px 22px;flex:1}
+.grade ul{list-style:none}
+.grade li{padding:7px 0 7px 26px;position:relative;border-bottom:1px dashed var(--ash2)}
+.grade li:before{content:"";position:absolute;left:0;top:13px;width:12px;height:12px;background:var(--ember);border-radius:2px;transform:rotate(45deg)}
+.grade li:last-child{border-bottom:none}
+.ph{font-size:.78rem;color:#a98e63;font-style:italic}
+/* why dry */
+.why{background:var(--char);color:#f1e8db;border-radius:10px;padding:42px 38px;display:grid;grid-template-columns:1.3fr 1fr;gap:34px;align-items:center}
+.why h2{color:#fff}
+.why .sub{color:#cbbdac}
+.gauge{background:#241f1a;border:1px solid #4a3f34;border-radius:8px;padding:24px}
+.gauge .row{display:flex;justify-content:space-between;align-items:center;margin:14px 0}
+.gauge .lbl{font-size:.95rem;color:#d8cbb9}
+.bar{height:12px;background:#3a3128;border-radius:6px;flex:1;margin:0 14px;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:6px}
+.bar.green i{width:88%;background:linear-gradient(90deg,#7fae3e,#a7cb5f)}
+.bar.amber i{width:55%;background:linear-gradient(90deg,#d99a3a,#e1611d)}
+.gauge .pct{font-family:'Oswald';color:var(--gold);min-width:46px;text-align:right}
+/* area */
+.area{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.area .towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.area .towns span{background:#fff;border:1px solid var(--line);border-radius:30px;padding:8px 16px;font-size:.92rem;font-weight:600}
+.note{background:var(--ash);border-left:4px solid var(--ember);padding:16px 18px;border-radius:0 6px 6px 0;color:var(--soft);font-size:.96rem;margin-top:18px}
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rev{background:#fff;border:1px solid var(--line);border-radius:8px;padding:22px}
+.rev .stars{color:var(--gold);letter-spacing:2px;margin-bottom:8px}
+.rev p{font-size:.98rem;color:#473d33}
+.rev cite{display:block;margin-top:12px;font-style:normal;font-weight:700;color:var(--char);font-size:.9rem}
+/* order */
+.order{background:linear-gradient(135deg,var(--bark),var(--char));color:#f4ece0;border-radius:12px;padding:48px 40px;text-align:center}
+.order h2{color:#fff;font-size:2.1rem}
+.order p{max-width:560px;margin:10px auto 26px;color:#d8cbb9}
+.order .phone{font-family:'Oswald';font-size:2.4rem;color:var(--gold);display:block;text-decoration:none;margin-bottom:8px}
+/* footer */
+footer{background:#1a1612;color:#a99a88;padding:30px 0;font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer b{color:#e7dccd;font-family:'Oswald'}
+@media(max-width:780px){
+  .hero h1{font-size:2.2rem}.strip .wrap{grid-template-columns:1fr}.strip div{border-right:none;border-bottom:1px solid #443a31}
+  .grades{grid-template-columns:1fr}.why{grid-template-columns:1fr;padding:30px 24px}.area{grid-template-columns:1fr}.revs{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <span><b>PALMER'S FIREWOOD</b> · Queensbury, NY</span>
+  <span>Order line: <a class="call" href="tel:15187451321">(518) 745-1321</a></span>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <span class="tag">SERVING THE LAKE GEORGE REGION</span>
+  <h1>Dry hardwood, split and <span>delivered to your woodpile</span></h1>
+  <p class="lead">Full cords of seasoned and semi-seasoned hardwood for Queensbury, Lake George and Glens Falls homes — measured honest, dumped where you want it, and ready before the first cold snap.</p>
+  <div class="cta-row">
+    <a class="btn btn-pri" href="tel:15187451321">Call to schedule a load</a>
+    <a class="btn btn-gh" href="#grades">See cords &amp; pricing</a>
+  </div>
+  <p class="micro">Veteran &amp; active-military discount · Delivery included in the local radius · Stacking available on request</p>
+</div></header>
+
+<div class="strip"><div class="wrap">
+  <div><b>128 cu ft</b><small>A true full cord — measured, not guessed</small></div>
+  <div><b>Local</b><small>Delivered around Queensbury &amp; Lake George</small></div>
+  <div><b>Seasoned</b><small>Split and air-dried, not green off the truck</small></div>
+</div></div>
+
+<section id="grades"><div class="wrap">
+  <p class="eyebrow">WHAT YOU CAN ORDER</p>
+  <h2>Two cords, one honest measure</h2>
+  <p class="sub">Pick the cord that fits how soon you need to burn. Both are full cords of mixed Adirondack hardwood, split to stove length and delivered.</p>
+  <div class="grades">
+    <div class="grade semi">
+      <div class="head"><h3>Semi-Seasoned Cord</h3><div class="price">$225 <small>/ full cord, delivered <span class="ph">(verify)</span></small></div></div>
+      <div class="body"><ul>
+        <li>Split and air-dried through part of a season</li>
+        <li>Best if you're stocking ahead for next winter</li>
+        <li>Mixed hardwood — maple, ash, cherry, birch</li>
+        <li>Dumped at your driveway or wood ring</li>
+      </ul></div>
+    </div>
+    <div class="grade full">
+      <div class="head"><h3>Fully Seasoned Cord</h3><div class="price">$325 <small>/ full cord, delivered <span class="ph">(verify)</span></small></div></div>
+      <div class="body"><ul>
+        <li>Dried down so it lights easy and burns clean</li>
+        <li>Ready to burn the night it's delivered</li>
+        <li>Less smoke, more heat, no hissing logs</li>
+        <li>Stacking available — just ask when you order</li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="note">Pricing shown is from current listings and should be confirmed by phone — fuel and delivery distance can change the number. Larger orders for camps and rentals are quoted per load.</div>
+</div></section>
+
+<section style="background:var(--ash)"><div class="wrap">
+  <div class="why">
+    <div>
+      <p class="eyebrow" style="color:var(--gold)">WHY SEASONING MATTERS</p>
+      <h2>Wet wood costs you twice</h2>
+      <p class="sub">Green wood doesn't just light hard — it sends a third of its heat up the chimney as steam and leaves creosote behind. Seasoned wood gives you more heat per cord and a cleaner flue. That's the whole reason to buy from someone who dries it properly.</p>
+    </div>
+    <div class="gauge">
+      <div class="lbl" style="margin-bottom:4px;font-weight:700">Moisture in the log</div>
+      <div class="row"><span class="lbl">Fully seasoned</span><span class="bar green"><i></i></span><span class="pct">~18%</span></div>
+      <div class="row"><span class="lbl">Green / fresh-cut</span><span class="bar amber"><i></i></span><span class="pct">~45%</span></div>
+      <div class="lbl" style="font-size:.82rem;color:#a99a88;margin-top:8px">Lower moisture = easier light, hotter burn, less creosote. Figures illustrative.</div>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="area">
+    <div>
+      <p class="eyebrow">DELIVERY AREA</p>
+      <h2>If you're nearby, we'll bring it</h2>
+      <p class="sub">Local delivery is included on full-cord orders within the home radius. A little farther out? Call and we'll work out the trip.</p>
+      <div class="towns">
+        <span>Queensbury</span><span>Lake George</span><span>Glens Falls</span><span>Lake Luzerne</span><span>Hudson Falls</span><span>Fort Edward</span>
+      </div>
+      <div class="note">Delivery towns listed reflect the local service area; confirm your exact address when you call.</div>
+    </div>
+    <div style="background:var(--char);border-radius:10px;padding:30px;color:#eadcc9">
+      <h3 style="color:#fff;font-size:1.3rem;margin-bottom:14px">How an order works</h3>
+      <p style="margin-bottom:10px"><b style="color:var(--gold)">1.</b> &nbsp;Call the order line and tell us the grade and how many cords.</p>
+      <p style="margin-bottom:10px"><b style="color:var(--gold)">2.</b> &nbsp;We set a drop-off day that works for you.</p>
+      <p style="margin-bottom:10px"><b style="color:var(--gold)">3.</b> &nbsp;Wood gets dumped where you point — driveway, ring or shed.</p>
+      <p><b style="color:var(--gold)">4.</b> &nbsp;Want it stacked? Say so up front and we'll handle it.</p>
+    </div>
+  </div>
+</div></section>
+
+<section style="background:var(--ash);padding-top:48px"><div class="wrap">
+  <p class="eyebrow">FROM THE WOODPILE</p>
+  <h2>What neighbors say</h2>
+  <p class="sub">Short notes from local customers. <span class="ph">(Placeholder — replace with real review quotes before launch.)</span></p>
+  <div class="revs">
+    <div class="rev"><div class="stars">★★★★★</div><p>"Wood was dry and lit first try. Showed up the day he said and dumped it right by the shed."</p><cite>— Local customer (placeholder)</cite></div>
+    <div class="rev"><div class="stars">★★★★★</div><p>"Honest cord, fair price, and the veteran discount was a nice touch. Will order again next fall."</p><cite>— Local customer (placeholder)</cite></div>
+    <div class="rev"><div class="stars">★★★★★</div><p>"Called late in the season and still got a load. Burns clean — barely any smoke."</p><cite>— Local customer (placeholder)</cite></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="order">
+    <p class="eyebrow" style="color:var(--gold)">RESERVE A CORD</p>
+    <h2>Get on the delivery list before the cold sets in</h2>
+    <p>Cords go fast once the temperature drops. Call the order line, tell us the grade and how many you need, and we'll set a delivery day.</p>
+    <a class="phone" href="tel:15187451321">(518) 745-1321</a>
+    <a class="btn btn-pri" href="tel:15187451321">Call Palmer's Firewood</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span><b>PALMER'S FIREWOOD</b> · 348 Luzerne Rd, Queensbury, NY 12804</span>
+  <span>Order line: <a href="tel:15187451321" style="color:#e7dccd;text-decoration:none">(518) 745-1321</a> · Veteran &amp; military discount</span>
+</div></footer>
+
+</body>
+</html>

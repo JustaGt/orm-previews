@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hawks Corner Sport Shop — Firearms Dealer &amp; Gunsmith Since 1957 | Fort Ann, NY</title>
+<meta name="description" content="Family firearms dealer in Fort Ann since 1957. Buy, sell, trade. FFL transfers, gunsmithing and estate appraisals. 60 County Route 17, Fort Ann NY.">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --walnut:#3e2f23; --green:#2e4436; --brass:#b08d46; --paper:#f4efe4;
+    --ink:#2a241d; --line:#d9cfba;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3{font-family:'Zilla Slab',serif;line-height:1.15}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 22px}
+  /* hours banner */
+  .hoursbar{background:var(--green);color:#e9e4d5;font-size:.85rem;text-align:center;padding:8px 14px;letter-spacing:.03em}
+  .hoursbar strong{color:#f0d9a5}
+  header{background:var(--walnut);color:#f4efe4}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+  .logo{font-family:'Zilla Slab',serif;font-weight:700;font-size:1.3rem}
+  .logo span{display:block;font-family:'Source Sans 3',sans-serif;font-weight:600;font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;color:var(--brass)}
+  .nav a.call{background:var(--brass);color:#2a241d;text-decoration:none;padding:10px 18px;border-radius:2px;font-weight:700;font-size:.9rem}
+  /* hero */
+  .hero{background:var(--walnut);color:#f4efe4;padding:70px 0 66px;border-bottom:6px solid var(--brass)}
+  .hero .wrap{max-width:780px}
+  .est{display:inline-block;border:1px solid var(--brass);color:#f0d9a5;padding:5px 14px;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;font-weight:600}
+  .hero h1{font-size:clamp(1.9rem,4.6vw,3rem);margin:20px 0 16px;font-weight:600}
+  .hero p{font-size:1.08rem;color:#d8cfbd;max-width:36em}
+  .cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;text-decoration:none;font-weight:700;padding:13px 24px;border-radius:2px;font-size:.95rem}
+  .btn.primary{background:var(--brass);color:#2a241d}
+  .btn.ghost{border:1px solid #7a6a55;color:#e9e4d5}
+  /* hours card */
+  .hourswrap{padding:0}
+  .hourscard{background:#fff;border:1px solid var(--line);border-radius:3px;margin-top:-34px;position:relative;z-index:5;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));overflow:hidden;box-shadow:0 8px 24px rgba(42,36,29,.12)}
+  .hourscard div{padding:16px 12px;text-align:center;border-right:1px solid var(--line);font-size:.85rem}
+  .hourscard div:last-child{border-right:none}
+  .hourscard strong{display:block;font-family:'Zilla Slab',serif;font-size:.95rem;color:var(--green)}
+  .hourscard .closed strong{color:#a3947c}
+  .hourscard em{display:block;font-style:normal;color:#6b6152;font-size:.8rem;margin-top:2px}
+  .apptnote{text-align:center;font-size:.85rem;color:#6b6152;padding:12px 0 0}
+  /* services */
+  .services{padding:66px 0 70px}
+  .services h2{font-size:1.9rem;color:var(--walnut);text-align:center}
+  .services p.lead{text-align:center;max-width:44em;margin:12px auto 40px;color:#57503f}
+  .sgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+  .scard{background:#fff;border:1px solid var(--line);border-top:4px solid var(--green);border-radius:3px;padding:28px 26px}
+  .scard h3{font-size:1.2rem;color:var(--walnut);margin-bottom:10px}
+  .scard p{font-size:.92rem;color:#57503f;margin-bottom:10px}
+  .scard ul{list-style:none;margin-top:4px}
+  .scard li{font-size:.88rem;padding:6px 0 6px 20px;position:relative;color:#4a4335}
+  .scard li::before{content:"·";position:absolute;left:4px;color:var(--brass);font-weight:700;font-size:1.3rem;line-height:1}
+  /* transfer steps */
+  .transfer{background:var(--green);color:#eee9da;padding:66px 0}
+  .transfer h2{font-size:1.9rem;margin-bottom:10px}
+  .transfer p.lead{color:#cfd8cd;max-width:46em;margin-bottom:34px}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+  .step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:3px;padding:22px 20px}
+  .step .num{font-family:'Zilla Slab',serif;font-size:1.6rem;color:var(--brass);font-weight:700}
+  .step h3{font-size:1.02rem;margin:8px 0 8px;color:#fff}
+  .step p{font-size:.86rem;color:#cfd8cd}
+  .finequote{margin-top:26px;font-size:.85rem;color:#b7c2b5}
+  /* why small shop */
+  .why{padding:66px 0}
+  .why .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+  .why h2{font-size:1.9rem;color:var(--walnut);margin-bottom:14px}
+  .why p{color:#4a4335;margin-bottom:12px}
+  .creds{background:#fff;border:1px solid var(--line);border-radius:3px;padding:26px}
+  .creds h3{font-size:1rem;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+  .creds table{width:100%;border-collapse:collapse;font-size:.88rem}
+  .creds td{padding:9px 4px;border-bottom:1px solid var(--line);vertical-align:top}
+  .creds td:first-child{font-weight:700;color:var(--walnut);width:42%}
+  .creds tr:last-child td{border-bottom:none}
+  /* reviews */
+  .reviews{background:var(--paper);padding:0 0 66px}
+  .reviews .band{background:#fff;border:1px solid var(--line);border-radius:3px;padding:36px 30px;display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center}
+  .score{font-family:'Zilla Slab',serif;font-size:3rem;color:var(--green);font-weight:700;text-align:center}
+  .score small{display:block;font-family:'Source Sans 3',sans-serif;font-size:.78rem;color:#6b6152;font-weight:600}
+  .stars{color:var(--brass);font-size:1.1rem;letter-spacing:.1em}
+  .reviews blockquote{font-size:1rem;color:#4a4335;font-style:italic}
+  .reviews cite{display:block;margin-top:8px;font-style:normal;font-size:.82rem;color:#6b6152}
+  /* find us */
+  .find{background:var(--walnut);color:#f4efe4;padding:64px 0}
+  .find .grid{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+  .find h2{font-size:1.9rem;margin-bottom:14px}
+  .find p{color:#d8cfbd;margin-bottom:10px}
+  .find a{color:#f0d9a5}
+  .mapbox{background:#31261c;border:1px dashed #7a6a55;border-radius:3px;min-height:220px;display:flex;align-items:center;justify-content:center;color:#a3947c;font-size:.9rem;text-align:center;padding:20px}
+  footer{background:#241c14;color:#9c8f7a;padding:24px 0;font-size:.8rem;text-align:center}
+  @media(max-width:820px){.why .grid,.find .grid,.reviews .band{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="hoursbar">Open <strong>Tue · Wed · Fri 2–6</strong> and <strong>Sat 10–2</strong> — or call for an appointment outside hours: <strong>(518) 632-5357</strong></div>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">Hawks Corner Sport Shop<span>Fort Ann, New York · Since 1957</span></div>
+    <a class="call" href="tel:15186325357">Call the shop</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="est">Family owned &amp; operated since 1957</span>
+    <h1>The gun counter your grandfather would recognize.</h1>
+    <p>Buy, sell, trade and transfer at a licensed country shop on County Route 17 — where low overhead means we pay you more for yours and charge you less for ours, and where every question gets a straight answer.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="tel:15186325357">(518) 632-5357</a>
+      <a class="btn ghost" href="#transfers">How transfers work</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap hourswrap">
+  <div class="hourscard">
+    <div class="closed"><strong>Mon</strong><em>Closed</em></div>
+    <div><strong>Tue</strong><em>2:00 – 6:00</em></div>
+    <div><strong>Wed</strong><em>2:00 – 6:00</em></div>
+    <div class="closed"><strong>Thu</strong><em>Closed</em></div>
+    <div><strong>Fri</strong><em>2:00 – 6:00</em></div>
+    <div><strong>Sat</strong><em>10:00 – 2:00</em></div>
+    <div class="closed"><strong>Sun</strong><em>Closed</em></div>
+  </div>
+  <p class="apptnote">Can't make posted hours? Appointments available — just call ahead.</p>
+</div>
+
+<section class="services">
+  <div class="wrap">
+    <h2>Three things we do, and do properly</h2>
+    <p class="lead">No showroom theater, no pressure. A working counter for hunters, sport shooters and families across Washington County and the Lake George region.</p>
+    <div class="sgrid">
+      <div class="scard">
+        <h3>Buy · Sell · Trade</h3>
+        <p>New and used rifles, shotguns and handguns — and honest money for yours.</p>
+        <ul>
+          <li>Fair cash offers on singles or collections</li>
+          <li>Trade-ins welcome toward anything in the case</li>
+          <li>Special orders — if we don't have it, we can get it</li>
+        </ul>
+      </div>
+      <div class="scard">
+        <h3>FFL Transfers &amp; Gunsmithing</h3>
+        <p>Bought online or out of state? We're your receiving dealer, licensed and verified.</p>
+        <ul>
+          <li>Transfers handled start to finish, NY paperwork included</li>
+          <li>Gunsmith service — repairs, cleaning, scope mounting</li>
+          <li>Flat, posted transfer fee — ask when you call</li>
+        </ul>
+      </div>
+      <div class="scard">
+        <h3>Estate Services</h3>
+        <p>When firearms are part of a family estate, we make a hard week easier.</p>
+        <ul>
+          <li>Whole-estate appraisals, written and discreet</li>
+          <li>Legal, documented sale or transfer of inherited firearms</li>
+          <li>House calls by arrangement for larger collections</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="transfer" id="transfers">
+  <div class="wrap">
+    <h2>Buying online? Here's how the transfer works.</h2>
+    <p class="lead">New York adds steps most out-of-state sellers don't explain. We do this every week — here's the whole path, so nothing surprises you.</p>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3>Have the seller ship to us</h3><p>Give the retailer or auction house our FFL details — we'll fax or email a copy of the license on request.</p></div>
+      <div class="step"><div class="num">2</div><h3>We log it in</h3><p>Your firearm is checked in and secured the day it arrives. We call you — you're never chasing a tracking number.</p></div>
+      <div class="step"><div class="num">3</div><h3>Paperwork at the counter</h3><p>Background check and NY-required steps done here. Bring your ID (and your permit for handguns).</p></div>
+      <div class="step"><div class="num">4</div><h3>Walk out right</h3><p>We hand it over only when everything is lawful and complete — and we'll bore-sight a new scope while you're here if you'd like.</p></div>
+    </div>
+    <p class="finequote">Licensed dealer &amp; gunsmith · FFL #6-14-115-01-8F-01280 · verified, expires June 2028</p>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap grid">
+    <div>
+      <h2>Sixty-nine years on the same corner.</h2>
+      <p>Hawks Corner has been buying, selling and fixing firearms in Fort Ann since 1957 — before the big-box stores, before the internet, before most of the shops that came and went between.</p>
+      <p>A small shop with low overhead does the math differently: we can pay more when you sell, charge less when you buy, and take the time to actually look at what you bring in. That's why the drive out from Glens Falls, Whitehall or Lake George is worth it — and why the reviews say what they say.</p>
+    </div>
+    <div class="creds">
+      <h3>The particulars</h3>
+      <table>
+        <tr><td>Established</td><td>1957 — family owned &amp; operated</td></tr>
+        <tr><td>License</td><td>Verified FFL dealer &amp; gunsmith (Hawks Corner LLC)</td></tr>
+        <tr><td>Location</td><td>60 County Route 17, Fort Ann, NY 12827</td></tr>
+        <tr><td>Phone</td><td>(518) 632-5357</td></tr>
+        <tr><td>Appointments</td><td>Available outside posted hours</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <div class="band">
+      <div class="score">5.0<small>16 Google reviews</small><div class="stars">★★★★★</div></div>
+      <blockquote>
+        "Straight shooter. Best gunsmith in the area, very reasonable prices."
+        <cite>— Google review of Hawks Corner Sport Shop <em>(placeholder — pull final quote &amp; attribution from the live Google profile before publishing)</em></cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="find">
+  <div class="wrap grid">
+    <div>
+      <h2>Find the corner.</h2>
+      <p><strong>Hawks Corner Sport Shop</strong><br>60 County Route 17, Fort Ann, NY 12827</p>
+      <p>Ten minutes off Route 4 between Fort Ann and Whitehall — call if the GPS argues: <a href="tel:15186325357">(518) 632-5357</a></p>
+      <p>Selling a firearm or settling an estate? Call before you drive — we'll tell you exactly what to bring so one trip does it.</p>
+    </div>
+    <div class="mapbox">Google Map embed — 60 County Route 17, Fort Ann NY<br>(wired in at build time in GHL)</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Hawks Corner Sport Shop · Fort Ann, NY · Family owned since 1957. All sales and transfers conducted in full compliance with federal and New York State law. — Website preview by Onyx Rise Media</div>
+</footer>
+
+</body>
+</html>

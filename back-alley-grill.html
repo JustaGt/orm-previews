@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Back Alley Grill by Giuseppina's — Order Ahead, Pick Up in the Alley | Sodus Point, NY</title>
+<meta name="description" content="Sodus Point's order-ahead takeout grill: burgers, loaded fries, plates and lobster rolls at 8427 Bay Street. Check tonight's hours and order ahead — pickup only, steps from the beach.">
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Barlow:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --board:#26282b; --board-deep:#1a1c1e; --chalk:#f4f1ea;
+    --ketchup:#c8382e; --mustard:#e9a820; --relish:#7fa650;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Barlow',sans-serif;color:var(--chalk);background:var(--board);line-height:1.6}
+  .hand{font-family:'Permanent Marker',cursive}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+  header{background:var(--board-deep);padding:14px 0;border-bottom:3px dashed var(--mustard)}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+  .brand{font-family:'Permanent Marker',cursive;font-size:1.35rem;color:var(--mustard)}
+  .brand small{display:block;font-family:'Barlow',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#b9b4a8}
+  .order-btn{background:var(--ketchup);color:#fff;text-decoration:none;font-weight:800;padding:10px 20px;border-radius:6px;text-transform:uppercase;letter-spacing:.05em;font-size:.9rem}
+  .order-btn:hover{background:#a52a22}
+  .hero{padding:72px 0 62px;background:
+    radial-gradient(ellipse at 20% 20%, rgba(233,168,32,.08), transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(200,56,46,.08), transparent 50%), var(--board)}
+  .hero h1{font-size:clamp(2rem,5.2vw,3.4rem);line-height:1.12;font-weight:800;max-width:18ch}
+  .hero h1 .hand{color:var(--mustard);font-weight:400}
+  .hero p.sub{margin:18px 0 8px;font-size:1.13rem;max-width:56ch;color:#d8d3c6}
+  .hero .addr{color:#9b968a;font-size:.95rem;margin-bottom:26px}
+  .btn{display:inline-block;text-decoration:none;font-weight:800;padding:14px 26px;border-radius:6px;text-transform:uppercase;letter-spacing:.05em;font-size:.95rem}
+  .btn-red{background:var(--ketchup);color:#fff}
+  .btn-red:hover{background:#a52a22}
+  .btn-chalk{border:2px solid var(--chalk);color:var(--chalk)}
+  .btn-chalk:hover{background:var(--chalk);color:var(--board)}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  section{padding:56px 0}
+  .kicker{color:var(--ketchup);font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:.8rem}
+  h2{font-size:clamp(1.5rem,3.4vw,2.2rem);margin:8px 0 26px;font-weight:800}
+  h2 .hand{color:var(--mustard);font-weight:400}
+  /* how it works */
+  .how{background:var(--board-deep)}
+  .how .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+  .how .step{border:2px dashed #4a4d51;border-radius:10px;padding:22px;position:relative}
+  .how .num{font-family:'Permanent Marker',cursive;font-size:2rem;color:var(--mustard)}
+  .how h3{margin:6px 0 8px;font-size:1.05rem}
+  .how p{font-size:.95rem;color:#cfcaba}
+  /* menu board */
+  .menu .board-frame{background:var(--board-deep);border:6px solid #3b3325;border-radius:10px;padding:34px;box-shadow:inset 0 0 60px rgba(0,0,0,.5)}
+  .menu-item{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:13px 0;border-bottom:1px dotted #4a4d51}
+  .menu-item:last-child{border-bottom:none}
+  .menu-item h3{font-size:1.08rem}
+  .menu-item .dots{flex:1;border-bottom:1px dotted #5a5d61;transform:translateY(-4px)}
+  .menu-item .tag{font-family:'Permanent Marker',cursive;color:var(--mustard);font-size:.95rem;white-space:nowrap}
+  .menu-item p{font-size:.9rem;color:#b9b4a8;width:100%}
+  .menu-note{margin-top:16px;font-size:.85rem;color:#9b968a;font-style:italic}
+  /* reviews */
+  .rev{background:var(--ketchup)}
+  .rev h2{color:#fff}
+  .rev .kicker{color:var(--mustard)}
+  .score{font-family:'Permanent Marker',cursive;font-size:3rem;color:#fff}
+  .rev blockquote{background:rgba(0,0,0,.18);border-radius:10px;padding:20px 24px;margin-top:14px;font-size:1.02rem;color:#ffe9e6}
+  .rev cite{display:block;margin-top:8px;font-size:.85rem;color:#f3c3be;font-style:normal}
+  /* find us */
+  .find .cols{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+  @media(max-width:700px){.find .cols{grid-template-columns:1fr}}
+  .find .card{background:var(--board-deep);border-radius:10px;padding:24px;border-top:4px solid var(--mustard)}
+  .find h3{color:var(--mustard);margin-bottom:10px}
+  .find p{font-size:.98rem;color:#d8d3c6}
+  .find a{color:var(--mustard)}
+  .placeholder{opacity:.75;font-style:italic;font-size:.88rem}
+  footer{background:#121315;color:#8a857a;text-align:center;padding:20px;font-size:.88rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">Back Alley Grill <small>by Giuseppina's · Sodus Point</small></div>
+    <a class="order-btn" href="#order">Order ahead</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Order ahead. Pick up in the alley. <span class="hand">Eat by the bay.</span></h1>
+    <p class="sub">Burgers, loaded fries, plates and lobster rolls off Bay Street — takeout only, made when you order it, gone by the time you reach the beach. This page always has tonight's hours, so you never have to dig through Facebook to find out if the grill is on.</p>
+    <p class="addr">8427 Bay Street, Sodus Point, NY 14555 — in the alley behind Giuseppina's</p>
+    <div class="cta-row">
+      <a class="btn btn-red" href="#hours">Tonight's hours</a>
+      <a class="btn btn-chalk" href="#menu">The board</a>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="order">
+  <div class="wrap">
+    <span class="kicker">Pickup Only — Here's The Drill</span>
+    <h2>Three steps to dinner <span class="hand">done right</span></h2>
+    <div class="grid">
+      <div class="step"><div class="num">1</div><h3>Check tonight's hours</h3><p>The grill runs on a summer schedule. This page shows this week's open days before you leave the cottage.</p></div>
+      <div class="step"><div class="num">2</div><h3>Order ahead</h3><p>Orders go in ahead of pickup — no walk-up window, no waiting in line with hungry kids. <span class="placeholder">[Order phone/text/form — confirm with owner]</span></p></div>
+      <div class="step"><div class="num">3</div><h3>Pick up in the alley</h3><p>Swing off Bay Street, grab the bag, and you're at the beach or back on the boat in minutes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <span class="kicker">The Board</span>
+    <h2>What the regulars <span class="hand">actually order</span></h2>
+    <div class="board-frame">
+      <div class="menu-item"><h3>Smash-style burgers</h3><span class="dots"></span><span class="tag">the staple</span><p>The reason half of Bay Street smells like griddle on a Friday night.</p></div>
+      <div class="menu-item"><h3>Loaded fries</h3><span class="dots"></span><span class="tag">share… maybe</span><p>Reviewers call them out by name — come hungry.</p></div>
+      <div class="menu-item"><h3>Plates</h3><span class="dots"></span><span class="tag">Rochester-style</span><p>The full upstate treatment, built for after a day on the water.</p></div>
+      <div class="menu-item"><h3>Lobster rolls</h3><span class="dots"></span><span class="tag">summer catch</span><p>A harbor town deserves one done properly.</p></div>
+      <div class="menu-item"><h3>Specials & sushi nights</h3><span class="dots"></span><span class="tag">watch the board</span><p>Rotating specials announced weekly — this page and the Facebook feed both carry them.</p></div>
+    </div>
+    <p class="menu-note">Menu highlights drawn from customer reviews & listings — final menu, items and pricing to be confirmed by the owner before launch.</p>
+  </div>
+</section>
+
+<section class="rev">
+  <div class="wrap">
+    <span class="kicker">Word Of Mouth</span>
+    <h2>4.9 out of 5 on TripAdvisor</h2>
+    <div class="score">★★★★★</div>
+    <blockquote>"Awesome food, excellent service, quick and easy ordering."<cite>— TripAdvisor reviewer (paraphrase — pull exact quote at launch)</cite></blockquote>
+    <blockquote>"Excellent tasty food — great burgers and loaded fries."<cite>— TripAdvisor reviewer (paraphrase — pull exact quote at launch)</cite></blockquote>
+  </div>
+</section>
+
+<section class="find" id="hours">
+  <div class="wrap">
+    <span class="kicker">Find The Alley</span>
+    <h2>Steps from the beach, <span class="hand">off Bay Street</span></h2>
+    <div class="cols">
+      <div class="card">
+        <h3>This week's hours</h3>
+        <p class="placeholder">[Live weekly hours block — owner updates in one place; feeds this page and Google. Current aggregator-listed hours: Wed–Thu 4–9, Fri–Sat 12–9, Sun 4–10:30 — CONFIRM before launch]</p>
+      </div>
+      <div class="card">
+        <h3>Contact & pickup</h3>
+        <p>8427 Bay Street, Sodus Point, NY 14555</p>
+        <p class="placeholder">[Phone: (585) 489-4605 or (585) 301-5367 — confirm which is current]</p>
+        <p style="margin-top:8px">Two blocks from Sodus Point Beach Park · dock-and-dine friendly for boaters</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>Back Alley Grill by Giuseppina's · 8427 Bay St, Sodus Point, NY · takeout only</footer>
+</body>
+</html>

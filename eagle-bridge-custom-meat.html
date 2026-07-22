@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!--
+NICHE IDENTITY BRIEF — Eagle Bridge Custom Meat & Smokehouse
+Business type: USDA-inspected slaughterhouse + custom meat processing + retail smokehouse, White Creek / Eagle Bridge NY (Rensselaer Co., WA border). Beef, pork, lamb, goat. Animal-welfare-approved slaughter (expanded from processing using family savings).
+Target customers: (1) Local farmers & homesteaders who need a booked slaughter + cut-and-wrap date to direct-market or fill their own freezer; (2) hunters (seasonal); (3) retail buyers of house-smoked bacon, hams, sausage, snack sticks.
+Local market: Washington/Rensselaer farm country — Cambridge, Hoosick, Salem, Greenwich, Schaghticoke; slaughter capacity in the region is scarce and booked out.
+Emotional tone: No-frills, honest, farm-rooted, respectful of the animal and the customer's freezer investment.
+Visual style: Butcher-shop — deep oxblood red, charcoal, cream/butcher-paper, kraft.
+Pain points: No website means slaughter dates, cut-sheet options, and hanging-weight pricing are all phone-only; farmers can't see how far out the calendar is; retail smoked products are invisible to new customers; USDA + animal-welfare status not showcased.
+Desires: Reserve a date, understand the drop-off → cut sheet → pickup flow, know it's USDA + humane, and be able to buy the smoked products.
+Trust signals: USDA-inspected establishment, animal-welfare-approved, family investment/expansion, long local reputation.
+Conversion goal: Slaughter/processing date request (call) + retail smokehouse awareness.
+Sections needed: Hero + book-a-date, services (slaughter, custom cut & wrap, smokehouse, retail), how-it-works, for-farmers, trust (USDA/humane), area, contact.
+Clichés to avoid: banned ORM list; "farm to table" overuse; do not invent specific prices or product SKUs — mark as placeholders.
+What makes it unique: Full USDA slaughter AND smokehouse under one roof in a region short on slaughter dates — this concept sells the CALENDAR and the cut-sheet clarity a phone-only shop can't.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eagle Bridge Custom Meat &amp; Smokehouse — USDA Slaughter, Custom Cut &amp; Wrap, Smoked Meats | White Creek, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ox:#7c1f1f; --ox-d:#5c1414; --char:#241f1e; --char2:#332b29;
+  --kraft:#c98a4b; --cream:#f5efe6; --paper:#faf6ef; --ink:#2a2321; --soft:#6b5f5a;
+  --line:#e3d8c8; --white:#fff; --sage:#5e7052;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Roboto',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+h1,h2,.nm,.eyebrow,.btn{font-family:'Oswald',sans-serif;letter-spacing:.5px}
+a{color:inherit}
+.note{background:#efe6d6;border-bottom:1px solid #e0d2ba;color:#7a6440;font-size:.8rem;text-align:center;padding:10px}
+.top{background:var(--char);color:#c9b8ae;font-size:.84rem}
+.top .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;padding:8px 24px}
+.top b{color:#f0c39a}
+.bar{background:var(--ox)}
+.bar .wrap{display:flex;justify-content:space-between;align-items:center;padding:15px 24px;flex-wrap:wrap;gap:10px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff}
+.mark{width:46px;height:46px;border-radius:8px;background:var(--cream);color:var(--ox);display:flex;align-items:center;justify-content:center;font-size:1.5rem}
+.brand .nm{font-size:1.28rem;font-weight:700;line-height:1;text-transform:uppercase}
+.brand .nm small{display:block;font-family:'Roboto';font-size:.57rem;letter-spacing:2.4px;color:#e9b9a0;font-weight:500;margin-top:5px}
+.nav{display:flex;gap:20px;align-items:center;font-size:.9rem}
+.nav a{text-decoration:none;color:#f0d6cc}.nav a:hover{color:#fff}
+.nav .cta{background:var(--kraft);color:#241f1e;padding:10px 18px;border-radius:5px;font-weight:700;font-family:'Oswald'}
+.hero{background:linear-gradient(160deg,var(--char2) 0%,var(--char) 70%);color:#fff;padding:76px 0 70px;position:relative}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background:repeating-linear-gradient(90deg,var(--ox) 0 30px,var(--kraft) 30px 60px)}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:38px;align-items:center}
+.hero .kick{display:inline-block;background:rgba(201,138,75,.2);color:var(--kraft);font-size:.76rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;padding:7px 14px;border-radius:4px;margin-bottom:18px}
+.hero h1{font-size:3rem;line-height:1.04;font-weight:700;margin-bottom:16px;text-transform:uppercase}
+.hero h1 em{color:var(--kraft);font-style:normal}
+.hero p{font-size:1.1rem;color:#cdbfb8;max-width:520px}
+.hero .row{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:5px;font-size:.95rem;text-transform:uppercase}
+.btn-k{background:var(--kraft);color:#241f1e}.btn-k:hover{background:#b87a3d}
+.btn-w{background:#fff;color:var(--ox)}.btn-w:hover{background:var(--cream)}
+.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:26px}
+.card h3{font-family:'Oswald';font-size:1.05rem;margin-bottom:14px;color:#fff;text-transform:uppercase}
+.card .li{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;font-size:.93rem;color:#cdbfb8}
+.card .li b{color:var(--kraft)}
+.trust{background:var(--ox-d);color:#fff}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:24px;text-align:center}
+.trust .t b{display:block;font-family:'Oswald';font-size:1.5rem;color:var(--kraft);font-weight:700}
+.trust .t span{font-size:.84rem;color:#e9c9be}
+section{padding:64px 0}
+.eyebrow{font-size:.78rem;letter-spacing:3px;text-transform:uppercase;color:var(--ox);font-weight:600;margin-bottom:10px}
+h2{font-size:2.3rem;color:var(--char);line-height:1.1;margin-bottom:12px;font-weight:700;text-transform:uppercase}
+.lead{color:var(--soft);max-width:660px;font-size:1.03rem;margin-bottom:36px}
+.svc{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.s{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px;display:flex;gap:16px}
+.s .ic{font-size:1.7rem;flex-shrink:0}
+.s h3{font-family:'Oswald';color:var(--ox);font-size:1.22rem;margin-bottom:5px;text-transform:uppercase}
+.s p{color:var(--soft);font-size:.93rem}
+.steps{background:var(--char);color:#d9ccc4;border-radius:14px;padding:44px}
+.steps .eyebrow{color:var(--kraft)}
+.steps h2{color:#fff}
+.steps .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:26px}
+.steps .g{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);border-radius:10px;padding:20px}
+.steps .g b{display:block;font-family:'Oswald';font-size:1.5rem;color:var(--kraft);font-weight:700;margin-bottom:6px}
+.steps .g span{font-size:.9rem;color:#cdbfb8}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.split .box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:32px}
+.split h2{font-size:1.95rem}
+.split ul{list-style:none;margin-top:6px}
+.split li{padding:11px 0 11px 30px;position:relative;border-bottom:1px solid var(--line);font-size:1rem;color:#3a302d}
+.split li:last-child{border:none}
+.split li:before{content:"\2713";position:absolute;left:0;top:11px;color:var(--sage);font-weight:800}
+.retail{background:linear-gradient(135deg,var(--kraft),#a86a34);color:#2a1f10;border-radius:14px;padding:40px 44px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.retail h2{color:#2a1f10;font-size:1.95rem;margin:0}
+.retail p{color:#4a3617;font-weight:500;max-width:540px;margin-top:6px}
+.area{text-align:center}
+.area .towns{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px}
+.area .towns span{background:var(--cream);color:var(--ox);padding:8px 16px;border-radius:5px;font-size:.9rem;font-weight:600;border:1px solid var(--line)}
+.cta{background:var(--ox);color:#fff;text-align:center;padding:74px 0}
+.cta h2{color:#fff;font-size:2.3rem;max-width:700px;margin:0 auto 14px}
+.cta p{color:#f0d6cc;max-width:560px;margin:0 auto 24px;font-size:1.04rem}
+.cta .phone{font-family:'Oswald';font-size:1.95rem;font-weight:700;color:var(--kraft);margin-top:18px}
+.foot{background:#1a1615;color:#a08e86;padding:30px 0;font-size:.86rem}
+.foot .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media(max-width:820px){
+  .nav{display:none}
+  .hero .wrap,.trust .wrap,.svc,.steps .grid,.split{grid-template-columns:1fr}
+  .hero h1{font-size:2.3rem}h2{font-size:1.85rem}
+  .steps,.split .box,.retail{padding:28px}
+}
+</style>
+</head>
+<body>
+<div class="note">Preview concept prepared by Onyx Rise Media for Eagle Bridge Custom Meat &amp; Smokehouse — not the company's live website. Product names, prices, and photos shown are placeholders pending the owner's own details.</div>
+<div class="top"><div class="wrap">
+  <div>📍 139 Center Road, White Creek (Eagle Bridge), NY 12057</div>
+  <div>🔪 <b>USDA-inspected · Animal-welfare approved</b></div>
+</div></div>
+<header class="bar"><div class="wrap">
+  <div class="brand">
+    <div class="mark">🥩</div>
+    <div class="nm">Eagle Bridge Custom Meat<small>&amp; SMOKEHOUSE · WHITE CREEK, NY</small></div>
+  </div>
+  <nav class="nav">
+    <a href="#services">Services</a>
+    <a href="#how">How It Works</a>
+    <a href="#farmers">For Farmers</a>
+    <a href="#smokehouse">Smokehouse</a>
+    <a href="#book" class="cta">Book a Date</a>
+  </nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="kick">Beef · Pork · Lamb · Goat — Washington &amp; Rensselaer County</span>
+    <h1>Your animal, cut the way <em>you asked for it</em>.</h1>
+    <p>A USDA-inspected slaughterhouse and smokehouse under one roof — humane handling, an honest cut sheet, and a freezer full of exactly what you ordered. Slaughter dates book out fast; reserve yours.</p>
+    <div class="row">
+      <a href="#book" class="btn btn-k">Reserve a slaughter date</a>
+      <a href="#services" class="btn btn-w">What we do</a>
+    </div>
+  </div>
+  <div class="card">
+    <h3>What you get here</h3>
+    <div class="li"><b>✓</b><span>USDA-inspected slaughter, <b>animal-welfare approved</b></span></div>
+    <div class="li"><b>✓</b><span>Custom cut &amp; wrap — you fill out the cut sheet, we follow it</span></div>
+    <div class="li"><b>✓</b><span>On-site smokehouse: bacon, hams, sausage, snack sticks</span></div>
+    <div class="li"><b>✓</b><span>Straight answers on hanging weight &amp; the calendar</span></div>
+  </div>
+</div></section>
+
+<div class="trust"><div class="wrap">
+  <div class="t"><b>USDA</b><span>Inspected establishment</span></div>
+  <div class="t"><b>Humane</b><span>Animal-welfare approved</span></div>
+  <div class="t"><b>4</b><span>Beef · Pork · Lamb · Goat</span></div>
+  <div class="t"><b>Family</b><span>Owned &amp; expanded on-site</span></div>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <div class="eyebrow">Under one roof</div>
+  <h2>Slaughter, cut &amp; wrap, and smoke</h2>
+  <p class="lead">Most shops do one part of this. We take the animal from the trailer to the wrapped, labeled packages in your cooler — and can smoke and cure whatever you want along the way.</p>
+  <div class="svc">
+    <div class="s"><div class="ic">🐄</div><div><h3>USDA Slaughter</h3><p>Inspected, animal-welfare-approved slaughter for beef, pork, lamb, and goat — the piece most farmers in this area struggle to book.</p></div></div>
+    <div class="s"><div class="ic">🔪</div><div><h3>Custom Cut &amp; Wrap</h3><p>You choose the cuts, thickness, roast sizes, and grind on the cut sheet. We follow it and label every package.</p></div></div>
+    <div class="s"><div class="ic">🔥</div><div><h3>Smokehouse &amp; Curing</h3><p>House-smoked bacon, hams, kielbasa, sausage, and snack sticks — cured and smoked here, not shipped in.</p></div></div>
+    <div class="s"><div class="ic">🦌</div><div><h3>Seasonal &amp; Specialty</h3><p>Special orders and seasonal processing. Ask what we can take on for your herd, your hog, or the season <em>(details to confirm)</em>.</p></div></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="steps" id="how">
+    <div class="eyebrow">Booking &amp; drop-off</div>
+    <h2>From the trailer to your freezer</h2>
+    <p style="color:#cdbfb8;max-width:640px">A phone-only shop makes this feel like a mystery. It isn't. Here's the whole flow, start to finish.</p>
+    <div class="grid">
+      <div class="g"><b>1.</b><span>Call and reserve a slaughter date — the calendar fills weeks ahead in season.</span></div>
+      <div class="g"><b>2.</b><span>Drop off the animal on your date; we handle it humanely, under USDA inspection.</span></div>
+      <div class="g"><b>3.</b><span>Fill out your cut sheet — cuts, thickness, ground, and anything to smoke or cure.</span></div>
+      <div class="g"><b>4.</b><span>Pick up wrapped, labeled, frozen packages — cut exactly as you ordered.</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="farmers"><div class="wrap">
+  <div class="split">
+    <div>
+      <div class="eyebrow">For farmers &amp; homesteaders</div>
+      <h2>The slaughter date is the hard part. We've got it.</h2>
+      <p class="lead">If you raise animals to sell meat or fill your own freezer, you already know inspected slaughter capacity around here is scarce and booked solid. Get on the calendar early, sell your beef and pork by the half or whole, and hand your customers a professionally cut, USDA-labeled product.</p>
+    </div>
+    <div class="box">
+      <ul>
+        <li>USDA-inspected — legal to sell by the cut, half, or whole</li>
+        <li>Animal-welfare-approved handling</li>
+        <li>Clear hanging-weight pricing, explained up front</li>
+        <li>Cut sheets your customers can customize</li>
+        <li>Smoking &amp; curing to add value to your pork</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="retail" id="smokehouse">
+    <div>
+      <h2>Straight from the smokehouse</h2>
+      <p>House-cured bacon, hams, kielbasa, and snack sticks smoked on site. Retail lineup and pricing to be listed here from the owner's own products <em>(placeholder — confirm current offerings)</em>.</p>
+    </div>
+    <a href="#book" class="btn btn-w">Ask what's in the case</a>
+  </div>
+</div></section>
+
+<section class="area"><div class="wrap">
+  <div class="eyebrow" style="text-align:center">Who we serve</div>
+  <h2>Farm country, both sides of the county line</h2>
+  <p class="lead" style="margin:0 auto">Farmers, homesteaders, and hunters bring animals to Eagle Bridge from across Rensselaer and Washington counties and nearby Vermont.</p>
+  <div class="towns">
+    <span>Eagle Bridge</span><span>White Creek</span><span>Cambridge</span><span>Hoosick Falls</span><span>Salem</span>
+    <span>Greenwich</span><span>Schaghticoke</span><span>Buskirk</span><span>Shushan</span>
+  </div>
+</div></section>
+
+<section class="cta" id="book"><div class="wrap">
+  <div class="eyebrow" style="color:var(--kraft)">Reserve your date</div>
+  <h2>Slaughter dates fill weeks out — get on the calendar</h2>
+  <p>Call with your animal type and roughly when you want to bring it in. We'll get you a date, walk you through the cut sheet, and give you honest hanging-weight pricing.</p>
+  <a href="#" class="btn btn-k">Call to reserve a date</a>
+  <div class="phone">(518) 677-2702</div>
+</div></section>
+
+<footer class="foot"><div class="wrap">
+  <div><strong>Eagle Bridge Custom Meat &amp; Smokehouse</strong> · 139 Center Road, White Creek (Eagle Bridge), NY 12057 · (518) 677-2702</div>
+  <div>USDA slaughter · Custom cut &amp; wrap · Smokehouse · Beef · Pork · Lamb · Goat</div>
+</div></footer>
+</body>
+</html>

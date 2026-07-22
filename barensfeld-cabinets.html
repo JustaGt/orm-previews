@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barensfeld Cabinets — Custom Cabinetmaking &amp; Furniture Restoration, Chatham NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--linen:#f6f3ed;--walnut:#4a352a;--walnut-l:#6b5140;--ink:#242019;--brass:#a8834a;--card:#fffdf9;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--linen);color:var(--ink);line-height:1.65}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif}
+.wrap{max-width:1020px;margin:0 auto;padding:0 22px}
+header{padding:22px 0;border-bottom:1px solid #e2dbcd}
+header .wrap{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;letter-spacing:.02em}
+.logo em{display:block;font-size:.8rem;font-family:'Inter',sans-serif;font-style:normal;color:#7a6f5d;letter-spacing:.12em;text-transform:uppercase}
+header nav a{color:var(--walnut);text-decoration:none;font-size:.9rem;margin-left:18px}
+/* hero */
+.hero{padding:78px 0 64px}
+.hero .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+@media(max-width:760px){.hero .grid{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(2rem,4.6vw,3.1rem);font-weight:500;line-height:1.12}
+.hero p{margin:18px 0 26px;color:#4d453a;font-size:1.05rem;max-width:480px}
+.btn{display:inline-block;background:var(--walnut);color:#fff;text-decoration:none;padding:13px 26px;font-size:.95rem;letter-spacing:.04em}
+.btn:hover{background:var(--walnut-l)}
+.btn.ghost{background:transparent;color:var(--walnut);border:1px solid var(--walnut);margin-left:10px}
+.hero .photo{aspect-ratio:4/5;background:linear-gradient(160deg,#d9cdb9,#b39c7d);display:flex;align-items:center;justify-content:center;color:#5d4c38;font-size:.85rem;text-align:center;padding:20px}
+/* work grid */
+section{padding:58px 0}
+.kicker{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);font-weight:600}
+h2{font-size:clamp(1.5rem,3.4vw,2.2rem);font-weight:500;margin:8px 0 22px}
+.workgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.work{aspect-ratio:1;background:linear-gradient(145deg,#e6ddcb,#c7b394);display:flex;align-items:flex-end;padding:16px;color:#4d3f2c;font-size:.85rem}
+/* two jobs */
+.jobs{background:var(--walnut);color:#efe8dc}
+.jobs h2{color:#fff}
+.jobs .cols{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid rgba(255,255,255,.18)}
+@media(max-width:700px){.jobs .cols{grid-template-columns:1fr}}
+.job{padding:34px}
+.job:first-child{border-right:1px solid rgba(255,255,255,.18)}
+@media(max-width:700px){.job:first-child{border-right:none;border-bottom:1px solid rgba(255,255,255,.18)}}
+.job h3{font-size:1.5rem;color:#fff;margin-bottom:10px}
+.job p{font-size:.96rem;color:#d9cfc0;margin-bottom:10px}
+.job a{color:#e9c98a;text-decoration:none;font-weight:600}
+/* process */
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.step{background:var(--card);border:1px solid #e5ddcc;padding:22px}
+.step::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--brass);display:block;margin-bottom:6px}
+.step b{display:block;margin-bottom:6px}
+.step p{font-size:.9rem;color:#5a5142}
+/* about */
+.about .cols{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+@media(max-width:720px){.about .cols{grid-template-columns:1fr}}
+.about .photo{aspect-ratio:1;background:linear-gradient(160deg,#cbbda4,#8f7a5c);display:flex;align-items:center;justify-content:center;color:#4d3f2c;font-size:.85rem;text-align:center;padding:20px}
+.about p{margin-bottom:12px;color:#4d453a}
+/* form */
+.inquire{background:#eee9dd}
+form{background:var(--card);border:1px solid #e2d9c6;padding:28px;display:grid;gap:12px;max-width:600px}
+label{font-size:.85rem;font-weight:600;letter-spacing:.02em}
+input,select,textarea{width:100%;padding:11px;border:1px solid #cfc5ae;background:#fff;font-family:inherit;font-size:.95rem}
+form .btn{border:none;cursor:pointer;width:100%}
+footer{border-top:1px solid #e2dbcd;padding:26px 0;font-size:.88rem;color:#7a6f5d}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="logo">Barensfeld Cabinets<em>Cabinetmaker &amp; restorer · Chatham, New York</em></div>
+<nav><a href="#work">Work</a><a href="#restore">Restoration</a><a href="#inquire">Inquire</a></nav>
+</div></header>
+
+<div class="hero"><div class="wrap"><div class="grid">
+<div>
+<span class="kicker">Since 1994 in the village of Chatham</span>
+<h1>Cabinetwork built by hand.<br>Furniture brought back to life.</h1>
+<p>Traditional to contemporary, with an emphasis on fine finishes — kitchens, built-ins, and one-off pieces from a three-person bench on Center Street. And when a good piece of furniture has had a hard century, we repair and restore it properly.</p>
+<a class="btn" href="#inquire">Start a commission</a><a class="btn ghost" href="#restore">Restore a piece</a>
+</div>
+<div class="photo">[PLACEHOLDER — hero photo: finished built-in or bench shot from the shop]</div>
+</div></div></div>
+
+<section id="work"><div class="wrap">
+<span class="kicker">Built work</span>
+<h2>The proof is in the joinery</h2>
+<div class="workgrid">
+<div class="work">[PLACEHOLDER — kitchen commission]</div>
+<div class="work">[PLACEHOLDER — library built-in]</div>
+<div class="work">[PLACEHOLDER — freestanding piece]</div>
+<div class="work">[PLACEHOLDER — finish detail close-up]</div>
+<div class="work">[PLACEHOLDER — restoration before/after]</div>
+<div class="work">[PLACEHOLDER — shop / bench]</div>
+</div>
+<p style="margin-top:12px;font-size:.85rem;color:#8a7f6b">Gallery slots reserved for the shop's own photographs — nothing here is stock.</p>
+</div></section>
+
+<section class="jobs" id="restore"><div class="wrap">
+<span class="kicker" style="color:#e9c98a">Two kinds of work, one skill</span>
+<h2>We build furniture — so we know how to save it</h2>
+<div class="cols">
+<div class="job"><h3>Commission cabinetwork</h3><p>Kitchens, built-ins, vanities, bookcases, and standalone furniture — designed with you, built in the shop, installed clean. Any style from Shaker-plain to contemporary; the finish work is the signature.</p><a href="#inquire">Bring us a project →</a></div>
+<div class="job"><h3>Repair &amp; restoration</h3><p>Loose joints, broken parts, ruined finishes, inherited pieces that deserve another generation. Restoration is a large part of the bench — assessed honestly before any work begins.</p><a href="#inquire">Ask about a piece →</a></div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<span class="kicker">How a commission goes</span>
+<h2>Four steps, no mystery</h2>
+<div class="steps">
+<div class="step"><b>Talk</b><p>You describe the space and the problem it needs to solve. Photos and rough dimensions are plenty to start.</p></div>
+<div class="step"><b>Design &amp; quote</b><p>We work out the design, materials, and finish together, and put a real number and timeline on it.</p></div>
+<div class="step"><b>Build</b><p>Your piece is built in the Chatham shop — you're welcome to see it in progress.</p></div>
+<div class="step"><b>Finish &amp; install</b><p>The finish room is where it earns the word "fine." Then we install and stand behind it.</p></div>
+</div>
+</div></section>
+
+<section class="about"><div class="wrap"><div class="cols">
+<div class="photo">[PLACEHOLDER — portrait at the bench]</div>
+<div>
+<span class="kicker">The shop</span>
+<h2>A small bench with three decades of habits</h2>
+<p>Barensfeld Cabinets has worked out of Chatham since 1994 — a small shop by choice, a member of the Berkshire Woodworkers Guild, building for homes across Columbia County and the Berkshires.</p>
+<p>Small means the person who quotes your job is the person who builds it. It also means we take on the work we can do properly, and tell you when something isn't worth the bench time.</p>
+<p style="font-size:.85rem;color:#8a7f6b">[Founding year + guild membership to be confirmed with owner before publish]</p>
+</div>
+</div></div></section>
+
+<section class="inquire" id="inquire"><div class="wrap">
+<span class="kicker">Inquire</span>
+<h2>Tell us about the project — or the piece</h2>
+<form>
+<div><label for="n">Name</label><input id="n" type="text"></div>
+<div><label for="e">Email or phone</label><input id="e" type="text"></div>
+<div><label for="t">What is it?</label><select id="t"><option>New cabinetwork / built-ins</option><option>Standalone furniture commission</option><option>Repair or restoration</option><option>Not sure yet</option></select></div>
+<div><label for="m">Describe it — dimensions, timeline, and photos help</label><textarea id="m" rows="4"></textarea></div>
+<button class="btn" type="submit">Send to the shop</button>
+<p style="font-size:.85rem;color:#8a7f6b">Or call the shop: (518) 392-7300 · 80 Center Street, Chatham NY</p>
+</form>
+</div></section>
+
+<footer><div class="wrap">
+<div>Barensfeld Cabinets · 80 Center Street, Chatham, NY 12037</div>
+<div>(518) 392-7300 · Berkshire Woodworkers Guild member</div>
+</div></footer>
+</body>
+</html>

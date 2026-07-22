@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Letchworth Barn Antiques — Mount Morris, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Karla:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--barn:#5e3023;--rust:#a4552e;--cream:#f7f1e3;--parch:#efe6d0;--ink:#332218;--gold:#b98b3f;--line:#ddcfb4}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Karla',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.12}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{background:var(--barn);color:var(--cream)}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.logo{font-family:'Playfair Display';font-weight:800;font-size:1.2rem}
+.logo small{display:block;font-family:'Karla';font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.nav a{color:var(--cream);text-decoration:none;border:1px solid var(--gold);padding:9px 18px;border-radius:2px;font-weight:600;font-size:.9rem}
+.hero{background:linear-gradient(180deg,var(--barn),#4a251b);color:var(--cream);padding:88px 0 76px;text-align:center}
+.hero .est{letter-spacing:.26em;text-transform:uppercase;font-size:.75rem;color:var(--gold)}
+.hero h1{font-size:clamp(2.1rem,5.8vw,3.6rem);font-weight:800;margin:16px auto 18px;max-width:20ch}
+.hero p{max-width:56ch;margin:0 auto;color:#e8dcc4;font-size:1.08rem}
+.hero .cta{display:inline-block;margin-top:28px;background:var(--gold);color:#2e1c10;text-decoration:none;font-weight:600;padding:14px 32px;border-radius:2px}
+.hero .addr{display:block;margin-top:16px;font-size:.88rem;color:#cbb28a}
+.rooms{padding:70px 0}
+.k{color:var(--rust);font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:.75rem}
+h2{font-size:clamp(1.6rem,3.8vw,2.3rem);margin:10px 0 14px;color:var(--barn)}
+.lede{max-width:60ch;color:#5c4632}
+.roomgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:34px}
+.room{background:#fff;border:1px solid var(--line);padding:28px 24px;position:relative}
+.room::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--gold)}
+.room h3{font-size:1.15rem;margin-bottom:8px;color:var(--barn)}
+.room p{font-size:.94rem;color:#5c4632}
+.trip{background:var(--parch);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:66px 0}
+.trip-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+.itin{background:var(--barn);color:#eadfc6;padding:34px 30px;border-radius:4px}
+.itin strong{font-family:'Playfair Display';color:var(--gold);display:block;font-size:1.1rem;margin-bottom:12px}
+.itin ol{margin-left:20px;font-size:.95rem;display:grid;gap:8px}
+.reviews{padding:70px 0;text-align:center}
+.quotegrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:34px;text-align:left}
+.q{background:#fff;border:1px solid var(--line);padding:28px 24px;font-style:italic;color:#4c3a27}
+.q span{display:block;margin-top:14px;font-style:normal;font-weight:600;font-size:.82rem;color:var(--rust);letter-spacing:.06em;text-transform:uppercase}
+.visit{background:var(--barn);color:var(--cream);padding:70px 0}
+.visit h2{color:var(--cream)}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:32px}
+.v{border:1px solid #7a4a37;padding:26px 22px;border-radius:4px}
+.v h3{color:var(--gold);font-size:.82rem;font-family:'Karla';letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+.v p{color:#e8dcc4;font-size:.96rem}
+.dealer{padding:64px 0;text-align:center}
+.dealer p{max-width:52ch;margin:0 auto;color:#5c4632}
+.dealer .cta{display:inline-block;margin-top:22px;background:var(--barn);color:var(--cream);text-decoration:none;font-weight:600;padding:14px 32px;border-radius:2px}
+footer{background:#3d1f16;color:#b99d78;text-align:center;padding:26px 20px;font-size:.85rem}
+@media(max-width:780px){.trip-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="logo">Letchworth Barn Antiques<small>Mount Morris · New York</small></div>
+    <a href="tel:15854696064">585-469-6064</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="est">On Main Street at the Letchworth Gateway</span>
+    <h1>Thousands of square feet of things they don't make anymore.</h1>
+    <p>Furniture, primitives, advertising pieces, and honest oddities — room after room of them, priced to leave with you. Five minutes off I-390 Exit 7, on the way into Letchworth State Park's Mount Morris end.</p>
+    <a class="cta" href="tel:15854696064">Call Before You Detour</a>
+    <span class="addr">36 N. Main St, Mount Morris, NY 14510</span>
+  </div>
+</section>
+
+<section class="rooms">
+  <div class="wrap">
+    <span class="k">Inside the Barn</span>
+    <h2>What turns up in here</h2>
+    <p class="lede">Stock changes constantly — that's the point. These are the categories regulars come back for.</p>
+    <div class="roomgrid">
+      <div class="room"><h3>Furniture with Miles On It</h3><p>Dressers, farm tables, hotel chests, and Victorian desks — solid-wood pieces at prices reviewers call "really reasonable."</p></div>
+      <div class="room"><h3>Primitives &amp; Country</h3><p>Crocks, tinware, wooden bowls and the well-worn farmhouse pieces that decorators drive out from Rochester to find.</p></div>
+      <div class="room"><h3>Collectibles &amp; Curiosities</h3><p>Advertising tins, glassware, tools, and the unusual — the shop's specialty is the thing you didn't know you were hunting.</p></div>
+      <div class="room"><h3>Dealer-Friendly Stacks</h3><p>Volume and turnover make the barn a working stop for pickers and booth dealers, not just browsers.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="trip">
+  <div class="wrap trip-grid">
+    <div>
+      <span class="k">Make a Day of It</span>
+      <h2>The Letchworth day-trip add-on</h2>
+      <p class="lede">Mount Morris is the northern doorway to Letchworth State Park. The barn sits right on the village's Main Street — an easy forty-five minutes of browsing before the gorge, or on the drive home while the car's already pointed this way.</p>
+    </div>
+    <div class="itin">
+      <strong>A Saturday that works</strong>
+      <ol>
+        <li>Morning at the Mount Morris dam overlook</li>
+        <li>Lunch on Main Street in the village</li>
+        <li>An hour in the barn — bring the truck</li>
+        <li>Golden hour at the falls in the park</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <span class="k">Word of Mouth</span>
+    <h2>What visitors say</h2>
+    <div class="quotegrid">
+      <div class="q">"Very large store with a big selection of furniture and antiques… really reasonable prices and a friendly owner."<span>TripAdvisor review</span></div>
+      <div class="q">"Filled with really unique pieces. Ed is such a friendly and kind man."<span>Visitor review</span></div>
+      <div class="q">"A Letchworth Park premiere antique shop — thousands of square feet crammed with bargains."<span>Directory listing</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap">
+    <span class="k" style="color:var(--gold)">Plan Your Visit</span>
+    <h2>Before you drive out</h2>
+    <div class="vgrid">
+      <div class="v"><h3>Find Us</h3><p>36 N. Main St, Mount Morris, NY 14510 — just off I-390 Exit 7, at the north end of Letchworth State Park.</p></div>
+      <div class="v"><h3>Hours</h3><p>[Hours placeholder — confirm current hours with Ed before publishing.] Call ahead and we'll tell you what just came in.</p></div>
+      <div class="v"><h3>Talk to Ed</h3><p>585-469-6064 — looking for a specific piece? Ask. If it's not in the barn, it tends to turn up.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dealer">
+  <div class="wrap">
+    <span class="k">Buying &amp; Selling</span>
+    <h2>Got a barn of your own to empty?</h2>
+    <p>Estates, downsizing, single standout pieces — call the shop before the auction house. Fair offers, straight answers, and a truck that can come to you.</p>
+    <a class="cta" href="tel:15854696064">Call 585-469-6064</a>
+  </div>
+</section>
+
+<footer>Letchworth Barn Antiques · 36 N. Main St, Mount Morris, NY 14510 · 585-469-6064</footer>
+</body>
+</html>

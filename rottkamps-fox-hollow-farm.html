@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rottkamp's Fox Hollow Farm — Sweet Corn, Sunflowers &amp; Pumpkins on Sound Avenue | Calverton, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--corn:#f2b722;--barn:#2f6b3a;--dkbarn:#1f4a27;--cream:#fdf8ec;--rust:#c05621;--ink:#33301f;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Nunito',sans-serif;background:var(--cream);color:#33301f;line-height:1.65;}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px;}
+.hand{font-family:'Chewy',cursive;}
+/* hero */
+header{background:var(--barn);color:#fff;padding:60px 0 0;text-align:center;position:relative;}
+.est{display:inline-block;border:2px dashed rgba(255,255,255,.5);border-radius:30px;padding:6px 18px;font-weight:700;font-size:.85rem;letter-spacing:.08em;margin-bottom:18px;}
+h1{font-family:'Chewy',cursive;font-size:clamp(2.2rem,6vw,3.8rem);line-height:1.08;}
+.sub{max-width:620px;margin:16px auto 26px;font-size:1.12rem;color:#e4f0e0;}
+.cta{display:inline-block;background:var(--corn);color:#4a3405;font-weight:900;padding:15px 32px;border-radius:40px;text-decoration:none;font-size:1.05rem;margin-bottom:44px;}
+.picket{height:26px;background:repeating-linear-gradient(90deg,var(--cream) 0 22px,transparent 22px 26px);border-radius:12px 12px 0 0;}
+/* picking now */
+.now{padding:56px 0 30px;text-align:center;}
+.now h2{font-family:'Chewy',cursive;color:var(--rust);font-size:2rem;margin-bottom:8px;}
+.now p.note{font-size:.9rem;color:#8a7a55;margin-bottom:26px;}
+.board{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;}
+.chalk{background:var(--dkbarn);color:#fff;border-radius:10px;padding:22px 16px;border:4px solid #163a1c;}
+.chalk .hand{color:var(--corn);font-size:1.25rem;display:block;margin-bottom:4px;}
+.chalk span{font-size:.9rem;color:#cfe3cf;}
+/* season strip */
+.season{padding:50px 0;}
+.season h2{font-family:'Chewy',cursive;color:var(--barn);font-size:2rem;text-align:center;margin-bottom:30px;}
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border:3px solid var(--barn);border-radius:12px;overflow:hidden;}
+.month{padding:24px 18px;border-right:3px solid var(--barn);background:#fff;}
+.month:last-child{border-right:none;}
+.month b{font-family:'Chewy',cursive;font-weight:400;color:var(--rust);font-size:1.15rem;display:block;margin-bottom:6px;}
+.month p{font-size:.92rem;}
+@media(max-width:840px){.month{border-right:none;border-bottom:3px solid var(--barn);}.month:last-child{border-bottom:none;}}
+/* wholesale */
+.whole{background:var(--corn);padding:46px 0;}
+.whole .wrap{display:flex;gap:30px;align-items:center;flex-wrap:wrap;}
+.whole h2{font-family:'Chewy',cursive;color:#4a3405;font-size:1.9rem;flex:1 1 300px;}
+.whole p{flex:1 1 300px;color:#4a3405;font-weight:700;}
+.whole a{display:inline-block;background:var(--dkbarn);color:#fff;font-weight:900;padding:13px 26px;border-radius:40px;text-decoration:none;margin-top:10px;}
+/* family */
+.family{padding:56px 0;}
+.family .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;}
+@media(max-width:760px){.family .grid{grid-template-columns:1fr;}}
+.family h2{font-family:'Chewy',cursive;color:var(--barn);font-size:2rem;margin-bottom:14px;}
+.family p{margin-bottom:12px;}
+.photo{background:#e5dcc3;border-radius:10px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:#8a7a55;font-size:.85rem;text-align:center;padding:10px;}
+/* reviews */
+.revs{background:#f4ecd8;padding:50px 0;}
+.revs h2{font-family:'Chewy',cursive;color:var(--rust);font-size:1.9rem;text-align:center;margin-bottom:26px;}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;}
+.rev{background:#fff;border-radius:10px;padding:22px;border-bottom:5px solid var(--corn);}
+.rev p{font-size:.95rem;font-style:italic;margin-bottom:10px;}
+.rev b{font-size:.85rem;color:#8a7a55;}
+/* visit */
+.visit{background:var(--barn);color:#fff;padding:56px 0;}
+.visit .grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;}
+@media(max-width:720px){.visit .grid{grid-template-columns:1fr;}}
+.visit h2{font-family:'Chewy',cursive;font-size:2rem;color:var(--corn);margin-bottom:14px;}
+.visit p{margin-bottom:10px;}
+.visit a{color:var(--corn);font-weight:900;text-decoration:none;}
+.hours{background:var(--dkbarn);border-radius:10px;padding:24px;}
+.hours table{width:100%;font-size:.95rem;}
+.hours td{padding:5px 0;border-bottom:1px dashed rgba(255,255,255,.2);}
+.hours td:last-child{text-align:right;}
+footer{background:var(--dkbarn);color:#a8c4a8;text-align:center;font-size:.85rem;padding:20px 0;}
+</style>
+</head>
+<body>
+
+<header>
+<div class="wrap">
+<span class="est">ROTTKAMP FAMILY FARM · SOUND AVENUE, CALVERTON</span>
+<h1>Sweet corn picked this morning.<br>Sold this afternoon.</h1>
+<p class="sub">Rottkamp's Fox Hollow Farm is a family-run stand on Long Island's Sound Avenue farm belt — famous for sweet corn and tomatoes, with strawberries in June, a sunflower maze in summer and pumpkins &amp; hay rides come fall.</p>
+<a class="cta" href="#visit">Plan Your Stop →</a>
+</div>
+<div class="picket"></div>
+</header>
+
+<section class="now"><div class="wrap">
+<h2>On the stand this week</h2>
+<p class="note">[Sample board — final site updates this weekly from the farm's Facebook posts]</p>
+<div class="board">
+<div class="chalk"><span class="hand">Sweet Corn</span><span>picked daily at first light</span></div>
+<div class="chalk"><span class="hand">Beefsteak Tomatoes</span><span>field-grown, sold by the pound</span></div>
+<div class="chalk"><span class="hand">Summer Squash</span><span>[PLACEHOLDER — confirm crop list]</span></div>
+<div class="chalk"><span class="hand">Cut Sunflowers</span><span>from the maze fields</span></div>
+</div>
+</div></section>
+
+<section class="season"><div class="wrap">
+<h2>A season on Sound Avenue</h2>
+<div class="strip">
+<div class="month"><b>June</b><p>Strawberries — come early, they sell out by afternoon.</p></div>
+<div class="month"><b>July – September</b><p>Sweet corn every day, tomatoes rolling in behind it. The corn the neighbors line up for.</p></div>
+<div class="month"><b>Mid–Late Summer</b><p>The sunflower maze opens — bring the camera, leave with a bouquet.</p></div>
+<div class="month"><b>September – October</b><p>Pumpkin patch &amp; hay rides. Weekends get busy; mornings are calmer.</p></div>
+</div>
+</div></section>
+
+<div class="whole"><div class="wrap">
+<h2>Restaurants &amp; markets: our corn, your menu.</h2>
+<p>Fox Hollow sells wholesale as well as retail. If you need sweet corn or tomatoes by the crate through the season, call the farm and ask for the wholesale line.<br>
+<a href="tel:6317271786">Wholesale inquiries: (631) 727-1786</a></p>
+</div></div>
+
+<section class="family"><div class="wrap">
+<div class="grid">
+<div>
+<h2>The Rottkamps have been farming this ground for generations.</h2>
+<p>[PLACEHOLDER — family history paragraph: generations, acreage, when the Sound Avenue stand opened. Confirm details with the family before publish.]</p>
+<p>What doesn't need confirming: the corn is picked the morning you buy it, the tomatoes never see a warehouse, and the person weighing your bag is probably a Rottkamp.</p>
+</div>
+<div class="photo">[PHOTO — the stand on Sound Avenue / family in the corn field]</div>
+</div>
+</div></section>
+
+<section class="revs"><div class="wrap">
+<h2>What folks say on the way out</h2>
+<div class="rgrid">
+<div class="rev"><p>"Visitors on Yelp consistently call out the sweet corn and fair prices."</p><b>— summary of public Yelp reviews [paraphrased placeholder — pull verbatim quotes with permission]</b></div>
+<div class="rev"><p>"The sunflower maze and fall hay rides get singled out as family favorites."</p><b>— summary of public reviews &amp; News12 feature [paraphrased placeholder]</b></div>
+<div class="rev"><p>"Featured in News12's 'East End Fall Fun' segment."</p><b>— News12 Long Island</b></div>
+</div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+<div class="grid">
+<div>
+<h2>Find the stand</h2>
+<p><strong>Rottkamp's Fox Hollow Farm</strong><br>2287 Sound Ave, Calverton, NY 11933</p>
+<p>On the Sound Avenue farm belt, minutes west of the Riverhead traffic circle.</p>
+<p>Call ahead for what's picking today:<br><a href="tel:6317271786">(631) 727-1786</a></p>
+<p>Follow the farm on <a href="https://www.facebook.com/Rottkamps-Fox-Hollow-Farm-1681094095465096/">Facebook</a> for daily picks &amp; maze dates.</p>
+</div>
+<div class="hours">
+<h2 style="font-size:1.4rem">Stand hours</h2>
+<table>
+<tr><td>Monday</td><td>10:00 – 5:30</td></tr>
+<tr><td>Tuesday</td><td>Closed</td></tr>
+<tr><td>Wednesday</td><td>Closed</td></tr>
+<tr><td>Thursday – Sunday</td><td>10:00 – 5:30</td></tr>
+</table>
+<p style="margin-top:12px;font-size:.85rem;color:#cfe3cf;">[Hours from public listings — confirm with the farm, seasonal]</p>
+</div>
+</div>
+</div></section>
+
+<footer><div class="wrap">© 2026 Rottkamp's Fox Hollow Farm · 2287 Sound Ave, Calverton, NY · (631) 727-1786</div></footer>
+</body>
+</html>

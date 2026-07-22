@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cindy's Pies — Grape Pie in Naples, NY Since 1978</title>
+<meta name="description" content="Cindy's Pies has baked Naples' famous Concord grape pie behind the same Dutch door since 1978. Open Fri–Sun. Call (585) 374-6122 to reserve your pie.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--grape:#4a2350;--grape-deep:#33173a;--cream:#faf4e8;--crust:#c98a3d;--ink:#2e2230;--leaf:#5c7a4e}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+h1,h2,h3{font-family:'Fraunces',serif}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+.topbar{background:var(--grape-deep);color:#e9d9ef;font-size:.92rem;text-align:center;padding:8px 14px}
+.topbar strong{color:#fff}
+header{background:var(--cream);border-bottom:3px solid var(--grape);padding:16px 0}
+header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.logo{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:700;color:var(--grape)}
+.logo span{display:block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--crust);font-family:'Source Sans 3',sans-serif}
+nav a{color:var(--ink);text-decoration:none;margin-left:18px;font-weight:600;font-size:.95rem}
+nav a:hover{color:var(--grape)}
+.call{background:var(--grape);color:#fff!important;padding:9px 18px;border-radius:999px}
+.hero{background:linear-gradient(160deg,var(--grape) 0%,var(--grape-deep) 70%);color:#f6ecf9;padding:72px 0 64px}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:center}
+.hero h1{font-size:2.7rem;line-height:1.12;font-weight:700}
+.hero h1 em{color:#e4b95d;font-style:normal}
+.hero p{margin:18px 0 26px;font-size:1.12rem;max-width:34em}
+.btn{display:inline-block;background:var(--crust);color:#fff;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:6px;font-size:1.05rem}
+.btn.ghost{background:transparent;border:2px solid #cfa9db;color:#f0e2f5;margin-left:12px}
+.pie-card{background:var(--cream);color:var(--ink);border-radius:10px;padding:26px;box-shadow:0 14px 40px rgba(0,0,0,.3)}
+.pie-card h3{color:var(--grape);font-size:1.15rem;margin-bottom:8px}
+.pie-card .status{display:inline-block;background:#e8f0e2;color:var(--leaf);font-weight:700;font-size:.85rem;padding:4px 12px;border-radius:999px;margin-bottom:10px}
+.pie-card p{font-size:.97rem}
+.pie-card .hours{margin-top:14px;border-top:1px dashed var(--crust);padding-top:12px;font-size:.95rem}
+section{padding:64px 0}
+.kicker{letter-spacing:.2em;text-transform:uppercase;font-size:.8rem;color:var(--crust);font-weight:700}
+h2{font-size:2rem;color:var(--grape);margin:6px 0 14px}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:28px}
+.pie{background:#fff;border-radius:10px;overflow:hidden;border:1px solid #eadfce}
+.pie .swatch{height:86px;background:linear-gradient(135deg,var(--grape),#7c4a8a)}
+.pie:nth-child(2) .swatch{background:linear-gradient(135deg,#a33131,#d97742)}
+.pie:nth-child(3) .swatch{background:linear-gradient(135deg,#b9822f,#e0b45c)}
+.pie:nth-child(4) .swatch{background:linear-gradient(135deg,#7a3b2e,#a86a3f)}
+.pie:nth-child(5) .swatch{background:linear-gradient(135deg,#405e35,#7a9e58)}
+.pie:nth-child(6) .swatch{background:linear-gradient(135deg,#8c2f4f,#c4587c)}
+.pie div.body{padding:18px 20px}
+.pie h3{color:var(--grape);font-size:1.1rem}
+.pie p{font-size:.93rem;margin-top:6px}
+.pie .note{font-size:.8rem;color:var(--crust);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-top:10px}
+.band{background:var(--grape);color:#f0e2f5}
+.band h2{color:#fff}
+.band .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:30px}
+.band .step{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:24px}
+.band .step b{display:block;font-size:2rem;font-family:'Fraunces',serif;color:#e4b95d}
+.story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.story .door{background:linear-gradient(180deg,#6b3d20 0%,#8a5630 100%);border-radius:12px 12px 6px 6px;min-height:320px;position:relative;border:6px solid #4d2b15}
+.story .door:after{content:"";position:absolute;left:8%;right:8%;top:50%;height:6px;background:#4d2b15}
+.story .door span{position:absolute;bottom:12px;left:0;right:0;text-align:center;color:#f3dfc4;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase}
+.reviews{background:#fff}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:26px}
+.review{background:var(--cream);border-radius:10px;padding:22px;border:1px solid #eadfce;font-size:.96rem}
+.review .stars{color:var(--crust);letter-spacing:.12em;margin-bottom:8px}
+.review cite{display:block;margin-top:10px;font-style:normal;font-weight:700;color:var(--grape);font-size:.88rem}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.visit .card{background:#fff;border-radius:10px;padding:26px;border:1px solid #eadfce}
+.visit h3{color:var(--grape);margin-bottom:10px}
+.visit table{width:100%;border-collapse:collapse;font-size:.98rem}
+.visit td{padding:7px 0;border-bottom:1px dashed #eadfce}
+.visit td:last-child{text-align:right;font-weight:600}
+footer{background:var(--grape-deep);color:#cbb3d4;padding:34px 0;font-size:.92rem;text-align:center}
+footer a{color:#e4b95d;text-decoration:none}
+@media(max-width:820px){.hero .wrap,.story .wrap,.visit .wrap{grid-template-columns:1fr}.menu-grid,.review-grid,.band .steps{grid-template-columns:1fr}.hero h1{font-size:2.1rem}nav{display:none}}
+</style>
+</head>
+<body>
+<div class="topbar">Grape pie season never really ends in Naples — <strong>call (585) 374-6122 to reserve yours before the weekend.</strong></div>
+<header>
+  <div class="wrap">
+    <div class="logo">Cindy's Pies<span>Naples, New York · Since 1978</span></div>
+    <nav>
+      <a href="#pies">The Pies</a>
+      <a href="#preorder">Pre-Order</a>
+      <a href="#story">Our Story</a>
+      <a href="#visit">Visit</a>
+      <a class="call" href="tel:5853746122">(585) 374-6122</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>The grape pie people drive to Naples for — <em>behind the same Dutch door since 1978.</em></h1>
+      <p>Concord grapes, skins and all, in a scratch crust — the pie this valley is famous for, baked a few steps off Main Street at 5 Academy Street. Weekends sell out. Calling ahead is the Naples way.</p>
+      <a class="btn" href="tel:5853746122">Reserve a Pie by Phone</a>
+      <a class="btn ghost" href="#visit">Hours &amp; Directions</a>
+    </div>
+    <div class="pie-card">
+      <h3>This Weekend at the Bakery</h3>
+      <span class="status">● Open Fri – Sun</span>
+      <p>Grape pies are baking, plus the week's fruit lineup. Whole pies go fast after noon — reserved pies wait for you by name.</p>
+      <div class="hours">Fri · Sat · Sun — 10 am to 5 pm<br>5 Academy St, just off Main</div>
+    </div>
+  </div>
+</div>
+
+<section id="pies">
+  <div class="wrap">
+    <span class="kicker">The Pies</span>
+    <h2>Grape first. Then everything else worth a crust.</h2>
+    <p style="max-width:44em">Every pie is made from scratch in small weekend batches. The lineup shifts with the seasons — here's what regulars ask for by name.</p>
+    <div class="menu-grid">
+      <div class="pie"><div class="swatch"></div><div class="body"><h3>Concord Grape</h3><p>The one that made Naples famous — whole Concord grapes, tart skins folded back in, nothing from a can.</p><div class="note">The signature · sells out first</div></div></div>
+      <div class="pie"><div class="swatch"></div><div class="body"><h3>Sour Cherry</h3><p>Bright, puckery filling under a lattice top — the pick of the no-grape loyalists.</p><div class="note">Seasonal favorite</div></div></div>
+      <div class="pie"><div class="swatch"></div><div class="body"><h3>Peach</h3><p>High-summer pie, juicy and light on sugar so the fruit does the talking.</p><div class="note">Summer weekends</div></div></div>
+      <div class="pie"><div class="swatch"></div><div class="body"><h3>Apple Crumb</h3><p>Deep-dish apples under a brown-sugar crumb — the fall companion to grape season.</p><div class="note">Festival &amp; fall</div></div></div>
+      <div class="pie"><div class="swatch"></div><div class="body"><h3>Grape Tarts &amp; Small Bakes</h3><p>Hand-size grape tarts and scratch baked goods for the car ride down the lake.</p><div class="note">While they last</div></div></div>
+      <div class="pie"><div class="swatch"></div><div class="body"><h3>Ask What's in the Case</h3><p>The oven decides the extras each week. Call Friday morning and we'll tell you what's cooling.</p><div class="note">(585) 374-6122</div></div></div>
+    </div>
+    <p style="margin-top:18px;font-size:.85rem;color:#8a7a90"><em>[Placeholder: confirm current pie lineup and prices with Cindy's before publishing]</em></p>
+  </div>
+</section>
+
+<section class="band" id="preorder">
+  <div class="wrap">
+    <span class="kicker" style="color:#e4b95d">Pre-Orders</span>
+    <h2>Festival weekend and the holidays empty the shelves. Get your name on a box.</h2>
+    <div class="steps">
+      <div class="step"><b>1</b>Call the bakery at (585) 374-6122 — a person answers, not a menu.</div>
+      <div class="step"><b>2</b>Tell us your pies and your pickup day — Grape Festival, Thanksgiving, and Christmas orders are taken early.</div>
+      <div class="step"><b>3</b>Pick up at the Dutch door. Your pies are boxed, labeled, and waiting.</div>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Since 1978</span>
+      <h2>Forty-seven years of flour on the same floorboards.</h2>
+      <p>Cindy's opened its Dutch door in 1978, when grape pie was still a hometown secret traded at church suppers. Naples grew into the grape pie capital of the world, and the little bakery on Academy Street kept doing the only thing it ever did: real fruit, scratch pastry, weekend batches.</p>
+      <p style="margin-top:12px">No franchise, no food-service filling, no shortcuts — just the pie that made this valley's name, from people who've been baking it longer than most of the wineries on the trail have been pouring.</p>
+    </div>
+    <div class="door"><span>The Dutch door · 5 Academy St</span></div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <span class="kicker">What Visitors Say</span>
+    <h2>4.9 out of 5 on Tripadvisor — a Travelers' Choice bakery.</h2>
+    <div class="review-grid">
+      <div class="review"><div class="stars">★★★★★</div>Rated 4.9/5 across 66 Tripadvisor reviews — ranked among the top places to eat in Naples.<cite>Tripadvisor · Travelers' Choice</cite></div>
+      <div class="review"><div class="stars">★★★★★</div>Reviewers on Yelp and Restaurantji come back to the same words: real grape filling, flaky crust, worth the drive.<cite>151 reviews on Restaurantji</cite></div>
+      <div class="review"><div class="stars">★★★★★</div><em>[Placeholder: pull two favorite customer quotes with permission before publishing]</em><cite>Verified visitor reviews</cite></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="card">
+      <h3>Find the Dutch Door</h3>
+      <p><strong>5 Academy St, Naples, NY 14512</strong><br>One turn off Main Street — look for the half-open door and the smell of pastry. Easy stop on the way to Grimes Glen or the wine trail.</p>
+      <p style="margin-top:12px"><a href="https://maps.google.com/?q=Cindy's+Pies+5+Academy+St+Naples+NY" style="color:var(--grape);font-weight:700">Get directions →</a></p>
+    </div>
+    <div class="card">
+      <h3>Bakery Hours</h3>
+      <table>
+        <tr><td>Friday</td><td>10 am – 5 pm</td></tr>
+        <tr><td>Saturday</td><td>10 am – 5 pm</td></tr>
+        <tr><td>Sunday</td><td>10 am – 5 pm</td></tr>
+        <tr><td>Mon – Thu</td><td>Baking days — closed</td></tr>
+      </table>
+      <p style="margin-top:14px"><a class="btn" href="tel:5853746122" style="width:100%;text-align:center">Call (585) 374-6122</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:#fff">Cindy's Pies</strong> · 5 Academy St, Naples, NY 14512 · <a href="tel:5853746122">(585) 374-6122</a></p>
+    <p style="margin-top:8px">Baking Naples' famous grape pie since 1978 · <a href="https://www.facebook.com/grapepies">Follow us on Facebook</a></p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Styx River Taxidermy — Fine-Art Deer, Bear &amp; Fish Mounts, Jay NY (Adirondacks)</title>
+<meta name="description" content="Styx River Taxidermy is a fine-art studio in Jay, NY, mounting Adirondack deer, bear, game, birds and fish with hand-sculpted habitat. Read the field-care guide before your season and reserve a mount with artist Marissa Jonke.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#1c2b22; --forest-d:#141f19; --moss:#3a5a45; --sage:#7c977f;
+    --bone:#efe7d6; --bone-d:#e3d8c1; --paper:#f6f2ea; --ink:#20281f; --gray:#5c6559;
+    --slate:#48626b; --rust:#a5542f; --rust-d:#8b4425; --white:#fff; --line:#ddd3bf;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+  h1,h2,h3,.disp{font-family:'Cormorant Garamond',serif;line-height:1.06}
+  a{color:inherit}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--rust);color:#fff;font-weight:600;padding:14px 28px;border-radius:4px;
+    text-decoration:none;transition:transform .15s,background .15s;font-size:1rem;letter-spacing:.01em}
+  .btn:hover{transform:translateY(-2px);background:var(--rust-d)}
+  .btn.ghost{background:transparent;border:1.5px solid rgba(239,231,214,.6);color:var(--bone)}
+  .btn.ghost:hover{background:rgba(239,231,214,.12)}
+
+  .topbar{background:var(--forest-d);color:#b8c6b9;font-size:.88rem}
+  .topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;padding:8px 22px}
+  .topbar b{color:var(--bone)}
+
+  header.nav{background:var(--forest);color:var(--bone);position:sticky;top:0;z-index:20;border-bottom:1px solid #2c3c31}
+  header.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
+  .brand{display:flex;align-items:center;gap:13px}
+  .brand .mark{width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 42% 36%,#5a7a5f,#1c2b22);display:flex;align-items:center;justify-content:center;color:var(--bone);font-family:'Cormorant Garamond';font-weight:700;font-size:1.35rem;border:1px solid #3a5a45}
+  .brand b{font-family:'Cormorant Garamond';font-size:1.5rem;letter-spacing:.01em;font-weight:700}
+  .brand span{display:block;font-family:'Inter';font-size:.62rem;letter-spacing:.24em;color:var(--sage);text-transform:uppercase;font-weight:600;margin-top:1px}
+  nav.links{display:flex;gap:24px;font-weight:500;font-size:.95rem}
+  nav.links a{text-decoration:none}
+  nav.links a:hover{color:var(--white)}
+  @media(max-width:860px){nav.links{display:none}}
+
+  .hero{background:
+     linear-gradient(rgba(20,31,25,.78),rgba(20,31,25,.9)),
+     radial-gradient(circle at 78% 20%, rgba(124,151,127,.28), transparent 48%),
+     linear-gradient(160deg,#1c2b22,#243528);
+     color:var(--bone);padding:92px 0 78px}
+  .hero .kick{color:var(--sage);font-weight:600;letter-spacing:.22em;text-transform:uppercase;font-size:.78rem;margin-bottom:18px}
+  .hero h1{font-size:clamp(2.4rem,5.6vw,4.3rem);max-width:16ch;color:var(--bone)}
+  .hero h1 em{font-style:italic;color:#d7b98f}
+  .hero p.lead{margin:24px 0 32px;font-size:1.2rem;max-width:54ch;color:#dbe4d9}
+  .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero .facts{display:flex;gap:38px;flex-wrap:wrap;margin-top:48px;border-top:1px solid rgba(239,231,214,.22);padding-top:26px}
+  .hero .facts div b{font-family:'Cormorant Garamond';font-size:2rem;color:#d7b98f;display:block;line-height:1;font-weight:700}
+  .hero .facts div span{font-size:.82rem;color:#c3cfc2}
+
+  section{padding:66px 0}
+  .eyebrow{color:var(--moss);font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:.76rem;margin-bottom:10px}
+  h2.big{font-size:clamp(2rem,4.2vw,3rem);margin-bottom:14px;color:var(--forest);font-weight:700}
+  .lead2{font-size:1.12rem;color:var(--gray);max-width:60ch}
+
+  .work{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
+  @media(max-width:860px){.work{grid-template-columns:repeat(2,1fr)}}
+  .work .card{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:24px 20px;transition:transform .15s,box-shadow .15s}
+  .work .card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(28,43,34,.12)}
+  .work .card .ic{font-family:'Cormorant Garamond';font-size:2.1rem;color:var(--rust);font-weight:700;line-height:1}
+  .work .card h3{font-size:1.4rem;margin:10px 0 6px;color:var(--forest)}
+  .work .card p{font-size:.92rem;color:var(--gray)}
+
+  .care{background:var(--forest);color:var(--bone)}
+  .care .eyebrow{color:var(--sage)}
+  .care h2{color:var(--bone)}
+  .care .lead2{color:#cdd8cc}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
+  @media(max-width:860px){.steps{grid-template-columns:1fr}}
+  .steps .s{background:rgba(239,231,214,.06);border:1px solid #33463a;border-radius:6px;padding:26px 22px}
+  .steps .s .n{font-family:'Cormorant Garamond';font-size:1.5rem;color:#d7b98f;font-weight:700}
+  .steps .s h3{font-size:1.3rem;margin:6px 0 8px;color:var(--bone)}
+  .steps .s p{font-size:.94rem;color:#c7d2c6}
+  .care .note{margin-top:28px;font-size:.95rem;color:#c7d2c6;border-left:3px solid var(--rust);padding-left:16px;max-width:70ch}
+
+  .gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:34px}
+  .gallery .tile{aspect-ratio:1;border-radius:6px;background:linear-gradient(150deg,#2c3c31,#48626b);display:flex;align-items:center;justify-content:center;color:rgba(239,231,214,.5);font-size:.72rem;text-align:center;letter-spacing:.08em;padding:8px;border:1px solid var(--line)}
+  .gallery .tile:nth-child(odd){background:linear-gradient(150deg,#3a5a45,#243528)}
+  @media(max-width:860px){.gallery{grid-template-columns:repeat(3,1fr)}}
+  .cap{margin-top:12px;font-size:.82rem;color:var(--gray);font-style:italic}
+
+  .about{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+  @media(max-width:860px){.about{grid-template-columns:1fr}}
+  .about .portrait{background:linear-gradient(160deg,#243528,#48626b);border-radius:8px;min-height:320px;display:flex;align-items:flex-end;padding:24px;color:var(--bone);border:1px solid var(--line)}
+  .about .portrait span{font-family:'Cormorant Garamond';font-size:1.5rem;font-weight:600}
+  .about blockquote{font-family:'Cormorant Garamond';font-size:1.5rem;color:var(--forest);line-height:1.3;margin:6px 0 14px;font-weight:600}
+  .pill{display:inline-block;background:var(--bone-d);color:var(--moss);font-size:.78rem;font-weight:600;padding:5px 12px;border-radius:20px;margin:4px 6px 0 0;letter-spacing:.04em}
+
+  .book{background:linear-gradient(160deg,#243528,#1c2b22);color:var(--bone);text-align:center}
+  .book h2{color:var(--bone);font-size:clamp(2rem,4vw,2.9rem)}
+  .book p{max-width:52ch;margin:14px auto 26px;color:#cdd8cc;font-size:1.1rem}
+  .book .row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;align-items:center}
+  .book .ph{font-family:'Cormorant Garamond';font-size:1.8rem;color:#d7b98f;font-weight:700}
+
+  footer{background:var(--forest-d);color:#96a597;font-size:.9rem;padding:36px 0}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+  footer b{color:var(--bone);font-family:'Cormorant Garamond';font-size:1.2rem}
+  .season{background:var(--rust);color:#fff;text-align:center;font-size:.9rem;padding:9px 14px;font-weight:500;letter-spacing:.02em}
+</style>
+</head>
+<body>
+
+<div class="season">Deer &amp; bear season fills the calendar fast — reserve your mount before you head out this fall.</div>
+
+<div class="topbar"><div class="wrap">
+  <span>97 Danielle Rd, Jay, NY · Adirondacks · Showroom by appointment</span>
+  <span>Call or text <b>(917) 715-6940</b></span>
+</div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">
+    <div class="mark">S</div>
+    <div><b>Styx River Taxidermy</b><span>Fine-Art Studio · Jay, NY</span></div>
+  </div>
+  <nav class="links">
+    <a href="#work">What I Mount</a>
+    <a href="#care">Field Care</a>
+    <a href="#gallery">Work</a>
+    <a href="#about">About</a>
+    <a href="#book">Start a Mount</a>
+  </nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="kick">Whitetail · Bear · Game · Birds · Fish</div>
+  <h1>Your trophy, mounted like it's still <em>watching the treeline</em>.</h1>
+  <p class="lead">A one-person Adirondack studio in Jay, where sculpting and painting come first. Every deer, bear and fish is posed and finished by hand on custom habitat — not stamped out of a catalog form.</p>
+  <div class="cta">
+    <a class="btn" href="#book">Reserve a mount</a>
+    <a class="btn ghost" href="#care">Read field care first</a>
+  </div>
+  <div class="facts">
+    <div><b>Since 2019</b><span>Studio in Jay, NY</span></div>
+    <div><b>1-on-1</b><span>Your mount, start to finish</span></div>
+    <div><b>Featured</b><span>Adirondack Life, 2021</span></div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <div class="eyebrow">What I Mount</div>
+  <h2 class="big">From this fall's buck to the fish of the season</h2>
+  <p class="lead2">Bring me a cape, a hide, a whole bird or a fish, and I'll build the pose and the habitat around it. Not sure what's possible with what you've got? Send a photo before you skin.</p>
+  <div class="work">
+    <div class="card"><div class="ic">I</div><h3>Whitetail Deer</h3><p>Shoulder mounts, pedestals and European skulls posed to the animal you actually took.</p></div>
+    <div class="card"><div class="ic">II</div><h3>Black Bear</h3><p>Shoulder, half-life and rug mounts — the Adirondack trophy done right.</p></div>
+    <div class="card"><div class="ic">III</div><h3>Birds &amp; Small Game</h3><p>Grouse, turkey, waterfowl, coyote and more, set into sculpted natural scenes.</p></div>
+    <div class="card"><div class="ic">IV</div><h3>Fish</h3><p>Skin mounts and replicas of your AuSable and Adirondack catch, hand-painted to life.</p></div>
+  </div>
+</div></section>
+
+<section class="care" id="care"><div class="wrap">
+  <div class="eyebrow">Before You Drop Off</div>
+  <h2 class="big" style="color:var(--bone)">Field care is the whole game. Here's how to protect your trophy.</h2>
+  <p class="lead2">Most ruined mounts are lost in the first few hours — not in the studio. Do these three things and call me; I'll walk you through the rest.</p>
+  <div class="steps">
+    <div class="s"><div class="n">01</div><h3>Don't cut the throat</h3><p>For a shoulder mount, leave plenty of cape. Never slit the throat or brisket — that cut lands right where the seam shows. When in doubt, stop and call.</p></div>
+    <div class="s"><div class="n">02</div><h3>Keep it cool &amp; dry</h3><p>Get the animal out of the heat fast. Wipe off blood, keep the hair dry, and don't leave it in a warm truck bed. Hair slips when it's warm and wet.</p></div>
+    <div class="s"><div class="n">03</div><h3>Bag it &amp; freeze it</h3><p>Can't get to me right away? Double-bag the cape or fish, press out the air, and freeze it solid. Then reach out to set a drop-off.</p></div>
+  </div>
+  <p class="note">Fish and birds are even more time-sensitive — text me a photo from the field and I'll tell you exactly how to handle it before anything spoils. That call is free, and it's the difference between a great mount and a missed one.</p>
+  <div style="margin-top:30px"><a class="btn" href="#book">Text a photo now</a></div>
+</div></section>
+
+<section id="gallery"><div class="wrap">
+  <div class="eyebrow">The Work</div>
+  <h2 class="big">Poses that read as alive</h2>
+  <p class="lead2">Sculpted habitat, honest anatomy, hand-painted detail. A few pieces from the studio — the full body of work lives on Instagram.</p>
+  <div class="gallery">
+    <div class="tile">Whitetail<br>pedestal</div>
+    <div class="tile">Black bear<br>shoulder</div>
+    <div class="tile">Brook trout<br>replica</div>
+    <div class="tile">Ruffed grouse</div>
+    <div class="tile">Coyote scene</div>
+    <div class="tile">Wild turkey</div>
+  </div>
+  <p class="cap">Placeholder gallery — swap in Marissa's studio photography from Instagram/Facebook when the preview is approved.</p>
+</div></section>
+
+<section id="about"><div class="wrap about">
+  <div class="portrait"><span>Marissa Jonke<br>Owner &amp; Artist</span></div>
+  <div>
+    <div class="eyebrow">About the Studio</div>
+    <blockquote>"I came to taxidermy through sculpture and painting — so I treat every mount as a piece, not a part."</blockquote>
+    <p style="color:var(--gray)">Marissa built her own degree at SUNY New Paltz, weaving sculpture, painting and taxidermy together, then opened Styx River Taxidermy in Jay in 2019. Her work has been featured in <em>Adirondack Life</em>. Because it's a one-person studio, the hunter who drops off the cape talks to the same person who poses, sculpts and paints the finished mount.</p>
+    <div style="margin-top:14px">
+      <span class="pill">SUNY New Paltz — Art</span>
+      <span class="pill">Since 2019</span>
+      <span class="pill">Custom habitat</span>
+      <span class="pill">By appointment</span>
+    </div>
+  </div>
+</div></section>
+
+<section class="book" id="book"><div class="wrap">
+  <h2>Start a mount for this season</h2>
+  <p>Tell me the animal, the date you took it, and how it's stored right now. I'll confirm a slot, the deposit, and a realistic turnaround — and answer any field-care question before you drop off.</p>
+  <div class="row">
+    <span class="ph">(917) 715-6940</span>
+    <a class="btn" href="#">Send a mount inquiry</a>
+  </div>
+  <p style="margin-top:18px;font-size:.9rem;color:#aebbad">Styxrivertaxidermy@gmail.com · 97 Danielle Rd, Jay, NY 12941 · Showroom visits by appointment</p>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b>Styx River Taxidermy</b><br>Fine-art mounts · Jay, New York</div>
+  <div>97 Danielle Rd, Jay, NY 12941<br>(917) 715-6940 · Styxrivertaxidermy@gmail.com</div>
+  <div>Instagram &amp; Facebook: @styxrivertaxidermy<br>Serving Adirondack hunters &amp; anglers</div>
+</div></footer>
+
+</body>
+</html>

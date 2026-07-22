@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kramell's Meat Market & Barbeque — Wyoming, NY | Smokehouse, Custom Cutting & BBQ</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Bitter:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --char:#1f1c1a; --char2:#2c2826; --smoke:#3a3531; --kraft:#d8c4a3; --kraft2:#e9dcc4;
+    --brick:#9e2b1f; --brick-d:#7c2018; --ember:#e0773a; --cream:#f6efe3; --ink:#231f1d; --rule:#4a443f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Bitter',Georgia,serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  h1,h2,h3,.disp{font-family:'Oswald',sans-serif;letter-spacing:.5px;text-transform:uppercase;line-height:1.05}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  /* top bar */
+  .top{background:var(--char);color:var(--kraft);font-family:'Oswald',sans-serif;font-size:.82rem;letter-spacing:1.5px;text-align:center;padding:7px}
+  /* hero */
+  .hero{background:
+      linear-gradient(rgba(20,18,16,.78),rgba(20,18,16,.86)),
+      repeating-linear-gradient(135deg,#241f1b 0 26px,#1d1916 26px 52px);
+    color:var(--cream);padding:74px 0 66px;border-bottom:6px solid var(--brick)}
+  .badge{display:inline-block;border:2px solid var(--ember);color:var(--ember);font-family:'Oswald',sans-serif;
+    font-size:.78rem;letter-spacing:2px;padding:5px 14px;border-radius:2px;margin-bottom:20px}
+  .hero h1{font-size:clamp(2.4rem,6vw,4.1rem);font-weight:700;color:#fff}
+  .hero h1 span{color:var(--ember);display:block;font-size:.62em}
+  .hero p.lead{font-size:1.2rem;max-width:620px;margin:18px 0 28px;color:var(--kraft2)}
+  .cta{display:inline-block;background:var(--brick);color:#fff;font-family:'Oswald',sans-serif;letter-spacing:1.5px;
+    text-transform:uppercase;font-weight:600;padding:15px 30px;border-radius:3px;text-decoration:none;font-size:1rem;
+    border-bottom:4px solid var(--brick-d)}
+  .cta.ghost{background:transparent;border:2px solid var(--kraft);color:var(--kraft);border-bottom-width:2px;margin-left:10px}
+  .hero .hrs{margin-top:26px;font-family:'Oswald',sans-serif;letter-spacing:1px;color:var(--kraft);font-size:.92rem}
+  /* strip */
+  .strip{background:var(--brick);color:#fff;font-family:'Oswald',sans-serif;letter-spacing:1.5px;text-align:center;
+    padding:14px;font-size:1rem;text-transform:uppercase}
+  .strip b{color:#ffe1c4}
+  /* sections */
+  section{padding:60px 0}
+  .eyebrow{font-family:'Oswald',sans-serif;color:var(--brick);letter-spacing:3px;font-size:.82rem;margin-bottom:10px}
+  h2{font-size:clamp(1.7rem,4vw,2.6rem);font-weight:700;color:var(--char)}
+  .lead2{font-size:1.12rem;max-width:640px;margin-top:12px;color:#4a423b}
+  /* case grid */
+  .case{background:var(--char2);color:var(--cream)}
+  .case h2{color:#fff}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:34px}
+  .card{background:#211d1a;border:1px solid var(--rule);border-top:4px solid var(--ember);padding:24px 22px;border-radius:4px}
+  .card h3{font-size:1.15rem;color:#fff;margin-bottom:8px}
+  .card p{color:var(--kraft);font-size:.97rem}
+  .tag{display:inline-block;background:var(--brick);color:#fff;font-family:'Oswald',sans-serif;font-size:.7rem;
+    letter-spacing:1.5px;padding:3px 9px;border-radius:2px;margin-top:12px}
+  /* processing */
+  .proc{background:var(--kraft);color:var(--ink);
+     background-image:repeating-linear-gradient(0deg,rgba(0,0,0,.025) 0 1px,transparent 1px 7px)}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:22px;margin-top:34px}
+  .step{background:var(--cream);border:1px solid #c7b291;border-radius:5px;padding:24px;position:relative}
+  .step .n{font-family:'Oswald',sans-serif;font-size:2rem;color:var(--brick);font-weight:700;line-height:1}
+  .step h3{font-size:1.05rem;margin:8px 0 6px;color:var(--char)}
+  .step p{font-size:.95rem;color:#5a5046}
+  /* bbq band */
+  .bbq{background:linear-gradient(rgba(28,24,21,.9),rgba(28,24,21,.94)),repeating-linear-gradient(45deg,#2a2420 0 22px,#231e1a 22px 44px);
+    color:var(--cream);text-align:center}
+  .bbq h2{color:#fff}
+  .bbq .ember{color:var(--ember)}
+  .note{display:inline-block;margin-top:16px;font-size:.86rem;color:var(--kraft);border:1px dashed var(--rule);padding:8px 14px;border-radius:3px}
+  /* visit */
+  .visit-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;margin-top:30px;align-items:start}
+  .panel{background:#fff;border:1px solid #d9c9ad;border-radius:6px;padding:28px}
+  .panel h3{color:var(--brick);font-size:1.2rem;margin-bottom:14px}
+  .panel ul{list-style:none}
+  .panel li{padding:7px 0;border-bottom:1px solid #eee3cf;font-size:1rem;display:flex;justify-content:space-between}
+  .panel li b{font-family:'Oswald',sans-serif;letter-spacing:.5px}
+  .map{background:var(--char2);color:var(--kraft);border-radius:6px;padding:28px;height:100%}
+  .map h3{color:#fff;font-family:'Oswald',sans-serif;letter-spacing:1px;margin-bottom:10px}
+  .bigcall{display:block;text-align:center;background:var(--brick);color:#fff;font-family:'Oswald',sans-serif;
+    letter-spacing:1.5px;font-size:1.4rem;padding:18px;border-radius:5px;text-decoration:none;margin-top:18px;border-bottom:4px solid var(--brick-d)}
+  footer{background:var(--char);color:var(--kraft);padding:40px 0;text-align:center;font-size:.92rem}
+  footer .disp{color:#fff;font-size:1.3rem;margin-bottom:8px}
+  .ph{background:#fff5cf;color:#7a5a00;font-size:.72rem;padding:2px 7px;border-radius:3px;font-family:'Oswald',sans-serif;letter-spacing:.5px}
+  @media(max-width:720px){.visit-grid{grid-template-columns:1fr}.cta.ghost{margin-left:0;margin-top:12px;display:inline-block}}
+</style>
+</head>
+<body>
+<div class="top">6531 COWIE ROAD · WYOMING, NY · OPEN YEAR-ROUND · (585) 689-5376</div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="badge">SMOKEHOUSE · BUTCHER · BBQ</span>
+    <h1>Kramell's Meat Market <span>& Barbeque</span></h1>
+    <p class="lead">A working smokehouse on Cowie Road — homemade sausage, smoked meats, jerky and pepper sticks cut and made right here, plus custom processing for your deer and your livestock.</p>
+    <a class="cta" href="tel:5856895376">Call the counter</a>
+    <a class="cta ghost" href="#processing">Book a custom cut</a>
+    <div class="hrs">Mon–Fri 9–5 · Sat 9–12 · 3.5 miles north of the Perry/Warsaw Airport</div>
+  </div>
+</header>
+
+<div class="strip">Smoked in-house &nbsp;·&nbsp; <b>Homemade family sausage recipes</b> &nbsp;·&nbsp; Whole-hog & beef processing</div>
+
+<section class="case">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--ember)">WHAT'S IN THE CASE</p>
+    <h2>Made here, smoked here</h2>
+    <p class="lead2" style="color:var(--kraft)">Not a supermarket meat case. This is local meat, ground, stuffed, smoked and stick-rolled on site to recipes the family's used for years.</p>
+    <div class="cards">
+      <div class="card"><h3>Smoked Meats</h3><p>Hams, bacon and smokehouse cuts run through our own smoker — the reason people drive out here.</p><span class="tag">SMOKED ON SITE</span></div>
+      <div class="card"><h3>Family Sausage</h3><p>Fresh and smoked sausage built on homemade family recipes — links, rope and bulk.</p><span class="tag">OUR RECIPE</span></div>
+      <div class="card"><h3>Jerky & Pepper Sticks</h3><p>Beef jerky and pepper sticks made in-house — the glovebox snack worth the trip.</p><span class="tag">GRAB & GO</span></div>
+      <div class="card"><h3>Hot Dogs & Local Meats</h3><p>House hot dogs plus fresh local beef and pork cut to order at the counter.</p><span class="tag">CUT TO ORDER</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="proc" id="processing">
+  <div class="wrap">
+    <p class="eyebrow">CUSTOM CUTTING & PROCESSING</p>
+    <h2>Bring us your animal — we'll cut it your way</h2>
+    <p class="lead2">Deer in season and farm livestock year-round. Tell us how your family eats and we'll wrap it that way: roasts, chops, ground, sausage and smoked.</p>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Call first</h3><p>Ring the counter to set up a drop-off and ask about deer-season timing before you load up.</p></div>
+      <div class="step"><div class="n">2</div><h3>Tell us the cuts</h3><p>Steaks vs. roasts, grind ratio, how much sausage, what to smoke — we cut to your list, not a default.</p></div>
+      <div class="step"><div class="n">3</div><h3>We process & wrap</h3><p>Cut, ground, stuffed and labeled, ready for your freezer in clean butcher wrap.</p></div>
+      <div class="step"><div class="n">4</div><h3>Pick up & stock up</h3><p>Grab your order and add jerky, sticks and smoked sausage from the case on the way out.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bbq">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--ember)">THE BARBEQUE SIDE</p>
+    <h2>When the <span class="ember">pit's on</span>, the locals know</h2>
+    <p class="lead2" style="margin:14px auto 0;color:var(--kraft)">Chicken and smoked favorites off the barbeque on cook days and around the holidays. Call ahead to find out when we're firing the pit or to put in for a chicken half.</p>
+    <div class="note"><span class="ph">PLACEHOLDER</span> &nbsp;BBQ days & holiday cook schedule — confirm dates with Kramell's before publishing</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">FIND US &amp; HOURS</p>
+    <h2>Out on Cowie Road, year-round</h2>
+    <div class="visit-grid">
+      <div class="panel">
+        <h3>Hours</h3>
+        <ul>
+          <li><span>Monday – Friday</span><b>9:00 – 5:00</b></li>
+          <li><span>Saturday</span><b>9:00 – 12:00</b></li>
+          <li><span>Sunday</span><b>Closed</b></li>
+        </ul>
+        <p style="margin-top:14px;font-size:.9rem;color:#7a6f63"><span class="ph">PLACEHOLDER</span> confirm exact daily hours & any seasonal/holiday changes.</p>
+        <a class="bigcall" href="tel:5856895376">(585) 689-5376</a>
+      </div>
+      <div class="map">
+        <h3>Where we are</h3>
+        <p style="font-size:1.05rem;color:#fff;margin-bottom:6px">6531 Cowie Road<br>Wyoming, NY 14591</p>
+        <p style="font-size:.95rem;margin-bottom:14px">In the Town of Middlebury — about 3.5 miles north of the Perry/Warsaw Airport, in the heart of Wyoming County dairy country.</p>
+        <p style="font-size:.9rem;color:var(--kraft)">Find us on Facebook: <b>Kramell's Meat Market and Barbeque</b> for the latest on smoked batches and BBQ days.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="disp">Kramell's Meat Market &amp; Barbeque</div>
+    <p>6531 Cowie Road, Wyoming, NY 14591 · (585) 689-5376 · Open year-round</p>
+    <p style="margin-top:10px;font-size:.8rem;color:#8a7f72">Preview concept prepared by Onyx Rise Media for review. Product availability, BBQ days and hours to be confirmed by the owner.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Churchill Farms Honey — Raw Local Honey from Our Jefferson County Hives | Watertown, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --amber:#e6a013; --amber-dk:#b9760a; --honey:#f7c948; --comb:#fdf3d6;
+    --bg:#fffaef; --ink:#3b2f17; --ink2:#6b5a33; --leaf:#5a7d3c; --line:#ecd9a6; --white:#fff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Karla',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+  h1,h2,h3{font-family:'Bitter',serif;line-height:1.15}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+
+  /* honeycomb hero */
+  .hero{position:relative;overflow:hidden;background:var(--comb);padding:60px 0 54px;
+    background-image:
+      radial-gradient(circle at 50% 0,rgba(247,201,72,.45),transparent 60%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100' viewBox='0 0 56 100'%3E%3Cg fill='none' stroke='%23ecd9a6' stroke-width='2'%3E%3Cpath d='M28 0l24 14v28L28 56 4 42V14z'/%3E%3Cpath d='M28 56l24 14v28'/%3E%3Cpath d='M28 56L4 70v28'/%3E%3C/g%3E%3C/svg%3E");
+    background-size:auto,56px 100px}
+  .hero .wrap{position:relative;max-width:760px;text-align:center}
+  .pill{display:inline-block;background:var(--amber);color:#fff;font-weight:700;font-size:.8rem;letter-spacing:1px;
+    text-transform:uppercase;padding:6px 15px;border-radius:30px}
+  .hero h1{font-size:clamp(2.1rem,5.2vw,3.4rem);margin:16px auto 12px;max-width:640px}
+  .hero h1 span{color:var(--amber-dk)}
+  .hero p{font-size:1.16rem;color:var(--ink2);max-width:560px;margin:0 auto}
+  .acts{display:flex;flex-wrap:wrap;gap:13px;justify-content:center;margin-top:26px}
+  .btn{display:inline-block;font-weight:700;text-decoration:none;padding:14px 24px;border-radius:8px;font-size:1rem}
+  .btn-pri{background:var(--amber-dk);color:#fff}
+  .btn-sec{background:#fff;color:var(--amber-dk);border:2px solid var(--amber)}
+
+  section{padding:52px 0}
+  .center{text-align:center}
+  .eyebrow{color:var(--amber-dk);font-weight:700;letter-spacing:2px;font-size:.78rem;text-transform:uppercase}
+  .sec-h{font-size:clamp(1.7rem,3.8vw,2.4rem);margin:8px 0 8px}
+  .sec-sub{color:var(--ink2);max-width:560px;margin:0 auto 28px}
+
+  .prod{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;max-width:760px;margin:0 auto}
+  .p{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 22px;text-align:center;border-bottom:5px solid var(--honey)}
+  .p:nth-child(2){border-bottom-color:var(--leaf)}
+  .p .ic{font-size:2rem}
+  .p h3{font-size:1.3rem;margin:8px 0 6px}
+  .p p{color:var(--ink2);font-size:.98rem}
+
+  /* honor stand */
+  .stand{background:var(--ink);color:#f6ecd2}
+  .stand .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
+  .stand h2{color:#fff;font-size:clamp(1.7rem,3.8vw,2.4rem);margin-bottom:10px}
+  .stand .lead{color:#e3d3aa;margin-bottom:18px}
+  .steps{list-style:none}
+  .steps li{display:flex;gap:13px;align-items:flex-start;margin-bottom:15px}
+  .hex{flex:none;width:38px;height:38px;background:var(--honey);color:#3b2f17;display:grid;place-items:center;
+    font-family:'Bitter',serif;font-weight:700;clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0 50%)}
+  .steps b{color:#fff}
+  .card-dk{background:#4a3a16;border:1px solid #6a531f;border-radius:14px;padding:24px 22px}
+  .card-dk h3{color:var(--honey);font-size:1.25rem;margin-bottom:8px}
+  .card-dk p{color:#e3d3aa}
+
+  .taste{background:var(--leaf);color:#fff;text-align:center}
+  .taste h2{color:#fff;font-size:clamp(1.5rem,3.4vw,2.1rem)}
+  .taste p{color:#e4eed7;max-width:560px;margin:10px auto 0}
+
+  .about .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;align-items:center}
+  .about h2{color:var(--amber-dk);font-size:clamp(1.6rem,3.6vw,2.2rem);margin-bottom:10px}
+  .about p{color:var(--ink2);margin-bottom:12px}
+  .quote{font-family:'Bitter',serif;font-style:italic;color:var(--ink);font-size:1.15rem;border-left:4px solid var(--honey);padding-left:16px}
+
+  .contact{background:var(--comb);text-align:center}
+  .contact h2{font-size:clamp(1.7rem,4vw,2.4rem);color:var(--ink)}
+  .contact p{color:var(--ink2);max-width:540px;margin:10px auto 0}
+  .callbig{font-family:'Bitter',serif;font-size:1.9rem;color:var(--amber-dk);text-decoration:none;display:inline-block;margin-top:18px}
+  .callbig span{display:block;font-family:'Karla';font-size:.9rem;color:var(--ink2);font-weight:700;letter-spacing:1px;text-transform:uppercase}
+
+  footer{background:#2c2410;color:#b39a63;text-align:center;padding:24px 0;font-size:.9rem}
+  @media(max-width:720px){.stand .grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="hero"><div class="wrap">
+  <span class="pill">Raw &amp; local · Watertown, NY</span>
+  <h1>Honey from <span>our own Jefferson County hives</span> — and the honest little stand that sells it.</h1>
+  <p>Churchill Farms Honey is a small family apiary outside Watertown. Raw honey and pure maple, sold at our self-serve roadside stand and the Taste NY store on I-81.</p>
+  <div class="acts">
+    <a class="btn btn-pri" href="#stand">How the stand works</a>
+    <a class="btn btn-sec" href="#order">Call for a bulk or gift order</a>
+  </div>
+</div></header>
+
+<section><div class="wrap center">
+  <span class="eyebrow">Straight from the hive</span>
+  <h2 class="sec-h">What we put out</h2>
+  <p class="sec-sub">Honey our bees made on Jefferson County flowers, plus pure maple from the North Country — nothing blended in.</p>
+  <div class="prod">
+    <div class="p"><div class="ic">🍯</div><h3>Raw local honey</h3><p>Unfiltered honey in pantry and gift sizes — the same local pollen folks look for in allergy season.</p></div>
+    <div class="p"><div class="ic">🍁</div><h3>Pure maple</h3><p>North Country maple syrup and maple products to go alongside the honey.</p></div>
+  </div>
+</div></section>
+
+<section class="stand" id="stand"><div class="wrap"><div class="grid">
+  <div>
+    <span class="eyebrow" style="color:var(--honey)">Self-serve · honor system</span>
+    <h2>Trust runs on the honor of the stand</h2>
+    <p class="lead">No clerk, no hours to chase — the roadside stand is open and stocked, the way small farms have always sold honey.</p>
+    <ul class="steps">
+      <li><span class="hex">1</span><div><b>Pull over at the stand</b> and pick what you want — honey by the size you need, maple alongside it.</div></li>
+      <li><span class="hex">2</span><div><b>Leave your payment</b> in the box — cash, or pay by phone app.</div></li>
+      <li><span class="hex">3</span><div><b>Take it home.</b> That's it. Restocked from our hives as it sells.</div></li>
+    </ul>
+  </div>
+  <div class="card-dk">
+    <h3>Need more than the stand holds?</h3>
+    <p>Call Rolly for case quantities, wedding favors, or holiday gift orders and we'll set it aside for pickup.</p>
+  </div>
+</div></div></section>
+
+<section class="taste"><div class="wrap">
+  <span class="eyebrow" style="color:#dff0cd">Also on I-81</span>
+  <h2>Find us at the Taste NY store</h2>
+  <p>Our honey is stocked at the North Country Welcome Center Taste NY store — an easy grab for travelers heading through Jefferson County who can't make it out to the stand.</p>
+</div></section>
+
+<section class="about"><div class="wrap"><div class="grid">
+  <div>
+    <span class="eyebrow">The beekeeper</span>
+    <h2>Local bees, one family</h2>
+    <p>Churchill Farms Honey is tended by Rolly Churchill right here in the Watertown area. The honey comes from our own hives on local flowers — which is exactly why people seek out local honey in the first place.</p>
+  </div>
+  <div>
+    <p class="quote">Local honey from local hives — the kind your neighbors actually keep on the table.</p>
+  </div>
+</div></div></section>
+
+<section class="contact" id="order"><div class="wrap">
+  <h2>Call for bulk &amp; gift orders</h2>
+  <p>Stand visits are self-serve and always welcome. For larger amounts, gift sets or favors, reach Rolly directly.</p>
+  <a class="callbig" href="tel:13157888139"><span>Churchill Farms Honey</span>315-788-8139</a>
+</div></section>
+
+<footer><div class="wrap">
+  Churchill Farms Honey · Watertown, NY · 315-788-8139 · Also at the North Country Welcome Center Taste NY store · Concept preview prepared by Onyx Rise Media.
+</div></footer>
+
+</body>
+</html>

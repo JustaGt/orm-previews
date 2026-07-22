@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bush Enterprises — Croghan, NY · Rough-Cut Lumber, Board &amp; Batten Siding, Firewood + Custom Sawing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wood:#6e4a26; --wood-d:#3d2915; --bark:#241910; --steel:#5c6670;
+  --orange:#df6a1f; --orange-d:#b9531247; --kraft:#d8c39c; --tan:#efe6d3;
+  --ink:#241c12; --slate:#6a5e4c; --line:#d8cab0; --card:#fffdf7;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--tan);line-height:1.62}
+h1,h2,h3,.cond{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.5px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-block;background:var(--orange);color:#fff;font-family:'Oswald';text-transform:uppercase;letter-spacing:1px;font-weight:600;font-size:.92rem;padding:14px 28px;border-radius:4px;transition:.14s}
+.btn:hover{background:#c4591593;background:#bf5916}
+.btn.steel{background:var(--steel)}
+.btn.steel:hover{background:#454d55}
+.btn.line{background:transparent;border:2px solid #ffffff7a;color:#fff}
+.btn.line:hover{background:#ffffff1c}
+
+nav{background:var(--bark);position:sticky;top:0;z-index:20;border-bottom:3px solid var(--orange)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand b{font-family:'Oswald';font-weight:700;color:#fff;font-size:1.5rem;display:block;line-height:1;letter-spacing:1px}
+.brand small{color:var(--kraft);font-size:.58rem;letter-spacing:2.4px;text-transform:uppercase}
+.navlinks{display:flex;gap:22px;color:#d6c8af;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;font-family:'Oswald'}
+.navlinks a:hover{color:var(--orange)}
+.navphone{color:#fff;font-family:'Oswald';font-weight:600;font-size:1.05rem;white-space:nowrap}
+@media(max-width:880px){.navlinks{display:none}}
+
+.hero{position:relative;color:var(--tan);overflow:hidden;background:var(--wood-d)}
+.hero::before{content:"";position:absolute;inset:0;
+  background:
+   linear-gradient(102deg,rgba(36,25,16,.94) 0 48%,rgba(61,41,21,.55)),
+   repeating-linear-gradient(95deg,#3d2915 0 7px,#412c17 7px 14px),
+   linear-gradient(180deg,#5a3c20,#241910)}
+.hero .wrap{position:relative;z-index:1;padding:82px 22px 92px}
+.kick{display:inline-flex;align-items:center;gap:9px;font-size:.74rem;letter-spacing:2.2px;text-transform:uppercase;color:#f0e3c8;background:#00000040;border:1px solid var(--orange);border-radius:4px;padding:6px 15px;margin-bottom:20px;font-family:'Oswald'}
+.kick::before{content:"";width:9px;height:9px;background:var(--orange)}
+.hero h1{font-family:'Oswald';font-weight:700;font-size:3.5rem;line-height:1.02;max-width:19ch}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero p{font-size:1.16rem;max-width:54ch;margin:18px 0 26px;color:#e8dcc4;text-transform:none;font-family:'Source Sans 3'}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.hero-strip{margin-top:30px;display:flex;gap:0;flex-wrap:wrap;border:1px solid #ffffff2e;border-radius:5px;overflow:hidden;max-width:560px}
+.hero-strip div{flex:1;min-width:130px;padding:13px 16px;border-right:1px solid #ffffff20;font-size:.82rem;color:#e3d4b8;font-family:'Source Sans 3'}
+.hero-strip div b{display:block;font-family:'Oswald';color:#fff;font-size:1.05rem;letter-spacing:.5px}
+@media(max-width:600px){.hero h1{font-size:2.4rem}}
+
+section{padding:72px 0}
+.shead{max-width:60ch}
+.shead.ctr{text-align:center;margin:0 auto}
+.shead .k{font-size:.8rem;letter-spacing:3px;text-transform:uppercase;color:var(--orange);font-weight:700;font-family:'Oswald'}
+.shead h2{font-family:'Oswald';font-weight:700;font-size:2.5rem;color:var(--wood-d);margin-top:6px;line-height:1.05}
+.shead p{color:var(--slate);margin-top:11px;font-size:1.04rem}
+
+/* what we cut */
+.cut{background:#efe4cd}
+.cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px}
+@media(max-width:840px){.cgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:460px){.cgrid{grid-template-columns:1fr}}
+.ccard{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:24px 20px;border-bottom:5px solid var(--wood)}
+.ccard .ic{font-size:1.9rem}
+.ccard h3{font-family:'Oswald';font-size:1.18rem;color:var(--wood-d);margin-top:8px}
+.ccard p{font-size:.91rem;color:var(--slate);margin-top:7px;text-transform:none}
+.ccard ul{list-style:none;margin-top:10px}
+.ccard li{font-size:.84rem;color:var(--ink);padding-left:16px;position:relative;margin-top:4px}
+.ccard li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;background:var(--orange)}
+
+/* custom saw band */
+.csaw{background:var(--wood-d);color:#efe2c9}
+.csaw .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:38px;align-items:center}
+@media(max-width:780px){.csaw .wrap{grid-template-columns:1fr}}
+.csaw h2{font-family:'Oswald';font-size:2.3rem;color:#fff}
+.csaw p{margin-top:12px;color:#e6d8bf;font-size:1.02rem}
+.csaw .steps{margin-top:20px;display:flex;flex-direction:column;gap:14px}
+.csaw .step{display:flex;gap:14px;align-items:flex-start}
+.csaw .num{flex:none;width:34px;height:34px;border-radius:4px;background:var(--orange);color:#fff;font-family:'Oswald';font-size:1.1rem;display:flex;align-items:center;justify-content:center}
+.csaw .step b{font-family:'Oswald';letter-spacing:.5px;color:#fff}
+.csaw .step span{display:block;color:#e0d2b9;font-size:.93rem;margin-top:2px}
+.sbadge{background:#ffffff12;border:1px solid #ffffff33;border-radius:8px;padding:26px 24px;text-align:center}
+.sbadge .big{font-family:'Oswald';font-size:1.5rem;color:#fff}
+.sbadge small{display:block;color:#d8c6a6;font-size:.76rem;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:6px;font-family:'Oswald'}
+
+/* who we serve */
+.serve{background:#efe4cd}
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+@media(max-width:760px){.sgrid{grid-template-columns:1fr}}
+.scard{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--steel);border-radius:6px;padding:22px 22px}
+.scard h3{font-family:'Oswald';color:var(--wood-d);font-size:1.18rem}
+.scard p{color:var(--slate);font-size:.93rem;margin-top:7px;text-transform:none}
+
+/* cut list / contact */
+.contact{background:var(--bark);color:var(--tan)}
+.cwrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:30px}
+@media(max-width:780px){.cwrap{grid-template-columns:1fr;gap:26px}}
+.contact h2{font-family:'Oswald';font-size:2.4rem;color:#fff}
+.contact .lede{color:#e6d8bf;margin-top:12px;max-width:46ch}
+.crow{margin-top:16px;font-size:1rem;color:#f0e4cd}
+.crow b{color:var(--orange);font-family:'Oswald';letter-spacing:.5px}
+.cbox{background:#ffffff0f;border:1px solid #ffffff2b;border-radius:8px;padding:30px 28px}
+.cbox h3{font-family:'Oswald';color:#fff;font-size:1.4rem}
+.cbox label{display:block;font-size:.76rem;letter-spacing:1.4px;text-transform:uppercase;color:#d8c6a6;margin:14px 0 6px;font-family:'Oswald'}
+.cbox input,.cbox textarea{width:100%;background:#fdf7ea;border:1px solid #e4d3b2;border-radius:5px;padding:11px 13px;font-family:inherit;font-size:.95rem;color:var(--ink)}
+.cbox .btn{margin-top:18px;width:100%;text-align:center}
+footer{background:#1b130b;color:#b09c78;text-align:center;font-size:.83rem;padding:26px 22px}
+footer b{color:#e6d8bf;font-family:'Oswald'}
+.note{font-size:.72rem;color:#8a785a;margin-top:8px}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="brand"><b>Bush Enterprises</b><small>Croghan, NY · Sawmill &amp; Firewood</small></div>
+  <div class="navlinks">
+    <a href="#cut">What We Cut</a>
+    <a href="#csaw">Custom Sawing</a>
+    <a href="#serve">Who We Serve</a>
+    <a href="#contact">Cut List</a>
+  </div>
+  <a class="navphone" href="tel:3153461111">Call the mill</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="kick">Croghan · Lewis County · Tug Hill timber</span>
+  <h1>Rough-cut lumber, siding &amp; firewood — <em>sawn right here</em>.</h1>
+  <p>A working circle mill on Soft Maple Road. Dimensional stock, board-and-batten siding, posts and beams, and seasoned firewood — plus custom sawing on your logs. Tell us what you need cut and we'll cut it.</p>
+  <div class="cta-row">
+    <a class="btn" href="#contact">Send your cut list</a>
+    <a class="btn line" href="#cut">See what we cut</a>
+  </div>
+  <div class="hero-strip">
+    <div><b>Rough-cut</b>dimensional &amp; boards</div>
+    <div><b>Siding</b>board &amp; batten</div>
+    <div><b>Firewood</b>seasoned cordwood</div>
+  </div>
+</div></header>
+
+<section class="cut" id="cut"><div class="wrap">
+  <div class="shead">
+    <div class="k">What we cut</div>
+    <h2>Sizes a big lumberyard won't bother with.</h2>
+    <p>Mixed softwood and local hardwood off the circle mill — cut to the lengths you actually need for the barn, the build, or the woodstove.</p>
+  </div>
+  <div class="cgrid">
+    <div class="ccard"><div class="ic">&#129717;</div><h3>Rough-Cut Lumber</h3><p>Green dimensional stock straight off the mill.</p>
+      <ul><li>2x4 through 2x10, boards &amp; planks</li><li>Cut to length on request</li><li>Mixed softwood &amp; hardwood</li></ul></div>
+    <div class="ccard"><div class="ic">&#127968;</div><h3>Board &amp; Batten Siding</h3><p>Rough siding stock for barns, sheds, camps and homes.</p>
+      <ul><li>Board &amp; batten boards</li><li>Rustic exterior siding</li><li>Trim &amp; batten strips</li></ul></div>
+    <div class="ccard"><div class="ic">&#128296;</div><h3>Posts &amp; Beams</h3><p>Heavier stock for framing, fences, and farm work.</p>
+      <ul><li>Posts &amp; timbers</li><li>Beams cut to size</li><li>Stringers &amp; trailer decking</li></ul></div>
+    <div class="ccard"><div class="ic">&#128293;</div><h3>Seasoned Firewood</h3><p>Cordwood for the long North Country winter.</p>
+      <ul><li>Seasoned hardwood</li><li>By the load</li><li>Pickup or ask about delivery</li></ul></div>
+  </div>
+</div></section>
+
+<section class="csaw" id="csaw"><div class="wrap">
+  <div>
+    <h2>Got your own logs? We'll saw them.</h2>
+    <p>Drop your logs at the mill and we'll cut them to your dimensions — barn boards from your own woodlot, beams for a timber-frame, slabs for a project. You keep the wood; we run the saw.</p>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><div><b>Send the cut list</b><span>Sizes, lengths, and how many — by phone or the form below.</span></div></div>
+      <div class="step"><div class="num">2</div><div><b>Drop logs or order stock</b><span>Bring your logs to Soft Maple Road, or have us cut from our own.</span></div></div>
+      <div class="step"><div class="num">3</div><div><b>Pick up your lumber</b><span>We'll call when it's sawn and ready to load.</span></div></div>
+    </div>
+  </div>
+  <div class="sbadge">
+    <small>On the NY State directories</small>
+    <div class="big">A listed working mill</div>
+    <p style="color:#e0d2b9;margin-top:10px;font-size:.94rem;text-transform:none;font-family:'Source Sans 3'">Listed on the New York State Wood Products &amp; DEC sawmill directories — a real mill at 7861 Soft Maple Road, Croghan.</p>
+  </div>
+</div></section>
+
+<section class="serve" id="serve"><div class="wrap">
+  <div class="shead ctr">
+    <div class="k">Who we serve</div>
+    <h2>Contractors, farms &amp; homesteads.</h2>
+  </div>
+  <div class="sgrid">
+    <div class="scard"><h3>Builders &amp; Contractors</h3><p>Rough framing stock, board siding, and custom lengths without big-lumberyard pricing or lead times.</p></div>
+    <div class="scard"><h3>Farmers</h3><p>Barn board, fence posts, beams, and trailer decking — the practical stock that keeps the operation running.</p></div>
+    <div class="scard"><h3>Homesteaders &amp; DIY</h3><p>Board-and-batten for the shed or camp, slabs for a project, and a load of firewood for winter — all from one mill.</p></div>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div class="shead" style="max-width:none">
+    <div class="k" style="color:var(--orange)">Send your cut list</div>
+  </div>
+  <div class="cwrap">
+    <div>
+      <h2>Tell us what you need cut.</h2>
+      <p class="lede">Call the mill or send your list of sizes and lengths and we'll price it. Firewood orders welcome too.</p>
+      <div class="crow"><b>Owner</b><br>Matt Bush</div>
+      <div class="crow"><b>Mill</b><br>7861 Soft Maple Road, Croghan, NY 13327</div>
+      <div class="crow"><b>What we sell</b><br>Rough lumber · board &amp; batten siding · posts/beams · firewood · custom sawing</div>
+      <div class="crow"><b>Region</b><br>Lewis County · Tug Hill / western Adirondacks</div>
+    </div>
+    <div class="cbox">
+      <h3>Cut list request</h3>
+      <label>Your name</label><input type="text" placeholder="First &amp; last">
+      <label>Phone</label><input type="text" placeholder="Best number to reach you">
+      <label>Your cut list / what you need</label><textarea rows="4" placeholder="e.g. 200 bd-ft of 1x8 hemlock board &amp; batten, plus a load of firewood"></textarea>
+      <a class="btn" href="#">Send my cut list</a>
+    </div>
+  </div>
+</div></section>
+
+<footer>
+  <b>Bush Enterprises</b> — Rough-cut lumber, board &amp; batten siding, posts/beams &amp; firewood · Custom sawing · Croghan, New York<br>
+  7861 Soft Maple Road, Croghan, NY 13327 · Owner: Matt Bush
+  <div class="note">Preview concept prepared by Onyx Rise Media for review. Phone number, exact species/sizes, firewood availability, and any email to be confirmed with the owner before launch.</div>
+</footer>
+
+</body>
+</html>

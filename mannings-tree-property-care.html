@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manning's Tree and Property Care — Willsboro, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Source+Serif+4:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--hemlock:#1e3d2f;--bark:#5c4632;--slate:#42596b;--mist:#eef2ee;--paper:#fbfaf7;--amberline:#c98f3d}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Serif 4',Georgia,serif;color:#26312a;background:var(--paper);line-height:1.65}
+h1,h2,h3,.btn,nav{font-family:'Archivo',sans-serif}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+header{background:var(--hemlock);color:#fff;padding:14px 0;position:sticky;top:0;z-index:9}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.logo{font-family:'Archivo';font-weight:900;font-size:1.05rem;letter-spacing:.02em}
+.logo span{color:var(--amberline)}
+header a.call{color:#fff;text-decoration:none;font-weight:700;background:rgba(255,255,255,.12);padding:8px 16px;border-radius:4px;font-family:'Archivo'}
+.hero{background:linear-gradient(180deg,var(--hemlock) 0%,#2c5240 70%,var(--slate) 130%);color:#fff;padding:84px 0 70px}
+.hero .kicker{color:var(--amberline);font-family:'Archivo';font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.08;margin:14px 0 18px;max-width:17ch}
+.hero p{max-width:52ch;font-size:1.08rem;color:#dfe8e0}
+.hero .cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:4px;font-size:1rem}
+.btn.primary{background:var(--amberline);color:#20301f}
+.btn.ghost{border:2px solid #ffffff55;color:#fff}
+.hero .note{margin-top:16px;font-size:.9rem;color:#b9c9bb;font-style:italic}
+section{padding:64px 0}
+.kicker2{color:var(--bark);font-family:'Archivo';font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.75rem}
+h2{font-size:clamp(1.5rem,3.4vw,2.1rem);color:var(--hemlock);margin:8px 0 14px;font-weight:900}
+.jobs{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:26px}
+.job{background:#fff;border-top:5px solid var(--hemlock);padding:22px;box-shadow:0 1px 6px rgba(30,61,47,.12)}
+.job h3{color:var(--hemlock);font-size:1.02rem;margin-bottom:8px}
+.job p{font-size:.94rem;color:#4c584f}
+.storm{background:var(--slate);color:#fff}
+.storm .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:34px;align-items:center}
+.storm h2{color:#fff}
+.storm p{color:#dbe4ea}
+.storm .phonecard{background:#fff;color:var(--slate);padding:28px;border-radius:6px;text-align:center}
+.storm .phonecard .num{font-family:'Archivo';font-weight:900;font-size:1.6rem;color:var(--hemlock);display:block;text-decoration:none;margin:8px 0}
+.storm .phonecard small{color:#5f6f7c}
+.camp{background:var(--mist)}
+.camp .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;margin-top:24px}
+.camp .col{background:#fff;padding:22px;border-left:4px solid var(--bark)}
+.camp .col h3{font-size:1rem;color:var(--bark);margin-bottom:8px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:24px}
+.ph{background:repeating-linear-gradient(45deg,#dfe6df,#dfe6df 12px,#d3ddd3 12px,#d3ddd3 24px);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:#6b7a6d;font-family:'Archivo';font-size:.8rem;text-align:center;padding:10px}
+.area{background:var(--hemlock);color:#fff}
+.area h2{color:#fff}
+.area p{color:#d7e2d8;max-width:60ch}
+.towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.towns span{border:1px solid #ffffff44;padding:7px 15px;border-radius:20px;font-family:'Archivo';font-size:.85rem}
+.contact{background:var(--paper)}
+.contact .box{background:#fff;border:2px solid var(--hemlock);padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:30px;border-radius:6px}
+.contact h3{color:var(--hemlock);margin-bottom:10px}
+.contact ul{list-style:none}
+.contact li{margin-bottom:10px}
+.contact a{color:var(--hemlock);font-weight:700}
+form .field{margin-bottom:12px}
+form label{display:block;font-family:'Archivo';font-size:.8rem;font-weight:700;color:var(--bark);margin-bottom:4px;text-transform:uppercase;letter-spacing:.06em}
+form input,form textarea{width:100%;padding:11px;border:1px solid #b9c4ba;border-radius:4px;font-family:inherit;font-size:.95rem;background:#fdfdfb}
+form button{width:100%;background:var(--hemlock);color:#fff;border:0;padding:14px;font-family:'Archivo';font-weight:700;font-size:1rem;border-radius:4px;cursor:pointer}
+footer{background:#16261d;color:#9db3a1;padding:26px 0;font-size:.85rem;text-align:center}
+@media(max-width:760px){.storm .grid,.contact .box{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="logo">MANNING'S <span>TREE &amp; PROPERTY CARE</span></div>
+<a class="call" href="tel:15185707439">(518) 570-7439</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+<div class="kicker">Willsboro, NY · Champlain Valley</div>
+<h1>The tree over your roof shouldn't wait for a storm to decide.</h1>
+<p>Manning's takes down problem trees and looks after Willsboro properties — the leaner over the camp, the dead ash by the line, the mess a nor'easter left on the lawn. We're on Sanders Road, ten minutes from the lake.</p>
+<div class="cta-row">
+<a class="btn primary" href="tel:15185707439">Call or text for a free look</a>
+<a class="btn ghost" href="#contact">Send a photo of the tree</a>
+</div>
+<p class="note">Away for the season? Text us a photo and the road name — we'll go take a look and call you back.</p>
+</div></section>
+
+<section><div class="wrap">
+<div class="kicker2">What we take on</div>
+<h2>Tree work first. Property care while we're there.</h2>
+<div class="jobs">
+<div class="job"><h3>Problem-tree removal</h3><p>Leaners, deadwood, storm-cracked trunks, trees tight to camps and lines — dropped in pieces, not luck.</p></div>
+<div class="job"><h3>Trimming &amp; crown work</h3><p>Limbs off the roofline, deadwood out of the maples, lake views opened up without butchering the tree.</p></div>
+<div class="job"><h3>Cleanup &amp; chipping</h3><p>Brush chipped, wood bucked and stacked or hauled — the lawn rakes clean when we leave.</p></div>
+<div class="job"><h3>Property care</h3><p>Seasonal grounds work for year-round homes and camps. Ask what you need — if it's not our job, we'll say so.</p></div>
+</div>
+</div></section>
+
+<section class="storm"><div class="wrap"><div class="grid">
+<div>
+<div class="kicker" style="color:#ffd79a">After the storm</div>
+<h2>Wind off the lake doesn't ask first.</h2>
+<p>When ice or a Champlain blow puts a tree on the driveway, the shed, or the road out — call. We'll tell you honestly whether it's an emergency or it can wait for a scheduled visit, and what each looks like.</p>
+</div>
+<div class="phonecard">
+<small>Storm damage? Start here</small>
+<a class="num" href="tel:15185707439">(518) 570-7439</a>
+<small>Call or text a photo — Willsboro-based, local response</small>
+</div>
+</div></div></section>
+
+<section class="camp"><div class="wrap">
+<div class="kicker2">For camp owners</div>
+<h2>Your camp is here all winter. You aren't.</h2>
+<div class="cols">
+<div class="col"><h3>Before you close up</h3><p>A walk-through for hazard trees and limbs over the roof, so October's list doesn't become February's insurance claim.</p></div>
+<div class="col"><h3>While you're away</h3><p>Something comes down across the drive in January? One call, photos of the work, and it's handled before Memorial Day.</p></div>
+<div class="col"><h3>Before you open</h3><p>Spring cleanup — downed limbs, winter brush, the yard ready before the first weekend up.</p></div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="kicker2">Our work</div>
+<h2>From up in the tree, not from a stock-photo library.</h2>
+<div class="gallery">
+<div class="ph">[PHOTO — removal over camp roof]</div>
+<div class="ph">[PHOTO — climber view of the lake, from their jobs]</div>
+<div class="ph">[PHOTO — before/after cleanup]</div>
+<div class="ph">[PHOTO — chipping/brush work]</div>
+</div>
+</div></section>
+
+<section class="area"><div class="wrap">
+<h2>Where we work</h2>
+<p>Based at 235 Sanders Road in Willsboro. If your tree is somewhere on the Champlain shore between the ferry and the Boquet, we'll come look at it.</p>
+<div class="towns"><span>Willsboro</span><span>Willsboro Point</span><span>Essex</span><span>Reber</span><span>Westport</span><span>Keeseville</span></div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+<div class="kicker2">Get a free look</div>
+<h2>Tell us about the tree.</h2>
+<div class="box">
+<div>
+<h3>Manning's Tree and Property Care LLC</h3>
+<ul>
+<li>235 Sanders Rd, Willsboro, NY 12996</li>
+<li>Call/text: <a href="tel:15185707439">(518) 570-7439</a></li>
+<li>Email: <a href="mailto:manningstreeandproperty@gmail.com">manningstreeandproperty@gmail.com</a></li>
+<li style="font-size:.88rem;color:#607061">Fully insured — certificate available on request. [CONFIRM insurance wording with owner]</li>
+</ul>
+</div>
+<form>
+<div class="field"><label>Name</label><input type="text" placeholder="Your name"></div>
+<div class="field"><label>Phone</label><input type="tel" placeholder="Best number to text"></div>
+<div class="field"><label>What's going on?</label><textarea rows="3" placeholder="Leaning maple over the porch, off Point Rd…"></textarea></div>
+<button type="submit">Request a free look</button>
+</form>
+</div>
+</div></section>
+
+<footer><div class="wrap">Manning's Tree and Property Care LLC · Willsboro, NY · (518) 570-7439</div></footer>
+</body>
+</html>

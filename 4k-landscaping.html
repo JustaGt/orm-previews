@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4K Landscaping &amp; Lawn Care | Newburgh, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --grass:#2f6b3f; --grass-dk:#235230; --sky:#6fb1d8; --cream:#f5f2ea;
+    --ink:#1f2a22; --muted:#5a6b5f; --line:#e2ddd0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  h1,h2,h3,.disp{font-family:'Sora',sans-serif;line-height:1.1;letter-spacing:-.5px}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+
+  nav{position:sticky;top:0;z-index:50;background:rgba(245,242,234,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .navbar{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{font-family:'Sora';font-weight:800;font-size:1.3rem;color:var(--grass);display:flex;align-items:center;gap:9px}
+  .brand .dot{width:13px;height:13px;border-radius:50%;background:var(--sky)}
+  .navcta{background:var(--grass);color:#fff;font-weight:600;padding:11px 22px;border-radius:30px;font-size:.92rem}
+  .navcta:hover{background:var(--grass-dk)}
+
+  /* SPLIT HERO (archetype C) */
+  .hero{padding:64px 0 80px}
+  .hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .kicker{display:inline-block;background:rgba(111,177,216,.2);color:var(--grass);font-weight:600;font-size:.82rem;letter-spacing:1px;padding:7px 14px;border-radius:30px;text-transform:uppercase}
+  .hero h1{font-size:clamp(2.5rem,5.4vw,4rem);font-weight:800;margin:20px 0 18px}
+  .hero h1 em{font-style:normal;color:var(--grass)}
+  .hero p.sub{font-size:1.15rem;color:var(--muted);max-width:500px;margin-bottom:30px}
+  .btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;font-weight:600;padding:14px 26px;border-radius:30px;font-size:1rem}
+  .btn-primary{background:var(--grass);color:#fff}
+  .btn-primary:hover{background:var(--grass-dk)}
+  .btn-ghost{border:2px solid var(--grass);color:var(--grass)}
+  .btn-ghost:hover{background:var(--grass);color:#fff}
+  .hero-card{position:relative;border-radius:22px;min-height:440px;
+    background:linear-gradient(0deg,rgba(35,82,48,.35),rgba(35,82,48,.05)),url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=80');
+    background-size:cover;background-position:center;background-color:#2f6b3f;box-shadow:0 24px 50px rgba(35,82,48,.22)}
+  .chip{position:absolute;bottom:22px;left:22px;background:#fff;border-radius:14px;padding:16px 20px;box-shadow:0 12px 26px rgba(0,0,0,.14);display:flex;align-items:center;gap:14px}
+  .chip .num{font-family:'Sora';font-weight:800;font-size:1.8rem;color:var(--grass)}
+  .chip .txt{font-size:.82rem;color:var(--muted);line-height:1.3}
+
+  section{padding:76px 0}
+  .sec-kick{display:inline-block;color:var(--sky);font-weight:700;letter-spacing:1.5px;font-size:.82rem;text-transform:uppercase}
+  .sec-title{font-size:clamp(1.9rem,4vw,2.7rem);font-weight:800;margin:8px 0 12px;color:var(--ink)}
+  .lead{max-width:620px;color:var(--muted);font-size:1.05rem}
+
+  /* SERVICES rounded cards */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+  .card{background:#fff;border-radius:18px;padding:30px 26px;border:1px solid var(--line);transition:.2s}
+  .card:hover{transform:translateY(-6px);box-shadow:0 20px 38px rgba(47,107,63,.14)}
+  .card .ic{width:50px;height:50px;border-radius:14px;background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:16px}
+  .card h3{font-size:1.2rem;margin-bottom:8px;color:var(--grass)}
+  .card p{font-size:.96rem;color:var(--muted)}
+
+  /* STAT BAND horizontal */
+  .band{background:var(--grass)}
+  .band .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;padding-top:50px;padding-bottom:50px}
+  .band .n{font-family:'Sora';font-weight:800;font-size:2.4rem;color:#fff}
+  .band .l{color:#cfe6d6;font-size:.85rem;letter-spacing:.5px;margin-top:6px}
+
+  /* WHY */
+  .why{display:grid;grid-template-columns:1.1fr 1fr;gap:46px;align-items:center}
+  .why .photo{min-height:380px;border-radius:20px;
+    background:linear-gradient(0deg,rgba(35,82,48,.3),rgba(35,82,48,.05)),url('https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1400&q=80');
+    background-size:cover;background-position:center;background-color:#2f6b3f}
+  .why ul{list-style:none;margin-top:20px}
+  .why li{padding:13px 0 13px 36px;position:relative;border-bottom:1px solid var(--line);font-size:1.02rem}
+  .why li:before{content:"\2713";position:absolute;left:0;top:11px;width:22px;height:22px;background:var(--sky);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700}
+
+  /* MASONRY gallery */
+  .gallery{columns:3;column-gap:14px;margin-top:44px}
+  .tile{break-inside:avoid;margin-bottom:14px;border-radius:16px;position:relative;overflow:hidden;background-size:cover;background-position:center}
+  .tile span{position:absolute;left:14px;bottom:12px;color:#fff;font-family:'Sora';font-weight:600;font-size:.9rem;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+  .g1{height:260px;background:linear-gradient(0deg,rgba(0,0,0,.45),rgba(0,0,0,.05)),url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=80');background-color:#2f6b3f}
+  .g2{height:190px;background:linear-gradient(0deg,rgba(0,0,0,.45),rgba(0,0,0,.05)),url('https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1400&q=80');background-color:#2f6b3f}
+  .g3{height:210px;background:linear-gradient(0deg,rgba(0,0,0,.45),rgba(0,0,0,.05)),url('https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1400&q=80');background-color:#2f6b3f}
+  .g4{height:240px;background:linear-gradient(0deg,rgba(0,0,0,.45),rgba(0,0,0,.05)),url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80');background-color:#2f6b3f}
+  .g5{height:200px;background:linear-gradient(0deg,rgba(0,0,0,.45),rgba(0,0,0,.05)),url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80');background-color:#2f6b3f}
+  .g6{height:230px;background:linear-gradient(0deg,rgba(0,0,0,.45),rgba(0,0,0,.05)),url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1400&q=80');background-color:#2f6b3f}
+
+  /* CONTACT card */
+  .contact{background:#fff;border-top:1px solid var(--line)}
+  .ccard{background:var(--cream);border-radius:22px;padding:46px;display:grid;grid-template-columns:1fr 1.05fr;gap:48px;border:1px solid var(--line)}
+  .info p{margin:14px 0;font-size:1.02rem}
+  .info .lbl{display:block;color:var(--sky);font-weight:700;font-size:.78rem;letter-spacing:1px;text-transform:uppercase}
+  .info a.big{font-family:'Sora';font-weight:800;font-size:1.9rem;color:var(--grass)}
+  .field{margin-bottom:14px}
+  label{display:block;font-size:.82rem;font-weight:600;margin-bottom:5px}
+  input,textarea,select{width:100%;padding:13px;border:1px solid var(--line);border-radius:10px;font-family:inherit;font-size:.95rem;background:#fff}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--sky)}
+  form button{width:100%;background:var(--grass);color:#fff;font-family:'Sora';font-weight:700;padding:15px;border:none;border-radius:30px;font-size:1rem;cursor:pointer}
+  form button:hover{background:var(--grass-dk)}
+  form h3{font-size:1.35rem;margin-bottom:16px;color:var(--ink)}
+  .thanks{display:none;text-align:center;padding:36px 10px}
+  .thanks.show{display:block}
+  .thanks .chk{font-size:2.6rem;color:var(--grass)}
+  .thanks h3{margin:8px 0;color:var(--grass)}
+
+  footer{background:var(--grass-dk);color:#cfe6d6;text-align:center;padding:34px 0;font-size:.9rem}
+  footer .by{color:var(--sky);font-family:'Sora';font-weight:600;margin-top:10px}
+
+  @media(max-width:860px){
+    .hero .grid{grid-template-columns:1fr;gap:30px}
+    .hero-card{min-height:320px}
+    .cards{grid-template-columns:1fr}
+    .band .wrap{grid-template-columns:1fr 1fr}
+    .why{grid-template-columns:1fr}
+    .why .photo{min-height:260px}
+    .gallery{columns:2}
+    .ccard{grid-template-columns:1fr;padding:30px}
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap navbar">
+    <div class="brand"><span class="dot"></span>4K Landscaping</div>
+    <a class="navcta" href="tel:18455594198">Call (845) 559-4198</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <span class="kicker">Newburgh &amp; Orange County</span>
+        <h1>A <em>sharp lawn</em> and a yard you're proud to pull into.</h1>
+        <p class="sub">Walter and the 4K crew handle the weekly mowing, the spring cleanup, fresh mulch beds, new plantings, and the stone work that ties it all together &mdash; for homes and businesses around Newburgh.</p>
+        <div class="btns">
+          <a class="btn btn-primary" href="#estimate">Get a Free Estimate</a>
+          <a class="btn btn-ghost" href="tel:18455594198">Call the Crew</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="chip"><div class="num">100%</div><div class="txt">Crew shows up<br>on schedule</div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-kick">What we handle</div>
+    <h2 class="sec-title">From the weekly cut to a full yard makeover</h2>
+    <p class="lead">Whether you want someone reliable to keep the grass tidy all season or you're ready to redo the front beds, 4K does the whole list &mdash; so you're not juggling three different guys.</p>
+    <div class="cards">
+      <div class="card"><div class="ic">&#127807;</div><h3>Lawn Maintenance</h3><p>Weekly and bi-weekly mowing, edging, trimming, and blow-off. Clean lines, no clippings left on the walk.</p></div>
+      <div class="card"><div class="ic">&#127810;</div><h3>Mulch &amp; Plantings</h3><p>Fresh mulch in the beds, shrubs and perennials placed right, and the color that makes the front of the house pop.</p></div>
+      <div class="card"><div class="ic">&#127811;</div><h3>Spring &amp; Fall Cleanups</h3><p>Leaves cleared, beds cut back, debris hauled. We get the property reset at both ends of the season.</p></div>
+      <div class="card"><div class="ic">&#129704;</div><h3>Hardscape</h3><p>Paver walkways, stone borders, and small patios that hold up and frame the planting beds.</p></div>
+      <div class="card"><div class="ic">&#127795;</div><h3>Trimming &amp; Pruning</h3><p>Hedges shaped, overgrowth knocked back, shrubs kept healthy and in bounds.</p></div>
+      <div class="card"><div class="ic">&#128293;</div><h3>Seasonal Programs</h3><p>One flat plan covering mowing through fall cleanup &mdash; set it once and the yard's handled.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <div><div class="n">Newburgh</div><div class="l">Locally owned &amp; run</div></div>
+    <div><div class="n">7-Day</div><div class="l">Quote turnaround</div></div>
+    <div><div class="n">Res + Comm</div><div class="l">Homes &amp; properties</div></div>
+    <div><div class="n">Full-Service</div><div class="l">Lawn to hardscape</div></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap why">
+    <div>
+      <div class="sec-kick">Why 4K</div>
+      <h2 class="sec-title">Walter answers, and the same crew comes back</h2>
+      <ul>
+        <li>You deal with the owner, not a call center &mdash; questions get a straight answer.</li>
+        <li>Consistent crew every visit, so they know your property and your preferences.</li>
+        <li>Clean job sites &mdash; clippings blown off, beds edged, nothing left behind.</li>
+        <li>One company for mowing, mulch, plantings, and stone work.</li>
+        <li>Flat-rate seasonal plans so there are no surprise invoices.</li>
+      </ul>
+    </div>
+    <div class="photo"></div>
+  </div>
+</section>
+
+<section style="background:#fff;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-kick">Recent work</div>
+    <h2 class="sec-title">Around the neighborhood</h2>
+    <div class="gallery">
+      <div class="tile g1"><span>Mulched front beds</span></div>
+      <div class="tile g2"><span>Weekly mow &amp; edge</span></div>
+      <div class="tile g3"><span>New plantings</span></div>
+      <div class="tile g4"><span>Paver walkway</span></div>
+      <div class="tile g5"><span>Fall cleanup</span></div>
+      <div class="tile g6"><span>Stone border</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="estimate">
+  <div class="wrap">
+    <div class="ccard">
+      <div class="info">
+        <div class="sec-kick">Get a quote</div>
+        <h2 class="sec-title" style="font-size:1.9rem">Let's set up a walk-through</h2>
+        <p><span class="lbl">Call or text</span><a class="big" href="tel:18455594198">(845) 559-4198</a></p>
+        <p><span class="lbl">Email</span><a href="mailto:4klawncare@gmail.com">4klawncare@gmail.com</a></p>
+        <p><span class="lbl">Service area</span>Newburgh, New Windsor, Wallkill, Marlboro, and nearby Orange County.</p>
+        <p><span class="lbl">Hours</span>Mon&ndash;Sat 7:00am&ndash;6:00pm</p>
+      </div>
+      <div>
+        <form id="form" onsubmit="event.preventDefault();document.getElementById('form').style.display='none';document.getElementById('ty').classList.add('show');">
+          <h3>Request a free estimate</h3>
+          <div class="field"><label>Name</label><input type="text" required></div>
+          <div class="field"><label>Phone</label><input type="tel" required></div>
+          <div class="field"><label>What do you need?</label>
+            <select><option>Weekly lawn maintenance</option><option>Mulch &amp; plantings</option><option>Spring/fall cleanup</option><option>Hardscape / pavers</option><option>Full property plan</option></select>
+          </div>
+          <div class="field"><label>Property details</label><textarea rows="3" placeholder="Address area, lot size, what you're after..."></textarea></div>
+          <button type="submit">Send Request</button>
+        </form>
+        <div class="thanks" id="ty">
+          <div class="chk">&#10003;</div>
+          <h3>Thanks &mdash; we've got it</h3>
+          <p>Walter will reach out to set up a time to look at the property. Need it sooner? Call <strong>(845) 559-4198</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    4K Landscaping &amp; Lawn Care &middot; Newburgh, NY &middot; (845) 559-4198
+    <div class="by">Website preview by Onyx Rise Media</div>
+  </div>
+</footer>
+</body>
+</html>

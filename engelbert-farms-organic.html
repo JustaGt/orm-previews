@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Engelbert Farms Organic — Certified organic beef, pork, veal &amp; cheese · Nichols, NY</title>
+<meta name="description" content="Farming the same ground in Nichols, NY since 1911. Certified organic since 1984 — the first certified organic dairy farm in the country. Farm Store &amp; Creamery open Wed–Sat.">
+<style>
+  :root{
+    --parch:#f6f1e4;
+    --parch-2:#efe7d5;
+    --ink:#221e18;
+    --ink-soft:#4b463c;
+    --barn:#2f4a35;
+    --barn-dk:#1f3324;
+    --ox:#7d2b23;
+    --gold:#b08528;
+    --rule:#d8cdb4;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--parch);
+    color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  a{color:var(--ox)}
+  h1,h2,h3{line-height:1.15;font-weight:600}
+  .eyebrow{
+    font-family:ui-sans-serif,system-ui,"Helvetica Neue",Arial,sans-serif;
+    font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;
+    color:var(--gold);
+  }
+
+  /* ---- top bar ---- */
+  .topbar{background:var(--barn-dk);color:#e9e2cf;font-family:ui-sans-serif,system-ui,Arial,sans-serif;font-size:14px}
+  .topbar .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;justify-content:space-between;padding-top:10px;padding-bottom:10px}
+  .topbar b{color:#fff;font-weight:600}
+
+  /* ---- hero ---- */
+  .hero{padding:72px 0 56px;border-bottom:3px double var(--rule)}
+  .hero h1{font-size:clamp(34px,5.4vw,60px);letter-spacing:-.01em;margin:14px 0 20px;max-width:16ch}
+  .hero h1 em{font-style:normal;color:var(--ox)}
+  .lede{font-size:clamp(19px,2.1vw,23px);color:var(--ink-soft);max-width:56ch}
+  .hero-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:48px;align-items:start}
+  .stamp{
+    border:2px solid var(--barn);border-radius:2px;background:var(--parch-2);
+    padding:22px 24px;position:relative;
+  }
+  .stamp:before{
+    content:"";position:absolute;inset:5px;border:1px solid var(--rule);pointer-events:none;
+  }
+  .stamp h3{font-size:15px;font-family:ui-sans-serif,system-ui,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--barn);margin-bottom:12px}
+  .hours{list-style:none;font-size:17px}
+  .hours li{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dotted var(--rule)}
+  .hours li:last-child{border-bottom:0}
+  .hours .day{color:var(--ink-soft)}
+  .hours .t{font-weight:600}
+  .drive{margin-top:14px;font-size:15px;color:var(--ink-soft);border-top:1px solid var(--rule);padding-top:12px}
+  .drive b{color:var(--ink)}
+
+  .btn{
+    display:inline-block;font-family:ui-sans-serif,system-ui,Arial,sans-serif;font-weight:700;
+    font-size:15px;letter-spacing:.04em;text-decoration:none;padding:15px 26px;border-radius:2px;
+  }
+  .btn-primary{background:var(--ox);color:#fdf8ee;border:1px solid var(--ox)}
+  .btn-ghost{background:transparent;color:var(--barn);border:1px solid var(--barn)}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+
+  section{padding:64px 0;border-bottom:1px solid var(--rule)}
+  h2{font-size:clamp(26px,3.4vw,38px);margin:10px 0 8px}
+  .sec-lede{color:var(--ink-soft);max-width:62ch;margin-bottom:34px}
+
+  /* ---- the case ---- */
+  .case{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--rule);border:1px solid var(--rule)}
+  .case div{background:var(--parch);padding:22px 20px}
+  .case h3{font-size:19px;color:var(--barn-dk);margin-bottom:6px}
+  .case p{font-size:16px;color:var(--ink-soft)}
+
+  /* ---- cheese ---- */
+  .cheese{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+  .cheese-list{list-style:none;column-count:2;column-gap:28px}
+  .cheese-list li{padding:8px 0;border-bottom:1px dotted var(--rule);font-size:17px;break-inside:avoid}
+  .cheese-list li span{float:right;color:var(--gold);font-size:13px;font-family:ui-sans-serif,system-ui,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase}
+  .note{
+    font-family:ui-sans-serif,system-ui,Arial,sans-serif;font-size:13px;line-height:1.5;
+    background:#fff6e0;border-left:3px solid var(--gold);padding:10px 14px;color:#6b5312;margin-top:18px;
+  }
+
+  /* ---- bulk order ---- */
+  .bulk{background:var(--barn-dk);color:#e9e2cf;border-bottom:none}
+  .bulk h2,.bulk .eyebrow{color:#f1e6c9}
+  .bulk .sec-lede{color:#c3cfc2}
+  .order-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  .cuts{list-style:none}
+  .cuts li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid #3b5741}
+  .cuts b{display:block;color:#fff;font-size:18px}
+  .cuts span{color:#a9bcae;font-size:16px}
+  form{display:grid;gap:12px}
+  label{font-family:ui-sans-serif,system-ui,Arial,sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#a9bcae;font-weight:700}
+  input,select,textarea{
+    width:100%;padding:12px 14px;border:1px solid #4b6b53;background:#26402d;color:#f4efe1;
+    font-family:inherit;font-size:16px;border-radius:2px;
+  }
+  input::placeholder,textarea::placeholder{color:#7e967f}
+  .form-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  button{
+    font-family:ui-sans-serif,system-ui,Arial,sans-serif;font-weight:700;font-size:15px;
+    background:var(--ox);color:#fdf8ee;border:0;padding:16px;border-radius:2px;cursor:pointer;letter-spacing:.04em;
+  }
+
+  /* ---- story ---- */
+  .timeline{list-style:none;border-left:2px solid var(--rule);margin-left:8px}
+  .timeline li{padding:0 0 30px 28px;position:relative}
+  .timeline li:before{
+    content:"";position:absolute;left:-8px;top:8px;width:14px;height:14px;background:var(--ox);
+    border:3px solid var(--parch);border-radius:50%;
+  }
+  .yr{font-family:ui-sans-serif,system-ui,Arial,sans-serif;font-weight:800;font-size:14px;letter-spacing:.12em;color:var(--gold)}
+  .timeline h3{font-size:21px;margin:2px 0 4px}
+  .timeline p{color:var(--ink-soft);max-width:60ch}
+
+  /* ---- trust ---- */
+  .trust{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .trust div{border-top:3px solid var(--barn);padding-top:16px}
+  .trust h3{font-size:18px;margin-bottom:6px}
+  .trust p{font-size:16px;color:var(--ink-soft)}
+
+  /* ---- voices ---- */
+  .voices{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+  blockquote{font-size:18px;line-height:1.6;color:var(--ink);border-left:3px solid var(--gold);padding-left:18px}
+  cite{display:block;margin-top:10px;font-style:normal;font-size:14px;font-family:ui-sans-serif,system-ui,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+
+  /* ---- visit ---- */
+  .visit{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+  .addr{font-size:20px;line-height:1.5}
+  .addr b{display:block;font-size:15px;font-family:ui-sans-serif,system-ui,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+  .addr a{font-weight:600}
+
+  footer{background:var(--ink);color:#b8b0a0;padding:40px 0;font-family:ui-sans-serif,system-ui,Arial,sans-serif;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+  footer b{color:#f0e9d8}
+
+  @media(max-width:860px){
+    .hero-grid,.cheese,.order-grid,.visit{grid-template-columns:1fr}
+    .case,.trust,.voices{grid-template-columns:1fr}
+    .cheese-list{column-count:1}
+    .form-2{grid-template-columns:1fr}
+    .hero{padding:44px 0 36px}
+    section{padding:44px 0}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>Farm Store &amp; Creamery · 263 W River Rd, Nichols NY</span>
+    <span><b>Open Wed–Sat</b> · <b>(607) 699-3001</b></span>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Certified organic since 1984 · Nichols, New York</p>
+      <h1>The first certified organic dairy farm in the country. <em>Same ground, still.</em></h1>
+      <p class="lede">The Engelberts have farmed this land on the Susquehanna since 1911 and stopped using chemicals on it in 1981. The beef, pork, veal, cheese and vegetables in the Creamery store were raised in the fields you drive past to get here.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#bulk">Order beef, pork or a hog share</a>
+        <a class="btn btn-ghost" href="#visit">Plan a store visit</a>
+      </div>
+    </div>
+    <aside class="stamp">
+      <h3>Store hours</h3>
+      <ul class="hours">
+        <li><span class="day">Wednesday</span><span class="t">11 – 5</span></li>
+        <li><span class="day">Thursday</span><span class="t">11 – 5</span></li>
+        <li><span class="day">Friday</span><span class="t">11 – 5</span></li>
+        <li><span class="day">Saturday</span><span class="t">10 – 3</span></li>
+        <li><span class="day">Sun – Tue</span><span class="t">Closed</span></li>
+      </ul>
+      <p class="drive"><b>Getting here:</b> the store is in the old Creamery building at 263 W River Rd, Nichols — about 20 min from Waverly, 40 from Binghamton, 55 from Ithaca.</p>
+    </aside>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">In the case</p>
+    <h2>What you can pick up this week</h2>
+    <p class="sec-lede">Everything with our name on it was born, raised and finished on this farm. Everything else on the shelves comes from farms we can name.</p>
+    <div class="case">
+      <div>
+        <h3>Beef</h3>
+        <p>100% grass-fed April through mid-November. Individual cuts, ground, roasts, brisket, short ribs.</p>
+      </div>
+      <div>
+        <h3>Pork &amp; veal</h3>
+        <p>Pigs raised outdoors on organic grain, milk, hay and garden vegetables. Veal calves raised on pasture with their mothers.</p>
+      </div>
+      <div>
+        <h3>Cheese</h3>
+        <p>Made from our own milk, in small runs, when we hold milk back from the co-op. See the board below.</p>
+      </div>
+      <div>
+        <h3>Vegetables &amp; pantry</h3>
+        <p>Our garlic, potatoes, onions, squash, beets and more in season — plus local eggs, honey, maple, bread and prepared meals from the store kitchen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">The cheese board</p>
+    <h2>Made here, from our herd's milk</h2>
+    <div class="cheese">
+      <div>
+        <p class="sec-lede">Most of the milk goes to Organic Valley. What we keep, we make into cheese — which is why the board changes and why it is worth calling ahead if you want a particular wheel.</p>
+        <p class="note"><b>Placeholder — confirm before publishing.</b> The variety names below are drawn from third-party listings, not from Engelbert Farms' own site. The real board (and which of them are in the case right now) needs to be confirmed with Lisa.</p>
+      </div>
+      <ul class="cheese-list">
+        <li>Cheddar <span>8 varieties</span></li>
+        <li>Gouda <span>3 varieties</span></li>
+        <li>Feta</li>
+        <li>Moochego</li>
+        <li>MooVache</li>
+        <li>Ask about seasonal runs</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="bulk" id="bulk">
+  <div class="wrap">
+    <p class="eyebrow">Bulk &amp; special orders</p>
+    <h2>A quarter, a half, a whole — or a hog</h2>
+    <p class="sec-lede">The store's biggest orders have never had a page. This is that page. Tell us what you want and roughly when you want it, and Lisa will come back with cut options, hanging weight and a pickup date.</p>
+    <div class="order-grid">
+      <ul class="cuts">
+        <li><span>◆</span><div><b>Quarter, half or whole beef</b><span>Grass-fed, cut to your sheet, ready for a chest freezer.</span></div></li>
+        <li><span>◆</span><div><b>Half or whole hog</b><span>Pastured, organic-fed. Chops, roasts, sausage and bacon to your spec.</span></div></li>
+        <li><span>◆</span><div><b>Veal</b><span>Raised on pasture with the herd. Limited each season.</span></div></li>
+        <li><span>◆</span><div><b>Wholesale cheese &amp; restaurant orders</b><span>For kitchens, co-ops and stores sourcing certified organic.</span></div></li>
+        <li><span>◆</span><div><b>Anything else</b><span>Special orders have always been welcome. Now you can actually place one.</span></div></li>
+      </ul>
+      <form onsubmit="return false;">
+        <div>
+          <label for="n">Name</label>
+          <input id="n" placeholder="Your name">
+        </div>
+        <div class="form-2">
+          <div>
+            <label for="e">Email</label>
+            <input id="e" type="email" placeholder="you@email.com">
+          </div>
+          <div>
+            <label for="p">Phone</label>
+            <input id="p" placeholder="(607) 000-0000">
+          </div>
+        </div>
+        <div>
+          <label for="w">What are you after?</label>
+          <select id="w">
+            <option>Quarter beef</option>
+            <option>Half beef</option>
+            <option>Whole beef</option>
+            <option>Half hog</option>
+            <option>Whole hog</option>
+            <option>Veal</option>
+            <option>Wholesale cheese / restaurant order</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div>
+          <label for="m">Freezer space, timing, cut preferences</label>
+          <textarea id="m" rows="3" placeholder="e.g. half beef, ground-heavy, pickup in October"></textarea>
+        </div>
+        <button type="submit">Send the order enquiry</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">How we got here</p>
+    <h2>One family, one farm, four decades ahead of the market</h2>
+    <ul class="timeline">
+      <li>
+        <p class="yr">1911</p>
+        <h3>The family starts farming this ground</h3>
+        <p>The same fields on West River Road that the herd grazes today.</p>
+      </li>
+      <li>
+        <p class="yr">1981</p>
+        <h3>The chemicals stop</h3>
+        <p>No pesticides, no herbicides, no chemical fertilizer, no hormones, no antibiotics, no animal by-products — a decision made twenty years before there was a market that rewarded it.</p>
+      </li>
+      <li>
+        <p class="yr">1984</p>
+        <h3>Certified organic — the first dairy farm in the country</h3>
+        <p>Certified by Vermont Organic Farmers (NOFA-VT). For the next twenty years the milk was sold into the conventional market anyway, because nowhere else would take it.</p>
+      </li>
+      <li>
+        <p class="yr">2001</p>
+        <h3>Joined CROPP Cooperative</h3>
+        <p>The milk finally started shipping to Organic Valley in August of that year.</p>
+      </li>
+      <li>
+        <p class="yr">Today</p>
+        <h3>Kevin, Lisa, Joe and John</h3>
+        <p>All four work the farm. The store and kitchen run out of the restored Creamery building — a working dairy building since around 1900.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">What that certification actually means here</p>
+    <h2>No chemicals. Ever. On the land or the animals.</h2>
+    <div class="trust">
+      <div>
+        <h3>The herd</h3>
+        <p>Dairy cows are never confined and move to fresh grass daily through the grazing season. Beef cattle are 100% grass-fed April to mid-November; over winter, organic hay and haylage, with corn silage at roughly 5% of the diet.</p>
+      </div>
+      <div>
+        <h3>The certificate</h3>
+        <p>Certified organic by Vermont Organic Farmers (NOFA-VT) since 1984. Milk ships to Organic Valley through CROPP Cooperative.</p>
+      </div>
+      <div>
+        <h3>The rest of the shelf</h3>
+        <p>Chicken from Jordan Farms. Eggs from Skytop Farm. Apples and pears from the Finger Lakes. Local honey, maple and coffee. If we didn't grow it, we'll tell you who did.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">From customers</p>
+    <h2>Why people drive out here</h2>
+    <div class="voices">
+      <blockquote>Amazing supply of the best, cleanest, tastiest and localest food in our area. I just picked up 14lbs of organic brisket and ended up buying short ribs, a chuck roast, Engelbert cheddar, beets and the last of the season's purple carrots.<cite>Seamus K.</cite></blockquote>
+      <blockquote>It's all REAL food. What we eat does matter. Where it comes from does matter. How it was grown and harvested does matter — for our health and the health of our planet.<cite>Rose C.</cite></blockquote>
+      <blockquote>Just stopped for my first time. The woman was so kind and helpful. The beef was amazing and full of flavor. The produce was fresh and tasty. Would highly recommend.<cite>Jalon C.</cite></blockquote>
+    </div>
+    <p class="note"><b>Placeholder — confirm before publishing.</b> These three quotes are carried over from Engelbert Farms' current site, where they appear without a date or a source platform. Before this page goes live they should be re-sourced (Google reviews are the obvious place) so they can be dated and attributed.</p>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <p class="eyebrow">Come out</p>
+    <h2>The Farm Store &amp; Creamery</h2>
+    <div class="visit">
+      <div class="addr">
+        <b>Where</b>
+        Engelbert Farms Organic, LLC<br>
+        Kevin and Lisa and family<br>
+        263 W River Rd<br>
+        Nichols, NY 13812
+        <p style="margin-top:18px"><a href="tel:6076993001">(607) 699-3001</a> · <a href="mailto:Lisa@engelbertfarms.com">Lisa@engelbertfarms.com</a></p>
+        <p class="note"><b>Placeholder — confirm.</b> A second phone number, (607) 699-3775, appears on outside directory listings. One of the two should be retired so buyers don't guess.</p>
+      </div>
+      <div>
+        <p class="eyebrow" style="color:var(--barn)">Hours</p>
+        <ul class="hours" style="margin-top:10px">
+          <li><span class="day">Wednesday</span><span class="t">11 – 5</span></li>
+          <li><span class="day">Thursday</span><span class="t">11 – 5</span></li>
+          <li><span class="day">Friday</span><span class="t">11 – 5</span></li>
+          <li><span class="day">Saturday</span><span class="t">10 – 3</span></li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#bulk">Place a bulk order</a>
+          <a class="btn btn-ghost" href="tel:6076993001">Call the store</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span><b>Engelbert Farms Organic, LLC</b> · 263 W River Rd, Nichols NY 13812 · Certified organic since 1984</span>
+    <span>Concept preview prepared by Onyx Rise Media</span>
+  </div>
+</footer>
+
+</body>
+</html>

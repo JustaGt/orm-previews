@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sodus Laundry Station — Self-Serve Laundromat & Wash-Dry-Fold | Sodus, NY</title>
+<meta name="description" content="Clean, family-run laundromat at 31 State St, Sodus NY. Self-serve washers & dryers, big-item machines, and wash-dry-fold service at $0.85/lb by appointment — (585) 755-4652.">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --aqua:#0e8f9f; --aqua-deep:#0a6b78; --aqua-pale:#e6f6f8;
+    --sun:#f5b62e; --sun-deep:#d99b12; --ink:#243239; --cloud:#ffffff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--cloud);line-height:1.65}
+  h1,h2,h3{font-family:'Nunito',sans-serif}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+  header{background:var(--cloud);border-bottom:3px solid var(--aqua);padding:14px 0;position:sticky;top:0;z-index:5}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+  .brand{font-family:'Nunito',sans-serif;font-weight:900;font-size:1.3rem;color:var(--aqua-deep)}
+  .brand span{color:var(--sun-deep)}
+  .call-btn{background:var(--sun);color:var(--ink);text-decoration:none;font-weight:700;padding:10px 18px;border-radius:24px}
+  .call-btn:hover{background:var(--sun-deep);color:#fff}
+  .hero{background:linear-gradient(160deg,var(--aqua) 0%,var(--aqua-deep) 100%);color:#fff;padding:70px 0 64px}
+  .hero h1{font-size:clamp(1.9rem,4.6vw,3rem);font-weight:900;line-height:1.15;max-width:21ch}
+  .hero p.sub{margin:16px 0 8px;font-size:1.15rem;max-width:54ch;color:#e7f7fa}
+  .hero .addr{color:#bfe7ec;font-size:.95rem;margin-bottom:26px}
+  .btn{display:inline-block;text-decoration:none;font-weight:700;padding:13px 26px;border-radius:26px}
+  .btn-sun{background:var(--sun);color:var(--ink)}
+  .btn-sun:hover{background:var(--sun-deep);color:#fff}
+  .btn-line{border:2px solid #fff;color:#fff}
+  .btn-line:hover{background:#fff;color:var(--aqua-deep)}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  section{padding:56px 0}
+  .kicker{color:var(--aqua);font-weight:800;font-family:'Nunito',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:.82rem}
+  h2{font-size:clamp(1.5rem,3.2vw,2.05rem);color:var(--aqua-deep);margin:6px 0 24px;font-weight:900}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+  .tile{background:var(--aqua-pale);border-radius:14px;padding:22px}
+  .tile h3{color:var(--aqua-deep);font-size:1.03rem;margin-bottom:8px;font-weight:800}
+  .tile p{font-size:.96rem}
+  /* wdf */
+  .wdf{background:var(--aqua-pale)}
+  .wdf .box{background:#fff;border-radius:16px;padding:30px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;box-shadow:0 4px 14px rgba(14,143,159,.12)}
+  @media(max-width:680px){.wdf .box{grid-template-columns:1fr}}
+  .price{font-family:'Nunito',sans-serif;font-weight:900;font-size:3rem;color:var(--aqua);line-height:1}
+  .price small{display:block;font-size:.95rem;color:var(--ink);font-weight:600}
+  .steps{list-style:none;counter-reset:s;margin-top:10px}
+  .steps li{counter-increment:s;padding:8px 0 8px 44px;position:relative;font-size:.98rem}
+  .steps li::before{content:counter(s);position:absolute;left:0;top:6px;width:30px;height:30px;border-radius:50%;background:var(--sun);color:var(--ink);font-weight:800;display:flex;align-items:center;justify-content:center;font-family:'Nunito',sans-serif}
+  /* cottage strip */
+  .cottage{background:var(--sun)}
+  .cottage h2{color:var(--ink)}
+  .cottage p{max-width:64ch}
+  /* contact */
+  .contact{background:var(--aqua-deep);color:#fff}
+  .contact h2{color:#fff}
+  .contact .split{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+  @media(max-width:720px){.contact .split{grid-template-columns:1fr}}
+  .contact .card{background:rgba(255,255,255,.09);border-radius:14px;padding:24px}
+  .contact .card h3{color:var(--sun);margin-bottom:10px;font-weight:800}
+  .contact a{color:var(--sun)}
+  .placeholder{opacity:.8;font-style:italic;font-size:.88rem}
+  footer{background:#083c44;color:#9fd3da;text-align:center;padding:20px;font-size:.88rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">Sodus <span>Laundry</span> Station</div>
+    <a class="call-btn" href="tel:+15857554652">Wash-dry-fold: (585) 755-4652</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Wash it yourself — or leave it with Dave & Yvonne.</h1>
+    <p class="sub">A clean, bright, family-run laundromat in the middle of Sodus: self-serve machines seven days a week, and wash-dry-fold at 85¢ a pound when you'd rather not spend the morning here.</p>
+    <p class="addr">31 State Street, Sodus, NY 14551 · (315) 483-4004</p>
+    <div class="cta-row">
+      <a class="btn btn-sun" href="#wdf">Book a wash-dry-fold drop-off</a>
+      <a class="btn btn-line" href="#selfserve">See the self-serve room</a>
+    </div>
+  </div>
+</section>
+
+<section id="selfserve">
+  <div class="wrap">
+    <span class="kicker">Self-Serve</span>
+    <h2>A laundromat somebody actually looks after</h2>
+    <div class="grid">
+      <div class="tile"><h3>Machines that work</h3><p>Coin-op washers and dryers kept running — including large-capacity machines for comforters, sleeping bags, horse blankets and everything else your home washer refuses.</p></div>
+      <div class="tile"><h3>Comfortable while you wait</h3><p>Air-conditioned, well-lit, with WiFi, a wide-screen TV, music, and a shelf of books and magazines. Bring a coffee; the hour goes quickly.</p></div>
+      <div class="tile"><h3>Safe at any hour</h3><p>Camera-monitored and family-operated — the kind of room you're comfortable sending a teenager to with the week's wash.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="wdf" id="wdf">
+  <div class="wrap">
+    <span class="kicker">Drop It & Go</span>
+    <h2>Wash-dry-fold, by the pound</h2>
+    <div class="box">
+      <div class="price">85¢<small>per pound<br>by appointment</small></div>
+      <div>
+        <ol class="steps">
+          <li>Call or text <strong>(585) 755-4652</strong> to set a drop-off time.</li>
+          <li>Hand over the basket — washed, dried and folded for you.</li>
+          <li>Pick it up ready for the drawer. <span class="placeholder">[Typical turnaround — confirm]</span></li>
+        </ol>
+        <p style="margin-top:12px;font-size:.92rem">Please note: no dry cleaning, leather or wedding gowns — honest machines, honest pricing, everything else welcome.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cottage">
+  <div class="wrap">
+    <span class="kicker" style="color:#7a5606">Sodus Point Rentals & Campers</span>
+    <h2>Changeover day, handled</h2>
+    <p>Running a cottage rental at the Point? Camping the week at the bay? Drop sheets, towels and beach gear on your way through Sodus and pick them up folded — instead of losing a vacation morning to the spin cycle. Ask about recurring Saturday drop-offs in season.</p>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <span class="kicker" style="color:var(--sun)">Find Us</span>
+    <h2>On State Street, in the village</h2>
+    <div class="split">
+      <div class="card">
+        <h3>Contact</h3>
+        <p>Self-serve & general: <a href="tel:+13154834004">(315) 483-4004</a></p>
+        <p>Wash-dry-fold appointments: <a href="tel:+15857554652">(585) 755-4652</a></p>
+        <p style="margin-top:10px">31 State Street, Sodus, NY 14551</p>
+      </div>
+      <div class="card">
+        <h3>Hours</h3>
+        <p class="placeholder">[Daily hours — to be confirmed with Dave & Yvonne]</p>
+        <p style="margin-top:10px">Family owned & operated · Sodus Chamber of Commerce member</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>Sodus Laundry Station · 31 State St, Sodus, NY · (315) 483-4004</footer>
+</body>
+</html>

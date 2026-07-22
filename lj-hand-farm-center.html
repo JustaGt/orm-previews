@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!--
+NICHE IDENTITY BRIEF — L.J. Hand Farm Center, Inc. (Sandra Borden), Fultonville / Village of Glen NY (Montgomery Co.) — rural farm & home supply / country hardware retail + farm-equipment repair
+Business: Founded 1967 by Lynwood J. Hand; owned since 2015 by niece Sandra Borden. 1431 State Highway 161, Fultonville (Glen) 12072. Phone (518) 922-6121 / toll-free (800) 724-1080 (alt (518) 922-8311 — CONFIRM). Fernco + Wiese Tillage dealer. Ignore (518) 853-8334 (county tourism number — search conflation).
+Target: local farmers/ranchers, rural homeowners, gardeners, weekend property owners who'd otherwise drive to a big-box.
+Local market: rural Montgomery Co (Glen, Fultonville, Fonda, Fort Hunter, Canajoharie) — farm & Erie Canal country.
+Tone: neighborly, dependable, since-1967, "we'll have the part."
+Visual: barn red + weathered green, cream, kraft; feed-sack / hardware-aisle warmth.
+Pain points: listed domain ljhandfarmcenterinc.com is a DEAD unconnected Wix placeholder (VERIFIED live via browser). Departments, brands, hours, repair capability invisible online; shoppers default to the big-box.
+Desires: know departments (feed/farm/hardware/home/garden/equipment repair), hours, brands, that a real person helps find/fix the part.
+Trust: since 1967, 2nd-family-generation owner, authorized dealer lines (Fernco/Wiese), on-site equipment repair, chamber member.
+Conversion goal: drive-in visits + call/check-stock/repair contact; establish a real web home.
+Sections: hero, departments grid, equipment-repair, shop-local vs box, dealer lines, hours & directions, about the family, contact.
+Cliches to avoid: ORM banned list; "everything under one roof"/"hometown store" overuse; no invented brands/prices/hours beyond verified — owner-confirm placeholders.
+Unique: turns a dead placeholder domain into a real department/stock/repair page a farmer can check before driving over.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L.J. Hand Farm Center — Farm, Feed, Hardware &amp; Garden Since 1967 | Fultonville, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700;800&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --barn:#8f2e24; --barn-d:#6f2019; --green:#3d5b3a; --green-d:#2c4429;
+  --wheat:#cf9a4e; --cream:#f4eddb; --paper:#faf5ea; --ink:#2b271f; --soft:#66604f; --line:#e5dcc4; --white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Karla',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3,.slab{font-family:'Bitter',serif}
+a{color:inherit}
+.note{background:#efe6cf;border-bottom:1px solid #e2d4b3;color:#7a663a;font-size:.8rem;text-align:center;padding:10px}
+.top{background:var(--green-d);color:#cfd9c9;font-size:.85rem}
+.top .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;padding:9px 24px}
+.top b{color:var(--wheat)}
+.bar{background:var(--barn);border-bottom:4px solid var(--wheat)}
+.bar .wrap{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;flex-wrap:wrap;gap:10px}
+.brand{display:flex;align-items:center;gap:13px;color:#fff}
+.mark{width:52px;height:52px;border-radius:8px;background:var(--cream);color:var(--barn);display:flex;align-items:center;justify-content:center;font-size:1.7rem;border:2px solid var(--wheat)}
+.brand .nm{font-family:'Bitter';font-size:1.35rem;font-weight:800;line-height:1}
+.brand .nm small{display:block;font-family:'Karla';font-size:.6rem;letter-spacing:2.5px;color:#f2d6a2;font-weight:600;margin-top:6px;text-transform:uppercase}
+.nav{display:flex;gap:20px;align-items:center;font-size:.94rem}
+.nav a{text-decoration:none;color:#f3ddd9}.nav a:hover{color:#fff}
+.nav .cta{background:var(--wheat);color:var(--barn-d);padding:11px 18px;border-radius:5px;font-weight:700}
+.hero{background:linear-gradient(158deg,#a5443a 0%,var(--barn) 55%,var(--barn-d) 100%);color:#fff;padding:76px 0 70px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:38px;align-items:center}
+.kick{display:inline-block;background:rgba(207,154,78,.22);color:#f2d6a2;font-size:.76rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;padding:7px 14px;border-radius:4px;margin-bottom:18px}
+.hero h1{font-size:2.95rem;line-height:1.07;font-weight:800;margin-bottom:16px}
+.hero h1 em{color:var(--wheat);font-style:normal}
+.hero p{font-size:1.1rem;color:#f0dcd8;max-width:520px}
+.row{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:5px;font-size:.96rem}
+.btn-w{background:var(--wheat);color:var(--barn-d)}.btn-w:hover{background:#bd8940}
+.btn-o{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}.btn-o:hover{border-color:#fff}
+.hcard{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:24px}
+.hcard h3{font-family:'Bitter';font-size:1.05rem;color:#fff;margin-bottom:14px}
+.hcard .li{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;font-size:.93rem;color:#f0dcd8}
+.hcard .li:last-child{margin-bottom:0}.hcard .li b{color:var(--wheat)}
+.strip{background:var(--green)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:22px 24px;text-align:center}
+.strip .s b{display:block;font-family:'Bitter';font-size:1.6rem;color:var(--wheat);font-weight:800}
+.strip .s span{font-size:.82rem;color:#dce6d6}
+section{padding:64px 0}
+.eyebrow{font-size:.78rem;letter-spacing:3px;text-transform:uppercase;color:var(--barn);font-weight:700;margin-bottom:10px}
+h2{font-size:2.3rem;color:var(--green-d);line-height:1.12;margin-bottom:12px;font-weight:800}
+.lead{color:var(--soft);max-width:680px;font-size:1.03rem;margin-bottom:36px}
+.depts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.d{background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px;border-top:4px solid var(--barn)}
+.d .ic{font-size:1.8rem;margin-bottom:8px}
+.d h3{font-size:1.15rem;color:var(--barn);margin-bottom:5px}
+.d p{color:var(--soft);font-size:.9rem}
+.repair{background:var(--green-d);color:#dce6d6;border-radius:16px;padding:44px;display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
+.repair .eyebrow{color:var(--wheat)}
+.repair h2{color:#fff}
+.repair p{color:#dce6d6;font-size:1.02rem}
+.repair .box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:26px}
+.repair .box ul{list-style:none}
+.repair .box li{padding:10px 0 10px 28px;position:relative;font-size:.98rem;color:#eef3ea;border-bottom:1px solid rgba(255,255,255,.12)}
+.repair .box li:last-child{border:none}
+.repair .box li:before{content:"\2713";position:absolute;left:0;top:10px;color:var(--wheat);font-weight:800}
+.why{background:var(--cream)}
+.why .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.why .w{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px;text-align:center}
+.why .w .ic{font-size:1.7rem;margin-bottom:8px}
+.why .w h3{font-size:1.1rem;color:var(--green-d);margin-bottom:6px}
+.why .w p{color:var(--soft);font-size:.92rem}
+.dealer{text-align:center}
+.dealer .tags{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:20px}
+.dealer .tags span{background:#fff;color:var(--barn);padding:9px 18px;border-radius:5px;font-size:.92rem;font-weight:700;border:1px solid var(--line)}
+.visit{background:var(--green-d);color:#fff}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;padding:56px 24px}
+.visit h2{color:#fff}
+.visit .info{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:26px}
+.visit .info .r{display:flex;gap:12px;margin-bottom:14px;font-size:.98rem;color:#eef3ea}
+.visit .info .r:last-child{margin-bottom:0}.visit .info .r b{color:var(--wheat)}
+.hours{font-size:.96rem;color:#eef3ea}
+.hours em{color:#c9d6c4;font-style:italic}
+.cta{background:var(--barn);color:#fff;text-align:center;padding:72px 0}
+.cta h2{color:#fff;font-size:2.3rem;max-width:700px;margin:0 auto 14px}
+.cta p{color:#f0dcd8;max-width:560px;margin:0 auto 24px;font-size:1.04rem}
+.cta .phone{font-family:'Bitter';font-size:1.9rem;font-weight:800;color:var(--wheat);margin-top:16px}
+.foot{background:#241f18;color:#a99e86;padding:30px 0;font-size:.86rem}
+.foot .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media(max-width:860px){
+  .nav{display:none}
+  .hero .wrap,.strip .wrap,.depts,.repair,.why .wrap,.visit .wrap{grid-template-columns:1fr}
+  .hero h1{font-size:2.25rem}h2{font-size:1.85rem}.repair,.visit .wrap{padding:28px}
+}
+</style>
+</head>
+<body>
+<div class="note">Preview concept prepared by Onyx Rise Media for L.J. Hand Farm Center — not the company's live website. Departments, brands carried, hours, and any figures shown are placeholders pending the owner's own details.</div>
+<div class="top"><div class="wrap">
+  <div>📍 1431 State Highway 161, Fultonville (Glen), NY 12072</div>
+  <div>🌾 <b>Family-owned farm &amp; home supply since 1967</b></div>
+</div></div>
+<header class="bar"><div class="wrap">
+  <div class="brand">
+    <div class="mark">🌾</div>
+    <div class="nm">L.J. Hand Farm Center<small>Fultonville / Glen, NY · Since 1967</small></div>
+  </div>
+  <nav class="nav">
+    <a href="#depts">Departments</a>
+    <a href="#repair">Equipment Repair</a>
+    <a href="#dealer">Brands</a>
+    <a href="#visit">Hours &amp; Directions</a>
+    <a href="#contact" class="cta">Check Stock</a>
+  </nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <span class="kick">Feed · Farm · Hardware · Home · Garden — Montgomery County</span>
+    <h1>The part you need is <em>15 minutes down 161</em> — not an hour at the big-box.</h1>
+    <p>Since 1967, L.J. Hand has kept Glen and Fultonville farmers and homeowners stocked — seed, feed, fencing, fasteners, tools, garden stock, and on-site equipment repair. Real shelves, real help, one local counter.</p>
+    <div class="row">
+      <a href="#contact" class="btn btn-w">Call to check stock</a>
+      <a href="#depts" class="btn btn-o">See our departments</a>
+    </div>
+  </div>
+  <div class="hcard">
+    <h3>Why folks stop in</h3>
+    <div class="li"><b>✓</b><span>Feed, farm, hardware, home &amp; garden <b>under one local roof</b></span></div>
+    <div class="li"><b>✓</b><span>On-site <b>farm-equipment repair</b> — we fix the part, not just sell it</span></div>
+    <div class="li"><b>✓</b><span>Authorized dealer lines <em>(Fernco, Wiese &amp; more)</em></span></div>
+    <div class="li"><b>✓</b><span>Family-owned since 1967 — someone who knows the answer</span></div>
+  </div>
+</div></section>
+
+<div class="strip"><div class="wrap">
+  <div class="s"><b>1967</b><span>Serving the valley since</span></div>
+  <div class="s"><b>5</b><span>Departments in one stop</span></div>
+  <div class="s"><b>2nd</b><span>Family generation</span></div>
+  <div class="s"><b>On-site</b><span>Equipment repair</span></div>
+</div></div>
+
+<section id="depts"><div class="wrap">
+  <div class="eyebrow">What's on the shelves</div>
+  <h2>Five departments, one gravel lot</h2>
+  <p class="lead">From spring seed to a busted fitting on a Sunday project, this is the store rural Montgomery County actually needs close by. Here's what you'll find inside <em>(full brand and stock list to be confirmed with the owner)</em>.</p>
+  <div class="depts">
+    <div class="d"><div class="ic">🌱</div><h3>Feed &amp; Farm</h3><p>Seed, feed, fertilizer, and the everyday farm supplies that started this store in 1967.</p></div>
+    <div class="d"><div class="ic">🔩</div><h3>Hardware</h3><p>Fasteners, plumbing &amp; electrical fittings, fencing, and the odd part the box store never stocks.</p></div>
+    <div class="d"><div class="ic">🏡</div><h3>Home</h3><p>Household goods and the practical everyday items for keeping a rural home running.</p></div>
+    <div class="d"><div class="ic">🌷</div><h3>Garden Center</h3><p>Garden hand tools, plants, and seasonal stock for the yard and the vegetable patch.</p></div>
+    <div class="d"><div class="ic">🛠️</div><h3>Equipment Repair</h3><p>Farm and outdoor-equipment repair handled on site — see the next section.</p></div>
+    <div class="d"><div class="ic">🚜</div><h3>Dealer Lines</h3><p>Authorized dealer for Fernco, Wiese Tillage, and more — parts and product you can trust.</p></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="repair" id="repair">
+    <div>
+      <div class="eyebrow">More than a parts counter</div>
+      <h2>We fix it, too</h2>
+      <p>Plenty of stores will sell you a part and wish you luck. L.J. Hand also repairs farm and outdoor equipment on site — so when something quits in the middle of a job, you've got a local shop that can actually put it back to work.</p>
+    </div>
+    <div class="box">
+      <ul>
+        <li>Farm-equipment repair handled in-house</li>
+        <li>Parts stocked for the lines we carry</li>
+        <li>Straight talk on fix-it vs. replace-it</li>
+        <li>Local turnaround — no shipping it out of county</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="why"><div class="wrap">
+  <div class="w"><div class="ic">🕗</div><h3>Closer than the box store</h3><p>A quick run down Route 161 instead of an hour each way to the nearest chain — with the part in hand.</p></div>
+  <div class="w"><div class="ic">🤝</div><h3>Answers, not aisles</h3><p>Ask a real person who knows feed rates, fitting sizes, and what actually works out here.</p></div>
+  <div class="w"><div class="ic">🌾</div><h3>Rooted since 1967</h3><p>Two family generations serving the same farms — the store grows because the neighbors keep coming back.</p></div>
+</div></section>
+
+<section class="dealer" id="dealer"><div class="wrap">
+  <div class="eyebrow" style="text-align:center">Lines we carry</div>
+  <h2>Brands worth the trip</h2>
+  <p class="lead" style="margin:0 auto">Authorized dealer lines and stocked brands <em>(full list to be confirmed — sample shown)</em>.</p>
+  <div class="tags">
+    <span>Fernco</span><span>Wiese Tillage</span><span>Feed &amp; Seed</span><span>Fencing</span><span>Hand Tools</span><span>Garden Stock</span>
+  </div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <div>
+    <div class="eyebrow" style="color:var(--wheat)">Come see us</div>
+    <h2>On Route 161 in the Village of Glen</h2>
+    <p class="hours">Open to farmers, homeowners, and weekend project-doers alike. Hours below are a starting point — <em>final hours to be confirmed by the owner.</em></p>
+  </div>
+  <div class="info">
+    <div class="r"><b>📍</b><span>1431 State Highway 161, Fultonville (Glen), NY 12072</span></div>
+    <div class="r"><b>📞</b><span>(518) 922-6121 · toll-free (800) 724-1080</span></div>
+    <div class="r"><b>🕗</b><span>Mon–Fri 8:00–5:00 · Sat 8:00–3:00 <em>(confirm)</em></span></div>
+    <div class="r"><b>🚜</b><span>Farm-equipment repair on site</span></div>
+  </div>
+</div></section>
+
+<section class="cta" id="contact"><div class="wrap">
+  <div class="eyebrow" style="color:var(--wheat)">Before you drive over</div>
+  <h2>Need a part, a bag of feed, or a repair? Call and we'll check.</h2>
+  <p>Tell us what you're after and we'll see if it's on the shelf or get it coming — and if it's broken, we'll tell you whether we can fix it here.</p>
+  <a href="#" class="btn btn-w">Call the farm center</a>
+  <div class="phone">(518) 922-6121</div>
+</div></section>
+
+<footer class="foot"><div class="wrap">
+  <div><strong>L.J. Hand Farm Center, Inc.</strong> · 1431 State Highway 161, Fultonville (Glen), NY 12072 · (518) 922-6121</div>
+  <div>Feed · Farm · Hardware · Home · Garden · Equipment Repair — family-owned since 1967</div>
+</div></footer>
+</body>
+</html>

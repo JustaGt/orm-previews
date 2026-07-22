@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--
+NICHE IDENTITY BRIEF — Brenda's Custom Upholstery (Jamestown, NY)  [ORM prospect #155]  FRESH NICHE: first upholstery shop in DB
+Business type: Small owner-run custom upholstery & reupholstery shop at 25 Marlow Rd, Jamestown NY. Furniture, boat/marine, and motorcycle seat work.
+Target customers: Homeowners with worn or heirloom furniture; Chautauqua Lake boat & pontoon owners; motorcycle riders needing seat recovers; RV owners; interior designers.
+Local market: Jamestown / Chautauqua Lake — furniture-heritage town; a lake full of boats needing marine vinyl; long winters = indoor restoration season.
+Emotional tone: personal, hands-on craft, pride in every job, heirloom care, one-on-one with the maker.
+Visual style: workshop textures, fabric/vinyl swatches, before/after, warm neutrals with a deep teal accent; tactile, not slick.
+Pain points: Brenda's ONLY web page is an auto-generated UENI site that lists her in Shelby / Kings Mountain, NORTH CAROLINA, with a 704 WhatsApp number and "Areas Covered: Kings mountain nc" — none of it is her actual Jamestown shop. It has no real service list, no before/after work, no working local quote path, and no hours. A local searching "upholstery Jamestown NY" can't tell what she does or that she's even in New York.
+Desires: See real before/after work; know exactly what she recovers (furniture / boat / motorcycle / auto); get a fast quote by sending photos; confirm she's local in Jamestown; rough turnaround.
+Trust signals: real Jamestown address & 716 number, breadth (furniture + marine + motorcycle), takes pride in every job, before/after proof, heirloom/antique experience.
+Conversion goal: photo-based quote requests ("text a photo, get an estimate") plus calls.
+Sections: hero (unmistakably Jamestown, what she recovers); services; how it works (bring in or send photos -> estimate -> pick fabric -> done); fabric & marine-vinyl options; before/after gallery placeholder; about Brenda; CORRECT Jamestown location + map + hours; photo-quote CTA.
+Cliches to avoid: banned ORM list; also "breathe new life", "transform your furniture" (banned-adjacent), "your vision, our craftsmanship".
+Unique to niche: the concept fixes the exact wrong-state embarrassment (site currently says NC) by anchoring hard to Jamestown & Chautauqua Lake, and leads with a "send a photo, get an estimate" flow built for a one-person shop; marine/pontoon seating is the local hook.
+NOTE: hours and years-in-business are placeholders — confirm before publishing. Verified public email on her own UENI page: brendablynt2013@gmail.com.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brenda's Custom Upholstery — Furniture, Boat &amp; Motorcycle Seats | Jamestown, NY</title>
+<style>
+  :root{
+    --teal:#155e63; --teal-dk:#0d3f43; --rust:#c9603a; --sand:#f4efe7; --paper:#fbf8f2;
+    --ink:#241f1c; --muted:#6c6459; --line:#e5dccb;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3{font-family:'Palatino Linotype',Palatino,Georgia,serif;line-height:1.18}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  /* top */
+  .top{background:var(--teal-dk);color:#e7f0f0;font-size:.9rem}
+  .top .wrap{display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:space-between;align-items:center;padding:9px 22px}
+  .top b{color:#fff}
+  /* hero */
+  .hero{background:linear-gradient(rgba(13,63,67,.82),rgba(13,63,67,.9)),repeating-linear-gradient(45deg,#1a6b70 0 22px,#155e63 22px 44px);color:#fff;padding:66px 0 60px}
+  .hero .wrap{max-width:900px}
+  .kick{text-transform:uppercase;letter-spacing:2.5px;font-size:.78rem;color:#f0c3ac;font-weight:700}
+  .hero h1{font-size:2.85rem;margin:14px 0 12px}
+  .hero p.lede{font-size:1.2rem;color:#e2edec;max-width:640px}
+  .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+  .btn{display:inline-block;padding:14px 26px;border-radius:6px;font-weight:700;text-decoration:none;font-size:1.02rem;cursor:pointer;border:none}
+  .btn-rust{background:var(--rust);color:#fff}
+  .btn-ghost{border:2px solid #cfe0df;color:#fff;background:transparent}
+  /* local strip */
+  .local{background:var(--rust);color:#fff;text-align:center;padding:11px 22px;font-weight:600}
+  /* services */
+  section.pad{padding:54px 0}
+  h2.big{font-size:2rem;color:var(--teal);text-align:center;margin-bottom:8px}
+  .lead-c{text-align:center;color:var(--muted);max-width:640px;margin:0 auto 34px}
+  .svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;border-top:4px solid var(--teal)}
+  .card.boat{border-top-color:var(--rust)}
+  .card h3{font-size:1.24rem;margin-bottom:8px;color:var(--teal-dk)}
+  .card.boat h3{color:var(--rust)}
+  .card p{font-size:.97rem;color:var(--muted)}
+  .card ul{margin:10px 0 0 18px;font-size:.92rem;color:var(--muted)}
+  .card li{margin:3px 0}
+  /* how */
+  .how{background:var(--sand)}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
+  .stp{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px}
+  .stp .n{width:36px;height:36px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:serif;margin-bottom:12px}
+  .stp h3{font-size:1.1rem;margin-bottom:6px}
+  .stp p{font-size:.94rem;color:var(--muted)}
+  /* gallery */
+  .gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+  .frame{background:#efe7d8;border:1px dashed #c9bda3;border-radius:10px;min-height:170px;display:flex;align-items:center;justify-content:center;text-align:center;color:#8a7d64;padding:18px;font-size:.9rem}
+  .frame b{color:var(--teal-dk)}
+  /* fabrics */
+  .fab{background:var(--teal);color:#fff}
+  .fab .cols{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center;padding:50px 22px}
+  .fab h2{font-size:1.9rem;margin-bottom:12px}
+  .fab p{color:#dcecea;margin-bottom:10px}
+  .swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .sw{aspect-ratio:1;border-radius:8px;border:3px solid rgba(255,255,255,.25)}
+  /* quote / contact */
+  .quote .cols{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+  .quote h2{font-size:1.85rem;color:var(--teal);margin-bottom:12px}
+  .form label{display:block;font-size:.82rem;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin:12px 0 5px}
+  .form input,.form textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:6px;font-size:1rem;font-family:inherit}
+  .form .btn{margin-top:16px;width:100%;text-align:center}
+  .info li{list-style:none;padding:11px 0;border-bottom:1px solid var(--line);display:flex;gap:12px}
+  .info li b{min-width:92px;color:var(--teal)}
+  .mapbox{background:#dbe6e5;border:1px solid var(--line);border-radius:12px;min-height:200px;display:flex;align-items:center;justify-content:center;text-align:center;color:#4f6867;padding:22px;margin-top:16px}
+  .ph{font-style:italic;color:#9a6a12;font-size:.82rem}
+  footer{background:var(--teal-dk);color:#cfe0df;padding:34px 0;text-align:center;font-size:.9rem}
+  footer b{color:#fff}
+  @media(max-width:760px){
+    .hero h1{font-size:2.1rem}
+    .fab .cols,.quote .cols{grid-template-columns:1fr}
+    .top .wrap{justify-content:center;text-align:center}
+    .swatches{grid-template-columns:repeat(4,1fr)}
+  }
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <span>25 Marlow Road, Jamestown NY &middot; serving the Chautauqua Lake area</span>
+  <span>Text or call: <b>(716) 467-0062</b></span>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="kick">Jamestown, New York &middot; Chautauqua County</div>
+  <h1>Worn-out furniture, boat seats, and bike saddles &mdash; re-covered right here in Jamestown.</h1>
+  <p class="lede">I&rsquo;m Brenda. For years I&rsquo;ve been rebuilding and re-covering furniture, pontoon and boat seating, and motorcycle seats out of my shop on Marlow Road. Send me a photo and I&rsquo;ll tell you what it&rsquo;ll take to make it last another twenty years.</p>
+  <div class="cta">
+    <a class="btn btn-rust" href="#quote">Send a photo for an estimate</a>
+    <a class="btn btn-ghost" href="tel:17164670062">Call (716) 467-0062</a>
+  </div>
+</div></header>
+
+<div class="local">Local to Jamestown &amp; Chautauqua Lake &mdash; drop pieces off in person, no shipping across the country.</div>
+
+<section class="pad"><div class="wrap">
+  <h2 class="big">What I re-cover</h2>
+  <p class="lead-c">One shop, one pair of hands on every job &mdash; furniture, marine, and motorcycle work all under one roof.</p>
+  <div class="svc">
+    <div class="card">
+      <h3>Furniture reupholstery</h3>
+      <p>Sofas, wingbacks, recliners, and dining chairs brought back to solid, comfortable, and yours again.</p>
+      <ul><li>New foam, webbing &amp; springs</li><li>Frame tighten-ups</li><li>Dining seats &amp; cushions</li></ul>
+    </div>
+    <div class="card">
+      <h3>Antiques &amp; heirlooms</h3>
+      <p>Grandma&rsquo;s chair doesn&rsquo;t belong at the curb. I re-cover older pieces carefully so the frame and the memory both stay.</p>
+      <ul><li>Careful teardown</li><li>Period-appropriate fabrics</li><li>Repairs before recover</li></ul>
+    </div>
+    <div class="card boat">
+      <h3>Boat &amp; pontoon seats</h3>
+      <p>This is Chautauqua Lake &mdash; cracked vinyl and split pontoon benches are my busy season. Marine-grade vinyl that stands up to sun and water.</p>
+      <ul><li>Pontoon bench recovers</li><li>Captain &amp; helm seats</li><li>Snap-in cushions</li></ul>
+    </div>
+    <div class="card boat">
+      <h3>Motorcycle seats</h3>
+      <p>Reshaped and recovered saddles that fit you and hold up to the road &mdash; gripper vinyl, diamond stitch, or plain and clean.</p>
+      <ul><li>Reshape for comfort</li><li>Gripper &amp; marine vinyls</li><li>Custom stitch patterns</li></ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="pad how"><div class="wrap">
+  <h2 class="big">How a job works</h2>
+  <p class="lead-c">No showroom runaround. You send a photo, we talk fabric, I do the work.</p>
+  <div class="steps">
+    <div class="stp"><div class="n">1</div><h3>Send a photo</h3><p>Text a picture of the piece to (716) 467-0062, or bring it by the shop. Tell me what&rsquo;s wrong &mdash; torn, saggy, faded.</p></div>
+    <div class="stp"><div class="n">2</div><h3>Get an estimate</h3><p>I&rsquo;ll give you an honest price and a rough turnaround before any work starts. No surprises at pickup.</p></div>
+    <div class="stp"><div class="n">3</div><h3>Pick your fabric</h3><p>Come look at fabric and marine-vinyl options in person, or I&rsquo;ll bring a few choices to match what you have.</p></div>
+    <div class="stp"><div class="n">4</div><h3>I rebuild it</h3><p>Foam, webbing, and cover done by hand in Jamestown. I take pride in every job &mdash; you&rsquo;ll see it.</p></div>
+  </div>
+</div></section>
+
+<section class="pad"><div class="wrap">
+  <h2 class="big">Before &amp; after</h2>
+  <p class="lead-c">Real pieces from real Chautauqua County customers &mdash; photos drop in here so people can see the work before they call.</p>
+  <div class="gal">
+    <div class="frame"><span><b>Before &rarr; After</b><br>Pontoon bench recover</span></div>
+    <div class="frame"><span><b>Before &rarr; After</b><br>Wingback chair</span></div>
+    <div class="frame"><span><b>Before &rarr; After</b><br>Motorcycle saddle</span></div>
+    <div class="frame"><span><b>Before &rarr; After</b><br>Dining chair set</span></div>
+  </div>
+</div></section>
+
+<section class="fab"><div class="wrap"><div class="cols">
+  <div>
+    <h2>Fabric &amp; marine vinyl, matched to how you use it</h2>
+    <p>A dining chair, a lake boat, and a motorcycle all need different material. I&rsquo;ll steer you to a fabric or vinyl that fits the job &mdash; kid-and-pet tough, sun-and-water ready, or soft for the living room.</p>
+    <p>Bring a cushion or a photo and we&rsquo;ll get the color right the first time.</p>
+  </div>
+  <div class="swatches">
+    <div class="sw" style="background:#3d5a54"></div>
+    <div class="sw" style="background:#c9603a"></div>
+    <div class="sw" style="background:#d9c9a3"></div>
+    <div class="sw" style="background:#2b3a42"></div>
+    <div class="sw" style="background:#7a8b6f"></div>
+    <div class="sw" style="background:#8c3b3b"></div>
+    <div class="sw" style="background:#e4ddcb"></div>
+    <div class="sw" style="background:#4a6b78"></div>
+  </div>
+</div></div></section>
+
+<section class="pad quote" id="quote"><div class="wrap"><div class="cols">
+  <div>
+    <h2>Send a photo, get an estimate</h2>
+    <p style="color:var(--muted);margin-bottom:6px">Snap a picture, tell me a little about the piece, and I&rsquo;ll get back to you with a price and a rough timeline. Furniture, boat, or bike &mdash; all welcome.</p>
+    <form class="form" onsubmit="return false">
+      <label for="nm">Your name</label><input id="nm" type="text">
+      <label for="ph">Phone (I can text you back)</label><input id="ph" type="tel" placeholder="(716) 000-0000">
+      <label for="ds">What needs recovering?</label><textarea id="ds" rows="3" placeholder="e.g. two pontoon benches, vinyl is cracked"></textarea>
+      <button class="btn btn-rust">Request my estimate</button>
+    </form>
+  </div>
+  <div>
+    <ul class="info">
+      <li><b>Shop</b><span>25 Marlow Road, Jamestown, NY 14701</span></li>
+      <li><b>Phone</b><span>(716) 467-0062 &mdash; call or text a photo</span></li>
+      <li><b>Email</b><span>brendablynt2013@gmail.com</span></li>
+      <li><b>Hours</b><span class="ph">Add shop hours here &mdash; confirm</span></li>
+      <li><b>Area</b><span>Jamestown, Lakewood, Bemus Point &amp; the Chautauqua Lake region</span></li>
+    </ul>
+    <div class="mapbox">Map of 25 Marlow Rd, Jamestown NY 14701 goes here &mdash; correcting the old listing that had the shop in North Carolina.</div>
+  </div>
+</div></div></section>
+
+<footer><div class="wrap">
+  <b>Brenda&rsquo;s Custom Upholstery</b> &middot; 25 Marlow Road, Jamestown NY 14701 &middot; (716) 467-0062<br>
+  Furniture, boat &amp; motorcycle upholstery, done by hand in Chautauqua County.
+</div></footer>
+
+</body>
+</html>

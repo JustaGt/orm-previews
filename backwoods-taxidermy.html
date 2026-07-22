@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Backwoods Taxidermy — Whitetail & Big Game Mounts | Potsdam, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pine:#1c2a24; --pine-2:#14201b; --charcoal:#20211f; --bone:#efe9dd;
+    --bark:#4a3b2c; --blaze:#d6541f; --blaze-soft:#e9763f; --sage:#9bab8e;
+    --line:rgba(239,233,221,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Source Sans 3',system-ui,sans-serif;color:var(--bone);background:var(--pine);line-height:1.6}
+  h1,h2,h3,.disp{font-family:'Oswald',sans-serif;letter-spacing:.5px;text-transform:uppercase;line-height:1.05}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .blaze{color:var(--blaze-soft)}
+
+  /* nav */
+  header{position:sticky;top:0;z-index:30;background:rgba(20,32,27,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{font-family:'Oswald';font-weight:700;font-size:20px;letter-spacing:1.5px}
+  .brand small{display:block;font-size:10px;letter-spacing:3px;color:var(--sage);font-weight:500}
+  .nav ul{display:flex;gap:26px;list-style:none}
+  .nav ul a{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--bone);opacity:.85}
+  .nav ul a:hover{opacity:1;color:var(--blaze-soft)}
+  .callbtn{background:var(--blaze);color:#fff;padding:11px 18px;border-radius:3px;font-family:'Oswald';font-size:13px;letter-spacing:1.5px;text-transform:uppercase}
+  .menu-links{display:flex;align-items:center;gap:26px}
+  @media(max-width:760px){.nav ul{display:none}}
+
+  /* hero */
+  .hero{position:relative;padding:96px 0 84px;background:
+     linear-gradient(180deg,rgba(20,32,27,.72),rgba(20,32,27,.94)),
+     repeating-linear-gradient(115deg,#16241e 0 26px,#18271f 26px 52px)}
+  .hero .tag{display:inline-block;border:1px solid var(--blaze);color:var(--blaze-soft);font-family:'Oswald';font-size:12px;letter-spacing:2.5px;padding:6px 13px;border-radius:2px;margin-bottom:22px}
+  .hero h1{font-size:clamp(38px,6.4vw,68px);font-weight:700;max-width:14ch}
+  .hero h1 em{font-style:normal;color:var(--blaze-soft)}
+  .hero p.lead{font-size:clamp(17px,2.2vw,21px);max-width:50ch;margin:22px 0 32px;color:#dcd6c8}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{font-family:'Oswald';text-transform:uppercase;letter-spacing:1.5px;font-size:15px;padding:15px 26px;border-radius:3px;display:inline-block}
+  .btn-blaze{background:var(--blaze);color:#fff}
+  .btn-blaze:hover{background:var(--blaze-soft)}
+  .btn-ghost{border:1px solid var(--line);color:var(--bone)}
+  .btn-ghost:hover{border-color:var(--sage)}
+  .hero .micro{margin-top:26px;font-size:14px;color:var(--sage)}
+  .hero .micro b{color:var(--bone)}
+
+  /* season strip */
+  .strip{background:var(--blaze);color:#fff;text-align:center;font-family:'Oswald';letter-spacing:1.5px;font-size:14px;padding:11px 16px;text-transform:uppercase}
+
+  /* sections */
+  section{padding:74px 0}
+  .eyebrow{font-family:'Oswald';color:var(--blaze-soft);letter-spacing:3px;font-size:13px;margin-bottom:12px}
+  .sec-h{font-size:clamp(28px,4vw,40px);font-weight:600;margin-bottom:14px}
+  .sec-sub{color:#cfc8ba;max-width:60ch;margin-bottom:38px}
+
+  /* game grid */
+  .game{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .game .card{background:var(--pine-2);border:1px solid var(--line);border-radius:6px;padding:26px 22px;transition:.2s}
+  .game .card:hover{border-color:var(--blaze);transform:translateY(-3px)}
+  .game .card .ic{font-size:26px;margin-bottom:12px}
+  .game .card h3{font-size:19px;font-weight:600;margin-bottom:8px}
+  .game .card p{font-size:14.5px;color:#c2bcae}
+  @media(max-width:760px){.game{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.game{grid-template-columns:1fr}}
+
+  /* process */
+  .proc{background:var(--pine-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:s}
+  .step{position:relative;padding-top:14px}
+  .step::before{counter-increment:s;content:"0" counter(s);font-family:'Oswald';font-size:40px;color:var(--bark);display:block;margin-bottom:6px}
+  .step h3{font-size:17px;font-weight:600;margin-bottom:6px}
+  .step p{font-size:14px;color:#bdb7a9}
+  @media(max-width:760px){.steps{grid-template-columns:1fr 1fr}}
+
+  /* promise / split */
+  .split{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center}
+  .promise-card{background:linear-gradient(160deg,#23332b,#18241e);border:1px solid var(--line);border-left:4px solid var(--blaze);border-radius:6px;padding:30px}
+  .promise-card h3{font-size:22px;font-weight:600;margin-bottom:12px}
+  .promise-card ul{list-style:none;margin-top:14px}
+  .promise-card li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px;display:flex;gap:10px}
+  .promise-card li:last-child{border:none}
+  .promise-card li b{color:var(--blaze-soft)}
+  @media(max-width:760px){.split{grid-template-columns:1fr;gap:26px}}
+
+  /* reviews */
+  .quotes{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .q{background:var(--pine-2);border:1px solid var(--line);border-radius:6px;padding:26px}
+  .q p{font-size:15.5px;color:#dcd6c8;font-style:italic}
+  .q .by{margin-top:14px;font-family:'Oswald';letter-spacing:1px;font-size:14px;color:var(--sage)}
+  .stars{color:var(--blaze);letter-spacing:2px;margin-bottom:10px}
+  @media(max-width:600px){.quotes{grid-template-columns:1fr}}
+
+  /* contact */
+  .contact{background:
+     linear-gradient(180deg,rgba(20,32,27,.9),rgba(20,32,27,.97)),
+     repeating-linear-gradient(115deg,#16241e 0 26px,#18271f 26px 52px)}
+  .cgrid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .form{background:var(--pine-2);border:1px solid var(--line);border-radius:8px;padding:30px}
+  .form label{display:block;font-family:'Oswald';font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--sage);margin:14px 0 6px}
+  .form input,.form select,.form textarea{width:100%;background:#101813;border:1px solid var(--line);border-radius:4px;color:var(--bone);padding:12px;font-family:inherit;font-size:15px}
+  .form button{margin-top:20px;width:100%;background:var(--blaze);color:#fff;border:none;padding:15px;font-family:'Oswald';letter-spacing:1.5px;text-transform:uppercase;font-size:15px;border-radius:4px;cursor:pointer}
+  .form button:hover{background:var(--blaze-soft)}
+  .info p{margin-bottom:16px;font-size:15.5px}
+  .info .lbl{font-family:'Oswald';letter-spacing:2px;font-size:12px;color:var(--sage);text-transform:uppercase;display:block;margin-bottom:2px}
+  .info a.big{font-family:'Oswald';font-size:24px;color:var(--blaze-soft)}
+  @media(max-width:760px){.cgrid{grid-template-columns:1fr;gap:26px}}
+
+  footer{background:var(--pine-2);border-top:1px solid var(--line);padding:30px 0;text-align:center;font-size:13px;color:var(--sage)}
+  .ph{color:var(--blaze-soft);font-size:12px}
+</style>
+</head>
+<body>
+
+<div class="strip">Now booking the 2026 deer season — drop-offs accepted 7 days during rut</div>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">BACKWOODS TAXIDERMY<small>POTSDAM · ST. LAWRENCE CO.</small></div>
+    <div class="menu-links">
+      <ul>
+        <li><a href="#work">The Work</a></li>
+        <li><a href="#process">Drop-Off</a></li>
+        <li><a href="#turnaround">Turnaround</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="tel:+13153864371" class="callbtn">(315) 386-4371</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">FULL-TIME STUDIO · NOT A SIDE JOB</span>
+    <h1>The buck of a lifetime deserves <em>more than a season on a tailgate.</em></h1>
+    <p class="lead">Brian has mounted whitetails, bears, and birds for North Country hunters for years — finished on the date promised, built to outlast the story you'll tell about the hunt.</p>
+    <div class="cta-row">
+      <a href="#contact" class="btn btn-blaze">Reserve a mount</a>
+      <a href="#work" class="btn btn-ghost">See recent work</a>
+    </div>
+    <p class="micro">Whitetails · Big game · Small mammals · Birds · Fish · European mounts &nbsp;|&nbsp; <b>Serving St. Lawrence County & the Adirondack North Country</b></p>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <p class="eyebrow">WHAT COMES THROUGH THE DOOR</p>
+    <h2 class="sec-h">Mounts built for the animals you actually hunt up here</h2>
+    <p class="sec-sub">Every species is handled differently. Here's the work the studio takes, and what to expect when you bring one in.</p>
+    <div class="game">
+      <div class="card"><div class="ic">🦌</div><h3>Whitetail Shoulder Mounts</h3><p>The bread and butter. Pick your pose — sneak, semi-sneak, upright, or wall pedestal — and Brian sets the eyes and ears so it looks alive, not stuffed.</p></div>
+      <div class="card"><div class="ic">🐻</div><h3>Bear — Rug or Full Body</h3><p>Black bear rugs with felt borders, or a full life-size for the den. Cape and claws handled with care from the skinning shed on.</p></div>
+      <div class="card"><div class="ic">🦃</div><h3>Turkey & Game Birds</h3><p>Strutting toms, flying ducks, grouse. Feather work is its own craft — done in-house, not shipped out.</p></div>
+      <div class="card"><div class="ic">🐟</div><h3>Fish Replicas & Skin Mounts</h3><p>From the St. Lawrence and Adirondack ponds — walleye, pike, bass, brookies. Replicas available so you can release and still keep the trophy.</p></div>
+      <div class="card"><div class="ic">🦊</div><h3>Small Mammals</h3><p>Coyote, fox, bobcat, fisher — life-size poses on natural habitat bases for the trapline and predator hunters.</p></div>
+      <div class="card"><div class="ic">💀</div><h3>European Skull Mounts</h3><p>Clean, whitened skull-and-antler mounts — the simpler, modern look. A budget-friendly way to honor a deer that didn't make the wall.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="proc">
+  <div class="wrap">
+    <p class="eyebrow">FROM FIELD TO WALL</p>
+    <h2 class="sec-h">How a drop-off works</h2>
+    <p class="sec-sub">First mount? Here's the whole thing, start to finish — and a quick word on caring for your animal before you get to the shop.</p>
+    <div class="steps">
+      <div class="step"><h3>Field care</h3><p>Don't cut the throat. Keep the cape cool and dry. Call before you skin — a bad caping cut is the one thing that can't be fixed later.</p></div>
+      <div class="step"><h3>Drop off</h3><p>Bring it to the Ames Road studio. Brian talks through pose options, takes a deposit, and gives you a realistic finish date in writing.</p></div>
+      <div class="step"><h3>The build</h3><p>Tanning, form-fitting, eye and ear set, finish work. You're welcome to check progress — this is a studio you can actually visit.</p></div>
+      <div class="step"><h3>Pickup</h3><p>You get a call when it's done — on or before the date promised. Mount inspected together before it leaves.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="turnaround">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">WHY HUNTERS COME BACK</p>
+      <h2 class="sec-h">Done when he said it would be done</h2>
+      <p class="sec-sub" style="margin-bottom:18px">The complaint hunters have about taxidermy isn't the price — it's the mount that takes two years and three "next months." That's not how this studio runs.</p>
+      <p style="color:#cfc8ba;font-size:15.5px">Brian quotes a finish date at drop-off and puts it on the ticket. Families up here have had three bucks, two bears, and a bobcat done here and kept coming back — because the work holds up and the timeline is honest.</p>
+    </div>
+    <div class="promise-card">
+      <h3>What you can count on</h3>
+      <ul>
+        <li><b>›</b><span>A written finish date at drop-off — not "sometime next season"</span></li>
+        <li><b>›</b><span>One craftsman on your mount start to finish</span></li>
+        <li><b>›</b><span>A real studio you can walk into, in Potsdam</span></li>
+        <li><b>›</b><span>Honest pricing reviewed before any work begins</span></li>
+        <li><b>›</b><span>Field-care advice over the phone, free, before you cut</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="proc">
+  <div class="wrap">
+    <p class="eyebrow">FROM HUNTERS IN THE NORTH COUNTRY</p>
+    <h2 class="sec-h">What clients say</h2>
+    <div class="quotes" style="margin-top:24px">
+      <div class="q"><div class="stars">★★★★★</div><p>"Brian does awesome work — not only on my mount but every one I saw of his. Got my first buck back today, done exactly when he told me he would. So glad I picked Brian, and for every mount I do in the future."</p><div class="by">— Kevin LaVair</div></div>
+      <div class="q"><div class="stars">★★★★★</div><p>"Had three bucks done here, and my brothers have had two bears and a bobcat done here — all of which were excellent craftsmanship. Wouldn't go anywhere else."</p><div class="by">— Justin Johnson</div></div>
+    </div>
+    <p class="ph" style="margin-top:16px">Reviews shown are from Backwoods Taxidermy's existing page — to be confirmed and expanded with current Google/Facebook reviews before launch.</p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <p class="eyebrow">RESERVE YOUR SPOT</p>
+    <h2 class="sec-h">Bringing one in this season?</h2>
+    <p class="sec-sub">Send a few details and Brian will get back to you with a finish window and a drop-off time. Or just call the shop — fastest way during the season.</p>
+    <div class="cgrid">
+      <form class="form" onsubmit="event.preventDefault();this.querySelector('button').textContent='Thanks — Brian will be in touch';">
+        <label for="n">Your name</label>
+        <input id="n" type="text" placeholder="First and last" required>
+        <label for="p">Phone</label>
+        <input id="p" type="tel" placeholder="(315) 000-0000" required>
+        <label for="g">What did you get?</label>
+        <select id="g">
+          <option>Whitetail deer</option><option>Bear</option><option>Turkey / bird</option>
+          <option>Fish</option><option>Small mammal (coyote, fox, bobcat…)</option>
+          <option>European / skull mount</option><option>Not sure yet</option>
+        </select>
+        <label for="m">Anything else?</label>
+        <textarea id="m" rows="3" placeholder="Date harvested, pose you have in mind, questions on field care…"></textarea>
+        <button type="submit">Request a drop-off time</button>
+      </form>
+      <div class="info">
+        <p><span class="lbl">Call the studio</span><a class="big" href="tel:+13153864371">(315) 386-4371</a></p>
+        <p><span class="lbl">Studio</span>92 Ames Rd, Potsdam, NY 13676</p>
+        <p><span class="lbl">Email</span><a href="mailto:backwoodstaxidermy92@gmail.com">backwoodstaxidermy92@gmail.com</a></p>
+        <p><span class="lbl">Serving</span>St. Lawrence County, the Adirondack North Country & surrounding areas</p>
+        <p class="ph">Studio hours vary during hunting season — call ahead for drop-offs. Hours to be confirmed with the owner before launch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Backwoods Taxidermy · Full-time studio · Potsdam, NY · (315) 386-4371<br>
+    © 2026 Backwoods Taxidermy. Website concept prepared by Onyx Rise Media.
+  </div>
+</footer>
+
+</body>
+</html>

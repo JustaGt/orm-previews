@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bolton Landing Marina — Dry Stack Storage &amp; Five-Minute Launching on Lake George</title>
+<meta name="description" content="A private family marina in downtown Bolton Landing. Dry stack storage with forklift launching, a private ramp, a gas dock open to the public, and a clubhouse on Lake George. Season runs May 15 – October 15.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0e2740; --navy-dp:#081a2c; --navy-lt:#1c4266;
+    --brass:#c69440; --brass-lt:#e0b568;
+    --sand:#f6f1e7; --shell:#fffdf9; --ink:#16222e; --grey:#5f6f7d; --line:#e2dbcc;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Source Sans 3',system-ui,sans-serif;color:var(--ink);background:var(--shell);line-height:1.65}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:700;line-height:1.12;letter-spacing:-.01em}
+
+  /* season strip */
+  .season{background:var(--brass);color:#2a1e08;text-align:center;font-size:.84rem;font-weight:700;letter-spacing:.05em;padding:8px 20px}
+
+  nav{background:var(--navy);position:sticky;top:0;z-index:50}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;gap:18px;flex-wrap:wrap}
+  .brand{color:#fff;text-decoration:none;display:flex;align-items:center;gap:12px}
+  .anchor{width:40px;height:40px;border:2px solid var(--brass);border-radius:50%;display:grid;place-items:center}
+  .anchor svg{width:20px;height:20px;stroke:var(--brass);fill:none;stroke-width:1.6}
+  .brand b{font-family:'Fraunces';font-size:1.22rem;display:block;line-height:1.1}
+  .brand span{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#7fa0bf}
+  .nl{display:flex;gap:26px;flex-wrap:wrap}
+  .nl a{color:#cbd9e6;text-decoration:none;font-size:.9rem;font-weight:600}
+  .nl a:hover{color:var(--brass-lt)}
+  .btn{display:inline-block;background:var(--brass);color:#241a06;font-weight:700;padding:12px 22px;border-radius:2px;text-decoration:none;font-size:.92rem;border:none;cursor:pointer;letter-spacing:.02em}
+  .btn:hover{background:var(--brass-lt)}
+  .btn-o{background:transparent;border:1.5px solid var(--brass);color:var(--brass-lt)}
+  .btn-o:hover{background:rgba(198,148,64,.14)}
+  .btn-dark{background:var(--navy);color:#fff}
+  .btn-dark:hover{background:var(--navy-lt)}
+
+  header.hero{background:linear-gradient(180deg,#0e2740 0%,#123252 60%,#16406a 100%);color:#fff;padding:88px 0 96px;position:relative;overflow:hidden}
+  header.hero:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:70px;background:
+    radial-gradient(ellipse at 20% 0,rgba(255,255,255,.08) 0 40%,transparent 41%),
+    radial-gradient(ellipse at 60% 0,rgba(255,255,255,.06) 0 40%,transparent 41%);}
+  .hero-inner{max-width:820px}
+  .tag{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brass-lt);font-weight:700;margin-bottom:22px}
+  .tag:before{content:"";width:34px;height:1px;background:var(--brass)}
+  h1{font-size:3.6rem;margin-bottom:20px}
+  h1 span{color:var(--brass-lt);font-style:italic;font-weight:500}
+  .lead{font-size:1.2rem;color:#c3d3e1;margin-bottom:30px;max-width:36em}
+  .hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
+  .hero-stats{display:flex;gap:40px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.16);padding-top:24px}
+  .hs b{font-family:'Fraunces';font-size:1.9rem;display:block;line-height:1;color:#fff}
+  .hs span{font-size:.78rem;text-transform:uppercase;letter-spacing:.11em;color:#89a7c3}
+
+  section{padding:80px 0}
+  .head{max-width:46em;margin-bottom:44px}
+  .head .k{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:#a97f2e;font-weight:700;margin-bottom:10px}
+  .head h2{font-size:2.5rem;margin-bottom:12px}
+  .head p{color:var(--grey);font-size:1.06rem}
+
+  /* launch timeline */
+  .launch{background:var(--sand)}
+  .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative}
+  .steps:before{content:"";position:absolute;top:26px;left:8%;right:8%;height:2px;background:linear-gradient(90deg,var(--brass),var(--navy-lt))}
+  .step{text-align:center;padding:0 12px;position:relative}
+  .step .num{width:54px;height:54px;margin:0 auto 16px;border-radius:50%;background:var(--shell);border:2px solid var(--brass);color:var(--navy);display:grid;place-items:center;font-family:'Fraunces';font-size:1.3rem;font-weight:700;position:relative;z-index:2}
+  .step h3{font-size:1.08rem;margin-bottom:6px}
+  .step p{font-size:.9rem;color:var(--grey)}
+  .clock{margin-top:40px;background:var(--navy);color:#fff;border-radius:4px;padding:26px 30px;display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+  .clock .big{font-family:'Fraunces';font-size:2.6rem;color:var(--brass-lt);line-height:1}
+  .clock p{color:#bcd0e0;font-size:1rem;max-width:44em}
+
+  /* two-up: dry stack vs slip */
+  .compare{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .card{border:1px solid var(--line);border-radius:5px;padding:32px;background:var(--shell)}
+  .card.ft{background:var(--navy);color:#fff;border-color:var(--navy)}
+  .card h3{font-size:1.6rem;margin-bottom:10px}
+  .card.ft h3{color:#fff}
+  .card p{color:var(--grey);margin-bottom:18px}
+  .card.ft p{color:#b9cddd}
+  .card ul{list-style:none}
+  .card li{padding:9px 0 9px 26px;position:relative;border-bottom:1px dashed var(--line);font-size:.96rem}
+  .card.ft li{border-color:rgba(255,255,255,.14)}
+  .card li:last-child{border:none}
+  .card li:before{content:"";position:absolute;left:0;top:16px;width:11px;height:11px;border:2px solid var(--brass);border-radius:50%}
+
+  /* amenities */
+  .amen{background:var(--navy-dp);color:#fff}
+  .amen .head h2,.amen .head .k{color:#fff}
+  .amen .head .k{color:var(--brass-lt)}
+  .amen .head p{color:#9db6cb}
+  .agrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .a{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:4px;padding:26px}
+  .a h3{font-size:1.2rem;margin-bottom:7px;color:var(--brass-lt)}
+  .a p{font-size:.93rem;color:#a9c0d4}
+
+  /* gas dock */
+  .gas{background:var(--brass);color:#2a1e08}
+  .gas .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:center}
+  .gas h2{font-size:2.3rem;margin-bottom:12px;color:#241a06}
+  .gas p{font-size:1.06rem;margin-bottom:8px;color:#3f2f0e}
+  .hours{background:rgba(255,255,255,.6);border-radius:4px;padding:24px}
+  .hours h3{font-size:1.15rem;margin-bottom:12px}
+  .hours .r{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.1);font-size:.95rem}
+  .hours .r:last-child{border:none}
+  .hours .r b{font-weight:700}
+
+  /* membership */
+  .mem{background:var(--sand)}
+  .mgrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+  .mform{background:var(--shell);border:1px solid var(--line);border-radius:5px;padding:30px;box-shadow:0 12px 34px rgba(14,39,64,.08)}
+  .mform h3{font-size:1.6rem;margin-bottom:6px}
+  .mform .s{font-size:.92rem;color:var(--grey);margin-bottom:18px}
+  label{display:block;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--navy-lt);margin-bottom:5px}
+  input,select,textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:3px;font:inherit;margin-bottom:14px;background:#fff}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--brass);border-color:var(--brass)}
+  .mform .btn{width:100%;text-align:center;padding:14px}
+  .contactlist{list-style:none}
+  .contactlist li{padding:16px 0;border-bottom:1px solid var(--line)}
+  .contactlist li b{display:block;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);margin-bottom:3px}
+  .contactlist li span,.contactlist li a{font-size:1.05rem;color:var(--navy);font-weight:600;text-decoration:none}
+  .contactlist a:hover{color:var(--brass)}
+  .ph{background:#fff8ea;border:1px dashed var(--brass);color:#7a5a15;font-size:.82rem;padding:10px 14px;border-radius:3px;margin-top:16px}
+
+  footer{background:var(--navy-dp);color:#7b96ae;padding:34px 0;font-size:.86rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+
+  @media(max-width:920px){
+    .steps{grid-template-columns:1fr;gap:26px}
+    .steps:before{display:none}
+    .step{text-align:left;display:flex;gap:16px;align-items:flex-start}
+    .step .num{margin:0}
+    .compare,.mgrid,.gas .wrap{grid-template-columns:1fr}
+    .agrid{grid-template-columns:1fr}
+    h1{font-size:2.5rem}
+    .head h2{font-size:1.95rem}
+    .nl{display:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="season">Season: May 15 – October 15 · Gas dock &amp; pump-out open to the public</div>
+
+<nav><div class="wrap">
+  <a class="brand" href="#">
+    <span class="anchor"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5"/><path d="M12 8v12M6 12H3a9 9 0 0018 0h-3M8 11h8"/></svg></span>
+    <span><b>Bolton Landing Marina</b><span>Lake George, New York</span></span>
+  </a>
+  <div class="nl">
+    <a href="#launch">Five-Minute Launch</a>
+    <a href="#storage">Dry Stack</a>
+    <a href="#amenities">The Club</a>
+    <a href="#gas">Gas Dock</a>
+    <a href="#membership">Membership</a>
+  </div>
+  <a class="btn" href="#membership">Ask about a rack</a>
+</div></nav>
+
+<header class="hero"><div class="wrap hero-inner">
+  <div class="tag">Downtown Bolton Landing</div>
+  <h1>Your boat spends the winter indoors.<br>And it's in the water <span>five minutes</span> after you ask for it.</h1>
+  <p class="lead">Bolton Landing Marina keeps your boat on a steel rack under a roof — not on a mooring, not on a trailer in your yard. Call ahead, walk down, and our forklift has you in the launching lane before you've finished loading the cooler.</p>
+  <div class="hero-btns">
+    <a class="btn" href="#membership">Check rack availability</a>
+    <a class="btn btn-o" href="#launch">How the forklift launch works</a>
+  </div>
+  <div class="hero-stats">
+    <div class="hs"><b>~5 min</b><span>Rack to water</span></div>
+    <div class="hs"><b>Indoor</b><span>Dry stack racks</span></div>
+    <div class="hs"><b>Private</b><span>Launch ramp</span></div>
+    <div class="hs"><b>Public</b><span>Gas dock &amp; pump-out</span></div>
+  </div>
+</div></header>
+
+<section class="launch" id="launch"><div class="wrap">
+  <div class="head">
+    <div class="k">How it works</div>
+    <h2>No trailer. No ramp line. No backing down a launch in front of an audience.</h2>
+    <p>Dry stack is common on the coast and still new on Lake George. Here's exactly what a Saturday morning looks like for a rack member at BLM.</p>
+  </div>
+  <div class="steps">
+    <div class="step"><div class="num">1</div><div><h3>You call ahead</h3><p>Let the dock know when you want the boat. That's the whole reservation.</p></div></div>
+    <div class="step"><div class="num">2</div><div><h3>Forklift lifts it off the rack</h3><p>Your hull comes off a steel rack inside the storage building — dry, out of the sun and the weather.</p></div></div>
+    <div class="step"><div class="num">3</div><div><h3>Straight to the lane</h3><p>Our handler drives it to a launching lane at the water's edge and sets it in.</p></div></div>
+    <div class="step"><div class="num">4</div><div><h3>Dockhands take over</h3><p>Lines, fenders, a hand off the dock. You step on and go.</p></div></div>
+    <div class="step"><div class="num">5</div><div><h3>Come back and hand it over</h3><p>Pull in, step off. It goes back on the rack. You drive home with an empty hitch.</p></div></div>
+  </div>
+  <div class="clock">
+    <div class="big">5 min</div>
+    <p>That's the honest number, start to finish. The point of dry stack isn't the storage — it's that a spur-of-the-moment afternoon on the lake stops being a two-hour production.</p>
+  </div>
+</div></section>
+
+<section id="storage"><div class="wrap">
+  <div class="head">
+    <div class="k">Dry stack vs. the alternatives</div>
+    <h2>Where a boat lives on Lake George</h2>
+    <p>Slips are wonderful and expensive. Trailering is cheap and exhausting. Dry stack sits in the middle and most people have never had it explained to them.</p>
+  </div>
+  <div class="compare">
+    <div class="card ft">
+      <h3>Dry stack at BLM</h3>
+      <p>Boat on a steel rack inside a building, launched on demand by forklift.</p>
+      <ul>
+        <li>Out of the water — no bottom growth, no water intrusion</li>
+        <li>Out of the weather — upholstery and finish stay new for years</li>
+        <li>No trailer in your driveway, no towing on the Northway</li>
+        <li>Launched and retrieved for you, every time</li>
+        <li>Access to the clubhouse, showers, deck and grills</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>The usual routes</h3>
+      <p>What most Lake George owners are living with instead.</p>
+      <ul>
+        <li><b>Wet slip:</b> the boat sits in the water all season, growing what boats grow</li>
+        <li><b>Mooring:</b> a dinghy ride before and after every single outing</li>
+        <li><b>Trailer at home:</b> the ramp line, the backing-in, the flushing, the tarp</li>
+        <li><b>Off-site winter storage:</b> a second vendor, a second bill, a second phone call</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="amen" id="amenities"><div class="wrap">
+  <div class="head">
+    <div class="k">The club side</div>
+    <h2>It's a private marina, so it feels like one</h2>
+    <p>BLM is family-oriented on purpose. The dock is where you keep the boat; the rest of it is where the day actually happens.</p>
+  </div>
+  <div class="agrid">
+    <div class="a"><h3>Clubhouse</h3><p>Recreational games and a place for the kids to be when the adults aren't ready to leave yet.</p></div>
+    <div class="a"><h3>Canopied deck &amp; grills</h3><p>Multiple grills under cover. Member barbecues happen here all season.</p></div>
+    <div class="a"><h3>Clean restrooms &amp; showers</h3><p>Rinse off after a day on the water before you drive home.</p></div>
+    <div class="a"><h3>Private launch ramp</h3><p>Members' own ramp — separate from the public chaos in the village.</p></div>
+    <div class="a"><h3>Rogers Memorial Park</h3><p>Direct access to the beach and the tennis courts, right next door.</p></div>
+    <div class="a"><h3>Walk into the village</h3><p>Restaurants and shops in downtown Bolton Landing are minutes from the dock on foot.</p></div>
+  </div>
+</div></section>
+
+<section class="gas" id="gas"><div class="wrap">
+  <div>
+    <h2>The gas dock is open to everyone</h2>
+    <p>You don't have to be a member to fuel up or pump out. If you're on the water off Bolton Landing and you're getting low, pull in.</p>
+    <p style="font-weight:700">Gas dock and pump-out close one hour before the marina closes — please leave yourself the hour.</p>
+  </div>
+  <div class="hours">
+    <h3>Marina hours in season</h3>
+    <div class="r"><b>Monday – Thursday</b><span>9:00 AM – 6:00 PM</span></div>
+    <div class="r"><b>Friday – Sunday</b><span>9:00 AM – 8:00 PM</span></div>
+    <div class="r"><b>Gas dock &amp; pump-out</b><span>Closes 1 hour before the marina</span></div>
+    <div class="r"><b>Season</b><span>May 15 – October 15</span></div>
+    <div class="r"><b>Rentals / public launch</b><span>Not offered</span></div>
+  </div>
+</div></section>
+
+<section class="mem" id="membership"><div class="wrap">
+  <div class="head">
+    <div class="k">Membership</div>
+    <h2>Ask what's on the rack</h2>
+    <p>Rack space is finite and the season is short. Tell us the boat and we'll tell you honestly whether we can fit it this year or whether you're looking at next.</p>
+  </div>
+  <div class="mgrid">
+    <div>
+      <ul class="contactlist">
+        <li><b>Marina</b><span>4932 Lake Shore Drive<br>Bolton Landing, NY 12814</span></li>
+        <li><b>Phone</b><a href="tel:5186443474">(518) 644-3474</a></li>
+        <li><b>Fax</b><span>(518) 644-3601</span></li>
+        <li><b>Email</b><a href="mailto:blm12814@gmail.com">blm12814@gmail.com</a></li>
+        <li><b>Mailing address</b><span>215 Ballard Road, Wilton, NY 12831</span></li>
+      </ul>
+      <div class="ph">Placeholder: dry stack and seasonal rates are not published here yet — the owner should confirm current pricing and any waitlist before this page goes live.</div>
+    </div>
+    <div class="mform">
+      <h3>Rack availability request</h3>
+      <p class="s">Send us the boat's numbers. We'll come back to you with what's possible.</p>
+      <form onsubmit="event.preventDefault();this.querySelector('.btn').textContent='Sent — we\'ll be in touch';">
+        <label for="nm">Name</label><input id="nm" type="text">
+        <label for="em">Email</label><input id="em" type="email">
+        <label for="ph">Phone</label><input id="ph" type="tel">
+        <label for="bt">Boat make &amp; length</label><input id="bt" type="text" placeholder="e.g. 21' bowrider">
+        <label for="wh">What are you looking for?</label>
+        <select id="wh">
+          <option>Dry stack rack for this season</option>
+          <option>Dry stack — next season / waitlist</option>
+          <option>Winter storage only</option>
+          <option>Gas dock question</option>
+          <option>Something else</option>
+        </select>
+        <button class="btn" type="submit">Send request</button>
+      </form>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>Bolton Landing Marina · 4932 Lake Shore Drive, Bolton Landing, NY 12814 · (518) 644-3474</span>
+  <span>Lake George's quick-launch marina</span>
+</div></footer>
+
+</body>
+</html>

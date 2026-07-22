@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADK Hydroseeding — Lawns &amp; Erosion Control, Willsboro NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--slurry:#5a8f3d;--grass:#2f6b2a;--soil:#7a5b3a;--sky:#f4f8f1;--ink:#243020;--sun:#e9b84c}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Public Sans',sans-serif;color:var(--ink);background:#fff;line-height:1.65}
+h1,h2,h3,.btn{font-family:'Space Grotesk',sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+header{border-bottom:4px solid var(--slurry);padding:16px 0;background:#fff;position:sticky;top:0;z-index:9}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.logo{font-family:'Space Grotesk';font-weight:700;font-size:1.15rem;color:var(--grass)}
+.logo em{font-style:normal;color:var(--soil)}
+header a.call{text-decoration:none;background:var(--grass);color:#fff;padding:9px 18px;border-radius:24px;font-weight:600;font-size:.92rem}
+.hero{background:linear-gradient(120deg,var(--sky),#e4efdc);padding:78px 0 64px}
+.hero .tag{display:inline-block;background:var(--soil);color:#fff;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;padding:6px 14px;border-radius:3px;font-weight:600}
+.hero h1{font-size:clamp(2rem,5vw,3.1rem);line-height:1.1;color:var(--grass);margin:16px 0;max-width:19ch}
+.hero p{max-width:54ch;font-size:1.06rem;color:#3d4a37}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:14px 28px;border-radius:28px;margin-top:24px}
+.btn.go{background:var(--slurry);color:#fff}
+.btn.alt{border:2px solid var(--grass);color:var(--grass);margin-left:10px}
+.stages{padding:66px 0;background:#fff}
+.k{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--soil);font-weight:600}
+h2{font-size:clamp(1.45rem,3.2vw,2rem);color:var(--grass);margin:8px 0 12px}
+.stagegrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0;margin-top:28px;border:2px solid var(--grass);border-radius:8px;overflow:hidden}
+.stage{padding:26px;position:relative}
+.stage:nth-child(1){background:#efe4d4}
+.stage:nth-child(2){background:#dcead0}
+.stage:nth-child(3){background:#bcdCA8;background:#bcdca8}
+.stage .day{font-family:'Space Grotesk';font-weight:700;color:var(--soil);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase}
+.stage h3{color:var(--ink);margin:6px 0 8px;font-size:1.05rem}
+.stage p{font-size:.93rem;color:#41503b}
+.wins{background:var(--grass);color:#fff;padding:66px 0}
+.wins h2,.wins .k{color:#fff}
+.wins .k{color:#cfe3b8}
+.wingrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:26px}
+.win{background:rgba(255,255,255,.09);border-left:4px solid var(--sun);padding:20px}
+.win h3{font-size:.98rem;margin-bottom:6px;color:#fff}
+.win p{font-size:.9rem;color:#dcead2}
+.compare{padding:66px 0;background:var(--sky)}
+.comptable{width:100%;border-collapse:collapse;margin-top:24px;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 8px rgba(47,107,42,.12)}
+.comptable th{background:var(--grass);color:#fff;font-family:'Space Grotesk';padding:13px 15px;text-align:left;font-size:.9rem}
+.comptable td{padding:13px 15px;border-bottom:1px solid #e4ebdf;font-size:.92rem}
+.comptable tr td:first-child{font-weight:600;color:var(--grass)}
+.window{padding:66px 0}
+.window .band{background:linear-gradient(90deg,var(--soil),#94744e);color:#fff;border-radius:10px;padding:36px;display:grid;grid-template-columns:1.4fr .6fr;gap:26px;align-items:center}
+.window h2{color:#fff;margin-top:0}
+.window p{color:#f0e6d8;font-size:.98rem}
+.window .btn{background:var(--sun);color:#4a3517;margin-top:0;text-align:center}
+.area{padding:0 0 66px}
+.area .strip{border:2px dashed var(--slurry);border-radius:8px;padding:24px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.area .strip strong{font-family:'Space Grotesk';color:var(--grass);margin-right:8px}
+.area .strip span{background:var(--sky);padding:6px 14px;border-radius:18px;font-size:.85rem}
+.contact{background:var(--ink);color:#fff;padding:66px 0}
+.contact h2{color:#fff}
+.contact .k{color:#b9c9a8}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:24px}
+.contact a{color:var(--sun);font-weight:600;text-decoration:none}
+.contact li{list-style:none;margin-bottom:10px;font-size:.98rem}
+form .f{margin-bottom:12px}
+form label{display:block;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#c4d2b4;margin-bottom:4px}
+form input,form textarea{width:100%;padding:11px;border:0;border-radius:5px;font-family:inherit;font-size:.94rem}
+form button{width:100%;background:var(--slurry);color:#fff;border:0;padding:14px;font-family:'Space Grotesk';font-weight:700;font-size:1rem;border-radius:5px;cursor:pointer;margin-top:4px}
+footer{background:#1a2415;color:#8fa07f;text-align:center;padding:22px;font-size:.84rem}
+@media(max-width:760px){.window .band,.cgrid{grid-template-columns:1fr}.btn.alt{margin-left:0}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="logo">ADK <em>HYDROSEEDING</em></div>
+<a class="call" href="tel:15185721441">(518) 572-1441</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+<span class="tag">Willsboro · Essex County · Champlain Valley</span>
+<h1>Bare dirt to a growing lawn — sprayed in one visit.</h1>
+<p>ADK Hydroseeding turns graded dirt, thin patches, and washed-out slopes into established grass. Seed, mulch, and tackifier go down in one sprayed layer that stays where you put it — on lots where sod is too expensive and hand seeding blows away.</p>
+<a class="btn go" href="#contact">Get a seeding-window quote</a>
+<a class="btn alt" href="tel:15185721441">Call (518) 572-1441</a>
+</div></section>
+
+<section class="stages"><div class="wrap">
+<div class="k">How it works</div>
+<h2>One spray day. Then the lawn does the work.</h2>
+<div class="stagegrid">
+<div class="stage"><div class="day">Day 1</div><h3>Spray day</h3><p>The green slurry goes down — seed matched to your site, mulch that holds moisture, tackifier that keeps it on the slope through rain.</p></div>
+<div class="stage"><div class="day">Weeks 1–2</div><h3>Germination</h3><p>The mulch layer keeps seed damp through the North Country's dry spells. Keep it watered; the green comes up through the mat.</p></div>
+<div class="stage"><div class="day">Weeks 4–6</div><h3>First mow</h3><p>Roots are in, cover fills, and you're mowing a lawn where there was contractor dirt a month before. [Timeline typical — varies by site &amp; season]</p></div>
+</div>
+</div></section>
+
+<section class="wins"><div class="wrap">
+<div class="k">Where hydroseeding wins</div>
+<h2>Built for the jobs this valley actually has.</h2>
+<div class="wingrid">
+<div class="win"><h3>New builds &amp; regrades</h3><p>Close out construction with grass instead of a mud lot — big rural lots covered at a fraction of sod.</p></div>
+<div class="win"><h3>Slopes &amp; banks</h3><p>Tackified mulch grips where broadcast seed washes to the ditch with the first thunderstorm.</p></div>
+<div class="win"><h3>Shoreline &amp; erosion control</h3><p>Vegetative cover that slows runoff on lake-side grades and disturbed ground.</p></div>
+<div class="win"><h3>Septic &amp; utility repairs</h3><p>That fresh scar across the yard, seeded back to match the rest of the lawn.</p></div>
+</div>
+</div></section>
+
+<section class="compare"><div class="wrap">
+<div class="k">Straight comparison</div>
+<h2>Hydroseed, sod, or a bag of seed?</h2>
+<table class="comptable">
+<tr><th></th><th>Hydroseeding</th><th>Sod</th><th>Broadcast seed</th></tr>
+<tr><td>Cost on a big lot</td><td>Low per sq ft</td><td>Highest by far</td><td>Cheap up front</td></tr>
+<tr><td>Holds on slopes</td><td>Yes — tackified</td><td>Yes, if staked</td><td>Washes out</td></tr>
+<tr><td>Time to green</td><td>Weeks</td><td>Instant</td><td>Slow &amp; patchy</td></tr>
+<tr><td>Roots &amp; take</td><td>Grows in your soil</td><td>Can struggle to knit</td><td>Thin, uneven</td></tr>
+</table>
+</div></section>
+
+<section class="window"><div class="wrap">
+<div class="band">
+<div>
+<h2>The season here is short. The list fills up.</h2>
+<p>Spring and late-summer are the two windows when seed takes best in Essex County. Get your site on the schedule before the window you want is gone — quotes are free and start with your rough square footage.</p>
+</div>
+<a class="btn" href="#contact">Reserve a window</a>
+</div>
+</div></section>
+
+<section class="area"><div class="wrap">
+<div class="strip"><strong>Service area:</strong><span>Willsboro</span><span>Essex</span><span>Westport</span><span>Keeseville</span><span>Elizabethtown</span><span>Champlain shore &amp; Boquet valley</span></div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+<div class="k">Get a quote</div>
+<h2>Tell us about your dirt.</h2>
+<div class="cgrid">
+<ul>
+<li><strong>ADK Hydroseeding</strong> · Point Property Services, LLC</li>
+<li>322 Point Rd, Willsboro, NY 12996</li>
+<li>Call/text: <a href="tel:15185721441">(518) 572-1441</a></li>
+<li>Email: <a href="mailto:adkhydroseeding@gmail.com">adkhydroseeding@gmail.com</a></li>
+<li style="color:#b9c9a8;font-size:.88rem">Seeding Willsboro and the Champlain valley since 2018.</li>
+</ul>
+<form>
+<div class="f"><label>Name</label><input type="text" placeholder="Your name"></div>
+<div class="f"><label>Phone or email</label><input type="text" placeholder="How to reach you"></div>
+<div class="f"><label>The site</label><textarea rows="3" placeholder="Roughly how big, where, and what's there now — bare dirt, slope, old lawn…"></textarea></div>
+<button type="submit">Request my quote</button>
+</form>
+</div>
+</div></section>
+
+<footer>ADK Hydroseeding · Point Property Services, LLC · Willsboro, NY · (518) 572-1441</footer>
+</body>
+</html>

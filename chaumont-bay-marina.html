@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chaumont Bay Marina — Slips, Service, Bait &amp; RV Camping on Chaumont Bay, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--lake:#0e3a52;--lake-deep:#092a3d;--buoy:#d9472b;--dockgray:#e8e4dc;--sand:#f6f3ec;--ink:#1d2b33;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--sand);line-height:1.6}
+h1,h2,h3{font-family:'Zilla Slab',serif}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+/* top bar */
+.topbar{background:var(--lake-deep);color:#cfe3ee;font-size:.9rem;padding:8px 0;text-align:center}
+.topbar strong{color:#fff}
+/* header */
+header{background:var(--lake);color:#fff;padding:14px 0;position:sticky;top:0;z-index:50}
+.nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.logo{font-family:'Zilla Slab',serif;font-weight:700;font-size:1.35rem;letter-spacing:.5px}
+.logo span{color:#7fc4e4;font-weight:600;display:block;font-size:.72rem;letter-spacing:2px;text-transform:uppercase}
+.call-btn{background:var(--buoy);color:#fff;text-decoration:none;font-weight:700;padding:10px 18px;border-radius:6px}
+/* hero */
+.hero{background:linear-gradient(rgba(9,42,61,.72),rgba(9,42,61,.72)),linear-gradient(160deg,#1b5878,#0e3a52 60%,#092a3d);color:#fff;padding:84px 0 72px}
+.hero h1{font-size:clamp(1.9rem,4.5vw,3.1rem);line-height:1.15;max-width:640px}
+.hero p.sub{max-width:560px;margin:18px 0 28px;font-size:1.12rem;color:#d9e9f2}
+.hero .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:6px}
+.btn-red{background:var(--buoy);color:#fff}
+.btn-ghost{border:2px solid #7fc4e4;color:#dff0f8}
+.hero .facts{display:flex;gap:26px;flex-wrap:wrap;margin-top:38px;font-size:.95rem}
+.hero .facts div{border-left:3px solid var(--buoy);padding-left:12px}
+/* season strip */
+.season{background:var(--lake-deep);color:#bcd8e6;padding:14px 0;font-size:.92rem}
+.season .wrap{display:flex;gap:8px 28px;flex-wrap:wrap;justify-content:center}
+.season b{color:#fff}
+/* sections */
+section{padding:64px 0}
+.kicker{color:var(--buoy);text-transform:uppercase;letter-spacing:2.5px;font-weight:700;font-size:.8rem}
+h2{font-size:clamp(1.5rem,3vw,2.1rem);margin:6px 0 14px}
+.grid{display:grid;gap:22px}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.card{background:#fff;border-radius:10px;padding:26px;border-top:4px solid var(--lake);box-shadow:0 2px 10px rgba(14,58,82,.08)}
+.card h3{font-size:1.15rem;margin-bottom:8px;color:var(--lake)}
+.card ul{list-style:none;margin-top:10px}
+.card li{padding:5px 0 5px 22px;position:relative;font-size:.96rem}
+.card li:before{content:"";position:absolute;left:0;top:12px;width:10px;height:10px;background:var(--buoy);border-radius:50%}
+/* campground */
+.camp{background:var(--lake);color:#fff}
+.camp .kicker{color:#7fc4e4}
+.camp p{color:#d9e9f2;max-width:640px}
+.camp .card{background:rgba(255,255,255,.07);border-top-color:var(--buoy);color:#eaf4f9;box-shadow:none}
+.camp .card h3{color:#fff}
+/* reviews */
+.review{background:#fff;border-radius:10px;padding:24px;border-left:4px solid var(--buoy);font-size:.98rem}
+.review .who{margin-top:12px;font-weight:700;color:var(--lake);font-size:.88rem}
+.note{font-size:.8rem;color:#6b7a83;margin-top:14px}
+/* contact */
+.contact{background:var(--lake-deep);color:#fff}
+.contact a{color:#7fc4e4}
+.contact .grid-2 .card{background:rgba(255,255,255,.06);border-top-color:var(--buoy);box-shadow:none}
+.contact .card h3{color:#fff}
+.contact input,.contact select,.contact textarea{width:100%;padding:12px;border-radius:6px;border:none;margin-bottom:12px;font-family:inherit;font-size:.95rem}
+.contact button{width:100%;background:var(--buoy);border:none;color:#fff;font-weight:700;font-size:1rem;padding:14px;border-radius:6px;cursor:pointer}
+footer{background:#061e2c;color:#7d97a6;text-align:center;padding:22px 12px;font-size:.85rem}
+</style>
+</head>
+<body>
+
+<div class="topbar"><strong>Fall haul-out &amp; winterization slots fill early</strong> — call (315) 649-5050 to get on the list.</div>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">Chaumont Bay Marina<span>Chaumont, NY · On the bay since 2000</span></div>
+    <a class="call-btn" href="tel:+13156495050">(315) 649-5050</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Dock, fuel, bait, and a mechanic who picks up — all on Chaumont Bay.</h1>
+    <p class="sub">Seasonal slips, a working service bay, winter storage, live bait before first light, and an RV campground steps from your boat. One property, the whole season.</p>
+    <div class="cta-row">
+      <a class="btn btn-red" href="#contact">Ask about a slip</a>
+      <a class="btn btn-ghost" href="#service">Book winterization</a>
+    </div>
+    <div class="facts">
+      <div><b>Slips for the season</b><br>protected dockage on the bay</div>
+      <div><b>Full service bay</b><br>engines &amp; lower units</div>
+      <div><b>Bait &amp; tackle</b><br>stocked for bay water</div>
+      <div><b>RV campground</b><br>camp beside your boat</div>
+    </div>
+  </div>
+</section>
+
+<div class="season">
+  <div class="wrap">
+    <span><b>Ice-out:</b> smallmouth water wakes up</span>
+    <span><b>Summer:</b> slips, gas dock, bay days</span>
+    <span><b>Fall:</b> haul-out, winterize, shrink-wrap</span>
+    <span><b>Winter:</b> storage &amp; the hardwater crowd</span>
+  </div>
+</div>
+
+<section id="slips">
+  <div class="wrap">
+    <p class="kicker">Dockage</p>
+    <h2>A slip on the bay beats a trailer line at the launch.</h2>
+    <div class="grid grid-3">
+      <div class="card"><h3>Seasonal slips</h3><p>Keep your boat rigged and ready on Chaumont Bay all season — no ramp queue, no de-rigging at dusk.</p><ul><li>Protected dockage</li><li>Power &amp; water at the dock*</li><li>Season-long parking</li></ul></div>
+      <div class="card"><h3>Gas dock</h3><p>Fuel up on the water and get back to the fish instead of towing to a roadside station.</p><ul><li>Marine fuel on-site</li><li>Pump-out available*</li><li>Quick turnaround</li></ul></div>
+      <div class="card"><h3>Storage</h3><p>Indoor and outdoor options for the off-season, with the service bay right there for spring commissioning.</p><ul><li>Winter storage</li><li>Shrink-wrap*</li><li>Spring launch scheduling</li></ul></div>
+    </div>
+    <p class="note">*Amenity details and current slip/storage rates confirmed by phone — call (315) 649-5050. [Rates shown after owner confirmation]</p>
+  </div>
+</section>
+
+<section id="service" style="background:var(--dockgray)">
+  <div class="wrap">
+    <p class="kicker">Service &amp; Winterization</p>
+    <h2>The season is short. Downtime is expensive.</h2>
+    <div class="grid grid-2">
+      <div class="card"><h3>Engine &amp; drive work</h3><p>From outboards to lower units, the shop handles the repairs that keep a bay boat fishing — diagnosed and fixed here, not shipped somewhere else.</p></div>
+      <div class="card"><h3>Winterize &amp; commission</h3><p>Haul-out, winterization, storage, and spring start-up as one handoff. Drop the boat in the fall, splash it running in the spring.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="camp" id="camp">
+  <div class="wrap">
+    <p class="kicker">RV Campground</p>
+    <h2>Camp where your boat sleeps.</h2>
+    <p>The RV campground puts your camper a short walk from your slip — coffee on the awning, bait from the counter, lines in the water before the road crowd shows up.</p>
+    <div class="grid grid-3" style="margin-top:24px">
+      <div class="card"><h3>Sites by the bay</h3><p>Seasonal RV sites on marina property. [Site count &amp; hookup details after confirmation]</p></div>
+      <div class="card"><h3>Bait &amp; tackle counter</h3><p>Live bait and bay-proven tackle on-site — no dawn detour into town.</p></div>
+      <div class="card"><h3>The whole weekend</h3><p>Boat, camper, fuel, bait, repairs — one address on Circle Drive handles all of it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <p class="kicker">From the docks</p>
+    <h2>Boaters keep coming back to this bay.</h2>
+    <div class="grid grid-2">
+      <div class="review">“[Placeholder — pull a real Google review with permission. Reviewers repeatedly praise honest, trustworthy staff and dependable repair work.]”<div class="who">Google review — to be inserted</div></div>
+      <div class="review">“[Placeholder — second review highlighting slips/campground experience under the current ownership.]”<div class="who">Google review — to be inserted</div></div>
+    </div>
+    <p class="note">Marina holds a ~4.5★ Google rating across dozens of reviews (verify current count before publishing).</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="kicker" style="color:#7fc4e4">Contact</p>
+    <h2>Ask about slips, service, or a campsite.</h2>
+    <div class="grid grid-2" style="margin-top:20px">
+      <div class="card">
+        <h3>Find us</h3>
+        <p>11599 Circle Drive<br>Chaumont, NY 13622</p>
+        <p style="margin-top:12px">Phone: <a href="tel:+13156495050">(315) 649-5050</a><br>Email: <a href="mailto:chaumontbaymarinany@gmail.com">chaumontbaymarinany@gmail.com</a></p>
+        <p style="margin-top:12px;font-size:.9rem;color:#bcd8e6">On Chaumont Bay, minutes off Route 12E — the gateway water to the Thousand Islands.</p>
+      </div>
+      <div class="card">
+        <h3>Quick inquiry</h3>
+        <form>
+          <input type="text" placeholder="Name">
+          <input type="tel" placeholder="Phone">
+          <select><option>I'm asking about…</option><option>Seasonal slip</option><option>Winterization / haul-out</option><option>Boat or engine repair</option><option>Winter storage</option><option>RV campsite</option></select>
+          <textarea rows="3" placeholder="Boat length / what you need"></textarea>
+          <button type="button">Send it to the marina</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>Chaumont Bay Marina · 11599 Circle Drive, Chaumont, NY 13622 · (315) 649-5050<br>Website concept by Onyx Rise Media</footer>
+
+</body>
+</html>

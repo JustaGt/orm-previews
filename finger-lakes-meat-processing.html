@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finger Lakes Meat Processing — Custom Slaughter & Processing, Romulus NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f5efe3; --ink:#26211c; --oxblood:#7a2318; --oxdark:#571812;
+    --char:#3a342d; --tan:#d9cdb4; --line:#c8b998;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Barlow',sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+  h1,h2,h3{font-family:'Zilla Slab',serif}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+  /* top bar */
+  .topbar{background:var(--char);color:#e8e0d0;font-size:.85rem;padding:8px 0}
+  .topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+  .topbar a{color:#f0c9a0;text-decoration:none;font-weight:600}
+
+  header{background:var(--paper);border-bottom:3px solid var(--oxblood);padding:18px 0}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .logo{font-family:'Zilla Slab',serif;font-weight:700;font-size:1.35rem;letter-spacing:.5px}
+  .logo span{color:var(--oxblood)}
+  nav a{color:var(--ink);text-decoration:none;margin-left:18px;font-weight:600;font-size:.92rem}
+  nav a:hover{color:var(--oxblood)}
+
+  /* hero */
+  .hero{background:linear-gradient(rgba(38,33,28,.82),rgba(38,33,28,.82)),url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80"><rect width="80" height="80" fill="%233a342d"/><path d="M0 40h80M40 0v80" stroke="%23453e35" stroke-width="1"/></svg>');color:#f3ecdd;padding:72px 0 64px}
+  .stamp{display:inline-block;border:3px double #f0c9a0;color:#f0c9a0;padding:6px 16px;border-radius:4px;letter-spacing:2.5px;font-size:.78rem;font-weight:700;text-transform:uppercase;transform:rotate(-2deg);margin-bottom:22px}
+  .hero h1{font-size:clamp(1.9rem,4.6vw,3.1rem);line-height:1.15;max-width:19ch}
+  .hero p{max-width:56ch;margin:18px 0 30px;font-size:1.08rem;color:#ded4c0}
+  .btn{display:inline-block;background:var(--oxblood);color:#fff;text-decoration:none;font-weight:700;padding:14px 28px;border-radius:4px;letter-spacing:.5px}
+  .btn:hover{background:var(--oxdark)}
+  .btn.ghost{background:transparent;border:2px solid #f0c9a0;color:#f0c9a0;margin-left:12px}
+
+  /* steps */
+  .steps{background:var(--oxblood);color:#f7ede2;padding:34px 0}
+  .steps .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .step{border-left:2px solid rgba(247,237,226,.4);padding-left:14px}
+  .step b{display:block;font-family:'Zilla Slab',serif;font-size:1.02rem;margin-bottom:4px}
+  .step small{opacity:.85;line-height:1.45;display:block}
+  .step .n{font-size:.72rem;letter-spacing:2px;opacity:.7}
+
+  section{padding:64px 0}
+  .kicker{color:var(--oxblood);letter-spacing:2.5px;font-size:.78rem;font-weight:700;text-transform:uppercase;margin-bottom:10px}
+  h2{font-size:clamp(1.5rem,3.2vw,2.1rem);margin-bottom:14px}
+
+  /* services board */
+  .board{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:28px}
+  .card{background:#fff;border:1px solid var(--line);border-top:5px solid var(--oxblood);padding:24px;border-radius:4px}
+  .card h3{font-size:1.12rem;margin-bottom:8px}
+  .card p{font-size:.95rem;color:#4c463d}
+  .card ul{list-style:none;margin-top:10px;font-size:.92rem;color:#4c463d}
+  .card li{padding:4px 0;border-bottom:1px dashed var(--line)}
+  .card li:last-child{border:none}
+
+  /* cut sheet band */
+  .cutband{background:var(--char);color:#ece4d2;padding:48px 0}
+  .cutband .wrap{display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap}
+  .cutband h2{color:#fff}
+  .cutband p{max-width:52ch;color:#cfc5ae}
+
+  /* about */
+  .about .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:start}
+  .ledger{background:#fff;border:1px solid var(--line);border-radius:4px;padding:26px}
+  .ledger h3{font-size:1rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--oxblood);margin-bottom:12px}
+  .ledger table{width:100%;border-collapse:collapse;font-size:.93rem}
+  .ledger td{padding:8px 4px;border-bottom:1px dashed var(--line);vertical-align:top}
+  .ledger td:first-child{font-weight:600;width:42%}
+
+  /* deer callout */
+  .deer{background:#efe6d2;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .deer .wrap{display:flex;gap:26px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+  .deer h2{max-width:22ch}
+  .deer p{max-width:48ch;color:#4c463d}
+
+  /* contact */
+  .contact{background:var(--char);color:#ece4d2}
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+  .contact h2{color:#fff}
+  .contact a{color:#f0c9a0}
+  form{display:grid;gap:12px;margin-top:18px}
+  input,select,textarea{width:100%;padding:12px;border:1px solid #6b6353;background:#2e2922;color:#ece4d2;border-radius:4px;font-family:'Barlow',sans-serif;font-size:.95rem}
+  label{font-size:.85rem;font-weight:600;letter-spacing:.5px}
+  .note{font-size:.8rem;color:#a89e88;margin-top:8px}
+
+  footer{background:#1d1915;color:#8f8672;text-align:center;padding:22px 0;font-size:.85rem}
+  @media(max-width:820px){
+    .steps .wrap{grid-template-columns:1fr 1fr}
+    .about .wrap,.contact .wrap{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div>2094 Route 336, Romulus, NY <em>(address to be confirmed)</em></div>
+    <div>Call <a href="tel:13155498252">(315) 549-8252</a></div>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <div class="logo">FINGER LAKES <span>MEAT PROCESSING</span></div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#cutsheets">Cut Sheets</a>
+      <a href="#about">About Rick</a>
+      <a href="#schedule">Reserve a Date</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="stamp">Custom Processing &middot; Romulus, NY &middot; Since 2001</div>
+    <h1>From your pasture to your freezer — the whole process in one building.</h1>
+    <p>Slaughter, hanging, cutting, wrapping, sausage and the smokehouse all happen here on Route 336. You book the date, bring the animal, and go over the cut sheet with the person who actually does the cutting.</p>
+    <a class="btn" href="#schedule">Reserve a slaughter date</a>
+    <a class="btn ghost" href="#services">See what we process</a>
+  </div>
+</section>
+
+<div class="steps">
+  <div class="wrap">
+    <div class="step"><span class="n">STEP 1</span><b>Reserve your date</b><small>Fall dates go first — call or send the request form and we'll confirm your slot.</small></div>
+    <div class="step"><span class="n">STEP 2</span><b>Drop off</b><small>Bring your animal on the scheduled day. Emergency butchering handled when it can't wait.</small></div>
+    <div class="step"><span class="n">STEP 3</span><b>Cut sheet, together</b><small>First half or quarter? We'll walk the cut sheet with you so nothing gets wasted.</small></div>
+    <div class="step"><span class="n">STEP 4</span><b>Freezer-ready pickup</b><small>Cut, wrapped or vacuum-sealed, labeled, and frozen — ready for the chest freezer.</small></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="kicker">The services board</div>
+    <h2>Beef, pork, lamb — and everything a Finger Lakes season brings in.</h2>
+    <div class="board">
+      <div class="card">
+        <h3>Custom slaughter &amp; processing</h3>
+        <p>Beef, pork, and lamb from local farms — including certified organic, grass-fed, and free-range animals. We work with the farmers and know the barns the animals come from.</p>
+      </div>
+      <div class="card">
+        <h3>Wild game</h3>
+        <p>Deer, bear, moose, caribou, waterfowl, poultry, and duck. If the season's open and you tagged it, we can process it.</p>
+      </div>
+      <div class="card">
+        <h3>Sausage &amp; bologna</h3>
+        <ul>
+          <li>Italian, andouille, chorizo</li>
+          <li>Maple &amp; breakfast sausage</li>
+          <li>Bologna, and special requests</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>The old-fashioned smokehouse</h3>
+        <ul>
+          <li>Ham &amp; bacon</li>
+          <li>Venison, duck, geese, turkey</li>
+          <li>Smoked sausages</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Vacuum-seal packaging</h3>
+        <p>Longer freezer life, no freezer burn, clear labels — worth it for halves and quarters that need to last the year.</p>
+      </div>
+      <div class="card">
+        <h3>Emergency butchering</h3>
+        <p>An injured animal can't wait for a scheduled slot. Call first — we handle emergency butchering so the animal isn't lost.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cutband" id="cutsheets">
+  <div class="wrap">
+    <div>
+      <div class="kicker" style="color:#f0c9a0">Cut sheets</div>
+      <h2>Know exactly what comes back in the box.</h2>
+      <p>Steak thickness, roast size, ground-beef pack weight, what to do with the brisket — it's all on one sheet. Print it, fill it out at the kitchen table, or go through it with us at drop-off.</p>
+    </div>
+    <a class="btn" href="#">Download the cutting forms</a>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div>
+      <div class="kicker">About</div>
+      <h2>Rick Whitmore has been cutting meat for over thirty years.</h2>
+      <p style="margin-bottom:14px">Rick started as a meat-cutting apprentice at eighteen. In 1991 he took over Bill's Meat Market in Waterloo and ran it for ten years — and it was Bill's customers who kept asking the same question: <em>"When are you going to open a custom slaughterhouse?"</em></p>
+      <p style="margin-bottom:14px">In 2001 he answered it, opening Finger Lakes Meat Processing in Romulus so the whole job — slaughter through smokehouse — could happen under one roof, done by the same hands.</p>
+      <p>Farms around the county trust the work enough that some post our cutting instructions on their own websites for their beef customers.</p>
+    </div>
+    <div class="ledger">
+      <h3>The shop ledger</h3>
+      <table>
+        <tr><td>Established</td><td>2001</td></tr>
+        <tr><td>Owner</td><td>Rick Whitmore</td></tr>
+        <tr><td>In the trade</td><td>30+ years</td></tr>
+        <tr><td>Before FLMP</td><td>Bill's Meat Market, Waterloo (1991–2001)</td></tr>
+        <tr><td>Location</td><td>Route 336, Romulus — central Seneca County</td></tr>
+        <tr><td>Hours</td><td>[PLACEHOLDER — confirm with Rick]</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="deer">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Hunters</div>
+      <h2>Deer season doesn't wait — and neither should your venison.</h2>
+      <p>Drop-off days, turnaround times, and smokehouse options for the season will be posted here each fall. [PLACEHOLDER — season details to be confirmed with Rick before publish]</p>
+    </div>
+    <a class="btn" href="tel:13155498252">Call before you drop off</a>
+  </div>
+</section>
+
+<section class="contact" id="schedule">
+  <div class="wrap">
+    <div>
+      <div class="kicker" style="color:#f0c9a0">Reserve a date</div>
+      <h2>Get on the schedule before the calendar fills.</h2>
+      <p style="margin:14px 0;color:#cfc5ae">Fall beef and deer-season slots go quickly. Send a request and we'll call you back to confirm the date and go over the details.</p>
+      <p><strong>Phone:</strong> <a href="tel:13155498252">(315) 549-8252</a><br>
+      <strong>Address:</strong> 2094 Route 336, Romulus, NY 14541 <em>(confirm)</em></p>
+    </div>
+    <form>
+      <div><label>Name</label><input type="text" placeholder="Your name"></div>
+      <div><label>Phone</label><input type="tel" placeholder="Best number to call back"></div>
+      <div><label>What are you bringing?</label>
+        <select><option>Beef</option><option>Pork</option><option>Lamb</option><option>Deer / wild game</option><option>Poultry / waterfowl</option><option>Emergency butchering</option></select>
+      </div>
+      <div><label>Preferred timing</label><input type="text" placeholder="e.g., late October"></div>
+      <div><label>Notes</label><textarea rows="3" placeholder="Head count, cut preferences, smokehouse items…"></textarea></div>
+      <button class="btn" type="button">Request my date</button>
+      <p class="note">Form is a request, not a confirmed booking — we confirm every date by phone.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  Finger Lakes Meat Processing &middot; Route 336, Romulus, NY &middot; (315) 549-8252 — Preview concept by Onyx Rise Media
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adirondack Seafood Co. — Fresh New England Fish Market &amp; Restaurant, Hudson Falls NY</title>
+<meta name="description" content="Adirondack Seafood Co. brings fresh New England fish and shellfish inland to Hudson Falls, NY — a fish market and Maine-style seafood restaurant run by a former commercial fisherman since 1989. Market &amp; restaurant in Hudson Falls; second market in Queensbury.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0f2b3d; --navy-d:#0a1f2d; --deep:#123a52; --teal:#1f7a8c; --wave:#4bb3c4;
+    --sand:#e9dcc3; --foam:#f3f7f8; --paper:#f7fbfb; --ink:#152834; --gray:#5a6b74; --line:#d8e4e6;
+    --coral:#e2603f; --coral-d:#c24a2c; --white:#fff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Mulish',sans-serif;color:var(--ink);background:var(--paper);line-height:1.62}
+  h1,h2,h3,.disp{font-family:'Fraunces',serif;line-height:1.08}
+  a{color:inherit}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--coral);color:#fff;font-weight:700;padding:14px 28px;border-radius:8px;
+    text-decoration:none;transition:transform .15s,background .15s;font-size:1rem}
+  .btn:hover{transform:translateY(-2px);background:#ef7051}
+  .btn.ghost{background:transparent;border:2px solid rgba(255,255,255,.55);color:#fff}
+  .btn.ghost:hover{background:rgba(255,255,255,.1)}
+  .btn.teal{background:var(--teal)}
+  .btn.teal:hover{background:#25909f}
+
+  .topbar{background:var(--navy-d);color:#bcd3db;font-size:.9rem}
+  .topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;padding:8px 22px}
+  .topbar b{color:var(--wave)}
+
+  header.nav{background:var(--navy);color:#fff;position:sticky;top:0;z-index:20;border-bottom:3px solid var(--wave)}
+  header.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand .mark{width:44px;height:44px;border-radius:50%;background:radial-gradient(circle at 40% 34%,#4bb3c4,#123a52);display:flex;align-items:center;justify-content:center;color:#eaf6f8;font-family:'Fraunces';font-weight:700;font-size:1.3rem}
+  .brand b{font-family:'Fraunces';font-size:1.28rem;letter-spacing:.01em}
+  .brand span{display:block;font-family:'Mulish';font-size:.66rem;letter-spacing:.2em;color:var(--wave);text-transform:uppercase;font-weight:700;margin-top:2px}
+  nav.links{display:flex;gap:24px;font-weight:600;font-size:.96rem}
+  nav.links a{text-decoration:none}
+  nav.links a:hover{color:var(--wave)}
+  @media(max-width:840px){nav.links{display:none}}
+
+  .hero{background:
+     linear-gradient(rgba(10,31,45,.82),rgba(10,31,45,.9)),
+     radial-gradient(circle at 82% 22%, rgba(75,179,196,.25), transparent 46%),
+     linear-gradient(160deg,#0f2b3d,#123a52);
+     color:#fff;padding:86px 0 72px}
+  .hero .kick{color:var(--wave);font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:.8rem;margin-bottom:16px}
+  .hero h1{font-size:clamp(2.2rem,5.4vw,3.9rem);max-width:18ch}
+  .hero h1 em{font-style:italic;color:var(--sand)}
+  .hero p.lead{margin:22px 0 30px;font-size:1.2rem;max-width:56ch;color:#dcebef}
+  .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero .facts{display:flex;gap:34px;flex-wrap:wrap;margin-top:44px;border-top:1px solid rgba(255,255,255,.2);padding-top:24px}
+  .hero .facts div b{font-family:'Fraunces';font-size:1.7rem;color:var(--sand);display:block;line-height:1}
+  .hero .facts div span{font-size:.85rem;color:#cfe2e7}
+
+  section{padding:62px 0}
+  .eyebrow{color:var(--teal);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:.78rem;margin-bottom:10px}
+  h2.big{font-size:clamp(1.8rem,3.8vw,2.7rem);margin-bottom:12px;color:var(--navy)}
+  .sub{max-width:60ch;color:var(--gray);font-size:1.06rem}
+
+  .story{background:var(--white)}
+  .storywrap{display:grid;grid-template-columns:1.05fr .95fr;gap:38px;align-items:center}
+  .storywrap p{color:var(--gray)}
+  .storywrap p+p{margin-top:14px}
+  .storywrap .quote{background:var(--foam);border-left:5px solid var(--teal);border-radius:10px;padding:28px 30px}
+  .storywrap .quote p{font-family:'Fraunces';font-size:1.25rem;color:var(--navy);font-style:italic;line-height:1.4}
+  .storywrap .quote span{display:block;margin-top:14px;font-family:'Mulish';font-style:normal;font-size:.9rem;color:var(--teal);font-weight:700;letter-spacing:.02em}
+  @media(max-width:760px){.storywrap{grid-template-columns:1fr}}
+
+  .sources{background:var(--navy);color:#fff}
+  .sources h2.big{color:#fff}
+  .sources .sub{color:#c6dae0}
+  .srcgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:34px}
+  .src{border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:24px 22px;background:rgba(255,255,255,.04)}
+  .src h3{color:var(--sand);font-size:1.15rem;font-family:'Fraunces'}
+  .src p{color:#c9dade;font-size:.94rem;margin-top:6px}
+  .src .tag{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--wave);font-weight:700}
+
+  .market{background:var(--foam)}
+  .marketgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:30px}
+  .fish{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:20px;text-align:center}
+  .fish b{display:block;font-family:'Fraunces';color:var(--navy);font-size:1.1rem;margin-bottom:4px}
+  .fish span{font-size:.86rem;color:var(--gray)}
+  .flag{margin-top:24px;background:#fff4ef;border:1px dashed var(--coral-d);color:#8a3d27;font-size:.9rem;padding:14px 18px;border-radius:8px}
+
+  .locs{background:var(--white)}
+  .locgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:32px}
+  .loc{border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 12px 30px rgba(15,43,61,.08)}
+  .loc .head{background:var(--deep);color:#fff;padding:18px 24px}
+  .loc .head b{font-family:'Fraunces';font-size:1.3rem;display:block}
+  .loc .head span{font-size:.82rem;color:var(--wave);letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+  .loc .body{padding:22px 24px}
+  .loc .body p{color:var(--gray);font-size:.96rem;margin-bottom:6px}
+  .loc .body .ph{font-family:'Fraunces';font-size:1.4rem;color:var(--coral-d);display:block;margin:8px 0}
+  @media(max-width:700px){.locgrid{grid-template-columns:1fr}}
+
+  .cta-band{background:var(--teal);color:#fff;text-align:center}
+  .cta-band h2{font-family:'Fraunces';font-size:clamp(1.7rem,3.6vw,2.4rem);margin-bottom:12px}
+  .cta-band p{max-width:52ch;margin:0 auto 24px;color:#e6f4f6}
+
+  footer{background:var(--navy-d);color:#a9c4cd;padding:38px 0;font-size:.92rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px}
+  footer b{color:#fff;font-family:'Fraunces'}
+  footer a{color:var(--wave);text-decoration:none}
+  .disc{background:var(--foam);color:var(--gray);font-size:.8rem;padding:14px 0;text-align:center}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Fish Market &amp; Restaurant · 115 River St, Hudson Falls, NY</span>
+  <span>Fresh from the coast since <b>1989</b> · <b>(518) 745-5845</b></span>
+</div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">
+    <div class="mark">A</div>
+    <div><b>Adirondack Seafood Co.</b><span>Fish Market &amp; Restaurant</span></div>
+  </div>
+  <nav class="links">
+    <a href="#story">Our Story</a>
+    <a href="#sources">Where It Comes From</a>
+    <a href="#market">The Market</a>
+    <a href="#locations">Visit</a>
+  </nav>
+  <a href="#locations" class="btn">Find Us</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="kick">New England Fish · Landed, Then Driven Inland</div>
+  <h1>The freshest coastal seafood — <em>200 miles from the coast.</em></h1>
+  <p class="lead">Adirondack Seafood Co. has brought New England fish and shellfish to Hudson Falls since 1989. Our owner fished commercially in Alaska and New England, and we still buy from the same coastal boats and docks. A real fish market, and a Maine-style restaurant to eat it in.</p>
+  <div class="cta">
+    <a href="#market" class="btn">See What's Fresh</a>
+    <a href="#locations" class="btn ghost">Market &amp; Restaurant Hours</a>
+  </div>
+  <div class="facts">
+    <div><b>Since 1989</b><span>serving the region</span></div>
+    <div><b>2 markets</b><span>Hudson Falls &amp; Queensbury</span></div>
+    <div><b>Boat-direct</b><span>New England · Iceland · Alaska</span></div>
+  </div>
+</div></section>
+
+<section class="story" id="story"><div class="wrap">
+  <div class="storywrap">
+    <div>
+      <div class="eyebrow">Our story</div>
+      <h2 class="big">Run by a fisherman, not a distributor</h2>
+      <p>Adirondack Seafood started in 1989 selling fish to upstate restaurants and hotels. Over the years it grew into what it is now — a full fish market and a Maine-style seafood restaurant where locals can buy the same quality the chefs do.</p>
+      <p>Owner Mike Willig grew up in the seafood business and worked as a commercial fisherman in Alaska and New England. He knows how fish should be handled from the moment it leaves the water, and he's usually right there to help you pick a fillet or track down something hard to find for a holiday.</p>
+    </div>
+    <div class="quote">
+      <p>"We buy from small, short-trip boats on the New England coast — the same high-quality sources we started with in 1989."</p>
+      <span>— The Adirondack Seafood approach to sourcing</span>
+    </div>
+  </div>
+</div></section>
+
+<section class="sources" id="sources"><div class="wrap">
+  <div class="eyebrow" style="color:var(--wave)">Where it comes from</div>
+  <h2 class="big">Named waters, not "fresh &amp; local"</h2>
+  <p class="sub">Being inland is the whole challenge — so we're specific about where every case comes from and how fast it gets here.</p>
+  <div class="srcgrid">
+    <div class="src"><div class="tag">New England</div><h3>Day-Boat Fish</h3><p>Bought from small, short-trip boats on the New England coast for the freshest handling.</p></div>
+    <div class="src"><div class="tag">Iceland</div><h3>Cod &amp; Haddock</h3><p>Imported from cold Icelandic waters — firm, clean whitefish.</p></div>
+    <div class="src"><div class="tag">Alaska</div><h3>Wild Salmon &amp; Halibut</h3><p>Wild salmon, day-boat halibut and king crab flown in from Alaska.</p></div>
+    <div class="src"><div class="tag">Canada</div><h3>Lobster &amp; Clams</h3><p>Hard-shell clams and live lobster from Canadian waters.</p></div>
+  </div>
+</div></section>
+
+<section class="market" id="market"><div class="wrap">
+  <div class="eyebrow">The fish market</div>
+  <h2 class="big">Take it home fresh</h2>
+  <p class="sub">A retail case of coastal fish and shellfish you won't find at the grocery store — and staff who can tell you exactly what came in and how to cook it.</p>
+  <div class="marketgrid">
+    <div class="fish"><b>Fresh Fillets</b><span>cod, haddock, salmon, halibut</span></div>
+    <div class="fish"><b>Shellfish</b><span>lobster, clams, shrimp, scallops</span></div>
+    <div class="fish"><b>King Crab</b><span>flown in from Alaska</span></div>
+    <div class="fish"><b>Special Orders</b><span>hard-to-find &amp; holiday requests</span></div>
+  </div>
+  <div class="flag">Placeholder note: exact species and prices in the case change with each week's landings. The live page should invite customers to <b>call for what's fresh this week</b> and confirm the current retail list with the market. The "Best Seafood in the Region" recognition stated by the business should be verified before it appears as a claim.</div>
+</div></section>
+
+<section class="locs" id="locations"><div class="wrap">
+  <div class="eyebrow">Visit us</div>
+  <h2 class="big">Two ways to get it</h2>
+  <div class="locgrid">
+    <div class="loc">
+      <div class="head"><span>Restaurant &amp; Market</span><b>Hudson Falls</b></div>
+      <div class="body">
+        <p>115 River St, Hudson Falls, NY 12839</p>
+        <span class="ph">(518) 745-5845</span>
+        <p>Maine-style seafood restaurant with the fish market attached — dine in or take home.</p>
+        <p><b>Hours:</b> Thu–Sat (call to confirm)</p>
+        <a href="tel:15187455845" class="btn">Call Hudson Falls</a>
+      </div>
+    </div>
+    <div class="loc">
+      <div class="head"><span>Fish Market</span><b>Queensbury</b></div>
+      <div class="body">
+        <p>60 Glenwood Ave, Queensbury, NY 12804</p>
+        <span class="ph">(518) 741-6764</span>
+        <p>Our second retail fish market — the same coastal sourcing, closer to Glens Falls.</p>
+        <p><b>Hours:</b> Thu–Sat (call to confirm)</p>
+        <a href="tel:15187416764" class="btn teal">Call Queensbury</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="cta-band"><div class="wrap">
+  <h2>Not sure what's fresh today? Just call.</h2>
+  <p>We'll tell you exactly what came in, help you pick, and set aside a holiday or party order.</p>
+  <a href="tel:15187455845" class="btn" style="background:#fff;color:var(--teal)">Call the Market — (518) 745-5845</a>
+</div></section>
+
+<footer><div class="wrap">
+  <div>
+    <b>Adirondack Seafood Co.</b><br>
+    115 River St, Hudson Falls, NY 12839<br>
+    Fish market &amp; restaurant · since 1989
+  </div>
+  <div>
+    Hudson Falls: <a href="tel:15187455845">(518) 745-5845</a><br>
+    Queensbury market: <a href="tel:15187416764">(518) 741-6764</a><br>
+    New England · Iceland · Alaska · Canada
+  </div>
+</div></footer>
+<div class="disc">Concept preview prepared by Onyx Rise Media. Weekly species, prices and any award claims shown as placeholders pending confirmation with the owner.</div>
+
+</body>
+</html>

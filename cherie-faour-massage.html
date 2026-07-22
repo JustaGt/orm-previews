@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cherie Faour Massage Therapy | Poughkeepsie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--mauve:#6b4f63;--mauve-dk:#4f3a49;--blush:#e7c4cf;--cream:#f6efe9;--ink:#3d2f3a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);line-height:1.85;font-weight:300;}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:500;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:980px;margin:0 auto;padding:0 32px;}
+.btn{display:inline-block;padding:13px 32px;font-weight:400;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;transition:.25s;}
+.btn-fill{background:var(--mauve);color:var(--cream);}.btn-fill:hover{background:var(--mauve-dk);}
+.btn-line{border:1px solid var(--mauve);color:var(--mauve);}.btn-line:hover{background:var(--mauve);color:var(--cream);}
+.kicker{color:var(--mauve);letter-spacing:.36em;text-transform:uppercase;font-size:.7rem;font-weight:500;}
+
+nav{position:sticky;top:0;z-index:50;background:rgba(246,239,233,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(107,79,99,.14);}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;}
+.brand{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;letter-spacing:.02em;}
+.navlinks{display:flex;gap:30px;align-items:center;font-size:.82rem;letter-spacing:.04em;}
+.navlinks a.lnk:hover{color:var(--mauve);}
+
+.hero{padding:130px 0 96px;text-align:center;}
+.hero .kicker{display:block;margin-bottom:20px;}
+.hero h1{font-size:4rem;line-height:1.06;max-width:780px;margin:0 auto 22px;font-weight:500;}
+.hero h1 em{font-style:italic;color:var(--mauve);}
+.hero p.sub{font-size:1.12rem;color:#5a4a55;max-width:540px;margin:0 auto 36px;}
+.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.flourish{font-family:'Cormorant Garamond',serif;color:var(--blush);font-size:2rem;margin:46px 0 0;}
+
+section{padding:90px 0;}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.story .img{min-height:480px;background:linear-gradient(rgba(60,42,55,.2),rgba(60,42,55,.34)),url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;background-color:var(--mauve-dk);}
+.story h2{font-size:2.6rem;line-height:1.16;margin-bottom:16px;font-weight:500;}
+.story p{color:#4f3f4a;margin-bottom:14px;}
+.sig{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem;color:var(--mauve);margin-top:8px;}
+
+.serv-sec{background:#efe3e6;}
+.serv-head{text-align:center;max-width:520px;margin:0 auto 44px;}
+.serv-head h2{font-size:2.6rem;margin:8px 0;font-weight:500;}
+.serv-head p{color:#5a4a55;}
+.serv-list{max-width:680px;margin:0 auto;}
+.srow{padding:22px 0;border-bottom:1px solid rgba(107,79,99,.18);display:flex;justify-content:space-between;align-items:baseline;gap:20px;}
+.srow .name{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;}
+.srow .desc{font-size:.9rem;color:#6a5a65;display:block;margin-top:2px;}
+.srow .price{color:var(--mauve);font-weight:400;letter-spacing:.1em;font-size:.82rem;text-transform:uppercase;white-space:nowrap;}
+
+.portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.portfolio .g{height:230px;background-size:cover;background-position:center;background-color:var(--mauve-dk);}
+.g1{background-image:linear-gradient(rgba(60,42,55,.18),rgba(60,42,55,.34)),url('https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1400&q=80');}
+.g2{background-image:linear-gradient(rgba(60,42,55,.18),rgba(60,42,55,.34)),url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1400&q=80');}
+.g3{background-image:linear-gradient(rgba(60,42,55,.18),rgba(60,42,55,.34)),url('https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=1400&q=80');}
+.g4{background-image:linear-gradient(rgba(60,42,55,.18),rgba(60,42,55,.34)),url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1400&q=80');}
+.g5{background-image:linear-gradient(rgba(60,42,55,.18),rgba(60,42,55,.34)),url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1400&q=80');}
+.g6{background-image:linear-gradient(rgba(60,42,55,.18),rgba(60,42,55,.34)),url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1400&q=80');}
+
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
+.contact h2{font-size:2.5rem;margin-bottom:16px;font-weight:500;}
+.info p{margin-bottom:12px;color:#4f3f4a;}
+.info .label{color:var(--mauve);letter-spacing:.12em;text-transform:uppercase;font-size:.7rem;display:block;font-weight:500;}
+.hours{margin-top:18px;border-top:1px solid rgba(107,79,99,.16);padding-top:16px;}
+.hours div{display:flex;justify-content:space-between;padding:6px 0;font-size:.92rem;}
+form{background:#fff;border:1px solid rgba(107,79,99,.14);padding:34px;}
+form label{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mauve);margin:13px 0 5px;}
+form input,form select,form textarea{width:100%;border:1px solid rgba(107,79,99,.22);background:var(--cream);padding:11px 13px;font-family:inherit;font-size:.92rem;}
+form button{margin-top:22px;width:100%;border:none;cursor:pointer;}
+.thanks{display:none;text-align:center;padding:36px 18px;}
+.thanks.show{display:block;}
+.thanks h3{color:var(--mauve);font-size:1.7rem;margin-bottom:8px;font-weight:500;}
+
+footer{background:var(--mauve-dk);color:var(--cream);text-align:center;padding:44px 20px;}
+footer .brand{color:var(--cream);margin-bottom:8px;}
+footer p{opacity:.8;font-size:.85rem;}
+.orm{color:var(--blush);margin-top:12px;font-size:.74rem;letter-spacing:.1em;}
+
+@media(max-width:860px){
+.navlinks .lnk{display:none;}
+.hero{padding:80px 0 60px;}
+.hero h1{font-size:2.6rem;}
+.story,.contact{grid-template-columns:1fr;gap:36px;}
+.portfolio{grid-template-columns:1fr 1fr;}
+.story .img{min-height:300px;}
+.srow{flex-direction:column;gap:4px;}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap" style="padding:18px 0;">
+<div class="brand">Cherie Faour <span style="color:var(--mauve);">· LMT</span></div>
+<div class="navlinks">
+<a class="lnk" href="#about">About Cherie</a>
+<a class="lnk" href="#services">Sessions</a>
+<a class="lnk" href="#book">Book</a>
+<a class="btn btn-fill" href="#book">Book a Session</a>
+</div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+<span class="kicker">Poughkeepsie, NY · By Appointment</span>
+<h1>Therapeutic massage, given the <em>time</em> it deserves.</h1>
+<p class="sub">Cherie Faour, LMT, works one client at a time — listening to where you hold tension and tailoring each session to the body in front of her.</p>
+<div class="hero-ctas">
+<a class="btn btn-fill" href="#book">Book a Session</a>
+<a class="btn btn-line" href="#services">See Sessions</a>
+</div>
+<div class="flourish">❀</div>
+</div></header>
+
+<section id="about"><div class="wrap"><div class="story">
+<div class="img"></div>
+<div>
+<span class="kicker">About Cherie</span>
+<h2>A licensed therapist who actually listens</h2>
+<p>For years, Cherie has built a quiet practice on a simple idea: no two bodies carry stress the same way. Each appointment starts with a few questions and a plan, then unhurried, focused work.</p>
+<p>Whether you're recovering from an injury, easing chronic tightness, or simply long overdue for rest, the pressure and pace are set by you.</p>
+<p class="sig">— Cherie Faour, LMT</p>
+</div>
+</div></div></section>
+
+<section id="services" class="serv-sec"><div class="wrap">
+<div class="serv-head"><span class="kicker">Sessions</span><h2>Bodywork for how you feel today</h2><p>By appointment. Pressure and focus tailored each visit.</p></div>
+<div class="serv-list">
+<div class="srow"><div><span class="name">Medical / Therapeutic Massage</span><span class="desc">Targeted work for injury recovery and chronic pain.</span></div><span class="price">By appointment</span></div>
+<div class="srow"><div><span class="name">Swedish Massage</span><span class="desc">Flowing, full-body relaxation to quiet the nervous system.</span></div><span class="price">By appointment</span></div>
+<div class="srow"><div><span class="name">Deep Tissue</span><span class="desc">Slow, deliberate pressure for stubborn knots and tight bands.</span></div><span class="price">By appointment</span></div>
+<div class="srow"><div><span class="name">Shiatsu</span><span class="desc">Pressure-point work along the body's meridians, fully clothed.</span></div><span class="price">By appointment</span></div>
+</div>
+</div></section>
+
+<section style="padding-bottom:0;"><div class="wrap">
+<div class="serv-head" style="margin:0 auto 40px;"><span class="kicker">The Space</span><h2>Calm, private, unrushed</h2></div>
+</div>
+<div class="wrap"><div class="portfolio">
+<div class="g g1"></div><div class="g g2"></div><div class="g g3"></div><div class="g g4"></div><div class="g g5"></div><div class="g g6"></div>
+</div></div></section>
+
+<section id="book"><div class="wrap"><div class="contact">
+<div class="info">
+<span class="kicker">Book a Session</span>
+<h2>Reserve your time</h2>
+<p>Sessions are by appointment so you always have Cherie's full, undivided attention.</p>
+<p><span class="label">Phone</span>(845) 863-5734</p>
+<p><span class="label">Location</span>Poughkeepsie, NY</p>
+<div class="hours">
+<div><span>Monday – Friday</span><span>By appointment</span></div>
+<div><span>Saturday</span><span>By appointment</span></div>
+<div><span>Sunday</span><span>Closed</span></div>
+</div>
+</div>
+<div>
+<form id="cfform" onsubmit="event.preventDefault();document.getElementById('cfform').style.display='none';document.getElementById('cfthx').classList.add('show');">
+<label>Name</label><input required type="text" placeholder="Your name">
+<label>Phone</label><input required type="tel" placeholder="(845) 000-0000">
+<label>Session</label>
+<select><option>Medical / Therapeutic</option><option>Swedish</option><option>Deep Tissue</option><option>Shiatsu</option><option>Not sure — help me choose</option></select>
+<label>Anything to note?</label><textarea rows="3" placeholder="Areas of tension, injuries, preferred days/times…"></textarea>
+<button class="btn btn-fill" type="submit">Request Appointment</button>
+</form>
+<div id="cfthx" class="thanks"><h3>Thank you.</h3><p style="color:#4f3f4a;">Your request is in. Cherie will call (845) 863-5734 to confirm your appointment time.</p></div>
+</div>
+</div></div></section>
+
+<footer>
+<div class="brand" style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;">Cherie Faour, LMT</div>
+<p>Massage Therapy · Poughkeepsie, NY · (845) 863-5734</p>
+<p class="orm">Website preview by Onyx Rise Media</p>
+</footer>
+</body>
+</html>

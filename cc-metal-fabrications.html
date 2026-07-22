@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C&amp;C Metal Fabrications — Fulton, NY · Design, Engineering, Fabrication &amp; Installation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700&family=Saira:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#13243d; --navy2:#1b324f; --blueprint:#0e3a66; --line:#cfd8e4;
+  --amber:#f0902b; --amber-d:#d6781a; --paper:#f4f6f9; --white:#fff;
+  --ink:#16202f; --slate:#54627a; --grid:rgba(255,255,255,.06);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Saira',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+.mono{font-family:'JetBrains Mono',monospace}
+h1,h2,h3,.cond{font-family:'Saira Condensed',sans-serif;letter-spacing:.4px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+.btn{display:inline-block;background:var(--amber);color:#231203;font-weight:700;text-decoration:none;padding:13px 26px;font-size:.95rem;border-radius:2px;transition:.13s;font-family:'Saira';text-transform:uppercase;letter-spacing:.6px}
+.btn:hover{background:var(--amber-d);color:#fff}
+.btn.ghost{background:transparent;color:#dce6f2;border:1px solid #38507180}
+.btn.ghost:hover{border-color:var(--amber);color:var(--amber)}
+.btn.navy{background:var(--navy);color:#fff}
+.btn.navy:hover{background:var(--blueprint)}
+
+nav{background:var(--navy);position:sticky;top:0;z-index:20;border-bottom:2px solid var(--amber)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand b{font-family:'Saira Condensed';font-weight:700;color:#fff;font-size:1.34rem;display:block;line-height:1}
+.brand small{color:var(--amber);font-size:.62rem;letter-spacing:2.5px;text-transform:uppercase;font-family:'JetBrains Mono'}
+.navlinks{display:flex;gap:26px;color:#aebbcf;font-family:'JetBrains Mono';font-size:.78rem;letter-spacing:.5px}
+.navlinks a{text-decoration:none}.navlinks a:hover{color:#fff}
+@media(max-width:900px){.navlinks{display:none}}
+
+.hero{position:relative;color:#fff;overflow:hidden;
+  background:
+   linear-gradient(180deg,rgba(19,36,61,.93),rgba(14,58,102,.92)),
+   repeating-linear-gradient(0deg,transparent 0 39px,var(--grid) 39px 40px),
+   repeating-linear-gradient(90deg,transparent 0 39px,var(--grid) 39px 40px),
+   var(--navy)}
+.hero .wrap{padding:74px 22px 80px}
+.hero .tag{display:inline-flex;gap:8px;align-items:center;font-family:'JetBrains Mono';color:var(--amber);border:1px solid #38507180;border-radius:2px;padding:6px 13px;font-size:.72rem;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:22px}
+.hero h1{font-family:'Saira Condensed';font-weight:700;font-size:3.5rem;line-height:.98;max-width:17ch}
+.hero h1 span{color:var(--amber)}
+.hero p{font-size:1.15rem;max-width:58ch;margin:20px 0 28px;color:#c4d0e0}
+.hero .cta-row{display:flex;gap:13px;flex-wrap:wrap}
+.hero .stamp{position:absolute;right:-40px;top:40px;font-family:'JetBrains Mono';color:#ffffff0a;font-size:13rem;font-weight:700;transform:rotate(8deg);pointer-events:none}
+@media(max-width:600px){.hero h1{font-size:2.4rem}.hero .stamp{display:none}}
+
+.spec{background:var(--navy2);border-bottom:1px solid #2c425f}
+.spec .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#2c425f}
+@media(max-width:720px){.spec .wrap{grid-template-columns:1fr 1fr}}
+.spec .c{background:var(--navy2);padding:22px 20px}
+.spec .c b{font-family:'Saira Condensed';color:#fff;font-size:1.7rem;display:block;line-height:1}
+.spec .c span{font-family:'JetBrains Mono';color:#8ea0ba;font-size:.7rem;letter-spacing:1px;text-transform:uppercase;display:block;margin-top:6px}
+
+section{padding:78px 0}
+.shead .k{font-family:'JetBrains Mono';color:var(--amber-d);letter-spacing:2.5px;text-transform:uppercase;font-size:.76rem}
+.shead h2{font-family:'Saira Condensed';font-weight:700;font-size:2.4rem;color:var(--navy);margin-top:7px;line-height:1.04}
+.shead p{color:var(--slate);max-width:64ch;margin-top:11px}
+.shead{margin-bottom:38px}
+
+/* capability spec rows */
+.caps{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--white)}
+.caprow{display:grid;grid-template-columns:54px 1.1fr 2fr;gap:0;border-bottom:1px solid var(--line)}
+.caprow:last-child{border-bottom:0}
+.caprow .n{background:var(--paper);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono';color:var(--amber-d);font-weight:600;border-right:1px solid var(--line)}
+.caprow .t{padding:18px 20px;border-right:1px solid var(--line);display:flex;align-items:center}
+.caprow .t b{font-family:'Saira Condensed';font-size:1.2rem;color:var(--navy)}
+.caprow .d{padding:18px 20px;color:var(--slate);font-size:.95rem;display:flex;align-items:center}
+@media(max-width:780px){.caprow{grid-template-columns:42px 1fr}.caprow .d{grid-column:1/3;border-right:0;padding-top:0}.caprow .t{border-right:0}}
+
+/* process */
+.proc{background:var(--navy);color:#fff;
+  background:
+   linear-gradient(180deg,var(--navy),var(--blueprint)),
+   repeating-linear-gradient(0deg,transparent 0 39px,var(--grid) 39px 40px),
+   repeating-linear-gradient(90deg,transparent 0 39px,var(--grid) 39px 40px)}
+.proc .shead h2{color:#fff}.proc .shead p{color:#c4d0e0}.proc .shead .k{color:var(--amber)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+@media(max-width:820px){.steps{grid-template-columns:1fr 1fr;gap:14px}}
+@media(max-width:480px){.steps{grid-template-columns:1fr}}
+.step{position:relative;padding:0 22px}
+.step:not(:last-child)::after{content:"";position:absolute;top:18px;right:-2px;width:1px;height:78%;background:#33507240}
+@media(max-width:820px){.step::after{display:none!important}}
+.step .ph{font-family:'JetBrains Mono';color:var(--amber);font-size:.74rem;letter-spacing:1.5px}
+.step h3{font-family:'Saira Condensed';font-size:1.32rem;color:#fff;margin:8px 0 7px}
+.step p{color:#b9c7da;font-size:.92rem}
+
+/* industries */
+.ind .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:820px){.ind .grid{grid-template-columns:1fr}}
+.icard{background:var(--white);border:1px solid var(--line);border-top:3px solid var(--blueprint);border-radius:4px;padding:24px}
+.icard h3{font-family:'Saira Condensed';font-size:1.28rem;color:var(--navy);margin-bottom:7px}
+.icard p{color:var(--slate);font-size:.93rem}
+
+/* gap / why */
+.why{background:linear-gradient(180deg,var(--white),var(--paper))}
+.why .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center}
+@media(max-width:860px){.why .wrap{grid-template-columns:1fr}}
+.why h2{font-family:'Saira Condensed';font-weight:700;font-size:2.1rem;color:var(--navy);margin-bottom:13px}
+.why p{color:var(--slate);margin-bottom:13px}
+.proof{display:flex;flex-direction:column;gap:12px}
+.pf{background:var(--white);border:1px solid var(--line);border-radius:4px;padding:17px 19px;display:flex;gap:14px;align-items:center}
+.pf .ic{font-family:'Saira Condensed';font-size:1.5rem;color:var(--amber-d);min-width:30px}
+.pf b{font-family:'Saira Condensed';display:block;color:var(--navy);font-size:1.08rem}
+.pf span{color:var(--slate);font-size:.86rem}
+
+/* RFQ */
+.rfq{background:var(--navy2);color:#fff}
+.rfq .wrap{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+@media(max-width:820px){.rfq .wrap{grid-template-columns:1fr}}
+.rfq h2{font-family:'Saira Condensed';font-weight:700;font-size:2.3rem;color:#fff}
+.rfq p{color:#c4d0e0;margin:12px 0 18px}
+.rfq .li{font-family:'JetBrains Mono';font-size:.85rem;color:#dbe5f1;margin-bottom:9px}
+.rfq .li span{color:var(--amber)}
+.qbox{background:var(--navy);border:1px solid #2c425f;border-radius:6px;padding:28px}
+.qbox .row{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid #2c425f;font-size:.95rem}
+.qbox .row:last-of-type{border:0}
+.qbox .row span{color:#8ea0ba;font-family:'JetBrains Mono';font-size:.82rem}
+.qbox .row b{font-family:'Saira';color:#fff;text-align:right}
+.qbox .cta-row{display:flex;gap:11px;margin-top:18px;flex-wrap:wrap}
+.note{font-size:.78rem;color:#8294ad;font-style:italic;font-family:'JetBrains Mono'}
+
+footer{background:var(--navy);color:#8ea0ba;text-align:center;padding:28px 0;font-size:.86rem}
+footer b{font-family:'Saira Condensed';color:#dce6f2;letter-spacing:.5px;font-size:1.05rem}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="brand"><b>C&amp;C METAL FABRICATIONS</b><small>Fulton, NY · Est. 2010</small></div>
+  <div class="navlinks">
+    <a href="#caps">Capabilities</a>
+    <a href="#proc">How a Job Runs</a>
+    <a href="#ind">Industries</a>
+    <a href="#rfq">Request a Quote</a>
+  </div>
+  <a href="#rfq" class="btn">Send a print</a>
+</div></nav>
+
+<header class="hero">
+  <div class="stamp cond">RFQ</div>
+  <div class="wrap">
+  <div class="tag">Design · Engineering · Fabrication · Installation</div>
+  <h1>From the drawing to the <span>bolted-down install</span> — one Fulton shop.</h1>
+  <p>C&amp;C handles structural and plate steel start to finish: we engineer it, build it on our floor in Fulton, and our crew sets it in place. Plants, contractors and municipalities across Central New York don't have to split a job across three vendors.</p>
+  <div class="cta-row">
+    <a href="#rfq" class="btn">Request a quote</a>
+    <a href="#caps" class="btn ghost">See capabilities</a>
+  </div>
+</div></header>
+
+<div class="spec"><div class="wrap">
+  <div class="c"><b>2010</b><span>Fabricating since</span></div>
+  <div class="c"><b>~19</b><span>On the floor &amp; in the field</span></div>
+  <div class="c"><b>4 stages</b><span>Design → install, in-house</span></div>
+  <div class="c"><b>Central NY</b><span>Shop + field service radius</span></div>
+</div></div>
+
+<section id="caps"><div class="wrap">
+  <div class="shead">
+    <div class="k">Capabilities</div>
+    <h2>What we can take on</h2>
+    <p>A purchasing agent vetting a new fabricator wants the scope in writing before they call. Here it is — the work C&amp;C runs in-house, in plain terms.</p>
+  </div>
+  <div class="caps">
+    <div class="caprow"><div class="n mono">01</div><div class="t"><b>Structural Steel</b></div><div class="d">Beams, columns, frames, mezzanines and platforms — fabricated to your engineer's drawings and ready to erect.</div></div>
+    <div class="caprow"><div class="n mono">02</div><div class="t"><b>Fabricated Plate</b></div><div class="d">Hoppers, tanks, chutes, liners and heavy plate weldments cut, formed and welded for plant and process work.</div></div>
+    <div class="caprow"><div class="n mono">03</div><div class="t"><b>In-House Engineering</b></div><div class="d">Have a concept instead of a finished print? We can take a job from a sketch or a field measure through design before a single cut.</div></div>
+    <div class="caprow"><div class="n mono">04</div><div class="t"><b>Stairs · Rails · Catwalks</b></div><div class="d">Egress stairs, handrail, ladders and access catwalks built to code and to spec for industrial and commercial sites.</div></div>
+    <div class="caprow"><div class="n mono">05</div><div class="t"><b>Repair &amp; Retrofit</b></div><div class="d">Worn equipment frames, broken structural members and add-ons to existing steel — measured, fabricated and fitted.</div></div>
+    <div class="caprow"><div class="n mono">06</div><div class="t"><b>Field Installation</b></div><div class="d">Our own crew rigs and sets the steel on site, so the company that built it is the company that stands behind the fit.</div></div>
+  </div>
+</div></section>
+
+<section class="proc" id="proc"><div class="wrap">
+  <div class="shead">
+    <div class="k">How a job runs</div>
+    <h2>One shop owns it from print to punch list</h2>
+    <p>The reason plants keep the work here: nothing gets handed off to a separate detailer, a separate fab shop and a separate erector. Four stages, one phone number.</p>
+  </div>
+  <div class="steps">
+    <div class="step"><div class="ph">PHASE 01</div><h3>Design</h3><p>We sit down with your drawing, sketch or site measure and pin down exactly what gets built.</p></div>
+    <div class="step"><div class="ph">PHASE 02</div><h3>Engineer</h3><p>Connections, loads and details worked out so the steel is right before material is cut.</p></div>
+    <div class="step"><div class="ph">PHASE 03</div><h3>Fabricate</h3><p>Cut, formed, fit and welded on our Fulton floor — tracked to your job, not stacked in a queue.</p></div>
+    <div class="step"><div class="ph">PHASE 04</div><h3>Install</h3><p>Our crew delivers and sets it in place, then walks the punch list with you.</p></div>
+  </div>
+</div></section>
+
+<section class="ind" id="ind"><div class="wrap">
+  <div class="shead">
+    <div class="k">Industries</div>
+    <h2>Who sends us steel</h2>
+  </div>
+  <div class="grid">
+    <div class="icard"><h3>Plants &amp; Processors</h3><p>Food, paper and power facilities across the Fulton–Oswego corridor — platforms, guarding, hoppers and the structural work that keeps a line running.</p></div>
+    <div class="icard"><h3>General Contractors</h3><p>Miscellaneous and structural steel packages for commercial builds — stairs, rails, lintels and frames detailed, built and set on schedule.</p></div>
+    <div class="icard"><h3>Municipal &amp; Farm</h3><p>Town garages, water and wastewater sites, and ag operations needing custom steel, repairs and equipment fabrication.</p></div>
+  </div>
+</div></section>
+
+<section class="why"><div class="wrap">
+  <div>
+    <div class="shead" style="margin-bottom:14px"><div class="k">Why a page like this</div></div>
+    <h2>A 19-person shop shouldn't be invisible online</h2>
+    <p>Right now, a buyer searching for a fabricator in Oswego County finds C&amp;C as a one-line card on Yelp, Manta and Yellow Pages — no capability list, no project examples, no way to send a drawing. Against shops with a real site, that costs bids before a quote is ever requested.</p>
+    <p>This page puts the full design-through-install scope in one place a purchasing agent can read in two minutes and act on — with an RFQ that lands a drawing straight in your inbox.</p>
+  </div>
+  <div class="proof">
+    <div class="pf"><div class="ic cond">15</div><div><b>Years fabricating in Fulton</b><span>Established 2010 · structural &amp; plate</span></div></div>
+    <div class="pf"><div class="ic cond">19</div><div><b>People on the floor and in the field</b><span>Fabrication + installation under one roof</span></div></div>
+    <div class="pf"><div class="ic cond">1</div><div><b>Vendor for the whole job</b><span>Design, engineer, build, install — not three companies</span></div></div>
+  </div>
+</div></section>
+
+<section class="rfq" id="rfq"><div class="wrap">
+  <div>
+    <h2>Have a job? Send the print.</h2>
+    <p>Email a drawing, a DXF or photos with the material and quantity and we'll quote it. Working from a concept? Send the measurements and we'll take it through design.</p>
+    <div class="li"><span>›</span> A drawing, DXF or even a sketch is enough to start</div>
+    <div class="li"><span>›</span> Tell us material, sizes and quantity</div>
+    <div class="li"><span>›</span> Need it set in place? Ask about installation</div>
+  </div>
+  <div class="qbox">
+    <div class="row"><span>Shop phone</span><b>(315) 598-7607</b></div>
+    <div class="row"><span>Address</span><b>159 Hubbard St,<br>Fulton, NY 13069</b></div>
+    <div class="row"><span>Hours</span><b>Mon–Fri, shop hours*</b></div>
+    <div class="row"><span>Best for</span><b>RFQs · drawings · site measures</b></div>
+    <div class="cta-row">
+      <a href="tel:3155987607" class="btn">Call the shop</a>
+      <a href="#" class="btn navy">Upload a drawing</a>
+    </div>
+  </div>
+  <p class="note" style="grid-column:1/-1;margin-top:8px">*Hours, exact equipment capacities and any project photos shown here are placeholders to confirm before the page goes live. C&amp;C currently has no owned website — presence is limited to third-party directory cards and Facebook.</p>
+</div></section>
+
+<footer>
+  <b>C&amp;C METAL FABRICATIONS</b><br>
+  159 Hubbard St, Fulton, NY 13069 · (315) 598-7607 · Structural &amp; plate fabrication · Design · Engineering · Installation · Serving Central New York
+</footer>
+
+</body>
+</html>

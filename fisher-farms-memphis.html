@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fisher Farms — Horse Boarding & Training on 80 Acres in Memphis, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--green:#2c4a33;--green-dk:#1d3323;--chestnut:#8a5a3b;--cream:#f7f3ea;--ink:#26251f;--line:#d9d2c2;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;}
+  h1,h2,h3{font-family:'Cormorant Garamond',serif;color:var(--green-dk);}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px;}
+  /* Hero */
+  header{background:linear-gradient(160deg,var(--green-dk) 0%,var(--green) 70%);color:#fff;padding:64px 0 72px;}
+  .est{display:inline-block;border:1px solid rgba(255,255,255,.45);letter-spacing:.22em;font-size:.72rem;text-transform:uppercase;padding:7px 16px;border-radius:2px;margin-bottom:22px;color:#e9e2cf;}
+  header h1{color:#fff;font-size:clamp(2.1rem,5vw,3.4rem);font-weight:600;line-height:1.12;max-width:17ch;}
+  header p.sub{max-width:56ch;margin:18px 0 30px;color:#dfe7db;font-size:1.08rem;}
+  .btn{display:inline-block;background:var(--chestnut);color:#fff;text-decoration:none;font-weight:700;padding:15px 30px;border-radius:3px;}
+  .btn:hover{background:#75492e;}
+  .btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.6);margin-left:12px;}
+  /* Spec bar */
+  .specbar{background:#fff;border-bottom:1px solid var(--line);}
+  .specbar .wrap{display:grid;grid-template-columns:repeat(4,1fr);}
+  .spec{padding:22px 10px;text-align:center;border-left:1px solid var(--line);}
+  .spec:first-child{border-left:none;}
+  .spec b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:var(--green-dk);}
+  .spec span{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:#6f6a5c;}
+  section{padding:64px 0;}
+  .kicker{letter-spacing:.2em;text-transform:uppercase;font-size:.74rem;font-weight:700;color:var(--chestnut);display:block;margin-bottom:10px;}
+  h2{font-size:2.1rem;margin-bottom:14px;}
+  /* Boarding */
+  .board{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:30px;}
+  .card{background:#fff;border:1px solid var(--line);border-radius:4px;padding:32px;}
+  .card h3{font-size:1.5rem;margin-bottom:8px;}
+  .card ul{list-style:none;margin-top:14px;}
+  .card li{padding:9px 0 9px 26px;border-top:1px dashed var(--line);position:relative;font-size:.98rem;}
+  .card li:before{content:"";position:absolute;left:2px;top:16px;width:10px;height:10px;background:var(--green);border-radius:50%;}
+  .note{font-size:.85rem;color:#6f6a5c;margin-top:14px;font-style:italic;}
+  /* Facilities table */
+  .facil{background:var(--green-dk);color:#e9e2cf;}
+  .facil h2,.facil .kicker{color:#fff;}
+  .facil .kicker{color:#c9a071;}
+  table{width:100%;border-collapse:collapse;margin-top:26px;background:rgba(255,255,255,.04);}
+  td{padding:15px 18px;border:1px solid rgba(255,255,255,.14);font-size:.98rem;}
+  td:first-child{font-weight:700;color:#fff;width:38%;}
+  /* Training */
+  .train{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:30px;}
+  .trainer{border-left:4px solid var(--chestnut);background:#fff;padding:26px;}
+  .trainer h3{font-size:1.35rem;}
+  .disc{margin-top:18px;font-size:.95rem;}
+  .disc b{color:var(--green-dk);}
+  /* Contact */
+  .visit{background:#fff;border-top:1px solid var(--line);}
+  .visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;}
+  form label{display:block;font-weight:700;font-size:.85rem;margin:14px 0 5px;}
+  form input,form select,form textarea{width:100%;padding:12px;border:1px solid #c8c0ad;border-radius:3px;font-family:inherit;font-size:.95rem;background:var(--cream);}
+  form button{margin-top:18px;background:var(--green);color:#fff;border:none;padding:15px 34px;font-weight:700;font-size:1rem;border-radius:3px;cursor:pointer;}
+  form button:hover{background:var(--green-dk);}
+  .info p{margin-bottom:12px;}
+  .info a{color:var(--chestnut);font-weight:700;text-decoration:none;}
+  footer{background:var(--green-dk);color:#b9c4b3;text-align:center;padding:26px;font-size:.85rem;}
+  @media(max-width:760px){.specbar .wrap{grid-template-columns:1fr 1fr;}.spec{border-left:none;border-top:1px solid var(--line);}
+   .board,.train,.visit .wrap{grid-template-columns:1fr;}.btn.ghost{margin-left:0;margin-top:12px;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="est">Plainville Road · Memphis, NY · Since 1982</span>
+    <h1>Eighty acres of good horse care, twenty minutes from Syracuse.</h1>
+    <p class="sub">Fisher Farms has boarded and trained horses on the same Plainville Road farm for over forty years — matted stalls, daily turnout, an indoor you can ride all winter, and trails out the back gate.</p>
+    <a class="btn" href="#visit">Schedule a Barn Tour</a>
+    <a class="btn ghost" href="tel:13157024285">(315) 702-4285</a>
+  </div>
+</header>
+
+<div class="specbar">
+  <div class="wrap">
+    <div class="spec"><b>80</b><span>acres</span></div>
+    <div class="spec"><b>80×120</b><span>indoor arena</span></div>
+    <div class="spec"><b>160×200</b><span>outdoor arena</span></div>
+    <div class="spec"><b>40</b><span>acres of trails</span></div>
+  </div>
+</div>
+
+<section id="boarding">
+  <div class="wrap">
+    <span class="kicker">Boarding</span>
+    <h2>Your horse, looked after like ours.</h2>
+    <p style="max-width:62ch;">Every boarded horse at Fisher Farms gets a 10×12 matted stall, generous turnout, and a feed plan built around its own needs — not a one-scoop-fits-all barn routine.</p>
+    <div class="board">
+      <div class="card">
+        <h3>Full Board</h3>
+        <ul>
+          <li>10×12 matted stall, cleaned daily</li>
+          <li>Individual feed plan — hay &amp; grain to your horse's needs</li>
+          <li>Daily turnout on rotated pastures</li>
+          <li>Blanketing, holding for vet &amp; farrier</li>
+          <li>Full use of indoor, outdoor, round pen &amp; trails</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Partial Board</h3>
+        <ul>
+          <li>Same stall, same arenas, same trails</li>
+          <li>You handle a share of the daily care</li>
+          <li>A practical option for hands-on owners</li>
+          <li>Multiple tack rooms — your gear stays organized</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">Board rates and current stall availability: call or use the tour form below. <!-- PLACEHOLDER: confirm rates with owner before publishing --></p>
+  </div>
+</section>
+
+<section class="facil">
+  <div class="wrap">
+    <span class="kicker">The Facility</span>
+    <h2 style="color:#fff;">The numbers boarders actually compare.</h2>
+    <table>
+      <tr><td>Stalls</td><td>10×12, rubber-matted</td></tr>
+      <tr><td>Indoor arena</td><td>80×120 — ride year-round, every CNY winter</td></tr>
+      <tr><td>Outdoor arena</td><td>160×200 with round pen</td></tr>
+      <tr><td>Turnout</td><td>Rotated pastures across 80 acres</td></tr>
+      <tr><td>Trails</td><td>~40 acres on the property</td></tr>
+      <tr><td>Tack storage</td><td>Multiple tack rooms</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="training">
+  <div class="wrap">
+    <span class="kicker">Training &amp; Lessons</span>
+    <h2>Hunters, jumpers, equitation — and honest western pleasure.</h2>
+    <p style="max-width:62ch;">Lessons and training for riders from first-timers to show-ring regulars, in hunt seat, hunter/jumper, equitation, and western pleasure.</p>
+    <div class="train">
+      <div class="trainer">
+        <h3>Judy Fisher</h3>
+        <p>Four decades running Fisher Farms — the daily eyes on every horse in the barn and the reason boarders stay for years.</p>
+      </div>
+      <div class="trainer">
+        <h3>Kayla Jankowski</h3>
+        <p>Hunter/jumper and equitation instruction for kids and adult amateurs — building correct, confident riders from the ground up.</p>
+      </div>
+    </div>
+    <p class="disc"><b>Facebook riders recommend us 100%</b> — 9 of 9 reviews. Come see why in person.</p>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="info">
+      <span class="kicker">Visit</span>
+      <h2>Come walk the barn.</h2>
+      <p>The best way to choose a boarding barn is to stand in the aisle and look around. Tours by appointment — most evenings and weekends work.</p>
+      <p><b>Fisher Farms</b><br>7269 Plainville Rd, Memphis, NY 13112<br>Minutes off Rt 690 — 20 minutes to downtown Syracuse, closer still to Baldwinsville, Camillus &amp; Liverpool.</p>
+      <p>Call or text: <a href="tel:13157024285">(315) 702-4285</a></p>
+    </div>
+    <form>
+      <h3 style="font-size:1.3rem;">Request a tour</h3>
+      <label>Name</label><input type="text" placeholder="Your name">
+      <label>Phone</label><input type="tel" placeholder="(315) 555-0000">
+      <label>I'm interested in</label>
+      <select><option>Full board</option><option>Partial board</option><option>Lessons</option><option>Training</option></select>
+      <label>Tell us about your horse (or rider)</label><textarea rows="4" placeholder="Breed, age, discipline, goals…"></textarea>
+      <button type="submit">Send Tour Request</button>
+    </form>
+  </div>
+</section>
+
+<footer>Fisher Farms · 7269 Plainville Rd, Memphis, NY 13112 · (315) 702-4285 · Boarding · Training · Lessons since 1982</footer>
+
+</body>
+</html>

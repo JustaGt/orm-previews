@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capwell's Sawmill — Corfu, NY · Rough-Sawn Hardwood &amp; Custom Milling</title>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --walnut:#5a3d24; --walnut2:#432c19; --oak:#a9743f; --oak2:#c68a4d; --moss:#5e6b3a; --sap:#e8b34a;
+  --ink:#241c14; --paper:#faf5ec; --card:#fffdf8; --line:#e6dcc7; --kraft:#eaddc4;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+h1,h2,h3{font-family:'Bitter',serif;line-height:1.12}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}
+.topbar{background:var(--walnut2);color:#e4d3ba;font-size:.87rem}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:8px 22px;flex-wrap:wrap;gap:6px}
+.topbar b{color:var(--sap)}
+nav{background:var(--walnut);color:#fff;position:sticky;top:0;z-index:40}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:13px 22px}
+.brand{font-family:'Bitter';font-weight:800;font-size:1.5rem;letter-spacing:.01em;display:flex;flex-direction:column;line-height:1}
+.brand small{font-family:'Source Sans 3';font-size:.6rem;letter-spacing:.2em;color:#e0c9a9;font-weight:600;margin-top:5px;text-transform:uppercase}
+.nlinks{display:flex;gap:22px;font-weight:600;font-size:1rem;color:#ecdcc4}
+.nlinks a:hover{color:var(--sap)}
+.ncta{background:var(--oak);color:#fff;padding:9px 18px;border-radius:6px;font-weight:600;font-size:.96rem}
+.ncta:hover{background:var(--oak2)}
+@media(max-width:860px){.nlinks{display:none}}
+.hero{position:relative;color:#f7ecd9;padding:78px 0 66px;
+  background:linear-gradient(120deg,rgba(67,44,25,.93),rgba(90,61,36,.78)),
+  repeating-linear-gradient(92deg,#5a3d24 0 6px,#63432a 6px 13px,#583a22 13px 22px)}
+.hero .eye{color:var(--sap);font-weight:600;letter-spacing:.15em;font-size:.9rem;margin-bottom:14px;text-transform:uppercase}
+.hero h1{font-size:3.5rem;max-width:16ch;margin-bottom:18px;font-weight:800}
+.hero h1 em{color:var(--oak2);font-style:normal}
+.hero p{font-size:1.17rem;color:#ecdcc4;max-width:52ch;margin-bottom:26px}
+.hbtns{display:flex;gap:13px;flex-wrap:wrap}
+.b1{background:var(--oak);color:#fff;padding:15px 28px;border-radius:7px;font-weight:600;font-size:1.12rem}
+.b1:hover{background:var(--oak2)}
+.b2{border:2px solid #a98a63;color:#f7ecd9;padding:14px 26px;border-radius:7px;font-weight:600;font-size:1.05rem}
+.b2:hover{border-color:var(--sap);color:var(--sap)}
+.hnote{margin-top:26px;font-size:.92rem;color:#d8c4a5}
+@media(max-width:600px){.hero h1{font-size:2.4rem}}
+section{padding:62px 0}
+.eyebrow{color:var(--moss);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.9rem;margin-bottom:9px}
+.stitle{font-size:2.3rem;color:var(--walnut2);margin-bottom:10px;font-weight:800}
+.lead{color:#5c4d38;max-width:64ch;margin-bottom:34px;font-size:1.05rem}
+/* species list */
+.species{background:var(--kraft)}
+.splist{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.sp{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--oak);border-radius:8px;padding:16px 18px}
+.sp h3{font-size:1.2rem;color:var(--walnut);margin-bottom:2px;font-weight:700}
+.sp span{font-size:.86rem;color:#7a6647}
+.callstock{background:var(--walnut);color:#f2e3cc;border-radius:10px;padding:18px 22px;margin-top:22px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.callstock b{color:#fff;font-family:'Bitter'}
+.callstock a{background:var(--sap);color:#3a2a10;padding:11px 20px;border-radius:7px;font-weight:700;white-space:nowrap}
+@media(max-width:780px){.splist{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.splist{grid-template-columns:1fr}}
+/* two paths */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.card{border-radius:14px;padding:32px;color:#f7ecd9}
+.card.buy{background:linear-gradient(155deg,var(--moss),#414a28)}
+.card.mill{background:linear-gradient(155deg,var(--walnut),#3a2616)}
+.card h3{font-size:1.7rem;margin-bottom:6px;color:#fff;font-weight:800}
+.card .sub{font-size:.92rem;opacity:.85;margin-bottom:16px}
+.card ul{list-style:none}
+.card li{padding:8px 0 8px 24px;position:relative;border-bottom:1px solid rgba(255,255,255,.14);font-weight:500}
+.card li:last-child{border-bottom:none}
+.card li::before{content:"🪵";position:absolute;left:0;font-size:.8rem;top:11px}
+@media(max-width:760px){.two{grid-template-columns:1fr}}
+/* products */
+.prod{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pc{text-align:center;padding:22px 16px;border:1px solid var(--line);border-radius:10px;background:var(--paper)}
+.pc .ic{font-size:2rem;margin-bottom:8px}
+.pc h4{font-family:'Bitter';font-size:1.15rem;color:var(--walnut);margin-bottom:4px}
+.pc p{font-size:.86rem;color:#6d5c43}
+@media(max-width:760px){.pgrid{grid-template-columns:1fr 1fr}}
+/* about */
+.about{background:linear-gradient(160deg,#efe6d3,#e8dcc4)}
+.about .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:36px;align-items:center}
+.about h2{font-size:2.1rem;color:var(--walnut2);margin-bottom:14px;font-weight:800}
+.about p{color:#564734;margin-bottom:12px}
+.millcard{background:var(--walnut);color:#f2e3cc;border-radius:14px;padding:28px;text-align:center}
+.millcard .big{font-family:'Bitter';font-size:1.5rem;color:#fff;margin-bottom:6px}
+.millcard hr{border:none;border-top:1px solid rgba(255,255,255,.18);margin:14px 0}
+/* contact */
+.contact{background:var(--walnut2);color:#ecdcc4}
+.contact .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:36px;align-items:start}
+.contact h2{color:#fff;font-size:2.1rem;margin-bottom:12px;font-weight:800}
+.contact .info p{margin-bottom:9px;color:#d8c4a5}
+.contact .info b{color:var(--sap)}
+.formbox{background:var(--card);color:var(--ink);border-radius:14px;padding:28px}
+.formbox h3{font-family:'Bitter';color:var(--walnut2);font-size:1.4rem;margin-bottom:6px;font-weight:800}
+.formbox p.sm{font-size:.9rem;color:#5c4d38;margin-bottom:14px}
+label{display:block;font-size:.78rem;font-weight:700;color:var(--walnut);margin-bottom:5px;text-transform:uppercase;letter-spacing:.03em}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid #d8ceba;border-radius:7px;font-family:inherit;font-size:.95rem;background:#fffdf8}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--oak)}
+.frow2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fbtn{margin-top:15px;background:var(--oak);color:#fff;border:none;padding:14px 22px;border-radius:8px;font-family:'Bitter';font-weight:700;font-size:1.1rem;cursor:pointer;width:100%}
+.fbtn:hover{background:var(--oak2)}
+@media(max-width:820px){.contact .wrap{grid-template-columns:1fr}.frow2{grid-template-columns:1fr}}
+footer{background:#2c1e11;color:#b49a78;padding:38px 0 20px}
+footer .cols{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:26px}
+footer h4{color:#fff;font-family:'Bitter';font-size:1.15rem;margin-bottom:10px}
+footer a:hover{color:var(--sap)}
+.copy{border-top:1px solid #45311d;margin-top:22px;padding-top:14px;font-size:.8rem;color:#8a7050}
+@media(max-width:720px){footer .cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Corfu, NY · Working band sawmill · Genesee County</span>
+  <span>Call for current stock: <b>(585) 599-3944</b></span>
+</div></div>
+
+<nav><div class="wrap">
+  <span class="brand">CAPWELL'S SAWMILL<small>Rough-Sawn Lumber · Corfu, NY</small></span>
+  <div class="nlinks">
+    <a href="#species">Species</a>
+    <a href="#milling">Custom Milling</a>
+    <a href="#products">What We Cut</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="#contact" class="ncta">Ask About Stock</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="eye">HARDWOOD &amp; SOFTWOOD · CUT LOCAL · MILLED TO ORDER</div>
+  <h1>Rough-sawn lumber, straight <em>off the local log.</em></h1>
+  <p>A working band sawmill in Corfu cutting cherry, maple, oak and more for woodworkers, builders and anyone who'd rather buy boards from the man who milled them than off a big-box rack.</p>
+  <div class="hbtns">
+    <a href="#species" class="b1">See What We Cut</a>
+    <a href="#milling" class="b2">Mill My Own Logs</a>
+  </div>
+  <div class="hnote">🪵 Small mill, real person — call Tony to check what's on the stack today.</div>
+</div></header>
+
+<section class="species" id="species"><div class="wrap">
+  <div class="eyebrow">Species We Mill</div>
+  <h2 class="stitle">Local hardwood &amp; softwood</h2>
+  <p class="lead">These are the species that come across the mill. Because it's cut to order and stock moves, the honest answer on dimensions and what's dry is a quick phone call — not a shopping cart that lies about inventory.</p>
+  <div class="splist">
+    <div class="sp"><h3>Black Cherry</h3><span>Furniture &amp; trim favorite</span></div>
+    <div class="sp"><h3>Hard Maple</h3><span>Tough, pale, great for tops</span></div>
+    <div class="sp"><h3>Soft Maple</h3><span>Workable &amp; affordable</span></div>
+    <div class="sp"><h3>Red Oak</h3><span>Classic, strong, open grain</span></div>
+    <div class="sp"><h3>Yellow Birch</h3><span>Fine, even grain</span></div>
+    <div class="sp"><h3>Beech</h3><span>Dense &amp; hard-wearing</span></div>
+    <div class="sp"><h3>Aspen</h3><span>Light softwood, clean</span></div>
+    <div class="sp"><h3>Mixed Softwood</h3><span>Framing, barn &amp; utility</span></div>
+    <div class="sp"><h3>Ask for Others</h3><span>Cut to order from your log</span></div>
+  </div>
+  <div class="callstock">
+    <span>Stock changes as logs come in. <b>Want to know what's on hand and what's dry right now?</b></span>
+    <a href="tel:5855993944">Call (585) 599-3944</a>
+  </div>
+</div></section>
+
+<section id="milling"><div class="wrap">
+  <div class="eyebrow">Two Ways to Buy</div>
+  <h2 class="stitle">Buy our boards — or bring your logs</h2>
+  <p class="lead">A lot of people don't know a small mill will cut their own timber. Capwell's does both: buy rough-sawn stock off the stack, or drop off the logs off your own property and get them milled into usable lumber.</p>
+  <div class="two">
+    <div class="card buy">
+      <h3>Buy Rough-Sawn Lumber</h3>
+      <div class="sub">Boards, cants &amp; blocks</div>
+      <ul>
+        <li>Rough-sawn hardwood &amp; softwood boards</li>
+        <li>Cants &amp; blocks for turning or timber work</li>
+        <li>Local species you won't find at the box store</li>
+        <li>Priced by the board foot — call for a count</li>
+      </ul>
+    </div>
+    <div class="card mill">
+      <h3>Custom Milling</h3>
+      <div class="sub">Your logs, your lumber</div>
+      <ul>
+        <li>Bring logs off your own land</li>
+        <li>Milled to the thickness &amp; width you need</li>
+        <li>Slabs, beams, boards &amp; barn lumber</li>
+        <li>Great for a woodlot cleanup or a downed tree</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="prod" id="products"><div class="wrap">
+  <div class="eyebrow">What Comes Off the Mill</div>
+  <h2 class="stitle">Rough stock for real projects</h2>
+  <p class="lead">Type-1 single-band mill work — the raw, honest lumber that furniture makers, timber-framers and farmers keep coming back for.</p>
+  <div class="pgrid">
+    <div class="pc"><div class="ic">🪵</div><h4>Boards</h4><p>Rough-sawn to your thickness</p></div>
+    <div class="pc"><div class="ic">🟫</div><h4>Cants &amp; Beams</h4><p>Timber-frame &amp; structural</p></div>
+    <div class="pc"><div class="ic">🌳</div><h4>Live-Edge Slabs</h4><p>Tables, benches &amp; bar tops</p></div>
+    <div class="pc"><div class="ic">🚜</div><h4>Barn / Utility</h4><p>Fencing, siding &amp; rough framing</p></div>
+  </div>
+</div></section>
+
+<section class="about" id="about"><div class="wrap">
+  <div class="txt">
+    <div class="eyebrow">The Mill</div>
+    <h2>One band saw, one sawyer</h2>
+    <p>Capwell's is a real working mill on Richley Road in Corfu — Tony Capwell running a Type-1 single-band saw, turning local logs into usable lumber for Genesee County woodworkers and builders.</p>
+    <p>It's the kind of place that lives on repeat customers and word of mouth. What it's never had is a spot online where a new woodworker can see the species, understand custom milling, and get a phone number that isn't buried in a state directory. That's what this page fixes.</p>
+  </div>
+  <div class="millcard">
+    <div class="big">Type-1 Single Band</div>
+    <p style="color:#d8c4a5;font-size:.95rem">A precise band mill built for accurate, low-waste cuts on hardwood &amp; softwood.</p>
+    <hr>
+    <p style="color:#d8c4a5;font-size:.95rem">Corfu, NY · Genesee County<br>Listed in the NY DEC sawmill directory</p>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div class="info">
+    <div class="eyebrow" style="color:var(--sap)">Get In Touch</div>
+    <h2>Call about lumber or milling</h2>
+    <p style="color:#d8c4a5;max-width:44ch;margin-bottom:20px">Tell us the species and rough sizes you're after — or the logs you want milled — and we'll tell you what's possible and what it runs.</p>
+    <p><b>Phone:</b> (585) 599-3944</p>
+    <p><b>Mill:</b> 1802 Richley Rd, Corfu, NY 14036</p>
+    <p><b>Owner:</b> Tony Capwell</p>
+    <p style="margin-top:14px;color:#a9906c;font-size:.9rem">Best reached by phone — a mill's a loud place, so leave a message if he's cutting.</p>
+  </div>
+  <div class="formbox">
+    <h3>Lumber &amp; Milling Inquiry</h3>
+    <p class="sm">Fill this out and Tony will call you back.</p>
+    <form onsubmit="return false">
+      <div class="frow2">
+        <div><label>Name</label><input type="text" placeholder="Your name"></div>
+        <div><label>Phone</label><input type="tel" placeholder="(585) 000-0000"></div>
+      </div>
+      <div style="margin-top:12px"><label>What do you need?</label>
+        <select><option>Buy rough-sawn lumber</option><option>Custom-mill my own logs</option><option>Live-edge slabs</option><option>Barn / utility lumber</option><option>Not sure — have a question</option></select></div>
+      <div class="frow2" style="margin-top:12px">
+        <div><label>Species (if buying)</label><input type="text" placeholder="e.g. cherry, red oak"></div>
+        <div><label>Rough amount</label><input type="text" placeholder="e.g. 100 bd ft"></div>
+      </div>
+      <div style="margin-top:12px"><label>Details</label><textarea rows="2" placeholder="e.g. two walnut logs down in my yard I'd like milled into 8/4 slabs"></textarea></div>
+      <button class="fbtn">Send Inquiry</button>
+    </form>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div>
+      <h4>Capwell's Sawmill</h4>
+      <p>Rough-sawn hardwood &amp; softwood lumber and custom milling. Corfu, NY — a real working band mill in Genesee County.</p>
+      <p style="font-family:'Bitter';font-weight:800;font-size:1.5rem;color:#fff;margin-top:10px">(585) 599-3944</p>
+    </div>
+    <div>
+      <h4>Find the Mill</h4>
+      <p>1802 Richley Rd<br>Corfu, NY 14036<br>Genesee County</p>
+    </div>
+    <div>
+      <h4>Lumber</h4>
+      <p><a href="#species">Species</a><br><a href="#milling">Custom milling</a><br><a href="#products">What we cut</a><br><a href="#contact">Contact</a></p>
+    </div>
+  </div>
+  <div class="copy">© 2026 Capwell's Sawmill · Corfu, NY · Preview concept prepared by Onyx Rise Media.</div>
+</div></footer>
+
+</body>
+</html>

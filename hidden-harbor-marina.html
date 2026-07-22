@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hidden Harbor Marina &amp; Campgrounds — Quiet Dockage &amp; Camping on the Cayuga-Seneca Canal, Waterloo NY</title>
+<meta name="description" content="Hidden Harbor Marina &amp; Campgrounds on the Cayuga-Seneca Canal near Lock 4 in Waterloo, NY. Seasonal &amp; transient boat slips, storage, and canal-side camping with direct access to Seneca and Cayuga lakes. Request a slip or campsite.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --deep:#123b4a; --deep-d:#0c2a35; --teal:#1f6f7e; --teal-l:#3f97a5; --reed:#7fb0a3;
+    --sand:#e7dcc4; --dockwood:#b5793f; --dockwood-d:#96622f;
+    --foam:#f4f8f7; --paper:#eef2ef; --ink:#20302f; --slateblue:#456b78; --muted:#5a6d72; --white:#fff;
+    --shadow:0 16px 40px rgba(12,42,53,.18);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Mulish',sans-serif;color:var(--ink);background:var(--foam);line-height:1.66}
+  h1,h2,h3,.disp{font-family:'Fraunces',serif;font-weight:600}
+  a{color:inherit}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--dockwood);color:#fff;font-weight:700;padding:14px 30px;border-radius:6px;
+    text-decoration:none;box-shadow:0 8px 20px rgba(181,121,63,.34);transition:transform .15s,background .15s}
+  .btn:hover{transform:translateY(-2px);background:var(--dockwood-d)}
+  .btn.ghost{background:transparent;border:2px solid rgba(255,255,255,.6);color:#fff;box-shadow:none}
+  .btn.teal{background:var(--teal)}
+  .btn.teal:hover{background:var(--deep)}
+
+  .top{background:var(--deep-d);color:#bcd6da;font-size:.9rem}
+  .top .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;padding:9px 22px}
+  .top a{color:#fff;font-weight:700;text-decoration:none}
+
+  header.hero{position:relative;color:#fff;overflow:hidden;background:linear-gradient(160deg,var(--teal) 0%,var(--deep) 70%)}
+  .hero .wrap{position:relative;z-index:2;padding:66px 22px 100px;display:grid;grid-template-columns:1.12fr .88fr;gap:32px;align-items:center}
+  .eyebrow{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.32);
+    padding:6px 15px;border-radius:30px;font-weight:700;font-size:.82rem;margin-bottom:16px}
+  .hero h1{font-size:3rem;line-height:1.06;font-weight:700}
+  .hero h1 em{font-style:italic;color:#ffd9a6}
+  .hero p.lede{font-size:1.15rem;max-width:44ch;margin-top:16px;color:#dcecee}
+  .hero .cta{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+  .card-h{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.28);border-radius:18px;padding:26px}
+  .card-h h3{font-family:'Mulish';text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;color:#ffd9a6;margin-bottom:12px}
+  .card-h .r{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.16);font-size:.96rem}
+  .card-h .r:last-child{border-bottom:0}
+  .card-h .r b{color:#cfe6e8}
+  .card-h .r span{font-weight:700}
+  .waves{position:absolute;left:0;right:0;bottom:-1px;height:60px;display:block}
+
+  .strip{background:var(--dockwood);color:#fff;text-align:center;font-weight:700}
+  .strip .wrap{padding:14px 22px;font-family:'Fraunces';font-size:1.02rem}
+
+  section{padding:60px 0}
+  .kick{color:var(--teal);font-weight:700;letter-spacing:.11em;text-transform:uppercase;font-size:.8rem;text-align:center;margin-bottom:6px}
+  h2.t{text-align:center;font-family:'Fraunces';font-size:2.15rem;color:var(--deep);margin-bottom:8px}
+  .sub{text-align:center;max-width:62ch;margin:0 auto 38px;color:var(--muted)}
+
+  .offer{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .o{background:#fff;border-radius:14px;padding:28px 24px;box-shadow:var(--shadow);border-bottom:5px solid var(--reed)}
+  .o .ic{font-size:1.9rem;margin-bottom:8px}
+  .o h3{font-family:'Fraunces';color:var(--deep);font-size:1.4rem;margin-bottom:6px}
+  .o p{color:#55666a;font-size:.96rem}
+  .o ul{list-style:none;margin-top:10px}
+  .o li{padding:5px 0 5px 22px;position:relative;color:var(--ink);font-size:.93rem}
+  .o li::before{content:"⚓";position:absolute;left:0;top:5px;font-size:.82rem;opacity:.7}
+
+  .place{background:var(--deep);color:#dcecee}
+  .place .row{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .place h2{color:#fff;font-size:2rem;margin-bottom:12px}
+  .place p{color:#c2d7da}
+  .place ul{list-style:none;margin-top:16px}
+  .place li{padding:11px 0 11px 30px;position:relative;border-bottom:1px solid rgba(255,255,255,.12);color:#dcecee}
+  .place li:last-child{border-bottom:0}
+  .place li::before{content:"›";position:absolute;left:4px;top:9px;color:#ffd9a6;font-weight:900;font-size:1.1rem}
+  .place li b{color:#fff}
+
+  .book{background:var(--paper)}
+  .book .box{background:#fff;border-radius:8px;box-shadow:var(--shadow);display:grid;grid-template-columns:.92fr 1.08fr;overflow:hidden}
+  .book .left{background:var(--teal);color:#fff;padding:38px}
+  .book .left h2{color:#fff;font-size:1.9rem;line-height:1.18;margin-bottom:12px}
+  .book .left p{color:#e0eff0}
+  .book .left .ph{display:block;margin-top:16px;color:#cde4e6;font-style:italic;font-size:.85rem}
+  .book form{padding:34px;display:grid;gap:13px}
+  .book label{font-size:.75rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--slateblue);display:block;margin-bottom:4px}
+  .book input,.book select,.book textarea{width:100%;padding:11px 13px;border:1px solid #d8ded9;border-radius:6px;font-family:inherit;font-size:.96rem;color:var(--ink);background:var(--foam)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .book .btn{border:0;cursor:pointer;width:100%;text-align:center}
+  .book .fine{font-size:.82rem;color:var(--muted)}
+
+  footer{background:var(--deep-d);color:#a9c3c7;text-align:center;padding:38px 22px;font-size:.9rem}
+  footer .big{font-family:'Fraunces';color:#fff;font-size:1.5rem;margin-bottom:4px}
+  .note{margin-top:14px;font-size:.8rem;color:#7d979b;max-width:72ch;margin-left:auto;margin-right:auto}
+
+  @media(max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;padding:48px 22px 88px}
+    .hero h1{font-size:2.2rem}
+    .offer{grid-template-columns:1fr}
+    .place .row{grid-template-columns:1fr}
+    .book .box{grid-template-columns:1fr}
+    .two{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <span>On the Cayuga-Seneca Canal · near Lock 4 · Waterloo, NY</span>
+  <span>Harbor office: <a href="tel:13155398034">(315) 539-8034</a></span>
+</div></div>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">⚓ A quiet harbor on the Cayuga-Seneca Canal</span>
+      <h1>Tie up where it's <em>actually quiet.</em></h1>
+      <p class="lede">Hidden Harbor is a small, tucked-away marina and campground on the canal just west of Lock 4 — seasonal and transient slips, boat storage, and canal-side campsites, with open water to both Seneca and Cayuga lakes.</p>
+      <div class="cta">
+        <a class="btn" href="#book">Request a slip or campsite</a>
+        <a class="btn ghost" href="#offer">What's here</a>
+      </div>
+    </div>
+    <div class="card-h">
+      <h3>The harbor at a glance</h3>
+      <div class="r"><b>On the water</b><span>Cayuga-Seneca Canal</span></div>
+      <div class="r"><b>Nearest lock</b><span>Lock 4, Waterloo</span></div>
+      <div class="r"><b>Slips</b><span>~20, with electric</span></div>
+      <div class="r"><b>Also here</b><span>Camping &amp; storage</span></div>
+      <div class="r"><b>Lakes reached</b><span>Seneca &amp; Cayuga</span></div>
+    </div>
+  </div>
+  <svg class="waves" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,34 C220,58 440,14 720,32 C1000,50 1220,12 1440,34 L1440,60 L0,60 Z" fill="#f4f8f7"/>
+  </svg>
+</header>
+
+<div class="strip"><div class="wrap">A small harbor off the main road — the kind of quiet you actually came to the canal for.</div></div>
+
+<section id="offer">
+  <div class="wrap">
+    <div class="kick">Dockage, storage &amp; camping</div>
+    <h2 class="t">Room for your boat and your weekend</h2>
+    <p class="sub">Hidden Harbor keeps it simple: a slip for the season, a spot to pull in for a night on the canal, a place to store the boat over winter, and a campsite steps from the water.</p>
+    <div class="offer">
+      <div class="o">
+        <div class="ic">🛥️</div>
+        <h3>Seasonal Slips</h3>
+        <p>Dock your boat for the season in a calm, protected harbor with electric sites.</p>
+        <ul><li>Around 20 slips with power</li><li>Sheltered, low-traffic water</li><li>Direct run to both lakes</li></ul>
+      </div>
+      <div class="o">
+        <div class="ic">⚓</div>
+        <h3>Transient Dockage</h3>
+        <p>Cruising the Erie / Cayuga-Seneca system? Tie up for a night on your way through.</p>
+        <ul><li>Right by Lock 4, Waterloo</li><li>Walk to nearby stops</li><li>Call ahead for a spot</li></ul>
+      </div>
+      <div class="o">
+        <div class="ic">🏕️</div>
+        <h3>Camping &amp; Storage</h3>
+        <p>Canal-side campsites for the trailer or tent, plus off-season boat storage.</p>
+        <ul><li>Camp steps from the water</li><li>Winter boat storage</li><li>Quiet, wooded setting</li></ul>
+      </div>
+    </div>
+    <p class="sub" style="margin-top:26px;font-style:italic;color:#8a7a5f;font-size:.86rem">Slip and campsite counts, rates and season dates to be confirmed with the harbor before this page goes live.</p>
+  </div>
+</section>
+
+<section class="place">
+  <div class="wrap">
+    <div class="row">
+      <div>
+        <div class="kick" style="color:#ffd9a6">Where you are</div>
+        <h2>Hidden, but close to everything</h2>
+        <p>The name fits — you're off the main road, surrounded by water and trees. But you're minutes from the things that make a canal trip easy, and a short cruise from open lake water in either direction.</p>
+      </div>
+      <div>
+        <ul>
+          <li><b>On the Cayuga-Seneca Canal</b>, just west of Lock 4 in Waterloo</li>
+          <li><b>Open water to Seneca Lake</b> to the west and <b>Cayuga Lake</b> to the east</li>
+          <li><b>Minutes to Seneca Falls &amp; Geneva</b> for supplies and dinner</li>
+          <li><b>Near Waterloo Premium Outlets &amp; del Lago</b> when you want off the boat</li>
+          <li><b>A quiet base</b> for exploring the Finger Lakes by water</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="box">
+      <div class="left">
+        <h2>Ask about a slip or campsite</h2>
+        <p>Tell us your dates and what you're bringing and we'll check what's open. Seasonal slips fill up — the sooner we hear from you, the better we can hold a spot. Prefer to talk? Call the harbor at (315) 539-8034.</p>
+        <span class="ph">Preview form — on the live site this would reach the harbor office directly. (No booking or email address was published online yet — we'll wire it to whichever you use.)</span>
+      </div>
+      <form onsubmit="event.preventDefault();alert('Thanks! This is a preview form — on the live site your request would reach the harbor office directly.');">
+        <div><label>Your name</label><input required placeholder="First and last name"></div>
+        <div><label>Best way to reach you</label><input required placeholder="Phone or email"></div>
+        <div class="two">
+          <div><label>Looking for</label>
+            <select><option>Seasonal slip</option><option>Transient dockage (a night or two)</option><option>Campsite</option><option>Winter storage</option></select>
+          </div>
+          <div><label>Boat / rig length</label><input placeholder="e.g. 24 ft"></div>
+        </div>
+        <div><label>Dates you have in mind</label><input placeholder="e.g. this season / July 18–20"></div>
+        <div><label>Anything else? (optional)</label><textarea rows="2" placeholder="Power needs, number in your party, questions about the canal…"></textarea></div>
+        <button class="btn teal" type="submit">Send my request</button>
+        <p class="fine">We'll only use this to get back to you about availability.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="big">Hidden Harbor Marina &amp; Campgrounds</div>
+  <div>On the Cayuga-Seneca Canal · near Lock 4 · Waterloo, NY 13165 · (315) 539-8034</div>
+  <div style="margin-top:8px">Seasonal &amp; transient slips · boat storage · canal-side camping</div>
+  <div class="note">Preview concept prepared by Onyx Rise Media for review. The exact street address, slip/campsite counts, rates, season dates and a monitored email are placeholders to be confirmed with the owners before this page goes live.</div>
+</footer>
+
+</body>
+</html>

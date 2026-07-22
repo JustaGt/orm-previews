@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partyka Farms — Family Farm, Farm Market &amp; Ice Cream in Kendall, NY</title>
+<style>
+  :root{
+    --apple:#a8252b; --apple2:#c4343a; --leaf:#4e7a3a; --leaf2:#6a9a4f;
+    --cream:#fbf6ea; --paper:#fffdf6; --ink:#33291f; --bark:#5a4a37;
+    --gold:#e8a93c; --mute:#7a6a54; --sky:#e9f0e3;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3{font-family:"Georgia",serif;line-height:1.12}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .btn{display:inline-block;background:var(--apple);color:#fff;text-decoration:none;font-weight:700;padding:13px 26px;border-radius:30px;font-size:.95rem;box-shadow:0 3px 0 #7d1a1f}
+  .btn:hover{background:var(--apple2)}
+  .btn-g{background:var(--leaf);box-shadow:0 3px 0 #3a5c2a}
+  .btn-g:hover{background:var(--leaf2)}
+  .btn-o{background:#fff;color:var(--apple);box-shadow:0 3px 0 #e3d6bb;border:1.5px solid #efe3c9}
+  /* top */
+  .top{background:var(--leaf);color:#eef4e7;font-size:.82rem}
+  .top .wrap{display:flex;justify-content:space-between;gap:12px;padding:7px 22px;flex-wrap:wrap;align-items:center}
+  .top b{color:#fff}
+  /* header */
+  header{background:var(--cream);border-bottom:3px solid var(--apple);position:sticky;top:0;z-index:20}
+  .head{display:flex;justify-content:space-between;align-items:center;padding:13px 22px;gap:14px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:12px}
+  .logo{width:50px;height:50px;background:var(--apple);border-radius:50%;position:relative;flex:0 0 auto}
+  .logo:before{content:"";position:absolute;top:7px;left:22px;width:6px;height:13px;background:var(--bark);border-radius:3px;transform:rotate(14deg)}
+  .logo:after{content:"";position:absolute;top:6px;left:27px;width:13px;height:9px;background:var(--leaf2);border-radius:0 60% 0 60%}
+  .brand h2{font-size:1.3rem;color:var(--apple)}
+  .brand small{display:block;font-size:.66rem;letter-spacing:2px;text-transform:uppercase;color:var(--mute);font-family:Arial}
+  .nav a{text-decoration:none;font-size:.88rem;color:var(--bark);margin-left:18px;font-weight:600}
+  .nav a:hover{color:var(--apple)}
+  /* hero */
+  .hero{background:linear-gradient(160deg,#fbf6ea 0%,#f2ead6 60%,var(--sky) 100%);position:relative;overflow:hidden}
+  .hero .wrap{padding:56px 22px 50px;position:relative;z-index:2}
+  .kick{display:inline-block;background:#fff;border:1.5px solid var(--gold);color:var(--bark);font-size:.74rem;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:18px;font-weight:700}
+  .hero h1{font-size:3rem;color:var(--apple);max-width:18ch;margin-bottom:14px}
+  .hero h1 span{color:var(--leaf)}
+  .hero p{font-size:1.12rem;color:var(--bark);max-width:36rem;margin-bottom:24px}
+  .hcta{display:flex;gap:12px;flex-wrap:wrap}
+  .barn{position:absolute;right:-30px;bottom:0;width:340px;height:240px;opacity:.9;z-index:1}
+  /* right-now seasonal board */
+  .nowbar{background:var(--apple);color:#fff;padding:0}
+  .nowbar .wrap{padding:22px 22px}
+  .nowbar h3{font-size:1.05rem;color:#ffe6c9;font-family:Arial;letter-spacing:1px;text-transform:uppercase;font-size:.82rem;margin-bottom:14px}
+  .nowgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .nowcard{background:#fff;color:var(--ink);border-radius:10px;padding:14px 15px;border-bottom:4px solid var(--gold)}
+  .nowcard.on{border-bottom-color:var(--leaf)}
+  .nowcard .mlabel{font-size:.7rem;letter-spacing:1px;text-transform:uppercase;color:var(--mute);font-family:Arial;font-weight:700}
+  .nowcard h4{font-family:Georgia,serif;color:var(--apple);font-size:1.04rem;margin:3px 0 4px}
+  .nowcard p{font-size:.84rem;color:var(--bark)}
+  .nowcard .tag{display:inline-block;margin-top:8px;font-size:.68rem;background:var(--sky);color:var(--leaf);padding:3px 8px;border-radius:10px;font-weight:700;letter-spacing:.5px}
+  .nowcard.on .tag{background:#fde9c8;color:var(--apple)}
+  /* sections */
+  section{padding:54px 0}
+  .eyebrow{font-family:Arial;font-size:.72rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--leaf);margin-bottom:9px;font-weight:700}
+  .sec-h{font-size:2.05rem;color:var(--apple);margin-bottom:10px}
+  .sec-sub{color:var(--mute);max-width:42rem;margin-bottom:32px}
+  /* season big guide */
+  .seasons{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .season{border-radius:14px;padding:24px 22px;color:#fff;position:relative;overflow:hidden}
+  .s-spring{background:linear-gradient(135deg,#6a9a4f,#4e7a3a)}
+  .s-summer{background:linear-gradient(135deg,#e8a93c,#d98a23)}
+  .s-fall{background:linear-gradient(135deg,#c4343a,#9a2127)}
+  .s-holiday{background:linear-gradient(135deg,#3f6b4e,#2c4d39)}
+  .season h3{font-size:1.35rem;margin-bottom:6px}
+  .season .mo{font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;opacity:.85;font-family:Arial;font-weight:700;margin-bottom:12px}
+  .season ul{list-style:none;font-size:.93rem}
+  .season li{padding:4px 0 4px 20px;position:relative}
+  .season li:before{content:"●";position:absolute;left:0;font-size:.6rem;top:7px;opacity:.8}
+  /* fun cards */
+  .fun{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .fcard{background:var(--cream);border:1px solid #ece0c6;border-radius:12px;padding:22px 20px;text-align:center}
+  .fcard .em{font-size:1.7rem;display:block;margin-bottom:8px}
+  .fcard h3{color:var(--apple);font-size:1.1rem;margin-bottom:6px}
+  .fcard p{font-size:.9rem;color:var(--mute)}
+  /* revenue bands */
+  .bands{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .band{border-radius:14px;padding:28px 26px;color:#fff}
+  .band.fund{background:var(--leaf)}
+  .band.cater{background:var(--bark)}
+  .band h3{font-size:1.5rem;margin-bottom:8px}
+  .band p{font-size:.96rem;opacity:.94;margin-bottom:16px}
+  .band ul{list-style:none;margin-bottom:18px;font-size:.92rem}
+  .band li{padding:4px 0 4px 22px;position:relative}
+  .band li:before{content:"✓";position:absolute;left:0;font-weight:bold}
+  /* story */
+  .story{background:var(--sky)}
+  .story .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:36px;align-items:center}
+  .storycard{background:#fff;border-radius:14px;padding:8px;border:1px solid #d8e3cd}
+  .storycard .inner{background:linear-gradient(160deg,#eaf1e2,#d7e4c9);border-radius:10px;padding:30px 24px;text-align:center}
+  .storycard .big{font-family:Georgia,serif;font-size:2.6rem;color:var(--leaf);line-height:1}
+  .storycard .big small{display:block;font-size:.8rem;color:var(--bark);letter-spacing:1px;text-transform:uppercase;font-family:Arial;margin-top:6px}
+  .quote{font-style:italic;color:var(--bark);border-left:3px solid var(--gold);padding-left:14px;margin-top:16px;font-size:.96rem}
+  /* visit */
+  .visit{background:var(--apple);color:#fff}
+  .visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+  .vcard{background:#fff;color:var(--ink);border-radius:14px;padding:26px 24px}
+  .vcard h3{color:var(--apple);font-size:1.3rem;margin-bottom:14px}
+  .vrow{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed #e6dbc2;font-size:.95rem}
+  .vrow b{color:var(--leaf)}
+  /* footer */
+  footer{background:var(--bark);color:#e3d6c2;padding:38px 0 20px;font-size:.92rem}
+  .fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:28px;padding-bottom:22px;border-bottom:1px solid #6e5c45}
+  footer h4{color:#fff;font-family:Arial;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:11px}
+  footer a{color:#e3d6c2;text-decoration:none;display:block;padding:3px 0}
+  footer a:hover{color:var(--gold)}
+  .fbot{padding-top:15px;font-size:.78rem;color:#b6a78f;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  @media(max-width:820px){
+    .nav{display:none}.barn{display:none}
+    .hero h1{font-size:2.3rem}
+    .nowgrid{grid-template-columns:1fr 1fr}
+    .seasons,.fun,.bands,.story .wrap,.visit .wrap,.fgrid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <div>A family farm in Kendall, NY · near Lake Ontario</div>
+  <div>Open 7 days · <b>9am–9pm</b> · (585) 659-9131</div>
+</div></div>
+
+<header><div class="head">
+  <div class="brand">
+    <div class="logo"></div>
+    <div><h2>Partyka Farms</h2><small>Six Generations · Kendall, New York</small></div>
+  </div>
+  <nav class="nav">
+    <a href="#season">This Season</a>
+    <a href="#fun">Family Fun</a>
+    <a href="#groups">Fundraising</a>
+    <a href="#cater">Catering</a>
+    <a href="#visit">Visit</a>
+  </nav>
+</div></header>
+
+<section class="hero">
+  <svg class="barn" viewBox="0 0 340 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect x="70" y="95" width="200" height="130" fill="#b8302f"/>
+    <polygon points="70,95 170,40 270,95" fill="#9a2127"/>
+    <rect x="150" y="150" width="40" height="75" fill="#7d1a1f"/>
+    <rect x="92" y="118" width="34" height="30" fill="#f2ead6"/>
+    <rect x="214" y="118" width="34" height="30" fill="#f2ead6"/>
+    <polygon points="170,52 178,72 162,72" fill="#e8a93c"/>
+    <rect x="30" y="200" width="280" height="40" fill="#6a9a4f"/>
+  </svg>
+  <div class="wrap">
+    <span class="kick">🍦 Ice cream bar open · 🌽 sweet corn season</span>
+    <h1>Pick the day. <span>The farm's got the rest.</span></h1>
+    <p>Sweet corn and 32 flavors of Perry's in the summer. Apples, pumpkins, and hayrides in the fall. Wreaths and trees at Christmas. Come see what's happening on the farm this week — and bring the kids.</p>
+    <div class="hcta">
+      <a class="btn" href="#season">What's on the farm now</a>
+      <a class="btn btn-o" href="#visit">Hours &amp; directions</a>
+    </div>
+  </div>
+</section>
+
+<div class="nowbar"><div class="wrap">
+  <h3>On the farm right now</h3>
+  <div class="nowgrid">
+    <div class="nowcard on"><div class="mlabel">Now</div><h4>Sweet Corn</h4><p>Picked fresh — the first of the summer is in.</p><span class="tag">In season</span></div>
+    <div class="nowcard on"><div class="mlabel">Now</div><h4>Ice Cream Bar</h4><p>32 Perry's flavors, custards, soft serve, sugar-free.</p><span class="tag">Open daily</span></div>
+    <div class="nowcard on"><div class="mlabel">Now</div><h4>Summer Grill</h4><p>Burgers &amp; hot dogs hot off the grill, Mem. Day–Labor Day.</p><span class="tag">Firing</span></div>
+    <div class="nowcard"><div class="mlabel">Coming</div><h4>Apples &amp; Hayrides</h4><p>Pick-your-own apples &amp; pumpkin-patch hayrides this fall.</p><span class="tag">September</span></div>
+  </div>
+</div></div>
+
+<section id="season"><div class="wrap">
+  <div class="eyebrow">The farm year</div>
+  <h2 class="sec-h">A reason to come back every season</h2>
+  <p class="sec-sub">The market changes with the fields. Here's what's worth the drive out to Kendall, month by month — so you always know what you'll find when you pull in.</p>
+  <div class="seasons">
+    <div class="season s-spring"><div class="mo">April – June</div><h3>Spring · Get the garden going</h3>
+      <ul><li>Bulk &amp; bagged mulch, topsoil, manure, potting soil</li><li>Bedding plants, perennials &amp; a full seed rack</li><li>Ice cream bar opens in April</li></ul></div>
+    <div class="season s-summer"><div class="mo">June – August</div><h3>Summer · Corn &amp; cones</h3>
+      <ul><li>Fresh-picked sweet corn &amp; garden vegetables</li><li>32 flavors of Perry's ice cream &amp; custard</li><li>The grill's on — burgers, dogs &amp; the picnic grove</li></ul></div>
+    <div class="season s-fall"><div class="mo">September – October</div><h3>Fall · Apples &amp; pumpkins</h3>
+      <ul><li>Mix-and-match apples from the bins &amp; old-fashioned cider</li><li>Weekend hayrides to the pick-your-own pumpkin patch</li><li>Fall vegetables, baked goods &amp; the full gift shop</li></ul></div>
+    <div class="season s-holiday"><div class="mo">November – December</div><h3>Holidays · Trees &amp; wreaths</h3>
+      <ul><li>Fresh Christmas trees, wreaths &amp; centerpieces</li><li>Jams, honey, pantry mixes &amp; Cheesy Eddie's cakes</li><li>Gift &amp; décor ideas all through the shop</li></ul></div>
+  </div>
+</div></section>
+
+<section id="fun" style="background:var(--cream)"><div class="wrap">
+  <div class="eyebrow">Bring the family</div>
+  <h2 class="sec-h">More than a stand — it's a place to spend an afternoon</h2>
+  <p class="sec-sub">Friends, families, neighbors and ball teams have made Partyka's a stop all season long. There's room to run around and something to eat the whole way through.</p>
+  <div class="fun">
+    <div class="fcard"><span class="em">🛝</span><h3>Playground &amp; Picnic Grove</h3><p>A big free family picnic area with a playground — pack a lunch or grab one off the grill.</p></div>
+    <div class="fcard"><span class="em">🍦</span><h3>32-Flavor Ice Cream Bar</h3><p>Hard &amp; soft Perry's, custards, frozen yogurt, plus fat-free / sugar-free. Open April to mid-October.</p></div>
+    <div class="fcard"><span class="em">🎃</span><h3>Fall Hayrides</h3><p>October weekends, ride out to the patch and pick your own pumpkin straight off the vine.</p></div>
+    <div class="fcard"><span class="em">🥖</span><h3>Bakery &amp; Farm Store</h3><p>Fresh baked goods, jams, jellies, honey, pantry mixes — and Cheesy Eddie's cheesecakes.</p></div>
+    <div class="fcard"><span class="em">🌻</span><h3>Country Gift Shop</h3><p>Fully stocked with gift and décor finds, plus the Country Quilt Trail to explore.</p></div>
+    <div class="fcard"><span class="em">🐦</span><h3>Feed &amp; Grain</h3><p>Year-round bird, pet &amp; farm-animal feeds, wood pellets and stove coal for the cold months.</p></div>
+  </div>
+</div></section>
+
+<section id="groups"><div class="wrap">
+  <div class="bands">
+    <div class="band fund">
+      <h3>Fundraising for your group</h3>
+      <p>Ball teams, schools, churches and clubs raise real money with farm products people actually want.</p>
+      <ul><li>Fresh wreaths &amp; centerpieces</li><li>Apples by the case</li><li>Simple ordering, group pricing</li></ul>
+      <a class="btn btn-o" href="tel:5857520258">Ask Lora · (585) 752-0258</a>
+    </div>
+    <div class="band cater" id="cater">
+      <h3>Catering your event</h3>
+      <p>Let the farm cater the next one — holiday parties, graduations, anniversaries, birthdays and showers.</p>
+      <ul><li>Homemade from the kitchen</li><li>Locally sourced</li><li>Book the date that works for you</li></ul>
+      <a class="btn btn-o" href="#visit">Plan an event</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="story"><div class="wrap">
+  <div class="storycard"><div class="inner">
+    <div class="big">6<small>generations farming WNY</small></div>
+    <p style="color:var(--bark);margin-top:14px;font-size:.95rem">900 acres in Kendall — and the no-shell, dry-roasted pumpkin seeds you'll find in Wegmans.</p>
+  </div></div>
+  <div>
+    <div class="eyebrow">The Partyka family</div>
+    <h2 class="sec-h">Five generations in, and the sixth is in the fields</h2>
+    <p style="color:var(--bark)">Jeff and Lora Partyka come from five generations of Western New York farmers. Their sons Scott and Steve — the sixth generation — are taking on more of the farm every year. They grow, harvest, and roast right here, and keep the market manageable on purpose: so every visitor still gets the finest product and a personal hello.</p>
+    <div class="quote">"Our farm has become a place for people to visit. We like being part of the community and seeing the families and ball teams enjoying themselves." — Lora Partyka</div>
+  </div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <div>
+    <div class="eyebrow" style="color:#ffe6c9">Getting here</div>
+    <h2 class="sec-h" style="color:#fff">Come out to Kendall</h2>
+    <p style="opacity:.95;max-width:30rem">We're in the rural community of Kendall, near beautiful Lake Ontario — an easy drive from Rochester, Brockport, Hamlin and Albion. Pull in, grab a cone, and see what the season's got.</p>
+    <p style="margin-top:18px;font-size:1.05rem"><b>1420 County Line Road (Route 272)</b><br>Kendall, New York 14476</p>
+  </div>
+  <div class="vcard">
+    <h3>Hours &amp; contact</h3>
+    <div class="vrow"><span>Open 7 days a week</span><b>9:00am – 9:00pm</b></div>
+    <div class="vrow"><span>Ice cream bar</span><b>Apr – mid-Oct</b></div>
+    <div class="vrow"><span>Summer grill</span><b>Mem. Day – Labor Day</b></div>
+    <div class="vrow"><span>Phone</span><b>(585) 659-9131</b></div>
+    <div class="vrow" style="border:none"><span>Also serving</span><b>Farmer's Table · Hamlin</b></div>
+    <a class="btn" href="tel:5856599131" style="width:100%;text-align:center;margin-top:16px">Call the farm</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div>
+      <h4>Partyka Farms</h4>
+      <p style="margin-bottom:10px">A sixth-generation family farm, farm market and ice cream bar in Kendall, NY — fresh produce, pick-your-own, baked goods, a gift shop, fundraising and catering, open year-round through the seasons.</p>
+      <p style="color:#fff;font-weight:bold">(585) 659-9131</p>
+      <p>1420 County Line Road, Kendall, NY 14476</p>
+    </div>
+    <div>
+      <h4>On the farm</h4>
+      <a href="#season">This season</a>
+      <a href="#fun">Family fun</a>
+      <a href="#fun">Bakery &amp; gift shop</a>
+      <a href="#fun">Ice cream bar</a>
+      <a href="#fun">Feed &amp; grain</a>
+    </div>
+    <div>
+      <h4>For groups</h4>
+      <a href="#groups">Fundraising</a>
+      <a href="#cater">Catering &amp; events</a>
+      <a href="#visit">Hours &amp; directions</a>
+      <a href="tel:5856599131">Call the farm</a>
+    </div>
+  </div>
+  <div class="fbot">
+    <span>© 2026 Partyka Farms · Kendall, New York · A family farm since five generations back</span>
+    <span>Open 7 days · 9am–9pm</span>
+  </div>
+</div></footer>
+
+</body>
+</html>

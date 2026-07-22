@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orra Sawmill — Custom Rough-Sawn Lumber &amp; Timbers, Northville NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bitter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--pine:#20301f;--moss:#3c5a34;--bark:#5a3f28;--sap:#c98a3c;--cream:#f4efe4;--tan:#e5d8bf;--ink:#241f18;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Bitter',serif;background:var(--cream);color:var(--ink);line-height:1.62;}
+  h1,h2,h3{font-family:'Alfa Slab One',serif;line-height:1.1;letter-spacing:.005em;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px;}
+  .top{background:var(--pine);color:var(--tan);font-size:.9rem;padding:9px 0;}
+  .top .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;align-items:center;}
+  .top b{color:var(--sap);}
+  .top a{color:var(--cream);text-decoration:none;font-weight:600;}
+  .hero{position:relative;background:var(--pine);color:var(--cream);padding:88px 0 74px;
+    background-image:repeating-linear-gradient(90deg,rgba(90,63,40,.16) 0 3px,transparent 3px 26px),linear-gradient(180deg,#25381f,#1a2717);
+    border-bottom:9px solid var(--sap);}
+  .hero .kick{display:inline-block;background:var(--sap);color:#2a1c07;font-family:'Bitter',serif;font-weight:700;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;padding:6px 14px;margin-bottom:22px;}
+  .hero h1{font-size:clamp(2.1rem,5.3vw,3.5rem);max-width:17ch;color:#fff;text-shadow:0 2px 0 rgba(0,0,0,.25);}
+  .hero p{max-width:56ch;margin-top:18px;font-size:1.1rem;color:#ddd2ba;}
+  .btn{display:inline-block;margin-top:28px;background:var(--sap);color:#2a1c07;font-family:'Alfa Slab One',serif;font-size:.98rem;padding:15px 30px;text-decoration:none;letter-spacing:.01em;}
+  .btn.line{background:transparent;color:var(--tan);border:2px solid var(--tan);margin-left:10px;}
+  section{padding:62px 0;}
+  .h2{font-size:clamp(1.7rem,3.6vw,2.3rem);color:var(--pine);margin-bottom:8px;}
+  .sub{color:var(--bark);max-width:62ch;margin-bottom:30px;font-weight:500;}
+  .cut{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
+  .card{background:#fff;border:1px solid var(--tan);border-left:6px solid var(--moss);padding:24px;}
+  .card h3{font-family:'Bitter',serif;font-weight:700;font-size:1.18rem;color:var(--pine);margin-bottom:8px;}
+  .card p{font-size:.96rem;color:#4a4034;}
+  .card .spec{margin-top:12px;font-size:.82rem;color:var(--bark);font-weight:600;letter-spacing:.02em;}
+  .byo{background:var(--bark);color:var(--cream);}
+  .byo .cols{display:grid;grid-template-columns:1.1fr .9fr;gap:38px;align-items:center;}
+  .byo h2{color:#fff;font-size:clamp(1.6rem,3.4vw,2.2rem);margin-bottom:14px;}
+  .byo p{color:#eaddc6;margin-bottom:12px;}
+  .byo .panel{background:#fff;color:var(--ink);padding:26px;border-top:6px solid var(--sap);}
+  .byo .panel h3{font-family:'Bitter',serif;font-weight:700;color:var(--pine);font-size:1.2rem;margin-bottom:10px;}
+  .byo .panel ol{margin-left:18px;font-size:.96rem;}
+  .byo .panel li{margin-bottom:7px;}
+  .why{background:var(--moss);color:#fff;}
+  .why h2{color:#fff;font-size:clamp(1.6rem,3.4vw,2.2rem);margin-bottom:24px;}
+  .wg{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:22px;}
+  .wg div{border-top:3px solid var(--sap);padding-top:12px;}
+  .wg h3{font-family:'Bitter',serif;font-weight:700;font-size:1.05rem;margin-bottom:6px;}
+  .wg p{font-size:.92rem;color:#dfe9d6;}
+  .about .cols{display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:start;}
+  .about h2{color:var(--pine);font-size:clamp(1.6rem,3.4vw,2.2rem);margin-bottom:14px;}
+  .about p{color:#4a4034;margin-bottom:12px;}
+  .facts{background:#fff;border:1px solid var(--tan);padding:22px;}
+  .facts table{width:100%;border-collapse:collapse;font-size:.92rem;}
+  .facts td{padding:9px 0;border-bottom:1px solid var(--tan);vertical-align:top;}
+  .facts td:first-child{color:var(--moss);font-weight:700;width:42%;}
+  .contact{background:var(--pine);color:#fff;text-align:center;border-top:9px solid var(--sap);}
+  .contact h2{color:#fff;font-size:clamp(1.9rem,4vw,2.6rem);}
+  .contact p{max-width:52ch;margin:12px auto 0;color:#ddd2ba;}
+  .contact .num{font-family:'Alfa Slab One',serif;font-size:2.1rem;color:var(--sap);display:inline-block;margin-top:18px;text-decoration:none;}
+  .note{font-size:.82rem;color:#c7b7a0;margin-top:10px;}
+  footer{background:#16210f;color:#93a487;font-size:.85rem;padding:20px 0;text-align:center;}
+  @media(max-width:720px){.byo .cols,.about .cols{grid-template-columns:1fr;}.btn.line{margin-left:0;margin-top:12px;}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><span><b>Orra Sawmill</b> · Northville, NY · circle-mill custom sawing</span><a href="tel:5188634810">(518) 863-4810</a></div></div>
+
+<header class="hero"><div class="wrap">
+  <span class="kick">Rough-sawn in the southern Adirondacks</span>
+  <h1>The beam you need, cut from the log you want.</h1>
+  <p>A working circle mill in Northville sawing hemlock, pine and hardwood into timbers, cabin logs, rough boards and slabs — cut to your dimensions, not a big-box shelf size.</p>
+  <a class="btn" href="tel:5188634810">Call the mill</a>
+  <a class="btn line" href="#cut">See what we saw</a>
+</div></header>
+
+<section id="cut"><div class="wrap">
+  <h2 class="h2">What comes off the mill</h2>
+  <p class="sub">Mixed hardwood and softwood, sawn to order. Tell us the species, the dimension and the count — most orders are cut from stock or from your own logs.</p>
+  <div class="cut">
+    <div class="card"><h3>Timbers &amp; beams</h3><p>Structural hemlock and pine for barns, pole buildings, porches and camp repairs. Long lengths and full-dimension stock a lumber yard won't stock.</p><p class="spec">6×6, 6×8, 8×8 and custom — up to long framing lengths</p></div>
+    <div class="card"><h3>Cabin logs &amp; siding</h3><p>Milled log profiles and rough siding for building or patching Adirondack camps and cabins around the lake.</p><p class="spec">Profiles matched to your existing wall where possible</p></div>
+    <div class="card"><h3>Rough-sawn boards</h3><p>Full rough-cut boards for sheds, fencing, board-and-batten, shelving and farm use — priced to move for practical projects.</p><p class="spec">1× and 2× stock, common widths, softwood &amp; hardwood</p></div>
+    <div class="card"><h3>Slabs &amp; furniture stock</h3><p>Live-edge and thick hardwood slabs for tables, benches, mantels and shop projects.</p><p class="spec">Ask about current hardwood on the yard</p></div>
+    <div class="card"><h3>Millwork &amp; planed lumber</h3><p>Planed dimension stock and simple millwork when you need a cleaner face than rough-sawn.</p><p class="spec">Planing available on request</p></div>
+    <div class="card"><h3>Firewood</h3><p>Mill slab and cordwood by-product for the woodstove — call for what's cut and available by the season.</p><p class="spec">Seasonal — check current supply</p></div>
+  </div>
+</div></section>
+
+<section class="byo"><div class="wrap"><div class="cols">
+  <div>
+    <h2>Have your own logs? Bring them.</h2>
+    <p>Cleared trees off your lot, storm-downed pine, a nice walnut you don't want to lose to firewood — we'll saw them into usable lumber instead of you paying retail for boards you already own on the ground.</p>
+    <p>It's the difference between a brush pile and a stack of beams for the new garage.</p>
+  </div>
+  <div class="panel">
+    <h3>How a custom saw works</h3>
+    <ol>
+      <li>Call with what you've got — species, rough size, how many logs.</li>
+      <li>We talk through what dimensions you want cut and roughly what it runs.</li>
+      <li>Drop the logs, or bring your cut list for stock we already have.</li>
+      <li>Pick up sawn lumber, stickered and ready to dry or use.</li>
+    </ol>
+  </div>
+</div></div></section>
+
+<section class="why"><div class="wrap">
+  <h2>Why go to a mill instead of the lumber aisle</h2>
+  <div class="wg">
+    <div><h3>Real dimensions</h3><p>Full-thickness rough stock and true timber sizes — not planed-down "nominal" boards.</p></div>
+    <div><h3>Any species we run</h3><p>Hemlock, pine and local hardwoods, cut fresh — matched to the job, from framing to furniture.</p></div>
+    <div><h3>Cut to your list</h3><p>Odd lengths, wide slabs, one-off beams. If the mill can saw it, you can order it.</p></div>
+    <div><h3>Local &amp; listed</h3><p>A Northville mill in the NYS Wood Products directory — you talk to the person running the blade.</p></div>
+  </div>
+</div></section>
+
+<section class="about"><div class="wrap"><div class="cols">
+  <div>
+    <h2>A working mill, not a warehouse</h2>
+    <p>Orra Sawmill is a circle-mill operation run by Orra Brownell in Northville, at the southern edge of the Adirondack Park near the Great Sacandaga Lake. It's the kind of place you call when the box store says "we don't cut that."</p>
+    <p>Camp owners, barn builders and woodworkers around the lake come here for stock they can't buy off a rack — and to have their own timber turned into something useful.</p>
+    <p class="note">Species availability and custom-sawing lead times change with the season — a quick call gets you the current answer.</p>
+  </div>
+  <div class="facts"><table>
+    <tr><td>Mill type</td><td>Type 1 circle mill (per NYS Wood Products directory)</td></tr>
+    <tr><td>Saws</td><td>Mixed hardwood &amp; softwood</td></tr>
+    <tr><td>Products</td><td>Timbers, cabin logs, rough boards, slabs, millwork, firewood</td></tr>
+    <tr><td>Custom work</td><td>Cut-to-order &amp; saw-your-own-logs</td></tr>
+    <tr><td>Location</td><td>Northville, NY 12134 (southern Adirondacks)</td></tr>
+    <tr><td>Phone</td><td>(518) 863-4810</td></tr>
+  </table></div>
+</div></div></section>
+
+<section class="contact"><div class="wrap">
+  <h2>Got a cut list? Let's saw it.</h2>
+  <p>Call with your species, dimensions and count for a straight quote — or ask what hardwood and timber stock is on the yard right now.</p>
+  <a class="num" href="tel:5188634810">(518) 863-4810</a>
+  <p class="note">Northville, NY · call for hours and current stock</p>
+</div></section>
+
+<footer><div class="wrap">Orra Sawmill · Northville, NY · (518) 863-4810 — custom rough-sawn lumber, timbers &amp; cabin logs</div></footer>
+</body>
+</html>

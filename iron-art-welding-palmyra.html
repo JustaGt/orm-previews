@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Iron Art Welding — Custom Railings &amp; Portable Welding, Palmyra NY Since 1982</title>
+<meta name="description" content="Iron Art Welding in Palmyra, NY — custom steel &amp; ornamental railings, portable on-site welding, repairs and one-off fabrication. Owner-run by Mike Porretta since 1982. Call (315) 597-4466 for a quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --steel:#1c2126; --steel-d:#12161a; --iron:#2b333b; --gray:#3c454e;
+    --arc:#5fc8ff; --arc-d:#2f9fe0; --ember:#ff6a2b; --ember-d:#e0521a; --spark:#ffb454;
+    --ash:#c3ccd4; --paper:#f2f4f6; --card:#ffffff; --ink:#1a1e22; --mut:#69737c; --line:#dbe1e6;
+    --shadow:0 16px 40px rgba(18,22,26,.22);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3,.disp{font-family:'Oswald',sans-serif;text-transform:uppercase;line-height:1.04;letter-spacing:.02em}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--ember);color:#fff;font-weight:700;padding:14px 30px;border-radius:5px;
+    text-decoration:none;box-shadow:0 10px 22px rgba(224,82,26,.4);transition:transform .15s,background .15s;
+    text-transform:uppercase;letter-spacing:.05em;font-family:'Oswald'}
+  .btn:hover{transform:translateY(-2px);background:var(--ember-d)}
+  .btn.steel{background:var(--iron);color:#eaf1f6}
+  .btn.steel:hover{background:var(--gray)}
+  .btn.ghost{background:transparent;border:2px solid rgba(255,255,255,.4);color:#fff;box-shadow:none}
+
+  .bar{background:#0d1013;color:var(--ash);font-size:.9rem}
+  .bar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;padding:8px 22px}
+  .bar b{color:var(--spark)}
+  .bar a{color:var(--arc);text-decoration:none;font-weight:600}
+
+  header.nav{background:var(--steel);color:#fff;position:sticky;top:0;z-index:20;border-bottom:3px solid var(--ember)}
+  header.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand .mark{width:44px;height:44px;border-radius:6px;background:linear-gradient(135deg,var(--iron),#0f1316);border:1px solid var(--gray);
+    display:flex;align-items:center;justify-content:center;font-family:'Oswald';font-weight:700;color:var(--spark);font-size:1.25rem}
+  .brand b{font-family:'Oswald';font-size:1.5rem;letter-spacing:.04em}
+  .brand span{display:block;font-size:.68rem;letter-spacing:.24em;color:var(--arc);text-transform:uppercase;font-weight:600}
+  nav.links{display:flex;gap:24px;font-weight:600;font-size:.95rem;text-transform:uppercase;font-family:'Oswald';letter-spacing:.04em}
+  nav.links a{text-decoration:none}
+  nav.links a:hover{color:var(--spark)}
+  @media(max-width:780px){nav.links{display:none}}
+
+  .hero{position:relative;color:#fff;padding:88px 0 78px;
+    background:linear-gradient(rgba(15,19,22,.82),rgba(15,19,22,.9)),
+      repeating-linear-gradient(45deg,#20262c 0 3px,#1a1f24 3px 8px);}
+  .hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;
+    background:linear-gradient(90deg,var(--ember),var(--spark),var(--arc))}
+  .hero .kick{color:var(--spark);font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:.82rem;margin-bottom:14px}
+  .hero h1{font-size:clamp(2.6rem,6.2vw,4.6rem);max-width:15ch}
+  .hero h1 em{font-style:normal;color:var(--spark)}
+  .hero p.lead{margin:20px 0 30px;font-size:1.2rem;max-width:54ch;color:#dbe3ea}
+  .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero .since{margin-top:36px;display:inline-flex;align-items:center;gap:14px;background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.16);border-radius:8px;padding:12px 20px}
+  .hero .since b{font-family:'Oswald';font-size:2rem;color:var(--arc);line-height:1}
+  .hero .since span{font-size:.9rem;color:#c8d2da}
+
+  section{padding:64px 0}
+  .eyebrow{color:var(--ember-d);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:.8rem;margin-bottom:10px}
+  h2.big{font-size:clamp(1.9rem,4.2vw,3rem);margin-bottom:12px;color:var(--steel)}
+  .sub{max-width:60ch;color:var(--mut);font-size:1.05rem}
+
+  .work{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:34px}
+  .wk{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:26px 24px;box-shadow:var(--shadow);border-top:4px solid var(--ember)}
+  .wk:nth-child(2){border-top-color:var(--arc-d)}
+  .wk:nth-child(3){border-top-color:var(--spark)}
+  .wk:nth-child(4){border-top-color:var(--gray)}
+  .wk h3{font-size:1.35rem;color:var(--iron);margin-bottom:8px}
+  .wk p{color:var(--mut);font-size:.97rem}
+
+  .split{background:var(--steel);color:#eaf1f6}
+  .split .wrap{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+  .feat{background:linear-gradient(160deg,#252c33,#161b20);border:1px solid rgba(95,200,255,.2);border-radius:14px;padding:34px}
+  .feat.ember{border-color:rgba(255,106,43,.35)}
+  .feat h3{font-size:1.7rem;color:#fff;margin-bottom:12px}
+  .feat h3 .u{color:var(--arc)}
+  .feat.ember h3 .u{color:var(--spark)}
+  .feat p{color:#c6d0d8;margin-bottom:14px}
+  .feat li{list-style:none;padding:6px 0 6px 24px;position:relative;color:#dbe3ea;font-size:.97rem}
+  .feat li:before{content:"▸";position:absolute;left:0;color:var(--ember)}
+  .feat.ember li:before{color:var(--arc)}
+  @media(max-width:780px){.split .wrap{grid-template-columns:1fr}}
+
+  .rev{background:var(--paper)}
+  .revrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:30px}
+  .quote{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px;box-shadow:var(--shadow)}
+  .stars{color:var(--spark);letter-spacing:2px;font-size:1.05rem}
+  .quote p{margin:10px 0;color:#333b42;font-style:italic}
+  .quote b{font-family:'Oswald';color:var(--iron);font-size:.95rem;letter-spacing:.04em}
+  .flag{background:#fff2e6;border:1px solid #ffb98c;color:#8a3d16;font-size:.8rem;padding:9px 14px;border-radius:8px;margin-top:22px;display:inline-block}
+
+  .cta-band{background:linear-gradient(135deg,var(--ember),var(--ember-d));color:#fff;text-align:center}
+  .cta-band h2{font-size:clamp(1.9rem,4.5vw,2.9rem);margin-bottom:12px}
+  .cta-band p{max-width:52ch;margin:0 auto 24px;color:#fff0e8;font-size:1.1rem}
+  .cta-band .big-phone{font-family:'Oswald';font-size:2.4rem;letter-spacing:.02em;display:inline-block;margin-top:8px}
+  .cta-band .big-phone a{color:#fff;text-decoration:none}
+
+  .contact{background:var(--steel-d);color:#d7dfe6}
+  .cgrid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:14px}
+  .cinfo .row{display:flex;gap:14px;margin-bottom:14px;font-size:1.02rem}
+  .cinfo .row b{font-family:'Oswald';font-size:1.05rem;color:var(--arc);min-width:80px;letter-spacing:.05em;text-transform:uppercase}
+  .cinfo a{color:var(--spark);text-decoration:none;font-weight:600}
+  .hours{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:26px}
+  .hours h3{color:#fff;font-size:1.3rem;margin-bottom:10px}
+  .hours p{color:#b8c2cb;font-size:.96rem}
+  @media(max-width:780px){.cgrid{grid-template-columns:1fr}}
+
+  footer{background:#0b0e11;color:#7f8b94;padding:30px 0;font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap">
+  <span><b>Palmyra, NY</b> · custom railings &amp; on-site welding since 1982</span>
+  <a href="tel:3155974466">Call Mike · (315) 597-4466</a>
+</div></div>
+
+<header class="nav"><div class="wrap">
+  <div class="brand">
+    <div class="mark">IA</div>
+    <div><b>Iron Art Welding</b><span>Palmyra, NY · Est. 1982</span></div>
+  </div>
+  <nav class="links">
+    <a href="#work">What We Do</a>
+    <a href="#railings">Railings</a>
+    <a href="#portable">On-Site</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="#contact" class="btn" style="padding:10px 20px">Get a Quote</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <p class="kick">Custom railings · Portable welding · Repairs · Fabrication</p>
+  <h1>Railings that fit your stairs, and a welder who <em>comes to the job.</em></h1>
+  <p class="lead">Iron Art Welding builds custom steel and ornamental railings, welds on-site when the work can't move, and takes the one-off repairs and fabrication other shops turn down — out of Palmyra since 1982.</p>
+  <div class="cta">
+    <a href="#contact" class="btn">Ask for a quote</a>
+    <a href="#work" class="btn ghost">See what we weld</a>
+  </div>
+  <div class="since"><b>1982</b><span>Owner-run by Mike Porretta<br>Four decades on the job</span></div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <p class="eyebrow">One shop, the whole job</p>
+  <h2 class="big">What Iron Art welds</h2>
+  <p class="sub">From a stair rail for the house to a broken bucket on a farm, it's the same shop and the same owner doing the work.</p>
+  <div class="work">
+    <div class="wk"><h3>Custom railings</h3><p>Interior and exterior steel and ornamental railings and gates, measured and built to your steps and openings.</p></div>
+    <div class="wk"><h3>Portable welding</h3><p>On-site welding when the work can't come to the shop — farm, site or driveway.</p></div>
+    <div class="wk"><h3>Repairs</h3><p>Cracked frames, broken brackets, equipment and trailer repair welded to hold.</p></div>
+    <div class="wk"><h3>Fabrication</h3><p>One-off steel work — brackets, stands, supports and custom pieces built from a sketch.</p></div>
+  </div>
+</div></section>
+
+<section class="split"><div class="wrap">
+  <div class="feat" id="railings">
+    <h3><span class="u">Railings</span> &amp; gates</h3>
+    <p>The work most people find Iron Art for: a railing that actually fits the stairs, not a big-box kit cut to fake it.</p>
+    <ul>
+      <li>Interior &amp; exterior stair rails</li>
+      <li>Porch, deck and ramp railings</li>
+      <li>Ornamental and plain steel</li>
+      <li>Gates and hand rails</li>
+      <li>Measured on-site, built to fit</li>
+    </ul>
+  </div>
+  <div class="feat ember" id="portable">
+    <h3><span class="u">Portable</span> / on-site</h3>
+    <p>Some jobs can't be loaded on a trailer. Iron Art brings the welder to the work — a real advantage for farms and contractors around Palmyra.</p>
+    <ul>
+      <li>Field &amp; farm repair</li>
+      <li>Equipment and trailer welds</li>
+      <li>Structural repair in place</li>
+      <li>Wayne County service area</li>
+      <li>Call to schedule a visit</li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="rev" id="reviews"><div class="wrap">
+  <p class="eyebrow">What people say</p>
+  <h2 class="big">Four decades of repeat customers</h2>
+  <p class="sub">Iron Art carries a 4.7-star rating across local reviews. Below are placeholders in the customers' spirit until the live reviews are pulled in.</p>
+  <div class="revrow">
+    <div class="quote"><div class="stars">★★★★★</div><p>"Built me a stair railing that fit perfectly — fair price and done when he said."</p><b>— Placeholder · verify live before publishing</b></div>
+    <div class="quote"><div class="stars">★★★★★</div><p>"Came out to the farm and welded the loader bucket back together on the spot."</p><b>— Placeholder · verify live before publishing</b></div>
+    <div class="quote"><div class="stars">★★★★★</div><p>"Fixed a job two other places wouldn't touch. Been going to Mike for years."</p><b>— Placeholder · verify live before publishing</b></div>
+  </div>
+  <span class="flag">Reviews shown are placeholders. Iron Art's 4.7★ / 14 reviews appear on Birdeye — pull the real quotes into a live Google/Facebook widget before this page goes public.</span>
+</div></section>
+
+<section class="cta-band"><div class="wrap">
+  <h2>Got a railing or a repair? Call the shop.</h2>
+  <p>Tell Mike what you need and where it is — shop work or a portable job around Palmyra and Wayne County.</p>
+  <div class="big-phone"><a href="tel:3155974466">(315) 597-4466</a></div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <p class="eyebrow" style="color:var(--spark)">Palmyra, NY</p>
+  <h2 class="big" style="color:#fff">Contact Iron Art Welding</h2>
+  <div class="cgrid">
+    <div class="cinfo">
+      <div class="row"><b>Phone</b><span><a href="tel:3155974466">(315) 597-4466</a></span></div>
+      <div class="row"><b>Where</b><span>1305 Hammond Rd, Palmyra, NY 14522</span></div>
+      <div class="row"><b>Owner</b><span>Mike Porretta</span></div>
+      <div class="row"><b>Since</b><span>1982</span></div>
+      <div class="row"><b>Does</b><span>Railings · portable welding · repairs · fabrication</span></div>
+      <p style="margin-top:8px;color:#aab4bd;font-size:.94rem">Serving Palmyra, Newark, Macedon, Marion and the surrounding Wayne County area.</p>
+    </div>
+    <div class="hours">
+      <h3>Getting a quote</h3>
+      <p>Call the shop with the basics — what it is, roughly how big, and whether it's a shop job or needs on-site welding. For railings, Mike measures before building so it fits the first time.</p>
+      <p style="margin-top:12px"><a href="tel:3155974466" class="btn" style="text-decoration:none">Call (315) 597-4466</a></p>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b style="font-family:'Oswald';font-size:1.3rem;color:#cfd8df;letter-spacing:.04em">IRON ART WELDING</b><br>1305 Hammond Rd, Palmyra, NY 14522 · (315) 597-4466</div>
+  <div style="text-align:right">Custom railings · portable welding · repairs<br>Owner-run since 1982</div>
+</div></footer>
+
+</body>
+</html>

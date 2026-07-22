@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roy's Marina — Boat Rentals, Slips, Fuel &amp; Bait on Seneca Lake | Geneva, NY</title>
+<style>
+  :root{
+    --deep:#0c3a4f; --deep2:#0a2c3c; --teal:#127a92; --teal2:#0e6276;
+    --sun:#f2a541; --sun2:#e08a1e; --foam:#eef7f9; --sand:#f6efe1;
+    --ink:#16313b; --line:#d6e3e7; --paper:#ffffff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3{font-family:"Trebuchet MS","Segoe UI",sans-serif;line-height:1.14;letter-spacing:-.01em}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .util{background:var(--deep2);color:#bfe0e8;font-size:.9rem}
+  .util .wrap{display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:space-between;align-items:center;padding:8px 22px}
+  .util strong{color:#fff}
+  nav{background:var(--deep);position:sticky;top:0;z-index:20}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:13px 22px}
+  .brand{color:#fff;font-family:"Trebuchet MS",sans-serif;font-weight:800;font-size:1.2rem;letter-spacing:.02em}
+  .brand span{color:var(--sun)}
+  .links{display:flex;gap:20px}
+  .links a{color:#cfe6ec;text-decoration:none;font-size:.93rem;font-weight:700}
+  .links a:hover{color:#fff}
+  .callbtn{background:var(--sun);color:#23150a;padding:10px 18px;border-radius:40px;text-decoration:none;font-weight:800;font-size:.9rem}
+  .callbtn:hover{background:var(--sun2)}
+  .hero{position:relative;color:#fff;
+    background:
+      linear-gradient(rgba(8,38,52,.74),rgba(10,44,60,.62)),
+      linear-gradient(120deg,#0c4a63 0%,#127a92 55%,#1aa0b0 100%);
+    padding:92px 0 84px}
+  .hero h1{font-size:2.8rem;max-width:18ch}
+  .hero .sub{font-size:1.22rem;margin-top:18px;max-width:52ch;color:#e7f4f7}
+  .hero .cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:14px 26px;border-radius:40px;text-decoration:none;font-weight:800}
+  .btn-a{background:var(--sun);color:#23150a}.btn-a:hover{background:var(--sun2)}
+  .btn-b{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.55)}.btn-b:hover{background:rgba(255,255,255,.24)}
+  .hero .note{margin-top:16px;font-size:.92rem;color:#bfe0e8}
+  .strip{background:var(--sun);color:#2a1a08;padding:15px 0;font-weight:800}
+  .strip .wrap{display:flex;flex-wrap:wrap;gap:8px 38px;justify-content:center;text-align:center}
+  section{padding:62px 0}
+  .eyebrow{color:var(--teal2);font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:.8rem}
+  h2{font-size:2rem;margin:8px 0 10px;color:var(--deep)}
+  .lead{max-width:64ch;color:#3a525d;font-size:1.06rem}
+  .fleet{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px}
+  .boat{background:var(--foam);border:1px solid var(--line);border-radius:10px;padding:20px;border-top:4px solid var(--teal)}
+  .boat h3{font-size:1.06rem;color:var(--deep);margin-bottom:5px}
+  .boat .rate{display:inline-block;margin-top:8px;background:#fff;border:1px dashed var(--teal);color:var(--teal2);font-size:.78rem;font-weight:800;padding:4px 9px;border-radius:30px}
+  .boat p{font-size:.92rem;color:#46606b}
+  .svcs{background:var(--sand)}
+  .sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+  .scard{background:#fff;border:1px solid #e7dcc4;border-radius:10px;padding:22px}
+  .scard h3{font-size:1.12rem;color:var(--deep);margin-bottom:6px}
+  .scard p{font-size:.95rem;color:#4f4738}
+  .bait{background:var(--deep);color:#dff0f4}
+  .bait .two{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+  .bait h2{color:#fff}.bait .lead{color:#cfe6ec}
+  ul.checks{list-style:none;margin-top:14px}
+  ul.checks li{padding:8px 0 8px 28px;position:relative;font-size:1.02rem;color:#e4f1f5}
+  ul.checks li:before{content:"⚓";position:absolute;left:0;top:7px;font-size:.95rem}
+  .callout{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:24px}
+  .callout h3{color:#fff;font-size:1.25rem;margin-bottom:8px}
+  .callout p{color:#cfe6ec;font-size:.97rem}
+  .story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .stats{display:flex;gap:30px;flex-wrap:wrap;margin-top:10px}
+  .stat .n{font-family:"Trebuchet MS",sans-serif;font-weight:800;font-size:2.1rem;color:var(--teal2)}
+  .stat .l{font-size:.84rem;color:#6b7d83;text-transform:uppercase;letter-spacing:.06em}
+  .cottage{background:var(--foam)}
+  .cottage .two{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:center}
+  .pill{display:inline-block;background:var(--teal);color:#fff;font-size:.74rem;font-weight:800;padding:5px 11px;border-radius:30px;letter-spacing:.04em}
+  .contact{background:var(--deep2)}
+  .contact h2{color:#fff}.contact .eyebrow{color:#7fc6d6}
+  .cbox{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:26px}
+  .cinfo{color:#cfe6ec}.cinfo p{margin:10px 0;font-size:1.04rem}
+  .cinfo b{color:#fff}.cinfo a{color:var(--sun);font-weight:700;text-decoration:none}
+  form{background:#fff;border-radius:12px;padding:24px}
+  form label{display:block;font-size:.83rem;font-weight:800;margin:12px 0 5px;color:var(--deep)}
+  form input,form textarea,form select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:7px;font-family:inherit;font-size:.95rem;background:#fbfdfe}
+  form button{margin-top:18px;width:100%;background:var(--sun);color:#23150a;border:0;padding:14px;border-radius:40px;font-weight:800;font-size:1rem;cursor:pointer}
+  form button:hover{background:var(--sun2)}
+  footer{background:#071f2a;color:#8fb4bf;font-size:.9rem;padding:24px 0}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+  .ph{font-size:.74rem;color:#9fc3cd}
+  @media(max-width:900px){
+    .links{display:none}
+    .hero h1{font-size:2.05rem}
+    .fleet{grid-template-columns:1fr 1fr}
+    .sgrid{grid-template-columns:1fr}
+    .bait .two,.story .wrap,.cottage .two,.cbox{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="util"><div class="wrap">
+  <span>West side of Seneca Lake · 3 miles south of Geneva · Open seasonally</span>
+  <span><strong>315-789-3094</strong> · 4398 Clarks Point, Geneva, NY</span>
+</div></div>
+
+<nav><div class="wrap">
+  <div class="brand">ROY'S <span>MARINA</span></div>
+  <div class="links">
+    <a href="#rentals">Rentals</a>
+    <a href="#marina">Marina Services</a>
+    <a href="#bait">Bait &amp; Fuel</a>
+    <a href="#cottage">Cottage</a>
+    <a href="#contact">Reserve</a>
+  </div>
+  <a class="callbtn" href="tel:13157893094">Call the Dock</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <h1>Get on Seneca Lake today — boat, kayak, or paddleboard.</h1>
+  <p class="sub">Pull up to the west shore three miles south of Geneva and we'll have you on the water. Day rentals, a fuel dock, live bait, a launch, slips, and winter storage — the whole lake day in one stop.</p>
+  <div class="cta">
+    <a class="btn btn-a" href="#contact">Reserve a Boat</a>
+    <a class="btn btn-b" href="#rentals">See the Rental Fleet</a>
+  </div>
+  <p class="note">Family owned &amp; operated on Seneca Lake for over 73 years.</p>
+</div></header>
+
+<div class="strip"><div class="wrap">
+  <span>Boat &amp; kayak rentals</span><span>Fuel dock</span><span>Live bait &amp; tackle</span>
+  <span>Slips &amp; winter storage</span><span>Launch</span>
+</div></div>
+
+<section id="rentals"><div class="wrap">
+  <span class="eyebrow">Day rentals</span>
+  <h2>Pick your boat for the day</h2>
+  <p class="lead">No boat of your own? Spend the day on Seneca without owning one. Reserve ahead for a summer weekend, or call the dock to check what's open today.</p>
+  <div class="fleet">
+    <div class="boat"><h3>24′ Pontoon</h3><p>Easygoing cruiser for the whole family or a group — shade, seating, and room to swim off the back.</p><span class="rate">Call for daily rate</span></div>
+    <div class="boat"><h3>18′ Bow Rider</h3><p>Open-bow runabout for cruising the lake, tubing, and getting from cove to cove.</p><span class="rate">Call for daily rate</span></div>
+    <div class="boat"><h3>16′ Fishing Boat</h3><p>Rigged and ready for a morning after Seneca lake trout, perch, and bass.</p><span class="rate">Call for daily rate</span></div>
+    <div class="boat"><h3>Kayaks · Paddleboards · Canoes</h3><p>Paddle the shoreline by the hour. Grab a board or a kayak right off the dock.</p><span class="rate">Call for hourly rate</span></div>
+  </div>
+</div></section>
+
+<section id="marina" class="svcs"><div class="wrap">
+  <span class="eyebrow">For boat owners</span>
+  <h2>A home dock for your boat on Seneca</h2>
+  <p class="lead">Keep your boat with us for the season or the winter. We sell and service the brands that run this lake and keep the fuel dock open so you're never cutting a day short to find gas.</p>
+  <div class="sgrid">
+    <div class="scard"><h3>Summer Slips &amp; Dockage</h3><p>Seasonal slips on the west shore with easy lake access. Call early in spring — space goes fast for the season.</p></div>
+    <div class="scard"><h3>Winter Storage</h3><p>Year-round storage so your boat is put up safe in the off-season and ready when the water warms back up.</p></div>
+    <div class="scard"><h3>Sales &amp; Service</h3><p>Service for Evinrude, Johnson, Mercury, MerCruiser, and Honda — the motors already on the lake, fixed by people who run it.</p></div>
+  </div>
+</div></section>
+
+<section id="bait" class="bait"><div class="wrap">
+  <span class="eyebrow" style="color:#7fc6d6">Bait, fuel &amp; fishing</span>
+  <h2>Everything a day on the water actually needs</h2>
+  <div class="two" style="margin-top:24px">
+    <div>
+      <p class="lead">Fuel up, grab bait, get your license, and launch — all from the same dock. And when you want someone else to find the fish, our Roy's Boys charters know where they're holding.</p>
+      <ul class="checks">
+        <li>Fuel dock right on the water</li>
+        <li>Live bait &amp; tackle shop</li>
+        <li>NYS fishing licenses</li>
+        <li>Public launch access</li>
+        <li>Guided fishing charters (Roy's Boys)</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h3>Booking a charter?</h3>
+      <p>Our captains run Seneca for lake trout, salmon, and more. Tell us your dates and how many anglers and we'll line up a morning on the water.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="story"><div class="wrap">
+  <div>
+    <span class="eyebrow">73 years on this shore</span>
+    <h2>The same family, the same dock, since the boats had a lot less horsepower</h2>
+    <p class="lead">Three generations of one family have run Roy's on the west side of Seneca Lake. People who learned to water-ski off this dock now bring their grandkids back to rent the pontoon. That's the whole point of keeping it family-run.</p>
+    <div class="stats">
+      <div class="stat"><div class="n">73+</div><div class="l">Years on Seneca</div></div>
+      <div class="stat"><div class="n">5</div><div class="l">Rental boat types</div></div>
+      <div class="stat"><div class="n">Year-round</div><div class="l">Storage &amp; slips</div></div>
+    </div>
+  </div>
+  <div class="callout" style="background:var(--foam);border:1px solid var(--line)">
+    <h3 style="color:var(--deep)">One stop on the lake</h3>
+    <ul class="checks" style="margin-top:6px">
+      <li style="color:#2c4750">Rent a boat, kayak or board</li>
+      <li style="color:#2c4750">Fuel, bait, tackle &amp; licenses</li>
+      <li style="color:#2c4750">Launch &amp; seasonal slips</li>
+      <li style="color:#2c4750">Winter storage &amp; service</li>
+      <li style="color:#2c4750">Charters &amp; a lakeside cottage</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="cottage" class="cottage"><div class="wrap">
+  <span class="pill">Cottage rental</span>
+  <div class="two" style="margin-top:18px">
+    <div>
+      <h2>Stay right on Seneca Lake</h2>
+      <p class="lead">Roy's also rents a cottage on the water — wake up on the lake, walk to the dock, and have the boat, bait, and fuel a few steps away. Ask about available weeks for the season.</p>
+    </div>
+    <div class="callout" style="background:#fff;border:1px solid var(--line)">
+      <h3 style="color:var(--deep)">Plan your week on the water</h3>
+      <p style="color:#46606b">Tell us your dates and how many people. We'll let you know cottage availability and what's open for rentals while you're here. <span class="ph">(Rates &amp; available weeks confirmed by call — placeholder until provided.)</span></p>
+    </div>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <span class="eyebrow">Reserve / ask the dock</span>
+  <h2>Tell us when you want to be on the water</h2>
+  <div class="cbox">
+    <div class="cinfo">
+      <p>Reserving a boat, asking about a slip, or planning a cottage week — send the details and we'll get right back to you. In season, a quick call to the dock is fastest.</p>
+      <p><b>Phone:</b> <a href="tel:13157893094">315-789-3094</a></p>
+      <p><b>Email:</b> <a href="mailto:roysmari@rochester.rr.com">roysmari@rochester.rr.com</a></p>
+      <p><b>Where:</b> 4398 Clarks Point, Geneva, NY 14456 — west shore, 3 mi south of Geneva</p>
+      <p><b>Charters:</b> Ask about Roy's Boys guided fishing</p>
+    </div>
+    <form onsubmit="return false">
+      <label>Name</label><input type="text" placeholder="Your name">
+      <label>Phone</label><input type="tel" placeholder="Best number to reach you">
+      <label>What do you need?</label>
+      <select>
+        <option>Reserve a boat (pontoon / bow rider / fishing)</option>
+        <option>Kayak / paddleboard rental</option>
+        <option>Seasonal slip or dockage</option>
+        <option>Winter storage</option>
+        <option>Sales &amp; service</option>
+        <option>Cottage rental</option>
+        <option>Fishing charter (Roy's Boys)</option>
+      </select>
+      <label>Date(s)</label><input type="text" placeholder="When are you hoping to come?">
+      <label>Details</label>
+      <textarea rows="4" placeholder="How many people, what you're after, anything we should know."></textarea>
+      <button type="submit">Send Reservation Request</button>
+    </form>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>Roy's Marina · 4398 Clarks Point, Geneva, NY 14456 · 315-789-3094</span>
+  <span>Family owned on Seneca Lake for 73+ years · Rentals · Fuel · Bait · Slips · Storage</span>
+</div></footer>
+
+</body>
+</html>

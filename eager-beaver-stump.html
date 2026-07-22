@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eager Beaver Stump Grinding | Saugerties, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --moss:#3b4a2a; --moss-dark:#2c381f; --amber:#c9882f; --oat:#efe9da;
+    --ink:#262b1d; --line:#d8d1bd;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--oat);line-height:1.6}
+  h1,h2,h3,.disp{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.5px;line-height:1.05}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:50;background:var(--moss);color:var(--oat);border-bottom:3px solid var(--amber)}
+  .navbar{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{font-family:'Oswald';font-weight:700;font-size:1.25rem;letter-spacing:1px;display:flex;align-items:center;gap:10px}
+  .brand .axe{color:var(--amber)}
+  .navcta{background:var(--amber);color:#2c381f;font-family:'Oswald';font-weight:600;padding:11px 20px;border-radius:4px;letter-spacing:1px;font-size:.95rem}
+  .navcta:hover{background:#dd9c44}
+
+  /* HERO */
+  .hero{
+    min-height:88vh;display:flex;align-items:center;color:var(--oat);
+    background:linear-gradient(105deg,rgba(28,36,18,.92) 0%,rgba(44,56,31,.6) 55%,rgba(44,56,31,.2) 100%),url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1400&q=80');
+    background-size:cover;background-position:center;background-color:#2c381f;
+  }
+  .hero-inner{max-width:680px;padding:60px 0}
+  .kicker{font-family:'Oswald';color:var(--amber);letter-spacing:3px;font-weight:600;font-size:.9rem;margin-bottom:18px}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:700}
+  .hero h1 span{color:var(--amber)}
+  .hero p.sub{font-size:1.18rem;margin:22px 0 32px;max-width:540px;color:#e6e0cf}
+  .btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;font-family:'Oswald';font-weight:600;letter-spacing:1px;padding:15px 26px;border-radius:4px;font-size:1rem}
+  .btn-primary{background:var(--amber);color:#2c381f}
+  .btn-primary:hover{background:#dd9c44}
+  .btn-ghost{border:2px solid var(--oat);color:var(--oat)}
+  .btn-ghost:hover{background:var(--oat);color:var(--moss)}
+  .stats{display:flex;gap:38px;margin-top:46px;flex-wrap:wrap}
+  .stat .n{font-family:'Oswald';font-size:2.3rem;font-weight:700;color:var(--amber);line-height:1}
+  .stat .l{font-size:.82rem;text-transform:uppercase;letter-spacing:1.5px;color:#cdc6b4;margin-top:6px}
+
+  /* SECTIONS */
+  section{padding:78px 0}
+  .sec-kick{font-family:'Oswald';color:var(--amber);letter-spacing:3px;font-weight:600;font-size:.85rem}
+  .sec-title{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:700;margin:8px 0 14px;color:var(--moss)}
+  .lead{max-width:640px;color:#4a503c;font-size:1.05rem}
+
+  /* SERVICES 3-col */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:30px 26px;border-top:4px solid var(--moss);transition:.2s}
+  .card:hover{transform:translateY(-5px);border-top-color:var(--amber);box-shadow:0 16px 30px rgba(44,56,31,.12)}
+  .card h3{font-size:1.25rem;color:var(--moss);margin-bottom:10px}
+  .card p{font-size:.97rem;color:#555c46}
+  .card .ic{width:46px;height:46px;border-radius:8px;background:var(--oat);display:flex;align-items:center;justify-content:center;font-family:'Oswald';font-weight:700;color:var(--amber);font-size:1.3rem;margin-bottom:16px}
+
+  /* STAT BAND */
+  .band{background:var(--moss-dark);color:var(--oat)}
+  .band .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+  .band .n{font-family:'Oswald';font-size:2.4rem;color:var(--amber);font-weight:700}
+  .band .l{font-size:.82rem;letter-spacing:1.5px;text-transform:uppercase;color:#cdc6b4;margin-top:6px}
+
+  /* WHY split */
+  .why{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .why ul{list-style:none;margin-top:22px}
+  .why li{padding:12px 0 12px 34px;position:relative;border-bottom:1px dashed var(--line);font-size:1.02rem}
+  .why li:before{content:"";position:absolute;left:0;top:18px;width:16px;height:16px;background:var(--amber);border-radius:3px;transform:rotate(45deg)}
+  .why .photo{min-height:360px;border-radius:10px;
+    background:linear-gradient(0deg,rgba(44,56,31,.35),rgba(44,56,31,.1)),url('https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1400&q=80');
+    background-size:cover;background-position:center;background-color:#3b4a2a;}
+
+  /* GALLERY 4-tile */
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:46px}
+  .tile{min-height:230px;border-radius:8px;position:relative;overflow:hidden;background-size:cover;background-position:center}
+  .tile span{position:absolute;left:14px;bottom:12px;color:#fff;font-family:'Oswald';letter-spacing:1px;font-size:.9rem;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+  .t1{background:linear-gradient(0deg,rgba(28,36,18,.55),rgba(28,36,18,.1)),url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1400&q=80');background-color:#2c381f}
+  .t2{background:linear-gradient(0deg,rgba(28,36,18,.55),rgba(28,36,18,.1)),url('https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1400&q=80');background-color:#2c381f}
+  .t3{background:linear-gradient(0deg,rgba(28,36,18,.55),rgba(28,36,18,.1)),url('https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=1400&q=80');background-color:#2c381f}
+  .t4{background:linear-gradient(0deg,rgba(28,36,18,.55),rgba(28,36,18,.1)),url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80');background-color:#2c381f}
+
+  /* CONTACT split */
+  .contact{background:#fff;border-top:1px solid var(--line)}
+  .contact .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:54px}
+  .info p{margin:14px 0;font-size:1.03rem}
+  .info .lbl{font-family:'Oswald';color:var(--amber);letter-spacing:1.5px;font-size:.8rem;display:block;text-transform:uppercase}
+  .info a.big{font-family:'Oswald';font-size:2rem;color:var(--moss);font-weight:700}
+  form{background:var(--oat);padding:32px;border-radius:10px;border:1px solid var(--line)}
+  form h3{color:var(--moss);font-size:1.4rem;margin-bottom:18px}
+  .field{margin-bottom:14px}
+  label{display:block;font-size:.82rem;font-weight:600;margin-bottom:5px;color:#4a503c}
+  input,textarea,select{width:100%;padding:12px;border:1px solid var(--line);border-radius:6px;font-family:inherit;font-size:.95rem;background:#fff}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--amber)}
+  form button{width:100%;background:var(--moss);color:var(--oat);font-family:'Oswald';font-weight:600;letter-spacing:1px;padding:15px;border:none;border-radius:6px;font-size:1rem;cursor:pointer}
+  form button:hover{background:var(--moss-dark)}
+  .thanks{display:none;text-align:center;padding:40px 10px}
+  .thanks.show{display:block}
+  .thanks .chk{font-size:2.6rem;color:var(--amber)}
+  .thanks h3{color:var(--moss);margin:10px 0}
+
+  footer{background:var(--moss-dark);color:#cdc6b4;text-align:center;padding:34px 0;font-size:.9rem}
+  footer .by{color:var(--amber);font-family:'Oswald';letter-spacing:1px;margin-top:10px}
+
+  @media(max-width:860px){
+    .cards{grid-template-columns:1fr}
+    .band .wrap{grid-template-columns:1fr 1fr;gap:30px}
+    .why{grid-template-columns:1fr}
+    .why .photo{min-height:260px}
+    .gallery{grid-template-columns:1fr 1fr}
+    .contact .grid{grid-template-columns:1fr;gap:34px}
+    .navcta{padding:9px 14px;font-size:.85rem}
+    .brand{font-size:1.05rem}
+    .stats{gap:26px}
+  }
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap navbar">
+    <div class="brand"><span class="axe">&#9874;</span> EAGER BEAVER STUMP</div>
+    <a class="navcta" href="tel:18455909425">CALL (845) 590-9425</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div class="kicker">SAUGERTIES &amp; THE HUDSON VALLEY</div>
+    <h1>That stump is <span>gone</span> by the time we pack up.</h1>
+    <p class="sub">Keith has been grinding stumps for over 45 years. One machine, one operator, and a yard that looks like the tree was never there. Clean-up is always part of the job.</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="#estimate">GET A FREE ESTIMATE</a>
+      <a class="btn btn-ghost" href="tel:18455909425">CALL KEITH NOW</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="n">45+</div><div class="l">Years grinding</div></div>
+      <div class="stat"><div class="n">1</div><div class="l">Owner on every job</div></div>
+      <div class="stat"><div class="n">Yes</div><div class="l">Clean-up included</div></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="sec-kick">WHAT WE DO</div>
+    <h2 class="sec-title">Stumps are all we do &mdash; so we do them right</h2>
+    <p class="lead">No tree crews stretched thin, no upselling you on work you don't need. Just a guy with the right grinder who shows up, levels the stump below grade, and rakes the chips before he leaves.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="ic">01</div>
+        <h3>Stump Grinding</h3>
+        <p>Ground down 4&ndash;6 inches below the surface so you can re-seed, plant, or pour over it. Surface roots chased out where they cause trouble.</p>
+      </div>
+      <div class="card">
+        <div class="ic">02</div>
+        <h3>Full Stump Removal</h3>
+        <p>When you need the root ball out completely &mdash; for a new patio, fence line, or addition &mdash; Keith pulls the whole thing.</p>
+      </div>
+      <div class="card">
+        <div class="ic">03</div>
+        <h3>Clean-Up &amp; Haul</h3>
+        <p>Chips raked, holes back-filled, the spot left ready for grass. You won't be staring at a mound of debris for a week.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap" style="padding-top:48px;padding-bottom:48px">
+    <div class="stat"><div class="n">45+</div><div class="l">Years in the trade</div></div>
+    <div class="stat"><div class="n">1000s</div><div class="l">Stumps ground</div></div>
+    <div class="stat"><div class="n">Local</div><div class="l">Saugerties based</div></div>
+    <div class="stat"><div class="n">Tidy</div><div class="l">Always cleaned up</div></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap why">
+    <div>
+      <div class="sec-kick">WHY KEITH</div>
+      <h2 class="sec-title">Four decades on the grinder, not behind a desk</h2>
+      <ul>
+        <li>Owner-operated since the 1970s &mdash; the man on the phone is the man on the job.</li>
+        <li>Tight-access machines that fit through a backyard gate without tearing up the lawn.</li>
+        <li>Honest, up-front pricing measured to the stump &mdash; no surprise add-ons.</li>
+        <li>Chips and debris hauled or back-filled so your yard is ready to plant.</li>
+        <li>Saugerties neighbors and the surrounding towns, treated like neighbors.</li>
+      </ul>
+    </div>
+    <div class="photo"></div>
+  </div>
+</section>
+
+<section style="background:#fff;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-kick">RECENT WORK</div>
+    <h2 class="sec-title">Before-and-after, every time</h2>
+    <div class="gallery">
+      <div class="tile t1"><span>Backyard oak stump</span></div>
+      <div class="tile t2"><span>Ground below grade</span></div>
+      <div class="tile t3"><span>Cleared for new sod</span></div>
+      <div class="tile t4"><span>Tight gate access</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="estimate">
+  <div class="wrap">
+    <div class="sec-kick">GET STARTED</div>
+    <h2 class="sec-title">Send Keith the details &mdash; get a real number back</h2>
+    <div class="grid" style="margin-top:34px">
+      <div class="info">
+        <p><span class="lbl">Call or text</span><a class="big" href="tel:18455909425">(845) 590-9425</a></p>
+        <p><span class="lbl">Email</span><a href="mailto:eagerbeavergrindingstumps@gmail.com">eagerbeavergrindingstumps@gmail.com</a></p>
+        <p><span class="lbl">Service area</span>Saugerties, Woodstock, Kingston, and surrounding Ulster County towns.</p>
+        <p><span class="lbl">Hours</span>Mon&ndash;Sat 7:00am&ndash;6:00pm. Storm-related work by call.</p>
+      </div>
+      <div>
+        <form id="form" onsubmit="event.preventDefault();document.getElementById('form').style.display='none';document.getElementById('ty').classList.add('show');">
+          <h3>Request a free estimate</h3>
+          <div class="field"><label>Your name</label><input type="text" required></div>
+          <div class="field"><label>Phone</label><input type="tel" required></div>
+          <div class="field"><label>How many stumps?</label>
+            <select><option>1 stump</option><option>2&ndash;3 stumps</option><option>4 or more</option><option>Not sure</option></select>
+          </div>
+          <div class="field"><label>Tell Keith about the job</label><textarea rows="3" placeholder="Size, location, access..."></textarea></div>
+          <button type="submit">SEND MY REQUEST</button>
+        </form>
+        <div class="thanks" id="ty">
+          <div class="chk">&#10003;</div>
+          <h3>Got it &mdash; thanks!</h3>
+          <p>Keith will get back to you shortly to set up a look. For anything urgent, call <strong>(845) 590-9425</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Eager Beaver Stump Grinding &middot; Saugerties, NY &middot; (845) 590-9425
+    <div class="by">Website preview by Onyx Rise Media</div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Michael Castner's Garage — Welding &amp; Farm/Truck Equipment Repair, Penn Yan NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--steel:#20242a;--plate:#2c323a;--gray:#8a929c;--amber:#f28f1c;--spark:#ffc247;--pane:#eceef1;--ink:#1a1d22;--white:#f7f8f9;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Barlow',sans-serif;background:var(--white);color:var(--ink);line-height:1.6;}
+  h1,h2,h3{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.08;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 22px;}
+  .topbar{background:#14171b;color:var(--white);padding:10px 0;font-size:.9rem;}
+  .topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:center;}
+  .topbar b{font-family:'Oswald',sans-serif;letter-spacing:.05em;}
+  .topbar a{color:var(--spark);text-decoration:none;font-weight:600;}
+  .hero{position:relative;background:
+     linear-gradient(rgba(20,23,27,.86),rgba(20,23,27,.9)),
+     repeating-linear-gradient(135deg,#2c323a 0 20px,#262b32 20px 40px);
+     color:var(--white);padding:82px 0 70px;border-bottom:7px solid var(--amber);}
+  .hero .tag{display:inline-block;background:var(--amber);color:#1c1204;font-weight:700;font-size:.76rem;letter-spacing:.15em;text-transform:uppercase;padding:6px 13px;margin-bottom:20px;}
+  .hero h1{font-size:clamp(2.1rem,5.5vw,3.6rem);max-width:20ch;}
+  .hero p{max-width:58ch;margin-top:16px;font-size:1.06rem;color:#cfd4da;}
+  .btn{display:inline-block;margin-top:26px;background:var(--amber);color:#1c1204;font-weight:700;padding:15px 32px;text-decoration:none;font-size:1.02rem;text-transform:uppercase;letter-spacing:.05em;font-family:'Oswald',sans-serif;}
+  .btn.ghost{background:transparent;color:var(--spark);border:2px solid var(--spark);margin-left:12px;}
+  section{padding:64px 0;}
+  .sec-h{font-size:2rem;margin-bottom:6px;}
+  .lead{color:#565e68;max-width:64ch;margin-bottom:30px;}
+  .svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;}
+  .scard{background:var(--pane);border-left:6px solid var(--amber);padding:26px;}
+  .scard h3{font-size:1.3rem;margin-bottom:10px;color:var(--plate);}
+  .scard p{font-size:.96rem;color:#3d434b;}
+  .scard .k{margin-top:14px;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#7a828c;font-family:'Oswald',sans-serif;}
+  .who{background:var(--steel);color:var(--white);}
+  .who h2{font-size:2rem;color:var(--spark);margin-bottom:26px;}
+  .wgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;}
+  .witem{border-top:3px solid var(--amber);padding-top:14px;}
+  .witem h3{font-size:1.1rem;margin-bottom:8px;}
+  .witem p{font-size:.93rem;color:#c3c9d0;}
+  .season .cols{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;}
+  .season h2{font-size:2rem;color:var(--plate);margin-bottom:14px;}
+  .season p{margin-bottom:12px;color:#3d434b;}
+  .season .box{background:#14171b;color:var(--white);padding:30px;border-top:5px solid var(--amber);}
+  .season .box h3{color:var(--spark);font-size:1.2rem;margin-bottom:10px;}
+  .season .box p{color:#c9ced4;font-size:.96rem;}
+  .about{background:var(--pane);}
+  .about .cols{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:start;}
+  .about h2{font-size:2rem;color:var(--plate);margin-bottom:14px;}
+  .about p{margin-bottom:12px;color:#3d434b;}
+  .facts{background:#fff;border:1px solid #d8dce1;padding:24px;}
+  .facts table{width:100%;border-collapse:collapse;font-size:.92rem;}
+  .facts td{padding:9px 0;border-bottom:1px solid #e2e6ea;vertical-align:top;}
+  .facts td:first-child{color:var(--amber);font-weight:700;font-family:'Oswald',sans-serif;letter-spacing:.03em;width:44%;}
+  .contact{background:var(--amber);text-align:center;}
+  .contact h2{font-size:2.3rem;color:#1c1204;}
+  .contact p{max-width:52ch;margin:12px auto 0;color:#4a3308;}
+  .contact .num{font-family:'Oswald',sans-serif;font-size:2.4rem;color:#14171b;display:inline-block;margin-top:20px;text-decoration:none;}
+  .contact .addr{margin-top:12px;color:#5a3f0a;font-size:.95rem;}
+  footer{background:#14171b;color:var(--gray);padding:22px 0;font-size:.85rem;}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+  @media(max-width:780px){.season .cols,.about .cols{grid-template-columns:1fr;}.btn.ghost{margin-left:0;margin-top:12px;}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <b>MICHAEL CASTNER'S GARAGE</b>
+    <span>2630 Stape Rd, Penn Yan · <a href="tel:3155367100">(315) 536-7100</a></span>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">Welding &amp; Machine Work · Penn Yan, NY</span>
+    <h1>When the equipment breaks, you need it running — not on a waiting list.</h1>
+    <p>Steel and aluminum welding, truck and farm equipment repair, and lathe and milling machine work on Stape Road in Penn Yan. The shop Yates County farmers, truckers, and contractors call when a dealer would take two weeks.</p>
+    <a class="btn" href="tel:3155367100">Call the Shop</a>
+    <a class="btn ghost" href="#services">What We Do</a>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <h2 class="sec-h">What we do</h2>
+    <p class="lead">Not just a weld. We can build or machine the part, fit it, and get the machine back in the field.</p>
+    <div class="svc">
+      <div class="scard">
+        <h3>Steel &amp; Aluminum Welding</h3>
+        <p>Structural and repair welding in both steel and aluminum — the aluminum work most rural shops send away. Cracked frames, broken brackets, torn buckets, trailer damage, and everything in between.</p>
+        <div class="k">Steel · Aluminum · Cast repair</div>
+      </div>
+      <div class="scard">
+        <h3>Truck &amp; Farm Equipment Repair</h3>
+        <p>Repairs on trucks, tractors, wagons, implements, and trailers. We fix what keeps the farm and the route moving — and we understand what a day of downtime costs during harvest.</p>
+        <div class="k">Tractors · Trucks · Implements</div>
+      </div>
+      <div class="scard">
+        <h3>Lathe &amp; Milling Machine Work</h3>
+        <p>In-house lathe and mill let us turn, bore, and machine parts to spec — resurface a shaft, make a bushing, modify a fitting. When the part is obsolete, we make it.</p>
+        <div class="k">Turning · Boring · Custom parts</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="who">
+  <div class="wrap">
+    <h2>Who we keep running</h2>
+    <div class="wgrid">
+      <div class="witem"><h3>Farms</h3><p>Dairy and crop operations across Yates County that can't lose a day mid-season to a broken implement.</p></div>
+      <div class="witem"><h3>Owner-Operators</h3><p>Truckers who need a frame, hitch, or bracket welded right and back on the road fast.</p></div>
+      <div class="witem"><h3>Contractors</h3><p>Excavation and building crews with damaged buckets, blades, trailers, and steel to repair.</p></div>
+      <div class="witem"><h3>Anyone with steel or aluminum</h3><p>If it's metal and it's broken, bring it in — we'll tell you straight whether we can fix it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="season">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h2>A local shop beats a dealer in-season</h2>
+        <p>When a tractor goes down in planting or harvest, the dealer's queue doesn't care about your weather window. A local welder who can also machine the part gets you back in the field the same week — sometimes the same day.</p>
+        <p>That's the whole point of a shop like this: fabricate, repair, and machine under one roof, close to home, on a first-name basis.</p>
+      </div>
+      <div class="box">
+        <h3>No website, no problem finding us</h3>
+        <p>Right now, searching for a welder or farm-equipment repair near Penn Yan won't turn up this shop. This page is a concept to fix exactly that — so the next farmer with a cracked frame calls Stape Road first.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h2>Forty years on Stape Road</h2>
+        <p>Michael Castner's Garage has welded, repaired, and machined for Penn Yan-area farms and businesses since the mid-1980s. It's a working shop with a lathe and a mill, not a franchise service bay — the kind of place where you talk to the person doing the work.</p>
+        <p>Note: this is Michael Castner's Garage on Stape Road — separate from the diesel-performance shop that shares the Castner name across town.</p>
+      </div>
+      <div class="facts">
+        <table>
+          <tr><td>In business since</td><td>~1985</td></tr>
+          <tr><td>Location</td><td>2630 Stape Road, Penn Yan, NY 14527</td></tr>
+          <tr><td>Welding</td><td>Steel &amp; aluminum</td></tr>
+          <tr><td>Machine work</td><td>In-house lathe &amp; mill</td></tr>
+          <tr><td>Serves</td><td>Farms, trucking, contractors — Yates County</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Broke something? Call the shop.</h2>
+    <p>Tell us what happened and what it's off of. If we can weld it, repair it, or machine the part, we'll get you a straight answer and a turnaround.</p>
+    <a class="num" href="tel:3155367100">(315) 536-7100</a>
+    <div class="addr">2630 Stape Road, Penn Yan, NY 14527</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Michael Castner's Garage · Penn Yan, NY</span>
+    <span>Welding · Farm &amp; truck equipment repair · Machine work</span>
+  </div>
+</footer>
+
+</body>
+</html>

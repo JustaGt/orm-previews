@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>True Blue Canvas — Custom Boat Enclosures, Dodgers &amp; Polywindow · Lindenhurst, NY</title>
+<style>
+  :root{
+    --blue:#15406b; --blue2:#1d5a8f; --sky:#3f86c4; --cream:#f6f1e6;
+    --sand:#e9e1cf; --ink:#152330; --slate:#5a6b78; --line:#d8cfbb;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  .sans{font-family:"Helvetica Neue",Arial,sans-serif}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+  a{color:inherit}
+  header{background:var(--blue);color:#fff}
+  .top{display:flex;justify-content:space-between;align-items:center;padding:16px 0;font-family:"Helvetica Neue",Arial,sans-serif}
+  .brand{font-weight:700;letter-spacing:.04em;font-size:1.12rem}
+  .brand small{display:block;font-size:.62rem;letter-spacing:.32em;color:#b9d3ea;font-weight:400;margin-top:2px}
+  .top a.q{background:var(--cream);color:var(--blue);padding:9px 16px;border-radius:2px;text-decoration:none;font-weight:700;font-size:.86rem}
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center;padding:54px 0}
+  .hero .stitch{border:2px dashed rgba(255,255,255,.35);border-radius:10px;padding:30px}
+  .hero h1{font-size:2.45rem;line-height:1.16;margin-bottom:16px}
+  .hero p{font-size:1.1rem;color:#dce8f2}
+  .hero .meta{margin-top:22px;font-family:"Helvetica Neue",Arial,sans-serif;font-size:.86rem;color:#b9d3ea;letter-spacing:.03em}
+  .btnrow{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{font-family:"Helvetica Neue",Arial,sans-serif;display:inline-block;padding:13px 22px;border-radius:3px;text-decoration:none;font-weight:700;font-size:.95rem}
+  .btn-s{background:var(--sky);color:#fff}
+  .btn-o{background:transparent;color:#fff;border:1.5px solid #fff}
+  .side{background:rgba(255,255,255,.06);border-radius:10px;padding:26px}
+  .side h4{font-family:"Helvetica Neue",Arial,sans-serif;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sky);margin-bottom:14px}
+  .side li{list-style:none;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.12);color:#eaf2f8;font-size:1.02rem}
+  .side li:last-child{border:0}
+  section{padding:56px 0}
+  .h2{font-size:1.8rem;color:var(--blue);margin-bottom:8px}
+  .lead{color:var(--slate);max-width:62ch;margin-bottom:32px;font-size:1.04rem}
+  .make{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .m{background:#fff;border:1px solid var(--line);border-radius:8px;padding:22px}
+  .m h3{font-size:1.1rem;color:var(--blue2);margin-bottom:7px}
+  .m p{font-family:"Helvetica Neue",Arial,sans-serif;font-size:.92rem;color:#4a5a66}
+  .poly{background:var(--blue);color:#fff}
+  .poly .h2{color:#fff}
+  .poly .two{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+  .poly p{color:#dce8f2;font-size:1.05rem}
+  .poly .card{background:rgba(255,255,255,.07);border-radius:10px;padding:26px}
+  .poly .card b{color:var(--sky);font-size:1.05rem;font-family:"Helvetica Neue",Arial,sans-serif}
+  .poly .card li{list-style:none;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:1rem}
+  .poly .card li:last-child{border:0}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:s}
+  .step{background:#fff;border:1px solid var(--line);border-radius:8px;padding:20px;position:relative}
+  .step:before{counter-increment:s;content:counter(s);font-family:"Helvetica Neue",Arial,sans-serif;font-weight:800;color:var(--sky);font-size:1.4rem}
+  .step h4{margin:6px 0 4px;color:var(--blue2);font-size:1.05rem}
+  .step p{font-family:"Helvetica Neue",Arial,sans-serif;font-size:.88rem;color:#4a5a66}
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .gph{background:var(--sand);border:1px dashed #c4b89c;border-radius:8px;height:150px;display:flex;align-items:center;justify-content:center;color:#9a8f76;font-family:"Helvetica Neue",Arial,sans-serif;font-size:.82rem;text-align:center;padding:10px}
+  .contact{background:#fff;border-top:3px solid var(--sky)}
+  .crow{display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center}
+  .cbig{font-family:"Helvetica Neue",Arial,sans-serif}
+  .cbig .num{font-size:2.1rem;font-weight:800;color:var(--blue);text-decoration:none;display:inline-block;margin:6px 0}
+  .cbig a.mail{color:var(--blue2);text-decoration:none;font-weight:700}
+  .addr{background:var(--cream);border-radius:8px;padding:22px;font-family:"Helvetica Neue",Arial,sans-serif;font-size:.95rem;color:#3a4a55}
+  footer{background:var(--ink);color:#9fb0bc;font-family:"Helvetica Neue",Arial,sans-serif;font-size:.82rem;padding:22px 0;text-align:center}
+  .ph{font-size:.72rem;color:#9a8f76;font-style:italic;font-family:"Helvetica Neue",Arial,sans-serif}
+  @media(max-width:820px){.hero,.poly .two,.crow{grid-template-columns:1fr}.make,.steps,.gallery{grid-template-columns:1fr 1fr}.top a.q{display:none}}
+  @media(max-width:520px){.make,.steps,.gallery{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">TRUE BLUE CANVAS<small>MARINE ENCLOSURES · LINDENHURST, NY</small></div>
+      <a class="q" href="#quote">Get a canvas quote</a>
+    </div>
+    <div class="hero">
+      <div class="stitch">
+        <h1>Boat enclosures that fit your boat — measured, stitched, and installed by hand.</h1>
+        <p>Custom biminis, dodgers, full enclosures, and crystal-clear Polywindow cabins, built at our shop inside the Anchorage Yacht Club. No off-the-rack guesswork.</p>
+        <div class="meta">Power &amp; sail · 20+ years on the water · Long Island, Queens, Brooklyn &amp; Manhattan</div>
+        <div class="btnrow">
+          <a class="btn btn-s" href="#quote">Book a measure-up</a>
+          <a class="btn btn-o" href="tel:+16319563404">Call 631-956-3404</a>
+        </div>
+      </div>
+      <div class="side">
+        <h4>What we fabricate</h4>
+        <li>Full &amp; partial enclosures</li>
+        <li>Biminis &amp; sailboat dodgers</li>
+        <li>Polywindow polycarbonate panels</li>
+        <li>Cockpit cushions &amp; upholstery</li>
+        <li>Winter &amp; mooring covers</li>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="h2">Canvas for every part of the boat</div>
+    <p class="lead">Each piece is patterned to your hull and the way you actually use the boat — not pulled from a size chart.</p>
+    <div class="make">
+      <div class="m"><h3>Enclosures &amp; dodgers</h3><p>Full cockpit enclosures, hard-top connectors, and sailboat dodgers cut to your frame so you stay out of wind and spray.</p></div>
+      <div class="m"><h3>Polywindow cabins</h3><p>Scratch-resistant polycarbonate panels that stay clear for years — a real upgrade over the cloudy vinyl that yellows after a season or two.</p></div>
+      <div class="m"><h3>Upholstery &amp; cushions</h3><p>Cockpit bolsters, helm seats, and cabin cushions rebuilt in marine-grade foam and fabric that handles sun and salt.</p></div>
+      <div class="m"><h3>Biminis &amp; shades</h3><p>Shade tops and sun covers sized to your beam and grab-rail layout for clean lines and full coverage.</p></div>
+      <div class="m"><h3>Winter &amp; mooring covers</h3><p>Custom-fit covers that shed water and snow and actually go back on right next fall.</p></div>
+      <div class="m"><h3>Sailboat canvas</h3><p>Sail covers, stack packs, and dodger-bimini combinations built for the rig you sail.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="poly">
+  <div class="wrap">
+    <div class="h2">Why owners ask for Polywindow</div>
+    <div class="two">
+      <p>Standard clear vinyl scratches, hazes, and yellows — usually right when you want the view. Our polycarbonate enclosures use scratch-resistant panels that keep their clarity season after season, so the helm stays bright and the resale stays strong.</p>
+      <div class="card">
+        <b>The difference, plainly</b>
+        <li>Scratch-resistant — wipes clean without clouding</li>
+        <li>Holds clarity for years, not months</li>
+        <li>Rigid panels that seal tight against weather</li>
+        <li>Fitted to your frame, not a stock pattern</li>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h2">How a job goes</div>
+    <p class="lead">Good canvas starts with listening, then measuring. Here's the order of things.</p>
+    <div class="steps">
+      <div class="step"><h4>Listen</h4><p>We talk through how you use the boat and what's bugging you about the current setup.</p></div>
+      <div class="step"><h4>Measure</h4><p>On-boat patterning so the panels match your hull, frame, and hardware exactly.</p></div>
+      <div class="step"><h4>Fabricate</h4><p>Cut and sewn in our Lindenhurst shop in the materials we picked together.</p></div>
+      <div class="step"><h4>Install</h4><p>Fitted and adjusted on the boat so every snap and zipper lands where it should.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="h2">Recent work</div>
+    <p class="lead">A few examples from the shop — photos to be added from True Blue's portfolio.</p>
+    <div class="gallery">
+      <div class="gph">Polywindow enclosure — photo placeholder</div>
+      <div class="gph">Sailboat dodger — photo placeholder</div>
+      <div class="gph">Cockpit cushions — photo placeholder</div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="quote">
+  <div class="wrap">
+    <div class="crow">
+      <div class="cbig">
+        <div class="h2">Start with a measure-up</div>
+        <p class="lead">Tell us the boat and what you'd like covered. We'll set a time to measure and talk materials.</p>
+        <a class="num" href="tel:+16319563404">631-956-3404</a><br>
+        <a class="mail" href="mailto:info@truebluecanvas.com">info@truebluecanvas.com</a>
+      </div>
+      <div class="addr">
+        <strong>True Blue Canvas Inc.</strong><br>
+        At Anchorage Yacht Club<br>
+        410 East Shore Road<br>
+        Lindenhurst, NY 11757<br><br>
+        Serving Long Island, Queens, Brooklyn &amp; Manhattan<br>
+        <span class="ph">Shop hours to be confirmed before publishing — placeholder.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>True Blue Canvas Inc · Lindenhurst, NY · Custom marine enclosures, Polywindow panels, upholstery &amp; covers</footer>
+</body>
+</html>

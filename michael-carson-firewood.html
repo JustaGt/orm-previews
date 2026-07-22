@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Michael Carson Firewood — Cut, Split &amp; Delivered — Willsboro, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--oak:#c78a3b;--char:#2b2320;--cream:#f7f1e6;--ash:#8a7a6a;--ember:#a34b28}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'IBM Plex Sans',sans-serif;background:var(--cream);color:var(--char);line-height:1.65}
+h1,h2,h3{font-family:'Alfa Slab One',serif;font-weight:400}
+.wrap{max-width:1020px;margin:0 auto;padding:0 22px}
+.grain{height:14px;background:radial-gradient(circle at 10% 50%,var(--oak) 3px,transparent 4px),radial-gradient(circle at 35% 50%,#b57c33 4px,transparent 5px),radial-gradient(circle at 60% 50%,var(--oak) 3px,transparent 4px),radial-gradient(circle at 85% 50%,#b57c33 4px,transparent 5px);background-color:var(--char);background-size:120px 14px}
+header{background:var(--char);color:var(--cream);padding:16px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.logo{font-family:'Alfa Slab One';font-size:1.1rem;letter-spacing:.02em}
+.logo span{color:var(--oak)}
+header a{color:var(--char);background:var(--oak);padding:9px 18px;border-radius:3px;text-decoration:none;font-weight:600;font-size:.92rem}
+.hero{background:var(--char);color:var(--cream);padding:74px 0 64px}
+.hero .pre{color:var(--oak);text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;font-weight:600}
+.hero h1{font-size:clamp(2rem,5.2vw,3.4rem);line-height:1.12;margin:16px 0 18px;max-width:18ch}
+.hero p{max-width:52ch;font-size:1.07rem;color:#d9cfc0}
+.hero .row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+.b{display:inline-block;text-decoration:none;padding:14px 26px;border-radius:3px;font-weight:600}
+.b.fire{background:var(--ember);color:#fff}
+.b.line{border:2px solid var(--oak);color:var(--oak)}
+section{padding:62px 0}
+.k{text-transform:uppercase;letter-spacing:.15em;font-size:.75rem;color:var(--ember);font-weight:600}
+h2{font-size:clamp(1.5rem,3.4vw,2.15rem);color:var(--char);margin:8px 0 14px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:26px}
+.card{background:#fff;border:2px solid var(--char);border-radius:6px;padding:26px;position:relative}
+.card .tape{position:absolute;top:-12px;left:24px;background:var(--oak);color:var(--char);font-weight:600;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:2px}
+.card h3{font-size:1.15rem;margin-bottom:6px}
+.card .price{font-family:'Alfa Slab One';color:var(--ember);font-size:1.5rem;margin:8px 0}
+.card p{font-size:.92rem;color:#584c40}
+.seasoned{background:var(--char);color:var(--cream)}
+.seasoned h2{color:var(--cream)}
+.seasoned .split{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:26px;border-radius:8px;overflow:hidden}
+.seasoned .half{padding:30px}
+.seasoned .half.dry{background:#3d332c}
+.seasoned .half.wet{background:#241d19}
+.seasoned .half h3{font-size:1.05rem;color:var(--oak);margin-bottom:10px}
+.seasoned .half ul{list-style:none}
+.seasoned .half li{font-size:.93rem;margin-bottom:8px;color:#d9cfc0;padding-left:18px;position:relative}
+.seasoned .half.dry li:before{content:"✓";position:absolute;left:0;color:var(--oak)}
+.seasoned .half.wet li:before{content:"✗";position:absolute;left:0;color:var(--ember)}
+.seasoned .note{margin-top:18px;font-size:.9rem;color:#b3a695;font-style:italic}
+.delivery .map{background:#fff;border:2px dashed var(--ash);border-radius:8px;padding:28px;margin-top:24px}
+.delivery .map strong{font-family:'Alfa Slab One';font-weight:400;color:var(--ember)}
+.delivery .towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.delivery .towns span{background:var(--cream);border:1px solid var(--ash);padding:6px 14px;border-radius:18px;font-size:.86rem}
+.order{background:var(--ember);color:#fff}
+.order h2{color:#fff}
+.order .k{color:#ffd8a8}
+.order p{max-width:56ch;color:#ffe9d4;font-size:1.02rem}
+.order .b{background:#fff;color:var(--ember);margin-top:22px}
+.contact{background:var(--cream)}
+.contact .box{background:#fff;border:2px solid var(--char);border-radius:6px;padding:32px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px}
+.contact li{list-style:none;margin-bottom:10px}
+.contact a{color:var(--ember);font-weight:600}
+.contact .hint{font-size:.88rem;color:#6b5d4e;font-style:italic}
+.steps{counter-reset:s}
+.steps li{counter-increment:s;padding-left:40px;position:relative;margin-bottom:14px}
+.steps li:before{content:counter(s);position:absolute;left:0;top:0;width:26px;height:26px;background:var(--oak);color:var(--char);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem}
+footer{background:var(--char);color:#9c8d7c;text-align:center;padding:22px;font-size:.84rem}
+@media(max-width:740px){.seasoned .split,.contact .box{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="logo">MICHAEL CARSON <span>FIREWOOD</span></div>
+<a href="tel:15185709595">(518) 570-9595</a>
+</div></header>
+<div class="grain"></div>
+
+<section class="hero"><div class="wrap">
+<div class="pre">Willsboro, NY · Cut · Split · Delivered</div>
+<h1>Dry wood in the shed before the first cold night.</h1>
+<p>Michael Carson Firewood cuts, splits, and delivers cordwood from Carson Way in Willsboro — a registered hauler with the truck to get a full cord up a camp road. Order in summer, burn easy all winter.</p>
+<div class="row">
+<a class="b fire" href="tel:15185709595">Call or text to order</a>
+<a class="b line" href="#order">How ordering works</a>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="k">What you get</div>
+<h2>Honest measure. No mystery piles.</h2>
+<div class="cards">
+<div class="card"><div class="tape">Full cord</div><h3>The winter workhorse</h3><div class="price">[PRICE]</div><p>4×4×8 stacked — a real cord, not a "truckload." Mixed hardwood, cut to your stove length. [Lengths/species — confirm with Michael]</p></div>
+<div class="card"><div class="tape">Half cord</div><h3>Shoulder seasons</h3><div class="price">[PRICE]</div><p>For camps, fall weekends, and topping off a rack before the holidays.</p></div>
+<div class="card"><div class="tape">Add-on</div><h3>Stacking</h3><div class="price">[PRICE]</div><p>We can stack where you burn it, not where the tailgate happened to be. [Confirm availability]</p></div>
+</div>
+</div></section>
+
+<section class="seasoned"><div class="wrap">
+<div class="k" style="color:#ffd8a8">The part nobody puts in writing</div>
+<h2>"Seasoned" should mean something.</h2>
+<div class="split">
+<div class="half dry"><h3>Wood that's ready</h3><ul>
+<li>Checked ends, gray face, light for its size</li>
+<li>Lights without a fight, burns hot and clean</li>
+<li>Less creosote up your chimney</li>
+</ul></div>
+<div class="half wet"><h3>Wood that isn't</h3><ul>
+<li>Hisses and steams on the coals</li>
+<li>Smolders, smokes out the neighbors</li>
+<li>Gums up stove glass and flue</li>
+</ul></div>
+</div>
+<p class="note">Ask us what's ready to burn now and what's better bought ahead for next year — we'll tell you straight before it goes on the truck.</p>
+</div></section>
+
+<section class="delivery"><div class="wrap">
+<div class="k">Delivery</div>
+<h2>We know these roads because we live on one.</h2>
+<div class="map">
+<p><strong>Based at 30 Carson Way, Willsboro.</strong> Regular deliveries around the town and the Champlain shore — if you're close to these, you're on the route:</p>
+<div class="towns"><span>Willsboro</span><span>Willsboro Point</span><span>Essex</span><span>Reber</span><span>Westport</span><span>Keeseville</span></div>
+</div>
+</div></section>
+
+<section class="order" id="order"><div class="wrap">
+<div class="k">Order window</div>
+<h2>The delivery list fills by fall. Get on it in July.</h2>
+<p>Everybody calls the week of the first frost. The people who burn easy all winter are the ones who ordered while it was still swimming weather — call now, pick a delivery week, and forget about it.</p>
+<a class="b" href="tel:15185709595">Get on the list — (518) 570-9595</a>
+</div></section>
+
+<section class="contact"><div class="wrap">
+<div class="k">Ordering</div>
+<h2>Three steps, no forms.</h2>
+<div class="box">
+<ol class="steps">
+<li><strong>Call or text (518) 570-9595</strong> with how much you want and your road.</li>
+<li><strong>We confirm</strong> the amount, the price, and a delivery week that works.</li>
+<li><strong>Wood shows up</strong> — dumped or stacked, and you're set for the season.</li>
+</ol>
+<ul>
+<li><strong>Michael Carson Firewood</strong></li>
+<li>30 Carson Way, Willsboro, NY 12996</li>
+<li>Call/text: <a href="tel:15185709595">(518) 570-9595</a></li>
+<li>Email: <a href="mailto:michaelcarson9595@yahoo.com">michaelcarson9595@yahoo.com</a></li>
+<li class="hint">USDOT-registered hauler · Carson family, Willsboro</li>
+</ul>
+</div>
+</div></section>
+
+<div class="grain"></div>
+<footer>Michael Carson Firewood · 30 Carson Way, Willsboro, NY · (518) 570-9595</footer>
+</body>
+</html>

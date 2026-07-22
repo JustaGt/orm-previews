@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tony's Shoe Repair &amp; Sales — Westfield, NY | If You Break It, Take It to Tony</title>
+<meta name="description" content="Three generations of shoe, boot, zipper and baseball-glove repair at 12 N Portage St, Westfield NY. Work boots, orthopedic and hunting boots sold in store. Call (716) 326-2040.">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--leather:#6b4423;--dark:#3b2814;--cream:#f7f1e5;--paper:#fffdf7;--stitch:#c9a227;--ink:#2c2318}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+h1,h2,h3{font-family:'Zilla Slab',serif}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+.topbar{background:var(--dark);color:var(--cream);font-size:.95rem;padding:8px 0}
+.topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.topbar a{color:var(--stitch);text-decoration:none;font-weight:600}
+header{background:var(--leather);color:var(--cream);padding:14px 0;border-bottom:4px dashed var(--stitch)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.logo{font-family:'Zilla Slab',serif;font-size:1.5rem;font-weight:700}
+.logo span{color:var(--stitch)}
+nav a{color:var(--cream);text-decoration:none;margin-left:18px;font-weight:600;font-size:.95rem}
+.hero{background:linear-gradient(160deg,var(--dark) 0%,var(--leather) 100%);color:var(--cream);padding:72px 0 64px;position:relative}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:14px;border-bottom:3px dashed rgba(247,241,229,.35)}
+.hero .kicker{color:var(--stitch);text-transform:uppercase;letter-spacing:.14em;font-weight:600;font-size:.85rem}
+.hero h1{font-size:clamp(2rem,5vw,3.1rem);margin:12px 0 16px;max-width:19ch}
+.hero p{max-width:56ch;font-size:1.1rem;opacity:.94}
+.btnrow{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 26px;border-radius:6px;font-weight:700;text-decoration:none;font-size:1rem}
+.btn-gold{background:var(--stitch);color:var(--dark)}
+.btn-line{border:2px solid var(--cream);color:var(--cream)}
+section{padding:58px 0}
+.kicker2{color:var(--leather);text-transform:uppercase;letter-spacing:.14em;font-weight:700;font-size:.8rem}
+h2{font-size:clamp(1.5rem,3.4vw,2.1rem);margin:8px 0 14px;color:var(--dark)}
+.fixgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:26px}
+.tag{background:var(--cream);border:1px solid #e4d9c4;border-top:5px solid var(--leather);border-radius:8px;padding:22px;position:relative}
+.tag::before{content:"";position:absolute;top:10px;right:12px;width:12px;height:12px;border:2px solid var(--stitch);border-radius:50%}
+.tag h3{color:var(--leather);font-size:1.12rem;margin-bottom:8px}
+.tag p{font-size:.97rem}
+.boots{background:var(--cream)}
+.boots .cols{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.boots ul{list-style:none;margin-top:14px}
+.boots li{padding:10px 0 10px 30px;border-bottom:1px dashed #d8c9a8;position:relative}
+.boots li::before{content:"✚";position:absolute;left:2px;color:var(--stitch);font-weight:700}
+.glove{background:var(--dark);color:var(--cream)}
+.glove h2{color:var(--cream)}
+.glove p{max-width:62ch}
+.glove .note{margin-top:18px;background:rgba(201,162,39,.12);border-left:4px solid var(--stitch);padding:14px 18px;font-size:1rem}
+.story .cols{display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center}
+.hoursbox{background:var(--leather);color:var(--cream);border-radius:10px;padding:26px}
+.hoursbox h3{color:var(--stitch);margin-bottom:12px;font-size:1.15rem}
+.hoursbox table{width:100%;border-collapse:collapse;font-size:.98rem}
+.hoursbox td{padding:6px 0;border-bottom:1px dashed rgba(247,241,229,.25)}
+.hoursbox td:last-child{text-align:right}
+.hoursbox .closed td{color:#e8b4a0;font-weight:600}
+.visit{background:var(--cream)}
+.visit .cols{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.vcard{background:var(--paper);border:1px solid #e4d9c4;border-radius:8px;padding:24px}
+.vcard h3{color:var(--leather);margin-bottom:8px}
+footer{background:var(--dark);color:#cbbb9d;padding:26px 0;font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media(max-width:760px){.boots .cols,.story .cols,.visit .cols{grid-template-columns:1fr}nav{display:none}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>12 N Portage St, Westfield NY 14787</span><a href="tel:7163262040">(716) 326-2040</a></div></div>
+<header><div class="wrap">
+<div class="logo">Tony's <span>Shoe Repair</span> &amp; Sales</div>
+<nav><a href="#fixes">Repairs</a><a href="#boots">Boot Store</a><a href="#gloves">Ball Gloves</a><a href="#hours">Hours</a><a href="#visit">Visit</a></nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+<div class="kicker">Westfield's repair bench for three generations</div>
+<h1>If you break it, take it to Tony.</h1>
+<p>Boots that quit, zippers that split, ball gloves gone flat, boat covers torn by a Lake Erie squall — Anthony Franchina has been putting them back to work from the bench at 12 North Portage Street. Most repairs cost a fraction of replacing what you already trust.</p>
+<div class="btnrow"><a class="btn btn-gold" href="tel:7163262040">Call (716) 326-2040</a><a class="btn btn-line" href="#fixes">What Tony fixes</a></div>
+</div></div>
+
+<section id="fixes"><div class="wrap">
+<span class="kicker2">More than shoes</span>
+<h2>Bring in the thing you thought was done for</h2>
+<div class="fixgrid">
+<div class="tag"><h3>Boots &amp; shoes</h3><p>Soles, heels, stretching, stitching — work boots, dress shoes, hunting boots brought back to solid.</p></div>
+<div class="tag"><h3>Zippers of every kind</h3><p>Jackets, coveralls, duffels — even boat covers and tent flies. A new zipper beats a new coat.</p></div>
+<div class="tag"><h3>Baseball glove restoration</h3><p>Relacing, conditioning, and reshaping. Break-in your kid's glove the right way — or revive your own.</p></div>
+<div class="tag"><h3>Leather &amp; odd jobs</h3><p>Belts, straps, tack, bags. If it's stitched, riveted, or glued, it's worth a look before it's trash.</p></div>
+</div>
+</div></section>
+
+<section class="boots" id="boots"><div class="wrap">
+<div class="cols">
+<div>
+<span class="kicker2">The boot wall</span>
+<h2>Work boots you can try on before a 10-hour day in them</h2>
+<p>Vineyard rows, barn floors, and shop concrete are hard on feet. Tony stocks and fits the boots this county actually works in — no waiting on a delivery window, no guessing your size off a chart.</p>
+</div>
+<ul>
+<li>Safety-toe work boots for trade and farm crews</li>
+<li>Orthopedic shoes fitted with patience</li>
+<li>Hunting boots ready for the ridge in November</li>
+<li>Work jeans and rugged gear, in store</li>
+<li>Custom embroidery on shirts and hats</li>
+</ul>
+</div>
+</div></section>
+
+<section class="glove" id="gloves"><div class="wrap">
+<span class="kicker2" style="color:var(--stitch)">A Westfield specialty</span>
+<h2>The glove doctor of Portage Street</h2>
+<p>Every spring the gloves come in — laces snapped, pockets gone soft, palms dried stiff in a garage over winter. Tony relaces and restores them by hand, the same way he's done for decades. Little-league seasons have been saved on this bench.</p>
+<div class="note">Heading to a tournament? Drop the glove early in the week — restored gloves are typically ready before Saturday's first pitch. Call ahead to be sure.</div>
+</div></section>
+
+<section class="story"><div class="wrap">
+<div class="cols">
+<div>
+<span class="kicker2">Since your grandfather's boots</span>
+<h2>Three generations at the bench</h2>
+<p>The Franchina family has repaired Westfield's footwear across three generations — through grape harvests, factory shifts, and every winter Route 20 could throw at a pair of boots. Forty-five years of hands-on repair experience means Tony has almost certainly fixed one just like yours.</p>
+<p style="margin-top:12px">Around the village they don't say "find a cobbler." They say <em>take it to Tony.</em></p>
+</div>
+<div class="hoursbox" id="hours">
+<h3>Bench hours — note Wednesdays</h3>
+<table>
+<tr><td>Monday</td><td>8:00 – 5:00</td></tr>
+<tr><td>Tuesday</td><td>8:00 – 5:00</td></tr>
+<tr class="closed"><td>Wednesday</td><td>Closed</td></tr>
+<tr><td>Thursday</td><td>8:00 – 5:00</td></tr>
+<tr><td>Friday</td><td>8:00 – 5:00</td></tr>
+<tr><td>Saturday</td><td>8:00 – 12:00</td></tr>
+<tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+</table>
+</div>
+</div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+<span class="kicker2">In the village</span>
+<h2>Find the bench</h2>
+<div class="cols">
+<div class="vcard"><h3>Stop in</h3><p>12 North Portage Street, Westfield NY 14787 — in the village, minutes off the I-90 Westfield exit and Route 20. Park out front, bring the broken thing.</p></div>
+<div class="vcard"><h3>Or call first</h3><p>Not sure it's fixable? Describe it over the phone and Tony will tell you straight. <strong><a href="tel:7163262040" style="color:var(--leather)">(716) 326-2040</a></strong></p></div>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<span>Tony's Shoe Repair &amp; Sales · 12 N Portage St, Westfield NY</span>
+<span>(716) 326-2040 · Mon–Fri (closed Wed) 8–5 · Sat 8–12</span>
+</div></footer>
+</body>
+</html>

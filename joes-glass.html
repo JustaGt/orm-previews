@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joe's Glass — Malone, NY | Auto Glass, Windows, Shower Enclosures &amp; Custom Glass Since 1990</title>
+<meta name="description" content="Malone's full-service glass shop since 1990. Auto glass (insurance work welcome), residential windows, insulated glass, custom shower enclosures, storefronts, mirrors, plexiglass and stove glass. Call (518) 483-3769.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ice:#eaf4f9;--sky:#1179a8;--sky-d:#0b5c81;--ink:#182430;--mist:#f7fbfd;--line:#d4e5ee;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:#fff;line-height:1.65}
+h1,h2,h3{font-family:'Fraunces',serif}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+.topbar{background:var(--sky-d);color:#fff;font-size:.9rem;text-align:center;padding:8px 14px}
+.topbar strong{color:#bfe3f5}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:12px;flex-wrap:wrap}
+.logo{font-family:'Fraunces';font-weight:700;font-size:1.5rem}
+.logo span{color:var(--sky)}
+.logo small{display:block;font-family:'Inter';font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#7d8b98}
+.call-btn{background:var(--sky);color:#fff;text-decoration:none;font-weight:600;padding:11px 20px;border-radius:8px}
+/* hero */
+.hero{background:linear-gradient(160deg,var(--ice) 0%,#fff 70%);padding:76px 0;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-80px;width:420px;height:420px;border-radius:50%;background:linear-gradient(135deg,rgba(17,121,168,.12),rgba(17,121,168,0));border:1px solid rgba(17,121,168,.15)}
+.hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;position:relative;z-index:1}
+.hero h1{font-size:clamp(2.1rem,4.8vw,3.3rem);font-weight:700;line-height:1.12}
+.hero h1 em{font-style:normal;color:var(--sky)}
+.hero p.sub{margin:18px 0 28px;font-size:1.12rem;color:#41505e;max-width:33em}
+.btn{display:inline-block;padding:14px 26px;border-radius:8px;font-weight:600;text-decoration:none}
+.btn-b{background:var(--sky);color:#fff}
+.btn-o{border:1.5px solid var(--sky);color:var(--sky);margin-left:10px}
+.pane{background:rgba(255,255,255,.75);backdrop-filter:blur(4px);border:1px solid var(--line);border-radius:14px;padding:26px;box-shadow:0 18px 44px rgba(11,92,129,.12)}
+.pane h3{font-size:1.15rem;margin-bottom:12px}
+.pane li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:.95rem;display:flex;gap:10px}
+.pane li:last-child{border:none}
+.pane li::before{content:"◆";color:var(--sky);font-size:.7rem;line-height:1.9}
+/* services */
+.svcs{padding:74px 0}
+.kicker{color:var(--sky);font-weight:600;text-transform:uppercase;letter-spacing:.14em;font-size:.8rem}
+h2.sec{font-size:clamp(1.7rem,3.8vw,2.5rem);margin:8px 0 34px;font-weight:700}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.svc{border:1px solid var(--line);border-radius:14px;padding:26px;background:var(--mist);transition:.2s}
+.svc h3{font-size:1.2rem;margin-bottom:8px}
+.svc p{font-size:.93rem;color:#41505e}
+.svc .tag{display:inline-block;margin-top:12px;font-size:.78rem;font-weight:600;color:var(--sky);background:#dcedf6;border-radius:999px;padding:4px 12px}
+/* story strip */
+.story{background:var(--sky-d);color:#fff;padding:70px 0}
+.story .grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.story h2{font-size:clamp(1.6rem,3.4vw,2.3rem);margin-bottom:16px}
+.story p{color:#c8dfec;margin-bottom:14px}
+.story .chip{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:7px 14px;border-radius:999px;font-size:.85rem;margin:0 8px 10px 0}
+/* odd jobs */
+.odd{padding:74px 0}
+.odd-list{display:flex;flex-wrap:wrap;gap:10px}
+.odd-item{border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-size:.92rem;font-weight:500;background:#fff}
+.odd p.note{margin-top:18px;color:#41505e;max-width:44em}
+/* reviews */
+.reviews{background:var(--ice);padding:74px 0}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rev{background:#fff;border-radius:14px;padding:24px;border:1px solid var(--line)}
+.rev .stars{color:#e8a80c;letter-spacing:2px;margin-bottom:10px}
+.rev p{font-size:.93rem;color:#31404e}
+.rev footer{margin-top:12px;font-weight:600;font-size:.85rem;color:#7d8b98}
+/* insurance */
+.ins{padding:74px 0}
+.ins .grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.ins ol{margin-left:20px}
+.ins li{padding:6px 0;color:#31404e}
+.ins li::marker{color:var(--sky);font-weight:700}
+/* quote */
+.quote{background:var(--sky-d);color:#fff;padding:74px 0}
+.quote .grid{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.quote form{background:#fff;border-radius:14px;padding:28px;color:var(--ink)}
+.quote label{display:block;font-weight:600;font-size:.88rem;margin:12px 0 4px}
+.quote input,.quote select,.quote textarea{width:100%;padding:11px;border:1px solid #c5d5df;border-radius:8px;font-family:inherit;font-size:.95rem}
+.quote button{margin-top:20px;width:100%;background:var(--sky);color:#fff;border:none;border-radius:8px;padding:15px;font-weight:700;font-size:1.02rem;cursor:pointer}
+.quote .pitch p{color:#c8dfec;margin-bottom:16px}
+.quote .pitch .phone-line{font-size:1.5rem;font-weight:700;color:#fff}
+footer.site{background:#0e1a24;color:#8fa2b1;padding:34px 0;font-size:.9rem}
+footer.site .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+@media(max-width:860px){.hero .grid,.story .grid,.ins .grid,.quote .grid{grid-template-columns:1fr}.rev-grid{grid-template-columns:1fr}.btn-o{margin-left:0;margin-top:10px}}
+</style>
+</head>
+<body>
+
+<div class="topbar">Cracked pane, fogged window, or a windshield chip? <strong>Call (518) 483-3769 — most quotes same day.</strong></div>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">Joe's <span>Glass</span><small>Malone, NY · Since 1990</small></div>
+    <a class="call-btn" href="tel:5184833769">(518) 483-3769</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <h1>If it's made of glass,<br><em>Joe's has fixed one.</em></h1>
+      <p class="sub">Windshields to shower doors, storefronts to stove glass — one hometown shop has handled Franklin County's glass work for 35 years. Bring it in, or have us come measure.</p>
+      <a class="btn btn-b" href="#quote">Get a Quote</a>
+      <a class="btn btn-o" href="tel:5184833769">Call the Shop</a>
+    </div>
+    <div class="pane">
+      <h3>Under one roof</h3>
+      <ul>
+        <li>Auto glass — foreign, domestic &amp; heavy machinery</li>
+        <li>Insulated glass &amp; fogged-pane replacement</li>
+        <li>Custom shower enclosures, measured &amp; installed</li>
+        <li>Storefronts, aluminum doors &amp; commercial glazing</li>
+        <li>Mirrors, table tops, plexiglass &amp; stove glass</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="svcs">
+  <div class="wrap">
+    <span class="kicker">Four kinds of glass work</span>
+    <h2 class="sec">Auto. Home. Business. Bathroom.</h2>
+    <div class="svc-grid">
+      <div class="svc"><h3>Auto Glass</h3><p>Windshields and windows for cars and trucks, foreign and domestic — plus tractors, loaders and log skidders. Insurance claims handled with your carrier.</p><span class="tag">Insurance work welcome</span></div>
+      <div class="svc"><h3>Residential Windows</h3><p>Fogged double panes replaced without swapping the whole window, quality vinyl replacement windows supplied, and mobile-home windows and doors — a fit most shops won't touch.</p><span class="tag">Fogged-pane specialists</span></div>
+      <div class="svc"><h3>Commercial &amp; Storefront</h3><p>Aluminum storefronts, entry doors, door glass and safety glazing for Main Street businesses — repaired fast so you're not boarding up your front window twice.</p><span class="tag">Malone Main St. tested</span></div>
+      <div class="svc"><h3>Custom Showers</h3><p>Frameless and framed shower enclosures measured on site, built to your opening, and installed square — the finishing touch on Franklin County bathroom remodels.</p><span class="tag">Free measure visit</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap grid">
+    <div>
+      <span class="kicker" style="color:#8fcbe6">The kind of shop this is</span>
+      <h2>The bushhog window was ready the same day.</h2>
+      <p>A customer once dropped off a cracked plexiglass panel from a bushhog on a Monday morning, hoping it might be done within the week — it was cut and ready a few hours later, in time for her husband's birthday.</p>
+      <p>Another caller was braced to buy all new windows; Joe walked her through fixing the moisture problem instead and sent her a much smaller bill. That's how a glass shop stays busy in the same town for 35 years.</p>
+    </div>
+    <div>
+      <span class="chip">Since 1990</span>
+      <span class="chip">Commercial &amp; residential</span>
+      <span class="chip">Glass cut while you wait*</span>
+      <span class="chip">Heavy-equipment glass</span>
+      <span class="chip">Mobile-home windows &amp; doors</span>
+      <p style="margin-top:14px;font-size:.8rem;color:#9dc4d8">*Simple cuts, stock permitting — call ahead. Stories above are drawn from published customer reviews.</p>
+    </div>
+  </div>
+</section>
+
+<section class="odd">
+  <div class="wrap">
+    <span class="kicker">The odd jobs nobody else lists</span>
+    <h2 class="sec">Yes, we do that too.</h2>
+    <div class="odd-list">
+      <span class="odd-item">Stove &amp; fireplace glass</span>
+      <span class="odd-item">Plexiglass cut to size</span>
+      <span class="odd-item">Mirror walls &amp; vanity mirrors</span>
+      <span class="odd-item">Glass table tops</span>
+      <span class="odd-item">Screen repair</span>
+      <span class="odd-item">Insulated glass units</span>
+      <span class="odd-item">Skidder &amp; tractor cab glass</span>
+      <span class="odd-item">Door glass &amp; sidelites</span>
+    </div>
+    <p class="note">Half of Joe's work is the stuff you can't order online: one odd-sized pane, one antique cabinet door, one machine that can't run without its window. Bring the broken piece in — measuring beats guessing.</p>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <span class="kicker">In customers' words</span>
+    <h2 class="sec">Neighbors keep recommending Joe's</h2>
+    <div class="rev-grid">
+      <div class="rev"><div class="stars">★★★★★</div><p>"He gave us a very reasonable estimate and was very timely in completing the job... Joe and his staff are excellent to work with — personable and knowledgeable — and we recommend them highly."</p><footer>Linda S. — fogged window replacement</footer></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>"I thought I was in trouble and needed new windows this year, but Joe helped me solve my moisture issues... very honest and knowledgeable. I will 100% call him in the future."</p><footer>Brooke R. — window repair</footer></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>"Joe's Glass did the glass for 3 bathroom remodels at my home. Great service, great price, great attention to detail, and timely!"</p><footer>LeeAnne R. — shower enclosures</footer></div>
+    </div>
+  </div>
+</section>
+
+<section class="ins">
+  <div class="wrap grid">
+    <div>
+      <span class="kicker">Cracked windshield?</span>
+      <h2 class="sec">Insurance glass claims, without the runaround</h2>
+      <p style="color:#41505e">Most comprehensive policies cover glass — some with no deductible at all in New York. Joe's works with your insurer so the paperwork doesn't land on you.</p>
+    </div>
+    <ol>
+      <li><strong>Call the shop first.</strong> Describe the damage; we'll tell you if it's a repair or a replacement.</li>
+      <li><strong>We coordinate the claim.</strong> Insurance work is welcomed — carrier paperwork handled at the counter.</li>
+      <li><strong>Get back on the road.</strong> Scheduled promptly, installed right, guaranteed workmanship.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="wrap grid">
+    <div class="pitch">
+      <span class="kicker" style="color:#8fcbe6">Fastest way to a price</span>
+      <h2 class="sec" style="color:#fff">Snap a photo of the break. Send it over.</h2>
+      <p>A picture of the damage plus a rough measurement is usually all Joe needs to quote it. Or skip the form entirely:</p>
+      <p class="phone-line">(518) 483-3769</p>
+      <p>Mon–Fri, 8:00–4:30 · Malone, NY<br><span style="font-size:.85rem">[Confirm hours &amp; street address with shop before publish — sources conflict]</span></p>
+    </div>
+    <form>
+      <label>Name</label><input type="text" placeholder="Your name">
+      <label>Phone</label><input type="tel" placeholder="(518) ...">
+      <label>What broke?</label>
+      <select><option>Auto glass / windshield</option><option>Fogged or broken house window</option><option>Shower enclosure project</option><option>Storefront / commercial</option><option>Mirror, table top, plexi or stove glass</option><option>Something else</option></select>
+      <label>Tell us about it</label><textarea rows="3" placeholder="Size, vehicle year/model, or what the glass is for..."></textarea>
+      <button type="button">Send Quote Request</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div><strong style="color:#fff">Joe's Glass</strong><br>Malone, NY 12953<br>(518) 483-3769 · joesglass3769@gmail.com</div>
+    <div>Auto · Residential · Commercial · Showers<br>Mirrors · Plexiglass · Stove Glass · Custom Cutting<br>Serving Franklin County since 1990</div>
+  </div>
+</footer>
+
+</body>
+</html>

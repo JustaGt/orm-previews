@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guignard Greenhouses — Lowville, NY · Family-Grown Annuals, Hanging Baskets &amp; Perennials Since 1950</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --leaf:#3c6b3a; --leaf-d:#2a4f29; --moss:#6b8f4e; --geranium:#c0432f;
+  --terra:#c97b4a; --clay:#a85d36; --cream:#f7f4ea; --cream-d:#eef0e2;
+  --ink:#28301f; --slate:#5f6b54; --line:#dfe2cf; --card:#ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito Sans',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+h1,h2,h3,.serif{font-family:'Bitter',serif}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-block;background:var(--geranium);color:#fff;font-weight:800;letter-spacing:.3px;font-size:.92rem;padding:14px 28px;border-radius:30px;transition:.14s}
+.btn:hover{background:#a4361f}
+.btn.leaf{background:var(--leaf)}
+.btn.leaf:hover{background:var(--leaf-d)}
+.btn.line{background:transparent;border:1.7px solid #ffffff85;color:#fff}
+.btn.line:hover{background:#ffffff22}
+
+/* seasonal banner */
+.season{background:var(--geranium);color:#fff;text-align:center;font-size:.84rem;font-weight:700;letter-spacing:.4px;padding:9px 16px}
+.season b{font-weight:800}
+
+nav{background:var(--cream);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand b{font-family:'Bitter';font-weight:700;color:var(--leaf-d);font-size:1.4rem;display:block;line-height:1}
+.brand small{color:var(--clay);font-size:.58rem;letter-spacing:2.2px;text-transform:uppercase;font-weight:700}
+.navlinks{display:flex;gap:22px;color:var(--slate);font-size:.85rem;font-weight:700}
+.navlinks a:hover{color:var(--leaf)}
+.navphone{color:var(--leaf-d);font-weight:800;font-size:.98rem;white-space:nowrap}
+@media(max-width:870px){.navlinks{display:none}}
+
+.hero{position:relative;color:#f4f6e8;overflow:hidden;background:var(--leaf-d)}
+.hero::before{content:"";position:absolute;inset:0;
+  background:
+   radial-gradient(110% 80% at 85% 12%,rgba(107,143,78,.5),transparent 60%),
+   linear-gradient(100deg,rgba(42,79,41,.95) 0 46%,rgba(60,107,58,.6)),
+   linear-gradient(180deg,#3c6b3a,#2a4f29)}
+.hero .wrap{position:relative;z-index:1;padding:80px 22px 92px}
+.kick{display:inline-flex;align-items:center;gap:9px;font-size:.72rem;letter-spacing:2.3px;text-transform:uppercase;color:#eef4df;background:#00000030;border:1px solid var(--moss);border-radius:30px;padding:6px 15px;margin-bottom:20px}
+.kick::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--terra)}
+.hero h1{font-family:'Bitter';font-weight:700;font-size:3.4rem;line-height:1.05;max-width:18ch}
+.hero h1 em{font-style:italic;color:#f0c08a}
+.hero p{font-size:1.15rem;max-width:55ch;margin:19px 0 26px;color:#e7eed6}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:600px){.hero h1{font-size:2.3rem}}
+
+section{padding:72px 0}
+.shead{max-width:60ch}
+.shead.ctr{text-align:center;margin:0 auto}
+.shead .k{font-size:.78rem;letter-spacing:3px;text-transform:uppercase;color:var(--terra);font-weight:800}
+.shead h2{font-family:'Bitter';font-weight:700;font-size:2.4rem;color:var(--leaf-d);margin-top:7px;line-height:1.08}
+.shead p{color:var(--slate);margin-top:11px;font-size:1.04rem}
+
+/* whats ready now */
+.ready{background:var(--cream-d)}
+.rgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px}
+@media(max-width:820px){.rgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:460px){.rgrid{grid-template-columns:1fr}}
+.rcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 20px;border-top:4px solid var(--moss)}
+.rcard .ic{font-size:1.9rem}
+.rcard h3{font-family:'Bitter';font-size:1.12rem;color:var(--leaf-d);margin-top:8px}
+.rcard p{font-size:.9rem;color:var(--slate);margin-top:6px}
+.rcard .when{margin-top:11px;font-size:.74rem;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--clay)}
+.readynote{margin-top:24px;text-align:center;font-size:.92rem;color:var(--slate)}
+.readynote b{color:var(--leaf-d)}
+
+/* grown here split */
+.grown .wrap{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+@media(max-width:840px){.grown .wrap{grid-template-columns:1fr;gap:28px}}
+.gpanel{background:var(--leaf-d);color:#eef4df;border-radius:18px;padding:34px 32px}
+.gpanel h3{font-family:'Bitter';color:#f0c08a;font-size:1.5rem}
+.gpanel ul{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:12px}
+.gpanel li{display:flex;gap:11px;font-size:.98rem;color:#e7eed6}
+.gpanel li .x{color:#f0c08a;font-weight:800}
+.zonebadge{display:inline-block;margin-top:6px;background:#ffffff18;border:1px solid #ffffff3b;border-radius:24px;padding:6px 15px;font-size:.78rem;font-weight:800;letter-spacing:1px;color:#fff}
+
+/* story strip */
+.story{background:linear-gradient(120deg,#c97b4a,#a85d36);color:#fff7ee}
+.story .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:center}
+@media(max-width:780px){.story .wrap{grid-template-columns:1fr}}
+.story .big{font-family:'Bitter';font-size:4.6rem;line-height:.9;color:#ffe9cf}
+.story .big small{display:block;font-size:1rem;letter-spacing:2px;text-transform:uppercase;font-family:'Nunito Sans';font-weight:800;color:#ffd9b3;margin-top:6px}
+.story h2{font-family:'Bitter';font-size:2.1rem;color:#fff}
+.story p{margin-top:12px;color:#ffeede;font-size:1.02rem}
+
+/* reserve / visit */
+.visit{background:var(--cream-d)}
+.vgrid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;margin-top:18px}
+@media(max-width:820px){.vgrid{grid-template-columns:1fr}}
+.vbox{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px 28px}
+.vbox h3{font-family:'Bitter';color:var(--leaf-d);font-size:1.45rem}
+.vrow{margin-top:14px;font-size:1rem;color:var(--ink)}
+.vrow b{color:var(--clay);font-family:'Bitter'}
+.hours{margin-top:8px;font-size:.95rem;color:var(--slate)}
+.resv label{display:block;font-size:.76rem;letter-spacing:1.3px;text-transform:uppercase;color:var(--slate);font-weight:800;margin:14px 0 6px}
+.resv input,.resv textarea{width:100%;background:var(--cream);border:1px solid var(--line);border-radius:9px;padding:11px 13px;font-family:inherit;font-size:.95rem;color:var(--ink)}
+.resv .btn{margin-top:18px;width:100%;text-align:center}
+.resv .small{font-size:.82rem;color:var(--slate);margin-top:10px}
+
+footer{background:var(--leaf-d);color:#bdd0ad;text-align:center;font-size:.83rem;padding:28px 22px}
+footer b{color:#fff;font-family:'Bitter'}
+.note{font-size:.72rem;color:#8aa07a;margin-top:8px}
+</style>
+</head>
+<body>
+
+<div class="season">&#127807; Seasonal greenhouse — we open each spring. <b>Call (315) 376-3514 for this week's open hours &amp; what's ready.</b></div>
+
+<nav><div class="wrap">
+  <div class="brand"><b>Guignard Greenhouses</b><small>Lowville, NY · Family-grown since 1950</small></div>
+  <div class="navlinks">
+    <a href="#ready">What's Ready</a>
+    <a href="#grown">Grown Here</a>
+    <a href="#story">Since 1950</a>
+    <a href="#visit">Visit &amp; Reserve</a>
+  </div>
+  <a class="navphone" href="tel:3153763514">(315) 376-3514</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="kick">Lowville · Lewis County · since 1950</span>
+  <h1>Hanging baskets and bedding plants <em>grown right here</em> for a North Country spring.</h1>
+  <p>Three generations of the Guignard family have raised annuals, perennials, and overflowing hanging baskets on Number Four Road — hardened off for zone-4 cold, ready the week you want to plant.</p>
+  <div class="cta-row">
+    <a class="btn" href="#visit">Reserve baskets for spring</a>
+    <a class="btn line" href="#ready">See what's ready now</a>
+  </div>
+</div></header>
+
+<section class="ready" id="ready"><div class="wrap">
+  <div class="shead">
+    <div class="k">What's ready now</div>
+    <h2>A short season — here's what's coming on, week by week.</h2>
+    <p>Our greenhouse runs roughly late April through summer. Plants come ready in waves, so this is the quick guide to what's worth the drive right now.</p>
+  </div>
+  <div class="rgrid">
+    <div class="rcard"><div class="ic">&#127801;</div><h3>Hanging Baskets</h3><p>Full, sun and shade mixes raised in our own houses — the Mother's Day favorite.</p><div class="when">Peak: May</div></div>
+    <div class="rcard"><div class="ic">&#127804;</div><h3>Annual Flats</h3><p>Petunias, marigolds, impatiens, geraniums and more — bedding color by the flat.</p><div class="when">May–June</div></div>
+    <div class="rcard"><div class="ic">&#127807;</div><h3>Perennials</h3><p>Hardy returners that come back through North Country winters, grown for this zone.</p><div class="when">Late spring–summer</div></div>
+    <div class="rcard"><div class="ic">&#129364;</div><h3>Veg &amp; Herb Starts</h3><p>Tomato, pepper, and herb starts timed to our late frost — plant when it's actually safe.</p><div class="when">After frost</div></div>
+  </div>
+  <div class="readynote">Want this week's exact list before you drive out? <b>Call (315) 376-3514</b> — we'll tell you what's looking best today.</div>
+</div></section>
+
+<section class="grown" id="grown"><div class="wrap">
+  <div>
+    <div class="shead">
+      <div class="k">Grown here, for here</div>
+      <h2>Raised in Lowville — not trucked in from three zones south.</h2>
+      <p>Big-box flowers are often started in warmer climates and shipped north soft. Ours are grown and hardened off right on Number Four Road, so they're used to the cold the day you take them home.</p>
+    </div>
+  </div>
+  <div class="gpanel">
+    <h3>Why local-grown holds up</h3>
+    <ul>
+      <li><span class="x">&#10004;</span><span>Started and finished in our own greenhouses in Lowville.</span></li>
+      <li><span class="x">&#10004;</span><span>Hardened off for the real North Country spring — less transplant shock.</span></li>
+      <li><span class="x">&#10004;</span><span>Picked for zone-4 hardiness, not a national catalog.</span></li>
+      <li><span class="x">&#10004;</span><span>Advice from people who actually grew the plant you're buying.</span></li>
+    </ul>
+    <span class="zonebadge">USDA Zone 4 · grown for it</span>
+  </div>
+</div></section>
+
+<section class="story" id="story"><div class="wrap">
+  <div class="big">75<small>Years · since 1950</small></div>
+  <div>
+    <h2>Family grown and operated since 1950.</h2>
+    <p>For three generations the Guignards have planted the first seed of the season and stayed until the last basket goes out the door. It's the same family, the same Number Four Road greenhouses, and the same answer when you ask "will this make it up here?" — yes, because we grew it up here too.</p>
+  </div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <div class="shead">
+    <div class="k">Visit &amp; reserve</div>
+    <h2>Find us, or hold your baskets before they're gone.</h2>
+  </div>
+  <div class="vgrid">
+    <div class="vbox">
+      <h3>Visit the greenhouse</h3>
+      <div class="vrow"><b>Where</b><br>6570 Number Four Road, Lowville, NY 13367</div>
+      <div class="vrow"><b>Phone</b><br>(315) 376-3514</div>
+      <div class="vrow"><b>Season</b><br>Opens each spring · late April through summer</div>
+      <div class="hours">Spring hours vary week to week — call ahead and we'll tell you when we're open and what's blooming.</div>
+    </div>
+    <div class="vbox resv">
+      <h3>Reserve baskets for Mother's Day</h3>
+      <p style="color:var(--slate);font-size:.95rem;margin-top:6px">Mother's Day and Memorial Day baskets go fast. Tell us what you want and we'll set them aside.</p>
+      <label>Your name</label><input type="text" placeholder="First &amp; last">
+      <label>Phone</label><input type="text" placeholder="Best number to reach you">
+      <label>What to hold</label><textarea rows="2" placeholder="e.g. two sun hanging baskets + a flat of geraniums for the 10th"></textarea>
+      <a class="btn leaf" href="#">Request a reservation</a>
+      <div class="small">We'll call to confirm what's ready and your pickup window.</div>
+    </div>
+  </div>
+</div></section>
+
+<footer>
+  <b>Guignard Greenhouses</b> — Family-grown annuals, hanging baskets &amp; perennials · Lowville, New York · Since 1950<br>
+  6570 Number Four Road, Lowville, NY 13367 · (315) 376-3514
+  <div class="note">Preview concept prepared by Onyx Rise Media for review. Seasonal hours, exact plant list, and any email/reservation details to be confirmed with the family before launch.</div>
+</footer>
+
+</body>
+</html>

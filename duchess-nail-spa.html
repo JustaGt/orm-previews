@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Duchess Nail Spa — Newburgh, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --emerald:#0f3d2e; --emerald-2:#16513c; --gold:#c5a44e; --gold-soft:#e6cf94;
+    --ivory:#f7f3e9; --ivory-2:#fbf9f2; --ink:#13231b; --line:#e3dcc8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--ivory-2);line-height:1.7;font-weight:300}
+  h1,h2,h3,.disp{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.08}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 30px}
+  a{color:inherit;text-decoration:none}
+  .btn{display:inline-block;background:var(--gold);color:var(--emerald);font-weight:500;padding:14px 34px;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem;transition:.3s;border:1px solid var(--gold)}
+  .btn:hover{background:transparent;color:var(--gold)}
+  .btn-out{background:transparent;border:1px solid var(--gold-soft);color:var(--gold-soft)}
+  .btn-out:hover{background:var(--gold-soft);color:var(--emerald)}
+  .crest{font-size:.72rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold)}
+
+  nav{position:sticky;top:0;z-index:40;background:var(--emerald);border-bottom:1px solid rgba(197,164,78,.3)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .logo{font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:var(--ivory);letter-spacing:.04em}
+  .logo b{color:var(--gold);font-weight:500}
+  .nl{display:flex;gap:34px;align-items:center}
+  .nl a{color:var(--ivory);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+  .nl a:hover{color:var(--gold);opacity:1}
+  @media(max-width:860px){.nl a:not(.btn){display:none}}
+
+  .hero{background:
+    linear-gradient(rgba(15,61,46,.82),rgba(15,61,46,.88)),
+    radial-gradient(circle at 50% 0%, var(--emerald-2), var(--emerald)),
+    url('https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;background-position:center;color:var(--ivory);text-align:center}
+  .hero .wrap{padding:110px 30px 120px;max-width:900px}
+  .monogram{width:74px;height:74px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 28px;font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--gold)}
+  .hero h1{font-size:clamp(2.8rem,7vw,5.4rem);color:var(--ivory)}
+  .hero h1 i{color:var(--gold-soft)}
+  .rule{width:60px;height:1px;background:var(--gold);margin:26px auto}
+  .hero p{font-size:1.12rem;max-width:48ch;margin:0 auto 34px;color:#dfe7df;font-weight:300}
+  .hero .btn{margin:0 6px}
+
+  section{padding:96px 0}
+  .center{text-align:center;max-width:62ch;margin:0 auto}
+  h2{font-size:clamp(2.2rem,4.4vw,3.4rem);color:var(--emerald)}
+  .sub{color:#5a6b60;font-size:1.06rem;margin-top:14px}
+
+  /* services as elegant list */
+  .menu{background:var(--ivory)}
+  .menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 70px;margin-top:54px}
+  .m-item{display:flex;justify-content:space-between;gap:18px;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line)}
+  .m-item .name{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--emerald)}
+  .m-item .desc{font-size:.86rem;color:#7a8278;display:block;font-family:'Jost',sans-serif;margin-top:2px}
+  .m-item .dots{flex:1;border-bottom:1px dotted #c9c2ad;margin:0 8px;transform:translateY(-4px)}
+  .m-item .price{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--gold);font-weight:600;white-space:nowrap}
+  @media(max-width:860px){.menu-grid{grid-template-columns:1fr;gap:0}}
+
+  /* split feature */
+  .feature{background:var(--emerald);color:var(--ivory)}
+  .feature .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+  .feature h2{color:var(--ivory)}
+  .feature .gold{color:var(--gold-soft)}
+  .ph{border-radius:4px;min-height:430px;background-size:cover;background-position:center;background-color:var(--emerald-2);box-shadow:0 30px 60px rgba(0,0,0,.3);border:1px solid rgba(197,164,78,.3)}
+  .ph-feat{background-image:url('https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1000&q=80')}
+  .pillars{list-style:none;margin-top:24px}
+  .pillars li{padding:14px 0;border-bottom:1px solid rgba(197,164,78,.25);display:flex;gap:14px;align-items:flex-start;font-weight:300;color:#dfe7df}
+  .pillars b{color:var(--gold-soft);font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600}
+  @media(max-width:860px){.feature .wrap{grid-template-columns:1fr;gap:36px}.ph{min-height:300px}}
+
+  /* gallery strip */
+  .strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .strip .ph{min-height:300px;border-radius:0;box-shadow:none;border:none}
+  .s1{background-image:url('https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=700&q=80')}
+  .s2{background-image:url('https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=700&q=80')}
+  .s3{background-image:url('https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=700&q=80')}
+  .s4{background-image:url('https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=700&q=80')}
+  @media(max-width:860px){.strip{grid-template-columns:1fr 1fr}.strip .ph{min-height:200px}}
+
+  /* visit */
+  .visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+  .detail{padding:16px 0;border-bottom:1px solid var(--line)}
+  .detail .k{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+  .detail .v{font-size:1.15rem;color:var(--emerald);font-family:'Cormorant Garamond',serif}
+  .hrs{list-style:none}
+  .hrs li{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dotted #d6cfb9}
+  form{display:grid;gap:14px;margin-top:8px}
+  input,textarea{padding:13px 16px;border:1px solid var(--line);font-family:'Jost',sans-serif;font-size:.92rem;background:#fff}
+  input:focus,textarea:focus{outline:none;border-color:var(--gold)}
+  .panel{background:var(--ivory);border:1px solid var(--line);padding:38px}
+  @media(max-width:860px){.visit .wrap{grid-template-columns:1fr;gap:36px}}
+
+  footer{background:var(--ink);color:#9db3a6;padding:42px 0;font-size:.82rem;text-align:center}
+  .pv{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;opacity:.55;margin-top:8px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">Duchess <b>Nail Spa</b></div>
+    <div class="nl">
+      <a href="#menu">The Menu</a>
+      <a href="#feature">Why Duchess</a>
+      <a href="#visit">Visit</a>
+      <a href="#visit" class="btn">Book a Chair</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="monogram">D</div>
+    <span class="crest">South Plank Road · Newburgh</span>
+    <h1>An hour that feels <i>entirely</i> yours.</h1>
+    <div class="rule"></div>
+    <p>A quiet, unhurried nail spa where the polish is precise, the chairs are comfortable, and no one watches the clock but you.</p>
+    <a href="#menu" class="btn">View Service Menu</a>
+    <a href="#visit" class="btn btn-out">Plan Your Visit</a>
+  </div>
+</header>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="center">
+      <span class="crest">The Service Menu</span>
+      <h2>Done properly, never rushed</h2>
+      <p class="sub">Every treatment includes a soak, shaping, and finish work most salons skip. Prices are starting points — final pricing depends on length and design.</p>
+    </div>
+    <div class="menu-grid">
+      <div class="m-item"><div class="name">Classic Manicure<span class="desc">Soak, shape, cuticle care, polish</span></div><div class="dots"></div><div class="price">$22</div></div>
+      <div class="m-item"><div class="name">Gel Manicure<span class="desc">Two-week wear, high-shine finish</span></div><div class="dots"></div><div class="price">$35</div></div>
+      <div class="m-item"><div class="name">Spa Pedicure<span class="desc">Hot towels, exfoliation, massage</span></div><div class="dots"></div><div class="price">$45</div></div>
+      <div class="m-item"><div class="name">Deluxe Pedicure<span class="desc">Paraffin, mask, extended massage</span></div><div class="dots"></div><div class="price">$60</div></div>
+      <div class="m-item"><div class="name">Full Acrylic Set<span class="desc">Custom length & shape</span></div><div class="dots"></div><div class="price">$45</div></div>
+      <div class="m-item"><div class="name">Gel-X Extensions<span class="desc">Lightweight, natural-look</span></div><div class="dots"></div><div class="price">$55</div></div>
+      <div class="m-item"><div class="name">Dip Powder<span class="desc">Durable, no UV lamp</span></div><div class="dots"></div><div class="price">$40</div></div>
+      <div class="m-item"><div class="name">Nail Art<span class="desc">Hand-painted, per nail</span></div><div class="dots"></div><div class="price">$5+</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="feature" id="feature">
+  <div class="wrap">
+    <div>
+      <span class="crest">Why Duchess</span>
+      <h2>The little things, <span class="gold">handled.</span></h2>
+      <ul class="pillars">
+        <li><b>01</b><div>Sanitized tools opened in front of you — every single time.</div></li>
+        <li><b>02</b><div>Your color and shape kept on file, so the next visit is effortless.</div></li>
+        <li><b>03</b><div>A calm room, real conversation, and a tech who remembers your name.</div></li>
+        <li><b>04</b><div>Honest timing — we tell you the wait before you sit, not after.</div></li>
+      </ul>
+      <a href="#visit" class="btn btn-out" style="margin-top:28px">Reserve Your Time</a>
+    </div>
+    <div class="ph ph-feat"></div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="ph s1"></div><div class="ph s2"></div><div class="ph s3"></div><div class="ph s4"></div>
+</div>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div>
+      <span class="crest">Visit Duchess</span>
+      <h2>Find us on South Plank</h2>
+      <p class="sub" style="margin-bottom:24px">Reservations are encouraged for gel and extensions; walk-ins welcome when chairs are open.</p>
+      <div class="detail"><div class="k">Address</div><div class="v">202 South Plank Rd, Newburgh, NY 12550</div></div>
+      <div class="detail"><div class="k">Phone</div><div class="v">(845) 762-1117</div></div>
+      <div class="detail"><div class="k">Email</div><div class="v">ivybaby520@hotmail.com</div></div>
+      <ul class="hrs" style="margin-top:24px">
+        <li><span>Mon – Sat</span><b>9:30a – 7:00p</b></li>
+        <li><span>Sunday</span><b>10:00a – 5:00p</b></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3 style="font-size:1.7rem;color:var(--emerald);margin-bottom:6px">Request a time</h3>
+      <p style="color:#7a8278;font-size:.92rem;margin-bottom:6px">Tell us what you'd like and when. We'll confirm by text.</p>
+      <form onsubmit="event.preventDefault();this.innerHTML='<p style=\'color:var(--emerald);font-family:Cormorant Garamond,serif;font-size:1.5rem\'>Thank you — we\'ll confirm your time shortly.</p>'">
+        <input type="text" placeholder="Name" required>
+        <input type="tel" placeholder="Phone" required>
+        <input type="text" placeholder="Service (e.g. gel mani + spa pedi)">
+        <textarea rows="3" placeholder="Preferred day & time"></textarea>
+        <button class="btn" type="submit">Request Appointment</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Duchess Nail Spa · 202 South Plank Rd, Newburgh, NY · (845) 762-1117</div>
+    <div class="pv">Website preview by Onyx Rise Media</div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banker Orchards — U-Pick Apples, Cider & Petting Zoo | Plattsburgh, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,500;0,700;1,500&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fdf7ec; --cream2:#f7ead2; --amber:#f2a93b; --amber-d:#d98916;
+    --red:#c23b2b; --red-d:#9c2d20; --green:#5d8a3a; --green-d:#446127;
+    --ink:#3a2c1d; --soft:#73654f; --line:#ead9bb;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Mulish',sans-serif;color:var(--ink);background:var(--cream);line-height:1.62}
+  h1,h2,h3,.disp{font-family:'Bitter',Georgia,serif}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .announce{background:var(--red);color:#fdf2dd;text-align:center;padding:9px;font-size:.9rem;font-weight:700;letter-spacing:.3px}
+  .nav{background:var(--cream);border-bottom:2px solid var(--line);padding:14px 0}
+  .nav .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  .brand{font-family:'Bitter',serif;font-weight:700;font-size:1.5rem;color:var(--red);display:flex;align-items:center;gap:10px}
+  .brand .mark{width:36px;height:36px;border-radius:50%;background:var(--amber);display:inline-flex;align-items:center;justify-content:center;font-size:1.15rem;border:2px solid var(--red)}
+  .nav a.call{background:var(--green);color:#fff;text-decoration:none;font-weight:800;padding:9px 18px;border-radius:8px;font-size:.92rem}
+  .hero{background:radial-gradient(circle at 82% 14%,rgba(242,169,59,.45),transparent 46%),linear-gradient(180deg,var(--cream2),var(--cream));
+    padding:64px 0 58px;position:relative;overflow:hidden}
+  .hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:30px;
+    background:repeating-linear-gradient(90deg,var(--red) 0 34px,var(--cream) 34px 68px);opacity:.85}
+  .hero .wrap{position:relative;z-index:2}
+  .pill{display:inline-block;background:#fff;border:2px solid var(--amber-d);color:var(--red-d);font-weight:800;
+    font-size:.78rem;letter-spacing:1px;padding:5px 14px;border-radius:30px;text-transform:uppercase}
+  .hero h1{font-size:clamp(2.3rem,5.7vw,3.9rem);font-weight:700;margin:18px 0 8px;line-height:1.05}
+  .hero h1 em{font-style:italic;color:var(--red)}
+  .hero p{font-size:1.18rem;max-width:580px;color:#5a4c37;margin-bottom:26px}
+  .btn{display:inline-block;text-decoration:none;font-weight:800;padding:14px 26px;border-radius:8px;font-size:1rem}
+  .btn.red{background:var(--red);color:#fff;border-bottom:3px solid var(--red-d)}
+  .btn.out{background:transparent;border:2px solid var(--green);color:var(--green-d);margin-left:8px}
+  .badges{display:flex;gap:22px;flex-wrap:wrap;margin-top:30px}
+  .badge{display:flex;flex-direction:column}
+  .badge b{font-family:'Bitter',serif;color:var(--red);font-size:1.45rem;line-height:1}
+  .badge span{font-size:.82rem;color:var(--soft);font-weight:600}
+  section{padding:60px 0}
+  .head{text-align:center;max-width:640px;margin:0 auto}
+  .eyebrow{color:var(--green-d);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:.8rem}
+  h2{font-size:clamp(1.8rem,4.3vw,2.7rem);font-weight:700;margin:8px 0 10px}
+  .head p{color:var(--soft);font-size:1.07rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:16px;margin-top:38px}
+  .item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 18px;text-align:center}
+  .item .ic{width:54px;height:54px;border-radius:50%;background:var(--cream2);display:flex;align-items:center;justify-content:center;
+    margin:0 auto 12px;font-size:1.6rem;border:2px solid var(--amber)}
+  .item h3{font-size:1.1rem;font-weight:700;margin-bottom:4px}
+  .item p{font-size:.9rem;color:var(--soft)}
+  /* season board */
+  .season{background:var(--green);color:#f4fbe9}
+  .season h2{color:#fff}
+  .season .head p{color:#dcefc6}
+  .board{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-top:34px}
+  .card{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.30);border-radius:14px;padding:22px}
+  .card h3{font-size:1.18rem;color:#fff;margin-bottom:6px}
+  .card p{font-size:.94rem;color:#e7f3d6}
+  .card .ph{background:#fff;color:var(--green-d)}
+  .ph{background:#fff3cf;color:#7a5a00;font-size:.7rem;padding:2px 7px;border-radius:4px;font-weight:800;white-space:nowrap}
+  /* barn */
+  .barn{background:var(--cream2)}
+  .barnbox{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center;margin-top:14px}
+  .barnbox .copy h2{text-align:left}
+  .barnbox .copy p{color:#54472f;font-size:1.06rem;margin-top:10px}
+  .barnbox .copy ul{list-style:none;margin:16px 0 0}
+  .barnbox .copy li{padding:6px 0 6px 26px;position:relative;font-weight:600}
+  .barnbox .copy li:before{content:"🎉";position:absolute;left:0}
+  .inquiry{background:#fff;border:2px solid var(--amber);border-radius:16px;padding:26px}
+  .inquiry h3{color:var(--red);font-size:1.3rem;margin-bottom:6px}
+  .inquiry label{display:block;font-size:.82rem;font-weight:700;color:var(--soft);margin:12px 0 4px}
+  .inquiry input,.inquiry select{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;font-size:.95rem;font-family:inherit}
+  .inquiry button{margin-top:16px;width:100%;background:var(--red);color:#fff;border:none;padding:13px;border-radius:8px;font-weight:800;font-size:1rem;cursor:pointer}
+  .inquiry .note{font-size:.74rem;color:var(--soft);margin-top:8px;text-align:center}
+  /* find us */
+  .find{text-align:center}
+  .find .addr{font-family:'Bitter',serif;font-size:1.5rem;color:var(--red);margin:8px 0}
+  .find .row{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:24px}
+  .find .fcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 26px;min-width:200px}
+  .find .fcard b{display:block;font-family:'Bitter',serif;color:var(--green-d);font-size:1.1rem;margin-bottom:3px}
+  .find .fcard span{font-size:.92rem;color:var(--soft)}
+  .endcta{background:var(--red);color:#fff;text-align:center}
+  .endcta h2{color:#fff}
+  .endcta a{display:inline-block;background:#fff;color:var(--red);font-weight:800;text-decoration:none;padding:14px 30px;border-radius:8px;margin-top:16px;font-size:1.05rem}
+  footer{background:#2f2415;color:#d9c9a6;text-align:center;padding:34px 0;font-size:.9rem}
+  footer .disp{color:var(--amber);font-size:1.3rem;margin-bottom:6px}
+  @media(max-width:760px){.barnbox{grid-template-columns:1fr}.btn.out{margin-left:0;margin-top:10px}.barnbox .copy h2{text-align:center}}
+</style>
+</head>
+<body>
+<div class="announce">🍎 Now into apple season on Route 3 — U-pick, cider, pumpkins & the petting zoo</div>
+
+<div class="nav">
+  <div class="wrap">
+    <div class="brand"><span class="mark">🍏</span> Banker Orchards</div>
+    <a class="call" href="tel:5185615234">(518) 561-5234</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="pill">U-Pick orchard · Plattsburgh, NY</span>
+    <h1>Pick your own apples,<br><em>then meet the llamas.</em></h1>
+    <p>A real North Country apple farm minutes off Route 3 — pick-your-own, fresh cider, pies still warm, pumpkins in the patch, and a petting zoo the kids won't leave.</p>
+    <a class="btn red" href="#visit">Plan your visit</a>
+    <a class="btn out" href="#barn">Book the Party Barn</a>
+    <div class="badges">
+      <div class="badge"><b>U-Pick</b><span>Apples &amp; pumpkins</span></div>
+      <div class="badge"><b>Petting zoo</b><span>Goats, llamas, donkeys</span></div>
+      <div class="badge"><b>Cuisine Trail</b><span>North Country stop</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="farm">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">On the farm</p>
+      <h2>A whole afternoon, not just a bag of apples</h2>
+      <p>Come for the picking, stay for the cider, the pie, the pumpkins and the animals. One stop, the whole family covered.</p>
+    </div>
+    <div class="grid">
+      <div class="item"><div class="ic">🍎</div><h3>U-Pick apples</h3><p>Walk the rows and pick your own, variety by variety as they ripen.</p></div>
+      <div class="item"><div class="ic">🧃</div><h3>Fresh cider</h3><p>Pressed cider to take home alongside the day's pick.</p></div>
+      <div class="item"><div class="ic">🥧</div><h3>Bakery</h3><p>Apple and pumpkin pie, plus baked goods from the farm market.</p></div>
+      <div class="item"><div class="ic">🎃</div><h3>Pumpkin patch</h3><p>Homegrown pumpkins for carving and the porch.</p></div>
+      <div class="item"><div class="ic">🐐</div><h3>Petting zoo</h3><p>Pigs, goats, llamas, miniature donkeys and horses to visit.</p></div>
+      <div class="item"><div class="ic">🛷</div><h3>Sleigh rides &amp; events</h3><p>Seasonal sleigh rides, kids' games and special events.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="season" id="visit">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow" style="color:#dcefc6">Plan your visit</p>
+      <h2>Know before you go</h2>
+      <p>The stuff a family actually needs before loading the car — picking status, hours, and what's ready this week.</p>
+    </div>
+    <div class="board">
+      <div class="card">
+        <h3>Season &amp; hours</h3>
+        <p><span class="ph">PLACEHOLDER</span> open dates &amp; daily hours — confirm before publishing.</p>
+      </div>
+      <div class="card">
+        <h3>What's ripe now</h3>
+        <p>A weekly "now picking" note so visitors know which apples are on. <span class="ph">PLACEHOLDER</span> current varieties.</p>
+      </div>
+      <div class="card">
+        <h3>U-Pick &amp; prices</h3>
+        <p><span class="ph">PLACEHOLDER</span> U-pick pricing (by bag/peck/lb) — confirm before publishing.</p>
+      </div>
+      <div class="card">
+        <h3>Is the zoo open?</h3>
+        <p>Petting zoo, sleigh rides &amp; games run seasonally — <span class="ph">PLACEHOLDER</span> what's running today.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="barn" id="barn">
+  <div class="wrap">
+    <div class="barnbox">
+      <div class="copy">
+        <p class="eyebrow">The Party Barn</p>
+        <h2>Birthdays &amp; gatherings on the farm</h2>
+        <p>Our Party Barn hosts birthday parties, group outings and meetings right on the orchard — pair it with U-pick, the petting zoo and the bakery for an easy day everyone remembers.</p>
+        <ul>
+          <li>Kids' birthday parties</li>
+          <li>Group &amp; field-trip outings</li>
+          <li>Meetings &amp; gatherings</li>
+        </ul>
+      </div>
+      <div class="inquiry">
+        <h3>Ask about a date</h3>
+        <form onsubmit="return false">
+          <label>Your name</label>
+          <input type="text" placeholder="First &amp; last name">
+          <label>Phone</label>
+          <input type="tel" placeholder="(518) 000-0000">
+          <label>What's the occasion?</label>
+          <select><option>Birthday party</option><option>Group / field trip</option><option>Meeting</option><option>Other gathering</option></select>
+          <label>Date you have in mind</label>
+          <input type="text" placeholder="e.g. Saturday in October">
+          <button>Send my request</button>
+        </form>
+        <p class="note">Prefer to talk it through? Call <a href="tel:5185615234" style="color:var(--red);font-weight:800">(518) 561-5234</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="find">
+  <div class="wrap">
+    <p class="eyebrow">Find us</p>
+    <h2>Right on Route 3</h2>
+    <p class="addr">1037 State Route 3, Plattsburgh, NY 12901</p>
+    <p style="color:var(--soft)">An easy drive from town, the Northway and the Lake Champlain shore — and a quick stop for visitors crossing from Québec.</p>
+    <div class="row">
+      <div class="fcard"><b>From Plattsburgh</b><span>Minutes west on Route 3</span></div>
+      <div class="fcard"><b>Coming from Canada</b><span><span class="ph">PLACEHOLDER</span> drive time from the border</span></div>
+      <div class="fcard"><b>Call ahead</b><span>(518) 561-5234</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="endcta">
+  <div class="wrap" style="text-align:center">
+    <h2>Make a day of it this weekend</h2>
+    <p style="max-width:540px;margin:10px auto 0;color:#ffe6d8">Call to check what's ripe and whether the zoo and rides are running, then come pick.</p>
+    <a href="tel:5185615234">Call (518) 561-5234</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="disp">Banker Orchards</div>
+    <p>1037 State Route 3, Plattsburgh, NY 12901 · (518) 561-5234 · On the North Country Cuisine Trail</p>
+    <p style="margin-top:10px;font-size:.78rem;color:#9a8a66">Preview concept prepared by Onyx Rise Media for review. Season dates, hours, U-pick prices, what's-ripe and border drive time to be confirmed by the owner.</p>
+  </div>
+</footer>
+</body>
+</html>

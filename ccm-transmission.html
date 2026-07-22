@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CCM Transmission — Transmission Repair Specialist, Palatine Bridge NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#1d2126;--steel:#343b44;--amber:#e8a13d;--amber-dk:#c77f1b;--paper:#f4f2ee;--line:#d8d3ca;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Barlow',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;}
+  h1,h2,h3{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.03em;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px;}
+  /* top bar */
+  .topbar{background:var(--ink);color:#fff;padding:10px 0;font-size:.95rem;}
+  .topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;}
+  .topbar a{color:var(--amber);text-decoration:none;font-weight:600;}
+  /* hero */
+  .hero{background:linear-gradient(160deg,var(--ink) 0%,var(--steel) 100%);color:#fff;padding:72px 0 64px;position:relative;overflow:hidden;}
+  .hero .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center;}
+  .kicker{color:var(--amber);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.85rem;}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.05;margin:14px 0 18px;}
+  .hero p{color:#cfd3d8;max-width:34em;font-size:1.08rem;}
+  .cta{display:inline-block;background:var(--amber);color:var(--ink);font-weight:700;padding:15px 30px;border-radius:4px;text-decoration:none;margin-top:26px;font-size:1.05rem;}
+  .cta:hover{background:var(--amber-dk);color:#fff;}
+  .sub-cta{color:#cfd3d8;font-size:.9rem;margin-top:10px;}
+  /* shifter gate motif */
+  .gate{justify-self:center;}
+  .gate svg{width:220px;height:auto;display:block;}
+  /* symptoms */
+  .symptoms{padding:64px 0;}
+  .symptoms h2{font-size:2rem;margin-bottom:8px;}
+  .lede{color:#555;max-width:44em;margin-bottom:32px;}
+  .sym-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;}
+  .sym{background:#fff;border:1px solid var(--line);border-left:4px solid var(--amber);padding:18px 20px;border-radius:4px;}
+  .sym strong{display:block;font-size:1.02rem;margin-bottom:4px;}
+  .sym span{color:#5a5f66;font-size:.95rem;}
+  .sym-note{margin-top:22px;background:var(--ink);color:#fff;padding:18px 22px;border-radius:4px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;}
+  .sym-note a{color:var(--amber);font-weight:700;text-decoration:none;white-space:nowrap;}
+  /* visit steps */
+  .visit{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:64px 0;}
+  .visit h2{font-size:2rem;margin-bottom:32px;}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px;}
+  .step .num{font-family:'Barlow Condensed',sans-serif;font-size:2.6rem;color:var(--amber);font-weight:700;line-height:1;}
+  .step h3{font-size:1.2rem;margin:8px 0 6px;}
+  .step p{color:#555;font-size:.97rem;}
+  /* specialist compare */
+  .compare{padding:64px 0;}
+  .compare h2{font-size:2rem;margin-bottom:26px;}
+  .comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .comp{background:#fff;border:1px solid var(--line);border-radius:4px;padding:26px;}
+  .comp.hi{border-top:5px solid var(--amber);}
+  .comp h3{font-size:1.25rem;margin-bottom:12px;}
+  .comp ul{list-style:none;}
+  .comp li{padding:7px 0 7px 26px;position:relative;color:#444;font-size:.98rem;border-bottom:1px dashed var(--line);}
+  .comp li:last-child{border-bottom:none;}
+  .comp.hi li::before{content:"✓";position:absolute;left:0;color:var(--amber-dk);font-weight:700;}
+  .comp.lo li::before{content:"–";position:absolute;left:0;color:#9aa0a8;font-weight:700;}
+  /* reviews */
+  .reviews{background:var(--ink);color:#fff;padding:64px 0;}
+  .reviews h2{font-size:2rem;margin-bottom:8px;}
+  .reviews .lede{color:#b9bec5;}
+  .rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:26px;}
+  .rev{background:var(--steel);border-radius:4px;padding:22px;font-size:.97rem;color:#e6e8ea;}
+  .rev .stars{color:var(--amber);letter-spacing:.15em;margin-bottom:10px;}
+  .rev .src{display:block;margin-top:12px;color:#9aa0a8;font-size:.85rem;}
+  .rev-disclaimer{margin-top:18px;font-size:.85rem;color:#9aa0a8;}
+  /* area + contact */
+  .contact{padding:64px 0;}
+  .contact .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;}
+  .contact h2{font-size:2rem;margin-bottom:14px;}
+  .contact p{color:#555;margin-bottom:12px;}
+  .towns{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 22px;}
+  .towns span{background:#fff;border:1px solid var(--line);border-radius:20px;padding:5px 14px;font-size:.9rem;color:#444;}
+  .card{background:#fff;border:1px solid var(--line);border-top:5px solid var(--amber);border-radius:4px;padding:28px;}
+  .card h3{font-size:1.3rem;margin-bottom:12px;}
+  .card .big-phone{font-family:'Barlow Condensed',sans-serif;font-size:2.2rem;font-weight:700;color:var(--ink);text-decoration:none;display:block;margin:6px 0 14px;}
+  .card p{font-size:.95rem;color:#555;margin-bottom:8px;}
+  footer{background:var(--ink);color:#9aa0a8;padding:26px 0;font-size:.88rem;}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+  @media(max-width:820px){.hero .wrap{grid-template-columns:1fr;}.gate{display:none;}.comp-grid{grid-template-columns:1fr;}.contact .wrap{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>CCM Transmission · 46 W Grand St, Palatine Bridge, NY</span>
+    <span>Call <a href="tel:5186733100">(518) 673-3100</a></span>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Transmission Specialist · Palatine Bridge</div>
+      <h1>When the shifting feels wrong, you want a specialist — not a guess.</h1>
+      <p>CCM Transmission is John Thayer's shop on West Grand Street. Transmissions are the whole job here — diagnosed, explained in plain English, and repaired for what's actually wrong. The nearest comparable specialist is a 40-minute drive down the Thruway.</p>
+      <a class="cta" href="tel:5186733100">Book a Diagnostic Check</a>
+      <div class="sub-cta">Straight answer first. Work only after you say go.</div>
+    </div>
+    <div class="gate">
+      <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="10" y="10" width="180" height="220" rx="16" fill="none" stroke="#e8a13d" stroke-width="3"/>
+        <line x1="55" y1="45" x2="55" y2="195" stroke="#e8a13d" stroke-width="10" stroke-linecap="round"/>
+        <line x1="145" y1="45" x2="145" y2="195" stroke="#e8a13d" stroke-width="10" stroke-linecap="round"/>
+        <line x1="55" y1="120" x2="145" y2="120" stroke="#e8a13d" stroke-width="10" stroke-linecap="round"/>
+        <circle cx="55" cy="45" r="14" fill="#e8a13d"/>
+        <text x="55" y="50" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#1d2126" font-weight="700">1</text>
+        <circle cx="55" cy="195" r="14" fill="#343b44" stroke="#e8a13d" stroke-width="2"/>
+        <text x="55" y="200" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#e8a13d" font-weight="700">2</text>
+        <circle cx="145" cy="45" r="14" fill="#343b44" stroke="#e8a13d" stroke-width="2"/>
+        <text x="145" y="50" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#e8a13d" font-weight="700">3</text>
+        <circle cx="145" cy="195" r="14" fill="#343b44" stroke="#e8a13d" stroke-width="2"/>
+        <text x="145" y="200" text-anchor="middle" font-family="Barlow Condensed" font-size="14" fill="#e8a13d" font-weight="700">R</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="symptoms">
+  <div class="wrap">
+    <h2>Does your vehicle do any of this?</h2>
+    <p class="lede">These are the calls John hears every week. None of them automatically means a rebuild — but every one of them means the transmission is asking for attention.</p>
+    <div class="sym-grid">
+      <div class="sym"><strong>Slipping between gears</strong><span>RPMs climb but the truck doesn't pull like it should.</span></div>
+      <div class="sym"><strong>Delayed or hard engagement</strong><span>A pause — or a clunk — when you shift into Drive or Reverse.</span></div>
+      <div class="sym"><strong>Check-engine or trans-temp light</strong><span>Stored codes often point at the real cause before it gets expensive.</span></div>
+      <div class="sym"><strong>Fluid spots in the driveway</strong><span>Red or brown drips under the middle of the vehicle.</span></div>
+      <div class="sym"><strong>Whining, humming, grinding</strong><span>New noises that change with speed or gear.</span></div>
+      <div class="sym"><strong>Shuddering under load</strong><span>Especially towing or climbing the valley hills on Route 5.</span></div>
+    </div>
+    <div class="sym-note">
+      <span>Caught early, many of these are a service or a targeted repair — not a full rebuild.</span>
+      <a href="tel:5186733100">Describe it to John → (518) 673-3100</a>
+    </div>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap">
+    <h2>What a diagnostic visit looks like</h2>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3>Road test &amp; scan</h3><p>John drives it, feels what you're feeling, and pulls the codes. No guessing from behind a counter.</p></div>
+      <div class="step"><div class="num">2</div><h3>Straight answer</h3><p>You get the actual cause and the options — service, repair, or rebuild — with the cost of each, before any wrench turns.</p></div>
+      <div class="step"><div class="num">3</div><h3>The fix that fits</h3><p>Only the work the transmission needs. Appointments are kept on schedule — the shop is busy, and it runs on time.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="compare">
+  <div class="wrap">
+    <h2>Why a transmission shop, not a general garage?</h2>
+    <div class="comp-grid">
+      <div class="comp hi">
+        <h3>A specialist shop</h3>
+        <ul>
+          <li>Works on transmissions all day, every day — patterns get recognized fast</li>
+          <li>Can rebuild, not just replace — often the cheaper path</li>
+          <li>Diagnoses the cause, not the symptom</li>
+          <li>One owner answering for the work: John Thayer</li>
+        </ul>
+      </div>
+      <div class="comp lo">
+        <h3>The usual alternative</h3>
+        <ul>
+          <li>Transmission jobs are the occasional exception, not the routine</li>
+          <li>"Replace the unit" is often the only option offered</li>
+          <li>Dealer pricing, dealer wait times, 40+ minutes away</li>
+          <li>Your job gets sublet — sometimes to a shop like this one</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <h2>Rated 5.0 by verified customers</h2>
+    <p class="lede">68 verified reviews on CARFAX rate CCM Transmission 5 out of 5. Here's the shape of what they say:</p>
+    <div class="rev-grid">
+      <div class="rev"><div class="stars">★★★★★</div>Reviewers describe service as knowledgeable, reasonably priced, and trusted — several call it the only shop they'll let touch their transmission.<span class="src">Summarized from verified CARFAX reviews</span></div>
+      <div class="rev"><div class="stars">★★★★★</div>Customers mention coming back for 15 years, and that John is personable and bends over backwards to accommodate.<span class="src">Summarized from public Birdeye reviews (4.8★, 32 reviews)</span></div>
+      <div class="rev"><div class="stars">★★★★★</div>A recurring theme: appointments stay on track even when the shop is busy — your week isn't held hostage.<span class="src">Summarized from verified CARFAX reviews</span></div>
+    </div>
+    <p class="rev-disclaimer">Review summaries paraphrase publicly posted customer reviews on CARFAX and Birdeye; individual quotes available at the source.</p>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <div>
+      <h2>One shop covering the valley</h2>
+      <p>CCM Transmission sits on West Grand Street in Palatine Bridge — across the river from Canajoharie, minutes off Thruway Exit 29. Drivers come from both directions on Route 5:</p>
+      <div class="towns">
+        <span>Palatine Bridge</span><span>Canajoharie</span><span>Fort Plain</span><span>Nelliston</span><span>St. Johnsville</span><span>Fonda</span><span>Sharon Springs</span><span>Cherry Valley</span>
+      </div>
+      <p>Not sure it's the transmission? Call anyway — a two-minute description over the phone often narrows it down.</p>
+    </div>
+    <div class="card">
+      <h3>Talk to the shop</h3>
+      <a class="big-phone" href="tel:5186733100">(518) 673-3100</a>
+      <p><strong>CCM Transmission</strong><br>46 W Grand St, Palatine Bridge, NY 13428</p>
+      <p>John &amp; Sue Thayer, owners</p>
+      <p>[PLACEHOLDER — confirm shop hours before publish]</p>
+      <a class="cta" href="tel:5186733100">Call Now</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 CCM Transmission · Palatine Bridge, NY</span>
+    <span>Transmission diagnosis · repair · rebuild · service</span>
+  </div>
+</footer>
+
+</body>
+</html>
