@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haberek's Auto-Diesel Machine — Diesel &amp; Gas Engine Machine Shop, Amsterdam NY</title>
+<meta name="description" content="A full engine machine shop in Amsterdam, NY, off I-90 Exit 27. Diesel and gas engine rebuilds, block and cylinder-head machining, crank grinding, valve jobs and remanufactured engines. The shop other repair shops send their engine work to. Bring us a core.">
+<style>
+  :root{
+    --bg:#0e1114; --bg2:#14181d; --panel:#191e24; --panel2:#1f262d; --line:#2b333c;
+    --blue:#3d8bd4; --blue-lt:#5fa8ec; --steel:#c7ced6; --amber:#e0a53a; --amber-lt:#f2bd54;
+    --ink:#dbe2e9; --muted:#8b98a5; --white:#f4f7fa;
+    --mono:'Consolas','SF Mono',ui-monospace,monospace;
+    --font:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.62}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{font-weight:800;letter-spacing:-.01em}
+  .mono{font-family:var(--mono)}
+
+  header{position:sticky;top:0;z-index:40;background:rgba(14,17,20,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:800}
+  .brand .mk{width:42px;height:42px;border:2px solid var(--blue);border-radius:50%;display:grid;place-items:center;color:var(--blue-lt);font-weight:900;font-size:15px;background:radial-gradient(circle at 40% 35%,#22303c,#141a20)}
+  .brand small{display:block;font-size:9.5px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+  nav a{color:var(--muted);font-size:14px;margin-left:22px}
+  nav a:hover{color:var(--steel)}
+  .callbtn{background:var(--amber);color:#1a1300;padding:9px 16px;border-radius:4px;font-weight:800;font-size:13.5px;margin-left:22px}
+  .callbtn:hover{background:var(--amber-lt)}
+  @media(max-width:820px){nav .lk{display:none}}
+
+  .hero{position:relative;padding:88px 0 70px;border-bottom:1px solid var(--line);overflow:hidden;
+    background:radial-gradient(900px 380px at 78% -8%,rgba(61,139,212,.14),transparent 62%),linear-gradient(180deg,#11161b,#0d1114)}
+  .hero:before{content:"";position:absolute;inset:0;opacity:.4;
+    background-image:radial-gradient(circle,rgba(255,255,255,.05) 1px,transparent 1.4px);background-size:26px 26px;pointer-events:none}
+  .eb{display:inline-block;font-family:var(--mono);color:var(--amber-lt);border:1px solid var(--line);background:#12181e;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:3px;margin-bottom:20px}
+  .hero h1{font-size:clamp(2rem,5vw,3.25rem);line-height:1.08;max-width:18ch;color:var(--white)}
+  .hero h1 span{color:var(--blue-lt)}
+  .hero .sub{margin-top:18px;color:var(--muted);font-size:clamp(1rem,2vw,1.16rem);max-width:60ch}
+  .hbtns{margin-top:30px;display:flex;gap:13px;flex-wrap:wrap}
+  .btn{padding:13px 22px;border-radius:4px;font-weight:800;font-size:14.5px;display:inline-flex;gap:8px;align-items:center}
+  .btn.p{background:var(--blue);color:#fff}.btn.p:hover{background:var(--blue-lt)}
+  .btn.g{border:1px solid var(--line);color:var(--ink)}.btn.g:hover{border-color:var(--amber);color:var(--amber-lt)}
+  .trust{margin-top:34px;border-left:3px solid var(--amber);background:var(--panel);padding:16px 20px;border-radius:0 6px 6px 0;max-width:620px}
+  .trust p{color:var(--steel);font-size:.98rem;font-style:italic}
+  .trust span{display:block;margin-top:6px;font-family:var(--mono);font-size:11.5px;color:var(--muted);font-style:normal;letter-spacing:.03em}
+
+  section{padding:62px 0;border-bottom:1px solid var(--line)}
+  .kick{font-family:var(--mono);color:var(--blue-lt);font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+  h2{font-size:clamp(1.6rem,3.4vw,2.2rem);margin-top:8px;color:var(--white)}
+  .lead{color:var(--muted);max-width:64ch;margin-top:12px;font-size:1.02rem}
+
+  /* machine spec table */
+  .spectbl{margin-top:34px;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .sr{display:grid;grid-template-columns:200px 1fr auto;gap:16px;padding:15px 20px;border-bottom:1px solid var(--line);align-items:center;background:var(--panel)}
+  .sr:nth-child(even){background:var(--panel2)}
+  .sr:last-child{border-bottom:none}
+  @media(max-width:680px){.sr{grid-template-columns:1fr;gap:5px}}
+  .sr .op{font-family:var(--mono);color:var(--amber-lt);font-weight:700;font-size:.98rem}
+  .sr .ds{color:var(--muted);font-size:.94rem}
+  .sr .tg{font-family:var(--mono);font-size:11px;color:var(--blue-lt);text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
+  @media(max-width:680px){.sr .tg{justify-self:start}}
+
+  .rebuild{background:var(--bg2)}
+  .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+  @media(max-width:820px){.rgrid{grid-template-columns:1fr}}
+  .rc{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:22px}
+  .rc .n{font-family:var(--mono);color:#41525f;font-size:12px}
+  .rc h3{color:var(--amber-lt);font-size:1.1rem;margin:6px 0 7px}
+  .rc p{color:var(--muted);font-size:.94rem}
+
+  .who{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:32px}
+  @media(max-width:820px){.who{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.who{grid-template-columns:1fr}}
+  .wc{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--blue);border-radius:6px;padding:20px}
+  .wc h4{color:var(--white);font-size:1.02rem}
+  .wc p{color:var(--muted);font-size:.9rem;margin-top:6px}
+
+  .how{background:var(--bg2)}
+  .steps{counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+  @media(max-width:820px){.steps{grid-template-columns:1fr}}
+  .st{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:22px;position:relative}
+  .st:before{counter-increment:s;content:"0" counter(s);font-family:var(--mono);color:var(--amber);font-weight:800;font-size:1.25rem;display:block;margin-bottom:9px}
+  .st h3{color:var(--white);font-size:1.04rem;margin-bottom:6px}
+  .st p{color:var(--muted);font-size:.93rem}
+
+  .contact{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+  @media(max-width:760px){.contact{grid-template-columns:1fr}}
+  .cbox{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:26px}
+  .cbox h3{color:var(--amber-lt);font-size:1.12rem;margin-bottom:14px}
+  .cbox .l{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink)}
+  .cbox .l:last-child{border-bottom:none}
+  .cbox .l span{color:var(--muted);min-width:74px;font-size:11px;text-transform:uppercase;letter-spacing:.05em;padding-top:2px}
+  .cbox a{color:var(--blue-lt)}
+  .dir{background:#12181e;border:1px dashed var(--blue);border-radius:6px;padding:15px;font-size:13px;color:var(--steel);margin-top:14px}
+  .dir b{color:var(--blue-lt)}
+  .cta2{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:26px}
+  .cta2 h3{color:var(--white);font-size:1.2rem;margin-bottom:8px}
+  .cta2 p{color:var(--muted);font-size:.96rem;margin-bottom:16px}
+  .cta2 .big{display:block;font-family:var(--mono);font-size:1.7rem;color:var(--amber-lt);font-weight:800;letter-spacing:.02em}
+
+  footer{background:#0a0d10;padding:40px 0 30px}
+  .fg{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:26px}
+  @media(max-width:760px){.fg{grid-template-columns:1fr}}
+  footer h4{color:var(--amber-lt);font-size:12px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:12px}
+  footer a,footer p{display:block;color:var(--muted);font-size:13.5px;margin-bottom:7px}
+  footer a:hover{color:var(--amber-lt)}
+  .cp{border-top:1px solid var(--line);margin-top:26px;padding-top:18px;text-align:center;font-size:12px;color:#59656f}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <div class="brand"><div class="mk">H</div><div>Haberek's Auto-Diesel Machine<small>Amsterdam, NY · Engine Machine Shop</small></div></div>
+    <nav>
+      <a class="lk" href="#machine">Machine Work</a>
+      <a class="lk" href="#rebuild">Rebuilds</a>
+      <a class="lk" href="#core">Bring a Core</a>
+      <a class="callbtn" href="tel:+15188426160">Call (518) 842-6160</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eb">Diesel &amp; Gas Engine Machine Shop · Amsterdam, NY · I-90 Exit 27</span>
+    <h1>The engine shop that <span>other shops send their work to.</span></h1>
+    <p class="sub">Haberek's is a full machine shop in Amsterdam — diesel and gas engine rebuilds, block and cylinder-head machining, crank grinding and valve work. When a fleet, a farm or another repair shop needs an engine done right, the core comes to Greene Street.</p>
+    <div class="hbtns">
+      <a class="btn p" href="#core">Bring us a core →</a>
+      <a class="btn g" href="#machine">See the machine work</a>
+    </div>
+    <div class="trust">
+      <p>"I work for a local forklift-repair company that outsources our diesel engine work to Chuck — because we know his quality. Every tech here recommends him."</p>
+      <span>— customer review, Amsterdam NY</span>
+    </div>
+  </div>
+</section>
+
+<section id="machine">
+  <div class="wrap">
+    <span class="kick">Machine-shop capability</span>
+    <h2>Measured, machined and put back to spec</h2>
+    <p class="lead">A rebuild is only as good as the machine work under it. Blocks decked flat, cylinders bored and honed true, heads resurfaced and valve seats cut, cranks turned and checked — the operations that separate a rebuilt engine that lasts from one that comes back.</p>
+    <div class="spectbl">
+      <div class="sr"><div class="op">Block decking</div><div class="ds">Deck surfaces machined flat and square for a clean head-gasket seal.</div><div class="tg">Diesel · Gas</div></div>
+      <div class="sr"><div class="op">Cylinder bore &amp; hone</div><div class="ds">Bored to size and plateau-honed for correct ring seal and oil control.</div><div class="tg">To spec</div></div>
+      <div class="sr"><div class="op">Cylinder-head work</div><div class="ds">Resurfacing, valve jobs, guide and seat work, pressure-testing for cracks.</div><div class="tg">Valve job</div></div>
+      <div class="sr"><div class="op">Crankshaft grinding</div><div class="ds">Journals turned and polished; mains and rods checked and fitted.</div><div class="tg">Undersize</div></div>
+      <div class="sr"><div class="op">Complete rebuild</div><div class="ds">Full teardown, machine, assembly and set-up — a running long-block or complete engine.</div><div class="tg">Long-block</div></div>
+      <div class="sr"><div class="op">Reman &amp; custom engines</div><div class="ds">Remanufactured and custom-built engines for trucks, equipment and specialty work.</div><div class="tg">Built to order</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="rebuild" id="rebuild">
+  <div class="wrap">
+    <span class="kick">Complete engines</span>
+    <h2>From a bare core to a running engine</h2>
+    <div class="rgrid">
+      <div class="rc"><div class="n">// 01</div><h3>Heavy-duty diesel</h3><p>Truck, bus and equipment diesels torn down, machined and rebuilt — the durable, high-hour engines that a parts-counter reman won't cover.</p></div>
+      <div class="rc"><div class="n">// 02</div><h3>Gas &amp; light-truck</h3><p>Automotive and light-truck gas engines rebuilt and machined — including older and custom builds most shops won't touch.</p></div>
+      <div class="rc"><div class="n">// 03</div><h3>Equipment &amp; industrial</h3><p>Forklift, generator, marine and industrial power units — the engines that keep a business running and can't be down for weeks.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kick">Who sends us work</span>
+    <h2>Fleets, farms, shops — and gearheads</h2>
+    <div class="who">
+      <div class="wc"><h4>Repair shops</h4><p>Shops that don't have machine equipment send their engine and machine work here.</p></div>
+      <div class="wc"><h4>Fleets &amp; trucking</h4><p>Owner-operators and fleets that need a diesel back on the road, done once and done right.</p></div>
+      <div class="wc"><h4>Farms &amp; equipment</h4><p>Tractors, loaders, generators and equipment engines that keep the operation moving.</p></div>
+      <div class="wc"><h4>Restorers</h4><p>Older, odd and custom engines that need real machine work, not a swap.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="core">
+  <div class="wrap">
+    <span class="kick">How a job works</span>
+    <h2>Bring us a core</h2>
+    <p class="lead">Whether it's a single head that needs resurfacing or a complete diesel to rebuild, the process is the same — call first, get it here, get a straight answer.</p>
+    <div class="steps">
+      <div class="st"><h3>Call or bring it in</h3><p>Tell us the engine and what it needs — a head resurfaced, a block machined, or a full rebuild. Off I-90 Exit 27.</p></div>
+      <div class="st"><h3>We measure &amp; quote</h3><p>We inspect and measure the core, tell you what it needs and what it doesn't, and give you the number before the work starts.</p></div>
+      <div class="st"><h3>Machined &amp; ready</h3><p>Machined to spec and assembled or returned as parts — checked so it goes back together right and stays together.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="contact">
+      <div class="cbox">
+        <h3>Haberek's Auto-Diesel Machine</h3>
+        <div class="l"><span>Shop</span><div>16 Greene St<br>Amsterdam, NY 12010</div></div>
+        <div class="l"><span>Phone</span><div><a href="tel:+15188426160">(518) 842-6160</a></div></div>
+        <div class="l"><span>Hours</span><div>Mon–Fri 8:00–5:00 (Tue to 8:00) · closed weekends</div></div>
+        <div class="l"><span>Access</span><div>Right off I-90 (NYS Thruway) Exit 27, Amsterdam</div></div>
+        <div class="dir"><b>Bringing a core?</b> Call ahead so we know it's coming — it helps us have the measuring and the machine time ready when you pull in.</div>
+      </div>
+      <div class="cta2">
+        <span class="kick">Get it started</span>
+        <h3 style="margin-top:8px">One call gets your engine in line</h3>
+        <p>No online form needed — engine work starts with a conversation about the core and what it needs.</p>
+        <span class="big">(518) 842-6160</span>
+        <a class="btn p" href="tel:+15188426160" style="margin-top:16px">Call the shop →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fg">
+    <div>
+      <h4>Haberek's Auto-Diesel Machine</h4>
+      <p>A full diesel and gas engine machine shop in Amsterdam, New York, off I-90 Exit 27 — block and head machining, crank work, valve jobs, complete rebuilds and reman engines for fleets, farms, shops and restorers across the Mohawk Valley.</p>
+    </div>
+    <div>
+      <h4>Shop</h4>
+      <a href="#machine">Machine Work</a>
+      <a href="#rebuild">Complete Engines</a>
+      <a href="#core">Bring a Core</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="tel:+15188426160">(518) 842-6160</a>
+      <a href="#core">16 Greene St, Amsterdam NY 12010</a>
+      <a href="#core">I-90 Exit 27</a>
+    </div>
+  </div>
+  <div class="cp">Preview concept prepared by Onyx Rise Media for Haberek's Auto-Diesel Machine. Not affiliated or published. Quoted review is a customer comment gathered from a public listing.</div>
+</footer>
+</body>
+</html>

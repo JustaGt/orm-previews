@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Benemy Welding &amp; Fabrication — Sheet, Plate, Ornamental Iron &amp; Machine Shop, Phelps NY</title>
+<meta name="description" content="A 22,000 sq ft welding and fabrication shop in Phelps, NY. Precision sheet and plate metal, ornamental and architectural iron, CNC plasma cutting (including pipe), machine-shop work, metal supply and portable welding. Commercial, industrial and residential. Send us a drawing or a photo for a quote.">
+<style>
+  :root{
+    --steel:#12181f; --steel2:#182029; --panel:#1e2831; --line:#2f3d49;
+    --blue:#2d7fb8; --blue-lt:#4aa3dc; --amber:#f4b41a; --amber-lt:#ffcb4d;
+    --ink:#e7edf2; --muted:#9aabb8; --white:#f6f9fb; --hazard:#f4b41a;
+    --font:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font);color:var(--ink);background:var(--steel);line-height:1.6}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  .mono{font-family:'Consolas','SF Mono',ui-monospace,monospace;letter-spacing:.02em}
+  h1,h2,h3{font-family:var(--font);font-weight:800}
+
+  header{position:sticky;top:0;z-index:40;background:rgba(18,24,31,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.01em}
+  .brand .mark{width:40px;height:40px;background:var(--amber);color:#1a1200;border-radius:4px;display:grid;place-items:center;font-weight:900;font-size:16px}
+  .brand small{display:block;font-size:10px;color:var(--muted);font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+  nav a{color:var(--muted);font-size:14px;margin-left:24px;letter-spacing:.02em}
+  nav a:hover{color:var(--amber-lt)}
+  .callbtn{background:var(--blue);color:#fff;padding:10px 18px;border-radius:4px;font-weight:800;font-size:14px;margin-left:24px}
+  .callbtn:hover{background:var(--blue-lt)}
+  @media(max-width:860px){nav .lk{display:none}}
+
+  .hero{position:relative;padding:96px 0 82px;overflow:hidden;border-bottom:1px solid var(--line);
+    background:radial-gradient(1000px 400px at 84% -10%,rgba(45,127,184,.16),transparent 60%),linear-gradient(180deg,#151d25,#0f151b)}
+  .hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:44px 44px;pointer-events:none}
+  .eyebrow{display:inline-block;color:#1a1200;background:var(--amber);font-size:12px;letter-spacing:.13em;text-transform:uppercase;padding:6px 13px;border-radius:3px;margin-bottom:22px;font-weight:800}
+  h1{font-size:clamp(2.1rem,5.2vw,3.4rem);line-height:1.08;max-width:19ch;color:var(--white)}
+  h1 span{color:var(--amber-lt)}
+  .sub{margin-top:20px;font-size:clamp(1.02rem,2.1vw,1.2rem);color:var(--muted);max-width:60ch}
+  .cta{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{padding:14px 24px;border-radius:4px;font-weight:800;font-size:15px;display:inline-flex;align-items:center;gap:9px}
+  .btn.primary{background:var(--blue);color:#fff}
+  .btn.primary:hover{background:var(--blue-lt)}
+  .btn.ghost{border:1px solid var(--line);color:var(--ink)}
+  .btn.ghost:hover{border-color:var(--amber);color:var(--amber-lt)}
+  .herostrip{margin-top:36px;display:flex;gap:26px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+  .herostrip b{color:var(--amber-lt)}
+
+  section{padding:74px 0;border-bottom:1px solid var(--line)}
+  .kicker{color:var(--blue-lt);font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
+  h2{font-size:clamp(1.7rem,3.6vw,2.35rem);margin-top:10px;color:var(--white);letter-spacing:-.01em}
+  .lead{color:var(--muted);max-width:66ch;margin-top:14px;font-size:1.03rem}
+
+  .grid{display:grid;gap:16px;margin-top:38px}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:860px){.g3{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:24px;position:relative}
+  .card .n{position:absolute;top:18px;right:20px;font-family:'Consolas',monospace;color:#41525f;font-size:12px}
+  .card h3{font-size:1.13rem;color:var(--amber-lt);margin-bottom:8px}
+  .card p{color:var(--muted);font-size:.96rem}
+
+  .spec{background:var(--steel2)}
+  .specrow{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:36px}
+  @media(max-width:860px){.specrow{grid-template-columns:1fr}}
+  .specbox{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:24px}
+  .specbox h3{color:var(--white);font-size:1.05rem;margin-bottom:12px;border-bottom:1px solid var(--line);padding-bottom:10px}
+  .pill{display:inline-block;font-family:'Consolas',monospace;font-size:12.5px;color:var(--ink);background:#111820;border:1px solid var(--line);border-radius:4px;padding:6px 11px;margin:4px 4px 0 0}
+  .pill b{color:var(--amber-lt)}
+
+  .who{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+  @media(max-width:860px){.who{grid-template-columns:1fr}}
+  .wbox{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:6px;padding:22px}
+  .wbox h3{color:var(--white);font-size:1.08rem;margin-bottom:6px}
+  .wbox p{color:var(--muted);font-size:.95rem}
+  .wbox .ex{margin-top:10px;font-family:'Consolas',monospace;font-size:11.5px;color:var(--blue-lt);text-transform:uppercase;letter-spacing:.05em}
+
+  .how{background:var(--steel2)}
+  .steps{counter-reset:s;display:grid;gap:16px;grid-template-columns:repeat(3,1fr);margin-top:36px}
+  @media(max-width:860px){.steps{grid-template-columns:1fr}}
+  .step{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:24px;position:relative}
+  .step:before{counter-increment:s;content:"0" counter(s);display:inline-block;color:var(--amber);font-family:'Consolas',monospace;font-weight:800;font-size:1.3rem;margin-bottom:10px}
+  .step h3{color:var(--white);font-size:1.06rem;margin-bottom:6px}
+  .step p{color:var(--muted);font-size:.95rem}
+
+  .quoteform{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:start}
+  @media(max-width:860px){.quoteform{grid-template-columns:1fr}}
+  label{display:block;font-size:12px;color:var(--muted);margin:13px 0 6px;letter-spacing:.03em;text-transform:uppercase}
+  input,select,textarea{width:100%;background:#0f151b;border:1px solid var(--line);border-radius:5px;padding:11px 12px;color:var(--ink);font-family:var(--font);font-size:14.5px}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--amber)}
+  textarea{min-height:100px;resize:vertical}
+  .frow{display:flex;gap:14px;flex-wrap:wrap}
+  .frow>div{flex:1;min-width:150px}
+  .submit{margin-top:16px;background:var(--amber);color:#1a1200;border:none;padding:14px 26px;border-radius:5px;font-weight:800;font-size:15px;cursor:pointer}
+  .submit:hover{background:var(--amber-lt)}
+  .side{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:26px}
+  .side h3{color:var(--amber-lt);font-size:1.08rem;margin-bottom:14px}
+  .side .line{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink)}
+  .side .line:last-child{border-bottom:none}
+  .side .line span{color:var(--muted);min-width:72px;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+  .gps{background:#111820;border:1px dashed var(--amber);border-radius:6px;padding:14px;margin-top:16px;font-size:13px;color:var(--ink)}
+  .gps b{color:var(--amber-lt)}
+  .note{font-size:11.5px;color:var(--muted);margin-top:10px;font-style:italic}
+
+  footer{background:#0d1319;padding:50px 0 38px}
+  .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+  @media(max-width:860px){.fgrid{grid-template-columns:1fr}}
+  footer h4{color:var(--amber-lt);font-size:13px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px}
+  footer p,footer a{color:var(--muted);font-size:14px;display:block;margin-bottom:8px}
+  footer a:hover{color:var(--amber-lt)}
+  .copy{border-top:1px solid var(--line);margin-top:32px;padding-top:20px;color:#5c6d79;font-size:12.5px;text-align:center}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <div class="brand"><div class="mark">BW</div><div>Benemy Welding &amp; Fabrication<small>Phelps, New York · Est. 2005</small></div></div>
+    <nav>
+      <a class="lk" href="#work">What We Do</a>
+      <a class="lk" href="#materials">Materials</a>
+      <a class="lk" href="#quote">Get a Quote</a>
+      <a class="callbtn" href="tel:+13155488500">Call (315) 548-8500</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Welding · Fabrication · Machine Shop — Phelps, NY</span>
+    <h1>From a porch railing to a factory hopper — <span>cut, machined and welded under one roof.</span></h1>
+    <p class="sub">Benemy is a 22,000-square-foot fabrication shop in Phelps handling precision sheet and plate metal, ornamental and architectural iron, CNC plasma cutting, machine-shop work and metal supply. Commercial, industrial or residential — send us a drawing or a photo and we'll price the job.</p>
+    <div class="cta">
+      <a class="btn primary" href="#quote">Send a drawing for a quote →</a>
+      <a class="btn ghost" href="#work">See what we build</a>
+    </div>
+    <div class="herostrip">
+      <div><b>Sheet · Plate · Ornamental iron</b></div>
+      <div><b>CNC plasma</b> — including pipe</div>
+      <div><b>MIG · TIG · ARC</b> &amp; portable welding</div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <span class="kicker">Capabilities</span>
+    <h2>One shop that spans the whole range</h2>
+    <p class="lead">Plenty of shops pick a lane — production plate, or ornamental, or repair. Benemy runs all of it, which is why the same crew that welds a factory shred-hopper also builds a homeowner's stair rail. Here's what comes through the doors.</p>
+    <div class="grid g3">
+      <div class="card"><span class="n">01</span><h3>Sheet &amp; plate metal</h3><p>Precision sheet- and plate-metal fabrication for guards, hoppers, platforms, brackets and enclosures — formed, cut and welded to spec.</p></div>
+      <div class="card"><span class="n">02</span><h3>Ornamental &amp; architectural iron</h3><p>Railings, gates, gangways, stairs and custom architectural pieces — from a residential porch rail to public handrail runs and marina dock arms.</p></div>
+      <div class="card"><span class="n">03</span><h3>CNC plasma cutting</h3><p>CNC plasma cutting including pipe, for clean repeatable parts, brackets and profiles cut from your file or ours.</p></div>
+      <div class="card"><span class="n">04</span><h3>Machine-shop work</h3><p>Brake, mill and shear work plus machining to finish and fit fabricated parts — one stop from raw stock to a working assembly.</p></div>
+      <div class="card"><span class="n">05</span><h3>Metal supply</h3><p>Need the steel, stainless or aluminum as well as the labor? We handle material supply so you're not sourcing stock from three vendors.</p></div>
+      <div class="card"><span class="n">06</span><h3>Portable welding &amp; truck lift</h3><p>Portable MIG/TIG/ARC welding for on-site repairs and installs, plus truck-lift service when the job can't come to the shop.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="spec" id="materials">
+  <div class="wrap">
+    <span class="kicker">Materials &amp; processes</span>
+    <h2>What we weld and how we cut it</h2>
+    <div class="specrow">
+      <div class="specbox">
+        <h3>Metals we work</h3>
+        <span class="pill"><b>Aluminum</b></span>
+        <span class="pill"><b>Stainless steel</b></span>
+        <span class="pill"><b>Cast iron</b></span>
+        <span class="pill"><b>Copper</b></span>
+        <span class="pill"><b>Brass</b></span>
+        <span class="pill">Mild &amp; structural steel</span>
+        <p style="color:var(--muted);font-size:.93rem;margin-top:14px">Bring the tricky ones — cast iron repairs, stainless food-plant work, aluminum. If it can be welded, it likely comes through Phelps.</p>
+      </div>
+      <div class="specbox">
+        <h3>Welding &amp; fabrication</h3>
+        <span class="pill"><b>MIG</b></span>
+        <span class="pill"><b>TIG</b></span>
+        <span class="pill"><b>ARC</b></span>
+        <span class="pill">Portable welding</span>
+        <span class="pill">Brake</span>
+        <span class="pill">Mill</span>
+        <span class="pill">Shear</span>
+        <span class="pill"><b>CNC plasma</b> (incl. pipe)</span>
+        <p style="color:var(--muted);font-size:.93rem;margin-top:14px">Fabrication and finishing in-house, so a part gets cut, formed, machined and welded without leaving the building.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">Who we build for</span>
+    <h2>Three kinds of customer, one quote line</h2>
+    <div class="who">
+      <div class="wbox"><h3>Industrial</h3><p>Plants and processors needing hoppers, guards, sort tables, wash racks, platforms and production parts — built to keep a line running.</p><div class="ex">Ex: shred hoppers · box pushers · sort sinks</div></div>
+      <div class="wbox"><h3>Commercial &amp; municipal</h3><p>Contractors, marinas, libraries and towns needing railings, gangways, gates, book drops and dock hardware that has to pass inspection and last.</p><div class="ex">Ex: dock arms · handrail runs · cemetery gate</div></div>
+      <div class="wbox"><h3>Residential</h3><p>Homeowners who want a real fabricator for a porch rail, custom bracket, repair or one-off — not a big-box special-order.</p><div class="ex">Ex: porch railings · trellis · sign brackets</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <span class="kicker">Getting a quote</span>
+    <h2>The fastest way to a number is a picture</h2>
+    <p class="lead">You don't need finished drawings. A phone photo, a rough sketch on graph paper, or a PDF from your engineer is enough to get started.</p>
+    <div class="steps">
+      <div class="step"><h3>Send what you've got</h3><p>Photo, sketch or drawing, plus rough dimensions and the metal if you know it. Tell us residential, commercial or industrial.</p></div>
+      <div class="step"><h3>We scope &amp; price it</h3><p>We come back with material, approach and a price — and flag anything that'll change the cost before you commit.</p></div>
+      <div class="step"><h3>We build it in Phelps</h3><p>Cut, formed, machined and welded in the 22,000 sq ft shop. Pick it up, have it delivered, or we bring the portable rig to you.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="quote">
+  <div class="wrap">
+    <span class="kicker">Request a quote</span>
+    <h2>Tell us about the job</h2>
+    <div class="quoteform" style="margin-top:18px">
+      <form onsubmit="return false">
+        <div class="frow">
+          <div><label>Name</label><input type="text" placeholder="Your name"></div>
+          <div><label>Phone</label><input type="tel" placeholder="(315) 000-0000"></div>
+        </div>
+        <div class="frow">
+          <div><label>Email</label><input type="email" placeholder="you@example.com"></div>
+          <div><label>Job type</label><select><option>Residential</option><option>Commercial / municipal</option><option>Industrial</option></select></div>
+        </div>
+        <label>Metal (if known)</label>
+        <select><option>Not sure — you tell me</option><option>Steel</option><option>Stainless</option><option>Aluminum</option><option>Cast iron</option><option>Copper / brass</option></select>
+        <label>Describe the part or project</label>
+        <textarea placeholder="What is it, roughly how big, how many, and when you need it. Attach a photo or drawing when we reply."></textarea>
+        <button class="submit">Request a quote</button>
+        <p class="note">Sample layout — the live form will let you attach a photo or drawing and route straight to the shop.</p>
+      </form>
+      <div class="side">
+        <h3>Benemy Welding &amp; Fabrication</h3>
+        <div class="line"><span>Shop</span><div>8 Pleasant Ave<br>Phelps, NY 14532</div></div>
+        <div class="line"><span>Phone</span><div>(315) 548-8500</div></div>
+        <div class="line"><span>Fax</span><div>(315) 548-8550</div></div>
+        <div class="line"><span>Email</span><div>benemy.jeremy@ottcmail.com</div></div>
+        <div class="line"><span>Hours</span><div>Mon–Fri 7:00–3:30 · after-hours by appointment</div></div>
+        <div class="gps"><b>Heads up on your GPS:</b> it's Pleasant <b>Avenue</b>, not Pleasant Street — and some maps still point to the old County Route 6 shop we left in 1997. Call if you're unsure and we'll talk you in.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fgrid">
+    <div>
+      <h4>Benemy Welding &amp; Fabrication, Inc.</h4>
+      <p>A 22,000 sq ft welding, fabrication and machine shop in Phelps, New York, serving commercial, industrial and residential customers since 2005. Sheet &amp; plate, ornamental iron, CNC plasma, machining, metal supply and portable welding.</p>
+    </div>
+    <div>
+      <h4>Shop</h4>
+      <a href="#work">What We Do</a>
+      <a href="#materials">Materials &amp; Processes</a>
+      <a href="#quote">Get a Quote</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="tel:+13155488500">(315) 548-8500</a>
+      <a href="#quote">8 Pleasant Ave, Phelps NY</a>
+      <a href="#quote">benemy.jeremy@ottcmail.com</a>
+    </div>
+  </div>
+  <div class="copy">Preview concept prepared by Onyx Rise Media for Benemy Welding &amp; Fabrication. Not affiliated or published.</div>
+</footer>
+</body>
+</html>

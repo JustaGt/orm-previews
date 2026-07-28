@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loveless Excavating Inc — Excavation &amp; Septic in Cato, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --loam:#3a2c1d; --clay:#6f4a2a; --yellow:#f2b21c; --slate:#33383d;
+    --ink:#20242a; --stone:#f1efe9; --line:#d7d2c7; --steel:#4a5158;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Roboto',system-ui,sans-serif;color:var(--ink);background:var(--stone);line-height:1.62}
+  h1,h2,h3,.osw{font-family:'Oswald',sans-serif;text-transform:uppercase;line-height:1.08;letter-spacing:.4px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .top{background:var(--ink);color:#d9dde1;font-size:.82rem}
+  .top .wrap{display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between;align-items:center;padding:9px 22px}
+  .top b{color:var(--yellow)}
+  /* hazard bar */
+  .hazard{height:8px;background:repeating-linear-gradient(45deg,var(--yellow) 0 22px,#20242a 22px 44px)}
+  /* hero */
+  .hero{color:#f3f5f6;
+    background:
+      linear-gradient(180deg,rgba(32,36,42,.9),rgba(32,36,42,.74)),
+      repeating-linear-gradient(115deg,#3a2c1d 0 40px,#33271a 40px 80px);
+    padding:66px 0 72px}
+  .tag{display:inline-block;background:var(--yellow);color:#2a1e06;font-family:'Oswald',sans-serif;
+    text-transform:uppercase;letter-spacing:1px;font-weight:600;font-size:.78rem;padding:6px 13px;margin-bottom:18px}
+  .hero h1{font-size:clamp(2.2rem,5.6vw,3.9rem);max-width:17ch}
+  .hero p{font-size:1.16rem;max-width:52ch;margin:18px 0 30px;color:#dbe0e4}
+  .btn{display:inline-block;font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:600;
+    letter-spacing:.6px;text-decoration:none;padding:14px 26px;border-radius:3px;font-size:1.08rem}
+  .btn-y{background:var(--yellow);color:#2a1e06}
+  .btn-o{background:transparent;color:#fff;border:2px solid #7c6a52;margin-left:12px}
+  .hero small{display:block;margin-top:16px;color:#b6bcc1;font-size:.9rem}
+  /* bar */
+  .bar{background:var(--steel);color:#eef1f3}
+  .bar .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+  .bar div{padding:16px 12px;text-align:center}
+  .bar b{font-family:'Oswald',sans-serif;font-size:1.35rem;color:#fff;display:block;text-transform:uppercase}
+  .bar span{font-size:.82rem;color:#c4cacf}
+  section{padding:60px 0}
+  .eyebrow{color:var(--clay);font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:1.6px;font-size:.85rem;font-weight:600}
+  h2{font-size:clamp(1.8rem,4vw,2.6rem);color:var(--loam);margin:6px 0 10px}
+  .sub{color:#54503f;max-width:62ch;margin-bottom:28px}
+  .grid{display:grid;gap:16px}
+  .svc{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+  .card{background:#fff;border:1px solid var(--line);border-radius:7px;padding:22px;border-left:5px solid var(--clay)}
+  .card h3{font-size:1.18rem;color:var(--loam);margin-bottom:6px}
+  .card p{font-size:.93rem;color:#54585b}
+  /* septic callout */
+  .septic{background:var(--loam);color:#efe6d9}
+  .septic .flex{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+  .septic h2{color:#fff}
+  .septic .box{background:#4a3826;border:1px solid #6a5238;border-radius:9px;padding:26px}
+  .septic .box h3{color:var(--yellow);font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:1.25rem;margin-bottom:8px}
+  .septic ul{list-style:none;margin-top:8px}
+  .septic li{padding:6px 0 6px 24px;position:relative;font-size:.96rem;color:#e4d8c7}
+  .septic li:before{content:"▹";position:absolute;left:2px;color:var(--yellow)}
+  /* area */
+  .area{background:#eceae2}
+  .area .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+  .area .chips span{background:#fff;border:1px solid var(--line);border-radius:20px;padding:8px 16px;font-size:.9rem;color:#4a4335}
+  /* estimate */
+  .est .panel{background:#fff;border:1px solid var(--line);border-radius:10px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+  .est .info{padding:34px}
+  .est .row{margin:14px 0}
+  .est .row b{font-family:'Oswald',sans-serif;text-transform:uppercase;color:var(--clay);display:block;font-size:.82rem;letter-spacing:.6px}
+  .est .callside{background:var(--slate);color:#eef1f3;padding:34px;display:flex;flex-direction:column;justify-content:center}
+  .est .callside .big{font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:1.9rem;color:#fff}
+  .note{font-size:.78rem;color:#857c6a;margin-top:14px}
+  footer{background:var(--ink);color:#a2a8ad;font-size:.86rem;padding:28px 0;text-align:center}
+  footer b{color:#e2e6e9}
+  @media(max-width:660px){
+    .bar .wrap{grid-template-columns:1fr}
+    .septic .flex,.est .panel{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <span>Loveless Excavating Inc · Cato, NY · Owner Ron Loveless*</span>
+  <span>Estimates <b>(315) 626-6308</b></span>
+</div></div>
+<div class="hazard"></div>
+
+<header class="hero"><div class="wrap">
+  <span class="tag">Excavation · Septic · Site Work — Cato, NY</span>
+  <h1>Septic gone bad or ground that needs moving? Call a local outfit.</h1>
+  <p>Loveless Excavating handles septic systems, driveways, drainage and site work across Cato, Cross Lake and northern Cayuga County — the dirt-work your property runs on, done by people down the road.</p>
+  <a class="btn btn-y" href="tel:13156266308">Call for an estimate: (315) 626-6308</a>
+  <a class="btn btn-o" href="#services">See services</a>
+  <small>Septic backing up or a system that failed inspection? Call and describe it — we'll tell you the next step.</small>
+</div></header>
+
+<div class="bar"><div class="wrap">
+  <div><b>Septic Systems</b><span>Install, repair &amp; replace</span></div>
+  <div><b>County-Registered*</b><span>Permitted septic work in Cayuga Co.</span></div>
+  <div><b>Local &amp; Owner-Run</b><span>Ron Loveless,* Cato-based</span></div>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <span class="eyebrow">What we do</span>
+  <h2>Dirt work, start to finish</h2>
+  <p class="sub">One local outfit for the below-ground and site work that keeps a rural or lakeside property livable and buildable.</p>
+  <div class="grid svc">
+    <div class="card"><h3>Septic Systems</h3><p>New installs, repairs and full replacements — tanks, leach fields, distribution and failed-inspection fixes for homes on their own systems.</p></div>
+    <div class="card"><h3>Driveways &amp; Access</h3><p>New gravel driveways, regrading, culverts and access roads that hold up to Cayuga County mud and frost.</p></div>
+    <div class="card"><h3>Drainage &amp; Grading</h3><p>Wet yards, foundation drainage, swales and regrading to move water away from the house and outbuildings.</p></div>
+    <div class="card"><h3>Foundations &amp; Digs</h3><p>Basement and footing excavation, additions and utility trenching, dug to your builder's plan.</p></div>
+    <div class="card"><h3>Land Clearing</h3><p>Brush, stumps and lot clearing for new builds, farm expansion and lakeside property cleanup.</p></div>
+    <div class="card"><h3>Ponds &amp; Site Prep</h3><p>Pond digging and reshaping, building-pad prep and general site work before the crew shows up.</p></div>
+  </div>
+</div></section>
+
+<section class="septic"><div class="wrap">
+  <div class="flex">
+    <div>
+      <span class="eyebrow" style="color:var(--yellow)">Septic done to code</span>
+      <h2>On a septic system? Get it done by a registered installer.</h2>
+      <p style="color:#ddd0bf;max-width:56ch">Homes and cottages around Cato and Cross Lake run on their own septic — no municipal sewer. In Cayuga County, septic installs and repairs have to be done by a contractor permitted through the County Health Department. A failed system won't wait, and a bad fix costs twice.</p>
+    </div>
+    <div class="box">
+      <h3>Why call Loveless first</h3>
+      <ul>
+        <li>Septic install, repair &amp; replacement</li>
+        <li>Familiar with Cayuga County permit &amp; code*</li>
+        <li>Real-estate inspection failures sorted out</li>
+        <li>Local — we can come look at it</li>
+        <li>Straight estimate before the machine rolls</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="area"><div class="wrap">
+  <span class="eyebrow">Where we work</span>
+  <h2>Northern Cayuga &amp; the Cross Lake shore</h2>
+  <p class="sub">Based on Houghtaling Rd in Cato, working the towns and lake properties nearby.</p>
+  <div class="chips">
+    <span>Cato</span><span>Cross Lake</span><span>Weedsport</span><span>Meridian</span>
+    <span>Ira</span><span>Port Byron</span><span>Conquest</span><span>Northern Cayuga County</span>
+  </div>
+</div></section>
+
+<section class="est"><div class="wrap">
+  <span class="eyebrow">Get a number</span>
+  <h2>Request an on-site estimate</h2>
+  <div class="panel">
+    <div class="info">
+      <div class="row"><b>Based at</b>1700 Houghtaling Rd, Cato, NY 13033</div>
+      <div class="row"><b>Phone</b><a href="tel:13156266308">(315) 626-6308</a></div>
+      <div class="row"><b>Owner</b>Ron Loveless* — Loveless Excavating Inc</div>
+      <div class="row"><b>Best for</b>Septic, driveways, drainage, foundations, clearing, ponds</div>
+      <p class="note">* Owner name, county-registration status and service towns shown for layout and confirmed with the office before use.</p>
+    </div>
+    <div class="callside">
+      <div class="big">Describe the job</div>
+      <p style="margin-top:8px;color:#ccd2d7">Tell us what's happening — failed septic, wet yard, new driveway, a pad to dig — and we'll set up a look and an honest number.</p>
+      <p style="margin-top:16px"><a class="btn btn-y" href="tel:13156266308">Call (315) 626-6308</a></p>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <b>Loveless Excavating Inc</b> · 1700 Houghtaling Rd, Cato, NY 13033 · (315) 626-6308<br>
+  Excavation · septic systems · driveways · drainage · site work · northern Cayuga County
+</div></footer>
+
+</body>
+</html>

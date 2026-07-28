@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B.J. Farms — Sweet Corn, Pick-Your-Own & Screened Topsoil | Greenwich, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Recoleta:wght@600&family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --leaf:#2b7a2f; --leaf2:#3a9a3e; --tomato:#d8442c; --tomato2:#ef5a3f;
+    --cream:#fbf6ea; --card:#ffffff; --ink:#26301f; --mut:#61705a; --line:#e3e0cf; --soil:#5a4632;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--ink);line-height:1.62}
+  h1,h2,h3{font-family:'Poppins',sans-serif;letter-spacing:-.3px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .top{position:sticky;top:0;z-index:20;background:var(--leaf);}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{font-family:'Poppins';font-weight:700;font-size:1.3rem;color:#fff}
+  .brand span{color:#ffe08a}
+  .top nav a{color:#e5f3e6;text-decoration:none;margin-left:20px;font-size:.92rem;font-weight:500}
+  .top a.call{background:#ffe08a;color:#2a3a12;padding:9px 16px;border-radius:30px;font-weight:600;font-size:.9rem}
+  .hero{background:radial-gradient(circle at 82% 15%,rgba(216,68,44,.16),transparent 46%),linear-gradient(180deg,#2b7a2f,#236425);color:#fff;padding:74px 0 58px}
+  .eyebrow{color:#ffe08a;font-weight:600;letter-spacing:2px;font-size:.82rem;text-transform:uppercase}
+  .hero h1{font-family:'Recoleta','Poppins',serif;font-size:clamp(2.2rem,5.4vw,3.8rem);line-height:1.05;margin:14px 0 16px;font-weight:600}
+  .hero h1 em{color:#ffe08a;font-style:normal}
+  .hero p.lead{font-size:1.16rem;color:#e5f3e6;max-width:610px}
+  .cta-row{margin-top:28px;display:flex;gap:13px;flex-wrap:wrap}
+  .btn{font-weight:600;padding:14px 26px;border-radius:32px;text-decoration:none;font-size:1rem;display:inline-block}
+  .btn-cream{background:#ffe08a;color:#2a3a12}
+  .btn-ghost{border:1px solid rgba(229,243,230,.45);color:#fff}
+  .ripe{margin-top:30px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:16px 20px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .ripe b{color:#ffe08a;font-family:'Poppins';font-weight:600}
+  .ripe span{color:#e5f3e6;font-size:.95rem}
+  .chip{background:var(--tomato);color:#fff;font-weight:600;font-size:.8rem;padding:5px 12px;border-radius:20px}
+  section{padding:60px 0}
+  .kicker{color:var(--tomato);font-family:'Poppins';font-weight:600;letter-spacing:2px;font-size:.8rem;text-transform:uppercase}
+  h2.sec{font-size:clamp(1.7rem,3.8vw,2.5rem);margin:8px 0 8px;font-weight:600}
+  .sub{color:var(--mut);max-width:620px;margin-bottom:30px}
+  .two-sides{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .side{border-radius:14px;padding:30px 26px;color:#fff}
+  .side.produce{background:linear-gradient(160deg,#3a9a3e,#2b7a2f)}
+  .side.soil{background:linear-gradient(160deg,#6b543c,#4a3a29)}
+  .side h3{font-size:1.5rem;margin-bottom:6px}
+  .side p.k{color:rgba(255,255,255,.75);font-size:.9rem;margin-bottom:14px;font-weight:500}
+  .side ul{list-style:none}
+  .side li{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:.98rem}
+  .side li:last-child{border-bottom:none}
+  .side li b{color:#ffe08a;font-weight:600}
+  .locs{background:#fff}
+  .loc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+  .loc{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:22px 20px;border-left:5px solid var(--leaf2)}
+  .loc.main{border-left-color:var(--tomato)}
+  .loc h4{font-family:'Poppins';font-size:1.15rem;margin-bottom:4px}
+  .loc span{color:var(--mut);font-size:.92rem}
+  .loc .tag{display:inline-block;margin-top:8px;font-size:.72rem;font-weight:600;color:var(--tomato);letter-spacing:1px;text-transform:uppercase}
+  .season-note{background:var(--soil);color:#f2e7d6;border-radius:12px;padding:22px 26px;margin-top:22px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  .season-note b{color:#ffe08a;font-family:'Poppins'}
+  .contact{background:linear-gradient(180deg,#236425,#1c521e);color:#fff}
+  .contact h2{font-family:'Recoleta','Poppins',serif;font-size:clamp(1.7rem,4vw,2.6rem);font-weight:600;margin-bottom:10px}
+  .contact p{color:#e5f3e6;max-width:560px;margin-bottom:24px}
+  .cbox{display:flex;gap:13px;flex-wrap:wrap}
+  .cbox a{background:#ffe08a;color:#2a3a12;padding:15px 28px;border-radius:32px;text-decoration:none;font-weight:600}
+  .cbox a.alt{background:transparent;border:1px solid rgba(229,243,230,.45);color:#fff}
+  footer{background:#17300f;color:#9ab493;padding:26px 0;font-size:.88rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  @media(max-width:760px){.two-sides{grid-template-columns:1fr}.top nav{display:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand">B.J. <span>Farms</span></div>
+  <nav><a href="#stands">Two Stands, One Farm</a><a href="#locations">Locations</a><a href="#contact">Ask What's Ripe</a></nav>
+  <a class="call" href="tel:15182220058">(518) 222-0058</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">Greenwich, NY · Family-owned · Open July–October</div>
+  <h1>Sweet corn out front, <em>a truckload of topsoil</em> out back.</h1>
+  <p class="lead">B.J. Farms grows fruit and vegetables on the family ground in Greenwich and runs roadside stands across four towns — plus screened topsoil, washed sand and stone for your yard project. Two kinds of "fresh," one local family.</p>
+  <div class="cta-row">
+    <a class="btn btn-cream" href="#locations">Find your nearest stand</a>
+    <a class="btn btn-ghost" href="#stands">See what we grow &amp; haul</a>
+  </div>
+  <div class="ripe">
+    <span class="chip">In season</span>
+    <b>Ripe right now:</b>
+    <span>sweet corn, tomatoes, peppers, berries &amp; more — call the stand to hear today's picks, or ask about pick-your-own.</span>
+  </div>
+</div></section>
+
+<section id="stands"><div class="wrap">
+  <span class="kicker">One family, two kinds of fresh</span>
+  <h2 class="sec">The produce stand and the material yard</h2>
+  <p class="sub">Most farm stands sell you dinner. We also sell you the dirt for the garden it came from. Here's both sides of B.J. Farms.</p>
+  <div class="two-sides">
+    <div class="side produce">
+      <h3>The Produce Side</h3>
+      <p class="k">Grown here, picked ripe, sold at the stand</p>
+      <ul>
+        <li><b>Sweet corn</b> — picked the same morning it hits the table</li>
+        <li><b>Tomatoes, peppers &amp; summer veg</b> — the daily haul</li>
+        <li><b>Berries &amp; fruit</b> — strawberries into the summer crops</li>
+        <li><b>Pick-your-own</b> — bring the kids and fill a basket</li>
+        <li><b>Local finds</b> — we round out the stand with other area farms' goods</li>
+      </ul>
+    </div>
+    <div class="side soil">
+      <h3>The Material Side</h3>
+      <p class="k">By the scoop or by the load, delivered</p>
+      <ul>
+        <li><b>Screened topsoil</b> — clean fill for beds, lawns &amp; grading</li>
+        <li><b>Washed sand &amp; stone</b> — for drainage, pads &amp; projects</li>
+        <li><b>Fill dirt &amp; gravel</b> — bulk quantities for the bigger job</li>
+        <li><b>Delivery</b> — tell us the town and we'll bring it</li>
+        <li><b>Wholesale</b> — landscapers &amp; contractors, ask about volume</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="locations" class="locs"><div class="wrap">
+  <span class="kicker">Four stands across the county</span>
+  <h2 class="sec">Wherever you are, there's one close</h2>
+  <p class="sub">The home farm is on Wilbur Avenue in Greenwich, with roadside stands in three more towns through the summer season.</p>
+  <div class="loc-grid">
+    <div class="loc main"><h4>Greenwich</h4><span>611 Wilbur Ave — the home farm, pick-your-own &amp; the material yard.</span><span class="tag">Home farm</span></div>
+    <div class="loc"><h4>Saratoga</h4><span>Seasonal roadside stand — fresh-picked produce through the summer.</span></div>
+    <div class="loc"><h4>Wilton</h4><span>Seasonal roadside stand — sweet corn &amp; the daily veg run.</span></div>
+    <div class="loc"><h4>Mechanicville</h4><span>Seasonal roadside stand — grab-and-go local produce.</span></div>
+  </div>
+  <div class="season-note">
+    <b>Open July through October.</b>
+    <span style="font-size:.95rem">Exact stand hours shift with the harvest and the weather — call ahead or check the Facebook page for the day's setup. Locations shown as listed; please confirm current stands when you call.</span>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <h2>Ask what's ripe — or order a load</h2>
+  <p>Call the farm to hear today's picks, set aside a pick-your-own visit, or price out screened topsoil, sand and stone delivered to your town.</p>
+  <div class="cbox">
+    <a href="tel:15182220058">Call (518) 222-0058</a>
+    <a class="alt" href="mailto:lmboyce647@verizon.net">Email the farm</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>B.J. Farms · 611 Wilbur Ave, Greenwich, NY 12834 · (518) 222-0058</span>
+  <span>Fresh produce &amp; pick-your-own · Screened topsoil, sand &amp; stone</span>
+</div></footer>
+</body>
+</html>

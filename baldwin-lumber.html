@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baldwin Lumber Company — Sawmill &amp; Lumber Yard in Cato, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --walnut:#4a3120; --oak:#8a5a2b; --amber:#b9762e; --cream:#f6f0e4;
+    --paper:#fbf7ee; --ink:#2b2118; --green:#3c5233; --line:#e0d6c2;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Source Sans 3',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+  h1,h2,h3{font-family:'Bitter',Georgia,serif;line-height:1.12}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  /* topbar */
+  .top{background:var(--walnut);color:#efe4d2;font-size:.83rem}
+  .top .wrap{display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:space-between;align-items:center;padding:9px 22px}
+  .top b{color:#e6b877}
+  /* hero */
+  .hero{position:relative;color:#f7efe0;
+    background:
+      linear-gradient(180deg,rgba(43,33,24,.86),rgba(43,33,24,.72)),
+      repeating-linear-gradient(90deg,#5a3c22 0 14px,#523720 14px 28px,#4c331d 28px 42px);
+    padding:70px 0 78px}
+  .est{display:inline-block;border:1px solid #b98a53;color:#e9c793;letter-spacing:2px;
+    font-size:.75rem;text-transform:uppercase;padding:6px 14px;border-radius:2px;margin-bottom:20px}
+  .hero h1{font-size:clamp(2.2rem,5.5vw,3.7rem);max-width:18ch}
+  .hero p{font-size:1.16rem;max-width:54ch;margin:18px 0 30px;color:#eaddc7}
+  .btn{display:inline-block;font-weight:600;text-decoration:none;padding:13px 26px;border-radius:4px;font-size:1.02rem}
+  .btn-a{background:var(--amber);color:#241503}
+  .btn-b{background:transparent;color:#f7efe0;border:2px solid #a5794a;margin-left:12px}
+  .hero small{display:block;margin-top:16px;color:#c9b48f;font-size:.9rem}
+  /* facts */
+  .facts{background:var(--cream);border-bottom:1px solid var(--line)}
+  .facts .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px}
+  .facts div{padding:20px 12px;text-align:center}
+  .facts b{font-family:'Bitter',serif;font-size:1.7rem;color:var(--oak);display:block}
+  .facts span{font-size:.82rem;color:#6b5c48}
+  /* section */
+  section{padding:62px 0}
+  .eyebrow{color:var(--amber);font-weight:600;letter-spacing:1.6px;text-transform:uppercase;font-size:.8rem}
+  h2{font-size:clamp(1.8rem,4vw,2.5rem);color:var(--walnut);margin:6px 0 10px}
+  .sub{color:#5a4c3b;max-width:62ch;margin-bottom:28px}
+  .grid{display:grid;gap:18px}
+  .three{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+  .card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:24px;border-top:5px solid var(--oak)}
+  .card h3{font-size:1.25rem;color:var(--walnut);margin-bottom:8px}
+  .card p{font-size:.95rem;color:#574a3b}
+  .card ul{margin:10px 0 0 18px;font-size:.92rem;color:#574a3b}
+  .card li{margin:3px 0}
+  /* compare */
+  .compare{background:var(--green);color:#eaf0e4}
+  .compare h2{color:#fff}
+  .compare .rows{margin-top:24px;border:1px solid #57704b;border-radius:8px;overflow:hidden}
+  .compare .r{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #57704b}
+  .compare .r:first-child{border-top:none}
+  .compare .r>div{padding:16px 20px;font-size:.96rem}
+  .compare .r .h{background:#2f4228;font-family:'Bitter',serif;color:#cfe0c4;text-transform:uppercase;font-size:.8rem;letter-spacing:1px}
+  .compare .r .box{background:#33472b}
+  .compare .r .yard{background:#3b5231;color:#fff;font-weight:600}
+  /* story */
+  .story .flex{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+  .story .panel{background:var(--walnut);color:#f2e7d5;border-radius:10px;padding:30px}
+  .story .panel h3{color:#e9c793;font-size:1.4rem;margin-bottom:10px}
+  /* visit */
+  .visit .panel{background:#fff;border:1px solid var(--line);border-radius:10px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+  .visit .info{padding:34px}
+  .visit .row{margin:14px 0}
+  .visit .row b{font-family:'Bitter',serif;display:block;color:var(--oak);text-transform:uppercase;font-size:.8rem;letter-spacing:.6px}
+  .visit .callside{background:var(--oak);color:#fdf6ea;padding:34px;display:flex;flex-direction:column;justify-content:center}
+  .visit .callside .big{font-family:'Bitter',serif;font-size:1.9rem}
+  .note{font-size:.78rem;color:#8a7a63;margin-top:14px}
+  footer{background:var(--ink);color:#b7a88f;font-size:.86rem;padding:28px 0;text-align:center}
+  footer b{color:#eaddc7}
+  @media(max-width:680px){
+    .facts .wrap{grid-template-columns:1fr 1fr}
+    .story .flex,.visit .panel,.compare .r{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <span>Baldwin Lumber Company · Cooper St, Cato, NY</span>
+  <span>Yard line <b>(315) 626-6360</b></span>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <span class="est">Cato, New York · ~85 years*</span>
+  <h1>Rough-cut and dimensional lumber, milled right here in Cato.</h1>
+  <p>A working sawmill and lumber &amp; building-materials yard on Cooper St — the local source when the box store is 40 minutes away and doesn't carry what your project actually needs.</p>
+  <a class="btn btn-a" href="tel:13156266360">Call the yard: (315) 626-6360</a>
+  <a class="btn btn-b" href="#stock">What we mill &amp; stock</a>
+  <small>Need a specific size or a custom cut? Call with your list — we'll tell you what's in the yard.</small>
+</div></header>
+
+<div class="facts"><div class="wrap">
+  <div><b>~85*</b><span>Years serving Cato &amp; northern Cayuga</span></div>
+  <div><b>On-site</b><span>Sawmill — we cut our own</span></div>
+  <div><b>Rough +</b><span>Dimensional lumber &amp; boards</span></div>
+  <div><b>Family</b><span>Run, local, hands-on</span></div>
+</div></div>
+
+<section id="stock"><div class="wrap">
+  <span class="eyebrow">What we mill &amp; stock</span>
+  <h2>Lumber a box store won't cut for you</h2>
+  <p class="sub">From the mill and off the yard — the boards, timbers and materials that farm repairs, barns, decks and outbuildings around Cato are actually built from.</p>
+  <div class="grid three">
+    <div class="card">
+      <h3>Sawn on site</h3>
+      <p>Milled here at the yard, cut to what you need:</p>
+      <ul>
+        <li>Rough-cut boards &amp; planks</li>
+        <li>Dimensional framing lumber</li>
+        <li>Posts, timbers &amp; pole-barn stock</li>
+        <li>Custom cuts to order</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Building materials</h3>
+      <p>The everyday supplies to finish the job in one trip:</p>
+      <ul>
+        <li>Sheet goods &amp; treated lumber*</li>
+        <li>Fencing &amp; farm-fix material*</li>
+        <li>Fasteners &amp; hardware*</li>
+        <li>Ask the counter for your list</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Who buys here</h3>
+      <p>Steady work for the people who build around here:</p>
+      <ul>
+        <li>Local builders &amp; contractors</li>
+        <li>Farmers repairing barns &amp; fence</li>
+        <li>DIY homeowners &amp; woodworkers</li>
+        <li>Anyone who wants real rough-cut</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section class="compare"><div class="wrap">
+  <span class="eyebrow" style="color:#e9c793">Local mill vs. the big-box drive</span>
+  <h2>Why builders keep pulling into the Cooper St yard</h2>
+  <div class="rows">
+    <div class="r"><div class="h">&nbsp;</div><div class="h yard" style="background:#2f4228">Baldwin Lumber, Cato</div></div>
+    <div class="r"><div class="box">Want true rough-cut or an odd size</div><div class="yard">Cut it on our own mill</div></div>
+    <div class="r"><div class="box">Need it today, don't want the drive</div><div class="yard">Minutes away on Cooper St</div></div>
+    <div class="r"><div class="box">Have a question about grade or span</div><div class="yard">Talk to someone who knows lumber</div></div>
+    <div class="r"><div class="box">Custom length for a barn or deck</div><div class="yard">Cut to order at the yard</div></div>
+  </div>
+</div></section>
+
+<section class="story"><div class="wrap">
+  <div class="flex">
+    <div>
+      <span class="eyebrow">Cato roots</span>
+      <h2>Roughly 85 years of sawdust on Cooper St</h2>
+      <p class="sub">Baldwin Lumber has milled and sold to this corner of Cayuga County for generations — long enough that the barns, decks and repairs it supplied are all over Cato, Weedsport and the lake towns. That history isn't on a slick website; it's in the yard, the mill, and the people who keep coming back.</p>
+      <p style="color:#5a4c3b">This page is a starting point for putting that yard where local builders can actually find it — hours, stock, and a way to call ahead before the drive.</p>
+    </div>
+    <div class="panel">
+      <h3>Bring your cut list</h3>
+      <p>Call the yard with the sizes and quantities you need. If it's in stock we'll set it aside; if it needs milling, we'll tell you the turnaround.</p>
+      <p style="margin-top:14px"><a class="btn btn-a" href="tel:13156266360">(315) 626-6360</a></p>
+    </div>
+  </div>
+</div></section>
+
+<section class="visit"><div class="wrap">
+  <span class="eyebrow">Come to the yard</span>
+  <h2>Find us &amp; call ahead</h2>
+  <div class="panel">
+    <div class="info">
+      <div class="row"><b>Yard</b>11142 Cooper St, Cato, NY 13033</div>
+      <div class="row"><b>Phone</b><a href="tel:13156266360">(315) 626-6360</a> · Fax (315) 626-3620</div>
+      <div class="row"><b>Hours*</b>Mon–Sat — call to confirm current yard hours</div>
+      <div class="row"><b>Area</b>Cato, Weedsport, Port Byron &amp; northern Cayuga County</div>
+      <p class="note">* Year count, hours and specific stock are placeholders shown for layout and confirmed with the yard. Building-materials lines marked * to be confirmed.</p>
+    </div>
+    <div class="callside">
+      <div class="big">Got a project starting?</div>
+      <p style="margin-top:8px;color:#f4e6d3">Call before you drive — we'll tell you what's on the yard and what we can mill for you.</p>
+      <p style="margin-top:16px"><a class="btn btn-a" href="tel:13156266360">Call (315) 626-6360</a></p>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <b>Baldwin Lumber Company</b> · 11142 Cooper St, Cato, NY 13033 · (315) 626-6360<br>
+  Sawmill · rough-cut &amp; dimensional lumber · building materials · northern Cayuga County
+</div></footer>
+
+</body>
+</html>

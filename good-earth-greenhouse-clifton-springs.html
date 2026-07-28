@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Good Earth Greenhouse — Rare &amp; Unusual Plants on Larue Road, Clifton Springs NY</title>
+<meta name="description" content="An independent greenhouse on Larue Road in Clifton Springs, NY, growing rare and unusual annuals, vegetables and specialty plants you won't find at a big-box garden center. Small quantities of many varieties, trialed a season before we sell them. Come early.">
+<style>
+  :root{
+    --leaf:#274b30; --leaf2:#2f5a3a; --moss:#4a7b4e; --sage:#8fb494;
+    --terra:#c96f3f; --terra-lt:#e08a58; --bloom:#d64b7a; --bloom-lt:#eb6f98;
+    --chalk:#fbfaf5; --paper:#ffffff; --ink:#22301f; --muted:#5f7060; --line:#e2e7dd; --cream:#f2f4ea;
+    --font:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font);color:var(--ink);background:var(--paper);line-height:1.64}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{font-family:'Georgia','Times New Roman',serif}
+
+  header{position:sticky;top:0;z-index:40;background:rgba(39,75,48,.97);border-bottom:2px solid var(--terra-lt)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:68px;color:var(--chalk)}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:700;font-family:'Georgia',serif;font-size:1.12rem}
+  .brand .mark{width:38px;height:38px;background:var(--terra-lt);color:#3a1e0d;border-radius:50%;display:grid;place-items:center;font-weight:900;font-family:'Georgia',serif;font-size:18px}
+  .brand small{display:block;font-size:10px;color:var(--sage);font-weight:600;letter-spacing:.15em;text-transform:uppercase;font-family:var(--font)}
+  nav a{color:#d5e3d6;font-size:14px;margin-left:24px}
+  nav a:hover{color:var(--terra-lt)}
+  .callbtn{background:var(--terra);color:#fff;padding:10px 18px;border-radius:22px;font-weight:800;font-size:14px;margin-left:24px}
+  .callbtn:hover{background:var(--terra-lt)}
+  @media(max-width:860px){nav .lk{display:none}}
+
+  .hero{position:relative;padding:94px 0 80px;color:var(--chalk);overflow:hidden;
+    background:radial-gradient(900px 420px at 15% 0,rgba(143,180,148,.22),transparent 60%),linear-gradient(180deg,#2f5a3a,#22432c);border-bottom:6px solid var(--terra)}
+  .eyebrow{display:inline-block;color:#3a1e0d;background:var(--sage);font-size:12px;letter-spacing:.13em;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:22px;font-weight:700}
+  h1{font-size:clamp(2.05rem,5vw,3.3rem);line-height:1.1;max-width:19ch;color:#fff}
+  h1 span{color:var(--terra-lt);font-style:italic}
+  .sub{margin-top:20px;font-size:clamp(1.02rem,2.1vw,1.2rem);color:#dbe7dc;max-width:58ch}
+  .cta{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{padding:14px 24px;border-radius:24px;font-weight:800;font-size:15px;display:inline-flex;align-items:center;gap:8px}
+  .btn.primary{background:var(--terra);color:#fff}
+  .btn.primary:hover{background:var(--terra-lt)}
+  .btn.ghost{border:1px solid rgba(255,255,255,.5);color:var(--chalk)}
+  .btn.ghost:hover{border-color:var(--terra-lt);color:var(--terra-lt)}
+  .herostrip{margin-top:36px;display:flex;gap:26px;flex-wrap:wrap;font-size:13.5px;color:#c7d8c8}
+  .herostrip b{color:var(--terra-lt)}
+
+  section{padding:72px 0;border-bottom:1px solid var(--line)}
+  .kicker{color:var(--moss);font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+  h2{font-size:clamp(1.7rem,3.6vw,2.35rem);margin-top:10px;color:var(--leaf);letter-spacing:-.01em}
+  .lead{color:var(--muted);max-width:66ch;margin-top:14px;font-size:1.04rem}
+
+  .grid{display:grid;gap:18px;margin-top:38px}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:860px){.g3{grid-template-columns:1fr}}
+  .card{background:var(--chalk);border:1px solid var(--line);border-radius:12px;padding:26px}
+  .card .ic{width:42px;height:42px;border-radius:50%;background:var(--cream);border:1px solid var(--line);display:grid;place-items:center;font-size:20px;margin-bottom:14px}
+  .card h3{font-size:1.16rem;color:var(--leaf);margin-bottom:8px}
+  .card p{color:var(--muted);font-size:.97rem}
+
+  .finds{background:var(--cream)}
+  .findrow{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+  @media(max-width:860px){.findrow{grid-template-columns:1fr}}
+  .find{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:22px;border-top:4px solid var(--bloom)}
+  .find:nth-child(2){border-top-color:var(--terra)} .find:nth-child(3){border-top-color:var(--moss)}
+  .find .cat{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--bloom);display:block;margin-bottom:6px}
+  .find:nth-child(2) .cat{color:var(--terra)} .find:nth-child(3) .cat{color:var(--moss)}
+  .find h3{color:var(--leaf);font-size:1.12rem;font-style:italic;margin-bottom:6px}
+  .find p{color:var(--muted);font-size:.94rem}
+  .flag{font-size:11.5px;color:var(--muted);margin-top:14px;font-style:italic}
+
+  .how{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+  @media(max-width:860px){.how{grid-template-columns:1fr}}
+  .howcard{background:var(--leaf);color:var(--chalk);border-radius:14px;padding:34px;border:3px solid var(--sage)}
+  .howcard h3{color:var(--terra-lt);font-size:1.28rem;margin-bottom:14px}
+  .howcard ul{list-style:none;margin-top:6px}
+  .howcard li{padding:9px 0 9px 26px;position:relative;color:#dce8dd;font-size:.98rem;border-bottom:1px solid #35563e}
+  .howcard li:last-child{border-bottom:none}
+  .howcard li:before{content:"❧";position:absolute;left:0;color:var(--terra-lt)}
+
+  .visit{background:var(--leaf2);color:var(--chalk)}
+  .visit h2{color:#fff}
+  .vgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:start;margin-top:16px}
+  @media(max-width:860px){.vgrid{grid-template-columns:1fr}}
+  form label{display:block;font-size:12px;color:#cfe0d0;margin:12px 0 6px;letter-spacing:.03em;text-transform:uppercase}
+  form input,form select,form textarea{width:100%;background:#20402a;border:1px solid #3d6146;border-radius:8px;padding:11px 12px;color:var(--chalk);font-family:var(--font);font-size:14.5px}
+  form input:focus,form select:focus,form textarea:focus{outline:none;border-color:var(--terra-lt)}
+  textarea{min-height:90px;resize:vertical}
+  .frow{display:flex;gap:14px;flex-wrap:wrap}.frow>div{flex:1;min-width:150px}
+  .submit{margin-top:16px;background:var(--terra);color:#fff;border:none;padding:14px 26px;border-radius:24px;font-weight:800;font-size:15px;cursor:pointer}
+  .submit:hover{background:var(--terra-lt)}
+  .side{background:#20402a;border:1px solid #3d6146;border-radius:12px;padding:26px}
+  .side h3{color:var(--terra-lt);font-size:1.08rem;margin-bottom:14px}
+  .side .line{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid #35563e;font-size:14.5px;color:var(--chalk)}
+  .side .line:last-child{border-bottom:none}
+  .side .line span{color:var(--sage);min-width:72px;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+  .mapnote{background:#20402a;border:1px dashed var(--terra-lt);border-radius:8px;padding:14px;margin-top:16px;font-size:13px;color:var(--chalk)}
+  .mapnote b{color:var(--terra-lt)}
+  .note{font-size:11.5px;color:#9bb59f;margin-top:10px;font-style:italic}
+
+  footer{background:#1a3020;padding:46px 0 36px;color:#9bb59f}
+  .fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:30px}
+  @media(max-width:860px){.fgrid{grid-template-columns:1fr}}
+  footer h4{color:var(--terra-lt);font-size:13px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px;font-family:var(--font)}
+  footer p,footer a{color:#9bb59f;font-size:14px;display:block;margin-bottom:8px}
+  footer a:hover{color:var(--terra-lt)}
+  .copy{border-top:1px solid #33523c;margin-top:30px;padding-top:18px;font-size:12.5px;text-align:center;color:#7f9a83}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <div class="brand"><div class="mark">GE</div><div>Good Earth Greenhouse<small>Larue Road · Clifton Springs, NY</small></div></div>
+    <nav>
+      <a class="lk" href="#different">Why Different</a>
+      <a class="lk" href="#finds">This Season's Finds</a>
+      <a class="lk" href="#visit">Visit</a>
+      <a class="callbtn" href="#visit">Plan Your Visit</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Rare &amp; Unusual Plants · Clifton Springs, NY</span>
+    <h1>The greenhouse for gardeners who already know <span>what they can't find anywhere else.</span></h1>
+    <p class="sub">Good Earth is a small independent greenhouse on Larue Road, growing the annuals, vegetables and specialty plants the big-box lots never carry. We keep a little of a lot of things — and trial new varieties for a season before we ever put them out. That's why regulars come early.</p>
+    <div class="cta">
+      <a class="btn primary" href="#visit">Find Larue Road →</a>
+      <a class="btn ghost" href="#finds">See what's unusual</a>
+    </div>
+    <div class="herostrip">
+      <div><b>~50 growers</b> sourced for variety</div>
+      <div><b>Trialed a season</b> before we sell it</div>
+      <div><b>Small quantities</b> — come early</div>
+    </div>
+  </div>
+</section>
+
+<section id="different">
+  <div class="wrap">
+    <span class="kicker">Why this greenhouse is different</span>
+    <h2>Curated, not stacked to the ceiling</h2>
+    <p class="lead">A garden center orders pallets of the same ten plants. Good Earth works the other way around — chasing down the interesting ones, growing a modest number of each, and only selling what's earned its place. Here's what that means for you.</p>
+    <div class="grid g3">
+      <div class="card"><div class="ic">🔎</div><h3>Varieties you have to hunt for</h3><p>Owner-grower Terri Sauerhafer tracks down new and different flowers and vegetables from around fifty sources — the plants most nurseries never bother to carry.</p></div>
+      <div class="card"><div class="ic">🌱</div><h3>Trialed before it's sold</h3><p>New plants get grown out for a year first. If a variety doesn't perform, it doesn't earn shelf space. You get the ones that made the cut.</p></div>
+      <div class="card"><div class="ic">⏳</div><h3>Small batches, so come early</h3><p>We don't grow a lot of any one thing. The upside is real variety; the catch is the good stuff goes fast — early-season visitors get the best pick.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="finds" id="finds">
+  <div class="wrap">
+    <span class="kicker">A taste of the unusual</span>
+    <h2>The kind of thing you'll find on the benches</h2>
+    <p class="lead">Every season is different, but these are the flavor of it — plants that make a gardener stop and ask "where did you get <em>that</em>?"</p>
+    <div class="findrow">
+      <div class="find"><span class="cat">Annual</span><h3>Nasturtium 'Bloody Mary'</h3><p>A deep, dramatic nasturtium — the sort of specific named variety you'll never see in a big-box six-pack.</p></div>
+      <div class="find"><span class="cat">Foliage</span><h3>Geranium 'Crocodile'</h3><p>Prized for the striking veining running through its leaves — grown for the foliage as much as the bloom.</p></div>
+      <div class="find"><span class="cat">Vine</span><h3>Orange dipladenia</h3><p>An unusual color turn on a patio favorite, the kind of plant Terri seeks out to keep the benches interesting.</p></div>
+    </div>
+    <p class="flag">Varieties shown are real examples of the kind of stock Good Earth carries — the live "in stock now" list is refreshed each season and confirmed before launch.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="how">
+      <div>
+        <span class="kicker">How to shop it</span>
+        <h2>Come with a plan, leave with a surprise</h2>
+        <p class="lead">Good Earth rewards the gardener who shows up curious. A quick way to get the most out of a visit:</p>
+      </div>
+      <div class="howcard">
+        <h3>Getting the good stuff</h3>
+        <ul>
+          <li>Come early in the season — small quantities sell through fast.</li>
+          <li>Ask Terri. If you're after something specific or unusual, she'll know whether it's coming.</li>
+          <li>Check what's new before you drive out — the benches change week to week.</li>
+          <li>Bring a box. When you find the variety you've been chasing, you'll want more than one.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <span class="kicker" style="color:var(--sage)">Visit · Get in touch</span>
+    <h2>On Larue Road in Clifton Springs</h2>
+    <div class="vgrid">
+      <form onsubmit="return false">
+        <p style="color:#cfe0d0;margin-bottom:6px">Looking for something specific, or want a heads-up when the season opens? Send a note.</p>
+        <div class="frow">
+          <div><label>Name</label><input type="text" placeholder="Your name"></div>
+          <div><label>Phone or email</label><input type="text" placeholder="Best way to reach you"></div>
+        </div>
+        <label>What are you looking for?</label>
+        <textarea placeholder="A variety you're hunting for, a question about the season, or just tell us to let you know when we open."></textarea>
+        <button class="submit">Send it over</button>
+        <p class="note">Sample layout — the live form will route straight to the greenhouse.</p>
+      </form>
+      <div class="side">
+        <h3>Good Earth Greenhouse</h3>
+        <div class="line"><span>Address</span><div>877 Larue Road<br>Clifton Springs, NY 14432</div></div>
+        <div class="line"><span>Grower</span><div>Terri Sauerhafer</div></div>
+        <div class="line"><span>Season</span><div>Spring through early summer <em style="color:#9bb59f">(confirm dates)</em></div></div>
+        <div class="line"><span>Find us</span><div>Facebook: Good Earth Greenhouse, Clifton Springs</div></div>
+        <div class="mapnote"><b>Note:</b> searching "Good Earth Greenhouse" online can turn up a different greenhouse by the same name in Illinois. This is the Clifton Springs, New York greenhouse on Larue Road — the map and details here are the right ones.</div>
+        <p class="note">Phone and exact season dates to be confirmed with Terri before launch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fgrid">
+    <div>
+      <h4>Good Earth Greenhouse</h4>
+      <p>A small independent greenhouse on Larue Road in Clifton Springs, New York, growing rare and unusual annuals, vegetables and specialty plants — a little of a lot, trialed before it's sold. Come early.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="#different">Why We're Different</a>
+      <a href="#finds">This Season's Finds</a>
+      <a href="#visit">Visit &amp; Hours</a>
+    </div>
+    <div>
+      <h4>Find Us</h4>
+      <a href="#visit">877 Larue Road</a>
+      <a href="#visit">Clifton Springs, NY 14432</a>
+      <a href="#visit">Facebook: Good Earth Greenhouse</a>
+    </div>
+  </div>
+  <div class="copy">Preview concept prepared by Onyx Rise Media for Good Earth Greenhouse. Not affiliated or published. Details to be confirmed with the owner.</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rick's Tree Service &amp; Rental — Tree Removal + Skid-Steer &amp; Mini-Ex Rental · Dolgeville NY</title>
+<meta name="description" content="Rick's Tree Service & Rental in Dolgeville, NY: tree removal, trimming, storm cleanup and stump grinding — plus skid-steers and mini-excavators for local rent. Owner-run since 2002. Call (315) 429-9381.">
+<style>
+  :root{
+    --forest:#1f3d22; --forest2:#295031; --moss:#3f6b3a; --bark:#4a3524; --bark2:#5e442e;
+    --orange:#f26a1b; --orange-dk:#d4530a; --cream:#f6f4ec; --ink:#1b2418; --ink2:#42513c;
+    --paper:#f8f7f0; --line:#d6dccb;
+    --font:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font);color:var(--ink);background:var(--paper);line-height:1.62}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+
+  /* emergency top */
+  .emg{background:var(--orange);color:#fff;text-align:center;font-size:13.5px;font-weight:700;padding:8px 12px;letter-spacing:.02em}
+  .emg a{text-decoration:underline;font-weight:800}
+
+  header{position:sticky;top:0;z-index:40;background:var(--forest);color:var(--cream);border-bottom:3px solid var(--orange)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:16.5px}
+  .tree{width:38px;height:38px;position:relative;flex:none}
+  .tree:before{content:"";position:absolute;left:16px;bottom:0;width:6px;height:14px;background:var(--bark)}
+  .tree:after{content:"";position:absolute;left:3px;top:1px;width:32px;height:28px;background:var(--moss);border-radius:50% 50% 45% 45%;box-shadow:inset -4px -3px 0 rgba(0,0,0,.15)}
+  .brand small{display:block;font-size:11px;color:#b9c9ad;font-weight:600;letter-spacing:.11em;text-transform:uppercase}
+  nav a{color:#cdddc2;font-size:14.5px;margin-left:22px;font-weight:600}
+  nav a:hover{color:#fff}
+  .cbtn{background:var(--orange);color:#fff;padding:11px 18px;border-radius:5px;font-weight:800;font-size:14px;margin-left:22px}
+  .cbtn:hover{background:var(--orange-dk)}
+  @media(max-width:860px){nav .lk{display:none}}
+
+  .hero{position:relative;color:var(--cream);padding:94px 0 80px;border-bottom:3px solid var(--orange);
+    background:linear-gradient(180deg,rgba(20,35,20,.82),rgba(20,35,20,.9)),
+    linear-gradient(120deg,#24421f,#16240f);overflow:hidden}
+  .hero:before{content:"";position:absolute;right:-60px;bottom:-60px;width:340px;height:340px;background:radial-gradient(circle,rgba(63,107,58,.4),transparent 68%)}
+  .tagpill{display:inline-block;background:rgba(0,0,0,.3);border:1px solid #4d6b44;color:#dcecd1;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:7px 13px;border-radius:20px;margin-bottom:22px}
+  h1{font-size:clamp(2.1rem,5.3vw,3.5rem);line-height:1.07;font-weight:900;letter-spacing:-.01em;max-width:18ch;text-shadow:0 2px 10px rgba(0,0,0,.3)}
+  h1 .o{color:var(--orange)}
+  .lede{margin-top:20px;font-size:1.16rem;color:#e2eed8;max-width:57ch;position:relative}
+  .cta-row{margin-top:32px;display:flex;flex-wrap:wrap;gap:14px;position:relative}
+  .btn{padding:15px 26px;border-radius:7px;font-weight:800;font-size:15px;display:inline-flex;align-items:center;gap:9px}
+  .btn-o{background:var(--orange);color:#fff}
+  .btn-o:hover{background:var(--orange-dk)}
+  .btn-line{border:2px solid #7f9873;color:var(--cream)}
+  .btn-line:hover{border-color:var(--orange);color:#fff}
+  .trust{margin-top:36px;display:flex;flex-wrap:wrap;gap:24px;color:#c3d4b8;font-size:13.5px;position:relative}
+  .trust b{color:#fff}
+  .trust .star{color:var(--orange)}
+
+  /* two-track */
+  .tracks{padding:74px 0}
+  .kick{color:var(--moss);font-weight:800;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:11px}
+  h2{font-size:clamp(1.55rem,3.4vw,2.3rem);font-weight:900;color:var(--ink);letter-spacing:-.01em;line-height:1.12}
+  .sub{color:var(--ink2);margin-top:12px;max-width:62ch;font-size:1.03rem}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
+  @media(max-width:820px){.split{grid-template-columns:1fr}}
+  .track{border-radius:14px;padding:34px 30px;color:#fff;position:relative;overflow:hidden}
+  .track.a{background:linear-gradient(160deg,var(--forest2),var(--forest))}
+  .track.b{background:linear-gradient(160deg,var(--bark2),var(--bark))}
+  .track h3{font-size:1.5rem;font-weight:900;margin-bottom:6px}
+  .track .tg{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#ffffffb0;font-weight:700}
+  .track ul{list-style:none;margin:18px 0 24px}
+  .track li{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.16);display:flex;gap:11px;font-size:15px}
+  .track li:before{content:"▸";color:var(--orange)}
+  .track .go{display:inline-block;background:var(--orange);color:#fff;padding:12px 20px;border-radius:6px;font-weight:800;font-size:14.5px}
+  .track .go:hover{background:var(--orange-dk)}
+  .track.b .go{background:#e9dcc9;color:var(--bark)}
+  .phf{display:inline-block;font-size:10.5px;background:rgba(255,255,255,.16);border:1px dashed rgba(255,255,255,.5);border-radius:3px;padding:1px 6px;font-weight:700;letter-spacing:.03em;margin-left:6px}
+
+  /* area */
+  .area{background:var(--forest);color:var(--cream)}
+  .area h2{color:#fff}
+  .area .sub{color:#c3d4b8}
+  .towns{display:flex;flex-wrap:wrap;gap:11px;margin-top:26px}
+  .town{background:rgba(0,0,0,.26);border:1px solid #476b3e;border-radius:30px;padding:9px 17px;font-size:14px;color:#e3efd8;font-weight:600}
+  .town b{color:var(--orange)}
+
+  /* reviews */
+  .revs{background:var(--cream)}
+  .revgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+  @media(max-width:820px){.revgrid{grid-template-columns:1fr}}
+  .rev{background:#fff;border:1px solid var(--line);border-left:5px solid var(--orange);border-radius:9px;padding:24px}
+  .rev .stars{color:var(--orange);font-size:15px;letter-spacing:2px;margin-bottom:9px}
+  .rev p{color:var(--ink2);font-size:14.6px;font-style:italic}
+  .rev .who{margin-top:12px;font-weight:800;font-size:13.5px;color:var(--ink)}
+  .rev .ph2{font-size:11px;color:#94a189;font-weight:700;letter-spacing:.04em;margin-top:2px}
+  .revnote{margin-top:20px;color:var(--ink2);font-size:.9rem;opacity:.85}
+
+  /* contact */
+  .contact{background:var(--paper)}
+  .cbox{display:grid;grid-template-columns:1fr 1fr;gap:40px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:40px;margin-top:32px}
+  @media(max-width:760px){.cbox{grid-template-columns:1fr;gap:26px}}
+  .cinfo p{margin:12px 0;font-size:15.5px;color:var(--ink2)}
+  .cinfo .lbl{display:block;color:var(--moss);font-size:12px;letter-spacing:.13em;text-transform:uppercase;font-weight:800;margin-bottom:2px}
+  .cinfo a{color:var(--ink);font-weight:800}
+  .emgcard{background:#fff3ec;border:1px solid #f4c3a3;border-radius:9px;padding:16px;color:#8a3d12;font-size:14px;font-weight:600;margin-top:14px}
+  .cform{display:flex;flex-direction:column;gap:12px}
+  .cform input,.cform textarea,.cform select{border:1px solid var(--line);border-radius:7px;padding:13px 14px;font-family:var(--font);font-size:15px;background:var(--paper);color:var(--ink)}
+  .cform input:focus,.cform textarea:focus,.cform select:focus{outline:none;border-color:var(--orange)}
+  .cform button{background:var(--orange);color:#fff;border:none;padding:15px;border-radius:7px;font-weight:900;font-size:15px;cursor:pointer}
+  .cform button:hover{background:var(--orange-dk)}
+
+  footer{background:var(--forest);color:#adc2a2;padding:30px 0;font-size:13px}
+  .fbar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:center}
+  .fbar b{color:var(--orange)}
+</style>
+</head>
+<body>
+
+<div class="emg">🌲 Tree down or hanging over the house? Call the storm line: <a href="tel:13154299381">(315) 429-9381</a></div>
+
+<header>
+  <div class="wrap bar">
+    <div class="brand"><span class="tree"></span><div>Rick's Tree Service &amp; Rental<small>Dolgeville, NY · Owner-run since 2002</small></div></div>
+    <nav>
+      <a class="lk" href="#tree">Tree Work</a>
+      <a class="lk" href="#rental">Equipment Rental</a>
+      <a class="lk" href="#area">Service Area</a>
+      <a class="cbtn" href="tel:13154299381">(315) 429-9381</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="tagpill">Dolgeville &amp; Northern Herkimer County</span>
+    <h1>We'll take the tree down — or <span class="o">rent you the machine</span> to do it yourself.</h1>
+    <p class="lede">Rick Barnes has been climbing, cutting and grinding stumps around Dolgeville since 2002. Same yard also rents skid-steers and mini-excavators with attachments — so whether you want it handled or want the keys, it's one phone call.</p>
+    <div class="cta-row">
+      <a class="btn btn-o" href="#tree">Get a tree quote →</a>
+      <a class="btn btn-line" href="#rental">Rent a machine</a>
+    </div>
+    <div class="trust">
+      <span><span class="star">★★★★★</span> <b>4.7</b> across ~28 reviews <span class="phf">verify count</span></span>
+      <span><b>Since 2002</b> · owner-operated</span>
+      <span><b>Storm &amp; emergency</b> tree work</span>
+    </div>
+  </div>
+</section>
+
+<!-- TWO TRACKS -->
+<section class="tracks">
+  <div class="wrap">
+    <div class="kick">Two ways we help</div>
+    <h2>One crew. One number. Two jobs.</h2>
+    <p class="sub">Most tree companies only do one of these. Rick does both — the removal and the rental — which is why locals keep his number.</p>
+    <div class="split">
+      <div class="track a" id="tree">
+        <div class="tg">We handle it</div>
+        <h3>Tree Service</h3>
+        <ul>
+          <li>Tree removal — hazardous, leaning and large-diameter trees</li>
+          <li>Trimming &amp; pruning to clear structures, lines and driveways</li>
+          <li>Storm &amp; emergency cleanup — trees on houses, roofs and vehicles</li>
+          <li>Stump removal &amp; grinding, ground flush and cleaned up</li>
+          <li>Insured crew <span class="phf">confirm insurance</span></li>
+        </ul>
+        <a class="go" href="#contact">Request a tree quote</a>
+      </div>
+      <div class="track b" id="rental">
+        <div class="tg">You do it</div>
+        <h3>Equipment Rental</h3>
+        <ul>
+          <li>Skid-steers (Bobcats) for grading, hauling and cleanup</li>
+          <li>Mini-excavators for digging, stumps and small sitework</li>
+          <li>Attachments to match the job <span class="phf">ask what's available</span></li>
+          <li>Day &amp; weekend rentals <span class="phf">confirm rates</span></li>
+          <li>Local pickup or delivery <span class="phf">confirm delivery</span></li>
+        </ul>
+        <a class="go" href="#contact">Check machine availability</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AREA -->
+<section class="area" id="area">
+  <div class="wrap">
+    <div class="kick" style="color:var(--orange)">Service area</div>
+    <h2>Rooted in Dolgeville</h2>
+    <p class="sub">Based on N. Helmer Ave in Dolgeville and working the northern Herkimer / southern Fulton edge — the towns the big Utica outfits are slow to reach after a storm.</p>
+    <div class="towns">
+      <span class="town"><b>Dolgeville</b></span>
+      <span class="town">Salisbury</span>
+      <span class="town">Manheim</span>
+      <span class="town">East Herkimer</span>
+      <span class="town">Little Falls area</span>
+      <span class="town">Oppenheim</span>
+      <span class="town">St. Johnsville area</span>
+      <span class="town">Herkimer / Ilion area</span>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="revs">
+  <div class="wrap">
+    <div class="kick">What neighbors say</div>
+    <h2>A reputation built one storm at a time</h2>
+    <div class="revgrid">
+      <div class="rev"><div class="stars">★★★★★</div><p>"Placeholder review — pull the strongest verified quotes from the Facebook and Birdeye pages before publishing."</p><div class="who">Local homeowner</div><div class="ph2">placeholder — replace with real review</div></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>"Placeholder review — Rick's carries a ~4.7★ rating across roughly 28 reviews; swap in two or three real ones here."</p><div class="who">Dolgeville customer</div><div class="ph2">placeholder — replace with real review</div></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>"Placeholder review — a rental customer quote works well in this third slot to show both sides of the business."</p><div class="who">Rental customer</div><div class="ph2">placeholder — replace with real review</div></div>
+    </div>
+    <p class="revnote">Rating shown (~4.7★ / ~28 reviews) is from third-party listings and should be verified before use. Quotes above are clearly-labeled placeholders.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="kick">Get in touch</div>
+    <h2>Call Rick or send the details</h2>
+    <p class="sub">Tell us if it's a tree job or a rental and we'll get you a number. Storm damage? Call — don't wait on a form.</p>
+    <div class="cbox">
+      <div class="cinfo">
+        <p><span class="lbl">Owner</span> Richard "Rick" Barnes</p>
+        <p><span class="lbl">Yard</span> 45 N Helmer Ave, Dolgeville, NY 13329</p>
+        <p><span class="lbl">Phone</span><a href="tel:13154299381">(315) 429-9381</a></p>
+        <p><span class="lbl">In business</span> Since 2002 · owner-operated</p>
+        <div class="emgcard">⚠ Storm or hazard emergency? Call the number above directly — we prioritize trees threatening homes, cars and power lines.</div>
+      </div>
+      <form class="cform" onsubmit="return false">
+        <input type="text" placeholder="Your name" aria-label="Name">
+        <input type="tel" placeholder="Phone" aria-label="Phone">
+        <select aria-label="What do you need">
+          <option>What do you need?</option>
+          <option>Tree removal</option>
+          <option>Trimming / pruning</option>
+          <option>Storm / emergency cleanup</option>
+          <option>Stump grinding</option>
+          <option>Rent a skid-steer (Bobcat)</option>
+          <option>Rent a mini-excavator</option>
+        </select>
+        <textarea rows="3" placeholder="Your town, the tree or the machine + dates…" aria-label="Details"></textarea>
+        <button type="submit">Send it to Rick</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fbar">
+    <div>© 2026 Rick's Tree Service &amp; Rental · 45 N Helmer Ave, Dolgeville, NY 13329</div>
+    <div>Call / storm line: <b><a href="tel:13154299381">(315) 429-9381</a></b></div>
+  </div>
+</footer>
+
+</body>
+</html>

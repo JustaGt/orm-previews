@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stuttle Welding — Steel, Stainless & Aluminum Repair | Scipio Center, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --steel:#15181c; --steel2:#1e2329; --arc:#ff8a1e; --arc2:#ffb454;
+    --line:#333a42; --paper:#f4f5f6; --ink:#e8eaec; --mut:#9aa2ab;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;background:var(--steel);color:var(--ink);line-height:1.6}
+  h1,h2,h3,.disp{font-family:'Oswald',sans-serif;letter-spacing:.5px;text-transform:uppercase}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  /* top bar */
+  .top{position:sticky;top:0;z-index:20;background:rgba(21,24,28,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-family:'Oswald';font-weight:700;font-size:1.25rem;letter-spacing:1px}
+  .brand span{color:var(--arc)}
+  .top a.call{background:var(--arc);color:#1a1205;font-family:'Oswald';font-weight:700;padding:9px 16px;border-radius:4px;text-decoration:none;font-size:.95rem}
+  /* hero */
+  .hero{position:relative;padding:78px 0 64px;background:
+     radial-gradient(circle at 78% 18%, rgba(255,138,30,.16), transparent 42%),
+     linear-gradient(180deg,#12151a, #1a1e24);border-bottom:1px solid var(--line)}
+  .eyebrow{color:var(--arc2);font-family:'Oswald';font-weight:600;letter-spacing:2px;font-size:.82rem}
+  .hero h1{font-size:clamp(2.1rem,5.2vw,3.7rem);line-height:1.02;margin:14px 0 18px}
+  .hero h1 em{color:var(--arc);font-style:normal}
+  .hero p.lead{font-size:1.16rem;color:var(--mut);max-width:640px}
+  .cta-row{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{font-family:'Oswald';font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:14px 24px;border-radius:5px;text-decoration:none;font-size:1rem;display:inline-block}
+  .btn-arc{background:var(--arc);color:#1a1205}
+  .btn-ghost{border:1px solid var(--line);color:var(--ink)}
+  .metals{margin-top:34px;display:flex;gap:10px;flex-wrap:wrap}
+  .metals span{border:1px solid var(--line);color:var(--ink);font-family:'Oswald';letter-spacing:1px;font-size:.8rem;padding:7px 13px;border-radius:40px;background:#191d23}
+  /* section */
+  section{padding:64px 0}
+  .kicker{color:var(--arc2);font-family:'Oswald';letter-spacing:2px;font-size:.8rem;font-weight:600}
+  h2.sec{font-size:clamp(1.6rem,3.6vw,2.4rem);margin:8px 0 30px}
+  /* capability grid */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+  .card{background:var(--steel2);border:1px solid var(--line);border-radius:9px;padding:22px 20px}
+  .card h3{font-size:1.12rem;color:#fff;margin-bottom:8px}
+  .card p{color:var(--mut);font-size:.96rem}
+  .card .tag{color:var(--arc);font-family:'Oswald';font-size:.78rem;letter-spacing:1px}
+  /* jobs strip */
+  .jobs{background:#12151a;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .jobs ul{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
+  .jobs li{padding:14px 16px;border-left:3px solid var(--arc);background:#181c22;border-radius:0 6px 6px 0;color:var(--ink);font-size:.98rem}
+  /* two col */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .panel{background:var(--steel2);border:1px solid var(--line);border-radius:10px;padding:26px}
+  .panel h3{color:#fff;font-size:1.2rem;margin-bottom:10px}
+  .panel p{color:var(--mut)}
+  .panel .big{font-family:'Oswald';font-size:2rem;color:var(--arc);line-height:1}
+  /* contact */
+  .contact{background:linear-gradient(180deg,#1a1e24,#12151a)}
+  .cbox{background:var(--steel2);border:1px solid var(--line);border-radius:12px;padding:34px;text-align:center}
+  .cbox h2{font-size:clamp(1.6rem,4vw,2.3rem)}
+  .cbox .num{font-family:'Oswald';font-size:clamp(1.8rem,6vw,3rem);color:var(--arc);margin:10px 0;letter-spacing:1px}
+  .cbox .meta{color:var(--mut);margin-top:6px}
+  footer{padding:30px 0;border-top:1px solid var(--line);color:var(--mut);font-size:.86rem;text-align:center}
+  .ph{color:#6f7883;font-size:.8rem;font-style:italic}
+  @media(max-width:720px){.two{grid-template-columns:1fr}.top a.call{display:none}}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <div class="brand">STUTTLE <span>WELDING</span></div>
+  <a class="call" href="tel:+13157296240">(315) 729-6240</a>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">SCIPIO CENTER · SOUTHERN CAYUGA COUNTY</div>
+  <h1>Broken steel back in service — <em>including the metals other shops won't touch.</em></h1>
+  <p class="lead">MIG, TIG, stick and oxy-fuel welding on steel, stainless and aluminum, plus plasma cutting and hardfacing. Farm equipment, trailers, buckets, hitches and railings — repaired or built new by a local shop, not sent two counties away.</p>
+  <div class="cta-row">
+    <a class="btn btn-arc" href="tel:+13157296240">Call the shop</a>
+    <a class="btn btn-ghost" href="#quote">Send job details</a>
+  </div>
+  <div class="metals">
+    <span>MILD STEEL</span><span>STAINLESS</span><span>ALUMINUM</span><span>HARDFACING</span><span>PLASMA CUTTING</span>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <div class="kicker">WHAT THE SHOP RUNS</div>
+  <h2 class="sec">Four welding processes, three metals, one address</h2>
+  <div class="grid">
+    <div class="card"><div class="tag">MIG</div><h3>Production & repair welds</h3><p>Fast, clean welds for equipment repair, brackets, frames and general steel fabrication.</p></div>
+    <div class="card"><div class="tag">TIG</div><h3>Stainless & aluminum</h3><p>Precise TIG work where the weld shows or the metal is thin — tanks, guards, aluminum components.</p></div>
+    <div class="card"><div class="tag">STICK</div><h3>Field-tough joints</h3><p>Heavy structural and dirty-metal welding that holds up on implements and trailers.</p></div>
+    <div class="card"><div class="tag">OXY-FUEL + PLASMA</div><h3>Cutting & shaping</h3><p>Plasma cutting and oxy-fuel work to fabricate parts and cut down stock to size.</p></div>
+    <div class="card"><div class="tag">HARDFACING</div><h3>Wear surfaces rebuilt</h3><p>Hardfacing on bucket edges, tillage tools and wear points so parts last another season.</p></div>
+    <div class="card"><div class="tag">FAB</div><h3>Built to your dimension</h3><p>New gates, railings, racks and brackets fabricated from your measurements or a rough sketch.</p></div>
+  </div>
+</div></section>
+
+<section class="jobs"><div class="wrap">
+  <div class="kicker">TYPICAL JOBS THROUGH THE DOOR</div>
+  <h2 class="sec">If it's steel, stainless or aluminum and it's cracked, it's a job</h2>
+  <ul>
+    <li>Cracked loader buckets & re-edged cutting edges</li>
+    <li>Snapped trailer tongues, hitches & ball mounts</li>
+    <li>Broken tillage tools and worn plow points</li>
+    <li>Aluminum tanks, guards & trim (TIG)</li>
+    <li>Stainless brackets and food-grade repairs</li>
+    <li>Gates, railings, ramps & livestock panels built new</li>
+  </ul>
+  <p style="margin-top:16px;color:var(--mut)"><span class="ph">Photo strip placeholder — swap in real before/after shots of recent repairs for the finished site.</span></p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="two">
+    <div class="panel">
+      <h3>Shop work</h3>
+      <p>Bring the part, the implement or the trailer to the shop on Mosher Road in Scipio Center. Most repairs are quoted on the spot once we see the metal and the break.</p>
+    </div>
+    <div class="panel">
+      <div class="big">Since 2021</div>
+      <h3>Local & owner-run</h3>
+      <p>Owner Wayne Stuttle runs the shop. You talk to the person doing the welding — not a service writer. Serving Scipio, Sherwood, Venice, King Ferry and the surrounding farm belt.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="contact" id="quote"><div class="wrap">
+  <div class="cbox">
+    <div class="kicker">GET A REPAIR QUOTED</div>
+    <h2>Tell us what broke</h2>
+    <div class="num">(315) 729-6240</div>
+    <p style="color:var(--mut);max-width:520px;margin:0 auto">Call with the part, the metal (steel / stainless / aluminum) and what failed, and we'll tell you whether it's a same-day fix. A quote form and photo upload go here on the live site.</p>
+    <p class="meta">Mosher Road, Scipio Center, NY 13147 · Cayuga County<br><span class="ph">Street number to confirm before publish (2136 vs 2288 Mosher Rd in directories).</span></p>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  Stuttle Welding, LLC · Scipio Center, NY · (315) 729-6240<br>
+  <span class="ph">Preview concept prepared by Onyx Rise Media — not the business's live website.</span>
+</div></footer>
+
+</body>
+</html>

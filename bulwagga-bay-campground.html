@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bulwagga Bay Campground &amp; Beach — Lakeside Camping on Lake Champlain, Port Henry NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --lake:#1c6e8c; --deep:#134b61; --sky:#cfeaf2; --sand:#e9d8b4; --sandd:#d8bf8c;
+    --sunset:#e8853b; --cream:#fbf8f1; --ink:#213139; --grey:#5b6b73;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Nunito Sans',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+  h1,h2,h3,.pop{font-family:'Poppins',sans-serif}
+  a{color:inherit}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--sunset);color:#fff;font-family:'Poppins',sans-serif;font-weight:600;
+    padding:15px 32px;border-radius:40px;text-decoration:none;box-shadow:0 6px 16px rgba(232,133,59,.35)}
+  .btn:hover{background:#d0742d}
+  .btn2{background:#fff;color:var(--deep)}
+  nav.top{background:var(--deep);color:#fff}
+  nav.top .wrap{display:flex;justify-content:space-between;align-items:center;padding:12px 22px;flex-wrap:wrap;gap:8px}
+  nav.top .brand{font-family:'Poppins',sans-serif;font-weight:700;letter-spacing:.3px}
+  nav.top .links a{color:#d7ecf2;text-decoration:none;margin-left:18px;font-weight:600;font-size:.94rem}
+  nav.top .links a:hover{color:#fff}
+  /* hero */
+  .hero{position:relative;color:#fff;text-align:center;
+    background:linear-gradient(rgba(19,75,97,.55),rgba(19,75,97,.75)),
+    linear-gradient(160deg,#2a89a8 0%,#1c6e8c 45%,#e8853b 130%);padding:96px 0 88px}
+  .hero .kick{font-family:'Poppins',sans-serif;letter-spacing:3px;text-transform:uppercase;font-size:.9rem;color:var(--sand)}
+  .hero h1{font-size:3.2rem;line-height:1.06;margin:14px 0 12px}
+  .hero p{font-size:1.22rem;max-width:640px;margin:0 auto;color:#eaf5f8}
+  .hero .cta{margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .wave{display:block;line-height:0}
+  /* quickfacts */
+  .facts{background:var(--sand)}
+  .facts .wrap{display:flex;justify-content:space-around;flex-wrap:wrap;gap:16px;padding:22px;text-align:center}
+  .facts .f b{font-family:'Poppins',sans-serif;font-size:1.7rem;color:var(--deep);display:block;line-height:1}
+  .facts .f span{color:#7a6a44;font-weight:700;font-size:.9rem}
+  section{padding:64px 0}
+  h2{font-size:2.1rem;color:var(--deep);text-align:center}
+  .sub{color:var(--grey);text-align:center;max-width:640px;margin:10px auto 34px;font-size:1.05rem}
+  /* rates */
+  .rates{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+  .rate{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 8px 24px rgba(19,75,97,.1)}
+  .rate .head{background:var(--lake);color:#fff;padding:20px;text-align:center}
+  .rate.beach .head{background:var(--sunset)}
+  .rate.cabin .head{background:var(--deep)}
+  .rate .head h3{font-size:1.25rem}
+  .rate .head .price{font-family:'Poppins',sans-serif;font-size:1.05rem;margin-top:6px;opacity:.92}
+  .rate .body{padding:20px 22px}
+  .rate ul{list-style:none}
+  .rate li{padding:7px 0 7px 26px;position:relative;border-bottom:1px dashed #e7eef1}
+  .rate li:last-child{border-bottom:0}
+  .rate li:before{content:"✓";position:absolute;left:2px;color:var(--sunset);font-weight:800}
+  /* amenities */
+  .amen{background:var(--sky)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+  .a{background:#fff;border-radius:12px;padding:22px;text-align:center;box-shadow:0 4px 14px rgba(19,75,97,.08)}
+  .a .ic{font-size:1.8rem}
+  .a h3{font-size:1.05rem;color:var(--deep);margin:8px 0 4px}
+  .a p{color:var(--grey);font-size:.92rem}
+  /* reserve */
+  .reserve{background:var(--deep);color:#fff}
+  .reserve h2{color:#fff}
+  form{max-width:760px;margin:26px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  form label{font-size:.8rem;text-transform:uppercase;letter-spacing:.6px;color:var(--sand);display:block;margin-bottom:5px;font-weight:700}
+  form input,form select,form textarea{width:100%;padding:12px;border:0;border-radius:8px;font-family:inherit;font-size:1rem;background:#eef6f8;color:var(--ink)}
+  .full{grid-column:1/-1}
+  .reserve .note{text-align:center;color:#bcd7df;margin-top:14px;font-size:.9rem}
+  /* do */
+  .do-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .do{background:#fff;border-left:5px solid var(--sunset);border-radius:8px;padding:18px 20px;box-shadow:0 4px 12px rgba(0,0,0,.05)}
+  .do h3{color:var(--deep);font-size:1.1rem}
+  .do p{color:var(--grey);font-size:.94rem;margin-top:4px}
+  /* visit */
+  .visit{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}
+  .visit .box{background:#fff;border-radius:14px;padding:26px;box-shadow:0 8px 22px rgba(19,75,97,.1)}
+  .visit iframe,.mapimg{width:100%;border:0;border-radius:14px;min-height:280px;background:#dcebef}
+  footer{background:var(--ink);color:#9fb0b8;padding:38px 0;font-size:.92rem}
+  footer a{color:#fff;text-decoration:none}
+  .fgrid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px}
+  .pin{font-size:.78rem;color:#6f8088;margin-top:16px;text-align:center}
+  @media(max-width:720px){.hero h1{font-size:2.3rem}form{grid-template-columns:1fr}.visit{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav class="top"><div class="wrap">
+  <span class="brand">🌊 Bulwagga Bay Campground &amp; Beach</span>
+  <span class="links">
+    <a href="#rates">Sites &amp; Rates</a>
+    <a href="#amen">The Beach</a>
+    <a href="#do">Things to Do</a>
+    <a href="#reserve">Reserve</a>
+    <a href="tel:15185467500">(518) 546-7500</a>
+  </span>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="kick">Lake Champlain · Port Henry, New York</div>
+  <h1>Wake up on the bay</h1>
+  <p>185 grassy and shaded sites, two rustic cabins and a sand beach right on Lake Champlain — with the Adirondacks behind you and Vermont across the water. Book your spot for this summer.</p>
+  <div class="cta">
+    <a class="btn" href="#reserve">Reserve a site</a>
+    <a class="btn btn2" href="#rates">See sites &amp; rates</a>
+  </div>
+</div></header>
+<div class="wave"><svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="width:100%;height:46px;display:block"><path d="M0,30 C240,60 480,0 720,26 C960,52 1200,10 1440,34 L1440,60 L0,60 Z" fill="#e9d8b4"></path></svg></div>
+
+<div class="facts"><div class="wrap">
+  <div class="f"><b>185</b><span>Campsites</span></div>
+  <div class="f"><b>2</b><span>Rustic cabins</span></div>
+  <div class="f"><b>30/50</b><span>Amp hookups</span></div>
+  <div class="f"><b>Sand</b><span>Private beach</span></div>
+</div></div>
+
+<section id="rates"><div class="wrap">
+  <h2>Find your site</h2>
+  <p class="sub">Waterfront, hookup and tent sites, plus two cabins for when you'd rather leave the tent at home. Rates include up to 6 people and 2 vehicles per site.</p>
+  <div class="rates">
+    <div class="rate"><div class="head"><h3>Water &amp; Electric</h3><div class="price">Nightly · Weekly · Seasonal</div></div>
+      <div class="body"><ul><li>30/50-amp electric + water</li><li>Grassy, many shaded</li><li>Fits any trailer type</li><li>Near the beach &amp; playground</li></ul></div></div>
+    <div class="rate beach"><div class="head"><h3>Bay-View Sites</h3><div class="price">Nightly · Weekly</div></div>
+      <div class="body"><ul><li>Closest to the water</li><li>Sunsets over the bay</li><li>Steps to the sand beach</li><li>Popular — reserve early</li></ul></div></div>
+    <div class="rate"><div class="head"><h3>Tent Sites</h3><div class="price">Nightly · Weekly</div></div>
+      <div class="body"><ul><li>Grassy &amp; shaded</li><li>Fire ring + picnic table</li><li>Restrooms &amp; showers nearby</li><li>Great for families</li></ul></div></div>
+    <div class="rate cabin"><div class="head"><h3>Rustic Cabins</h3><div class="price">2 available · Nightly</div></div>
+      <div class="body"><ul><li>Roof over your head</li><li>Bring your own bedding</li><li>Right in the campground</li><li>Book well ahead</li></ul></div></div>
+  </div>
+  <p class="pin">Current-season rates to be added by the owner. Prices include up to 6 people and 2 licensed vehicles per site; specific site numbers can be requested but aren't guaranteed.</p>
+</div></section>
+
+<section id="amen" class="amen"><div class="wrap">
+  <h2>A whole summer on the water</h2>
+  <p class="sub">Everything the family needs for a week on Lake Champlain — and a beach that's yours.</p>
+  <div class="grid">
+    <div class="a"><div class="ic">🏖️</div><h3>Sand Beach</h3><p>Swim and sun on a private beach on Bulwagga Bay.</p></div>
+    <div class="a"><div class="ic">🚤</div><h3>Boat &amp; Kayak Access</h3><p>Launch onto Lake Champlain for fishing and paddling.</p></div>
+    <div class="a"><div class="ic">🔌</div><h3>Full Hookups</h3><p>30/50-amp electric and water for any rig.</p></div>
+    <div class="a"><div class="ic">🚿</div><h3>Restrooms &amp; Showers</h3><p>Clean facilities steps from your site.</p></div>
+    <div class="a"><div class="ic">🎣</div><h3>Champlain Fishing</h3><p>Bass, pike and perch right off the bay.</p></div>
+    <div class="a"><div class="ic">🔥</div><h3>Fire Rings &amp; Tables</h3><p>Every site set up for campfire nights.</p></div>
+  </div>
+</div></section>
+
+<section id="reserve" class="reserve"><div class="wrap">
+  <h2>Hold your site</h2>
+  <p class="sub" style="color:#cfe6ed">Send your dates and site type and we'll confirm availability and price. Ready to lock it in now? Call the office at <a href="tel:15185467500" style="color:#fff;font-weight:700">(518) 546-7500</a>, open 8am–6pm.</p>
+  <form onsubmit="event.preventDefault();alert('Thanks — this is a preview. On the live site this sends your reservation request to the office.');">
+    <div><label>Name</label><input required></div>
+    <div><label>Phone</label><input required type="tel"></div>
+    <div><label>Arrival date</label><input type="date"></div>
+    <div><label>Nights</label><input type="number" min="1" placeholder="e.g. 4"></div>
+    <div><label>Site type</label><select><option>Water &amp; electric</option><option>Bay-view site</option><option>Tent site</option><option>Rustic cabin</option><option>Seasonal site inquiry</option></select></div>
+    <div><label>Rig / party</label><input placeholder="e.g. 30' travel trailer, family of 4"></div>
+    <div class="full"><label>Anything else?</label><textarea rows="3" placeholder="Requests, questions, preferred site area…"></textarea></div>
+    <div class="full"><button class="btn" type="submit" style="width:100%">Request my reservation</button></div>
+  </form>
+  <p class="note">Arriving after hours? Your site info is posted on the Registration Building window — stop by the office the next morning to finish check-in.</p>
+</div></section>
+
+<section id="do"><div class="wrap">
+  <h2>When you're not on the beach</h2>
+  <p class="sub">You're minutes from the lake and a short drive from the High Peaks. A few favorites:</p>
+  <div class="do-list">
+    <div class="do"><h3>Lake Champlain Boating</h3><p>Launch, cruise the bay and drop a line — the lake is right here.</p></div>
+    <div class="do"><h3>Crown Point Historic Site</h3><p>Lighthouse, fort ruins and lake views a few minutes south.</p></div>
+    <div class="do"><h3>Adirondack Hiking</h3><p>Trails and High Peaks day trips out your campsite door.</p></div>
+    <div class="do"><h3>Ferry to Vermont</h3><p>Cross the lake for a day in Vermont and back by dinner.</p></div>
+  </div>
+</div></section>
+
+<section style="background:#eef6f8"><div class="wrap">
+  <h2>Find us on the bay</h2>
+  <p class="sub">On Lake Champlain in the town of Moriah, Port Henry, New York.</p>
+  <div class="visit">
+    <div class="box">
+      <h3 style="color:var(--deep);font-size:1.3rem;margin-bottom:8px">Bulwagga Bay Campground &amp; Beach</h3>
+      <p style="color:var(--grey)">Port Henry, NY 12974<br>Town of Moriah, on Lake Champlain</p>
+      <p style="margin-top:14px"><strong>Office:</strong> <a href="tel:15185467500" style="color:var(--lake);font-weight:700">(518) 546-7500</a><br>
+      <strong>Hours:</strong> 8:00am – 6:00pm<br>
+      <strong>Email:</strong> <a href="mailto:info@bulwaggabaycampground.com" style="color:var(--lake);font-weight:700">info@bulwaggabaycampground.com</a></p>
+      <a class="btn" href="#reserve" style="margin-top:18px">Reserve a site</a>
+    </div>
+    <iframe class="mapimg" loading="lazy" src="https://www.google.com/maps?q=Bulwagga+Bay+Campground+Port+Henry+NY+12974&output=embed" title="Map to Bulwagga Bay Campground"></iframe>
+  </div>
+</div></section>
+
+<footer><div class="wrap fgrid">
+  <div>
+    <strong style="color:#fff;font-family:'Poppins',sans-serif;font-size:1.15rem">Bulwagga Bay Campground &amp; Beach</strong><br>
+    Port Henry, NY 12974 · Lake Champlain<br>
+    Office 8am–6pm · <a href="tel:15185467500">(518) 546-7500</a>
+  </div>
+  <div>
+    <a href="#rates">Sites &amp; Rates</a> · <a href="#reserve">Reserve</a><br>
+    <a href="mailto:info@bulwaggabaycampground.com">info@bulwaggabaycampground.com</a>
+  </div>
+</div>
+<p class="pin">Preview concept prepared by Onyx Rise Media for the owner's review. Rates and photos to be supplied before launch.</p>
+</footer>
+
+</body>
+</html>

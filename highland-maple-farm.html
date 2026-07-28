@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Highland Maple Farm — Pure Maple Syrup, Sugar & Cream | Argyle, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bark:#3a2416; --bark2:#4d3120; --amber:#c9741a; --amber2:#e3922f;
+    --cream:#f7efe2; --cream2:#efe2cd; --ink:#2c1c11; --mut:#7c6450; --line:#e0cfb6;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--ink);line-height:1.65}
+  h1,h2,h3,.disp{font-family:'Fraunces',serif;letter-spacing:-.3px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .top{position:sticky;top:0;z-index:20;background:rgba(58,36,22,.96);backdrop-filter:blur(6px)}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{font-family:'Fraunces';font-weight:700;font-size:1.3rem;color:var(--cream)}
+  .brand span{color:var(--amber2)}
+  .top nav a{color:var(--cream2);text-decoration:none;margin-left:20px;font-size:.92rem;font-weight:500}
+  .top a.call{background:var(--amber);color:#fff;padding:9px 16px;border-radius:30px;font-weight:600;font-size:.9rem}
+  .hero{background:radial-gradient(circle at 80% 12%,rgba(227,146,47,.22),transparent 45%),linear-gradient(180deg,#40281a,#5a3a25);color:var(--cream);padding:76px 0 64px}
+  .eyebrow{color:var(--amber2);font-weight:600;letter-spacing:2px;font-size:.82rem;text-transform:uppercase}
+  .hero h1{font-size:clamp(2.2rem,5.4vw,3.8rem);line-height:1.04;margin:14px 0 16px;font-weight:600}
+  .hero h1 em{color:var(--amber2);font-style:italic}
+  .hero p.lead{font-size:1.16rem;color:var(--cream2);max-width:600px}
+  .cta-row{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{font-weight:600;padding:14px 26px;border-radius:32px;text-decoration:none;font-size:1rem;display:inline-block}
+  .btn-amber{background:var(--amber);color:#fff}
+  .btn-ghost{border:1px solid rgba(247,239,226,.4);color:var(--cream)}
+  .season{margin-top:32px;display:flex;gap:22px;flex-wrap:wrap;color:var(--cream2);font-size:.95rem}
+  .season b{color:var(--amber2);font-family:'Fraunces'}
+  section{padding:62px 0}
+  .kicker{color:var(--amber);font-weight:600;letter-spacing:2px;font-size:.8rem;text-transform:uppercase}
+  h2.sec{font-size:clamp(1.7rem,3.8vw,2.5rem);margin:8px 0 8px;font-weight:600}
+  .sub{color:var(--mut);max-width:620px;margin-bottom:30px}
+  .pantry{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .prod{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px 22px}
+  .prod .amt{font-family:'Fraunces';font-size:1.9rem;color:var(--amber);font-weight:600;line-height:1}
+  .prod h3{font-size:1.15rem;margin:10px 0 6px}
+  .prod p{color:var(--mut);font-size:.95rem}
+  .grades{background:var(--cream2)}
+  .gradebar{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+  .g{padding:22px 18px;border-right:1px solid var(--line)}
+  .g:last-child{border-right:none}
+  .g .dot{width:26px;height:26px;border-radius:50%;margin-bottom:12px}
+  .g h4{font-family:'Fraunces';font-size:1.05rem;margin-bottom:4px}
+  .g p{color:var(--mut);font-size:.9rem}
+  .story{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center}
+  .story .card{background:var(--bark);color:var(--cream);border-radius:14px;padding:30px}
+  .story .card .big{font-family:'Fraunces';font-size:2.4rem;color:var(--amber2);font-weight:600}
+  .market{background:var(--bark);color:var(--cream)}
+  .market h2.sec{color:var(--cream)}
+  .market .sub{color:var(--cream2)}
+  .mrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:6px}
+  .mrow div{background:rgba(247,239,226,.07);border:1px solid rgba(247,239,226,.16);border-radius:10px;padding:18px 18px}
+  .mrow div b{color:var(--amber2);font-family:'Fraunces';display:block;margin-bottom:4px;font-size:1.05rem}
+  .mrow div span{color:var(--cream2);font-size:.94rem}
+  .contact{background:linear-gradient(180deg,#5a3a25,#40281a);color:var(--cream)}
+  .contact h2{font-size:clamp(1.7rem,4vw,2.6rem);font-weight:600;margin-bottom:10px}
+  .contact p{color:var(--cream2);max-width:560px;margin-bottom:24px}
+  .cbox{display:flex;gap:14px;flex-wrap:wrap}
+  .cbox a{background:var(--amber);color:#fff;padding:15px 28px;border-radius:32px;text-decoration:none;font-weight:600}
+  .cbox a.alt{background:transparent;border:1px solid rgba(247,239,226,.4);color:var(--cream)}
+  footer{background:#2c1c11;color:#b79b82;padding:26px 0;font-size:.88rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  @media(max-width:760px){.story{grid-template-columns:1fr}.top nav{display:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand">Highland <span>Maple</span></div>
+  <nav><a href="#syrup">Syrup</a><a href="#grades">Grades</a><a href="#market">Find Us</a><a href="#contact">Order</a></nav>
+  <a class="call" href="tel:15186388586">(518) 638-8586</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">Argyle, Washington County · Since the sap first ran</div>
+  <h1>Syrup boiled down on <em>Coach Road</em>, a few miles from your kitchen table.</h1>
+  <p class="lead">Highland Maple Farm taps the hills above Argyle and finishes every batch here — syrup, granulated sugar, molded maple candy and soft maple cream. No warehouse, no middleman. Call ahead and pick it up, or catch us at the farm markets.</p>
+  <div class="cta-row">
+    <a class="btn btn-amber" href="#contact">Reserve a jug</a>
+    <a class="btn btn-ghost" href="#market">Where to find us</a>
+  </div>
+  <div class="season">
+    <span><b>Sugaring:</b> late Feb – early April</span>
+    <span><b>Farm pickup:</b> year-round by call</span>
+    <span><b>Bulk drums:</b> for makers &amp; retailers</span>
+  </div>
+</div></section>
+
+<section id="syrup"><div class="wrap">
+  <span class="kicker">What comes out of the sugarhouse</span>
+  <h2 class="sec">Four things, all from the same trees</h2>
+  <p class="sub">Everything below starts as sap from our own woods and never leaves the farm until it's finished. Sizes and prices confirmed by phone — supply runs by the season.</p>
+  <div class="pantry">
+    <div class="prod"><div class="amt">Syrup</div><h3>Pint · Quart · Gallon</h3><p>Pure Argyle maple in glass and jugs. Grade A, from Golden delicate all the way to Very Dark strong — your pick.</p></div>
+    <div class="prod"><div class="amt">Sugar</div><h3>Granulated maple</h3><p>Pourable maple sugar for coffee, oatmeal and baking. A shelf-stable way to keep the farm on your counter all year.</p></div>
+    <div class="prod"><div class="amt">Candy</div><h3>Molded maple sugar</h3><p>Pressed leaf and shape candy — the giveaway gift box that disappears fastest at the holiday table.</p></div>
+    <div class="prod"><div class="amt">Cream</div><h3>Soft maple cream</h3><p>Whipped, spreadable maple with nothing added. Goes on toast, biscuits and, honestly, a spoon.</p></div>
+  </div>
+</div></section>
+
+<section id="grades" class="grades"><div class="wrap">
+  <span class="kicker">Pick by taste, not by guesswork</span>
+  <h2 class="sec">The four grades, plain English</h2>
+  <p class="sub">Every jug of ours is Grade A. The difference is how far into the season it was made and how strong you like it. Not sure? Tell us how you'll use it and we'll match you.</p>
+  <div class="gradebar">
+    <div class="g"><div class="dot" style="background:#e8b76a"></div><h4>Golden, Delicate</h4><p>Early-season, light. Over vanilla ice cream or plain yogurt.</p></div>
+    <div class="g"><div class="dot" style="background:#c9741a"></div><h4>Amber, Rich</h4><p>The classic pancake syrup most folks reach for.</p></div>
+    <div class="g"><div class="dot" style="background:#8a4a16"></div><h4>Dark, Robust</h4><p>Stronger maple. Great for baking and coffee.</p></div>
+    <div class="g"><div class="dot" style="background:#4d2c12"></div><h4>Very Dark, Strong</h4><p>Late-run, bold. For marinades, beans and BBQ.</p></div>
+  </div>
+</div></section>
+
+<section id="story"><div class="wrap story">
+  <div>
+    <span class="kicker">Why buy it here</span>
+    <h2 class="sec">You're buying from the person who made it</h2>
+    <p class="sub">Highland Maple is a working sugarbush, not a label on a store shelf. Dave taps the trees, tends the fire, and fills the jug you take home. When the sap runs during Maple Weekend, the evaporator is going and you're welcome to watch it turn from sap to syrup.</p>
+    <p style="color:var(--mut)">Prefer to stock it? We sell syrup by the drum to bakeries, farm stores and other makers who want a real Washington County source — ask about bulk.</p>
+  </div>
+  <div class="card">
+    <div class="big">~40 to 1</div>
+    <p style="color:var(--cream2);margin-top:8px">Gallons of sap boiled down to make a single gallon of syrup. That's the reason it tastes like the woods it came from — and why the good stuff is worth the drive.</p>
+  </div>
+</div></section>
+
+<section id="market" class="market"><div class="wrap">
+  <span class="kicker" style="color:var(--amber2)">Where to catch us</span>
+  <h2 class="sec">Farm pickup &amp; the market table</h2>
+  <p class="sub">The quickest way to get syrup is a quick call — we'll have it ready at the farm on Coach Road. In season you'll also find our table at area farm markets and Maple Weekend.</p>
+  <div class="mrow">
+    <div><b>At the farm</b><span>954 Coach Road, Argyle NY — call first so someone's up at the house to meet you.</span></div>
+    <div><b>Farm markets</b><span>In-season market table with the full lineup — call for this week's location and hours.</span></div>
+    <div><b>Maple Weekend</b><span>Come watch the evaporator run and taste straight off the fire each spring.</span></div>
+  </div>
+  <p style="color:#b79b82;font-size:.82rem;margin-top:16px">Address and market schedule shown as listed — please confirm the current pickup address and market dates when you call.</p>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <h2>Reserve syrup or ask about a drum</h2>
+  <p>Tell us what you're after — a gallon for the pantry, a candy box for a gift, or bulk syrup for your shop. We'll set it aside and tell you when it's ready.</p>
+  <div class="cbox">
+    <a href="tel:15186388586">Call (518) 638-8586</a>
+    <a class="alt" href="#syrup">See the lineup</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>Highland Maple Farm · 954 Coach Road, Argyle, NY 12809 · (518) 638-8586</span>
+  <span>Pure New York maple — syrup, sugar, candy &amp; cream</span>
+</div></footer>
+</body>
+</html>

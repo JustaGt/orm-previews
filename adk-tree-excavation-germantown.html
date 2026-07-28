@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADK Tree Services &amp; Excavation — Tree Removal, Storm Work &amp; Land Clearing | Germantown, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Archivo+Narrow:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#1f2d23;--pine-d:#152018;--fern:#3c5140;--saw:#c6d92f;--saw-d:#a4b722;--bark:#5b4632;--birch:#f1f0e7;--paper:#fbfbf5;--line:#d8d9cc;--ink:#232620;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Archivo',sans-serif;color:var(--ink);background:var(--paper);line-height:1.62}
+h1,h2,h3{font-family:'Archivo Narrow',sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:1.08}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+.btn{display:inline-block;background:var(--saw);color:var(--pine);font-family:'Archivo Narrow';font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:14px 30px;border-radius:2px;text-decoration:none;font-size:1.05rem;transition:.15s}
+.btn:hover{background:var(--saw-d)}
+.btn-ghost{background:transparent;border:2px solid var(--saw);color:var(--saw)}
+.btn-ghost:hover{background:var(--saw);color:var(--pine)}
+.topbar{background:var(--pine-d);color:#d7ddd3;font-size:.86rem;padding:8px 0}
+.topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.topbar b{color:var(--saw)}
+nav{background:var(--pine);position:sticky;top:0;z-index:20;box-shadow:0 2px 10px rgba(0,0,0,.28)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
+.brand{font-family:'Archivo Narrow';color:#fff;font-weight:700;font-size:1.5rem;letter-spacing:.03em}
+.brand span{color:var(--saw)}
+.navlinks a{color:#d0d6cc;text-decoration:none;font-family:'Archivo Narrow';text-transform:uppercase;font-size:1rem;margin-left:22px;letter-spacing:.03em;font-weight:600}
+.navlinks a:hover{color:var(--saw)}
+@media(max-width:820px){.navlinks{display:none}}
+.hero{background:linear-gradient(rgba(21,32,24,.78),rgba(21,32,24,.9)),url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70"><rect width="70" height="70" fill="%231f2d23"/><circle cx="35" cy="35" r="26" fill="none" stroke="%232a3b2e" stroke-width="1"/><circle cx="35" cy="35" r="16" fill="none" stroke="%232a3b2e" stroke-width="1"/><circle cx="35" cy="35" r="7" fill="none" stroke="%232a3b2e" stroke-width="1"/></svg>');color:#fff;padding:98px 0 88px}
+.hero .kick{color:var(--saw);font-family:'Archivo Narrow';letter-spacing:.16em;text-transform:uppercase;font-weight:700;font-size:1rem;margin-bottom:14px}
+.hero h1{font-size:3.6rem;font-weight:700;max-width:16ch;margin-bottom:18px}
+.hero p{font-size:1.2rem;max-width:52ch;color:#d6dcd2;margin-bottom:28px}
+.hero .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+@media(max-width:600px){.hero h1{font-size:2.4rem}}
+.storm{background:var(--saw);color:var(--pine)}
+.storm .wrap{display:flex;align-items:center;justify-content:center;gap:20px;padding:16px 22px;text-align:center;flex-wrap:wrap;font-family:'Archivo Narrow';font-weight:700;text-transform:uppercase;letter-spacing:.03em;font-size:1.15rem}
+.storm a{background:var(--pine);color:#fff;text-decoration:none;padding:8px 20px;border-radius:2px;font-size:1rem}
+section{padding:70px 0}
+.eyebrow{color:var(--fern);font-family:'Archivo Narrow';letter-spacing:.14em;text-transform:uppercase;font-weight:700;font-size:.95rem;margin-bottom:10px}
+h2.head{font-size:2.5rem;color:var(--pine);margin-bottom:14px}
+.lead{font-size:1.12rem;color:#54584e;max-width:60ch;margin-bottom:38px}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:6px;padding:26px 24px;position:relative;transition:.15s}
+.svc:hover{box-shadow:0 12px 26px rgba(31,45,35,.13);transform:translateY(-3px)}
+.svc .tag{display:inline-block;background:var(--birch);color:var(--fern);font-family:'Archivo Narrow';font-weight:700;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:3px;margin-bottom:10px}
+.svc h3{font-size:1.42rem;color:var(--pine);margin-bottom:7px}
+.svc p{font-size:.97rem;color:#4f544a}
+.why{background:var(--pine);color:#e4e8e0}
+.why h2.head{color:#fff}
+.why .lead{color:#c1c9bd}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px;margin-top:12px}
+.why-item{display:flex;gap:13px;align-items:flex-start}
+.why-item .n{font-family:'Archivo Narrow';color:var(--saw);font-size:1.9rem;font-weight:700;line-height:1}
+.why-item h3{font-size:1.3rem;margin-bottom:5px;color:#fff}
+.why-item p{font-size:.95rem;color:#c1c9bd}
+.area .towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.area .towns span{background:var(--birch);border:1px solid var(--line);border-radius:20px;padding:7px 16px;font-size:.92rem;font-weight:600;color:var(--fern)}
+.quote{background:var(--birch)}
+.qbox{display:grid;grid-template-columns:1.05fr 1fr;background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.qbox .side{background:var(--pine);color:#e4e8e0;padding:44px 38px}
+.qbox .side h2{font-size:2.05rem;margin-bottom:14px;color:#fff}
+.qbox .side p{color:#c1c9bd;margin-bottom:20px}
+.qbox .side .ph{font-family:'Archivo Narrow';font-size:2rem;color:var(--saw);font-weight:700}
+form{padding:40px 36px;display:grid;gap:14px}
+label{font-size:.8rem;font-family:'Archivo Narrow';text-transform:uppercase;letter-spacing:.06em;color:var(--fern);font-weight:700}
+input,select,textarea{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:4px;font-family:inherit;font-size:.98rem;margin-top:5px;background:var(--paper)}
+textarea{min-height:88px;resize:vertical}
+@media(max-width:760px){.qbox{grid-template-columns:1fr}}
+footer{background:var(--pine-d);color:#a6ad9f;padding:44px 0;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px}
+footer b{color:#fff;font-family:'Archivo Narrow';font-size:1.25rem}
+footer a{color:var(--saw);text-decoration:none}
+.note{background:#f6f8e6;border-top:1px solid var(--saw-d);color:#5f6a17;font-size:.8rem;text-align:center;padding:10px}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>Tree removal &middot; Land clearing &middot; Excavation &mdash; Germantown, NY</span><span>Call: <b>(518) 321-6635</b></span></div></div>
+<nav><div class="wrap"><div class="brand">ADK <span>TREE &amp; EXCAVATION</span></div>
+<div class="navlinks"><a href="#services">Services</a><a href="#why">Why ADK</a><a href="#area">Service Area</a><a href="#quote">Free Estimate</a></div></div></nav>
+
+<header class="hero"><div class="wrap">
+<div class="kick">Germantown &middot; Columbia County</div>
+<h1>Big trees down. Lots cleared. Ground ready to build.</h1>
+<p>Tree removal, storm cleanup, stump grinding, and land clearing — plus the excavator to haul it off and grade the ground when the trees are gone.</p>
+<div class="cta-row"><a class="btn" href="#quote">Get a Free Estimate</a><a class="btn btn-ghost" href="tel:+15183216635">Call (518) 321-6635</a></div>
+</div></header>
+
+<div class="storm"><div class="wrap"><span>Tree down on the house, drive, or wires?</span><a href="tel:+15183216635">Call (518) 321-6635</a></div></div>
+
+<section id="services"><div class="wrap">
+<div class="eyebrow">What we do</div>
+<h2 class="head">From the top of the tree to the last root ball.</h2>
+<p class="lead">Most tree companies drop the tree and leave you the mess. ADK runs the saws and the excavator, so the removal, the cleanup, and the grading are all the same crew on the same day.</p>
+<div class="svc-grid">
+<div class="svc"><span class="tag">Most requested</span><h3>Tree Removal</h3><p>Big, dead, leaning, or too close to the house — taken down in sections, roped down over what matters, and hauled off clean.</p></div>
+<div class="svc"><span class="tag">24/7</span><h3>Storm &amp; Emergency</h3><p>Trees on roofs, drives, or wires after a Columbia County blow. Fast response to make it safe and get the tree off your property.</p></div>
+<div class="svc"><span class="tag">Health &amp; shape</span><h3>Trimming &amp; Pruning</h3><p>Deadwooding, thinning, and clearance pruning that keeps big shade trees healthy and off your roof and power lines.</p></div>
+<div class="svc"><span class="tag">Grind it flush</span><h3>Stump Grinding</h3><p>Stumps ground below grade so you can mow, plant, or build over them — chips left as mulch or hauled away.</p></div>
+<div class="svc"><span class="tag">Excavator on site</span><h3>Land &amp; Lot Clearing</h3><p>Clearing brush and trees for building lots, pastures, driveways, and views — trees down, stumps out, ground leveled.</p></div>
+<div class="svc"><span class="tag">Dig &amp; grade</span><h3>Excavation</h3><p>Once the trees are gone: rough grading, driveway cuts, drainage, and hauling to leave the ground ready for the next step.</p></div>
+</div>
+</div></section>
+
+<section class="why" id="why"><div class="wrap">
+<div class="eyebrow" style="color:var(--saw)">Why hire ADK</div>
+<h2 class="head">Saws and an excavator, one phone call.</h2>
+<p class="lead">The difference between a tree guy and a clearing job is the machine. ADK brings both — which is why the property looks finished, not wrecked, when the crew pulls out.</p>
+<div class="why-grid">
+<div class="why-item"><div class="n">01</div><div><h3>Tree work and dirt work</h3><p>Removal plus the excavator to clear, haul, and grade. No second contractor to schedule after the tree's on the ground.</p></div></div>
+<div class="why-item"><div class="n">02</div><div><h3>Careful drop, clean finish</h3><p>Sectioned and roped down around houses, fences, and gardens — then raked out so you'd hardly know a crew was there.</p></div></div>
+<div class="why-item"><div class="n">03</div><div><h3>Storm-ready</h3><p>When the power's out and a maple's across the drive, ADK answers and gets there. Local, not a call center.</p></div></div>
+<div class="why-item"><div class="n">04</div><div><h3>Free, honest estimates</h3><p>Walk the property, tell you what needs to go and what doesn't, and give you a straight number before any saw starts.</p></div></div>
+</div>
+</div></section>
+
+<section class="area" id="area"><div class="wrap">
+<div class="eyebrow">Where we work</div>
+<h2 class="head">Germantown and the Hudson-side Columbia County towns.</h2>
+<p class="lead">Based in Germantown, working the river towns and out into the Taconic side of the county.</p>
+<div class="towns"><span>Germantown</span><span>Clermont</span><span>Livingston</span><span>Gallatin</span><span>Ancram</span><span>Copake</span><span>Hillsdale</span><span>Hudson</span><span>Claverack</span><span>Red Hook</span></div>
+</div></section>
+
+<section class="quote" id="quote"><div class="wrap">
+<div class="qbox">
+<div class="side">
+<h2>Send a photo of the tree.</h2>
+<p>Point us at the tree or the lot and we'll come look. Tell us what's going on — a hazard tree, a lot to clear, storm damage — and we'll set up a free estimate and a straight number.</p>
+<div>Storm damage or hazard? Call now:</div>
+<div class="ph">(518) 321-6635</div>
+</div>
+<form onsubmit="event.preventDefault();this.reset();alert('Thanks — ADK will reach out to set up your free estimate. (Demo preview form.)');">
+<div><label>Name</label><input required></div>
+<div><label>Phone</label><input required type="tel"></div>
+<div><label>Property town</label><input placeholder="e.g. Germantown"></div>
+<div><label>What do you need?</label><select><option>Tree removal</option><option>Storm / emergency (tree down)</option><option>Trimming / pruning</option><option>Stump grinding</option><option>Land / lot clearing</option><option>Excavation / grading</option><option>Not sure — need a look</option></select></div>
+<div><label>Details</label><textarea placeholder="How many trees, how close to the house, and how soon you need it."></textarea></div>
+<button class="btn" type="submit">Get a Free Estimate</button>
+</form>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<div><b>ADK TREE SERVICES &amp; EXCAVATION</b><br>Germantown, NY 12526 &middot; Columbia County</div>
+<div>Tree removal &middot; Storm work &middot; Stump grinding &middot; Land clearing &middot; Excavation<br><a href="tel:+15183216635">(518) 321-6635</a></div>
+</div></footer>
+<div class="note">Preview concept built by Onyx Rise Media for review. Company details from the business's public listings; services and specifics to be confirmed with the owner.</div>
+</body>
+</html>

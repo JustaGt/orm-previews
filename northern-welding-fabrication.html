@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northern Welding &amp; Fabrication — Steel &amp; Aluminum, Mobile 24hr, Central Square NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600;700&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --graphite:#15191d; --steel:#1e252b; --steel2:#2a333b; --arc:#28c3ff; --arc2:#0e9fd8;
+    --orange:#ff6a1f; --ash:#e9edf1; --card:#ffffff; --ink:#1a2026; --muted:#6c7883; --line:#dde3e9;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--ash);line-height:1.6}
+  h1,h2,h3,.disp{font-family:'Archivo Narrow',sans-serif;text-transform:uppercase;letter-spacing:.5px;line-height:1.04}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .topbar{background:#000;color:#aeb8c2;font-size:.88rem}
+  .topbar .wrap{display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:space-between;padding:8px 22px}
+  .topbar b{color:var(--arc)}
+  .topbar .em{color:var(--orange);font-weight:600}
+  header{background:var(--graphite);position:sticky;top:0;z-index:20;border-bottom:2px solid var(--orange)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;padding:13px 22px}
+  .brand{display:flex;align-items:center;gap:12px;color:#fff}
+  .mark{width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,var(--arc),var(--arc2));display:flex;align-items:center;justify-content:center;font-family:'Oswald';font-weight:700;color:#04222e;font-size:1.3rem;flex:none}
+  .brand .n{font-family:'Archivo Narrow';font-weight:700;font-size:1.32rem;letter-spacing:1px}
+  .brand .s{font-size:.68rem;letter-spacing:2px;color:#8fa0ad;text-transform:uppercase}
+  nav a{color:#cdd6de;text-decoration:none;margin-left:20px;font-weight:600;font-size:.92rem;font-family:'Oswald';letter-spacing:.5px}
+  nav a:hover{color:var(--arc)}
+  .nav-links{display:flex;align-items:center}
+  .callbtn{background:var(--orange);color:#1a0d04;padding:10px 15px;border-radius:6px;font-family:'Oswald';font-weight:700;text-decoration:none;margin-left:20px;white-space:nowrap;letter-spacing:.5px}
+  @media(max-width:820px){.nav-links nav{display:none}}
+  .hero{position:relative;color:#fff;padding:76px 0 64px;background:
+     radial-gradient(900px 400px at 78% -10%,rgba(40,195,255,.22),transparent 60%),
+     linear-gradient(180deg,#12161a,#1b232a);overflow:hidden}
+  .hero:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.02) 0 2px,transparent 2px 7px);pointer-events:none}
+  .hero .ey{color:var(--arc);font-family:'Oswald';font-weight:600;letter-spacing:3px;font-size:.84rem;text-transform:uppercase;position:relative}
+  .hero h1{font-size:3.15rem;font-weight:700;margin:12px 0 16px;max-width:18ch;position:relative}
+  .hero h1 em{color:var(--orange);font-style:normal}
+  .hero p{max-width:56ch;font-size:1.12rem;color:#c7d2db;position:relative}
+  .hero .cta{margin-top:26px;display:flex;flex-wrap:wrap;gap:13px;position:relative}
+  .btn{background:var(--orange);color:#1a0d04;padding:14px 22px;border-radius:7px;font-family:'Oswald';font-weight:700;letter-spacing:.5px;text-decoration:none;font-size:1.02rem}
+  .btn.ghost{background:transparent;color:#fff;border:2px solid #3a4a55}
+  .hero .badge{position:relative;margin-top:24px;display:inline-flex;align-items:center;gap:9px;background:rgba(40,195,255,.12);border:1px solid rgba(40,195,255,.4);padding:8px 15px;border-radius:8px;font-size:.92rem;color:#d5f4ff}
+  .hero .badge b{color:var(--arc)}
+  .strip{background:var(--orange);color:#1a0d04}
+  .strip .wrap{display:flex;flex-wrap:wrap;justify-content:space-around;gap:8px 18px;padding:12px 22px;font-family:'Oswald';font-weight:600;letter-spacing:.5px;text-transform:uppercase;font-size:.92rem}
+  section{padding:58px 0}
+  .kicker{color:var(--arc2);font-family:'Oswald';font-weight:600;letter-spacing:2.5px;font-size:.8rem;text-transform:uppercase}
+  h2.title{font-size:2.2rem;font-weight:700;margin:8px 0 10px;color:var(--graphite)}
+  .lead{color:var(--muted);max-width:62ch;margin-bottom:28px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:820px){.grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:540px){.grid{grid-template-columns:1fr}}
+  .svc{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px 20px;border-top:4px solid var(--arc)}
+  .svc.o{border-top-color:var(--orange)}
+  .svc h3{font-size:1.14rem;color:var(--steel);margin-bottom:7px}
+  .svc p{font-size:.94rem;color:var(--muted)}
+  .svc .m{font-family:'Oswald';font-size:.74rem;letter-spacing:1.5px;color:var(--arc2);text-transform:uppercase;margin-bottom:9px;display:block}
+  /* mobile feature */
+  .mobile{background:var(--graphite);color:#dfe7ee}
+  .mobile .wrap{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+  @media(max-width:820px){.mobile .wrap{grid-template-columns:1fr}}
+  .mobile h2{color:#fff;font-size:2.1rem;margin-bottom:14px}
+  .mobile h2 em{color:var(--orange);font-style:normal}
+  .mobile p{color:#b7c3cd;margin-bottom:14px}
+  .mobile .panel{background:var(--steel);border:1px solid #34404a;border-radius:12px;padding:24px;border-left:5px solid var(--orange)}
+  .mobile .panel h3{color:var(--arc);font-size:1.05rem;letter-spacing:1px;margin-bottom:12px}
+  .mlist{list-style:none}
+  .mlist li{padding:9px 0;border-bottom:1px dashed #3a4650;font-size:.98rem;display:flex;gap:11px}
+  .mlist li:last-child{border-bottom:0}
+  .mlist li:before{content:"▸";color:var(--orange);font-weight:700}
+  /* steel counter */
+  .counter{background:var(--arc);color:#03222e;text-align:center}
+  .counter .wrap{padding:34px 22px}
+  .counter h2{font-size:1.9rem;margin-bottom:6px}
+  .counter p{max-width:56ch;margin:0 auto;color:#0a3a49;font-weight:500}
+  /* who */
+  .who .wrap{background:#fff;border:1px solid var(--line);border-radius:12px;padding:28px 26px;border-left:6px solid var(--arc)}
+  .who h2{color:var(--graphite);font-size:1.75rem;margin-bottom:8px}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
+  .chips span{background:var(--ash);border:1px solid var(--line);padding:6px 13px;border-radius:6px;font-size:.9rem;color:var(--steel);font-weight:500}
+  .band{background:linear-gradient(135deg,var(--steel),var(--graphite));color:#fff;text-align:center}
+  .band .wrap{padding:52px 22px}
+  .band h2{font-size:2rem;margin-bottom:10px}
+  .band p{color:#c1cdd6;max-width:54ch;margin:0 auto 20px}
+  .band .phone{font-family:'Oswald';font-weight:700;font-size:2.05rem;color:var(--orange);letter-spacing:1px}
+  .band .mail{display:block;margin-top:8px;color:var(--arc);font-weight:600}
+  #contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+  @media(max-width:760px){#contact .wrap{grid-template-columns:1fr}}
+  .info p{margin-bottom:12px}
+  .info b{font-family:'Oswald';letter-spacing:.5px;color:var(--steel)}
+  form label{display:block;font-size:.86rem;font-weight:600;margin:12px 0 5px;color:var(--graphite)}
+  form input,form textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff}
+  form button{margin-top:16px;background:var(--orange);color:#1a0d04;border:0;padding:13px 22px;border-radius:8px;font-family:'Oswald';font-weight:700;letter-spacing:.5px;font-size:1rem;cursor:pointer}
+  .note{font-size:.8rem;color:var(--muted);margin-top:10px}
+  footer{background:#000;color:#8894a0;font-size:.86rem}
+  footer .wrap{padding:26px 22px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+  footer a{color:var(--arc);text-decoration:none}
+</style>
+</head>
+<body>
+  <div class="topbar"><div class="wrap">
+    <span>Central Square, NY &bull; Certified welders since <b>1994</b></span>
+    <span class="em">⚡ Mobile trucks &bull; 24-hour emergency service</span>
+  </div></div>
+
+  <header><div class="wrap">
+    <div class="brand"><span class="mark">N</span>
+      <div><div class="n">Northern Welding &amp; Fabrication</div><div class="s">Central Square &bull; Oswego County</div></div>
+    </div>
+    <div class="nav-links">
+      <nav>
+        <a href="#weld">What We Weld</a>
+        <a href="#mobile">Mobile 24hr</a>
+        <a href="#steel">Buy Steel</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="callbtn" href="tel:+13156769353">(315) 676-9353</a>
+    </div>
+  </div></header>
+
+  <section class="hero"><div class="wrap">
+    <div class="ey">Steel &bull; Aluminum &bull; Stainless</div>
+    <h1>Trailer cracked, dock bent, bucket split — <em>bring it, or we'll come to it.</em></h1>
+    <p>A working fabrication and repair shop on US-11 since 1994. We weld aluminum and steel, fix heavy equipment and trailers, build custom railings and structural steel — and we roll mobile trucks to the breakdown, day or night.</p>
+    <div class="cta">
+      <a class="btn" href="tel:+13156769353">Call the shop</a>
+      <a class="btn ghost" href="#contact">Send a photo of the break</a>
+    </div>
+    <div class="badge"><b>⚡</b> We weld <b>aluminum</b>, not just steel — most shops around here won't.</div>
+  </div></section>
+
+  <div class="strip"><div class="wrap">
+    <span>Structural steel</span><span>Heavy equipment repair</span><span>Trailer repair</span><span>Custom railings</span><span>Boat dock work</span><span>Sheet metal</span>
+  </div></div>
+
+  <section id="weld"><div class="wrap">
+    <div class="kicker">Three kinds of work, one shop</div>
+    <h2 class="title">What comes off our table</h2>
+    <p class="lead">Repairs that get you running again, fabrication built to spec, and custom steel or aluminum you can't buy off a shelf. Certified welders in MIG, TIG and stick.</p>
+    <div class="grid">
+      <div class="svc"><span class="m">Repair</span><h3>Heavy Equipment &amp; Trailers</h3><p>Cracked frames, broken buckets, split trailers — steel <b>and</b> aluminum — welded back to working, fast.</p></div>
+      <div class="svc o"><span class="m">Fabricate</span><h3>Structural Steel</h3><p>Structural steel design &amp; fabrication, lintels, RTU supports, joist re-reinforcements, sheet metal.</p></div>
+      <div class="svc"><span class="m">Custom</span><h3>Railings &amp; Stairs</h3><p>Custom railings, stairs and one-off steel or aluminum work built to your measurements.</p></div>
+      <div class="svc o"><span class="m">Waterfront</span><h3>Boat Dock Repair &amp; Mods</h3><p>Aluminum and steel dock repair and modifications for the Oneida Lake north shore.</p></div>
+      <div class="svc"><span class="m">Seasonal</span><h3>Sled, Camper &amp; RV Mods</h3><p>Snowmobile, camper and RV modifications and repairs welded to hold up to real use.</p></div>
+      <div class="svc o"><span class="m">Counter</span><h3>Steel Sales</h3><p>Need material? We sell steel in small or large pieces — grab a length while you're here.</p></div>
+    </div>
+  </div></section>
+
+  <section id="mobile" class="mobile"><div class="wrap">
+    <div>
+      <div class="kicker" style="color:var(--arc)">When it can't come to us</div>
+      <h2>Mobile welding trucks. <em>24-hour emergency.</em></h2>
+      <p>A dead trailer on the shoulder or a piece of equipment down in the middle of a job doesn't wait for shop hours. We keep a fleet of fully mobilized welding trucks so a certified welder can run to the breakdown or the job site.</p>
+      <p>One call, and we bring the shop to you.</p>
+    </div>
+    <div class="panel">
+      <h3>Roll a truck when</h3>
+      <ul class="mlist">
+        <li>A trailer or truck frame cracks on the road</li>
+        <li>Equipment goes down mid-job and can't be hauled in</li>
+        <li>On-site structural or repair welding is needed</li>
+        <li>It's after hours and it can't wait until morning</li>
+      </ul>
+    </div>
+  </div></section>
+
+  <section id="steel" class="counter"><div class="wrap">
+    <h2>Yes — you can just buy the steel.</h2>
+    <p>Working on your own project? Northern sells steel in small or large pieces right off the floor. Skip the trip to the city — call ahead with your sizes and we'll have it ready.</p>
+  </div></section>
+
+  <section id="who" class="who"><div class="wrap">
+    <div class="kicker">Who brings us work</div>
+    <h2>Farms, contractors, truckers &amp; lake-country owners</h2>
+    <p class="lead" style="margin-bottom:0">If it's made of steel or aluminum and it's broken, wrong, or doesn't exist yet, it ends up on our table. Working the Central Square / US-11 corridor and the Oneida Lake north shore.</p>
+    <div class="chips">
+      <span>Farmers &amp; ag equipment</span><span>Excavation &amp; site contractors</span><span>Truckers &amp; trailer fleets</span><span>Fabricators &amp; shops</span><span>Lakefront property owners</span><span>Homeowners &amp; DIYers</span>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <div class="kicker" style="color:var(--arc)">Broken, custom, or after hours</div>
+    <h2>Tell us what's cracked, bent, or needs building.</h2>
+    <p>Call the shop, send a photo of the break, or ask about a custom job or a length of steel. Certified welders, steel and aluminum, mobile when you need it.</p>
+    <a class="phone" href="tel:+13156769353">(315) 676-9353</a>
+    <a class="mail" href="mailto:info@nwfny.com">info@nwfny.com</a>
+  </div></section>
+
+  <section id="contact"><div class="wrap">
+    <div class="info">
+      <div class="kicker">Get in touch</div>
+      <h2 class="title" style="font-size:1.8rem">Northern Welding &amp; Fabrication LLC</h2>
+      <p><b>Shop:</b> 905 US Route 11, Central Square, NY 13036</p>
+      <p><b>Phone:</b> <a href="tel:+13156769353" style="text-decoration:none;color:var(--arc2)">(315) 676-9353</a> &nbsp;(315-676-WELD)</p>
+      <p><b>Email:</b> <a href="mailto:info@nwfny.com" style="text-decoration:none;color:var(--arc2)">info@nwfny.com</a></p>
+      <p><b>Hours:</b> Mon–Fri 7:30am–4:00pm &bull; <b style="color:var(--orange)">24-hr emergency &amp; mobile</b></p>
+      <p><b>Since:</b> 1994</p>
+    </div>
+    <form onsubmit="return false">
+      <div class="kicker">Send us the job</div>
+      <label>Name</label><input type="text" placeholder="Your name">
+      <label>Phone</label><input type="tel" placeholder="Best number to reach you">
+      <label>Steel or aluminum?</label><input type="text" placeholder="What's the part made of?">
+      <label>What do you need?</label><textarea rows="4" placeholder="Trailer repair, custom railing, structural steel, dock work, mobile call, buying steel…"></textarea>
+      <button type="submit">Send it over</button>
+      <p class="note">This is a design preview. On the live site this form (and photo uploads) go straight to the shop's inbox.</p>
+    </form>
+  </div></section>
+
+  <footer><div class="wrap">
+    <span>Northern Welding &amp; Fabrication LLC &bull; 905 US Route 11, Central Square, NY 13036 &bull; Est. 1994</span>
+    <span><a href="tel:+13156769353">(315) 676-9353</a> &bull; <a href="mailto:info@nwfny.com">info@nwfny.com</a></span>
+  </div></footer>
+</body>
+</html>

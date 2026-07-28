@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shaw Excavation — Septic Systems & Site Work, Cayuga Lake East Shore</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --soil:#3a2c1e; --soil2:#2c2116; --clay:#6b4f34; --org:#f2892f; --org2:#ffae5c;
+    --cream:#f6f1e9; --ink:#241b12; --mut:#6d6153; --line:#e2d7c6; --grn:#3f5d3a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  h1,h2,h3,.disp{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.5px;line-height:1.02}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .top{position:sticky;top:0;z-index:20;background:var(--soil);color:var(--cream);border-bottom:3px solid var(--org)}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{font-family:'Barlow Condensed';font-weight:700;font-size:1.5rem;letter-spacing:1.5px}
+  .brand b{color:var(--org2)}
+  .badge{background:var(--grn);color:#eaf3e8;font-size:.72rem;font-weight:600;padding:5px 11px;border-radius:4px;letter-spacing:.5px}
+  .top a.call{color:var(--cream);text-decoration:none;font-family:'Barlow Condensed';font-weight:700;font-size:1.15rem}
+  /* hero */
+  .hero{background:linear-gradient(180deg,var(--soil2),var(--soil));color:var(--cream);padding:80px 0 68px;position:relative}
+  .hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:26px;background:
+    repeating-linear-gradient(135deg,var(--org) 0 22px,#20180f 22px 44px);opacity:.9}
+  .eyebrow{color:var(--org2);font-family:'Barlow Condensed';font-weight:600;letter-spacing:3px;font-size:.85rem}
+  .hero h1{font-size:clamp(2.2rem,5.4vw,4rem);margin:12px 0 18px;max-width:14ch}
+  .hero h1 em{color:var(--org);font-style:normal}
+  .hero p{font-size:1.18rem;color:#e7ddce;max-width:600px}
+  .cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{font-family:'Barlow Condensed';font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:1.05rem;padding:14px 26px;border-radius:5px;text-decoration:none;display:inline-block}
+  .btn-o{background:var(--org);color:#2a1a08}
+  .btn-l{border:2px solid #6a584349;color:var(--cream)}
+  section{padding:66px 0}
+  .kicker{color:var(--clay);font-family:'Barlow Condensed';font-weight:600;letter-spacing:3px;font-size:.82rem}
+  h2.sec{font-size:clamp(1.7rem,3.8vw,2.6rem);margin:8px 0 8px;color:var(--soil)}
+  .sub{color:var(--mut);max-width:620px;margin-bottom:28px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+  .svc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px 22px;border-top:4px solid var(--org)}
+  .svc h3{font-size:1.25rem;color:var(--soil);margin-bottom:8px}
+  .svc p{color:var(--mut);font-size:.97rem}
+  /* permit band */
+  .permit{background:var(--grn);color:#eef5eb}
+  .permit .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:center}
+  .permit h2{font-size:clamp(1.6rem,3.6vw,2.4rem);color:#fff;margin-bottom:12px}
+  .permit p{color:#dce9d7;font-size:1.05rem}
+  .permit .stat{background:#35502f;border:1px solid #4c6b44;border-radius:10px;padding:22px}
+  .permit .stat b{font-family:'Barlow Condensed';font-size:2.1rem;color:#fff;display:block;line-height:1}
+  /* area */
+  .area{background:#fff;border:1px solid var(--line);border-radius:12px;padding:30px}
+  .towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+  .towns span{background:var(--cream);border:1px solid var(--line);padding:8px 14px;border-radius:40px;font-weight:600;color:var(--soil);font-size:.92rem}
+  .note{background:#fbf3e8;border-left:4px solid var(--org);padding:14px 18px;border-radius:0 8px 8px 0;color:#6a5233;margin-top:22px;font-size:.96rem}
+  /* contact */
+  .contact{background:var(--soil);color:var(--cream)}
+  .cbox{text-align:center;max-width:640px;margin:0 auto}
+  .cbox h2{font-size:clamp(1.8rem,4.4vw,2.7rem);color:#fff}
+  .cbox .num{font-family:'Barlow Condensed';font-size:clamp(2rem,7vw,3.3rem);color:var(--org2);margin:12px 0;letter-spacing:1px}
+  .cbox p{color:#e7ddce}
+  footer{padding:28px 0;text-align:center;color:var(--mut);font-size:.85rem}
+  .ph{color:#a08c74;font-style:italic;font-size:.82rem}
+  @media(max-width:760px){.permit .wrap{grid-template-columns:1fr}.top a.call{display:none}}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <div class="brand">SHAW <b>EXCAVATION</b></div>
+  <div style="display:flex;gap:14px;align-items:center">
+    <span class="badge">Cayuga County Registered Septic Installer</span>
+    <a class="call" href="tel:+13155159666">(315) 515-9666</a>
+  </div>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">GENOA · KING FERRY · CAYUGA LAKE EAST SHORE</div>
+  <h1>Septic systems and site work, done <em>the way the county wants it.</em></h1>
+  <p>From the perc test to the finished driveway — septic installs, ponds, drainage, clearing and site prep on the east shore of Cayuga Lake and the farms around Genoa and King Ferry.</p>
+  <div class="cta">
+    <a class="btn btn-o" href="#quote">Request a site quote</a>
+    <a class="btn btn-l" href="tel:+13155159666">(315) 515-9666</a>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <div class="kicker">WHAT WE DIG</div>
+  <h2 class="sec">Earthwork for lake lots and working land</h2>
+  <p class="sub">A single crew that owns the machines — so the septic, the drive and the grading are one job, one number, one schedule.</p>
+  <div class="grid">
+    <div class="svc"><h3>Septic Systems</h3><p>New installs and replacements — tanks, leach fields and repairs — designed and set to Cayuga County code.</p></div>
+    <div class="svc"><h3>Site Preparation</h3><p>Clearing, stripping, rough and finish grading for new builds, additions, barns and pole buildings.</p></div>
+    <div class="svc"><h3>Ponds & Drainage</h3><p>Farm and recreation ponds, ditching, culverts and drainage to move water off the field and away from the house.</p></div>
+    <div class="svc"><h3>Driveways</h3><p>New gravel drives and lane repairs built up right so they hold through a Finger Lakes winter.</p></div>
+    <div class="svc"><h3>Land Clearing</h3><p>Brush, stumps and small-tract clearing to open up lots and lake frontage.</p></div>
+    <div class="svc"><h3>Demolition & Removal</h3><p>Tear-down of old outbuildings and hauling of spoils and debris off the site.</p></div>
+  </div>
+</div></section>
+
+<section class="permit"><div class="wrap">
+  <div>
+    <div class="kicker" style="color:#bcd6b4">THE PART MOST HOMEOWNERS DREAD</div>
+    <h2>We handle the county septic paperwork</h2>
+    <p>Shaw Excavation is on the Cayuga County registered contractors list for septic system installation. That means the perc test, the design, the permit and the inspection get coordinated for you — not left on your kitchen table.</p>
+  </div>
+  <div class="stat">
+    <b>Registered</b>
+    <span style="color:#dce9d7">Cayuga County septic system installer — verified on the county's registered contractors list.</span>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="area">
+    <div class="kicker">WHERE WE WORK</div>
+    <h2 class="sec" style="margin-bottom:6px">The east shore and the farm belt</h2>
+    <p class="sub" style="margin-bottom:6px">Based in Genoa, working the towns along Route 34B and Route 90 down the east side of Cayuga Lake.</p>
+    <div class="towns">
+      <span>Genoa</span><span>King Ferry</span><span>Ledyard</span><span>Aurora</span><span>Scipio</span><span>Venice</span><span>Poplar Ridge</span><span>Union Springs</span>
+    </div>
+    <div class="note">Searching "Shaw Excavation" online right now can send you to an unrelated company in Maine. This is the Cayuga County crew — (315) 515-9666, shawexcavation06@gmail.com. <span class="ph">A dedicated domain on the live site fixes the search confusion for good.</span></div>
+  </div>
+</div></section>
+
+<section class="contact" id="quote"><div class="wrap">
+  <div class="cbox">
+    <div class="kicker" style="color:#bcd6b4">START A JOB</div>
+    <h2>Get your site work quoted</h2>
+    <div class="num">(315) 515-9666</div>
+    <p>Call or send the address and what you need — new septic, a drive, a pond, or full site prep — and we'll come look. A quote form with parcel address and photo upload lives here on the finished site.</p>
+    <p style="margin-top:10px;color:#cdbfab">Genoa, NY · Cayuga County<br><span class="ph">Yard address (Myers Rd, Genoa vs Rt 34B, King Ferry) to confirm before publish.</span></p>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  Shaw Excavation · Genoa, NY · (315) 515-9666 · shawexcavation06@gmail.com<br>
+  <span class="ph">Preview concept prepared by Onyx Rise Media — not the business's live website.</span>
+</div></footer>
+
+</body>
+</html>

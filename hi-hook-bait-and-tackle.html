@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hi-Hook Bait &amp; Tackle — Live Bait &amp; the Morning Bite on Huntington Harbor</title>
+<style>
+  :root{
+    --night:#0b1f1a; --deep:#123a2f; --moss:#1c5343; --chalk:#f2efe4;
+    --amber:#f2a71b; --amber-d:#c9850c; --sand:#e7dcc4; --line:#28564a; --ink:#07140f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--night);color:var(--chalk);line-height:1.6}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  a{color:inherit;text-decoration:none}
+
+  header{position:sticky;top:0;z-index:20;background:rgba(7,20,15,.95);border-bottom:1px solid var(--line)}
+  .nav{max-width:1040px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:11px 20px}
+  .brand{font-weight:900;font-size:1.08rem;letter-spacing:.5px}
+  .brand span{color:var(--amber)}
+  .links{display:none;gap:20px;font-size:.9rem}
+  @media(min-width:740px){.links{display:flex}}
+  .nav a.cta{background:var(--amber);color:#20160a;padding:8px 15px;border-radius:4px;font-weight:800;font-size:.88rem}
+
+  .hero{padding:16px 0 0}
+  .openbar{background:var(--amber);color:#20160a;font-weight:800;text-align:center;padding:9px;font-size:.98rem;letter-spacing:.3px}
+  .herobox{padding:66px 0 54px;background:linear-gradient(180deg,rgba(11,31,26,.35),rgba(11,31,26,.94)),radial-gradient(circle at 20% 10%,var(--moss),var(--night) 70%)}
+  .herobox .kick{color:var(--amber);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:.76rem}
+  .herobox h1{font-size:2.6rem;line-height:1.1;color:#fff;margin:12px 0 12px;max-width:15ch}
+  @media(min-width:740px){.herobox h1{font-size:3.4rem}}
+  .herobox p{font-size:1.15rem;max-width:52ch;color:#dbe7df}
+  .cta-row{margin-top:26px;display:flex;flex-wrap:wrap;gap:13px}
+  .btn{padding:14px 24px;border-radius:6px;font-weight:800;font-size:1rem}
+  .btn.p{background:var(--amber);color:#20160a}
+  .btn.g{border:1.5px solid var(--line)}
+  .stars{margin-top:18px;color:var(--sand);font-size:.92rem}
+  .stars b{color:var(--amber)}
+
+  /* what's biting board */
+  .board{background:var(--ink);border-top:3px solid var(--amber)}
+  .board .wrap{padding:34px 20px}
+  .board h2{color:var(--amber);font-size:1.05rem;letter-spacing:2px;text-transform:uppercase}
+  .bite{display:grid;gap:12px;grid-template-columns:1fr;margin-top:16px}
+  @media(min-width:640px){.bite{grid-template-columns:repeat(3,1fr)}}
+  .bite div{background:var(--deep);border:1px solid var(--line);border-radius:8px;padding:16px}
+  .bite b{color:#fff;display:block;font-size:1.05rem}
+  .bite span{color:#a9c3b8;font-size:.9rem}
+  .board .ph{font-size:.8rem;color:#6f9184;margin-top:14px;font-style:italic}
+
+  section{padding:56px 0}
+  h2.sec{font-size:1.85rem;color:#fff;margin-bottom:8px}
+  .lead{color:#a9c3b8;max-width:58ch;margin-bottom:28px}
+
+  .stock{display:grid;gap:16px;grid-template-columns:1fr}
+  @media(min-width:720px){.stock{grid-template-columns:repeat(3,1fr)}}
+  .stock .c{background:var(--deep);border:1px solid var(--line);border-radius:10px;padding:22px}
+  .stock h3{color:var(--amber);font-size:1.1rem;margin-bottom:6px}
+  .stock p{color:#cfe0d8;font-size:.95rem}
+
+  .hours{background:var(--moss)}
+  .htable{max-width:460px;margin-top:18px;background:var(--ink);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .htable div{display:flex;justify-content:space-between;padding:11px 18px;border-bottom:1px solid var(--line);font-size:.98rem}
+  .htable div:last-child{border-bottom:0}
+  .htable b{color:var(--amber)}
+  .htable .today{background:var(--deep)}
+
+  .cta-final{background:var(--ink);text-align:center}
+  .cta-final .callbtn{display:inline-block;background:var(--amber);color:#20160a;padding:16px 34px;border-radius:8px;font-weight:900;font-size:1.2rem;margin-top:14px}
+  .cta-final .addr{margin-top:16px;color:#a9c3b8}
+
+  footer{background:#061009;text-align:center;padding:24px;color:#5f7d72;font-size:.84rem;border-top:1px solid var(--line)}
+  .ph{border:1px dashed var(--line);color:#7fa093;padding:1px 6px;border-radius:3px;font-size:.8em}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="brand">Hi-Hook <span>Bait &amp; Tackle</span></div>
+    <nav class="links">
+      <a href="#biting">What's Biting</a>
+      <a href="#stock">Bait &amp; Tackle</a>
+      <a href="#hours">Hours</a>
+      <a href="#find">Find Us</a>
+    </nav>
+    <a class="cta" href="tel:6316834741">Call for bait</a>
+  </div>
+</header>
+
+<div class="openbar">Open at 6 AM — live bait, rigged and ready before you launch</div>
+
+<section class="hero">
+  <div class="herobox">
+    <div class="wrap">
+      <div class="kick">Head of Huntington Harbor · 33 New York Ave</div>
+      <h1>Live bait and the real report, before you head out.</h1>
+      <p>The tackle shop at the foot of the harbor. We stock the bait that's working right now, rig you for what's running in the Sound, and tell you straight what's biting — saltwater and fresh.</p>
+      <div class="cta-row">
+        <a class="btn p" href="tel:6316834741">Call — is the live bait in?</a>
+        <a class="btn g" href="#stock">See what we carry</a>
+      </div>
+      <div class="stars"><b>★ 4.4</b> · 57 Google reviews · "knowledgeable, they'll set you up right"</div>
+    </div>
+  </div>
+</section>
+
+<div class="board" id="biting">
+  <div class="wrap">
+    <h2>What's biting</h2>
+    <div class="bite">
+      <div><b>Fluke</b><span>Sound flats &amp; the harbor mouth — bucktails + spearing/squid</span></div>
+      <div><b>Porgy &amp; sea bass</b><span>Structure off the harbor — clams &amp; sandworms</span></div>
+      <div><b>Striped bass</b><span>Early &amp; late tide — bunker, eels, plugs</span></div>
+    </div>
+    <p class="ph">Live "what's biting" board — updated by the counter each morning on the live site. (Species shown are examples for the layout.)</p>
+  </div>
+</div>
+
+<section id="stock">
+  <div class="wrap">
+    <h2 class="sec">Bait &amp; tackle, on hand</h2>
+    <p class="lead">Everything for a morning on Huntington Harbor and the Sound — no drive to a big-box store, no guessing what the fish want.</p>
+    <div class="stock">
+      <div class="c"><h3>Live &amp; fresh bait</h3><p>Bunker, spearing, sandworms, bloodworms, clams, squid, eels — call ahead and we'll hold it for you.</p></div>
+      <div class="c"><h3>Terminal tackle</h3><p>Hooks, sinkers, leader, rigs, bucktails and the go-to lures for what's running that week.</p></div>
+      <div class="c"><h3>Rods, reels &amp; line</h3><p>Setups for the boat, the surf and the kids' first trip — plus re-spooling and quick advice at the counter.</p></div>
+      <div class="c"><h3>NYS licenses &amp; the local know-how</h3><p>Get squared away before you launch, and get pointed to where they're actually hitting today.</p></div>
+      <div class="c"><h3>Saltwater &amp; freshwater</h3><p>Rigged for Sound fishing out front — and stocked for the ponds and lakes inland too.</p></div>
+      <div class="c"><h3>Open before the boats</h3><p>Doors open at 6 AM seven days so you can grab bait and still make the tide.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="hours" id="hours">
+  <div class="wrap">
+    <h2 class="sec">Hours</h2>
+    <p class="lead">Early every day. Call the shop to confirm live-bait stock before you drive down.</p>
+    <div class="htable">
+      <div><span>Monday</span><b>6:00 AM – 6:00 PM</b></div>
+      <div><span>Tuesday</span><b>6:00 AM – 6:00 PM</b></div>
+      <div><span>Wednesday</span><b>6:00 AM – 6:00 PM</b></div>
+      <div><span>Thursday</span><b>6:00 AM – 6:00 PM</b></div>
+      <div><span>Friday</span><b>6:00 AM – 5:30 PM</b></div>
+      <div><span>Saturday</span><b>6:00 AM – 6:00 PM</b></div>
+      <div><span>Sunday</span><b>6:00 AM – 5:00 PM</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final" id="find">
+  <div class="wrap">
+    <h2 class="sec">Find us at the harbor</h2>
+    <p class="lead" style="margin:0 auto">Route 110 down toward the Town Dock — 33 New York Ave, Huntington. Free-and-easy, right where the boats go out.</p>
+    <a class="callbtn" href="tel:6316834741">(631) 683-4741</a>
+    <div class="addr">33 New York Ave, Huntington, NY 11743 · at the head of Huntington Harbor</div>
+    <p class="ph" style="margin-top:16px">Preview site prepared for Hi-Hook Bait &amp; Tackle. Bait list &amp; daily report to be confirmed with the owner before launch.</p>
+  </div>
+</section>
+
+<footer>
+  Hi-Hook Bait &amp; Tackle · 33 New York Ave, Huntington, NY 11743 · Live bait &amp; tackle at the head of Huntington Harbor
+</footer>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weeks Trucking &amp; Excavating — Gasport NY | Driveways, Drainage, Site Work &amp; Stone Delivered</title>
+<meta name="description" content="Owner-operated excavating and trucking in Gasport, NY since 1985. Driveways, drainage, foundations, land clearing and site prep — plus stone, gravel, topsoil and fill delivered. Send your job for an estimate.">
+<style>
+  :root{
+    --iron:#23262a; --iron2:#31363c; --graphite:#3d444c; --amber:#f4a723; --amber-d:#cf8710;
+    --gravel:#8a8f95; --paper:#f4f5f4; --card:#ffffff; --ink:#22262a; --safety:#f4c430;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.62}
+  h1,h2,h3{font-family:"Arial Black","Segoe UI",Impact,sans-serif;line-height:1.08;letter-spacing:-.01em}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .btn{display:inline-block;background:var(--amber);color:#241701;font-weight:800;text-decoration:none;
+    padding:15px 28px;border-radius:4px;border:2px solid var(--amber-d);text-transform:uppercase;letter-spacing:.03em;font-size:.95rem}
+  .btn:hover{background:#ffb52e}
+  .btn.ghost{background:transparent;color:#fff;border-color:#6a727b}
+  .banner{background:#000;color:#e6e8e6;text-align:center;font-weight:600;font-size:.93rem;padding:9px 12px}
+  .banner b{color:var(--amber)}
+  /* hazard tape accent */
+  .tape{height:12px;background:repeating-linear-gradient(45deg,var(--safety) 0 22px,#1c1e21 22px 44px)}
+  /* nav */
+  nav{background:var(--iron);color:#e3e6e3}
+  nav .wrap{display:flex;flex-wrap:wrap;gap:6px 20px;align-items:center;justify-content:space-between;padding:14px 22px}
+  nav .brand{font-family:"Arial Black",sans-serif;font-size:1.28rem;color:#fff;text-transform:uppercase}
+  nav .brand small{display:block;font-size:.62rem;letter-spacing:.2em;color:var(--amber);font-family:"Segoe UI",sans-serif;font-weight:400}
+  nav .links a{margin-left:16px;font-size:.9rem;text-decoration:none;color:#c3c8c3;font-weight:600}
+  nav .links a:hover{color:#fff}
+  /* hero */
+  header.hero{position:relative;color:#f0f2f0;
+    background:
+      linear-gradient(180deg,rgba(20,22,25,.8),rgba(20,22,25,.92)),
+      repeating-linear-gradient(115deg,#2b2f34 0 40px,#25292e 40px 80px);
+    padding:72px 0 62px}
+  header.hero .wrap{max-width:820px}
+  .est{display:inline-block;background:rgba(244,167,35,.15);border:1px solid var(--amber);border-radius:4px;
+    padding:6px 14px;font-size:.82rem;letter-spacing:.06em;color:#fbd28a;margin-bottom:16px;font-weight:600}
+  .hero h1{font-size:2.9rem;margin:0 0 14px;color:#fff}
+  .hero p{font-size:1.18rem;max-width:640px;color:#d3d8d3}
+  .hero .cta{margin-top:26px;display:flex;flex-wrap:wrap;gap:14px}
+  /* strip */
+  .strip{background:var(--iron2);color:#e3e6e3;border-top:3px solid var(--amber)}
+  .strip .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;padding:20px 22px}
+  .strip .it{text-align:center;padding:6px}
+  .strip .it b{display:block;font-size:1.05rem;color:#fff;font-family:"Arial Black",sans-serif}
+  .strip .it span{font-size:.82rem;color:#b0b6b0}
+  /* sections */
+  section{padding:56px 0}
+  section.alt{background:#e9ebe9}
+  .eyebrow{color:var(--amber-d);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.76rem}
+  h2{font-size:2rem;margin:8px 0 8px;color:var(--iron);text-transform:uppercase}
+  .sub{color:#4a4f52;max-width:660px;margin-bottom:26px;font-size:1.02rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid #d6dad6;border-top:4px solid var(--amber);border-radius:5px;padding:22px;box-shadow:0 2px 8px rgba(35,38,42,.05)}
+  .card .ic{font-size:1.5rem;margin-bottom:8px}
+  .card h3{font-size:1.1rem;color:var(--graphite);margin-bottom:5px;text-transform:none}
+  .card p{font-size:.94rem;color:#4a4f52}
+  /* materials */
+  .mats{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+  .mats span{background:#fff;border:1px solid #ccd0cc;border-radius:4px;padding:10px 16px;font-size:.94rem;font-weight:700;color:var(--iron)}
+  /* how / est */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+  .steps{list-style:none;counter-reset:s}
+  .steps li{counter-increment:s;position:relative;padding:12px 0 12px 48px;border-bottom:1px solid #d6dad6}
+  .steps li:before{content:counter(s);position:absolute;left:0;top:10px;width:32px;height:32px;background:var(--iron);color:var(--amber);
+    border-radius:4px;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:"Arial Black",sans-serif}
+  .steps li b{display:block;color:var(--iron)}
+  .steps li span{font-size:.94rem;color:#4a4f52}
+  /* contact */
+  .contact{background:var(--iron);color:#e3e6e3;border-radius:10px;padding:34px}
+  .contact h3{color:#fff;font-size:1.7rem;text-transform:none}
+  .contact form{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .contact input,.contact select,.contact textarea{width:100%;padding:12px;border-radius:4px;border:1px solid #4a5057;background:#fafbfa;font-size:.98rem;font-family:inherit}
+  .contact .full{grid-column:1/-1}
+  .contact button{background:var(--amber);color:#241701;font-weight:800;border:none;border-radius:4px;padding:14px;cursor:pointer;font-size:1rem;grid-column:1/-1;text-transform:uppercase}
+  .contact .note{font-size:.8rem;color:#9aa09a;grid-column:1/-1}
+  /* footer */
+  footer{background:#17191c;color:#c4c9c4;padding:44px 0 26px}
+  footer h4{color:#fff;margin-bottom:8px}
+  footer a{color:var(--amber)}
+  .fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:26px}
+  .fine{border-top:1px solid #2a2d31;margin-top:26px;padding-top:16px;font-size:.8rem;color:#868c86}
+  @media(max-width:760px){.split{grid-template-columns:1fr}.contact form{grid-template-columns:1fr}.hero h1{font-size:2.1rem}nav .links{display:none}}
+</style>
+</head>
+<body>
+
+<div class="banner">📍 Gasport, NY · serving the Route 31 canal corridor &nbsp;·&nbsp; <b>Owner-operated since 1985 · BBB A+</b></div>
+<div class="tape"></div>
+
+<nav><div class="wrap">
+  <div class="brand">Weeks Trucking &amp; Excavating<small>GASPORT · NEW YORK · SINCE 1985</small></div>
+  <div class="links">
+    <a href="#services">Site Work</a>
+    <a href="#materials">Materials</a>
+    <a href="#how">Get an Estimate</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="est">Dennis Weeks · owner-operated · USDOT 1140512</span>
+  <h1>Driveways, drainage and dirt work — and the trucks to haul it.</h1>
+  <p>A Gasport excavating outfit that's been moving ground in eastern Niagara since 1985. Foundation cuts, driveways, drainage and clearing — plus stone, gravel and fill delivered to the job. Send us the details and we'll get you an estimate.</p>
+  <div class="cta">
+    <a class="btn" href="#contact">Request an estimate</a>
+    <a class="btn ghost" href="tel:7167727767">Call (716) 772-7767</a>
+  </div>
+</div></header>
+
+<div class="strip"><div class="wrap">
+  <div class="it"><b>Since 1985</b><span>40 years local</span></div>
+  <div class="it"><b>BBB A+</b><span>accredited since 2005*</span></div>
+  <div class="it"><b>Excavate + haul</b><span>one outfit, both</span></div>
+  <div class="it"><b>Owner on the job</b><span>Dennis Weeks</span></div>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <span class="eyebrow">Site work</span>
+  <h2>Ground moved right the first time</h2>
+  <p class="sub">Residential and small commercial excavation across Gasport, Middleport, Lockport and Hartland. Real machines, a 40-year track record, and an owner who's on the site — not a subcontracted crew you'll never see again.</p>
+  <div class="grid">
+    <div class="card"><div class="ic">🛣️</div><h3>Driveways</h3><p>New stone driveways, regrades and resurfacing — cut, shaped and topped so water runs off instead of pooling in your ruts every spring.</p></div>
+    <div class="card"><div class="ic">💧</div><h3>Drainage &amp; grading</h3><p>Wet yard, a basement that takes water, a low spot that won't drain — regrading, swales and drain lines to move water away from where you don't want it.</p></div>
+    <div class="card"><div class="ic">🏗️</div><h3>Foundations &amp; digs</h3><p>Basement and foundation excavation, footings, trenching and backfill for new builds, additions and outbuildings.</p></div>
+    <div class="card"><div class="ic">🌲</div><h3>Clearing &amp; site prep</h3><p>Lot and brush clearing, stump and debris removal, and rough grading to get a site ready to build or farm.</p></div>
+  </div>
+</div></section>
+
+<section class="alt" id="materials"><div class="wrap">
+  <span class="eyebrow">Delivered by the truckload</span>
+  <h2>Stone, gravel &amp; fill — brought to you</h2>
+  <p class="sub">The trucking half of the business: need a load of driveway stone, gravel, topsoil or fill dropped at the house or the job? We haul it. Tell us the material and roughly how much, and we'll price the load delivered.</p>
+  <div class="mats">
+    <span>Driveway stone</span>
+    <span>Crusher run / gravel</span>
+    <span>Topsoil</span>
+    <span>Fill dirt</span>
+    <span>Sand</span>
+    <span>Debris hauled out</span>
+  </div>
+</div></section>
+
+<section id="how"><div class="wrap">
+  <div class="split">
+    <div>
+      <span class="eyebrow">How an estimate works</span>
+      <h2>Simple, no pressure</h2>
+      <p class="sub">You shouldn't have to cold-call a number off a trucking database to find out if we can help. Here's how it goes:</p>
+      <ol class="steps">
+        <li><b>Tell us the job</b><span>Driveway, drainage, a foundation, or a load of stone delivered — and your town.</span></li>
+        <li><b>Send a photo or two</b><span>A quick picture of the spot tells us more than a paragraph. Text it or attach it below.</span></li>
+        <li><b>Get a real number</b><span>We look it over, and you get an honest estimate — not a runaround.</span></li>
+      </ol>
+    </div>
+    <div class="contact" id="contact">
+      <h3>Request an estimate</h3>
+      <form onsubmit="return false;">
+        <input type="text" placeholder="Your name">
+        <input type="tel" placeholder="Phone">
+        <input class="full" type="text" placeholder="Town (Gasport, Middleport, Lockport...)">
+        <select class="full"><option>What do you need?</option><option>Driveway</option><option>Drainage / grading</option><option>Foundation / excavation</option><option>Clearing / site prep</option><option>Stone / gravel / fill delivered</option><option>Something else</option></select>
+        <textarea class="full" rows="3" placeholder="Describe the job — and mention if you can text a photo"></textarea>
+        <button>Get my estimate</button>
+        <p class="note">Demo form for preview purposes. On the live site this reaches Weeks Trucking &amp; Excavating directly.</p>
+      </form>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div>
+      <h4>Weeks Trucking &amp; Excavating</h4>
+      <p>Owner-operated excavating and trucking in Gasport, NY since 1985. Driveways, drainage, site work — and materials delivered.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>3170 Hosmer Road<br>Gasport, NY 14067<br><a href="tel:7167727767">(716) 772-7767</a></p>
+    </div>
+    <div>
+      <h4>Good to know</h4>
+      <p>BBB A+ · accredited since 2005*<br>USDOT 1140512<br>Serving eastern Niagara County</p>
+    </div>
+  </div>
+  <div class="fine">© Weeks Trucking &amp; Excavating · Gasport, NY. Preview concept prepared by Onyx Rise Media. Service area, materials, accreditation dates and pricing marked * to be confirmed with the owner before publishing.</div>
+</div></footer>
+
+</body>
+</html>

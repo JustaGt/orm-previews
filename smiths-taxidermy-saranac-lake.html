@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smith's Taxidermy — Saranac Lake, NY | Deer, Fish & Bird Mounts Since 1990</title>
+<meta name="description" content="Smith's Taxidermy in Saranac Lake, NY has mounted whitetail deer, fish, birds and Adirondack game since 1990. Field-care steps before you bring your trophy in, plus drop-off and contact info. Call (518) 891-6289.">
+<style>
+  :root{
+    --forest:#25382a; --forest-d:#1a271e; --moss:#4f6f4a; --sage:#8aa07f;
+    --bone:#efe9dc; --bark:#5a4632; --amber:#c8842b; --amber-d:#a86a1e;
+    --ink:#221c14; --muted:#6d6152; --cream:#f7f3ea; --white:#fffdf8; --line:#ddd3bf;
+    --font:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font);color:var(--ink);background:var(--cream);line-height:1.65}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1050px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{font-weight:800;letter-spacing:-.01em}
+  header{position:sticky;top:0;z-index:40;background:var(--forest);border-bottom:3px solid var(--amber)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:800}
+  .brand .mk{width:42px;height:42px;background:var(--amber);color:var(--forest-d);border-radius:8px;display:grid;place-items:center;font-weight:900;font-size:18px}
+  .brand small{display:block;font-size:9.5px;color:var(--sage);letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+  nav a{color:#d9e0d2;font-size:14px;margin-left:22px}
+  nav a:hover{color:#fff}
+  .callbtn{background:var(--amber);color:var(--forest-d);padding:10px 17px;border-radius:7px;font-weight:800;font-size:13.5px;margin-left:22px}
+  @media(max-width:820px){nav .lk{display:none}}
+  .hero{background:linear-gradient(150deg,var(--forest) 0%,var(--forest-d) 100%);color:#fff;padding:78px 0 66px;position:relative}
+  .tag{display:inline-block;background:rgba(200,132,43,.18);color:var(--amber);border:1px solid var(--amber);font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:6px 13px;border-radius:20px;margin-bottom:20px}
+  .hero h1{font-size:clamp(2rem,5vw,3.15rem);line-height:1.12;max-width:20ch}
+  .hero h1 span{color:var(--amber)}
+  .hero p{margin-top:18px;color:#d7ddce;font-size:clamp(1.02rem,2vw,1.2rem);max-width:56ch}
+  .hbtns{margin-top:30px;display:flex;gap:13px;flex-wrap:wrap}
+  .btn{padding:14px 24px;border-radius:8px;font-weight:800;font-size:15px;display:inline-flex;gap:8px;align-items:center}
+  .btn.p{background:var(--amber);color:var(--forest-d)}.btn.p:hover{background:var(--amber-d)}
+  .btn.g{background:transparent;border:1px solid var(--sage);color:#fff}.btn.g:hover{border-color:#fff}
+  .quick{margin-top:30px;display:flex;flex-wrap:wrap;gap:24px;font-size:14px;color:#cfd6c6}
+  .quick b{color:var(--amber)}
+  section{padding:60px 0}
+  .kick{color:var(--moss);font-size:12px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
+  h2{font-size:clamp(1.6rem,3.4vw,2.15rem);margin-top:8px;color:var(--forest)}
+  .lead{color:var(--muted);max-width:62ch;margin-top:12px;font-size:1.04rem}
+  .grid3{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:34px}
+  @media(max-width:820px){.grid3{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.grid3{grid-template-columns:1fr}}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:22px;transition:transform .15s}
+  .card:hover{transform:translateY(-3px);border-color:var(--moss)}
+  .card .ic{width:44px;height:44px;background:var(--bone);border-radius:9px;display:grid;place-items:center;font-size:22px;margin-bottom:12px}
+  .card h3{font-size:1.06rem;color:var(--forest)}
+  .card p{color:var(--muted);font-size:.94rem;margin-top:6px}
+  .care{background:var(--forest);color:#fff}
+  .care h2{color:#fff}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px;counter-reset:s}
+  @media(max-width:720px){.steps{grid-template-columns:1fr}}
+  .step{background:var(--forest-d);border:1px solid #35513a;border-radius:12px;padding:24px 22px;position:relative}
+  .step:before{counter-increment:s;content:counter(s);position:absolute;top:-14px;left:22px;width:32px;height:32px;background:var(--amber);color:var(--forest-d);border-radius:50%;display:grid;place-items:center;font-weight:900}
+  .step h3{color:var(--amber);font-size:1.05rem;margin-top:6px}
+  .step p{color:#cdd4c4;font-size:.95rem;margin-top:7px}
+  .split{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+  @media(max-width:820px){.split{grid-template-columns:1fr}}
+  .factbox{background:var(--bone);border-left:5px solid var(--amber);border-radius:10px;padding:26px}
+  .factbox .n{font-size:2.5rem;font-weight:900;color:var(--forest);line-height:1}
+  .factbox p{color:var(--bark);margin-top:6px}
+  .contact{background:var(--bone)}
+  .cbox{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  @media(max-width:720px){.cbox{grid-template-columns:1fr}}
+  .cbox h3{color:var(--forest);font-size:1.25rem}
+  .cbox .row{margin-top:14px;font-size:15px;color:var(--ink)}
+  .cbox .row b{color:var(--moss);display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+  .cta{background:var(--amber);color:var(--forest-d);padding:15px 22px;border-radius:9px;font-weight:800;text-align:center;display:block;margin-top:8px}
+  footer{background:var(--forest-d);color:#aeb8a4;padding:30px 0;font-size:13px}
+  .note{background:#fbf5e8;border:1px dashed var(--amber);color:#7a5a1e;font-size:12px;padding:8px 12px;border-radius:7px;margin-top:18px;display:inline-block}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <div class="brand"><div class="mk">S</div><div>Smith's Taxidermy<small>Saranac Lake · Since 1990</small></div></div>
+    <nav>
+      <a class="lk" href="#mount">What We Mount</a>
+      <a class="lk" href="#care">Before You Bring It In</a>
+      <a class="lk" href="#about">About</a>
+      <a class="callbtn" href="tel:15188916289">(518) 891-6289</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">Saranac Lake Wildlife Studio</span>
+    <h1>The buck of a lifetime deserves a <span>studio that's done it since 1990.</span></h1>
+    <p>Whitetail mounts, wall fish, birds and Adirondack game — handled with care in Saranac Lake. Get your trophy in cold and early, and it comes back the way you'll want to remember it.</p>
+    <div class="hbtns">
+      <a class="btn p" href="tel:15188916289">Call to bring it in</a>
+      <a class="btn g" href="#care">How to prep your trophy</a>
+    </div>
+    <div class="quick">
+      <span><b>35+</b> years in Saranac Lake</span>
+      <span><b>Deer · Fish · Birds · Game</b></span>
+      <span><b>108 Lake Flower Ave</b></span>
+    </div>
+  </div>
+</section>
+
+<section id="mount">
+  <div class="wrap">
+    <div class="kick">What we mount</div>
+    <h2>Work we take in through the season</h2>
+    <p class="lead">From opening-day whitetails to a wall fish caught on Lower Saranac, bring in what you're proud of. If you're not sure whether we handle your animal, call before you do anything else.</p>
+    <div class="grid3">
+      <div class="card"><div class="ic">🦌</div><h3>Whitetail & big game</h3><p>Shoulder mounts and full-body work — the classic Adirondack deer mount done right.</p></div>
+      <div class="card"><div class="ic">🐟</div><h3>Fish</h3><p>Trout, salmon, bass and other catches turned into a lasting wall mount.</p></div>
+      <div class="card"><div class="ic">🦆</div><h3>Birds & waterfowl</h3><p>Ducks, turkey and upland birds mounted in a natural pose.</p></div>
+      <div class="card"><div class="ic">🦊</div><h3>Small game</h3><p>Furbearers and small Adirondack game handled with the same care.</p></div>
+    </div>
+    <span class="note">Species handled shown as examples — call (518) 891-6289 to confirm your animal before drop-off.</span>
+  </div>
+</section>
+
+<section id="care" class="care">
+  <div class="wrap">
+    <div class="kick" style="color:var(--sage)">Before you bring it in</div>
+    <h2>Three things that protect your trophy</h2>
+    <p class="lead" style="color:#cdd4c4">What you do in the first hours matters more than anything we do later. A quick call before you cut is always worth it.</p>
+    <div class="steps">
+      <div class="step"><h3>Keep it cold</h3><p>Get the animal or fish cold as soon as you can and keep it that way. Heat is what ruins a mount before it ever reaches the studio.</p></div>
+      <div class="step"><h3>Don't cut the cape</h3><p>For a shoulder mount, leave plenty of hide — don't cut up the neck or brisket. If you're unsure, call first and we'll walk you through it.</p></div>
+      <div class="step"><h3>Bring it in soon</h3><p>The sooner it's in our hands, the better the result. Drop off in Saranac Lake or call and we'll tell you the best next step.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap split">
+    <div>
+      <div class="kick">About the studio</div>
+      <h2>Local hands on your trophy since 1990</h2>
+      <p class="lead">Smith's Taxidermy has worked out of Saranac Lake for over three decades — long enough that a lot of the deer and fish on walls around the Tri-Lakes came through this studio. When you drop something off here, it stays local, and you deal with the person doing the work.</p>
+      <p class="lead">A mount is one of the few things that outlasts the hunt. It's worth handing to someone who's been doing it since before most of today's hunters started.</p>
+    </div>
+    <div class="factbox">
+      <div class="n">1990</div>
+      <p>Mounting Adirondack deer, fish and game from the same Saranac Lake studio ever since.</p>
+      <p style="margin-top:16px;font-weight:700;color:var(--forest)">108 Lake Flower Ave<br>Saranac Lake, NY 12983</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="kick">Drop-off & contact</div>
+    <h2>Ready to bring one in?</h2>
+    <div class="cbox" style="margin-top:26px">
+      <div>
+        <h3>Smith's Taxidermy</h3>
+        <div class="row"><b>Studio</b>108 Lake Flower Ave, Saranac Lake, NY 12983</div>
+        <div class="row"><b>Phone</b>(518) 891-6289</div>
+        <div class="row"><b>Best time to call</b>Before you field-dress or freeze — a two-minute call saves the cape.</div>
+      </div>
+      <div>
+        <div class="row"><b>Bring in</b>Whitetail & big game · fish · birds & waterfowl · small game</div>
+        <a class="cta" href="tel:15188916289">Call (518) 891-6289</a>
+        <p style="font-size:13px;color:var(--muted);margin-top:14px">Fall books up fast — the earlier you get your animal in, the better it turns out.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Smith's Taxidermy · 108 Lake Flower Ave, Saranac Lake, NY 12983 · (518) 891-6289 · Serving Adirondack hunters and anglers since 1990.</div>
+</footer>
+</body>
+</html>

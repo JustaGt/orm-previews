@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Precision Metals &amp; Arms LLC — Custom Rifles &amp; Gunsmithing, Rome NY</title>
+<meta name="description" content="Veteran-owned gunsmith and custom rifle builder in Rome, NY. Chambering, threading, bedding, accurizing, repair, machining and fabrication by a former Remington Custom Shop gunsmith. By appointment.">
+<style>
+  :root{
+    --graphite:#15181c; --steel:#22272e; --steel2:#2c333c; --line:#39424d;
+    --brass:#c8952f; --brass-lt:#e3b45a; --ink:#eef1f4; --muted:#9aa6b2; --white:#fbfcfd;
+    --font:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font);color:var(--ink);background:var(--graphite);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  .mono{font-family:'Consolas','SF Mono',ui-monospace,monospace;letter-spacing:.04em}
+
+  /* top bar */
+  header{position:sticky;top:0;z-index:40;background:rgba(21,24,28,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.02em}
+  .brand .mark{width:34px;height:34px;border:2px solid var(--brass);border-radius:4px;display:grid;place-items:center;color:var(--brass-lt);font-weight:800;font-size:15px}
+  .brand small{display:block;font-size:11px;color:var(--muted);font-weight:500;letter-spacing:.14em;text-transform:uppercase}
+  nav a{color:var(--muted);font-size:14px;margin-left:26px;letter-spacing:.03em}
+  nav a:hover{color:var(--white)}
+  .callbtn{background:var(--brass);color:#1a1204;padding:10px 18px;border-radius:5px;font-weight:700;font-size:14px;margin-left:26px}
+  .callbtn:hover{background:var(--brass-lt)}
+  @media(max-width:760px){nav .lk{display:none}}
+
+  /* hero */
+  .hero{position:relative;padding:92px 0 78px;background:
+    radial-gradient(1200px 400px at 80% -10%,rgba(200,149,47,.14),transparent 60%),
+    linear-gradient(180deg,#181c21,#12151a);
+    border-bottom:1px solid var(--line);overflow:hidden}
+  .hero:before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.018) 0 1px,transparent 1px 46px);pointer-events:none}
+  .eyebrow{display:inline-block;color:var(--brass-lt);font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;border:1px solid var(--line);padding:6px 12px;border-radius:20px;margin-bottom:22px}
+  h1{font-size:clamp(2.1rem,5.2vw,3.5rem);line-height:1.08;font-weight:800;letter-spacing:-.01em;max-width:16ch}
+  h1 .hl{color:var(--brass-lt)}
+  .lede{margin-top:20px;font-size:1.14rem;color:#cdd6df;max-width:56ch}
+  .cta-row{margin-top:32px;display:flex;flex-wrap:wrap;gap:14px}
+  .btn{padding:14px 24px;border-radius:6px;font-weight:700;font-size:15px;display:inline-flex;align-items:center;gap:9px}
+  .btn-primary{background:var(--brass);color:#1a1204}
+  .btn-primary:hover{background:var(--brass-lt)}
+  .btn-ghost{border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--brass);color:var(--brass-lt)}
+  .hero-meta{margin-top:34px;display:flex;flex-wrap:wrap;gap:26px;color:var(--muted);font-size:13.5px}
+  .hero-meta b{color:var(--ink);font-weight:600}
+
+  section{padding:74px 0}
+  .kicker{color:var(--brass-lt);font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px}
+  h2{font-size:clamp(1.6rem,3.4vw,2.3rem);font-weight:800;letter-spacing:-.01em;line-height:1.14}
+  .sub{color:var(--muted);margin-top:12px;max-width:60ch}
+
+  /* services */
+  .services{background:var(--steel)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+  @media(max-width:880px){.grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--steel2);border:1px solid var(--line);border-radius:10px;padding:26px 22px;transition:transform .15s,border-color .15s}
+  .card:hover{transform:translateY(-3px);border-color:var(--brass)}
+  .card .n{font-family:'Consolas',monospace;color:var(--brass);font-size:13px;letter-spacing:.1em}
+  .card h3{font-size:1.16rem;margin:10px 0 8px;font-weight:700}
+  .card p{color:var(--muted);font-size:14.5px}
+
+  /* bench / about split */
+  .bench{display:grid;grid-template-columns:1.05fr 1fr;gap:46px;align-items:center}
+  @media(max-width:820px){.bench{grid-template-columns:1fr;gap:30px}}
+  .bench-visual{background:linear-gradient(160deg,#20252b,#171b20);border:1px solid var(--line);border-radius:14px;padding:34px;position:relative;min-height:280px;display:flex;flex-direction:column;justify-content:center}
+  .bench-visual .barrel{height:18px;border-radius:9px;background:linear-gradient(90deg,#3a424c,#565f6b,#3a424c);position:relative;margin:8px 0;box-shadow:inset 0 1px 2px rgba(255,255,255,.15)}
+  .bench-visual .barrel:after{content:"";position:absolute;right:6px;top:50%;transform:translateY(-50%);width:7px;height:7px;border-radius:50%;background:#0d1013;box-shadow:0 0 0 2px #2a3038}
+  .stat{border-left:2px solid var(--brass);padding-left:14px;margin:16px 0}
+  .stat b{display:block;font-size:1.7rem;color:var(--white);line-height:1}
+  .stat span{color:var(--muted);font-size:13px}
+  .creds{list-style:none;margin-top:20px}
+  .creds li{padding:9px 0;border-bottom:1px dashed var(--line);color:#cdd6df;font-size:15px;display:flex;gap:11px}
+  .creds li:before{content:"▪";color:var(--brass)}
+
+  /* process */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:38px;counter-reset:s}
+  @media(max-width:780px){.steps{grid-template-columns:1fr 1fr}}
+  .step{background:var(--steel2);border:1px solid var(--line);border-radius:10px;padding:22px}
+  .step .num{width:38px;height:38px;border-radius:8px;background:var(--graphite);border:1px solid var(--brass);color:var(--brass-lt);display:grid;place-items:center;font-weight:800;margin-bottom:14px}
+  .step h4{font-size:1.02rem;margin-bottom:6px}
+  .step p{color:var(--muted);font-size:13.6px}
+
+  /* inventory teaser */
+  .inv{background:var(--steel)}
+  .inv-row{display:flex;flex-wrap:wrap;gap:16px;margin-top:30px}
+  .tag{border:1px solid var(--line);border-radius:30px;padding:10px 18px;color:#cdd6df;font-size:14px}
+  .tag b{color:var(--brass-lt)}
+
+  /* contact */
+  .contact{background:linear-gradient(180deg,#12151a,#0f1216)}
+  .cbox{display:grid;grid-template-columns:1fr 1fr;gap:40px;background:var(--steel2);border:1px solid var(--line);border-radius:16px;padding:40px;margin-top:34px}
+  @media(max-width:760px){.cbox{grid-template-columns:1fr;gap:28px}}
+  .cinfo p{margin:12px 0;color:#cdd6df;font-size:15.5px}
+  .cinfo .lbl{color:var(--brass-lt);font-size:12px;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:2px}
+  .cinfo a{color:var(--white);font-weight:600}
+  .note{background:rgba(200,149,47,.08);border:1px solid rgba(200,149,47,.3);border-radius:8px;padding:14px 16px;color:#e6d4a8;font-size:13.5px;margin-top:16px}
+  .appt{display:flex;flex-direction:column;gap:12px}
+  .appt input,.appt textarea{background:var(--graphite);border:1px solid var(--line);border-radius:7px;padding:13px 14px;color:var(--ink);font-family:var(--font);font-size:15px}
+  .appt input:focus,.appt textarea:focus{outline:none;border-color:var(--brass)}
+  .appt button{background:var(--brass);color:#1a1204;border:none;padding:14px;border-radius:7px;font-weight:800;font-size:15px;cursor:pointer}
+  .appt button:hover{background:var(--brass-lt)}
+
+  footer{background:#0d1013;border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:13px}
+  .fbar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center}
+  .ph{color:var(--brass);font-weight:700}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <div class="brand">
+      <span class="mark">P&amp;A</span>
+      <div>Precision Metals &amp; Arms<small>Rome, New York · By Appointment</small></div>
+    </div>
+    <nav>
+      <a class="lk" href="#work">The Work</a>
+      <a class="lk" href="#bench">At the Bench</a>
+      <a class="lk" href="#process">Start a Build</a>
+      <a class="callbtn" href="tel:13157176173">(315) 717-6173</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">NYS-Licensed Gunsmith · Veteran-Owned</span>
+    <h1>Rifles built and repaired by a former <span class="hl">Remington Custom Shop</span> gunsmith.</h1>
+    <p class="lede">When the Ilion Custom Shop went quiet, the work didn't. Wade Wollaber builds precision rifles, re-barrels and accurizes older guns, and takes on the machining and fabrication most shops turn away — one bench, one set of hands, in Rome.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#process">Request an appointment →</a>
+      <a class="btn btn-ghost" href="#work">See what comes off the bench</a>
+    </div>
+    <div class="hero-meta">
+      <span><b>18 years</b> in the firearms trade</span>
+      <span><b>Custom rifles</b> · gunsmithing · machining</span>
+      <span><b>By appointment</b> · Mon–Sat</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="work">
+  <div class="wrap">
+    <div class="kicker">What comes into the shop</div>
+    <h2>Precision work, not a gun counter</h2>
+    <p class="sub">This is bench work measured in thousandths — the kind of job you want done once, correctly. Every ticket is handled by Wade start to finish.</p>
+    <div class="grid">
+      <div class="card"><div class="n">01</div><h3>Custom rifle builds</h3><p>Spec it with you barrel-up: action truing, chambering, threading, bedding and a finish that shoots to the target — not the brochure.</p></div>
+      <div class="card"><div class="n">02</div><h3>Gunsmithing &amp; repair</h3><p>Timing, headspace, worn or broken parts, feeding and extraction problems, and restoration on older and inherited firearms.</p></div>
+      <div class="card"><div class="n">03</div><h3>Barrel &amp; accuracy work</h3><p>Re-barrels, muzzle threading for a can or brake, crowning and load-workup guidance to tighten a group.</p></div>
+      <div class="card"><div class="n">04</div><h3>Machining &amp; tool making</h3><p>Lathe and mill work, one-off parts, jigs and fixtures — the same shop skills that built rifles at Remington.</p></div>
+      <div class="card"><div class="n">05</div><h3>Metal fabrication</h3><p>Welding and fabrication (A.A.S. Welding Technology) for the brackets, mounts and repairs a project actually needs.</p></div>
+      <div class="card"><div class="n">06</div><h3>3D printing</h3><p>Prototype parts, fixtures and hard-to-source components printed in-house before they're cut in steel.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BENCH / ABOUT -->
+<section id="bench">
+  <div class="wrap bench">
+    <div>
+      <div class="kicker">Who's behind the bench</div>
+      <h2>Wade Wollaber</h2>
+      <p class="sub">A U.S. Navy veteran who spent his career in the firearms industry — starting on the production floor at the Remington plant in Ilion and working up into the Remington Custom Shop as a custom gunsmith. When the plant closed, that Custom-Shop skill didn't leave the valley; it moved to his own bench in Rome.</p>
+      <ul class="creds">
+        <li>Former Remington Custom Shop gunsmith, Ilion NY</li>
+        <li>U.S. Navy veteran</li>
+        <li>Certifications in gunsmithing and machining</li>
+        <li>A.A.S. in Welding Technology · B.S. in Business Administration</li>
+        <li>New York State-licensed FFL gunsmith &amp; dealer</li>
+      </ul>
+    </div>
+    <div class="bench-visual" aria-hidden="true">
+      <div class="stat"><b>Custom Shop</b><span>trained on Remington's own precision line</span></div>
+      <div class="barrel"></div>
+      <div class="barrel" style="width:88%"></div>
+      <div class="barrel" style="width:76%"></div>
+      <div class="stat" style="margin-top:22px"><b>One craftsman</b><span>your rifle isn't handed down a line</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="services" id="process">
+  <div class="wrap">
+    <div class="kicker">How a build starts</div>
+    <h2>From "I've got an idea" to zeroed</h2>
+    <p class="sub">The shop is appointment-only, so every job gets real bench time instead of a waiting-room number.</p>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h4>Call or message</h4><p>Tell Wade the rifle, the goal, and your budget. He'll tell you straight what's worth doing.</p></div>
+      <div class="step"><div class="num">2</div><h4>Book the bench</h4><p>Set an appointment to drop off or spec the build in person — no drop-and-pray counter.</p></div>
+      <div class="step"><div class="num">3</div><h4>The work</h4><p>Chambering, threading, bedding, machining — done and checked to measured tolerances.</p></div>
+      <div class="step"><div class="num">4</div><h4>Hand-off</h4><p>Pick up a rifle that does what you paid for, with notes on loads and break-in.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- INVENTORY TEASER -->
+<section class="inv" id="inv">
+  <div class="wrap">
+    <div class="kicker">On the rack</div>
+    <h2>Custom rifles for sale</h2>
+    <p class="sub">Finished builds come available through the shop. Ask what's on the rack now, or start one to your own spec.</p>
+    <div class="inv-row">
+      <span class="tag"><b>Precision bolt-action</b> builds</span>
+      <span class="tag"><b>Threaded</b> for suppressor / brake</span>
+      <span class="tag"><b>Glass-bedded</b> &amp; trued actions</span>
+      <span class="tag"><b>Ask</b> for current availability</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="kicker">Book the bench</div>
+    <h2>Get on the schedule</h2>
+    <p class="sub">Rome, NY — the shop runs by appointment. Call, message, or send your build below and Wade will get back to you.</p>
+    <div class="cbox">
+      <div class="cinfo">
+        <p><span class="lbl">Shop</span> Precision Metals &amp; Arms LLC<br>94 Dixon Drive, Rome, NY 13440</p>
+        <p><span class="lbl">Phone</span><a href="tel:13157176173">(315) 717-6173</a></p>
+        <p><span class="lbl">Hours</span> By appointment · Mon–Sat 9:00–3:00 · Sun closed</p>
+        <p><span class="lbl">Licensing</span> NYS-licensed FFL gunsmith &amp; dealer · Veteran-owned</p>
+        <div class="note">All firearm transfers follow federal and New York State law and are handled through the shop's FFL.</div>
+      </div>
+      <form class="appt" onsubmit="return false">
+        <input type="text" placeholder="Your name" aria-label="Your name">
+        <input type="tel" placeholder="Best phone number" aria-label="Phone">
+        <input type="text" placeholder="Rifle / caliber or the work you want" aria-label="Rifle">
+        <textarea rows="4" placeholder="Tell Wade about the build or repair…" aria-label="Details"></textarea>
+        <button type="submit">Request my appointment</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fbar">
+    <div>© 2026 Precision Metals &amp; Arms LLC · Rome, New York · Veteran-owned</div>
+    <div>Appointments: <a class="ph" href="tel:13157176173">(315) 717-6173</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

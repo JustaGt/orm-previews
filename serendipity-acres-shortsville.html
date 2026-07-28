@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serendipity Acres — Farm Market, Greenhouse &amp; Meats on Route 96, Shortsville NY</title>
+<meta name="description" content="A family stand on Route 96 in Shortsville, NY: spring greenhouse, summer produce, year-round local beef, pork, chicken and eggs, fall deer &amp; wild-game processing, firewood, and bulk topsoil, stone and gravel. One stop, five seasons of work.">
+<style>
+  :root{
+    --barn:#7a2116; --barn2:#8f2b1c; --cream:#f7f0e2; --cream2:#efe5d1;
+    --field:#4c6b32; --field-lt:#6f9142; --gold:#d9992b; --gold-lt:#eab545;
+    --ink:#2c241c; --muted:#6d5f4f; --paper:#fffdf7; --line:#e0d3ba; --dark:#2a1c14;
+    --font:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font);color:var(--ink);background:var(--paper);line-height:1.62}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{font-family:'Georgia','Times New Roman',serif}
+
+  header{position:sticky;top:0;z-index:40;background:rgba(122,33,22,.97);border-bottom:3px solid var(--gold)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:70px;color:var(--cream)}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-family:'Georgia',serif;font-size:1.15rem}
+  .brand .mark{width:40px;height:40px;background:var(--gold);color:var(--barn);border-radius:50%;display:grid;place-items:center;font-weight:900;font-family:'Georgia',serif;font-size:20px}
+  .brand small{display:block;font-size:10px;color:var(--gold-lt);font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-family:var(--font)}
+  nav a{color:var(--cream2);font-size:14px;margin-left:24px}
+  nav a:hover{color:var(--gold-lt)}
+  .callbtn{background:var(--gold);color:var(--barn);padding:10px 18px;border-radius:4px;font-weight:800;font-size:14px;margin-left:24px}
+  .callbtn:hover{background:var(--gold-lt)}
+  @media(max-width:860px){nav .lk{display:none}}
+
+  .hero{position:relative;padding:92px 0 78px;color:var(--cream);
+    background:linear-gradient(180deg,#8f2b1c,#6e1d13);overflow:hidden;border-bottom:6px solid var(--gold)}
+  .hero:before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0 2px,transparent 2px 46px);pointer-events:none}
+  .eyebrow{display:inline-block;color:var(--barn);background:var(--gold-lt);font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:6px 13px;border-radius:20px;margin-bottom:22px;font-weight:700}
+  h1{font-size:clamp(2.05rem,5vw,3.3rem);line-height:1.1;max-width:18ch;color:var(--paper)}
+  h1 span{color:var(--gold-lt)}
+  .sub{margin-top:20px;font-size:clamp(1.02rem,2.1vw,1.2rem);color:var(--cream2);max-width:58ch}
+  .cta{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{padding:14px 24px;border-radius:5px;font-weight:800;font-size:15px;display:inline-flex;align-items:center;gap:8px}
+  .btn.primary{background:var(--gold);color:var(--barn)}
+  .btn.primary:hover{background:var(--gold-lt)}
+  .btn.ghost{border:1px solid rgba(255,255,255,.5);color:var(--cream)}
+  .btn.ghost:hover{border-color:var(--gold-lt);color:var(--gold-lt)}
+  .herostrip{margin-top:36px;display:flex;gap:24px;flex-wrap:wrap;font-size:13.5px;color:var(--cream2)}
+  .herostrip b{color:var(--gold-lt)}
+
+  section{padding:72px 0;border-bottom:1px solid var(--line)}
+  .kicker{color:var(--field);font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+  h2{font-size:clamp(1.7rem,3.6vw,2.35rem);margin-top:10px;color:var(--barn);letter-spacing:-.01em}
+  .lead{color:var(--muted);max-width:66ch;margin-top:14px;font-size:1.04rem}
+
+  .grid{display:grid;gap:18px;margin-top:38px}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:860px){.g3,.g2{grid-template-columns:1fr}}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:9px;padding:24px;border-top:4px solid var(--field-lt)}
+  .card.m{border-top-color:var(--barn2)} .card.d{border-top-color:var(--gold)}
+  .card h3{font-size:1.16rem;color:var(--barn);margin-bottom:8px}
+  .card p{color:var(--muted);font-size:.97rem}
+  .card .tag{font-size:11.5px;color:var(--field);text-transform:uppercase;letter-spacing:.08em;display:block;margin-bottom:12px;font-weight:700;border-bottom:1px dashed var(--line);padding-bottom:8px}
+
+  .seasons{background:var(--cream)}
+  .srow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px}
+  @media(max-width:860px){.srow{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.srow{grid-template-columns:1fr}}
+  .season{background:var(--paper);border:1px solid var(--line);border-radius:9px;padding:20px;position:relative}
+  .season .s{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px}
+  .season h3{color:var(--barn);font-size:1.1rem;margin-bottom:8px}
+  .season p{color:var(--muted);font-size:.93rem}
+
+  .fam{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+  @media(max-width:860px){.fam{grid-template-columns:1fr}}
+  .famcard{background:var(--barn);color:var(--cream);border-radius:12px;padding:34px;border:3px solid var(--gold)}
+  .famcard h3{color:var(--gold-lt);font-size:1.3rem;margin-bottom:12px}
+  .famcard p{color:var(--cream2);font-size:1rem}
+
+  .rev{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+  @media(max-width:860px){.rev{grid-template-columns:1fr}}
+  .quote{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;padding:22px}
+  .quote p{color:var(--ink);font-size:.97rem;font-style:italic}
+  .quote b{display:block;margin-top:12px;color:var(--field);font-style:normal;font-size:.9rem}
+  .stars{color:var(--gold);letter-spacing:2px;font-size:14px}
+  .flag{font-size:11.5px;color:var(--muted);margin-top:12px;font-style:italic}
+
+  .visit{background:var(--dark);color:var(--cream)}
+  .visit h2{color:var(--gold-lt)}
+  .vgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:start;margin-top:16px}
+  @media(max-width:860px){.vgrid{grid-template-columns:1fr}}
+  .side{background:#3a271c;border:1px solid #5a4030;border-radius:10px;padding:26px}
+  .side h3{color:var(--gold-lt);font-size:1.1rem;margin-bottom:14px}
+  .side .line{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid #513a2a;font-size:14.5px;color:var(--cream)}
+  .side .line:last-child{border-bottom:none}
+  .side .line span{color:var(--gold-lt);min-width:74px;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+  form label{display:block;font-size:12px;color:var(--cream2);margin:12px 0 6px;letter-spacing:.03em;text-transform:uppercase}
+  form input,form select,form textarea{width:100%;background:#241811;border:1px solid #5a4030;border-radius:6px;padding:11px 12px;color:var(--cream);font-family:var(--font);font-size:14.5px}
+  form input:focus,form select:focus,form textarea:focus{outline:none;border-color:var(--gold)}
+  textarea{min-height:92px;resize:vertical}
+  .submit{margin-top:16px;background:var(--gold);color:var(--barn);border:none;padding:14px 26px;border-radius:6px;font-weight:800;font-size:15px;cursor:pointer}
+  .submit:hover{background:var(--gold-lt)}
+  .note{font-size:11.5px;color:#b89a80;margin-top:10px;font-style:italic}
+
+  footer{background:#20140e;padding:46px 0 36px;color:#b89a80}
+  .fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:30px}
+  @media(max-width:860px){.fgrid{grid-template-columns:1fr}}
+  footer h4{color:var(--gold-lt);font-size:13px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px}
+  footer p,footer a{color:#b89a80;font-size:14px;display:block;margin-bottom:8px}
+  footer a:hover{color:var(--gold-lt)}
+  .copy{border-top:1px solid #4a3527;margin-top:30px;padding-top:18px;font-size:12.5px;text-align:center;color:#8a6f5a}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <div class="brand"><div class="mark">SA</div><div>Serendipity Acres<small>Shortsville · Route 96</small></div></div>
+    <nav>
+      <a class="lk" href="#find">What You'll Find</a>
+      <a class="lk" href="#seasons">The Seasons</a>
+      <a class="lk" href="#deer">Deer Processing</a>
+      <a class="callbtn" href="tel:+15853158133">Call (585) 315-8133</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Family Farm Market &amp; Greenhouse · Shortsville, NY</span>
+    <h1>Plants in spring, sweet corn in summer, <span>your deer in November</span> — same family, same stand on Route 96.</h1>
+    <p class="sub">Serendipity Acres is a working farm market run by a local family. Year-round beef, pork, chicken and eggs; a greenhouse full of plants come spring; firewood and bulk topsoil, stone and gravel when you need a load — and deer &amp; wild-game processing every fall.</p>
+    <div class="cta">
+      <a class="btn primary" href="#find">See what's in the market →</a>
+      <a class="btn ghost" href="#deer">Reserve a deer slot</a>
+    </div>
+    <div class="herostrip">
+      <div><b>Local beef, pork, chicken &amp; eggs</b> — year round</div>
+      <div><b>Greenhouse</b> — spring into early fall</div>
+      <div><b>Firewood &amp; bulk materials</b> delivered</div>
+    </div>
+  </div>
+</section>
+
+<section id="find">
+  <div class="wrap">
+    <span class="kicker">One stop, more than one job</span>
+    <h2>What you'll find when you pull in</h2>
+    <p class="lead">Most farm stands do one thing. This one grew into five. Here's the whole place at a glance — so you know before you drive out whether we've got what you came for.</p>
+    <div class="grid g3">
+      <div class="card"><span class="tag">The Market</span><h3>Local meat &amp; pantry</h3><p>All-natural beef, pork and chicken, farm eggs, plus honey, maple syrup, cheese, baked goods and homemade soaps from around the Finger Lakes. Stocked year round.</p></div>
+      <div class="card"><span class="tag">The Greenhouse</span><h3>Spring plants &amp; starts</h3><p>Vegetable starts, annuals, hanging baskets and plants for the garden, home and landscaping — grown and cared for on-site from early spring into early fall.</p></div>
+      <div class="card m"><span class="tag">Fall Service</span><h3>Deer &amp; wild-game processing</h3><p>Seasonal deer processing and custom wild-game butchering, including custom sausage. Bring it in cut-and-wrapped the way you want it.</p></div>
+      <div class="card"><span class="tag">The Woodpile</span><h3>Firewood</h3><p>Firewood for the stove and the fire pit. Ask about seasoned availability and delivery to your place.</p></div>
+      <div class="card d"><span class="tag">Bulk Yard</span><h3>Topsoil, stone &amp; gravel</h3><p>Bulk materials sold and delivered — topsoil, stone, gravel and more, with excavating and trucking when the job calls for it.</p></div>
+      <div class="card"><span class="tag">Seasonal</span><h3>Produce in season</h3><p>Homegrown and locally sourced produce through the summer and fall — sweet corn, tomatoes and whatever's coming ripe that week.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="seasons" id="seasons">
+  <div class="wrap">
+    <span class="kicker">A year at Serendipity Acres</span>
+    <h2>There's a reason to stop by in every season</h2>
+    <p class="lead">The stand changes with the calendar. Here's roughly what's going on when — so you can plan the trip.</p>
+    <div class="srow">
+      <div class="season"><span class="s">Spring</span><h3>Greenhouse opens</h3><p>Vegetable starts, annuals and baskets for the garden and the porch. Come early for the best selection.</p></div>
+      <div class="season"><span class="s">Summer</span><h3>Produce &amp; the market</h3><p>Sweet corn, tomatoes and the day's picking, alongside the year-round meat and pantry case.</p></div>
+      <div class="season"><span class="s">Fall</span><h3>Deer processing</h3><p>Deer season means the processing side gets busy — reserve ahead so you're not waiting in the rush.</p></div>
+      <div class="season"><span class="s">Winter</span><h3>Firewood &amp; meat</h3><p>Firewood for the cold months and a full meat case for the holidays. Bulk materials by appointment.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="deer">
+  <div class="wrap">
+    <div class="fam">
+      <div>
+        <span class="kicker">Deer &amp; wild-game processing</span>
+        <h2>Bring us your deer — cut and wrapped your way</h2>
+        <p class="lead">Every fall we take in deer and other wild game for custom processing, including our own sausage. Because it gets busy fast once the season opens, the smartest move is to call ahead and get your name in before the November rush. Tell us how you want it cut, and it'll be ready to pick up clean, labeled and ready for the freezer.</p>
+        <div class="cta"><a class="btn primary" href="#contact" style="background:var(--field);color:#fff">Get on the deer list →</a></div>
+        <p class="flag">Drop-off hours, pricing and cut options are set each season — call to confirm this year's details.</p>
+      </div>
+      <div class="famcard">
+        <h3>A newer chapter, same country stand</h3>
+        <p>Serendipity Acres is family-owned and run by Nathan Boor and Conor Trippe, who took the place over and put their name on it. The idea is simple: keep it local, keep it honest, and be the one stop on Route 96 that can hand you a plant flat, a pound of ground beef and a load of topsoil in the same visit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">From the neighbors</span>
+    <h2>What people say after they stop in</h2>
+    <div class="rev">
+      <div class="quote"><div class="stars">★★★★★</div><p>"Great local spot — the meat is excellent and the folks running it couldn't be friendlier."</p><b>— Placeholder review</b></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"Got my greenhouse plants here in spring and had my deer done here in the fall. Can't beat that."</p><b>— Placeholder review</b></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"Easy to work with on a load of topsoil, and the firewood was good and dry."</p><b>— Placeholder review</b></div>
+    </div>
+    <p class="flag">Review text above is placeholder for layout — real Google/Facebook quotes to be dropped in before the page goes live.</p>
+  </div>
+</section>
+
+<section class="visit" id="contact">
+  <div class="wrap">
+    <span class="kicker" style="color:var(--gold-lt)">Find us · Get in touch</span>
+    <h2>On Route 96 in Shortsville</h2>
+    <div class="vgrid">
+      <form onsubmit="return false">
+        <p style="color:var(--cream2);margin-bottom:6px">Ask about the deer list, a plant order, or a load of material and we'll get back to you.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <div style="flex:1;min-width:150px"><label>Name</label><input type="text" placeholder="Your name"></div>
+          <div style="flex:1;min-width:150px"><label>Phone</label><input type="tel" placeholder="(585) 000-0000"></div>
+        </div>
+        <label>What do you need?</label>
+        <select><option>Deer / wild-game processing</option><option>Greenhouse / plants</option><option>Meat &amp; market</option><option>Firewood</option><option>Bulk topsoil / stone / gravel</option><option>Something else</option></select>
+        <label>Details</label>
+        <textarea placeholder="Tell us what you're after and roughly when."></textarea>
+        <button class="submit">Send it over</button>
+        <p class="note">Sample layout — the live form will route straight to the farm's inbox.</p>
+      </form>
+      <div class="side">
+        <h3>Serendipity Acres</h3>
+        <div class="line"><span>Address</span><div>4846 State Route 96<br>Shortsville, NY 14548</div></div>
+        <div class="line"><span>Phone</span><div>(585) 315-8133</div></div>
+        <div class="line"><span>Hours</span><div>Mon–Sat 9–6 · Sun 9–4 <em style="color:#b89a80">(seasonal — confirm)</em></div></div>
+        <div class="line"><span>Find us</span><div>Facebook: Serendipity Acres, Shortsville NY</div></div>
+        <p class="note" style="color:#b89a80">Phone/hours shown to be confirmed with the owners before launch — a second local number (585) 289-3720 also appears in directories.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fgrid">
+    <div>
+      <h4>Serendipity Acres</h4>
+      <p>Family farm market, greenhouse, meat counter and bulk yard on Route 96 in Shortsville, New York. Plants, local meat, deer processing, firewood and materials — one stop, every season.</p>
+    </div>
+    <div>
+      <h4>On the Farm</h4>
+      <a href="#find">What You'll Find</a>
+      <a href="#seasons">The Seasons</a>
+      <a href="#deer">Deer Processing</a>
+    </div>
+    <div>
+      <h4>Visit</h4>
+      <a href="tel:+15853158133">(585) 315-8133</a>
+      <a href="#contact">4846 State Route 96</a>
+      <a href="#contact">Shortsville, NY 14548</a>
+    </div>
+  </div>
+  <div class="copy">Preview concept prepared by Onyx Rise Media for Serendipity Acres. Not affiliated or published. Details to be confirmed with the owners.</div>
+</footer>
+</body>
+</html>

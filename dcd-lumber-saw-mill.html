@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DCD Lumber & Saw Mill — Rough-Cut & Live-Edge Slabs, Fabius NY (Since 1982)</title>
+<meta name="description" content="Family sawmill on Shackham Road in Fabius, NY since 1982. Rough-cut hemlock, larch and hardwoods, live-edge slabs cut to order, and milling of your own logs. Call for what's on the pile.">
+<style>
+  :root{
+    --bark:#2b2016; --bark2:#3d2e1e; --board:#c99a5b; --amber:#c8781f;
+    --green:#3c4a2e; --cream:#f5efe4; --kraft:#e6d7bd; --ink:#241a12; --line:#6b5638;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.15;letter-spacing:-.01em}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .btn{display:inline-block;background:var(--amber);color:#fff;font-weight:700;text-decoration:none;
+    padding:15px 26px;border-radius:4px;border:2px solid #a45f12;box-shadow:0 2px 0 #7d4a0e}
+  .btn:hover{background:#b56a18}
+  .btn.ghost{background:transparent;color:var(--cream);border:2px solid var(--kraft);box-shadow:none}
+  /* top bar */
+  .top{background:var(--bark);color:var(--kraft);font-size:.9rem}
+  .top .wrap{display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:space-between;align-items:center;padding:9px 22px}
+  .top b{color:#fff}
+  /* hero */
+  header.hero{background:
+    linear-gradient(180deg,rgba(30,22,14,.86),rgba(30,22,14,.78)),
+    repeating-linear-gradient(90deg,#5a4327 0 3px,#6a5030 3px 7px,#4f3a21 7px 12px);
+    color:var(--cream);padding:64px 0 58px}
+  .hero .tag{display:inline-block;background:var(--green);color:#e8f0d8;font-size:.78rem;font-weight:700;
+    letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:3px}
+  .hero h1{font-size:2.9rem;margin:16px 0 10px}
+  .hero p.lead{font-size:1.2rem;max-width:640px;color:#f0e6d4}
+  .hero .cta{margin-top:26px;display:flex;flex-wrap:wrap;gap:14px}
+  .facts{display:flex;flex-wrap:wrap;gap:10px 30px;margin-top:30px;padding-top:22px;border-top:1px solid #6b5638;font-size:.95rem;color:#e5d8bf}
+  .facts b{color:#fff}
+  /* sections */
+  section{padding:56px 0}
+  section.alt{background:var(--kraft)}
+  .eyebrow{color:var(--amber);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem}
+  h2{font-size:2rem;margin:8px 0 6px;color:var(--bark2)}
+  .sub{color:#5c4a34;max-width:640px;margin-bottom:26px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .card{background:#fff;border:1px solid #dcc8a4;border-radius:6px;padding:22px;border-top:4px solid var(--board)}
+  .card h3{font-size:1.18rem;margin-bottom:6px;color:var(--bark2)}
+  .card p{font-size:.96rem;color:#4d3d2a}
+  .card .price{display:block;margin-top:10px;font-size:.85rem;color:#8a6a3a;font-style:italic}
+  .split{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center}
+  .slab{background:linear-gradient(115deg,#7d5a30,#a9803f 45%,#c99a5b 46%,#e2c592);border-radius:8px;min-height:280px;
+    border:1px solid #7a5a30;display:flex;align-items:flex-end;padding:18px;color:#3a2a16}
+  .slab span{background:rgba(245,239,228,.9);padding:6px 12px;border-radius:4px;font-size:.82rem;font-weight:700}
+  ul.plain{list-style:none;margin-top:8px}
+  ul.plain li{padding:8px 0 8px 26px;position:relative;border-bottom:1px dashed #cdb98f}
+  ul.plain li:before{content:"▸";position:absolute;left:4px;color:var(--amber);font-weight:700}
+  /* quote form */
+  .quote{background:var(--bark2);color:var(--cream);border-radius:10px;padding:30px}
+  .quote h3{color:#fff;font-size:1.5rem}
+  .quote label{display:block;font-size:.85rem;margin:14px 0 4px;color:#e8dcc4}
+  .quote input,.quote select,.quote textarea{width:100%;padding:11px;border-radius:4px;border:1px solid #6b5638;
+    background:#fbf6ec;font-size:1rem;font-family:inherit}
+  .quote .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .quote button{margin-top:18px;width:100%;background:var(--amber);color:#fff;font-weight:700;font-size:1.05rem;
+    padding:14px;border:none;border-radius:4px;cursor:pointer}
+  .note{font-size:.8rem;color:#c9b491;margin-top:10px}
+  /* footer */
+  footer{background:var(--bark);color:var(--kraft);padding:44px 0 30px}
+  footer h4{color:#fff;font-family:Georgia,serif;margin-bottom:8px}
+  footer a{color:#e9b877}
+  .fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
+  .fine{border-top:1px solid #5a472f;margin-top:26px;padding-top:16px;font-size:.82rem;color:#b8a684}
+  @media(max-width:760px){.split{grid-template-columns:1fr}.hero h1{font-size:2.2rem}.quote .row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <span>674 Shackham Rd, Fabius NY 13063 &nbsp;·&nbsp; Southern Onondaga hills</span>
+  <span>Call the yard: <b>(315) 683-5652</b></span>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <span class="tag">Working sawmill · since 1982</span>
+  <h1>Rough-cut boards, timbers, and live-edge slabs — cut on our own mill.</h1>
+  <p class="lead">DCD Lumber has been sawing hemlock, larch, and local hardwood out on Shackham Road in Fabius for over 40 years. If you need boards a lumberyard can't sell you — or a slab cut to your dimensions — this is the pile to call.</p>
+  <div class="cta">
+    <a class="btn" href="#quote">Tell us what you're looking for</a>
+    <a class="btn ghost" href="tel:3156835652">Call the yard: (315) 683-5652</a>
+  </div>
+  <div class="facts">
+    <span><b>Since 1982</b> · family-run</span>
+    <span><b>Live-edge slabs</b> cut to order</span>
+    <span><b>Your logs milled</b> on request</span>
+    <span><b>Hemlock · larch · hardwoods</b></span>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <span class="eyebrow">What's on the pile</span>
+  <h2>Lumber you won't find at a big-box counter</h2>
+  <p class="sub">We saw and stock the rough material builders and woodworkers actually drive out here for. Stock shifts with what we're cutting — call to check the day's pile before you make the trip.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Rough-cut hemlock &amp; larch</h3>
+      <p>Framing, barn and outbuilding stock, timbers, sheathing and rough boards in the sizes farmers and pole-barn builders ask for.</p>
+      <span class="price">Priced by the board foot — call for today's rate*</span>
+    </div>
+    <div class="card">
+      <h3>Local hardwoods</h3>
+      <p>Oak, maple, ash, cherry and walnut sawn from area logs — rough or planed. Good for flooring stock, shelving, trim and shop projects.</p>
+      <span class="price">Species &amp; thickness vary — ask what's dry*</span>
+    </div>
+    <div class="card">
+      <h3>Live-edge slabs</h3>
+      <p>Black walnut and maple table slabs with the natural edge left on. Cut to length and thickness for tabletops, benches, bar tops and mantels.</p>
+      <span class="price">Slab sizes on hand change weekly*</span>
+    </div>
+    <div class="card">
+      <h3>Barn &amp; project material</h3>
+      <p>Rough stock for fences, decks, sheds and repairs — the kind of order we've filled for local builders since the '80s (garage-kit packages by request).</p>
+      <span class="price">Bring your list — we'll pull it*</span>
+    </div>
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <div class="split">
+    <div>
+      <span class="eyebrow">Custom cutting</span>
+      <h2>Got your own logs? Bring them to the mill.</h2>
+      <p class="sub">Landowners drop off logs from a cleared lot or a downed yard tree and leave with boards or a slab. Tell us the species, roughly how big, and what you want out of it, and we'll tell you what the mill can do.</p>
+      <ul class="plain">
+        <li>Custom sawing to your thickness and length</li>
+        <li>Live-edge slabs flitch-cut from your walnut or maple</li>
+        <li>Rough-cut dimensional boards and timbers</li>
+        <li>Straightforward, in-person quotes — no runaround</li>
+      </ul>
+      <p style="margin-top:20px"><a class="btn" href="#quote">Send us your dimensions</a></p>
+    </div>
+    <div class="slab"><span>Live-edge walnut slab · cut to order</span></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <span class="eyebrow">Why folks drive out Shackham Road</span>
+  <h2>Forty-plus years, same yard, same handshake</h2>
+  <div class="grid" style="margin-top:18px">
+    <div class="card">
+      <h3>Milling here since 1982</h3>
+      <p>Two generations of local customers have bought everything from a stack of rough boards to a full garage-kit package off this yard.</p>
+    </div>
+    <div class="card">
+      <h3>Real answers, in person</h3>
+      <p>You talk to the people who run the mill. If we can cut it, we'll tell you straight; if we can't, we'll tell you that too.</p>
+    </div>
+    <div class="card">
+      <h3>What customers say</h3>
+      <p>"Bought a garage kit from them in 2000 and some rough boards today — top-notch people." <span class="price">— verified Facebook review*</span></p>
+    </div>
+  </div>
+</div></section>
+
+<section class="alt" id="quote"><div class="wrap">
+  <div class="split">
+    <div>
+      <span class="eyebrow">Get a price</span>
+      <h2>Tell us what you're looking for</h2>
+      <p class="sub">The more you can tell us — species, rough dimensions, how many, and whether it's our wood or your logs — the faster we can quote it. We'll get back to you or you can just call the yard.</p>
+      <p><b>Yard:</b> 674 Shackham Rd, Fabius NY 13063<br>
+      <b>Phone:</b> <a href="tel:3156835652">(315) 683-5652</a><br>
+      <b>Hours:</b> Call ahead* — a working mill isn't always at the desk</p>
+    </div>
+    <form class="quote" onsubmit="return false;">
+      <h3>What can we cut for you?</h3>
+      <div class="row">
+        <div><label>Name</label><input type="text" placeholder="Your name"></div>
+        <div><label>Phone</label><input type="tel" placeholder="Best number"></div>
+      </div>
+      <label>What do you need?</label>
+      <select>
+        <option>Rough-cut boards / timbers</option>
+        <option>Live-edge slab(s)</option>
+        <option>Hardwood (species below)</option>
+        <option>Custom cut — my own logs</option>
+        <option>Barn / project material list</option>
+      </select>
+      <label>Dimensions, species &amp; quantity</label>
+      <textarea rows="3" placeholder="e.g. two 8-ft walnut slabs ~2 in thick, or 40 hemlock 2x6x12"></textarea>
+      <button>Send it to the yard</button>
+      <p class="note">Demo contact form for preview purposes. On the live site this routes to DCD Lumber. *Species in stock, slab sizes, hours and pricing shown are examples pending confirmation.</p>
+    </form>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div>
+      <h4>DCD Lumber &amp; Saw Mill</h4>
+      <p>Family sawmill and rough-cut lumber yard in the southern Onondaga hills. Cutting boards, timbers and live-edge slabs since 1982.</p>
+    </div>
+    <div>
+      <h4>Find the yard</h4>
+      <p>674 Shackham Rd<br>Fabius, NY 13063<br><a href="tel:3156835652">(315) 683-5652</a></p>
+    </div>
+    <div>
+      <h4>What we do</h4>
+      <p>Rough-cut hemlock &amp; larch · local hardwoods · live-edge slabs · custom sawing of your own logs · barn &amp; project material</p>
+    </div>
+  </div>
+  <div class="fine">© 1982–2026 DCD Lumber, LLC · Fabius, NY. Preview concept prepared by Onyx Rise Media. Address, hours, stock and pricing to be confirmed with the owner before publishing.</div>
+</div></footer>
+
+</body>
+</html>

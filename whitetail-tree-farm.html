@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whitetail Tree Farm — Choose-and-Cut Christmas Trees & Homemade Maple, Fabius NY</title>
+<meta name="description" content="Family choose-and-cut Christmas tree farm and maple sugarhouse on 75+ acres in Fabius, NY. Cut-your-own trees, free shaking/drilling/baling, a Tot Lot for the kids, wreaths, and homemade maple syrup, cream and nuts.">
+<style>
+  :root{
+    --pine:#12351f; --pine2:#1c4a2b; --sage:#3f6b45; --snow:#fbfdf8; --cream:#f2f4ea;
+    --amber:#d99a2b; --amber-d:#b57d1c; --red:#9e3427; --bark:#4a3826; --ink:#20301f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--snow);line-height:1.65}
+  h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.15}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .btn{display:inline-block;background:var(--amber);color:#3a2a08;font-weight:800;text-decoration:none;
+    padding:15px 26px;border-radius:40px;border:2px solid var(--amber-d)}
+  .btn:hover{background:#e7a935}
+  .btn.snow{background:var(--snow);color:var(--pine);border-color:var(--snow)}
+  .banner{background:var(--red);color:#fff;text-align:center;font-weight:700;font-size:.95rem;padding:9px 12px}
+  /* nav */
+  nav{background:var(--pine);color:#e9f2e2}
+  nav .wrap{display:flex;flex-wrap:wrap;gap:6px 22px;align-items:center;justify-content:space-between;padding:12px 22px}
+  nav .brand{font-family:Georgia,serif;font-size:1.3rem;color:#fff;font-weight:700}
+  nav .brand small{display:block;font-size:.66rem;letter-spacing:.22em;color:#a9c9a3;font-family:"Segoe UI",sans-serif}
+  nav .links a{margin-left:18px;font-size:.92rem;text-decoration:none;color:#cfe3c7}
+  nav .links a:hover{color:#fff}
+  /* hero */
+  header.hero{position:relative;color:var(--snow);text-align:center;
+    background:
+      radial-gradient(1200px 300px at 50% -50px,rgba(217,154,43,.25),transparent),
+      linear-gradient(180deg,rgba(10,28,16,.55),rgba(10,28,16,.82)),
+      repeating-linear-gradient(125deg,#123a20 0 40px,#0f331c 40px 80px);
+    background-color:#12351f;padding:74px 0 66px}
+  header.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:26px;
+    background:repeating-linear-gradient(90deg,var(--pine2) 0 24px,#173f26 24px 48px)}
+  .hero h1{font-size:3rem;margin:14px 0 12px}
+  .hero p{font-size:1.22rem;max-width:660px;margin:0 auto;color:#eef6e8}
+  .season{display:inline-block;background:rgba(251,253,248,.14);border:1px solid rgba(255,255,255,.35);
+    border-radius:40px;padding:8px 18px;font-size:.92rem;margin-bottom:6px}
+  .hero .cta{margin-top:28px;display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+  /* season strip */
+  .strip{background:var(--pine2);color:#e9f2e2}
+  .strip .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;padding:22px}
+  .strip .it{text-align:center;padding:6px}
+  .strip .it b{display:block;font-size:1.15rem;color:#fff;font-family:Georgia,serif}
+  .strip .it span{font-size:.86rem;color:#bcd7b3}
+  /* sections */
+  section{padding:58px 0}
+  section.cream{background:var(--cream)}
+  .eyebrow{color:var(--sage);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem}
+  h2{font-size:2.05rem;margin:8px 0 8px;color:var(--pine)}
+  .sub{color:#4a5a44;max-width:660px;margin-bottom:26px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+  .card{background:#fff;border:1px solid #dbe4d2;border-radius:12px;padding:24px;box-shadow:0 2px 10px rgba(20,53,31,.05)}
+  .card .ic{width:44px;height:44px;border-radius:50%;background:var(--pine);color:#fff;display:flex;
+    align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:12px}
+  .card h3{font-size:1.16rem;color:var(--pine2);margin-bottom:6px}
+  .card p{font-size:.96rem;color:#465043}
+  /* maple */
+  .maple{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+  .maple .panel{background:linear-gradient(160deg,#8a5a22,#c8801f 60%,#e6a63a);border-radius:14px;min-height:280px;
+    display:flex;align-items:flex-end;padding:22px;color:#3a2508}
+  .maple .panel span{background:rgba(251,253,248,.92);padding:8px 14px;border-radius:8px;font-weight:800;font-size:.9rem}
+  .price-list{list-style:none;margin-top:8px}
+  .price-list li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed #cdb98f;font-size:.98rem}
+  .price-list li b{color:var(--bark)}
+  .price-list li .p{color:#8a6a2a;font-style:italic}
+  /* signup */
+  .signup{background:var(--pine);color:var(--snow);border-radius:16px;padding:34px;text-align:center}
+  .signup h3{color:#fff;font-size:1.7rem}
+  .signup form{max-width:520px;margin:16px auto 0;display:flex;flex-wrap:wrap;gap:10px}
+  .signup input{flex:1;min-width:200px;padding:13px;border-radius:40px;border:none;font-size:1rem}
+  .signup button{background:var(--amber);color:#3a2a08;font-weight:800;border:none;border-radius:40px;padding:13px 24px;cursor:pointer;font-size:1rem}
+  .signup .note{font-size:.8rem;color:#a9c9a3;margin-top:12px}
+  /* footer */
+  footer{background:#0e2a18;color:#cfe3c7;padding:46px 0 28px}
+  footer h4{color:#fff;font-family:Georgia,serif;margin-bottom:8px}
+  footer a{color:var(--amber)}
+  .fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:26px}
+  .fine{border-top:1px solid #234; border-color:#26492f;margin-top:26px;padding-top:16px;font-size:.82rem;color:#8fb089}
+  @media(max-width:760px){.maple{grid-template-columns:1fr}.hero h1{font-size:2.2rem}nav .links{display:none}}
+</style>
+</head>
+<body>
+
+<div class="banner">🎄 &nbsp;Opening weekend: the Friday after Thanksgiving, then Saturdays &amp; Sundays 9am–5pm* &nbsp;·&nbsp; Maple products available year-round</div>
+
+<nav><div class="wrap">
+  <div class="brand">Whitetail Tree Farm<small>FABIUS · NEW YORK</small></div>
+  <div class="links">
+    <a href="#visit">The Visit</a>
+    <a href="#maple">Maple</a>
+    <a href="#shop">Gift Shop</a>
+    <a href="#plan">Plan Your Trip</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="season">75+ acres · choose-and-cut since the family started it</span>
+  <h1>Cut your own tree. Take home real maple.</h1>
+  <p>A family Christmas tree farm and sugarhouse on Pompey Center Road in Fabius. Walk the fields, pick your tree, warm up with refreshments — and leave with syrup we boiled ourselves.</p>
+  <div class="cta">
+    <a class="btn" href="#plan">Plan your visit</a>
+    <a class="btn snow" href="#maple">Shop maple products</a>
+  </div>
+</div></header>
+
+<div class="strip"><div class="wrap">
+  <div class="it"><b>Free</b><span>shaking, drilling &amp; baling</span></div>
+  <div class="it"><b>Tot Lot</b><span>kids cut their own little tree</span></div>
+  <div class="it"><b>U-cut &amp; pre-cut</b><span>we never run out</span></div>
+  <div class="it"><b>Sugarhouse</b><span>tap to bottle, right here</span></div>
+</div></div>
+
+<section id="visit"><div class="wrap">
+  <span class="eyebrow">The visit</span>
+  <h2>An afternoon on the farm, not a quick stop at a lot</h2>
+  <p class="sub">Our family greets you at the barn, points you to the fields, and helps you get your tree home. It's the outing families come back for every year — here's what's waiting.</p>
+  <div class="grid">
+    <div class="card"><div class="ic">🌲</div><h3>Choose &amp; cut your tree</h3><p>Many varieties across the fields — walk out, find yours, and cut it. Prefer a shortcut? We keep fresh pre-cut trees ready too, and we never run out.</p></div>
+    <div class="card"><div class="ic">🪚</div><h3>Free shaking, drilling &amp; baling</h3><p>We shake the loose needles, drill for a straight stand, and bale the tree for the drive — all included, no upcharge.</p></div>
+    <div class="card"><div class="ic">🧒</div><h3>The Tot Lot</h3><p>Kids harvest their own little tree, pick a bag of ornaments and a kid-friendly stand, and take home a wrapped surprise gift. A whole experience for a wee $19.90.*</p></div>
+    <div class="card"><div class="ic">☕</div><h3>Warm up &amp; play</h3><p>Refreshments at the barn, the ISpy game in the fields, Buckaroo doughnuts and Phillbur's fudge (still $3.80*). Porta-facilities on site.</p></div>
+  </div>
+</div></section>
+
+<section class="cream" id="maple"><div class="wrap">
+  <div class="maple">
+    <div>
+      <span class="eyebrow">From our sugarhouse</span>
+      <h2>Homemade maple — order it any time of year</h2>
+      <p class="sub">We take it from tap to bottle right on the farm. Syrup, cream, nuts and fluff make easy gifts and don't wait for December. Reserve what you want and we'll set it aside for pickup, or ask about shipping.</p>
+      <ul class="price-list">
+        <li><b>Pure maple syrup</b> <span class="p">pint / quart / half-gallon*</span></li>
+        <li><b>Maple cream</b> <span class="p">new this season*</span></li>
+        <li><b>Maple-coated nuts</b> <span class="p">gift-ready*</span></li>
+        <li><b>Maple fluff</b> <span class="p">seasonal*</span></li>
+      </ul>
+      <p style="margin-top:18px"><a class="btn" href="#plan">Reserve maple products</a></p>
+    </div>
+    <div class="panel"><span>🍁 Tap to bottle, right here on the farm</span></div>
+  </div>
+</div></section>
+
+<section id="shop"><div class="wrap">
+  <span class="eyebrow">Whitetail Gift Shop</span>
+  <h2>Hand-made wreaths, greens and gifts</h2>
+  <p class="sub">Everything to dress the house inside and out — made by our family, not trucked in.</p>
+  <div class="grid">
+    <div class="card"><div class="ic">🎀</div><h3>Hand-made wreaths</h3><p>Fresh, full wreaths made on the farm — pick one up when you get your tree or reserve ahead for a certain size.</p></div>
+    <div class="card"><div class="ic">🌿</div><h3>Roping &amp; greens</h3><p>White-pine roping and unique fresh greens for railings, mantels and doorways.</p></div>
+    <div class="card"><div class="ic">🎁</div><h3>Ornaments &amp; décor</h3><p>Ornaments and seasonal décor to finish the tree, plus Whitetail sweatshirts and hats.</p></div>
+  </div>
+</div></section>
+
+<section class="cream" id="plan"><div class="wrap">
+  <div class="maple">
+    <div>
+      <span class="eyebrow">Plan your trip</span>
+      <h2>Where we are &amp; when we're open</h2>
+      <p class="sub">We open the Friday after Thanksgiving and run Saturdays and Sundays, 9am–5pm,* through the season. Maple orders and pickups can be arranged any time of year.</p>
+      <p><b>Whitetail Tree Farm, LLC</b><br>
+      1949 Pompey Center Road, Fabius, NY 13063<br>
+      <a href="tel:3153132972">(315) 313-2972</a></p>
+      <p style="margin-top:14px;font-size:.9rem;color:#5a6a52">Member, Christmas Tree Farmers Association of NY &amp; NYS Maple Producers Association. *Season dates, hours and prices shown are examples pending confirmation each year.</p>
+    </div>
+    <div class="signup">
+      <h3>Get opening-weekend &amp; maple updates</h3>
+      <p style="color:#dcecd5">Leave your email and we'll let you know when we open, when fresh syrup is bottled, and what's new at the shop.</p>
+      <form onsubmit="return false;">
+        <input type="email" placeholder="you@email.com">
+        <button>Keep me posted</button>
+      </form>
+      <p class="note">Demo signup for preview purposes. On the live site this builds Whitetail's email list.</p>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div>
+      <h4>Whitetail Tree Farm</h4>
+      <p>A family Christmas tree farm &amp; sugarhouse on 75+ acres in Fabius, NY. Keep it real, keep it green.</p>
+    </div>
+    <div>
+      <h4>Visit</h4>
+      <p>1949 Pompey Center Road<br>Fabius, NY 13063<br><a href="tel:3153132972">(315) 313-2972</a></p>
+    </div>
+    <div>
+      <h4>Follow along</h4>
+      <p>Instagram: @whitetail_tree_farm<br>Facebook: Whitetail Tree Farm</p>
+    </div>
+  </div>
+  <div class="fine">© Whitetail Tree Farm, LLC · Fabius, NY. Preview concept prepared by Onyx Rise Media. Season dates, hours, product sizes and pricing to be confirmed with the owners before publishing.</div>
+</div></footer>
+
+</body>
+</html>

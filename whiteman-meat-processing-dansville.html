@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whiteman Meat Processing — Custom Cutting &amp; Freezer Bundles | Dansville, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#8f2b26;--red-d:#6d1f1c;--char:#2a2320;--cream:#f7f0e3;--paper:#fdf9f0;--gold:#c9922e;--line:#e2d6c1;--ink:#2b221e}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Karla',sans-serif;color:var(--ink);line-height:1.6;background:var(--paper)}
+h1,h2,h3,.disp{font-family:'Zilla Slab',serif;line-height:1.12}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+.btn{display:inline-block;background:var(--red);color:#fff;font-weight:700;padding:14px 28px;border-radius:4px;text-decoration:none;transition:.15s;letter-spacing:.02em}
+.btn:hover{background:var(--red-d)}
+.btn-out{background:transparent;border:2px solid #fff;color:#fff}
+.btn-out:hover{background:#fff;color:var(--red)}
+.topbar{background:var(--char);color:#f0e6d4;font-size:.87rem;padding:9px 0}
+.topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.topbar b{color:var(--gold)}
+nav{background:var(--red);position:sticky;top:0;z-index:20}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
+.brand{font-family:'Zilla Slab';color:#fff;font-weight:700;font-size:1.24rem;letter-spacing:.02em}
+.brand small{display:block;font-family:'Karla';font-weight:600;font-size:.62rem;letter-spacing:.22em;color:#f3d9a6}
+.navlinks a{color:#fbe9e8;text-decoration:none;margin-left:20px;font-weight:600;font-size:.93rem}
+.navlinks a:hover{color:#fff;text-decoration:underline}
+@media(max-width:780px){.navlinks{display:none}}
+.hero{background:linear-gradient(rgba(42,35,32,.8),rgba(42,35,32,.86)),url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><rect width="40" height="40" fill="%232a2320"/><circle cx="20" cy="20" r="1.3" fill="%23554741"/></svg>');color:#fff;padding:94px 0 84px}
+.hero .kick{font-family:'Karla';font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-size:.86rem;margin-bottom:15px}
+.hero h1{font-size:3rem;font-weight:700;max-width:18ch;margin-bottom:18px}
+.hero p{font-size:1.16rem;max-width:52ch;color:#eaded0;margin-bottom:28px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:600px){.hero h1{font-size:2.15rem}}
+.strip{background:var(--gold);color:var(--char)}
+.strip .wrap{display:flex;flex-wrap:wrap;justify-content:space-around;gap:12px;padding:16px 22px;font-weight:700;font-family:'Zilla Slab';text-align:center;font-size:1.02rem}
+section{padding:66px 0}
+.eyebrow{color:var(--red);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.84rem;margin-bottom:9px}
+h2.head{font-size:2.1rem;color:var(--char);margin-bottom:12px}
+.lead{font-size:1.07rem;color:#5c4c44;max-width:60ch;margin-bottom:34px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+@media(max-width:760px){.split{grid-template-columns:1fr}}
+.panel{background:#fff;border:1px solid var(--line);border-radius:9px;padding:30px 30px}
+.panel h3{font-size:1.35rem;color:var(--red);margin-bottom:8px}
+.panel ul{list-style:none;margin-top:14px}
+.panel li{padding:8px 0 8px 26px;position:relative;border-bottom:1px dashed var(--line);font-size:.98rem}
+.panel li:before{content:"";position:absolute;left:0;top:14px;width:11px;height:11px;background:var(--red);border-radius:2px;transform:rotate(45deg)}
+.panel li:last-child{border-bottom:none}
+.bundles{background:var(--cream)}
+.bgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.bundle{background:#fff;border:1px solid var(--line);border-top:5px solid var(--red);border-radius:8px;padding:26px 24px}
+.bundle h3{font-size:1.2rem;color:var(--char);margin-bottom:6px}
+.bundle .price{font-family:'Zilla Slab';font-weight:700;color:var(--red);font-size:1.05rem;margin-bottom:10px}
+.bundle p{font-size:.95rem;color:#5c4c44}
+.tag{display:inline-block;background:#f4e7cf;color:#8a6a1f;font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:20px;letter-spacing:.04em;margin-top:12px}
+.order{background:var(--char);color:#fff}
+.obox{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.obox h2{font-size:2rem;margin-bottom:12px}
+.obox p{color:#d6cabc;margin-bottom:16px}
+.obox .ph{font-family:'Zilla Slab';font-weight:700;font-size:2rem;color:var(--gold)}
+form{background:#fff;border-radius:9px;padding:30px 28px;display:grid;gap:13px}
+label{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#5c4c44}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:5px;font-family:inherit;font-size:.97rem;margin-top:5px;color:var(--ink)}
+textarea{min-height:76px;resize:vertical}
+@media(max-width:760px){.obox{grid-template-columns:1fr}}
+footer{background:#1f1916;color:#a8988c;padding:42px 0;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}
+footer b{color:#fff;font-family:'Zilla Slab';font-size:1.05rem}
+footer a{color:var(--gold);text-decoration:none}
+.note{background:#f6eeda;border-top:1px solid var(--cream);color:#8a6a3c;font-size:.8rem;text-align:center;padding:10px}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>Custom cutting &amp; freezer bundles &middot; Dansville, NY</span><span>Call ahead: <b>(585) 335-5230</b></span></div></div>
+<nav><div class="wrap"><div class="brand">WHITEMAN MEAT PROCESSING<small>DANSVILLE, NEW YORK &middot; SINCE 1970</small></div>
+<div class="navlinks"><a href="#processing">Processing</a><a href="#bundles">Freezer Bundles</a><a href="#order">Order</a></div></div></nav>
+
+<header class="hero"><div class="wrap">
+<div class="kick">Family butcher &middot; 56 years on Dock Street</div>
+<h1>Custom cut, wrapped, and frozen the way your grandfather ordered it.</h1>
+<p>Whether you're bringing in a steer for the season or feeding a camper full of hungry kids, the counter at Whiteman's still does it by hand — and calls you when it's ready.</p>
+<div class="cta-row"><a class="btn" href="#order">Call-Ahead Order</a><a class="btn btn-out" href="tel:+15853355230">Call (585) 335-5230</a></div>
+</div></header>
+
+<div class="strip"><div class="wrap">
+<span>Beef &middot; Pork &middot; Deer</span><span>Cut &middot; Wrapped &middot; Frozen</span><span>Freezer bundles for the season</span><span>Family-run since 1970</span>
+</div></div>
+
+<section id="processing"><div class="wrap">
+<div class="eyebrow">For farmers &amp; hunters</div>
+<h2 class="head">Bring it in — we'll cut it your way.</h2>
+<p class="lead">Two counters, two kinds of customer. If you raise it or hunt it, this is where it gets turned into a freezer full of dinners cut to your instructions.</p>
+<div class="split">
+<div class="panel"><h3>Custom Livestock Processing</h3><p>Drop off your beef or hogs and tell us how you want them cut. We handle it start to finish and wrap it to last.</p>
+<ul><li>Beef &amp; pork, cut to your sheet</li><li>Steaks, roasts, ground, and specialty cuts</li><li>Vacuum or paper wrap, labeled &amp; dated</li><li>Sharp-frozen and ready for pickup</li></ul></div>
+<div class="panel"><h3>Deer &amp; Game (Season)</h3><p>Come fall, we take in deer and turn your harvest around — from simple cut-and-wrap to ground and specialty processing.</p>
+<ul><li>Cut, wrap &amp; freeze your deer</li><li>Ground venison &amp; specialty options</li><li>Call ahead to reserve a season slot</li><li>Local, no-shipping-away drop-off</li></ul></div>
+</div>
+</div></section>
+
+<section class="bundles" id="bundles"><div class="wrap">
+<div class="eyebrow">For your freezer</div>
+<h2 class="head">Bundles that fill the chest freezer.</h2>
+<p class="lead">Pre-built packs of the cuts families actually eat — priced by the bundle, ready at the counter. Ask what's in this month's packs when you call.</p>
+<div class="bgrid">
+<div class="bundle"><h3>Family Freezer Bundle</h3><div class="price">Ask for current price</div><p>A mixed pack of beef and pork cuts — roasts, steaks, chops, and ground — sized to stock a freezer for weeks. <span class="tag">Price to confirm</span></p></div>
+<div class="bundle"><h3>Camper / Cookout Pack</h3><div class="price">Ask for current price</div><p>Burgers, dogs, brats, and grill-ready cuts for a weekend at the lake or the campground. <span class="tag">Price to confirm</span></p></div>
+<div class="bundle"><h3>Grill &amp; BBQ Pack</h3><div class="price">Ask for current price</div><p>Steaks, chops, ribs, and sausage built for the smoker and the grill. <span class="tag">Price to confirm</span></p></div>
+</div>
+</div></section>
+
+<section class="order" id="order"><div class="wrap">
+<div class="obox">
+<div>
+<h2>Call ahead and it'll be ready.</h2>
+<p>Reserve a bundle, ask what's in this week's packs, or set up a processing drop-off. Leave your details and we'll ring you back to confirm.</p>
+<p>Or just call the counter:</p>
+<div class="ph">(585) 335-5230</div>
+</div>
+<form onsubmit="event.preventDefault();this.reset();alert('Thanks — the counter will call you back to confirm. (Demo preview form.)');">
+<div><label>Name</label><input required></div>
+<div><label>Phone</label><input required type="tel"></div>
+<div><label>What do you need?</label><select><option>Reserve a freezer bundle</option><option>Camper / cookout pack</option><option>Grill / BBQ pack</option><option>Schedule livestock processing</option><option>Reserve a deer-season slot</option><option>Question for the counter</option></select></div>
+<div><label>Details</label><textarea placeholder="Which bundle, how much, or when you want to drop off."></textarea></div>
+<button class="btn" type="submit">Send My Order</button>
+</form>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<div><b>WHITEMAN MEAT PROCESSING</b><br>3 Dock Street, Dansville, NY 14437<br>Steuben County &middot; Family-run since 1970</div>
+<div>Custom cutting &middot; Freezer bundles &middot; Deer season<br><a href="tel:+15853355230">(585) 335-5230</a><br>Call ahead for hours</div>
+</div></footer>
+<div class="note">Preview concept built by Onyx Rise Media for review. Bundle contents and prices shown as placeholders to confirm with the owner; hours to be verified.</div>
+</body>
+</html>

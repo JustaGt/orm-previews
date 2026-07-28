@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frank J. Marianacci Inc. — Excavation & Septic Systems | Bloomfield, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--slate:#20262b;--steel:#3a444d;--amber:#f0a500;--amber-d:#c9871a;--fog:#eef1f3;--line:#cfd6db;--ink:#1a1f23;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Roboto',sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+h1,h2,h3,.disp{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.08}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+.btn{display:inline-block;background:var(--amber);color:var(--slate);font-family:'Oswald',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:15px 30px;border-radius:3px;text-decoration:none;font-size:1.02rem;transition:.15s}
+.btn:hover{background:var(--amber-d)}
+.btn-ghost{background:transparent;border:2px solid var(--amber);color:#fff}
+.btn-ghost:hover{background:var(--amber);color:var(--slate)}
+/* top bar */
+.topbar{background:var(--slate);color:#fff;font-size:.86rem;padding:8px 0}
+.topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.topbar b{color:var(--amber)}
+/* nav */
+nav{background:var(--steel);position:sticky;top:0;z-index:20;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
+.brand{font-family:'Oswald';color:#fff;font-weight:700;font-size:1.25rem;letter-spacing:.04em}
+.brand span{color:var(--amber)}
+.navlinks a{color:#dfe4e8;text-decoration:none;font-family:'Oswald';text-transform:uppercase;font-size:.9rem;margin-left:22px;letter-spacing:.03em}
+.navlinks a:hover{color:var(--amber)}
+@media(max-width:760px){.navlinks{display:none}}
+/* hero */
+.hero{background:linear-gradient(rgba(20,26,31,.82),rgba(20,26,31,.9)),url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"><rect width="60" height="60" fill="%2320262b"/><path d="M0 30h60M30 0v60" stroke="%2f333b42" stroke-width="1"/></svg>');color:#fff;padding:92px 0 84px}
+.hero .kick{color:var(--amber);font-family:'Oswald';letter-spacing:.14em;text-transform:uppercase;font-weight:600;font-size:.95rem;margin-bottom:16px}
+.hero h1{font-size:3.15rem;font-weight:700;max-width:15ch;margin-bottom:20px}
+.hero p{font-size:1.2rem;max-width:52ch;color:#d5dade;margin-bottom:30px}
+.hero .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+@media(max-width:600px){.hero h1{font-size:2.25rem}}
+/* stats */
+.stats{background:var(--amber);color:var(--slate)}
+.stats .wrap{display:flex;flex-wrap:wrap;justify-content:space-around;padding:26px 22px;gap:16px;text-align:center}
+.stat b{font-family:'Oswald';font-size:2.3rem;display:block;line-height:1}
+.stat span{font-family:'Oswald';text-transform:uppercase;font-size:.82rem;letter-spacing:.08em}
+/* sections */
+section{padding:70px 0}
+.eyebrow{color:var(--amber-d);font-family:'Oswald';letter-spacing:.12em;text-transform:uppercase;font-weight:600;font-size:.88rem;margin-bottom:10px}
+h2.head{font-size:2.2rem;color:var(--slate);margin-bottom:14px}
+.lead{font-size:1.1rem;color:var(--steel);max-width:60ch;margin-bottom:38px}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.svc{border:1px solid var(--line);border-top:4px solid var(--amber);border-radius:5px;padding:26px 24px;background:#fff;transition:.15s}
+.svc:hover{box-shadow:0 10px 26px rgba(20,26,31,.12);transform:translateY(-3px)}
+.svc h3{font-size:1.15rem;color:var(--slate);margin-bottom:8px}
+.svc p{font-size:.96rem;color:#4c565d}
+/* why */
+.why{background:var(--slate);color:#fff}
+.why h2.head{color:#fff}
+.why .lead{color:#c4ccd2}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px;margin-top:14px}
+.why-item{display:flex;gap:14px;align-items:flex-start}
+.why-item .n{font-family:'Oswald';color:var(--amber);font-size:1.6rem;font-weight:700;line-height:1}
+.why-item h3{font-size:1.05rem;margin-bottom:5px}
+.why-item p{font-size:.95rem;color:#c4ccd2}
+/* area */
+.area .towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.area .towns span{background:var(--fog);border:1px solid var(--line);border-radius:20px;padding:7px 16px;font-size:.92rem;font-weight:500;color:var(--steel)}
+/* quote */
+.quote{background:var(--fog)}
+.qbox{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.qbox .side{background:var(--slate);color:#fff;padding:44px 38px}
+.qbox .side h2{font-size:1.9rem;margin-bottom:14px}
+.qbox .side p{color:#c4ccd2;margin-bottom:22px}
+.qbox .side .ph{font-family:'Oswald';font-size:1.7rem;color:var(--amber)}
+form{padding:40px 36px;display:grid;gap:14px}
+label{font-size:.82rem;font-family:'Oswald';text-transform:uppercase;letter-spacing:.05em;color:var(--steel)}
+input,select,textarea{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:4px;font-family:inherit;font-size:.98rem;margin-top:5px}
+textarea{min-height:90px;resize:vertical}
+@media(max-width:760px){.qbox{grid-template-columns:1fr}}
+/* footer */
+footer{background:#14191d;color:#9aa4ab;padding:44px 0;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px}
+footer b{color:#fff;font-family:'Oswald';font-size:1.1rem}
+footer a{color:var(--amber);text-decoration:none}
+.note{background:#fff7e6;border-top:1px solid var(--amber);color:#7a5b12;font-size:.8rem;text-align:center;padding:10px}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>Site work &amp; septic systems across Ontario County</span><span>Call the yard: <b>(585) 657-6187</b></span></div></div>
+<nav><div class="wrap"><div class="brand">FRANK J. <span>MARIANACCI</span> INC.</div>
+<div class="navlinks"><a href="#services">Services</a><a href="#why">Since 1971</a><a href="#area">Service Area</a><a href="#quote">Get a Quote</a></div></div></nav>
+
+<header class="hero"><div class="wrap">
+<div class="kick">Bloomfield, NY &middot; Excavation &amp; Septic Since 1971</div>
+<h1>Fifty years of moving Ontario County dirt.</h1>
+<p>From a new-home foundation to a failed septic on the lake, Marianacci brings the iron, the crew, and half a century of knowing exactly how this ground drains.</p>
+<div class="cta-row"><a class="btn" href="#quote">Request a Quote</a><a class="btn btn-ghost" href="tel:+15856576187">Call (585) 657-6187</a></div>
+</div></header>
+
+<div class="stats"><div class="wrap">
+<div class="stat"><b>1971</b><span>Digging since</span></div>
+<div class="stat"><b>50+ yrs</b><span>Ontario County jobs</span></div>
+<div class="stat"><b>30</b><span>On the crew</span></div>
+<div class="stat"><b>Listed</b><span>Keuka Watershed septic installer</span></div>
+</div></div>
+
+<section id="services"><div class="wrap">
+<div class="eyebrow">What the crew does</div>
+<h2 class="head">Site work, septic, and everything under the slab.</h2>
+<p class="lead">One outfit for the whole job — clear it, dig it, set the system, and grade it back out. No handing your site off to three subs who don't talk to each other.</p>
+<div class="svc-grid">
+<div class="svc"><h3>Septic Systems</h3><p>New installs, replacements, and repairs — including engineered systems for lakefront and Keuka watershed lots where the rules are strict and the soil isn't forgiving.</p></div>
+<div class="svc"><h3>Site Work &amp; Excavation</h3><p>Clearing, digging, and rough-to-finish grading for new builds, additions, and commercial pads across the county.</p></div>
+<div class="svc"><h3>Foundations &amp; Footings</h3><p>Excavation, backfill, and drainage for basements and foundations built to hold on hill-country ground.</p></div>
+<div class="svc"><h3>Ponds &amp; Drainage</h3><p>Farm and property ponds, culverts, ditching, and drainage that keeps water off your barn floor and out of your basement.</p></div>
+<div class="svc"><h3>Driveways &amp; Private Roads</h3><p>Stone driveways and access roads shaped, based, and crowned to survive Finger Lakes freeze-thaw.</p></div>
+<div class="svc"><h3>Demolition &amp; Cleanup</h3><p>Tear-downs, old-tank removals, and haul-off so a site is clean and level before the next crew shows up.</p></div>
+</div>
+</div></section>
+
+<section class="why" id="why"><div class="wrap">
+<div class="eyebrow" style="color:var(--amber)">Why builders keep calling</div>
+<h2 class="head">A yard, a fleet, and a name people have trusted since 1971.</h2>
+<p class="lead">Plenty of guys with a rented mini-ex will bid your job. Marianacci has been doing this before most of them were born — and is still here to stand behind it.</p>
+<div class="why-grid">
+<div class="why-item"><div class="n">01</div><div><h3>Watershed-approved septic</h3><p>Listed on the Keuka Watershed Improvement Cooperative's installer roster — the crews municipalities and lake associations expect.</p></div></div>
+<div class="why-item"><div class="n">02</div><div><h3>Owned equipment</h3><p>A real fleet and a full crew means your job runs on our schedule, not on when a rental yard has a machine.</p></div></div>
+<div class="why-item"><div class="n">03</div><div><h3>Local ground knowledge</h3><p>Fifty years reading Ontario County clay, hardpan, and hillside water. We know how this dirt behaves before the first cut.</p></div></div>
+<div class="why-item"><div class="n">04</div><div><h3>One accountable outfit</h3><p>Same company from clearing to final grade. If something needs fixing, you call the people who dug it.</p></div></div>
+</div>
+</div></section>
+
+<section class="area" id="area"><div class="wrap">
+<div class="eyebrow">Where we work</div>
+<h2 class="head">Ontario County and the lake towns.</h2>
+<p class="lead">Based on Eddy Road in Bloomfield, working the towns around Canandaigua Lake and out into the county line.</p>
+<div class="towns"><span>Bloomfield</span><span>Canandaigua</span><span>East Bloomfield</span><span>Holcomb</span><span>Bristol</span><span>Cheshire</span><span>Victor</span><span>Farmington</span><span>Honeoye</span><span>Naples</span><span>West Bloomfield</span><span>Keuka watershed lots</span></div>
+</div></section>
+
+<section class="quote" id="quote"><div class="wrap">
+<div class="qbox">
+<div class="side">
+<h2>Tell us what needs digging.</h2>
+<p>New build, a septic that's backing up, a driveway that's washing out — send the details and the yard will get back to you with next steps and a time to look at it.</p>
+<div>Or just call the yard:</div>
+<div class="ph">(585) 657-6187</div>
+</div>
+<form onsubmit="event.preventDefault();this.reset();alert('Thanks — the office will follow up. (Demo preview form.)');">
+<div><label>Name</label><input required></div>
+<div><label>Phone</label><input required type="tel"></div>
+<div><label>Property town</label><input placeholder="e.g. Bloomfield"></div>
+<div><label>What's the job?</label><select><option>Septic — new install</option><option>Septic — repair / replace</option><option>Site work / excavation</option><option>Foundation</option><option>Driveway / road</option><option>Pond / drainage</option><option>Demolition</option><option>Something else</option></select></div>
+<div><label>Details</label><textarea placeholder="Tell us about the site, timing, and access."></textarea></div>
+<button class="btn" type="submit">Request a Quote</button>
+</form>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<div><b>FRANK J. MARIANACCI INC.</b><br>Eddy Road, Bloomfield, NY 14469<br>Ontario County</div>
+<div>Excavation &middot; Septic Systems &middot; Site Work<br>Serving Ontario County since 1971<br><a href="tel:+15856576187">(585) 657-6187</a></div>
+</div></footer>
+<div class="note">Preview concept built by Onyx Rise Media for review. Company details from public listings; hours and any specifics to be confirmed with the owner.</div>
+</body>
+</html>

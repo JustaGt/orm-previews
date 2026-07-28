@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ragusa's Repair — Truck, Diesel & Farm Equipment Repair | Genoa, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600;700&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --graph:#17191b; --graph2:#212528; --haz:#ffd23a; --haz2:#ffe27a;
+    --line:#33383c; --ink:#eceef0; --mut:#9aa1a7; --paper:#f3f4f5; --red:#e6522c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Archivo',sans-serif;background:var(--graph);color:var(--ink);line-height:1.6}
+  h1,h2,h3,.disp{font-family:'Archivo Narrow',sans-serif;text-transform:uppercase;letter-spacing:.4px;line-height:1.03}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .hazbar{height:12px;background:repeating-linear-gradient(135deg,var(--haz) 0 20px,#111 20px 40px)}
+  .top{position:sticky;top:0;z-index:20;background:rgba(23,25,27,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-family:'Archivo Narrow';font-weight:700;font-size:1.4rem;letter-spacing:1px}
+  .brand b{color:var(--haz)}
+  .top a.call{background:var(--haz);color:#1a1600;font-family:'Archivo Narrow';font-weight:700;padding:9px 16px;border-radius:4px;text-decoration:none;letter-spacing:.5px}
+  .hero{padding:76px 0 62px;background:radial-gradient(circle at 82% 10%,rgba(255,210,58,.12),transparent 45%),linear-gradient(180deg,#141618,#1c2023);border-bottom:1px solid var(--line)}
+  .eyebrow{color:var(--haz2);font-family:'Archivo Narrow';font-weight:700;letter-spacing:3px;font-size:.82rem}
+  .hero h1{font-size:clamp(2.1rem,5.4vw,3.9rem);margin:12px 0 16px;max-width:15ch}
+  .hero h1 em{color:var(--haz);font-style:normal}
+  .hero p{font-size:1.16rem;color:var(--mut);max-width:600px}
+  .cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{font-family:'Archivo Narrow';font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:1.05rem;padding:14px 26px;border-radius:5px;text-decoration:none;display:inline-block}
+  .btn-h{background:var(--haz);color:#1a1600}
+  .btn-g{border:1px solid var(--line);color:var(--ink)}
+  section{padding:62px 0}
+  .kicker{color:var(--haz2);font-family:'Archivo Narrow';font-weight:700;letter-spacing:3px;font-size:.8rem}
+  h2.sec{font-size:clamp(1.7rem,3.8vw,2.5rem);margin:8px 0 26px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:15px}
+  .card{background:var(--graph2);border:1px solid var(--line);border-radius:9px;padding:22px 20px}
+  .card h3{color:#fff;font-size:1.18rem;margin-bottom:7px}
+  .card p{color:var(--mut);font-size:.95rem}
+  .card .n{font-family:'Archivo Narrow';color:var(--haz);font-size:1.2rem}
+  /* mobile band */
+  .mob{background:linear-gradient(90deg,#2a2202,#1c1a08);border-top:1px solid #4a3f10;border-bottom:1px solid #4a3f10}
+  .mob .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:center}
+  .mob h2{color:var(--haz);font-size:clamp(1.6rem,3.6vw,2.3rem);margin-bottom:10px}
+  .mob p{color:#e5dcb6}
+  .mob .call2{background:var(--haz);color:#1a1600;font-family:'Archivo Narrow';font-weight:700;font-size:1.5rem;padding:16px;border-radius:9px;text-align:center;text-decoration:none;display:block;letter-spacing:1px}
+  /* reviews */
+  .rev{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+  .q{background:var(--graph2);border:1px solid var(--line);border-left:4px solid var(--haz);border-radius:0 10px 10px 0;padding:22px}
+  .q p{color:#e7e9eb;font-size:1.02rem}
+  .q .stars{color:var(--haz);letter-spacing:2px;margin-bottom:8px}
+  .q .src{color:var(--mut);font-size:.82rem;margin-top:10px;font-style:italic}
+  /* contact */
+  .contact{background:linear-gradient(180deg,#1c2023,#141618)}
+  .cbox{background:var(--graph2);border:1px solid var(--line);border-radius:12px;padding:34px;text-align:center}
+  .cbox h2{font-size:clamp(1.7rem,4.4vw,2.5rem)}
+  .cbox .num{font-family:'Archivo Narrow';font-size:clamp(2rem,7vw,3.2rem);color:var(--haz);margin:10px 0;letter-spacing:1px}
+  .cbox p{color:var(--mut)}
+  footer{padding:28px 0;border-top:1px solid var(--line);text-align:center;color:var(--mut);font-size:.85rem}
+  .ph{color:#767d83;font-style:italic;font-size:.82rem}
+  @media(max-width:760px){.mob .wrap{grid-template-columns:1fr}.top a.call{display:none}}
+</style>
+</head>
+<body>
+<div class="hazbar"></div>
+<div class="top"><div class="wrap">
+  <div class="brand">RAGUSA'S <b>REPAIR</b></div>
+  <a class="call" href="tel:+13153648633">(315) 364-8633</a>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">GENOA, NY · SOUTHERN CAYUGA FARM BELT</div>
+  <h1>Truck, diesel and equipment repair — <em>including the electrical gremlins nobody else will chase.</em></h1>
+  <p>Owner-run shop on Bartnick Road fixing farm trucks, diesels, tractors and pickups. Honest quotes, hard jobs taken on, and wiring problems actually diagnosed instead of parts thrown at them.</p>
+  <div class="cta">
+    <a class="btn btn-h" href="tel:+13153648633">Call Ragusa's</a>
+    <a class="btn btn-g" href="#find">Shop location</a>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <div class="kicker">WHAT WE FIX</div>
+  <h2 class="sec">Heavy trucks, diesels and the stuff that keeps a farm moving</h2>
+  <div class="grid">
+    <div class="card"><div class="n">01</div><h3>Diesel & Heavy Truck</h3><p>Engine, driveline and brake work on work trucks and owner-operator rigs that can't sit idle during harvest.</p></div>
+    <div class="card"><div class="n">02</div><h3>Electrical Diagnostics</h3><p>Wiring, sensors and no-start electrical faults tracked down — the jobs other shops give up on.</p></div>
+    <div class="card"><div class="n">03</div><h3>Farm Equipment</h3><p>Tractors and ag equipment repaired so the field work stays on schedule.</p></div>
+    <div class="card"><div class="n">04</div><h3>Auto & Light Truck</h3><p>Everyday car and pickup repair and maintenance for local drivers, at a fair local price.</p></div>
+  </div>
+</div></section>
+
+<section class="mob" id="find"><div class="wrap">
+  <div>
+    <div class="kicker" style="color:#e8d98a">DOWN ON THE ROAD OR IN THE FIELD?</div>
+    <h2>Mobile truck repair when it can't come to us</h2>
+    <p>When a truck is stuck at the farm or on the shoulder, Ragusa's is listed for mobile truck repair around Genoa. Call and tell us where it is and what it's doing.</p>
+  </div>
+  <a class="call2" href="tel:+13153648633">(315) 364-8633</a>
+</div></section>
+
+<section><div class="wrap">
+  <div class="kicker">WHAT PEOPLE SAY</div>
+  <h2 class="sec">Reviews the shop earned — pulled out of the directories</h2>
+  <div class="rev">
+    <div class="q"><div class="stars">★★★★★</div><p>"Great place for repairs. Caleb is smart as heck with electrical gremlins. These folks won't take advantage of you like some local repair shops."</p><div class="src">— Customer review, 2023</div></div>
+    <div class="q"><div class="stars">★★★★★</div><p>"Great guys and they aren't scared to take on any project."</p><div class="src">— Customer review, 2023</div></div>
+    <div class="q"><div class="stars">★★★★★</div><p>"Excellent people! Quality of work top notch!! Highly recommend!!"</p><div class="src">— Customer review, 2019</div></div>
+  </div>
+  <p style="margin-top:16px;color:var(--mut)">20+ reviews are currently scattered across Birdeye, Nextdoor and trucking directories. <span class="ph">On the live site they'll live in one place the shop controls.</span></p>
+</div></section>
+
+<section class="contact"><div class="wrap">
+  <div class="cbox">
+    <div class="kicker">GET IT LOOKED AT</div>
+    <h2>Bring it by or call ahead</h2>
+    <div class="num">(315) 364-8633</div>
+    <p style="max-width:520px;margin:0 auto">623 Bartnick Rd, Genoa, NY 13071. Tell us what it's doing — no-start, warning light, brakes, an electrical fault — and we'll tell you when to bring it in. Hours and a message form go here on the finished site.</p>
+    <p style="margin-top:10px;color:#7f868c"><span class="ph">Shop hours and best contact email to confirm with owner before publish.</span></p>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  Ragusa's Repair · 623 Bartnick Rd, Genoa, NY · (315) 364-8633<br>
+  <span class="ph">Preview concept prepared by Onyx Rise Media — not the business's live website.</span>
+</div></footer>
+
+</body>
+</html>

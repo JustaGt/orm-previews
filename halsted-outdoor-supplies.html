@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Halsted Outdoor Supplies — Bluestone, Stone & Landscape Material Yard | West Coxsackie, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --stone:#3f3a33; --char:#26241f; --tan:#c8a26a; --tan2:#a9834b;
+    --blue:#4f6d7a; --paper:#f4f1ea; --ink:#221f1a; --grey:#6a635a; --line:#ddd6c8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+  h1,h2,h3,.osw{font-family:'Oswald',sans-serif;letter-spacing:.5px;line-height:1.08;text-transform:uppercase}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--tan);color:#2a2013;font-family:'Oswald';font-weight:600;letter-spacing:1px;
+    text-transform:uppercase;padding:14px 26px;border-radius:3px;transition:background .15s}
+  .btn:hover{background:var(--tan2)}
+  .btn.dark{background:var(--char);color:#f4f1ea}
+  .btn.dark:hover{background:#000}
+
+  .topbar{background:var(--char);color:#d9d2c4;font-size:.86rem;font-weight:500}
+  .topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;padding:8px 22px}
+  .topbar b{color:var(--tan)}
+
+  header{background:var(--stone);color:#f1ece2;position:sticky;top:0;z-index:40;box-shadow:0 2px 12px rgba(0,0,0,.2)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:12px;flex-wrap:wrap}
+  .brand{font-family:'Oswald';font-weight:700;font-size:1.55rem;letter-spacing:1.5px}
+  .brand span{color:var(--tan)}
+  .nav nav{display:flex;gap:22px;font-family:'Oswald';font-weight:500;letter-spacing:1px;font-size:.9rem}
+  .nav nav a:hover{color:var(--tan)}
+
+  .hero{position:relative;color:#f4efe6;background:
+    linear-gradient(rgba(28,26,22,.72),rgba(28,26,22,.72)),
+    repeating-linear-gradient(135deg,#4a443b 0 26px,#544d43 26px 52px);
+    padding:72px 0}
+  .hero .tag{display:inline-block;border:1px solid var(--tan);color:var(--tan);font-family:'Oswald';letter-spacing:2px;
+    text-transform:uppercase;font-size:.76rem;padding:6px 13px;border-radius:2px;margin-bottom:20px}
+  .hero h1{font-size:3.5rem;font-weight:700;max-width:16ch}
+  .hero h1 em{color:var(--tan);font-style:normal}
+  .hero p{font-size:1.2rem;max-width:56ch;margin:18px 0 28px;color:#e2dccf;font-family:'Inter'}
+  .hero .row{display:flex;gap:14px;flex-wrap:wrap}
+
+  .quickstock{background:var(--paper);border-bottom:1px solid var(--line)}
+  .quickstock .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;text-align:center}
+  .quickstock .q{padding:20px 12px;border-right:1px solid var(--line)}
+  .quickstock .q:last-child{border-right:0}
+  .quickstock .q b{font-family:'Oswald';display:block;font-size:1.7rem;color:var(--stone)}
+  .quickstock .q small{color:var(--grey);font-weight:600;letter-spacing:.5px;text-transform:uppercase;font-size:.74rem}
+
+  section{padding:64px 0}
+  .ey{color:var(--tan2);font-family:'Oswald';font-weight:600;letter-spacing:3px;text-transform:uppercase;font-size:.8rem;margin-bottom:8px}
+  h2{font-size:2.5rem;font-weight:600;color:var(--stone)}
+  .lead{color:var(--grey);max-width:64ch;font-size:1.08rem;margin:8px 0 34px}
+
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .tile{border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff;transition:transform .12s,box-shadow .12s}
+  .tile:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(63,58,51,.14)}
+  .tile .swatch{height:96px;display:grid;place-items:center;color:#fff;font-family:'Oswald';letter-spacing:1px;font-size:.9rem;text-transform:uppercase}
+  .tile .body{padding:14px 16px}
+  .tile h3{font-size:1.12rem;color:var(--stone);margin-bottom:3px}
+  .tile p{font-size:.86rem;color:var(--grey)}
+  .s-blue{background:#4f6d7a} .s-flag{background:#7d7469} .s-mulch{background:#5a3d2b}
+  .s-grav{background:#8a8578;color:#2a2620} .s-boul{background:#66605a} .s-soil{background:#4b3b2a}
+  .s-pav{background:#9a8f7d;color:#2a2620} .s-wall{background:#6f665b}
+
+  .cut{background:var(--stone);color:#f1ece2}
+  .cut .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+  .cut h2{color:#fff} .cut .lead{color:#d6cfc2}
+  .cut ul{list-style:none;margin:6px 0 26px}
+  .cut li{padding:10px 0;border-bottom:1px dashed rgba(255,255,255,.18);font-weight:500}
+  .cut li::before{content:"▸";color:var(--tan);margin-right:10px}
+  .cutcard{background:#4a443b;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:28px}
+  .cutcard .big{font-family:'Oswald';font-size:2.1rem;color:var(--tan);line-height:1.1}
+
+  .pricing{background:var(--paper)}
+  .pricing .box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:30px;
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;box-shadow:0 8px 24px rgba(63,58,51,.06)}
+  .pricing .box p{color:var(--grey);max-width:48ch}
+
+  .deliver .map{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:24px;
+    display:flex;flex-wrap:wrap;gap:10px}
+  .deliver .map span{background:#fff;border:1px solid var(--line);border-radius:30px;padding:8px 15px;font-weight:600;color:var(--stone)}
+
+  .contact{background:var(--char);color:#e6e0d4}
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+  .contact h2{color:#fff}
+  .contact .det p{margin-bottom:10px;font-size:1.05rem}
+  .contact .det b{color:var(--tan)}
+  form label{display:block;font-family:'Oswald';letter-spacing:1px;color:#cfc7b8;margin-bottom:6px;font-size:.82rem;text-transform:uppercase}
+  form input,form textarea{width:100%;padding:12px 14px;border:1px solid #5a5348;border-radius:6px;background:#3a352d;color:#f1ece2;font:inherit;margin-bottom:15px}
+  form button{width:100%;border:0;cursor:pointer}
+
+  footer{background:#1c1a16;color:#a9a294;padding:30px 0;font-size:.88rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer b{color:#f1ece2}
+  .demo{background:var(--tan);color:#2a2013;text-align:center;font-size:.8rem;padding:7px;font-weight:600}
+
+  @media(max-width:860px){
+    .hero h1{font-size:2.5rem}.grid{grid-template-columns:repeat(2,1fr)}
+    .quickstock .wrap{grid-template-columns:repeat(2,1fr)}
+    .cut .wrap,.contact .wrap{grid-template-columns:1fr}
+    .nav nav{display:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo">Preview concept prepared by Onyx Rise Media for Halsted Outdoor Supplies — not the live site.</div>
+
+<div class="topbar"><div class="wrap">
+  <span>11779 Route 9W, West Coxsackie, NY 12192 · Delivery across NYS</span>
+  <span>Mon–Fri 7–4 · Sat 7–3 · <b>(518) 731-3900</b></span>
+</div></div>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">HALSTED <span>OUTDOOR</span></div>
+    <nav>
+      <a href="#stock">In the Yard</a>
+      <a href="#cut">Custom Bluestone</a>
+      <a href="#pricing">2026 Pricing</a>
+      <a href="#deliver">Delivery</a>
+      <a href="#contact">Get a Quote</a>
+    </nav>
+    <a class="btn" href="tel:15187313900">Call the Yard</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">West Coxsackie Stone & Landscape Yard</span>
+    <h1>Pallet-priced <em>bluestone</em>, boulders and screened topsoil — cut to size while you wait.</h1>
+    <p>Contractors and homeowners from Kingston to Albany load out of our 9W yard. See what's stocked, get 2026 pallet pricing up front, and have it on your job by the yard or by the truckload.</p>
+    <div class="row">
+      <a class="btn" href="#pricing">See 2026 pricing</a>
+      <a class="btn dark" href="#contact">Request a material quote</a>
+    </div>
+  </div>
+</section>
+
+<div class="quickstock"><div class="wrap">
+  <div class="q"><b>18+</b><small>Stone & hardscape lines</small></div>
+  <div class="q"><b>2"</b><small>Custom-cut bluestone slabs</small></div>
+  <div class="q"><b>NYS</b><small>Delivery statewide</small></div>
+  <div class="q"><b>Grade A</b><small>Screened dry topsoil</small></div>
+</div></div>
+
+<section id="stock">
+  <div class="wrap">
+    <div class="ey">What's on the ground today</div>
+    <h2>The material, not stock photos.</h2>
+    <p class="lead">Everything below is stocked at the West Coxsackie yard and sold by the piece, pallet or yard. Authorized dealer for Keystone Hardscapes, MSI and Rosetta.</p>
+    <div class="grid">
+      <div class="tile"><div class="swatch s-blue">Bluestone</div><div class="body"><h3>Bluestone</h3><p>Natural cleft, thermal & pattern — pallets and individual pieces.</p></div></div>
+      <div class="tile"><div class="swatch s-flag">Flagstone</div><div class="body"><h3>Flagstone & Slate</h3><p>Irregular and cut flag for patios and walks.</p></div></div>
+      <div class="tile"><div class="swatch s-pav">Pavers</div><div class="body"><h3>Pavers & Belgian Block</h3><p>Keystone Hardscapes walls, pavers and edging.</p></div></div>
+      <div class="tile"><div class="swatch s-wall">Wallstone</div><div class="body"><h3>Wallstone & Steps</h3><p>Retaining wall stone, treads, benches and boulders.</p></div></div>
+      <div class="tile"><div class="swatch s-grav">Stone</div><div class="body"><h3>Gravel & Decorative Stone</h3><p>River-washed gravel, crushed stone, decorative blends.</p></div></div>
+      <div class="tile"><div class="swatch s-mulch">Mulch</div><div class="body"><h3>Mulch</h3><p>Natural and dyed mulch by the yard, delivered.</p></div></div>
+      <div class="tile"><div class="swatch s-soil">Topsoil</div><div class="body"><h3>Topsoil & Compost</h3><p>Grade A screened topsoil, kept dry and enclosed; compost.</p></div></div>
+      <div class="tile"><div class="swatch s-boul">Sand</div><div class="body"><h3>Sand & Grass Seed</h3><p>Mason & bedding sand; grass seed from 10 lb to 50 lb.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="cut" class="cut">
+  <div class="wrap">
+    <div>
+      <div class="ey" style="color:var(--tan)">Not just a stockyard</div>
+      <h2>Custom bluestone cutting & fabrication</h2>
+      <p class="lead">Bring a drawing or a measurement — we cut 2" bluestone slabs to size in the yard for the jobs that don't fit a pallet.</p>
+      <ul>
+        <li>Bluestone countertops for outdoor kitchens</li>
+        <li>Stair treads and cap stones cut to length</li>
+        <li>Premium limestone curbing &amp; guillotine standing wall</li>
+        <li>Cultured stone, porcelain & waterproof tile lines</li>
+      </ul>
+      <a class="btn" href="#contact">Ask about a cut piece</a>
+    </div>
+    <div class="cutcard">
+      <div class="big">"Send us the size —<br>we'll cut the stone<br>to match it."</div>
+      <p style="margin-top:16px;color:#d6cfc2">Custom fabrication is the part most yards send you elsewhere for. Ours happens on site at West Coxsackie.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="pricing">
+  <div class="wrap">
+    <div class="ey">No guessing</div>
+    <h2>2026 pricing, published.</h2>
+    <p class="lead">Bluestone and palletized pricing you can check before you drive out. Contractors: ask about volume rates.</p>
+    <div class="box">
+      <p>Our current price sheet lists bluestone, palletized stone, mulch, topsoil and delivery — updated for the 2026 season. Bring square footage and we'll size the order over the phone.</p>
+      <a class="btn dark" href="tel:15187313900">Call for the 2026 price sheet</a>
+    </div>
+  </div>
+</section>
+
+<section id="deliver" class="deliver">
+  <div class="wrap">
+    <div class="ey">On your job, not just in the yard</div>
+    <h2>We deliver across New York State.</h2>
+    <p class="lead">Regular runs through the Hudson Valley and Capital District. If it's in inventory, it's on its way.</p>
+    <div class="map">
+      <span>West Coxsackie</span><span>Greene County</span><span>Kingston</span><span>Woodstock</span>
+      <span>Saugerties</span><span>Albany</span><span>Hunter</span><span>New Paltz</span>
+      <span>Gilboa</span><span>Cohoes</span><span>Dutchess County</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="det">
+      <div class="ey" style="color:var(--tan)">Quote your material</div>
+      <h2>Tell us the job — we'll price the load.</h2>
+      <p><b>Yard:</b> 11779 Route 9W, West Coxsackie, NY 12192</p>
+      <p><b>Manager:</b> John Jeune</p>
+      <p><b>Phone:</b> (518) 731-3900 · Cell (201) 937-1028</p>
+      <p><b>Email:</b> halstedoutdoors@aol.com</p>
+      <p><b>Hours:</b> Mon–Fri 7–4 · Sat 7–3 · Sun closed</p>
+    </div>
+    <div>
+      <form onsubmit="return false">
+        <label>Name</label><input type="text" placeholder="Your name">
+        <label>Phone or email</label><input type="text" placeholder="How we reach you">
+        <label>What do you need?</label><textarea rows="4" placeholder="Material, rough quantity, delivery town, and whether you need a custom cut…"></textarea>
+        <button class="btn" type="submit">Request material quote</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>Halsted Outdoor Supplies, LLC</b><br>11779 Route 9W, West Coxsackie, NY 12192</div>
+    <div>Keystone Hardscapes · MSI · Rosetta dealer<br><b><a href="tel:15187313900">(518) 731-3900</a></b> · halstedoutdoors@aol.com</div>
+  </div>
+</footer>
+
+</body>
+</html>

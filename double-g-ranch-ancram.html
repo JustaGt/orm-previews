@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Double G Ranch — Horse Boarding on the Roe Jan | Ancram, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--hunter:#20362a;--hunter-d:#16261d;--moss:#5a6b4a;--brass:#b08933;--brass-d:#8f6d24;--oat:#f3eee2;--paper:#faf7ef;--bark:#4a3a2c;--line:#ddd3bf;--ink:#2b2a24;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Karla',sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+h1,h2,h3,.disp{font-family:'Cormorant Garamond',serif;line-height:1.1;letter-spacing:.01em}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+.btn{display:inline-block;background:var(--brass);color:#fff;font-family:'Karla';font-weight:700;letter-spacing:.04em;padding:14px 30px;border-radius:2px;text-decoration:none;font-size:.98rem;transition:.15s;text-transform:uppercase}
+.btn:hover{background:var(--brass-d)}
+.btn-ghost{background:transparent;border:1.5px solid rgba(255,255,255,.7);color:#fff}
+.btn-ghost:hover{background:#fff;color:var(--hunter)}
+.topbar{background:var(--hunter-d);color:#e7e2d2;font-size:.85rem;padding:8px 0}
+.topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.topbar b{color:var(--brass)}
+nav{background:var(--hunter);position:sticky;top:0;z-index:20;box-shadow:0 2px 12px rgba(0,0,0,.2)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:16px 22px}
+.brand{font-family:'Cormorant Garamond';color:#fff;font-weight:700;font-size:1.5rem;letter-spacing:.02em}
+.brand span{color:var(--brass)}
+.navlinks a{color:#e2e6dc;text-decoration:none;font-weight:600;font-size:.88rem;margin-left:24px;letter-spacing:.02em}
+.navlinks a:hover{color:var(--brass)}
+@media(max-width:760px){.navlinks{display:none}}
+.hero{background:linear-gradient(rgba(22,38,29,.72),rgba(22,38,29,.86)),url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80"><rect width="80" height="80" fill="%2320362a"/><path d="M0 40h80M40 0v80" stroke="%232b4636" stroke-width="1"/></svg>');color:#fff;padding:104px 0 92px}
+.hero .kick{color:var(--brass);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:.82rem;margin-bottom:18px}
+.hero h1{font-size:3.7rem;font-weight:700;max-width:16ch;margin-bottom:20px}
+.hero p{font-size:1.2rem;max-width:50ch;color:#e3e6dd;margin-bottom:30px;font-weight:400}
+.hero .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+@media(max-width:600px){.hero h1{font-size:2.5rem}}
+.strip{background:var(--oat);border-bottom:1px solid var(--line)}
+.strip .wrap{display:flex;flex-wrap:wrap;justify-content:space-around;padding:24px 22px;gap:16px;text-align:center}
+.strip .s b{font-family:'Cormorant Garamond';font-size:2.1rem;font-weight:700;display:block;line-height:1;color:var(--hunter)}
+.strip .s span{font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--moss);font-weight:600}
+section{padding:74px 0}
+.eyebrow{color:var(--brass-d);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.82rem;margin-bottom:12px}
+h2.head{font-size:2.6rem;color:var(--hunter);margin-bottom:14px;font-weight:700}
+.lead{font-size:1.12rem;color:#54524a;max-width:58ch;margin-bottom:40px}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:20px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:6px;padding:28px 26px;transition:.15s}
+.svc:hover{box-shadow:0 12px 28px rgba(32,54,42,.12);transform:translateY(-3px)}
+.svc h3{font-size:1.5rem;color:var(--hunter);margin-bottom:8px;font-weight:600}
+.svc p{font-size:.97rem;color:#55534b}
+.care{background:var(--hunter);color:#eef0e9}
+.care h2.head{color:#fff}
+.care .lead{color:#c9d0c2}
+.care-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:28px;margin-top:12px}
+.care-item{display:flex;gap:14px;align-items:flex-start}
+.care-item .b{color:var(--brass);font-family:'Cormorant Garamond';font-size:1.9rem;font-weight:700;line-height:.9}
+.care-item h3{font-size:1.28rem;margin-bottom:5px;font-weight:600;color:#fff}
+.care-item p{font-size:.95rem;color:#c9d0c2}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.split .imgcard{background:var(--oat);border:1px solid var(--line);border-radius:8px;min-height:300px;display:flex;align-items:center;justify-content:center;text-align:center;padding:34px;color:var(--moss)}
+.split .imgcard .disp{font-size:1.7rem;color:var(--hunter)}
+@media(max-width:760px){.split{grid-template-columns:1fr}}
+.area .towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.area .towns span{background:#fff;border:1px solid var(--line);border-radius:20px;padding:7px 16px;font-size:.9rem;font-weight:600;color:var(--moss)}
+.book{background:var(--oat)}
+.bbox{display:grid;grid-template-columns:1.05fr 1fr;gap:0;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.bbox .side{background:var(--hunter);color:#eef0e9;padding:46px 40px}
+.bbox .side h2{font-size:2.1rem;margin-bottom:14px;color:#fff}
+.bbox .side p{color:#c9d0c2;margin-bottom:22px}
+.bbox .side .ph{font-family:'Cormorant Garamond';font-size:2rem;color:var(--brass);font-weight:700}
+form{padding:42px 38px;display:grid;gap:15px}
+label{font-size:.78rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--moss)}
+input,select,textarea{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:4px;font-family:inherit;font-size:.98rem;margin-top:5px;background:var(--paper)}
+textarea{min-height:88px;resize:vertical}
+@media(max-width:760px){.bbox{grid-template-columns:1fr}}
+footer{background:var(--hunter-d);color:#aeb4a6;padding:46px 0;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px}
+footer b{color:#fff;font-family:'Cormorant Garamond';font-size:1.35rem;font-weight:700}
+footer a{color:var(--brass);text-decoration:none}
+.note{background:#fbf3df;border-top:1px solid var(--brass);color:#7a5b12;font-size:.8rem;text-align:center;padding:10px}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>Full-care horse boarding &middot; Ancram, NY &middot; on the Roe Jan</span><span>Barn: <b>(203) 247-7021</b></span></div></div>
+<nav><div class="wrap"><div class="brand">Double G <span>Ranch</span></div>
+<div class="navlinks"><a href="#boarding">Boarding</a><a href="#facility">The Facility</a><a href="#care">Daily Care</a><a href="#area">Trailer-In Area</a><a href="#visit">Book a Tour</a></div></div></nav>
+
+<header class="hero"><div class="wrap">
+<div class="kick">Ancram &middot; Columbia County Horse Country</div>
+<h1>Your horse, turned out on the Roe Jan every day.</h1>
+<p>Full-care stall and pasture boarding on a quiet Ancram farm — a 200&times;80 lit indoor arena, river-side trails, and someone in the barn seven days a week.</p>
+<div class="cta-row"><a class="btn" href="#visit">Book a Barn Tour</a><a class="btn btn-ghost" href="tel:+12032477021">Call (203) 247-7021</a></div>
+</div></header>
+
+<div class="strip"><div class="wrap">
+<div class="s"><b>200&times;80</b><span>Lit Indoor Arena</span></div>
+<div class="s"><b>16&times;16</b><span>Windowed Box Stalls</span></div>
+<div class="s"><b>7 days</b><span>Someone in the barn</span></div>
+<div class="s"><b>Roe Jan</b><span>River-side trails</span></div>
+</div></div>
+
+<section id="boarding"><div class="wrap">
+<div class="eyebrow">Ways to board</div>
+<h2 class="head">Boarding built around the horse in front of us.</h2>
+<p class="lead">Some horses want a stall and a routine. Some just want grass and a run. Some are retired and need eyes on them every day. We board all three.</p>
+<div class="svc-grid">
+<div class="svc"><h3>Full-Care Stall</h3><p>Roomy windowed box stalls up to 16&times;16, daily individual turnout, mucking, hay and grain to your feed plan, and blanket changes. You ride — we handle the rest.</p></div>
+<div class="svc"><h3>Pasture Board</h3><p>Daily pasture turnout with shelter for the horse that lives happier outside. Same water, hay, and a real set of eyes on them every morning and night.</p></div>
+<div class="svc"><h3>Retirement Board</h3><p>Full-care retirement for the older horse — soft ground, quiet company, and someone who notices the small changes before they become vet calls.</p></div>
+<div class="svc"><h3>Arena Board</h3><p>Discounted board for horses that mainly work in the ring, with access to both the lit indoor and the outdoor arena year-round.</p></div>
+</div>
+</div></section>
+
+<section class="care" id="care"><div class="wrap">
+<div class="eyebrow" style="color:var(--brass)">What full-care actually means here</div>
+<h2 class="head">The barn runs whether you make it out or not.</h2>
+<p class="lead">Boarding a horse an hour from home only works if you trust the people doing the daily part. Here's what that looks like.</p>
+<div class="care-grid">
+<div class="care-item"><div class="b">01</div><div><h3>Eyes on, every day</h3><p>Someone is here seven days a week — feeding, turning out, and checking every horse morning and night. No skipped days.</p></div></div>
+<div class="care-item"><div class="b">02</div><div><h3>Turnout that matters</h3><p>Daily individual and pasture turnout on real acreage. Horses move, not just stand in a stall waiting for you.</p></div></div>
+<div class="care-item"><div class="b">03</div><div><h3>Your feed, your way</h3><p>Grain, supplements, and hay fed to the plan you and your vet set — not a one-size bucket.</p></div></div>
+<div class="care-item"><div class="b">04</div><div><h3>All disciplines welcome</h3><p>English or western, trail or ring, green or seasoned — every breed and rider fits in this barn.</p></div></div>
+</div>
+</div></section>
+
+<section id="facility"><div class="wrap">
+<div class="split">
+<div>
+<div class="eyebrow">The facility</div>
+<h2 class="head">Ride year-round, rain or January.</h2>
+<p class="lead" style="margin-bottom:22px">The 200&times;80 indoor is enclosed, lit, and windowed, with comfort footing that stays rideable when the weather won't cooperate. Outside, there's an all-weather outdoor ring and trails that run down along the Roe Jan Kill.</p>
+<p style="color:#55534b">Windowed stalls so horses can see out. Wash and tack space. Trailer parking for hauling to shows. And the kind of quiet you only get on a working farm well off the main road.</p>
+</div>
+<div class="imgcard"><div><div class="disp">200&times;80 Lit Indoor Arena</div><p style="margin-top:8px">Photo placeholder &mdash; add real arena &amp; barn photos</p></div></div>
+</div>
+</div></section>
+
+<section class="area" id="area"><div class="wrap">
+<div class="eyebrow">Who trailers in</div>
+<h2 class="head">A short haul from the whole tri-state corner.</h2>
+<p class="lead">Ancram sits where New York, Massachusetts, and Connecticut meet — an easy trailer ride for weekenders and full-time horse owners across the corner.</p>
+<div class="towns"><span>Ancram</span><span>Ancramdale</span><span>Copake</span><span>Hillsdale</span><span>Millerton</span><span>Pine Plains</span><span>Hudson</span><span>Great Barrington, MA</span><span>Salisbury, CT</span><span>Lakeville, CT</span></div>
+</div></section>
+
+<section class="book" id="visit"><div class="wrap">
+<div class="bbox">
+<div class="side">
+<h2>Come walk the barn before you decide.</h2>
+<p>Boarding is about trust, so see it first. Tell us about your horse and what you're looking for, and we'll set up a time for you to walk the barn, meet whoever's here, and see the turnout and arena.</p>
+<div>Or call the barn directly:</div>
+<div class="ph">(203) 247-7021</div>
+</div>
+<form onsubmit="event.preventDefault();this.reset();alert('Thanks — the barn will be in touch to set up your tour. (Demo preview form.)');">
+<div><label>Your name</label><input required></div>
+<div><label>Phone</label><input required type="tel"></div>
+<div><label>Boarding you're after</label><select><option>Full-care stall</option><option>Pasture board</option><option>Retirement board</option><option>Arena board</option><option>Not sure yet</option></select></div>
+<div><label>Tell us about your horse</label><textarea placeholder="Age, discipline, any special care, and when you'd like to move in."></textarea></div>
+<button class="btn" type="submit">Request a Barn Tour</button>
+</form>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<div><b>Double G Ranch</b><br>Ancram, NY 12502 &middot; Columbia County<br>On the Roe Jan Kill</div>
+<div>Full-care horse boarding &middot; Indoor &amp; outdoor arenas<br>All breeds &amp; disciplines &middot; Open 7 days<br><a href="tel:+12032477021">(203) 247-7021</a></div>
+</div></footer>
+<div class="note">Preview concept built by Onyx Rise Media for review. Facility details from the ranch's public listings; stall counts, pricing, and specifics to be confirmed with the owner.</div>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bradley Supply, Inc. — Gas Fill, Hydrotest, Machining & Waterjet in Hornell, NY</title>
+<meta name="description" content="One Hornell shop for medical and industrial gas cylinder filling, DOT hydrostatic testing, CNC machining, steel fabrication and 55,000-PSI waterjet cutting. Send us a drawing or call (607) 324-4130.">
+<style>
+  :root{
+    --graphite:#20262b; --graphite-d:#161a1e; --steel:#3a444c; --steel-lt:#5a6873;
+    --yellow:#f5c400; --yellow-d:#d9ad00; --ink:#1b2226; --muted:#5d6a73;
+    --panel:#eef1f3; --paper:#f6f8f9; --white:#fff; --line:#d2d9dd;
+    --mono:'Consolas','SFMono-Regular',ui-monospace,monospace;
+    --font:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font);color:var(--ink);background:var(--paper);line-height:1.6}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{font-weight:800;letter-spacing:-.01em}
+  header{position:sticky;top:0;z-index:40;background:var(--graphite);border-bottom:3px solid var(--yellow)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:800}
+  .brand .mk{width:44px;height:44px;background:var(--yellow);color:var(--graphite);border-radius:6px;display:grid;place-items:center;font-weight:900;font-size:18px;font-family:var(--mono)}
+  .brand small{display:block;font-size:9px;color:#9fb0bb;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+  nav a{color:#c4d0d8;font-size:13.5px;margin-left:22px}
+  nav a:hover{color:var(--yellow)}
+  .callbtn{background:var(--yellow);color:var(--graphite);padding:10px 16px;border-radius:5px;font-weight:800;font-size:13.5px;margin-left:22px;font-family:var(--mono)}
+  @media(max-width:860px){nav .lk{display:none}}
+  .hero{background:linear-gradient(150deg,var(--graphite) 0%,var(--graphite-d) 100%);color:#fff;padding:80px 0 66px;position:relative;overflow:hidden}
+  .hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--steel) 1px,transparent 1px),linear-gradient(90deg,var(--steel) 1px,transparent 1px);background-size:44px 44px;opacity:.14}
+  .hero .wrap{position:relative}
+  .tag{display:inline-block;background:rgba(245,196,0,.14);color:var(--yellow);border:1px solid var(--yellow);font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:6px 13px;border-radius:3px;margin-bottom:22px;font-family:var(--mono)}
+  .hero h1{font-size:clamp(2rem,4.8vw,3rem);line-height:1.1;max-width:20ch}
+  .hero h1 span{color:var(--yellow)}
+  .hero p{margin-top:18px;color:#c4d0d8;font-size:clamp(1.02rem,2vw,1.18rem);max-width:60ch}
+  .hbtns{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{padding:14px 24px;border-radius:5px;font-weight:800;font-size:14.5px;display:inline-flex;gap:8px;align-items:center}
+  .btn.p{background:var(--yellow);color:var(--graphite)}.btn.p:hover{background:var(--yellow-d)}
+  .btn.g{background:transparent;border:1px solid var(--steel-lt);color:#fff}.btn.g:hover{border-color:var(--yellow)}
+  .capbar{background:var(--white);border-bottom:1px solid var(--line)}
+  .caps{display:grid;grid-template-columns:repeat(6,1fr);gap:0}
+  @media(max-width:860px){.caps{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:520px){.caps{grid-template-columns:repeat(2,1fr)}}
+  .cap{padding:22px 14px;text-align:center;border-right:1px solid var(--line)}
+  .cap:last-child{border-right:none}
+  .cap .ic{font-size:22px}
+  .cap b{display:block;margin-top:6px;color:var(--graphite);font-size:13.5px}
+  .cap span{font-size:11px;color:var(--muted)}
+  section{padding:60px 0}
+  .kick{color:var(--steel-lt);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-family:var(--mono)}
+  h2{font-size:clamp(1.6rem,3.4vw,2.15rem);margin-top:8px;color:var(--graphite)}
+  .lead{color:var(--muted);max-width:66ch;margin-top:12px;font-size:1.05rem}
+  .rfq{background:var(--graphite);color:#fff;border-radius:10px;padding:34px;margin-top:34px;display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center}
+  @media(max-width:760px){.rfq{grid-template-columns:1fr}}
+  .rfq h3{color:#fff;font-size:1.4rem}
+  .rfq p{color:#c4d0d8;margin-top:10px;font-size:.98rem}
+  .rfq .act{display:flex;flex-direction:column;gap:10px}
+  .rfq .big{background:var(--yellow);color:var(--graphite);padding:15px;border-radius:6px;text-align:center;font-weight:800;font-family:var(--mono);font-size:1.05rem}
+  .rfq .em{border:1px solid var(--steel-lt);padding:13px;border-radius:6px;text-align:center;font-weight:700;color:#fff;font-size:.95rem}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--white);border:1px solid var(--line);border-left:4px solid var(--yellow);border-radius:8px;padding:26px}
+  .card h3{color:var(--graphite);font-size:1.14rem;display:flex;align-items:center;gap:10px}
+  .card p{color:var(--muted);font-size:.96rem;margin-top:8px}
+  .specs{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+  .specs span{font-family:var(--mono);font-size:12px;background:var(--panel);color:var(--graphite);border:1px solid var(--line);border-radius:4px;padding:5px 9px}
+  .gas{background:var(--panel)}
+  .gasbox{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+  @media(max-width:760px){.gasbox{grid-template-columns:1fr}}
+  .gc{background:var(--white);border:1px solid var(--line);border-radius:8px;padding:26px}
+  .gc .badge{font-family:var(--mono);font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--graphite);background:var(--yellow);display:inline-block;padding:4px 9px;border-radius:3px}
+  .gc h3{color:var(--graphite);font-size:1.15rem;margin-top:12px}
+  .gc p{color:var(--muted);font-size:.95rem;margin-top:8px}
+  .gc ul{margin-top:12px;list-style:none;color:var(--ink);font-size:.94rem}
+  .gc li{padding:5px 0 5px 22px;position:relative}
+  .gc li:before{content:"▪";color:var(--yellow-d);position:absolute;left:4px;font-weight:900}
+  .counter{background:var(--graphite);color:#fff}
+  .counter h2{color:#fff}
+  .counter .lead{color:#c4d0d8}
+  .ct{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+  @media(max-width:640px){.ct{grid-template-columns:1fr}}
+  .ci{background:var(--steel);border:1px solid #48545d;border-radius:8px;padding:22px;font-size:.95rem;color:#d7dfe4}
+  .ci b{color:var(--yellow);display:block;font-family:var(--mono);margin-bottom:4px}
+  .loc{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:30px;align-items:center}
+  @media(max-width:760px){.loc{grid-template-columns:1fr}}
+  .locbox{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:30px}
+  .locbox .row{margin-top:12px;font-size:15px}
+  .locbox .row b{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--steel-lt)}
+  .radius{background:var(--panel);border:1px dashed var(--steel-lt);border-radius:10px;padding:30px;text-align:center}
+  .radius .num{font-family:var(--mono);font-size:3rem;font-weight:900;color:var(--graphite);line-height:1}
+  .cta{background:var(--yellow);color:var(--graphite);padding:15px;border-radius:6px;font-weight:800;text-align:center;display:block;margin-top:16px;font-family:var(--mono)}
+  footer{background:var(--graphite-d);color:#8b98a1;padding:30px 0;font-size:13px;border-top:3px solid var(--yellow)}
+  .note{font-size:11px;color:#8b98a1;margin-top:6px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <div class="brand"><div class="mk">BS</div><div>Bradley Supply, Inc.<small>Hornell, NY · Est. industrial job shop</small></div></div>
+    <nav>
+      <a class="lk" href="#capabilities">Capabilities</a>
+      <a class="lk" href="#gas">Gas &amp; Hydrotest</a>
+      <a class="lk" href="#counter">Retail Counter</a>
+      <a class="callbtn" href="tel:16073244130">(607) 324-4130</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">Hornell, NY · 25 North Transit Drive</span>
+    <h1>Cylinder fills, hydrotesting, machining and waterjet — <span>under one roof in Hornell.</span></h1>
+    <p>Most shops around here drive to Rochester or Corning for gas fills, DOT bottle testing, or a part cut and machined. Bradley Supply does all of it on North Transit Drive — and takes your job by drawing or over the counter.</p>
+    <div class="hbtns">
+      <a class="btn p" href="#rfq">Send us your job</a>
+      <a class="btn g" href="#capabilities">See capabilities</a>
+    </div>
+  </div>
+</section>
+
+<div class="capbar">
+  <div class="wrap caps">
+    <div class="cap"><div class="ic">🛢️</div><b>Gas Fills</b><span>Medical &amp; industrial</span></div>
+    <div class="cap"><div class="ic">🧪</div><b>Hydrotest</b><span>DOT-approved</span></div>
+    <div class="cap"><div class="ic">⚙️</div><b>CNC Machining</b><span>Lathes &amp; mills</span></div>
+    <div class="cap"><div class="ic">🔧</div><b>Steel Fab</b><span>Brake · shear · weld</span></div>
+    <div class="cap"><div class="ic">💧</div><b>Waterjet</b><span>55,000 PSI</span></div>
+    <div class="cap"><div class="ic">🏪</div><b>Counter</b><span>Fittings &amp; supply</span></div>
+  </div>
+</div>
+
+<section id="capabilities">
+  <div class="wrap">
+    <div class="kick">What we run</div>
+    <h2>The equipment list, not the sales pitch</h2>
+    <p class="lead">If you're pricing a job, here's what's actually on the floor. Send a print and we'll tell you straight whether it's a fit and what it runs.</p>
+    <div class="rfq" id="rfq">
+      <div>
+        <h3>Have a part, a bottle or a cut to quote?</h3>
+        <p>Email a drawing, a photo of the cylinder, or a rough spec and we'll get you a price. No web form to fight — just reach a person who works the floor.</p>
+      </div>
+      <div class="act">
+        <a class="big" href="tel:16073244130">Call (607) 324-4130</a>
+        <a class="em" href="mailto:info@bradleysupplyinc.com">info@bradleysupplyinc.com</a>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h3>⚙️ CNC machining</h3>
+        <p>Turning and milling for prototypes, short runs, and replacement parts you can't wait weeks on. Two lathes run bar feeders for repeat work.</p>
+        <div class="specs"><span>4 CNC lathes</span><span>2 machining centers</span><span>bar-feed capable</span></div>
+      </div>
+      <div class="card">
+        <h3>🔧 Steel fabrication &amp; weld repair</h3>
+        <p>Form, cut and weld structural and plate work — plus repairs when something on the line or the farm cracks and has to go back to work.</p>
+        <div class="specs"><span>135-ton CNC brake</span><span>shear to ¼&quot;</span><span>weld · punch · repair</span></div>
+      </div>
+      <div class="card">
+        <h3>💧 Waterjet cutting</h3>
+        <p>Cold cutting on a 55,000-PSI jet — no heat-affected edge — for steel, stainless, aluminum and materials a torch would warp or discolor.</p>
+        <div class="specs"><span>55,000 PSI</span><span>steel · stainless · alloy</span><span>tight tolerances</span></div>
+      </div>
+      <div class="card">
+        <h3>🏪 Retail supply counter</h3>
+        <p>Walk in for the small stuff that stops a job: fittings, fasteners, hydraulic supplies, drill bits, taps and tools — without a 40-minute drive.</p>
+        <div class="specs"><span>fittings</span><span>hydraulic</span><span>drill bits · taps</span></div>
+      </div>
+    </div>
+    <p class="note">Exact machining envelopes, materials and lead times vary by job — confirm current capacities when you send your print.</p>
+  </div>
+</section>
+
+<section id="gas" class="gas">
+  <div class="wrap">
+    <div class="kick">Gas &amp; cylinder services</div>
+    <h2>Fills and DOT testing, close to home</h2>
+    <div class="gasbox">
+      <div class="gc">
+        <span class="badge">TRANSFILL STATION</span>
+        <h3>Medical, industrial &amp; specialty gas fills</h3>
+        <p>An FDA-registered medical-gas fill and an industrial/specialty gas station serving roughly a 60-mile radius — so clinics, labs, welders and fabricators can get bottles turned around locally.</p>
+        <ul><li>Medical gas — FDA-registered fill</li><li>Industrial gases for welding &amp; cutting</li><li>Specialty gases on request</li><li>~60-mile service radius from Hornell</li></ul>
+      </div>
+      <div class="gc">
+        <span class="badge">DOT HYDROTEST</span>
+        <h3>Hydrostatic cylinder testing</h3>
+        <p>A DOT-approved hydrostatic testing facility — the recertification a compressed-gas cylinder legally needs before it can be refilled. Keep your bottles in service instead of scrapping them.</p>
+        <ul><li>DOT-approved hydrostatic (hydrotest) facility</li><li>Recertify cylinders for continued fill</li><li>Turnaround on local bottles</li><li>Ask about your cylinder type when you call</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="counter" class="counter">
+  <div class="wrap">
+    <div class="kick" style="color:#c9a800">Who we work with</div>
+    <h2>Built for the people who keep Hornell running</h2>
+    <p class="lead">One phone number covers the gas bottle, the broken part and the box of fittings — whether you run a shop, a farm, a clinic or a crew.</p>
+    <div class="ct">
+      <div class="ci"><b>Shops &amp; fabricators</b>Cylinder fills, machined parts, waterjet cuts and repair work without the drive out of the county.</div>
+      <div class="ci"><b>Clinics &amp; labs</b>Locally filled medical and specialty gas from an FDA-registered station.</div>
+      <div class="ci"><b>Farms &amp; contractors</b>Weld repair, hydraulic fittings and hardware over the counter when a machine is down.</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="kick">Find us · reach us</div>
+    <h2>Bring us the job</h2>
+    <div class="loc">
+      <div class="locbox">
+        <div class="row"><b>Address</b>25 North Transit Drive, Hornell, NY 14843</div>
+        <div class="row"><b>Phone</b>(607) 324-4130 · toll-free (800) 251-3538</div>
+        <div class="row"><b>Fax</b>(607) 324-0867</div>
+        <div class="row"><b>Email</b>info@bradleysupplyinc.com</div>
+        <div class="row"><b>Counter hours</b>Mon–Fri, 7:00 AM – 5:00 PM</div>
+        <a class="cta" href="mailto:info@bradleysupplyinc.com">Email a drawing or spec</a>
+      </div>
+      <div class="radius">
+        <div class="num">60</div>
+        <p style="margin-top:8px;color:var(--muted)">mile service radius for medical, industrial and specialty gas — centered on Hornell.</p>
+        <a class="cta" href="tel:16073244130" style="background:var(--graphite);color:#fff">Call (607) 324-4130</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Bradley Supply, Inc. · 25 North Transit Drive, Hornell, NY 14843 · (607) 324-4130 · info@bradleysupplyinc.com
+  <div class="note">Preview concept prepared by Onyx Rise Media for review. Capacities, gas list and hours to be confirmed with the owner before publishing.</div></div>
+</footer>
+</body>
+</html>

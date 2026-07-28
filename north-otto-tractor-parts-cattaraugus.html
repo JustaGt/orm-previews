@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>North Otto Tractor Parts — Antique &amp; Salvage Tractor Parts, Cattaraugus NY</title>
+<meta name="description" content="Antique and salvage tractor parts in Cattaraugus, NY. John Deere, Farmall/IH and Cub parts, rims and wheels, sickle-bar, castings, and whole & partial parts tractors. Restoration specialty. Local pickup or truck-freight shipping. Tell us your tractor.">
+<style>
+  :root{
+    --iron:#1b1e1a; --iron2:#242821; --panel:#2c322a; --line:#3c453a;
+    --green:#2f6b34; --green-lt:#3f8a45; --gold:#e0a12b; --gold-lt:#f2c451;
+    --ink:#eef2ea; --muted:#a7b1a3; --cream:#f6f3e9; --rust:#b4551f;
+    --font:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font);color:var(--ink);background:var(--iron);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  .mono{font-family:'Consolas','SF Mono',ui-monospace,monospace;letter-spacing:.03em}
+  h1,h2,h3{font-family:'Georgia','Times New Roman',serif}
+
+  header{position:sticky;top:0;z-index:40;background:rgba(27,30,26,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.01em;font-family:'Georgia',serif}
+  .brand .mark{width:38px;height:38px;background:var(--green);border:2px solid var(--gold);border-radius:6px;display:grid;place-items:center;color:var(--gold-lt);font-weight:900;font-size:18px}
+  .brand small{display:block;font-size:10.5px;color:var(--muted);font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-family:var(--font)}
+  nav a{color:var(--muted);font-size:14px;margin-left:24px;letter-spacing:.02em}
+  nav a:hover{color:var(--gold-lt)}
+  .callbtn{background:var(--gold);color:#241a04;padding:10px 18px;border-radius:5px;font-weight:800;font-size:14px;margin-left:24px}
+  .callbtn:hover{background:var(--gold-lt)}
+  @media(max-width:820px){nav .lk{display:none}}
+
+  .hero{position:relative;padding:96px 0 82px;background:
+    radial-gradient(1100px 420px at 82% -8%,rgba(224,161,43,.13),transparent 60%),
+    linear-gradient(180deg,#20241d,#181b16);border-bottom:1px solid var(--line);overflow:hidden}
+  .hero:before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.02) 0 1px,transparent 1px 52px);pointer-events:none}
+  .eyebrow{display:inline-block;color:var(--gold-lt);font-size:12px;letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--line);padding:6px 13px;border-radius:20px;margin-bottom:22px}
+  h1{font-size:clamp(2.1rem,5.2vw,3.4rem);line-height:1.08;font-weight:800;letter-spacing:-.01em;max-width:17ch;color:var(--cream)}
+  h1 span{color:var(--gold-lt)}
+  .sub{margin-top:20px;font-size:clamp(1.02rem,2.1vw,1.2rem);color:var(--muted);max-width:56ch}
+  .cta{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{padding:14px 24px;border-radius:6px;font-weight:800;font-size:15px;display:inline-flex;align-items:center;gap:9px}
+  .btn.primary{background:var(--green);color:#eafae8;border:1px solid var(--green-lt)}
+  .btn.primary:hover{background:var(--green-lt)}
+  .btn.ghost{border:1px solid var(--line);color:var(--ink)}
+  .btn.ghost:hover{border-color:var(--gold);color:var(--gold-lt)}
+  .herostrip{margin-top:36px;display:flex;gap:26px;flex-wrap:wrap;font-size:13.5px;color:var(--muted)}
+  .herostrip b{color:var(--gold-lt)}
+
+  section{padding:74px 0;border-bottom:1px solid var(--line)}
+  .kicker{color:var(--gold-lt);font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;font-family:var(--font);font-weight:700}
+  h2{font-size:clamp(1.7rem,3.6vw,2.4rem);margin-top:10px;color:var(--cream);letter-spacing:-.01em}
+  .lead{color:var(--muted);max-width:64ch;margin-top:14px;font-size:1.03rem}
+
+  .grid{display:grid;gap:18px;margin-top:38px}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:820px){.g3,.g2{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:24px}
+  .card h3{font-size:1.16rem;color:var(--gold-lt);margin-bottom:8px}
+  .card p{color:var(--muted);font-size:.97rem}
+  .card .tag{font-family:'Consolas',monospace;font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;display:block;margin-bottom:12px;border-bottom:1px dashed var(--line);padding-bottom:8px}
+
+  .how{background:var(--iron2)}
+  .steps{counter-reset:s;display:grid;gap:16px;grid-template-columns:repeat(3,1fr);margin-top:36px}
+  @media(max-width:820px){.steps{grid-template-columns:1fr}}
+  .step{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:22px 22px 22px 22px;position:relative}
+  .step:before{counter-increment:s;content:counter(s);display:inline-grid;place-items:center;width:34px;height:34px;background:var(--gold);color:#241a04;border-radius:50%;font-weight:900;margin-bottom:12px;font-family:var(--font)}
+  .step h3{color:var(--cream);font-size:1.08rem;margin-bottom:6px}
+  .step p{color:var(--muted);font-size:.95rem}
+
+  .request{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:start}
+  @media(max-width:820px){.request{grid-template-columns:1fr}}
+  form .row{display:flex;gap:14px;flex-wrap:wrap}
+  form .row>div{flex:1;min-width:150px}
+  label{display:block;font-size:12.5px;color:var(--muted);margin:14px 0 6px;letter-spacing:.03em;text-transform:uppercase}
+  input,select,textarea{width:100%;background:var(--iron);border:1px solid var(--line);border-radius:6px;padding:11px 12px;color:var(--ink);font-family:var(--font);font-size:14.5px}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+  textarea{min-height:96px;resize:vertical}
+  .submit{margin-top:18px;background:var(--gold);color:#241a04;border:none;padding:14px 26px;border-radius:6px;font-weight:800;font-size:15px;cursor:pointer}
+  .submit:hover{background:var(--gold-lt)}
+  .side{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:26px}
+  .side h3{color:var(--gold-lt);font-size:1.1rem;margin-bottom:14px}
+  .side .line{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--ink)}
+  .side .line:last-child{border-bottom:none}
+  .side .line span{color:var(--muted);min-width:76px;font-size:12.5px;text-transform:uppercase;letter-spacing:.04em}
+  .note{font-size:11.5px;color:var(--muted);margin-top:10px;font-style:italic}
+
+  .rev{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+  @media(max-width:820px){.rev{grid-template-columns:1fr}}
+  .quote{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:8px;padding:22px}
+  .quote p{color:var(--ink);font-size:.97rem;font-style:italic}
+  .quote b{display:block;margin-top:12px;color:var(--gold-lt);font-style:normal;font-size:.9rem}
+  .stars{color:var(--gold);letter-spacing:2px;font-size:14px}
+
+  footer{background:#141712;padding:52px 0 40px}
+  .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+  @media(max-width:820px){.fgrid{grid-template-columns:1fr}}
+  footer h4{color:var(--gold-lt);font-size:13px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px;font-family:var(--font)}
+  footer p,footer a{color:var(--muted);font-size:14px;display:block;margin-bottom:8px}
+  footer a:hover{color:var(--gold-lt)}
+  .copy{border-top:1px solid var(--line);margin-top:34px;padding-top:20px;color:#6f7a6b;font-size:12.5px;text-align:center}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <div class="brand"><div class="mark">NO</div><div>North Otto Tractor Parts<small>Cattaraugus, New York</small></div></div>
+    <nav>
+      <a class="lk" href="#yard">The Yard</a>
+      <a class="lk" href="#buy">How to Buy</a>
+      <a class="lk" href="#find">Find a Part</a>
+      <a class="callbtn" href="tel:+17162579863">Call (716) 257-9863</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Antique &amp; Salvage Tractor Parts · Restoration Specialty</span>
+    <h1>The part your old tractor needs is probably <span>somewhere in this yard.</span></h1>
+    <p class="sub">New and used parts for most makes and models — with a soft spot for the antiques. John Deere two-cylinders and crawlers, Farmall/IH and Cub, rims and wheels, sickle-bar, castings and hard-to-find pieces. Tell us the tractor and the part; we'll go check the rows.</p>
+    <div class="cta">
+      <a class="btn primary" href="#find">Tell us your tractor →</a>
+      <a class="btn ghost" href="#buy">Local pickup or shipped</a>
+    </div>
+    <div class="herostrip">
+      <div><b>John Deere · Farmall/IH · Cub</b> and more</div>
+      <div><b>Whole &amp; partial</b> parts tractors</div>
+      <div><b>Ships truck-freight</b> nationwide</div>
+    </div>
+  </div>
+</section>
+
+<section id="yard">
+  <div class="wrap">
+    <span class="kicker">What's in the rows</span>
+    <h2>A working salvage yard built around the antiques</h2>
+    <p class="lead">Decades of parts tractors picked, sorted, and shelved — plus new reproduction pieces for the jobs where used won't do. Here's where restorers usually start.</p>
+    <div class="grid g3">
+      <div class="card"><span class="tag">John Deere</span><h3>Two-cylinders &amp; crawlers</h3><p>Letter-series and 10/20-series parts, plus late 440 / 1010 / 350 crawler pieces — final-drive gaskets, air stacks, castings and more.</p></div>
+      <div class="card"><span class="tag">Farmall / IH</span><h3>Cub &amp; red-power parts</h3><p>Farmall Cub and International parts pulled from the yard, sorted by model so we can tell you fast whether we've got yours.</p></div>
+      <div class="card"><span class="tag">Rims &amp; wheels</span><h3>USA-made rims a specialty</h3><p>Double-bevel, flat-base, power-adjust and 6-bolt rims — many USA-made — including upgrade sizes to fit larger front tires on 3010/4020s.</p></div>
+      <div class="card"><span class="tag">Sickle-bar</span><h3>Mower &amp; sickle-bar parts</h3><p>Sickle-bar sections, guards and related pieces for keeping older haying equipment cutting.</p></div>
+      <div class="card"><span class="tag">Castings &amp; hard parts</span><h3>Gaskets, mufflers, air stacks</h3><p>USA-made mufflers and air stacks, oil-pan gaskets, and the small castings that are impossible to find at a dealer counter.</p></div>
+      <div class="card"><span class="tag">Whole machines</span><h3>Parts tractors for sale</h3><p>Whole and partial tractors — buy the whole thing to part out, or let us pull what you need off it. Ask what's on the lot now.</p></div>
+    </div>
+    <p class="note">Inventory turns constantly. If you don't see it listed, ask — a lot of the yard has never made it onto a web page.</p>
+  </div>
+</section>
+
+<section id="buy" class="how">
+  <div class="wrap">
+    <span class="kicker">How to buy</span>
+    <h2>Come to the yard, or have it shipped</h2>
+    <div class="steps">
+      <div class="step"><h3>Tell us the tractor</h3><p>Make, model and the part you're after — a photo or part number helps. We'll check the rows and tell you what we have and the condition.</p></div>
+      <div class="step"><h3>Pick up or ship</h3><p>Local? Swing by the yard on N Otto Rd. Farther out? Smaller parts ship regular; rims and heavy pieces go truck-freight — we'll quote it before anything moves.</p></div>
+      <div class="step"><h3>Or buy it now on eBay</h3><p>Many priced, ready-to-ship parts are listed in our eBay store with photos and buy-now pricing. The one-offs, ask us direct.</p></div>
+    </div>
+    <div class="cta" style="margin-top:32px">
+      <a class="btn primary" href="#find">Ask about a part →</a>
+      <a class="btn ghost" href="https://www.ebay.com/str/northottotractorparts" target="_blank" rel="noopener">Browse the eBay store</a>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <span class="kicker">From the shop</span>
+    <h2>Restorers keep coming back for the depth</h2>
+    <div class="rev">
+      <div class="quote"><div class="stars">★★★★★</div><p>"Had the exact rim I'd been chasing for two years for my John Deere. Knew right where it was and crated it for freight."</p><b>— Verified customer review*</b></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"If you're restoring an old two-cylinder, this is the yard to call first. Real knowledge, fair prices."</p><b>— Verified customer review*</b></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"Found a Cub part nobody else had. Great to deal with over the phone."</p><b>— Verified customer review*</b></div>
+    </div>
+    <p class="note">*Placeholder review text — pull live reviews from the Google Business Profile and eBay feedback before publishing.</p>
+  </div>
+</section>
+
+<section id="find">
+  <div class="wrap request">
+    <div>
+      <span class="kicker">Find your part</span>
+      <h2>Tell us what you're chasing</h2>
+      <p class="lead">Send the tractor and the part — we'll check the yard and get back to you with what we have, the condition, and pickup or freight options.</p>
+      <form onsubmit="return false;">
+        <div class="row">
+          <div><label>Your name</label><input type="text" placeholder="First and last"></div>
+          <div><label>Phone or email</label><input type="text" placeholder="Best way to reach you"></div>
+        </div>
+        <div class="row">
+          <div><label>Tractor make</label><input type="text" placeholder="e.g. John Deere, Farmall"></div>
+          <div><label>Model</label><input type="text" placeholder="e.g. 3020, Cub, 440 crawler"></div>
+        </div>
+        <label>Part(s) you need</label>
+        <textarea placeholder="Describe the part — part number or a photo detail if you have it. Local pickup or shipped?"></textarea>
+        <button class="submit" type="submit">Send my parts request</button>
+        <p class="note">Demo form for preview. On the live site this routes to the shop's inbox / phone.</p>
+      </form>
+    </div>
+    <div class="side">
+      <h3>Visit or call the yard</h3>
+      <div class="line"><span>Address</span> 9875 N Otto Rd, Cattaraugus, NY 14719</div>
+      <div class="line"><span>Phone</span> <a href="tel:+17162579863" style="color:var(--gold-lt)">(716) 257-9863</a></div>
+      <div class="line"><span>Email</span> <a href="mailto:tractorsnstuff@gmail.com" style="color:var(--gold-lt)">tractorsnstuff@gmail.com</a></div>
+      <div class="line"><span>Hours</span> Mon–Sat, daytime — call ahead to confirm*</div>
+      <div class="line"><span>eBay</span> <a href="https://www.ebay.com/str/northottotractorparts" style="color:var(--gold-lt)" target="_blank" rel="noopener">NorthOttoTractorParts</a></div>
+      <p class="note">*Hours vary — the current listings disagree (Mon–Fri vs Mon–Sat). Confirm exact hours before publishing.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="brand" style="margin-bottom:12px"><div class="mark">NO</div><div>North Otto Tractor Parts<small>Cattaraugus, New York</small></div></div>
+        <p>Antique &amp; salvage tractor parts for most makes and models, with a restoration specialty. Local pickup on N Otto Rd or truck-freight anywhere.</p>
+      </div>
+      <div>
+        <h4>Parts</h4>
+        <a href="#yard">John Deere &amp; crawlers</a>
+        <a href="#yard">Farmall / IH &amp; Cub</a>
+        <a href="#yard">Rims &amp; wheels</a>
+        <a href="#yard">Whole &amp; partial tractors</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+17162579863">(716) 257-9863</a>
+        <a href="mailto:tractorsnstuff@gmail.com">tractorsnstuff@gmail.com</a>
+        <p>9875 N Otto Rd<br>Cattaraugus, NY 14719</p>
+      </div>
+    </div>
+    <div class="copy">© 2026 North Otto Tractor Parts · Cattaraugus, NY · Preview concept prepared by Onyx Rise Media</div>
+  </div>
+</footer>
+</body>
+</html>

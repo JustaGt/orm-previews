@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vanderwalker's Sawmill — Live-Edge Slabs & Custom Milling, Middleport NY</title>
+<meta name="description" content="Family bandsaw mill in Middleport, NY since 2013. Live-edge slabs, dimensional lumber, landscape & snowplow stakes, planing up to 24 inches — and we'll mill your own logs. Send your dimensions for a price.">
+<style>
+  :root{
+    --bark:#3b2a1a; --bark2:#52381f; --tan:#b8875223; --sand:#f4ede1; --paper:#fbf7ef;
+    --amber:#c8862f; --amber-d:#a06a1e; --steel:#5a5f63; --ink:#2a2016; --moss:#4f5b32;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+  h1,h2,h3{font-family:"Georgia","Times New Roman",serif;line-height:1.14}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .btn{display:inline-block;background:var(--amber);color:#2a1c06;font-weight:800;text-decoration:none;
+    padding:15px 26px;border-radius:6px;border:2px solid var(--amber-d)}
+  .btn:hover{background:#d9962f}
+  .btn.ghost{background:transparent;color:#f4ede1;border-color:#caa877}
+  .banner{background:var(--bark2);color:#f1e4cf;text-align:center;font-weight:600;font-size:.94rem;padding:9px 12px}
+  /* nav */
+  nav{background:var(--bark);color:#eaded0;border-bottom:4px solid var(--amber)}
+  nav .wrap{display:flex;flex-wrap:wrap;gap:6px 22px;align-items:center;justify-content:space-between;padding:14px 22px}
+  nav .brand{font-family:Georgia,serif;font-size:1.32rem;color:#fff;font-weight:700;letter-spacing:.01em}
+  nav .brand small{display:block;font-size:.64rem;letter-spacing:.24em;color:#c9a877;font-family:"Segoe UI",sans-serif}
+  nav .links a{margin-left:18px;font-size:.92rem;text-decoration:none;color:#d9c6ac}
+  nav .links a:hover{color:#fff}
+  /* hero */
+  header.hero{position:relative;color:#f6ecdc;
+    background:
+      linear-gradient(180deg,rgba(30,20,12,.72),rgba(30,20,12,.86)),
+      repeating-linear-gradient(0.5deg,#4a3520 0 15px,#402e1c 15px 31px);
+    background-color:#3a2817;padding:76px 0 68px}
+  header.hero .wrap{max-width:820px}
+  .kick{display:inline-block;background:rgba(200,134,47,.18);border:1px solid #caa877;border-radius:4px;
+    padding:6px 14px;font-size:.82rem;letter-spacing:.08em;color:#e9c893;margin-bottom:16px}
+  .hero h1{font-size:3rem;margin:0 0 14px;color:#fff}
+  .hero p{font-size:1.2rem;max-width:640px;color:#ead9bf}
+  .hero .cta{margin-top:28px;display:flex;flex-wrap:wrap;gap:14px}
+  /* strip */
+  .strip{background:var(--sand);border-bottom:1px solid #e4d8c4}
+  .strip .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;padding:20px 22px}
+  .strip .it{text-align:center;padding:6px}
+  .strip .it b{display:block;font-size:1.06rem;color:var(--bark);font-family:Georgia,serif}
+  .strip .it span{font-size:.82rem;color:#6a5a44}
+  /* sections */
+  section{padding:56px 0}
+  section.sand{background:var(--sand)}
+  .eyebrow{color:var(--moss);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.76rem}
+  h2{font-size:2rem;margin:8px 0 8px;color:var(--bark)}
+  .sub{color:#5a4c3a;max-width:660px;margin-bottom:26px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+  .card{background:#fff;border:1px solid #e2d6c2;border-radius:8px;padding:24px;box-shadow:0 2px 10px rgba(59,42,26,.05)}
+  .card .ic{font-size:1.5rem;margin-bottom:10px}
+  .card h3{font-size:1.14rem;color:var(--bark2);margin-bottom:6px}
+  .card p{font-size:.95rem;color:#4f4335}
+  /* logs feature */
+  .feature{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
+  .feature .panel{background:
+      linear-gradient(150deg,#6a4a26,#8a5f2c 55%,#a9772f);
+    border-radius:10px;min-height:250px;display:flex;align-items:flex-end;padding:22px;color:#241704}
+  .feature .panel span{background:rgba(251,247,239,.93);padding:9px 14px;border-radius:6px;font-weight:800;font-size:.9rem}
+  ul.spec{list-style:none;margin-top:6px}
+  ul.spec li{padding:9px 0;border-bottom:1px dashed #d8c7ab;font-size:.98rem;display:flex;gap:10px}
+  ul.spec li:before{content:"▪";color:var(--amber-d)}
+  /* quote */
+  .quote{background:var(--bark);color:#f1e4cf;border-radius:12px;padding:34px}
+  .quote h3{color:#fff;font-size:1.7rem}
+  .quote form{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .quote input,.quote select,.quote textarea{width:100%;padding:12px;border-radius:6px;border:1px solid #6a512f;
+    background:#fff8ee;font-size:.98rem;font-family:inherit}
+  .quote .full{grid-column:1/-1}
+  .quote button{background:var(--amber);color:#2a1c06;font-weight:800;border:none;border-radius:6px;padding:14px;cursor:pointer;font-size:1rem;grid-column:1/-1}
+  .quote .note{font-size:.8rem;color:#c9a877;margin-top:10px;grid-column:1/-1}
+  /* footer */
+  footer{background:#241a10;color:#d5c4aa;padding:44px 0 26px}
+  footer h4{color:#fff;font-family:Georgia,serif;margin-bottom:8px}
+  footer a{color:var(--amber)}
+  .fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:26px}
+  .fine{border-top:1px solid #3d2e1c;margin-top:26px;padding-top:16px;font-size:.8rem;color:#9c8968}
+  @media(max-width:760px){.feature{grid-template-columns:1fr}.quote form{grid-template-columns:1fr}.hero h1{font-size:2.2rem}nav .links{display:none}}
+</style>
+</head>
+<body>
+
+<div class="banner">Bring us your logs or buy from our pile — one slab or a truckload &nbsp;·&nbsp; Middleport, NY &nbsp;·&nbsp; <a href="tel:7167359245" style="color:#f6d9a6">(716) 735-9245</a></div>
+
+<nav><div class="wrap">
+  <div class="brand">Vanderwalker's Sawmill<small>MIDDLEPORT · NEW YORK</small></div>
+  <div class="links">
+    <a href="#cut">What We Cut</a>
+    <a href="#logs">Your Logs</a>
+    <a href="#planing">Planing</a>
+    <a href="#quote">Get a Price</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="kick">Family bandsaw mill · Stone Road · since 2013</span>
+  <h1>Live-edge slabs and dimensional lumber, sawn a mile from your build.</h1>
+  <p>We rough-saw slabs and boards to order, plane up to 24 inches, and run your own logs through the mill. Small enough to fill a one-slab order, set up to cut a whole load.</p>
+  <div class="cta">
+    <a class="btn" href="#quote">Send your dimensions</a>
+    <a class="btn ghost" href="tel:7167359245">Call the mill</a>
+  </div>
+</div></header>
+
+<div class="strip"><div class="wrap">
+  <div class="it"><b>Live-edge slabs</b><span>walnut · maple · cherry &amp; more*</span></div>
+  <div class="it"><b>Dimensional lumber</b><span>rough-sawn to order</span></div>
+  <div class="it"><b>Your logs milled</b><span>to your spec</span></div>
+  <div class="it"><b>Planing to 24"</b><span>flooring · trim · siding</span></div>
+</div></div>
+
+<section id="cut"><div class="wrap">
+  <span class="eyebrow">What's on the pile</span>
+  <h2>What we cut and sell</h2>
+  <p class="sub">A working bandmill sells specifics — so here's what actually comes off the carriage. Species and sizes on hand change through the year; send what you're after and we'll tell you what's ready.</p>
+  <div class="grid">
+    <div class="card"><div class="ic">🪵</div><h3>Live-edge slabs</h3><p>Rough-sawn slabs for tables, benches, mantels and bar tops. Tell us the length and thickness you want and we'll cut to it or pull what's already drying on the rack.</p></div>
+    <div class="card"><div class="ic">📏</div><h3>Dimensional lumber</h3><p>Rough-sawn boards and timbers cut to your dimensions — the sizes a big-box aisle doesn't carry, for barns, decks, fences and framing.</p></div>
+    <div class="card"><div class="ic">❄️</div><h3>Stakes</h3><p>Snowplow markers and landscape stakes by the bundle — a staple for plow crews and landscapers heading into the season.</p></div>
+    <div class="card"><div class="ic">🏠</div><h3>Log siding, flooring &amp; trim</h3><p>Milled and planed log siding, flooring and trim to finish a build or a cabin — cut from real boards, not ordered off a truck.</p></div>
+  </div>
+</div></section>
+
+<section class="sand" id="logs"><div class="wrap">
+  <div class="feature">
+    <div>
+      <span class="eyebrow">Your logs, our mill</span>
+      <h2>Got a downed tree? We'll mill it into lumber.</h2>
+      <p class="sub">Storm-drop walnut, a yard maple that had to come down, or a woodlot's worth of logs — bring them to Stone Road and we'll saw them to the boards and slabs you want, to the thickness you need. It's the whole reason people find a small mill instead of a lumber counter.</p>
+      <ul class="spec">
+        <li>Slabs and boards cut to your target thickness</li>
+        <li>You keep your own wood — milled the way you want it</li>
+        <li>Honest, by-the-job pricing — one log or a load</li>
+      </ul>
+      <p style="margin-top:18px"><a class="btn" href="#quote">Tell us about your logs</a></p>
+    </div>
+    <div class="panel"><span>🪚 On the carriage since 2013</span></div>
+  </div>
+</div></section>
+
+<section id="planing"><div class="wrap">
+  <span class="eyebrow">Finishing</span>
+  <h2>Planing up to 24-inch boards</h2>
+  <p class="sub">Rough-sawn is where a lot of mills stop. We'll plane your slabs and boards up to 24 inches wide so they're ready to build with — flooring, trim, siding and table tops that show up smooth.</p>
+  <div class="grid">
+    <div class="card"><div class="ic">🛠️</div><h3>Wide-board planing</h3><p>Up to 24" wide — a size most home planers and lumber counters can't touch.</p></div>
+    <div class="card"><div class="ic">🌳</div><h3>Straight from the mill</h3><p>Cut and planed in one stop, so your slab or floor stock leaves ready to work.</p></div>
+    <div class="card"><div class="ic">🤝</div><h3>Small-shop service</h3><p>"Small enough to meet your needs no matter the size" — one board or a project's worth, we'll help you find it.</p></div>
+  </div>
+</div></section>
+
+<section class="sand" id="quote"><div class="wrap">
+  <div class="feature">
+    <div>
+      <span class="eyebrow">Get a price</span>
+      <h2>Tell us what you need cut</h2>
+      <p class="sub">Species, thickness, slab size or board footage — and whether it's our wood or your logs. Send it over and we'll come back with a price. Prefer to talk it through? The mill's a phone call away.</p>
+      <p><b>Vanderwalker's Sawmill LLC</b><br>
+      3211 Stone Rd, Middleport, NY 14105<br>
+      <a href="tel:7167359245">(716) 735-9245</a> · <a href="mailto:tvsawmill@gmail.com">tvsawmill@gmail.com</a></p>
+      <p style="margin-top:14px;font-size:.9rem;color:#6a5a44">Yard hours vary by season — call ahead before you load up. *Species and slab sizes on hand change through the year.</p>
+    </div>
+    <div class="quote">
+      <h3>Send your dimensions</h3>
+      <form onsubmit="return false;">
+        <input type="text" placeholder="Your name">
+        <input type="tel" placeholder="Phone">
+        <input class="full" type="text" placeholder="Species &amp; use (e.g. walnut slab for a table)">
+        <input type="text" placeholder="Thickness (e.g. 8/4)">
+        <input type="text" placeholder="Size / board footage">
+        <select class="full"><option>Whose wood is it?</option><option>Cut from your pile</option><option>Mill my own logs</option></select>
+        <textarea class="full" rows="3" placeholder="Anything else — quantity, timing, a photo you can text over"></textarea>
+        <button>Request a price</button>
+        <p class="note">Demo form for preview purposes. On the live site this sends straight to the mill's inbox.</p>
+      </form>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div>
+      <h4>Vanderwalker's Sawmill</h4>
+      <p>A small family bandsaw mill in Middleport, NY since 2013. Slabs, lumber, stakes and custom milling — your logs or ours.</p>
+    </div>
+    <div>
+      <h4>The Yard</h4>
+      <p>3211 Stone Rd<br>Middleport, NY 14105<br><a href="tel:7167359245">(716) 735-9245</a><br><a href="mailto:tvsawmill@gmail.com">tvsawmill@gmail.com</a></p>
+    </div>
+    <div>
+      <h4>See the wood</h4>
+      <p>Facebook: Vanderwalker's Sawmill LLC<br>Instagram: @vanderwalkerssawmill</p>
+    </div>
+  </div>
+  <div class="fine">© Vanderwalker's Sawmill LLC · Middleport, NY. Preview concept prepared by Onyx Rise Media. Species, slab sizes, yard hours and pricing to be confirmed with the owner before publishing.</div>
+</div></footer>
+
+</body>
+</html>

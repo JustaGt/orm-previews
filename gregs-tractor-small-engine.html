@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greg's Tractor &amp; Small Engine Repair — Middleport NY | Mowers, Chainsaws, Tillers &amp; More</title>
+<meta name="description" content="Small-engine repair in Middleport, NY. Mowers, tillers, chainsaws, pressure washers, trimmers, snowblowers and kerosene heaters — pretty much anything with a small engine. Pickup &amp; delivery available.">
+<style>
+  :root{
+    --green:#1f4d2b; --green2:#2c6b3c; --lime:#8fbf3f; --steel:#3a4046; --steel2:#22262b;
+    --yellow:#f2c230; --yellow-d:#d8a614; --paper:#f6f7f3; --card:#ffffff; --ink:#232a24;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.64}
+  h1,h2,h3{font-family:"Arial Black","Segoe UI",Impact,sans-serif;line-height:1.1;letter-spacing:-.01em}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .btn{display:inline-block;background:var(--yellow);color:#2a2306;font-weight:800;text-decoration:none;
+    padding:15px 26px;border-radius:5px;border:2px solid var(--yellow-d);text-transform:uppercase;letter-spacing:.03em;font-size:.95rem}
+  .btn:hover{background:#ffce3a}
+  .btn.dark{background:var(--steel2);color:#fff;border-color:#000}
+  .banner{background:var(--steel2);color:#e6e9e4;text-align:center;font-weight:600;font-size:.93rem;padding:9px 12px}
+  .banner b{color:var(--yellow)}
+  /* nav */
+  nav{background:var(--green);color:#e6f0e2;border-bottom:5px solid var(--yellow)}
+  nav .wrap{display:flex;flex-wrap:wrap;gap:6px 20px;align-items:center;justify-content:space-between;padding:14px 22px}
+  nav .brand{font-family:"Arial Black",sans-serif;font-size:1.28rem;color:#fff;text-transform:uppercase;letter-spacing:.01em}
+  nav .brand small{display:block;font-size:.62rem;letter-spacing:.22em;color:var(--lime);font-family:"Segoe UI",sans-serif;font-weight:400}
+  nav .links a{margin-left:16px;font-size:.9rem;text-decoration:none;color:#cfe3c6;font-weight:600}
+  nav .links a:hover{color:#fff}
+  /* hero */
+  header.hero{position:relative;color:#f2f7ee;
+    background:
+      linear-gradient(180deg,rgba(16,34,20,.82),rgba(16,34,20,.9)),
+      repeating-linear-gradient(45deg,#22262b 0 22px,#282d33 22px 44px);
+    padding:70px 0 60px}
+  header.hero .wrap{max-width:820px}
+  .rating{display:inline-flex;align-items:center;gap:10px;background:rgba(242,194,48,.14);border:1px solid var(--yellow);
+    border-radius:5px;padding:7px 15px;font-size:.9rem;color:#fbe7a4;margin-bottom:18px;font-weight:600}
+  .rating .stars{color:var(--yellow);letter-spacing:2px}
+  .hero h1{font-size:2.9rem;margin:0 0 14px;color:#fff}
+  .hero p{font-size:1.18rem;max-width:640px;color:#dce8d4}
+  .hero .cta{margin-top:26px;display:flex;flex-wrap:wrap;gap:14px}
+  /* strip */
+  .strip{background:var(--green2);color:#e6f0e2}
+  .strip .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;padding:20px 22px}
+  .strip .it{text-align:center;padding:6px}
+  .strip .it b{display:block;font-size:1.02rem;color:#fff;font-family:"Arial Black",sans-serif}
+  .strip .it span{font-size:.82rem;color:#c3ddb9}
+  /* sections */
+  section{padding:56px 0}
+  section.alt{background:#eef1ea}
+  .eyebrow{color:var(--green2);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.76rem}
+  h2{font-size:2rem;margin:8px 0 8px;color:var(--green);text-transform:uppercase}
+  .sub{color:#4c574a;max-width:660px;margin-bottom:26px;font-size:1.02rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid #dbe2d4;border-left:5px solid var(--lime);border-radius:6px;padding:22px;box-shadow:0 2px 8px rgba(31,77,43,.05)}
+  .card .ic{font-size:1.5rem;margin-bottom:8px}
+  .card h3{font-size:1.08rem;color:var(--green2);margin-bottom:5px;text-transform:none}
+  .card p{font-size:.94rem;color:#4c574a}
+  /* machine list */
+  .machines{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+  .machines span{background:#fff;border:1px solid #cdd8c4;border-radius:40px;padding:9px 16px;font-size:.94rem;font-weight:600;color:var(--green)}
+  /* pickup */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+  .split .panel{background:linear-gradient(150deg,var(--green),var(--green2));color:#eaf4e4;border-radius:10px;padding:30px}
+  .split .panel h3{color:#fff;font-size:1.5rem;text-transform:none;margin-bottom:8px}
+  .split .panel p{color:#cfe3c6}
+  /* reviews */
+  .revs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+  .rev{background:#fff;border:1px solid #dbe2d4;border-radius:8px;padding:22px}
+  .rev .st{color:var(--yellow);letter-spacing:2px;font-size:1.05rem}
+  .rev p{font-style:italic;color:#3f4a3d;margin:8px 0}
+  .rev b{font-size:.86rem;color:#6a756280}
+  /* contact */
+  .contact{background:var(--steel2);color:#e6e9e4;border-radius:12px;padding:34px}
+  .contact h3{color:#fff;font-size:1.7rem;text-transform:none}
+  .contact form{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .contact input,.contact select,.contact textarea{width:100%;padding:12px;border-radius:5px;border:1px solid #4a5057;background:#fbfcf9;font-size:.98rem;font-family:inherit}
+  .contact .full{grid-column:1/-1}
+  .contact button{background:var(--yellow);color:#2a2306;font-weight:800;border:none;border-radius:5px;padding:14px;cursor:pointer;font-size:1rem;grid-column:1/-1;text-transform:uppercase}
+  .contact .note{font-size:.8rem;color:#9aa39a;grid-column:1/-1}
+  /* footer */
+  footer{background:#161a14;color:#c8d2c0;padding:44px 0 26px}
+  footer h4{color:#fff;margin-bottom:8px}
+  footer a{color:var(--yellow)}
+  .fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:26px}
+  .fine{border-top:1px solid #2c3329;margin-top:26px;padding-top:16px;font-size:.8rem;color:#8b9585}
+  @media(max-width:760px){.split{grid-template-columns:1fr}.contact form{grid-template-columns:1fr}.hero h1{font-size:2.1rem}nav .links{display:none}}
+</style>
+</head>
+<body>
+
+<div class="banner">🔧 &nbsp;Spring mower rush or a dead chainsaw — <b>we fix pretty much anything with a small engine.</b> &nbsp; Pickup &amp; delivery available.</div>
+
+<nav><div class="wrap">
+  <div class="brand">Greg's Tractor &amp; Small Engine<small>REPAIR · MIDDLEPORT, NEW YORK</small></div>
+  <div class="links">
+    <a href="#service">What We Fix</a>
+    <a href="#pickup">Pickup &amp; Delivery</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Book a Repair</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="rating"><span class="stars">★★★★★</span> 4.8 out of 5 · 32 local reviews*</div>
+  <h1>The mower won't start. Bring it to Greg's.</h1>
+  <p>A friendly local repair bench in Middleport for mowers, tillers, chainsaws, pressure washers, trimmers and more. Off-brand, odd, or older engine? We'll still take a look — and we'll come get it if you can't haul it.</p>
+  <div class="cta">
+    <a class="btn" href="#contact">Book a repair</a>
+    <a class="btn dark" href="tel:7167357181">Call (716) 735-7181</a>
+  </div>
+</div></header>
+
+<div class="strip"><div class="wrap">
+  <div class="it"><b>Anything small-engine</b><span>even off-brands</span></div>
+  <div class="it"><b>Pickup &amp; delivery</b><span>no truck? no problem</span></div>
+  <div class="it"><b>4.8★ / 32 reviews*</b><span>friendly &amp; honest</span></div>
+  <div class="it"><b>Mon–Sat*</b><span>real local shop</span></div>
+</div></div>
+
+<section id="service"><div class="wrap">
+  <span class="eyebrow">What we fix</span>
+  <h2>Pretty much anything with a small engine</h2>
+  <p class="sub">If it runs on a small engine, chances are it's been on our bench. Tune-ups, won't-starts, blades and belts, carburetors, pull cords, seasonal service — brought back to running for another season instead of tossed.</p>
+  <div class="machines">
+    <span>Push &amp; riding mowers</span>
+    <span>Tillers</span>
+    <span>Chainsaws</span>
+    <span>Pressure washers</span>
+    <span>String trimmers / weedeaters</span>
+    <span>Snowblowers*</span>
+    <span>Kerosene heaters</span>
+    <span>Generators*</span>
+  </div>
+  <div class="grid" style="margin-top:24px">
+    <div class="card"><div class="ic">🔧</div><h3>Tune-ups &amp; service</h3><p>Oil, plugs, filters, blades, belts and carburetor work to get a machine starting on the first pull and cutting clean again.</p></div>
+    <div class="card"><div class="ic">⚙️</div><h3>Won't-start diagnosis</h3><p>Dead pull, no spark, gummed-up fuel from sitting all winter — we find out why and quote the fix before we dig in.</p></div>
+    <div class="card"><div class="ic">🪛</div><h3>Off-brand &amp; older gear</h3><p>The stuff a dealer won't touch. If parts can be had, we'll work to keep your machine going instead of selling you a new one.</p></div>
+  </div>
+</div></section>
+
+<section class="alt" id="pickup"><div class="wrap">
+  <div class="split">
+    <div>
+      <span class="eyebrow">No truck? No problem</span>
+      <h2>We'll pick it up and drop it back</h2>
+      <p class="sub">Riding mower too big for the car? Snowblower you can't lift? We offer pickup and delivery around Middleport so a broken machine doesn't strand your whole yard. Ask about your town when you call.</p>
+      <p><a class="btn" href="tel:7167357181">Call about pickup</a></p>
+    </div>
+    <div class="panel">
+      <h3>Beat the seasonal rush</h3>
+      <p>Everybody remembers the mower in the first warm week and the snowblower in the first storm. Get yours in a little early and skip the two-week wait when the bench fills up. Bring it by or ask us to come get it.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="reviews"><div class="wrap">
+  <span class="eyebrow">What neighbors say</span>
+  <h2>A 4.8-star shop most people find by word of mouth</h2>
+  <p class="sub">Middleport already knows Greg's — 4.8 stars across 32 reviews.* Here's the kind of thing customers say (representative excerpts, to be replaced with the shop's real featured reviews).</p>
+  <div class="revs">
+    <div class="rev"><div class="st">★★★★★</div><p>"Very friendly, helpful and cheerful. Fixed my mower fast and didn't charge me for things I didn't need."</p><b>— Local customer*</b></div>
+    <div class="rev"><div class="st">★★★★★</div><p>"Took in a chainsaw two other places wouldn't. Running like new. Honest and fair."</p><b>— Local customer*</b></div>
+    <div class="rev"><div class="st">★★★★★</div><p>"Picked up my rider, fixed it, brought it back. Couldn't ask for better service."</p><b>— Local customer*</b></div>
+  </div>
+</div></section>
+
+<section class="alt" id="contact"><div class="wrap">
+  <div class="split">
+    <div>
+      <span class="eyebrow">Book a repair</span>
+      <h2>Tell us what's acting up</h2>
+      <p class="sub">The machine, the make/model if you know it, and what it's doing (or not doing). We'll tell you what it likely needs and whether you should bring it in or have us pick it up.</p>
+      <p><b>Greg's Tractor &amp; Small Engine Repair</b><br>
+      90 S Main St, Middleport, NY 14105<br>
+      <a href="tel:7167357181">(716) 735-7181</a></p>
+      <p style="margin-top:14px;font-size:.9rem;color:#5a6552">Hours: Mon–Fri and Saturday* — call to confirm before you load up.</p>
+    </div>
+    <div class="contact">
+      <h3>Request a repair</h3>
+      <form onsubmit="return false;">
+        <input type="text" placeholder="Your name">
+        <input type="tel" placeholder="Phone">
+        <select class="full"><option>What is it?</option><option>Push / riding mower</option><option>Tiller</option><option>Chainsaw</option><option>Pressure washer</option><option>Trimmer / weedeater</option><option>Snowblower</option><option>Kerosene heater</option><option>Other small engine</option></select>
+        <input class="full" type="text" placeholder="Make / model (if you know it)">
+        <textarea class="full" rows="3" placeholder="What's it doing? (won't start, runs rough, needs a tune-up...) — and do you need pickup?"></textarea>
+        <button>Send it to the shop</button>
+        <p class="note">Demo form for preview purposes. On the live site this reaches Greg's directly.</p>
+      </form>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div>
+      <h4>Greg's Tractor &amp; Small Engine</h4>
+      <p>The friendly local repair bench in Middleport, NY — mowers, tillers, chainsaws and pretty much anything with a small engine.</p>
+    </div>
+    <div>
+      <h4>The Shop</h4>
+      <p>90 S Main St<br>Middleport, NY 14105<br><a href="tel:7167357181">(716) 735-7181</a></p>
+    </div>
+    <div>
+      <h4>Good to know</h4>
+      <p>Pickup &amp; delivery available<br>Off-brand &amp; older engines welcome<br>Hours Mon–Sat*</p>
+    </div>
+  </div>
+  <div class="fine">© Greg's Tractor &amp; Small Engine Repair · Middleport, NY. Preview concept prepared by Onyx Rise Media. Hours, review counts and services marked * to be confirmed with the owner before publishing.</div>
+</div></footer>
+
+</body>
+</html>

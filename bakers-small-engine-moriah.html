@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baker's Small Engine Repair &amp; Fabrication — Moriah, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --steel:#2b2f36; --steeld:#1c1f24; --spark:#f26a1b; --amber:#ffb020;
+    --paper:#f3f4f6; --ink:#1b1e22; --grey:#5c636c; --line:#3a3f47;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3,.raj{font-family:'Rajdhani',sans-serif;text-transform:uppercase;letter-spacing:.5px}
+  a{color:inherit}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--spark);color:#fff;font-family:'Rajdhani',sans-serif;font-weight:700;
+    font-size:1.05rem;text-transform:uppercase;letter-spacing:1px;padding:14px 30px;border-radius:4px;text-decoration:none}
+  .btn:hover{background:#d95810}
+  /* header */
+  header.top{background:var(--steeld);color:#fff;border-bottom:3px solid var(--spark)}
+  header.top .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;flex-wrap:wrap;gap:8px}
+  .logo{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.25rem;letter-spacing:1px}
+  .logo b{color:var(--amber)}
+  header.top a.call{color:#fff;text-decoration:none;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:1.15rem;border-bottom:3px solid var(--spark)}
+  /* hero */
+  .hero{background:
+    linear-gradient(rgba(20,22,26,.86),rgba(20,22,26,.9)),
+    repeating-linear-gradient(45deg,#33373f 0 14px,#2b2f36 14px 28px);color:#fff;padding:76px 0}
+  .hero .tag{display:inline-block;background:var(--spark);color:#fff;font-family:'Rajdhani',sans-serif;font-weight:700;
+    letter-spacing:2px;padding:5px 14px;border-radius:3px;font-size:.85rem}
+  .hero h1{font-size:3rem;line-height:1.02;margin:16px 0 14px}
+  .hero h1 span{color:var(--amber)}
+  .hero p{max-width:600px;color:#d4d8dd;font-size:1.15rem}
+  .hero .cta{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .hero .est{color:#8b929b;font-family:'Rajdhani',sans-serif;font-weight:600;letter-spacing:1px}
+  section{padding:56px 0}
+  h2{font-size:2.05rem;color:var(--steel)}
+  .sub{color:var(--grey);margin:6px 0 28px;max-width:640px}
+  /* two col services */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .panel{background:#fff;border:1px solid #e3e6ea;border-radius:8px;padding:28px;border-top:5px solid var(--steel)}
+  .panel.fab{border-top-color:var(--spark)}
+  .panel h3{font-size:1.35rem;color:var(--steel);margin-bottom:6px}
+  .panel.fab h3{color:var(--spark)}
+  .panel .lead{color:var(--grey);margin-bottom:14px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chips span{background:var(--paper);border:1px solid #dfe3e8;padding:7px 13px;border-radius:20px;font-size:.9rem;font-weight:600;color:var(--steel)}
+  /* how */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;counter-reset:s}
+  .step{background:var(--steel);color:#eceef1;border-radius:8px;padding:24px;position:relative}
+  .step:before{counter-increment:s;content:counter(s);font-family:'Rajdhani',sans-serif;font-weight:700;
+    font-size:2.4rem;color:var(--spark);line-height:1}
+  .step h3{color:#fff;font-size:1.15rem;margin:8px 0 6px}
+  .step p{color:#b7bdc5;font-size:.94rem}
+  /* season banner */
+  .season{background:var(--amber);color:#3a2600}
+  .season .wrap{display:flex;align-items:center;gap:18px;padding:26px 22px;flex-wrap:wrap;justify-content:space-between}
+  .season h3{font-size:1.5rem}
+  .season p{font-weight:600;max-width:560px}
+  /* contact */
+  .contact{background:var(--steeld);color:#fff}
+  .contact h2{color:#fff}
+  .cbox{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:20px}
+  .cbox .info p{margin:8px 0;color:#cfd4da}
+  .cbox .info b{color:var(--amber);font-family:'Rajdhani',sans-serif;letter-spacing:1px}
+  form{display:grid;gap:12px}
+  form input,form select,form textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:5px;
+    background:#2c3138;color:#fff;font-family:inherit;font-size:1rem}
+  footer{background:#0f1114;color:#8b929b;padding:30px 0;font-size:.9rem}
+  footer a{color:#fff;text-decoration:none}
+  .note{font-size:.78rem;color:#7d848a;margin-top:12px}
+  @media(max-width:720px){.hero h1{font-size:2.1rem}.two{grid-template-columns:1fr}.cbox{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap">
+  <div class="logo">BAKER'S <b>SMALL ENGINE</b> REPAIR &amp; FABRICATION</div>
+  <a class="call" href="tel:15185708884">(518) 570-8884</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <span class="tag">MORIAH, NY · LANG ROAD</span>
+  <h1>If it's got a small engine,<br><span>bring it to the shop.</span></h1>
+  <p>Mowers that won't start, snowblowers before the first storm, chainsaws, tillers and generators — plus custom welding and fabrication when a part just needs to be made. One local shop between Crown Point and Moriah Corners.</p>
+  <div class="cta">
+    <a class="btn" href="#contact">Book a repair</a>
+    <span class="est">Owner-run since 2014</span>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Two benches, one shop</h2>
+  <p class="sub">Everyday small-engine work and real metal fabrication under the same roof — so you're not driving to a dealer an hour away or waiting weeks for a simple weld.</p>
+  <div class="two">
+    <div class="panel">
+      <h3>Small Engine Repair</h3>
+      <p class="lead">Tune-ups, hard-starts, blades, belts, carbs and full service on the equipment you actually own.</p>
+      <div class="chips">
+        <span>Lawn mowers</span><span>Riding mowers</span><span>Snowblowers</span>
+        <span>Chainsaws</span><span>Tillers</span><span>Trimmers</span><span>Generators</span><span>Pressure washers</span>
+      </div>
+    </div>
+    <div class="panel fab">
+      <h3>Welding &amp; Fabrication</h3>
+      <p class="lead">Broke a bracket, cracked a frame, need a part that doesn't exist anymore? Bring it in and we'll fab or weld it up.</p>
+      <div class="chips">
+        <span>Steel repairs</span><span>Cracked frames</span><span>Brackets &amp; mounts</span>
+        <span>Trailer fixes</span><span>Custom parts</span><span>One-off fabrication</span>
+      </div>
+    </div>
+  </div>
+  <p class="note">Confirm the full brand/equipment list and any welding limits with Ben before publishing.</p>
+</div></section>
+
+<section style="background:#e8eaee"><div class="wrap">
+  <h2>How drop-off works</h2>
+  <p class="sub">Simple and local. No dealer runaround.</p>
+  <div class="steps">
+    <div class="step"><h3>Call or text</h3><p>Tell us the machine and what it's doing. We'll say if it's a quick fix or a bring-it-in.</p></div>
+    <div class="step"><h3>Drop it off</h3><p>Bring it to the shop on Lang Road, off Moriah Road toward Big Hollow.</p></div>
+    <div class="step"><h3>We diagnose</h3><p>You get an honest read on what it needs and what it'll cost before we go ahead.</p></div>
+    <div class="step"><h3>Back to work</h3><p>Pick it up running. Cash or check.</p></div>
+  </div>
+</div></section>
+
+<section class="season"><div class="wrap">
+  <div><h3>Beat the first snow</h3><p>Get the snowblower serviced before the season hits — the shop fills up fast once the flakes start flying in the Champlain Valley.</p></div>
+  <a class="btn" href="#contact" style="background:var(--steel)">Schedule a service</a>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <h2>Bring it by the shop</h2>
+  <p class="sub" style="color:#b7bdc5">Call, text, or send a note and we'll get you scheduled.</p>
+  <div class="cbox">
+    <div class="info">
+      <p><b>SHOP</b><br>Baker's Small Engine Repair &amp; Fabrication</p>
+      <p><b>WHERE</b><br>107 Lang Road, Moriah, NY 12960<br>Off Moriah Rd onto Lang Rd / Big Hollow Rd — about ½ mile, first building on the left</p>
+      <p><b>CALL / TEXT</b><br><a href="tel:15185708884" style="color:#fff">(518) 570-8884</a></p>
+      <p><b>OWNER</b><br>Benjamin Baker</p>
+    </div>
+    <form onsubmit="event.preventDefault();alert('Thanks — this is a preview. On the live site this sends your request to the shop.');">
+      <div><input required placeholder="Your name"></div>
+      <div><input required type="tel" placeholder="Phone"></div>
+      <div><select><option>Small engine repair</option><option>Snowblower service</option><option>Welding / fabrication job</option><option>Not sure — need advice</option></select></div>
+      <div><input placeholder="What machine? (make / type)"></div>
+      <div><textarea rows="3" placeholder="What's it doing? (won't start, smoking, cracked part…)"></textarea></div>
+      <button class="btn" type="submit">Send it over</button>
+    </form>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <strong style="color:#fff;font-family:'Rajdhani',sans-serif;letter-spacing:1px">BAKER'S SMALL ENGINE REPAIR &amp; FABRICATION</strong> ·
+  107 Lang Road, Moriah, NY 12960 · <a href="tel:15185708884">(518) 570-8884</a>
+  <p class="note">Preview concept prepared by Onyx Rise Media for the owner's review. Not affiliated with any similarly named auto-repair business. Hours and service list to be confirmed before launch.</p>
+</div></footer>
+
+</body>
+</html>

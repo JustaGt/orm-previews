@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Warsaw Meat Packing — Custom Cutting &amp; Local Meats | Warsaw, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--maroon:#6e1d24;--dkmaroon:#4a1218;--cream:#f7f0e6;--butter:#e8c569;--char:#211a19;--ink:#2a2220;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Work Sans',sans-serif;color:var(--ink);background:var(--cream);line-height:1.62;}
+.wrap{max-width:1050px;margin:0 auto;padding:0 22px;}
+.announce{background:var(--dkmaroon);color:#f3e2d6;font-size:.85rem;text-align:center;padding:9px 0;letter-spacing:.02em;}
+.announce b{color:var(--butter);}
+header{background:var(--maroon);color:#fff;position:relative;}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-bottom:1px solid #ffffff2a;}
+.brand{font-family:'Playfair Display',serif;font-weight:800;font-size:1.4rem;letter-spacing:.01em;}
+.brand small{display:block;font-family:'Work Sans';font-weight:500;font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--butter);margin-top:2px;}
+.nav a.ph{color:#fff;font-weight:700;text-decoration:none;font-size:1.05rem;}
+.hero{padding:60px 0 56px;text-align:center;}
+.est{font-family:'Playfair Display',serif;font-style:italic;color:var(--butter);font-size:1rem;}
+h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(2.1rem,4.8vw,3.25rem);line-height:1.1;max-width:760px;margin:14px auto 16px;}
+.hero p{font-size:1.16rem;color:#f0ddd3;max-width:600px;margin:0 auto 28px;}
+.cta{display:inline-block;background:var(--butter);color:var(--dkmaroon);font-weight:700;font-size:1.05rem;padding:15px 30px;border-radius:3px;text-decoration:none;}
+.cta.o{background:transparent;border:2px solid #ffffff55;color:#fff;margin-left:8px;}
+.counter{background:var(--char);color:#e9ded1;}
+.counter .wrap{display:flex;flex-wrap:wrap;justify-content:space-around;text-align:center;gap:20px;padding:20px 22px;font-weight:600;}
+.counter span::before{content:"—";color:var(--butter);margin-right:8px;}
+section{padding:58px 0;}
+.k{font-family:'Work Sans';color:var(--maroon);letter-spacing:.16em;text-transform:uppercase;font-size:.78rem;font-weight:700;}
+h2{font-family:'Playfair Display',serif;font-weight:800;font-size:2.05rem;color:var(--maroon);margin:6px 0 10px;}
+.intro{max-width:680px;color:#4d403b;font-size:1.05rem;margin-bottom:26px;}
+.case{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;}
+.cut{background:#fff;border:1px solid #e6dccb;border-radius:8px;padding:22px;}
+.cut h3{font-family:'Playfair Display',serif;font-size:1.18rem;color:var(--dkmaroon);margin-bottom:6px;}
+.cut p{font-size:.94rem;color:#54463f;}
+.custom{background:var(--maroon);color:#f4e6da;}
+.custom h2{color:#fff;}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:22px;margin-top:8px;}
+.st{border-top:3px solid var(--butter);padding-top:14px;}
+.st b{font-family:'Playfair Display',serif;color:#fff;font-size:1.1rem;display:block;margin-bottom:5px;}
+.st p{color:#eccfc0;font-size:.94rem;}
+.local .wrap{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center;}
+@media(max-width:730px){.local .wrap{grid-template-columns:1fr;}}
+.local ul{list-style:none;margin-top:10px;}
+.local li{padding:8px 0 8px 26px;position:relative;border-bottom:1px solid #e6dccb;}
+.local li::before{content:"◆";position:absolute;left:0;color:var(--maroon);font-size:.8rem;top:11px;}
+.hourcard{background:#fff;border:1px solid #e6dccb;border-radius:10px;padding:26px;box-shadow:0 6px 20px rgba(110,29,36,.06);}
+.hourcard h3{font-family:'Playfair Display',serif;color:var(--maroon);font-size:1.3rem;margin-bottom:12px;}
+.hourcard table{width:100%;border-collapse:collapse;}
+.hourcard td{padding:7px 0;border-bottom:1px solid #efe6d6;font-size:.98rem;}
+.hourcard td:last-child{text-align:right;font-weight:600;}
+.visit{background:var(--char);color:#eadfd2;}
+.vinner{display:grid;grid-template-columns:1fr 1fr;gap:38px;}
+@media(max-width:730px){.vinner{grid-template-columns:1fr;}}
+.visit h2{color:#fff;}
+form input,form textarea,form select{width:100%;padding:12px;border:none;border-radius:5px;margin-bottom:12px;font-family:inherit;font-size:1rem;}
+form button{background:var(--butter);color:var(--dkmaroon);border:none;font-weight:700;font-size:1rem;padding:14px 30px;border-radius:5px;cursor:pointer;}
+.info a{color:var(--butter);font-weight:700;text-decoration:none;font-size:1.3rem;}
+.info p{margin:11px 0;}
+footer{background:var(--dkmaroon);color:#c79b8f;text-align:center;padding:22px 0;font-size:.85rem;}
+</style>
+</head>
+<body>
+
+<div class="announce">Filling freezers around Wyoming County for <b>40+ years</b> · USDA-inspected · Warsaw, NY</div>
+
+<header>
+<div class="wrap"><div class="nav">
+<div class="brand">Warsaw Meat Packing<small>Custom Cutting &amp; Retail Since the 1980s</small></div>
+<a class="ph" href="tel:5857862820">(585) 786-2820</a>
+</div></div>
+<div class="wrap"><div class="hero">
+<span class="est">Miller Road, Warsaw · a family butcher shop</span>
+<h1>Your animal, cut your way — plus a retail case worth the drive.</h1>
+<p>Warsaw Meat Packing has done the county's custom slaughtering and cut-to-order butchering for four decades: whole and half beef and hog broken down exactly how your freezer wants it, alongside a fresh case of local meats, cured hams, bacon, jerky, cheese and butter.</p>
+<a class="cta" href="#plan">Plan a Custom Order</a><a class="cta o" href="tel:5857862820">Call the Shop</a>
+</div></div>
+</header>
+
+<div class="counter"><div class="wrap">
+<span>USDA &amp; custom slaughter</span><span>Cut &amp; wrapped to order</span><span>Local beef, pork, lamb</span><span>Smoked &amp; cured in-house</span>
+</div></div>
+
+<section><div class="wrap">
+<span class="k">In the case</span>
+<h2>What's fresh at the counter</h2>
+<p class="intro">Stop in and it's real butcher-counter meat — cut here, not trucked in shrink-wrapped. Availability shifts with the season, so call ahead for larger orders.</p>
+<div class="case">
+<div class="cut"><h3>Beef &amp; Pork</h3><p>Local steaks, roasts, chops and ground, cut fresh at the counter. Bulk ground and roast boxes for the freezer on request.</p></div>
+<div class="cut"><h3>Smoked Ham &amp; Bacon</h3><p>Hams and slab bacon cured and smoked in-house — the kind you plan a holiday table around.</p></div>
+<div class="cut"><h3>Jerky &amp; Snack Sticks</h3><p>Beef jerky and sticks made from local meat, cured the old way. A steady favorite at the register.</p></div>
+<div class="cut"><h3>Cheese &amp; Butter</h3><p>Wyoming County dairy country in the case — local cheeses and butter to round out the order.</p></div>
+</div>
+</div></section>
+
+<section class="custom"><div class="wrap">
+<span class="k" style="color:var(--butter)">Custom processing</span>
+<h2>Bring us your animal — leave with your freezer plan</h2>
+<div class="steps">
+<div class="st"><b>1 · Book your date</b><p>Call ahead to schedule your beef, hog or lamb. Fall and hunting-season slots fill early, so plan ahead.</p></div>
+<div class="st"><b>2 · Tell us the cuts</b><p>Steak thickness, roast sizes, how much ground, sausage or no — we take your cut sheet and follow it.</p></div>
+<div class="st"><b>3 · We hang &amp; cut</b><p>USDA-inspected and custom slaughter, proper aging, then broken down clean by hand — not rushed.</p></div>
+<div class="st"><b>4 · Wrapped &amp; ready</b><p>Everything labeled, wrapped and frozen so it stacks neat in the freezer and you know what's what.</p></div>
+</div>
+</div></section>
+
+<section class="local"><div class="wrap">
+<div>
+<span class="k">Why the drive out to Miller Road</span>
+<h2>A real butcher, not a meat aisle</h2>
+<ul>
+<li>Four decades cutting for Wyoming County families and farms</li>
+<li>USDA-inspected slaughter facility — done right and on the books</li>
+<li>Cut-to-order by people who'll tell you what a side of beef really yields</li>
+<li>Local sourcing — you can ask where the animal came from and get an answer</li>
+<li>Cured, smoked and made on site, not shipped in from a warehouse</li>
+</ul>
+</div>
+<div class="hourcard">
+<h3>Shop Hours</h3>
+<table>
+<tr><td>Monday – Friday</td><td>8:00 – 5:00</td></tr>
+<tr><td>Saturday</td><td>8:00 – 12:00</td></tr>
+<tr><td>Sunday</td><td>Closed</td></tr>
+</table>
+<p style="margin-top:12px;font-size:.9rem;color:#7a655c;">Open year round. Call ahead for whole/half orders and holiday hams — those book up. <em>Confirm current hours with the shop before publishing.</em></p>
+</div>
+</div></section>
+
+<section class="visit" id="plan"><div class="wrap">
+<span class="k" style="color:var(--butter)">Plan your order</span>
+<h2>Book a cut or ask about a freezer order</h2>
+<div class="vinner">
+<form>
+<input type="text" placeholder="Name" required>
+<input type="tel" placeholder="Phone">
+<select><option>What are you after?</option><option>Whole / half beef</option><option>Whole / half hog</option><option>Custom slaughter &amp; cutting</option><option>Retail counter question</option><option>Holiday ham / bacon order</option></select>
+<textarea rows="3" placeholder="Tell us what you need — animal, timing, or the cuts you want."></textarea>
+<button type="submit">Send My Request</button>
+</form>
+<div class="info">
+<p><strong>Warsaw Meat Packing Co.</strong></p>
+<p><a href="tel:5857862820">(585) 786-2820</a></p>
+<p>3865 Miller Road<br>Warsaw, NY 14569</p>
+<p>USDA-inspected · Custom slaughter &amp; cutting · Retail counter<br>Planning a whole or half for the freezer? Call and we'll walk you through pounds, timing and cost.</p>
+</div>
+</div>
+</div></section>
+
+<footer><div class="wrap">© 2026 Warsaw Meat Packing Co. · 3865 Miller Road, Warsaw, NY 14569 · (585) 786-2820 · Custom cutting &amp; local meats</div></footer>
+</body>
+</html>

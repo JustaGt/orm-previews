@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gunnison Lakeshore Orchards — Pick-Your-Own Apples &amp; Farmhouse Bakery, Crown Point NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --apple:#9c2b2b; --appled:#7a2020; --leaf:#3f6b3a; --leafd:#2f5330;
+    --gold:#e0a83c; --cream:#fbf5e9; --paper:#fffdf8; --ink:#2c231c; --brown:#6a584a; --line:#e7dcc6;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Karla',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+  h1,h2,h3,.fr{font-family:'Fraunces',serif}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--apple);color:#fff;font-family:'Karla',sans-serif;font-weight:700;
+    padding:14px 30px;border-radius:30px;text-decoration:none;letter-spacing:.3px}
+  .btn:hover{background:var(--appled)}
+  .btn.leaf{background:var(--leaf)}.btn.leaf:hover{background:var(--leafd)}
+  nav{background:var(--paper);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;flex-wrap:wrap;gap:8px}
+  nav .brand{font-family:'Fraunces',serif;font-weight:700;font-size:1.2rem;color:var(--apple)}
+  nav .brand small{display:block;font-family:'Karla';font-weight:600;font-size:.62rem;letter-spacing:2px;color:var(--brown);text-transform:uppercase}
+  nav .links a{text-decoration:none;margin-left:18px;font-weight:600;color:var(--ink);font-size:.94rem}
+  nav .links a:hover{color:var(--apple)}
+  /* hero */
+  .hero{background:linear-gradient(rgba(44,35,28,.42),rgba(44,35,28,.58)),
+    linear-gradient(160deg,#7fa06a 0%,#3f6b3a 55%,#9c2b2b 130%);color:#fff;padding:92px 0 84px}
+  .hero .kick{font-family:'Karla';font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:.85rem;color:#f5e6c8}
+  .hero h1{font-family:'Fraunces',serif;font-size:3.3rem;line-height:1.04;margin:14px 0 14px;max-width:760px}
+  .hero p{font-size:1.2rem;max-width:600px;color:#f4efe4}
+  .hero .cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+  /* ripe board */
+  .ripe{background:var(--gold);color:#3d2a08}
+  .ripe .wrap{padding:22px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;justify-content:center;text-align:center}
+  .ripe .lbl{font-family:'Fraunces',serif;font-weight:700;font-size:1.2rem}
+  .ripe .flag{background:#fff;border-radius:24px;padding:8px 18px;font-weight:700;color:var(--appled)}
+  .ripe .flag.on{background:var(--leaf);color:#fff}
+  section{padding:64px 0}
+  h2{font-family:'Fraunces',serif;font-size:2.3rem;color:var(--appled)}
+  .sub{color:var(--brown);margin:8px 0 30px;max-width:640px;font-size:1.05rem}
+  .center{text-align:center;margin-left:auto;margin-right:auto}
+  /* varieties */
+  .vars{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+  .v{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px;text-align:center}
+  .v .dot{width:30px;height:30px;border-radius:50%;margin:0 auto 10px;background:var(--apple)}
+  .v.g .dot{background:var(--leaf)}.v.y .dot{background:var(--gold)}
+  .v h3{font-family:'Fraunces';font-size:1.15rem}
+  .v span{font-size:.85rem;color:var(--brown);font-weight:600}
+  /* bakery */
+  .bakery{background:var(--appled);color:#fbeee0}
+  .bakery h2{color:#fff}
+  .menu{display:grid;grid-template-columns:1fr 1fr;gap:12px 34px;margin-top:24px;max-width:820px}
+  .mrow{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed #a5564a;padding:10px 0}
+  .mrow b{font-family:'Fraunces';font-weight:600}
+  .mrow span{color:#e8c9b6;font-size:.9rem;text-align:right}
+  .star{color:var(--gold);font-weight:700}
+  /* story */
+  .story{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center}
+  .story .box{background:var(--leafd);color:#eef3e8;border-radius:16px;padding:34px}
+  .story .box h2{color:#fff}
+  .story .box p{margin-top:12px;color:#dbe6d3}
+  .facts{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px}
+  .facts .f{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;text-align:center;flex:1;min-width:120px}
+  .facts .f b{font-family:'Fraunces';font-size:1.9rem;color:var(--apple);display:block;line-height:1}
+  .facts .f span{font-size:.82rem;color:var(--brown);font-weight:700}
+  /* visit */
+  .visit{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:stretch}
+  .vcard{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:28px}
+  .vcard h3{font-family:'Fraunces';font-size:1.4rem;color:var(--appled)}
+  .vcard p{margin:8px 0;color:var(--brown)}
+  .vcard b{color:var(--ink)}
+  .mapimg{width:100%;border:0;border-radius:16px;min-height:300px;background:#e7ecd8}
+  footer{background:var(--ink);color:#c7b7a6;padding:38px 0;font-size:.92rem}
+  footer a{color:#fff;text-decoration:none}
+  .fgrid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px}
+  .note{font-size:.78rem;color:#9b8b7c;margin-top:14px}
+  @media(max-width:720px){.hero h1{font-size:2.3rem}.story{grid-template-columns:1fr}.menu{grid-template-columns:1fr}.visit{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="brand">Gunnison Lakeshore Orchards<small>Crown Point · Lake Champlain · Since 1826</small></div>
+  <span class="links">
+    <a href="#pick">Pick-Your-Own</a>
+    <a href="#bakery">The Bakery</a>
+    <a href="#story">Our Story</a>
+    <a href="#visit">Visit</a>
+  </span>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="kick">Six generations on the lakeshore</div>
+  <h1>Apples, cider donuts and a view of Lake Champlain</h1>
+  <p>A family orchard on Route 9N in Crown Point since 1826 — 165 acres of trees on the shore of the lake, pick-your-own in the fall, and a farmhouse bakery that's worth the drive on its own.</p>
+  <div class="cta">
+    <a class="btn" href="#pick">Plan your apple visit</a>
+    <a class="btn leaf" href="#bakery">See the bakery</a>
+  </div>
+</div></header>
+
+<div class="ripe"><div class="wrap">
+  <span class="lbl">🍎 What's ready now:</span>
+  <span class="flag on">Bakery open</span>
+  <span class="flag">Early apples — coming late summer</span>
+  <span class="flag">Pick-your-own — fall</span>
+  <span style="font-weight:700">Call ahead: <a href="tel:15185973363" style="color:#3d2a08">(518) 597-3363</a></span>
+</div></div>
+
+<section id="pick"><div class="wrap">
+  <h2 class="center">Pick-your-own, right on the lake</h2>
+  <p class="sub center">When the trees come in, bring the family and fill a bag straight off the branch. Varieties ripen through the fall — here's the kind of season to expect. Call the day you're coming to hear exactly what's ready.</p>
+  <div class="vars">
+    <div class="v g"><div class="dot"></div><h3>Early Season</h3><span>Late summer starters</span></div>
+    <div class="v"><div class="dot"></div><h3>McIntosh &amp; Reds</h3><span>Peak fall picking</span></div>
+    <div class="v y"><div class="dot"></div><h3>Honeycrisp &amp; SweeTango®</h3><span>Crisp &amp; sweet favorites</span></div>
+    <div class="v g"><div class="dot"></div><h3>Storage Apples</h3><span>Late-fall keepers</span></div>
+    <div class="v"><div class="dot"></div><h3>Cider Apples</h3><span>For pressing &amp; baking</span></div>
+    <div class="v y"><div class="dot"></div><h3>Ask What's On</h3><span>We'll point you to the ripe rows</span></div>
+  </div>
+  <p class="note center">Variety list is representative — confirm exact varieties and this season's PYO dates with the farm before publishing.</p>
+</div></section>
+
+<section id="bakery" class="bakery"><div class="wrap">
+  <h2>The Olde Farmhouse Bakery</h2>
+  <p class="sub" style="color:#e8c9b6">Baked on the farm. People come off Route 9N for the cinnamon cider donuts and stay for a pie. A taste of what's usually in the case:</p>
+  <div class="menu">
+    <div class="mrow"><b>Cinnamon Cider Donuts <span class="star">★ famous</span></b><span>by the half-dozen or dozen</span></div>
+    <div class="mrow"><b>Fruit Pies</b><span>seven kinds — apple, berry &amp; more</span></div>
+    <div class="mrow"><b>Fresh Breads &amp; Rolls</b><span>baked daily</span></div>
+    <div class="mrow"><b>Cookies</b><span>farmhouse batches</span></div>
+    <div class="mrow"><b>Pastries</b><span>seasonal</span></div>
+    <div class="mrow"><b>Local Goods &amp; Gifts</b><span>syrup, jams &amp; more</span></div>
+  </div>
+  <p style="margin-top:22px"><a class="btn leaf" href="#visit">Get directions &amp; hours</a></p>
+  <p class="note" style="color:#c99">Confirm the exact bakery menu, pie flavors and any pre-order option with the farm before publishing.</p>
+</div></section>
+
+<section id="story"><div class="wrap">
+  <div class="story">
+    <div class="box">
+      <h2>Six generations, one orchard</h2>
+      <p>Gunnison Lakeshore Orchards has grown apples on this stretch of the Lake Champlain shore since 1826. Six generations of the same family have worked these 165 acres — pruning in the cold months, picking in the fall, and baking what doesn't go home in a bag.</p>
+      <p>It's a working farm and a fall tradition for families across the Champlain Valley and the Adirondacks.</p>
+    </div>
+    <div>
+      <div class="facts">
+        <div class="f"><b>1826</b><span>Founded</span></div>
+        <div class="f"><b>6th</b><span>Generation</span></div>
+        <div class="f"><b>165</b><span>Acres on the lake</span></div>
+      </div>
+      <p style="margin-top:18px;color:var(--brown)">Grown for pick-your-own and the farm market — and as a SweeTango® apple grower, some of what's on these trees ends up well beyond Crown Point.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="visit" style="background:var(--paper)"><div class="wrap">
+  <h2 class="center">Come see us on Route 9N</h2>
+  <p class="sub center">On the Lake Champlain shore in Crown Point — an easy fall drive from Ticonderoga, Port Henry and across the lake from Vermont.</p>
+  <div class="visit">
+    <div class="vcard">
+      <h3>Gunnison Lakeshore Orchards</h3>
+      <p><b>Where:</b> 3208 NYS Route 9N, Crown Point, NY 12928</p>
+      <p><b>Hours:</b> Mon, Tue, Thu, Fri 9:00am – 5:00pm · Closed Wednesday</p>
+      <p><b>Call:</b> <a href="tel:15185973363" style="color:var(--apple);font-weight:700">(518) 597-3363</a></p>
+      <p style="color:var(--brown)">Fall pick-your-own hours change with the season — call ahead the day you plan to come so you catch the ripe rows and the bakery.</p>
+      <a class="btn" href="tel:15185973363" style="margin-top:10px">Call the farm</a>
+      <p class="note">Confirm current-season hours before publishing.</p>
+    </div>
+    <iframe class="mapimg" loading="lazy" src="https://www.google.com/maps?q=Gunnison+Lakeshore+Orchards+Crown+Point+NY&output=embed" title="Map to Gunnison Lakeshore Orchards"></iframe>
+  </div>
+</div></section>
+
+<footer><div class="wrap fgrid">
+  <div>
+    <strong style="color:#fff;font-family:'Fraunces',serif;font-size:1.2rem">Gunnison Lakeshore Orchards</strong><br>
+    3208 NYS Route 9N, Crown Point, NY 12928<br>
+    Since 1826 · Six generations on Lake Champlain
+  </div>
+  <div>
+    <a href="tel:15185973363">(518) 597-3363</a><br>
+    <a href="#pick">Pick-Your-Own</a> · <a href="#bakery">Bakery</a> · <a href="#visit">Visit</a>
+  </div>
+</div>
+<p class="note">Preview concept prepared by Onyx Rise Media for the owner's review. Season dates, variety and bakery lists to be confirmed before launch.</p>
+</footer>
+
+</body>
+</html>

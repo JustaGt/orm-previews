@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nicholas Excavation and Construction — Driveways, Foundations & Drainage, Fabius NY</title>
+<meta name="description" content="Owner-operated excavation and sitework in Fabius, NY and the southern Onondaga hills. Driveways, foundation digs, drainage and regrading, land clearing and fill. Send a photo, get an estimate.">
+<style>
+  :root{
+    --iron:#1d2126; --iron2:#2a2f36; --steel:#454c56; --amber:#f0a51e; --amber-d:#c9860f;
+    --gravel:#e7e9ec; --paper:#f5f6f8; --ink:#1b1e22; --line:#3a4048; --safety:#f5c518;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.62}
+  h1,h2,h3{line-height:1.12;letter-spacing:-.01em}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .btn{display:inline-block;background:var(--amber);color:#231a03;font-weight:800;text-decoration:none;
+    padding:15px 28px;border-radius:3px;border-bottom:3px solid var(--amber-d);text-transform:uppercase;letter-spacing:.03em;font-size:.95rem}
+  .btn:hover{background:#ffb42e}
+  .btn.line{background:transparent;color:#fff;border:2px solid #5a636e;border-bottom-width:2px}
+  /* utility bar */
+  .util{background:#12151a;color:#cdd3da;font-size:.88rem}
+  .util .wrap{display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:space-between;align-items:center;padding:9px 22px}
+  .util b{color:#fff}
+  .util .tag{color:var(--safety);font-weight:700;letter-spacing:.05em}
+  /* hero */
+  header.hero{color:#fff;position:relative;
+    background:
+      linear-gradient(100deg,rgba(20,23,28,.95) 40%,rgba(20,23,28,.55)),
+      repeating-linear-gradient(45deg,#f5c518 0 22px,#1d2126 22px 44px);
+    background-color:var(--iron);padding:70px 0 60px}
+  .hero h1{font-size:2.95rem;max-width:760px;margin:12px 0 12px}
+  .hero .kicker{display:inline-block;background:var(--amber);color:#231a03;font-weight:800;font-size:.76rem;
+    letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:2px}
+  .hero p.lead{font-size:1.2rem;max-width:600px;color:#dfe4ea}
+  .hero .cta{margin-top:26px;display:flex;flex-wrap:wrap;gap:14px}
+  .bar{display:flex;flex-wrap:wrap;gap:0;margin-top:32px;border:1px solid #3a4048;border-radius:4px;overflow:hidden}
+  .bar div{flex:1;min-width:150px;padding:14px 16px;border-right:1px solid #3a4048;background:#20242a}
+  .bar div:last-child{border-right:none}
+  .bar b{display:block;color:var(--amber);font-size:1.05rem}
+  .bar span{font-size:.85rem;color:#c3cad2}
+  /* sections */
+  section{padding:56px 0}
+  section.dark{background:var(--iron);color:#e6e9ed}
+  section.gravel{background:var(--gravel)}
+  .eyebrow{color:var(--amber-d);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem}
+  section.dark .eyebrow{color:var(--amber)}
+  h2{font-size:2rem;margin:8px 0 8px}
+  .sub{color:#4c545d;max-width:640px;margin-bottom:26px}
+  section.dark .sub{color:#b9c1ca}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+  .svc{background:#fff;border:1px solid #d8dce1;border-left:4px solid var(--amber);border-radius:4px;padding:22px}
+  .svc h3{font-size:1.14rem;margin-bottom:6px;color:var(--iron)}
+  .svc p{font-size:.95rem;color:#4c545d}
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;counter-reset:s}
+  .step{background:#20242a;border:1px solid #333a42;border-radius:6px;padding:22px;position:relative}
+  .step:before{counter-increment:s;content:counter(s);position:absolute;top:-14px;left:18px;background:var(--amber);
+    color:#231a03;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800}
+  .step h3{margin:6px 0 6px;font-size:1.1rem;color:#fff}
+  .step p{font-size:.92rem;color:#c3cad2}
+  /* area */
+  .towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .towns span{background:#fff;border:1px solid #d8dce1;border-radius:40px;padding:8px 16px;font-weight:600;font-size:.92rem;color:var(--steel)}
+  /* estimate */
+  .est{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+  .form{background:#fff;border:1px solid #d8dce1;border-radius:8px;padding:28px}
+  .form label{display:block;font-size:.85rem;font-weight:600;margin:14px 0 4px;color:#333}
+  .form input,.form select,.form textarea{width:100%;padding:12px;border:1px solid #c7ccd2;border-radius:4px;font-size:1rem;font-family:inherit}
+  .form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .form button{margin-top:18px;width:100%;background:var(--amber);color:#231a03;font-weight:800;text-transform:uppercase;
+    letter-spacing:.03em;border:none;border-bottom:3px solid var(--amber-d);border-radius:4px;padding:15px;font-size:1rem;cursor:pointer}
+  .note{font-size:.8rem;color:#8b929a;margin-top:10px}
+  .cred{list-style:none}
+  .cred li{padding:12px 0 12px 32px;position:relative;border-bottom:1px solid #e0e3e7}
+  .cred li:before{content:"✓";position:absolute;left:0;top:11px;background:var(--iron);color:var(--amber);
+    width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:800}
+  .cred b{color:var(--iron)}
+  /* footer */
+  footer{background:#12151a;color:#aeb6bf;padding:44px 0 28px}
+  footer h4{color:#fff;margin-bottom:8px}
+  footer a{color:var(--amber)}
+  .fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:26px}
+  .fine{border-top:1px solid #2a2f36;margin-top:26px;padding-top:16px;font-size:.82rem;color:#7b838c}
+  @media(max-width:760px){.est{grid-template-columns:1fr}.form .row{grid-template-columns:1fr}.hero h1{font-size:2.1rem}}
+</style>
+</head>
+<body>
+
+<div class="util"><div class="wrap">
+  <span class="tag">Owner-operated · Fabius, NY</span>
+  <span>Estimate line: <b>(315) 289-8894</b> &nbsp;·&nbsp; USDOT-authorized carrier</span>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <span class="kicker">Excavation · Sitework · Fabius NY</span>
+  <h1>Driveways, foundations, and drainage done by the person running the machine.</h1>
+  <p class="lead">Nicholas Excavation and Construction has been moving dirt in the southern Onondaga hills since 2017. Steep, wet ground is what we work in every day — tell us the job and we'll come look.</p>
+  <div class="cta">
+    <a class="btn" href="#estimate">Request an estimate</a>
+    <a class="btn line" href="tel:3152898894">Call (315) 289-8894</a>
+  </div>
+  <div class="bar">
+    <div><b>Since 2017</b><span>local &amp; owner-run</span></div>
+    <div><b>USDOT authority</b><span>road-legal hauling</span></div>
+    <div><b>Fabius &amp; hills</b><span>Pompey · Tully · Apulia</span></div>
+    <div><b>Free look</b><span>on-site estimates</span></div>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <span class="eyebrow">What we do</span>
+  <h2>Dirt work for hill-town homes and small commercial sites</h2>
+  <p class="sub">The everyday jobs that keep a rural property working — and the ones a homeowner shouldn't hire out to a national outfit two counties away.</p>
+  <div class="grid">
+    <div class="svc"><h3>Driveways &amp; access roads</h3><p>New driveways cut, graded and stoned; culverts set; washed-out gravel drives rebuilt to shed water instead of trapping it.</p></div>
+    <div class="svc"><h3>Foundation &amp; basement digs</h3><p>Excavation for new homes, additions, garages and pole barns — dug to grade, backfilled and cleaned up.</p></div>
+    <div class="svc"><h3>Drainage &amp; regrading</h3><p>Wet yard, water in the basement, standing pools after every storm — regrading, swales and drain lines to move water off the property.</p></div>
+    <div class="svc"><h3>Land clearing &amp; fill</h3><p>Brush and stump removal, lot clearing, pond work, and bringing in or hauling out fill to level a site.</p></div>
+  </div>
+</div></section>
+
+<section class="dark"><div class="wrap">
+  <span class="eyebrow">How an estimate works</span>
+  <h2>No mystery, no runaround</h2>
+  <p class="sub">Most jobs out here start with a quick look at the ground. Here's the whole process.</p>
+  <div class="steps">
+    <div class="step"><h3>Tell us the job</h3><p>Call or send the form with your town, what you need, and a photo of the spot if you have one.</p></div>
+    <div class="step"><h3>We come look</h3><p>We walk the site, check the grade and access, and talk through what makes sense for your ground and budget.</p></div>
+    <div class="step"><h3>You get a number</h3><p>A clear estimate for the work — no vague "solutions," just what it costs to do the job right.</p></div>
+    <div class="step"><h3>We do the work</h3><p>Scheduled, done, and the site left clean. Local outfit, so we're not hard to reach afterward.</p></div>
+  </div>
+</div></section>
+
+<section class="gravel"><div class="wrap">
+  <span class="eyebrow">Where we work</span>
+  <h2>The southern Onondaga hill towns</h2>
+  <p class="sub">Based in Fabius, working the uplands and the southern Syracuse metro. If you're near here, we can get the machine to you.</p>
+  <div class="towns">
+    <span>Fabius</span><span>Pompey</span><span>Tully</span><span>Apulia</span><span>LaFayette</span><span>Cardiff</span><span>Delphi Falls</span><span>Manlius (S.)</span><span>Southern Onondaga Co.</span>
+  </div>
+</div></section>
+
+<section id="estimate"><div class="wrap">
+  <div class="est">
+    <div>
+      <span class="eyebrow">Get a number</span>
+      <h2>Request an estimate</h2>
+      <p class="sub">Send the details and a photo of the site and we'll get back to you to set up a look. Or just call the estimate line.</p>
+      <ul class="cred">
+        <li><b>Owner-operated since 2017</b> — you deal with the person on the machine, not a call center.</li>
+        <li><b>USDOT-authorized carrier</b> — legal to haul material and equipment on the road.</li>
+        <li><b>Local to the hill towns</b> — we know Fabius/Pompey/Tully ground and its drainage.</li>
+        <li><b>Insured</b>* — certificate available on request before work starts.</li>
+      </ul>
+    </div>
+    <form class="form" onsubmit="return false;">
+      <div class="row">
+        <div><label>Name</label><input type="text" placeholder="Your name"></div>
+        <div><label>Phone</label><input type="tel" placeholder="Best number"></div>
+      </div>
+      <label>Town</label><input type="text" placeholder="e.g. Fabius, Pompey, Tully">
+      <label>Type of work</label>
+      <select>
+        <option>Driveway / access road</option>
+        <option>Foundation / basement dig</option>
+        <option>Drainage / regrading</option>
+        <option>Land clearing / stumps</option>
+        <option>Fill — bring in or haul out</option>
+        <option>Other sitework</option>
+      </select>
+      <label>Describe the site (a photo helps)</label>
+      <textarea rows="3" placeholder="What's the ground like, and what are you trying to get done?"></textarea>
+      <button>Send my estimate request</button>
+      <p class="note">Demo form for preview purposes. On the live site this routes to Nicholas Excavation. *Insurance certificate, service radius and scheduling to be confirmed with the owner.</p>
+    </form>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div>
+      <h4>Nicholas Excavation &amp; Construction, Inc.</h4>
+      <p>Owner-operated excavation and sitework in Fabius, NY and the southern Onondaga hills since 2017.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>Fabius, NY 13063<br><a href="tel:3152898894">(315) 289-8894</a></p>
+    </div>
+    <div>
+      <h4>Work</h4>
+      <p>Driveways · foundations · drainage &amp; regrading · land clearing · fill &amp; hauling</p>
+    </div>
+  </div>
+  <div class="fine">© 2017–2026 Nicholas Excavation and Construction, Inc. · Fabius, NY · USDOT 4139075. Preview concept prepared by Onyx Rise Media. Service area, insurance details and contact info to be confirmed with the owner before publishing.</div>
+</div></footer>
+
+</body>
+</html>

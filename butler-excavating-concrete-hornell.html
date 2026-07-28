@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Butler Excavating &amp; Concrete — Site Work in Hornell, NY</title>
+<meta name="description" content="Owner-run excavation and concrete around Hornell, NY — driveways, foundations, land clearing, grading and hydroseeding. One crew from the first dig to the finished, seeded grade. Call (607) 382-8113.">
+<style>
+  :root{
+    --earth:#5a4227; --earth-d:#3f2e1a; --clay:#8a6a41; --sand:#efe6d8;
+    --machine:#e8871e; --machine-d:#c96f0f; --concrete:#8b8f92; --ink:#2a2118;
+    --muted:#6d6152; --paper:#faf6ef; --white:#fff; --line:#e0d5c3;
+    --font:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font);color:var(--ink);background:var(--paper);line-height:1.62}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{font-weight:800;letter-spacing:-.01em}
+  header{position:sticky;top:0;z-index:40;background:var(--earth-d);border-bottom:4px solid var(--machine)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:800}
+  .brand .mk{width:44px;height:44px;background:var(--machine);color:var(--earth-d);border-radius:8px;display:grid;place-items:center;font-weight:900;font-size:18px}
+  .brand small{display:block;font-size:9px;color:#d3c3a9;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+  nav a{color:#d3c3a9;font-size:13.5px;margin-left:22px}
+  nav a:hover{color:var(--machine)}
+  .callbtn{background:var(--machine);color:var(--earth-d);padding:10px 16px;border-radius:7px;font-weight:800;font-size:13.5px;margin-left:22px}
+  @media(max-width:860px){nav .lk{display:none}}
+  .hero{background:linear-gradient(160deg,var(--earth) 0%,var(--earth-d) 100%);color:#fff;padding:82px 0 68px;position:relative;overflow:hidden}
+  .hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:34px;background:repeating-linear-gradient(135deg,var(--machine) 0 22px,var(--earth-d) 22px 44px);opacity:.5}
+  .tag{display:inline-block;background:rgba(232,135,30,.18);color:#ffcf9c;border:1px solid var(--machine);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 13px;border-radius:20px;margin-bottom:20px}
+  .hero h1{font-size:clamp(2rem,5vw,3.05rem);line-height:1.1;max-width:19ch}
+  .hero h1 span{color:var(--machine)}
+  .hero p{margin-top:18px;color:#e4d7c3;font-size:clamp(1.02rem,2vw,1.2rem);max-width:58ch}
+  .hbtns{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{padding:14px 24px;border-radius:8px;font-weight:800;font-size:15px;display:inline-flex;gap:8px;align-items:center}
+  .btn.p{background:var(--machine);color:var(--earth-d)}.btn.p:hover{background:var(--machine-d)}
+  .btn.g{background:transparent;border:1px solid var(--clay);color:#fff}.btn.g:hover{border-color:var(--machine)}
+  .quick{margin-top:28px;display:flex;flex-wrap:wrap;gap:22px;font-size:14px;color:#e4d7c3}
+  .quick b{color:var(--machine)}
+  section{padding:60px 0}
+  .kick{color:var(--clay);font-size:12px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
+  h2{font-size:clamp(1.6rem,3.4vw,2.15rem);margin-top:8px;color:var(--earth-d)}
+  .lead{color:var(--muted);max-width:64ch;margin-top:12px;font-size:1.05rem}
+  .svc{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:34px}
+  @media(max-width:900px){.svc{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:560px){.svc{grid-template-columns:1fr 1fr}}
+  .sc{background:var(--white);border:1px solid var(--line);border-top:4px solid var(--machine);border-radius:9px;padding:22px 18px;text-align:center}
+  .sc .ic{font-size:26px}
+  .sc h3{color:var(--earth-d);font-size:1rem;margin-top:8px}
+  .sc p{color:var(--muted);font-size:.86rem;margin-top:5px}
+  .finish{background:var(--earth-d);color:#fff}
+  .finish h2{color:#fff}
+  .finish .lead{color:#e4d7c3}
+  .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px;counter-reset:f}
+  @media(max-width:760px){.flow{grid-template-columns:1fr 1fr}}
+  .fl{background:var(--earth);border:1px solid var(--clay);border-radius:10px;padding:24px 20px;position:relative}
+  .fl:before{counter-increment:f;content:"0" counter(f);position:absolute;top:16px;right:18px;font-weight:900;color:var(--machine);font-size:1.3rem;opacity:.7}
+  .fl h3{color:#fff;font-size:1.02rem}
+  .fl p{color:#e4d7c3;font-size:.9rem;margin-top:6px}
+  .why{background:var(--sand)}
+  .whybox{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+  @media(max-width:760px){.whybox{grid-template-columns:1fr}}
+  .wc{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:26px}
+  .wc .ic{width:44px;height:44px;background:var(--machine);color:#fff;border-radius:9px;display:grid;place-items:center;font-size:20px;font-weight:900}
+  .wc h3{color:var(--earth-d);font-size:1.08rem;margin-top:14px}
+  .wc p{color:var(--muted);font-size:.94rem;margin-top:7px}
+  .area{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:28px;margin-top:30px}
+  .area h3{color:var(--earth-d);font-size:1.15rem}
+  .towns{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
+  .towns span{background:var(--sand);border:1px solid var(--line);border-radius:20px;padding:5px 13px;font-size:13px;color:var(--earth-d)}
+  .contact{background:var(--earth);color:#fff}
+  .cbox{background:var(--earth-d);border:1px solid var(--clay);border-radius:14px;padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:26px}
+  @media(max-width:720px){.cbox{grid-template-columns:1fr}}
+  .cbox h3{color:#fff;font-size:1.25rem}
+  .cbox .row{margin-top:14px;font-size:15px;color:#e4d7c3}
+  .cbox .row b{color:var(--machine);display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+  .cta{background:var(--machine);color:var(--earth-d);padding:15px 22px;border-radius:8px;font-weight:800;text-align:center;display:block;margin-top:10px}
+  footer{background:#2c2013;color:#b7a88f;padding:30px 0;font-size:13px}
+  .note{font-size:11px;color:#b7a88f;margin-top:6px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <div class="brand"><div class="mk">BE</div><div>Butler Excavating &amp; Concrete<small>Hornell, NY · Site work</small></div></div>
+    <nav>
+      <a class="lk" href="#services">Services</a>
+      <a class="lk" href="#process">Dig to Finish</a>
+      <a class="lk" href="#area">Service Area</a>
+      <a class="callbtn" href="tel:16073828113">(607) 382-8113</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">Owner-run · Commercial &amp; residential</span>
+    <h1>One crew from the first cut of dirt <span>to the finished, seeded grade.</span></h1>
+    <p>Butler Excavating &amp; Concrete digs it and pours it — driveways, foundations, land clearing, grading and hydroseeding around Hornell. You're not chasing a separate concrete outfit after the hole is dug.</p>
+    <div class="hbtns">
+      <a class="btn p" href="#contact">Get a site-work quote</a>
+      <a class="btn g" href="#services">What we do</a>
+    </div>
+    <div class="quick">
+      <span><b>Excavation + concrete</b> under one owner</span>
+      <span><b>BBB A+</b> rated</span>
+      <span><b>Hornell, NY</b> based</span>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="kick">What we do</div>
+    <h2>The jobs that start with a machine and a plan</h2>
+    <p class="lead">Real site work around Hornell — not a vague "excavation services" list. Tell us the job and we'll tell you what it takes.</p>
+    <div class="svc">
+      <div class="sc"><div class="ic">🚜</div><h3>Excavation</h3><p>Digs, footers, utility &amp; site prep.</p></div>
+      <div class="sc"><div class="ic">🧱</div><h3>Concrete</h3><p>Foundations, flatwork &amp; pads.</p></div>
+      <div class="sc"><div class="ic">🌲</div><h3>Land clearing</h3><p>Lots, brush &amp; overgrown parcels.</p></div>
+      <div class="sc"><div class="ic">📐</div><h3>Grading &amp; leveling</h3><p>Driveways, drainage &amp; final grade.</p></div>
+      <div class="sc"><div class="ic">🌱</div><h3>Hydroseeding</h3><p>Lock in the finished ground with turf.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="finish">
+  <div class="wrap">
+    <div class="kick" style="color:#d9a86a">Dig to finish</div>
+    <h2>Why one crew for both matters</h2>
+    <p class="lead">When the digging and the concrete are two different companies, the schedule and the blame gap live in between. Here, the same crew carries the job the whole way.</p>
+    <div class="flow">
+      <div class="fl"><h3>Clear &amp; dig</h3><p>Strip the lot, take out brush and open the hole or the trench you actually need.</p></div>
+      <div class="fl"><h3>Pour</h3><p>Set and pour the foundation, the flatwork or the pad — no waiting on an outside concrete sub.</p></div>
+      <div class="fl"><h3>Grade</h3><p>Bring the site back to a clean, draining grade around the new work.</p></div>
+      <div class="fl"><h3>Seed</h3><p>Hydroseed so the finished ground holds instead of washing out.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="wrap">
+    <div class="kick">Why Butler</div>
+    <h2>A local owner you can get on the phone</h2>
+    <div class="whybox">
+      <div class="wc"><div class="ic">✓</div><h3>Both trades, one call</h3><p>Excavation and concrete run by the same owner — fewer companies to coordinate and one point of accountability from start to finish.</p></div>
+      <div class="wc"><div class="ic">★</div><h3>BBB A+ rated</h3><p>An A+ rating with the Better Business Bureau and a local reputation built job by job around Hornell.</p></div>
+      <div class="wc"><div class="ic">◎</div><h3>Commercial &amp; residential</h3><p>From a homeowner's driveway and pad to a commercial site prep — the same crew, scaled to the job.</p></div>
+    </div>
+    <p class="note">Insurance and licensing details to be confirmed with the owner before publishing.</p>
+  </div>
+</section>
+
+<section id="area">
+  <div class="wrap">
+    <div class="kick">Service area</div>
+    <h2>Hornell and the surrounding towns</h2>
+    <div class="area">
+      <h3>Based on County Route 109 in Hornell</h3>
+      <p style="color:var(--muted);margin-top:8px">Working the Canisteo Valley and the towns around Hornell. Not sure if your parcel is in range? Call and ask.</p>
+      <div class="towns"><span>Hornell</span><span>Hornellsville</span><span>Canisteo</span><span>Arkport</span><span>Almond</span><span>Canaseraga</span><span>North Hornell</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="kick" style="color:#d9a86a">Get a quote</div>
+    <h2 style="color:#fff">Tell us about the site</h2>
+    <div class="cbox">
+      <div>
+        <h3>Butler Excavating &amp; Concrete, LLC</h3>
+        <div class="row"><b>Location</b>1623 County Route 109, Hornell, NY 14843</div>
+        <div class="row"><b>Phone</b>(607) 382-8113</div>
+        <div class="row"><b>Owner</b>Brian Butler</div>
+      </div>
+      <div>
+        <div class="row"><b>Quote me for</b>Driveway · foundation · dig · clearing · grade · hydroseed</div>
+        <a class="cta" href="tel:16073828113">Call (607) 382-8113</a>
+        <p style="font-size:13px;color:#d3c3a9;margin-top:12px">The clearer you are about the job — size, access, timing — the tighter the number we can give you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Butler Excavating &amp; Concrete, LLC · 1623 County Route 109, Hornell, NY 14843 · (607) 382-8113
+  <div class="note">Preview concept prepared by Onyx Rise Media for review. Service area, insurance and job details to be confirmed with the owner before publishing.</div></div>
+</footer>
+</body>
+</html>

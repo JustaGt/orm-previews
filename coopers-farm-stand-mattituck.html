@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cooper's Farm Stand — Pick-Your-Own, Fresh Eggs &amp; Straw Delivery, Mattituck NY</title>
+<style>
+  :root{
+    --field:#2f6b2d; --field2:#245222; --tomato:#d8402f; --tomato2:#b8321f;
+    --gold:#f2b632; --sky:#eaf3e6; --cream:#fbf8ee; --ink:#26301f; --line:#e0dcc6; --slate:#5b6a4f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Segoe UI",Roboto,Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--tomato);color:#fff;font-weight:800;padding:15px 28px;border-radius:8px;letter-spacing:.3px;border:2px solid var(--tomato2)}
+  .btn:hover{background:var(--tomato2)}
+  .btn.leaf{background:var(--field);border-color:var(--field2)}
+  .btn.leaf:hover{background:var(--field2)}
+  .btn.line{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6)}
+  .btn.line:hover{background:rgba(255,255,255,.12)}
+  /* bar */
+  .bar{background:var(--field);color:#eef6e8}
+  .bar .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;padding:12px 22px}
+  .brand{font-weight:900;letter-spacing:.4px;font-size:1.16rem}
+  .brand b{color:var(--gold)}
+  .bar .tag{font-size:.8rem;color:#c8e0bf;font-weight:700;font-style:italic}
+  .bar .ph{font-weight:900;color:#fff}
+  /* hero */
+  .hero{color:#fff;background:
+     linear-gradient(180deg,rgba(28,64,26,.72),rgba(28,64,26,.90)),
+     repeating-linear-gradient(90deg,#2c6b2a 0 44px,#276226 44px 88px);}
+  .hero .wrap{padding:66px 22px 56px}
+  .kick{color:var(--gold);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:.78rem}
+  h1{font-size:2.8rem;line-height:1.07;margin:12px 0 8px;max-width:16ch}
+  .slog{color:#f4e9c6;font-style:italic;font-size:1.2rem;margin-bottom:12px;font-weight:700}
+  .hero p{color:#e7f1df;font-size:1.14rem;max-width:54ch}
+  .hero .row{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .trust{margin-top:24px;display:flex;gap:10px;flex-wrap:wrap}
+  .t{background:rgba(255,255,255,.09);border:1px solid rgba(242,182,50,.42);border-radius:30px;padding:8px 15px;font-weight:700;font-size:.85rem;color:#f0f6ea}
+  /* sections */
+  section{padding:54px 0}
+  h2{font-size:1.9rem;color:var(--field2)}
+  .lead{color:var(--slate);max-width:62ch;margin:8px 0 24px;font-size:1.02rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:16px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}
+  .card .ic{font-size:1.6rem}
+  .card h3{color:var(--tomato2);margin:8px 0 6px;font-size:1.12rem}
+  .card p{color:#4d5942;font-size:.95rem}
+  /* picking list */
+  .pick{background:var(--field2);color:#f0f7ea}
+  .pick h2{color:#fff}
+  .pick .lead{color:#d3e7ca}
+  .veg{display:flex;flex-wrap:wrap;gap:9px;margin-top:6px}
+  .v{background:rgba(255,255,255,.08);border:1px solid rgba(242,182,50,.34);border-radius:30px;padding:8px 15px;font-weight:700;font-size:.88rem;color:#f2f8ec}
+  .note{margin-top:18px;color:#cfe4c6;font-size:.95rem}
+  /* how PYO */
+  .pyo{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .pcard{background:#fff;border:1px solid var(--line);border-top:5px solid var(--gold);border-radius:12px;padding:22px}
+  .pcard .n{font-weight:900;color:var(--tomato);font-size:1.5rem}
+  .pcard h3{color:var(--field2);margin:6px 0;font-size:1.06rem}
+  .pcard p{color:#4d5942;font-size:.94rem}
+  /* straw */
+  .straw{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .straw .two{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}
+  .straw .box{background:var(--sky);border:1px solid var(--line);border-radius:12px;padding:26px}
+  .straw ul{list-style:none;margin-top:10px}
+  .straw li{padding:8px 0 8px 28px;position:relative;color:#3f4b39;border-bottom:1px dashed var(--line)}
+  .straw li:before{content:"🌾";position:absolute;left:0}
+  /* visit */
+  .visit{background:
+     linear-gradient(180deg,rgba(28,64,26,.90),rgba(28,64,26,.95)),
+     repeating-linear-gradient(90deg,#2c6b2a 0 44px,#276226 44px 88px);color:#fff}
+  .visit .two{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+  .info .li{display:flex;gap:12px;align-items:flex-start;margin-bottom:16px}
+  .info .li b{color:var(--gold)}
+  .info .li span{color:#e6f0de}
+  .hoursbox{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:13px;padding:26px}
+  .hoursbox .big{font-size:1.5rem;font-weight:900;color:#fff}
+  .hoursbox p{color:#dcecd3;margin-top:8px}
+  footer{background:#123e12;color:#a9c9a0;text-align:center;padding:26px 22px;font-size:.9rem}
+  @media(max-width:820px){.straw .two,.visit .two{grid-template-columns:1fr}h1{font-size:2.15rem}}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap">
+  <div class="brand">Cooper's <b>Farm Stand</b></div>
+  <div class="tag">Mattituck · North Fork</div>
+  <div class="ph">(631) 298-5195</div>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="kick">Family farm on Breakwater Road</div>
+  <div class="slog">"If we sell it, we grew it."</div>
+  <h1>Picked this morning, or pick it yourself this afternoon.</h1>
+  <p>A working Mattituck family farm where the tomatoes on the stand were on the vine an hour ago — and you're welcome to walk the rows and fill a box yourself, no entry fee.</p>
+  <div class="row">
+    <a class="btn" href="#visit">Hours &amp; directions</a>
+    <a class="btn line" href="#pick">See what's ripe</a>
+  </div>
+  <div class="trust">
+    <span class="t">Open 7 days · 8 AM–dusk</span>
+    <span class="t">Pick-your-own, free to walk the fields</span>
+    <span class="t">Fresh eggs · Straw delivered Island-wide</span>
+  </div>
+</div></header>
+
+<section id="pick" class="pick"><div class="wrap">
+  <h2>Grown right here on the farm</h2>
+  <p class="lead">Everything on the stand comes off our own fields — picked daily, or pick it yourself. Here's what we grow through the season:</p>
+  <div class="veg">
+    <span class="v">Tomatoes</span><span class="v">Swiss chard</span><span class="v">Beets</span>
+    <span class="v">Red &amp; white onions</span><span class="v">Zucchini</span><span class="v">Zucchini flowers</span>
+    <span class="v">Eggplant</span><span class="v">Oriental eggplant</span><span class="v">Bell peppers</span>
+    <span class="v">Hot peppers</span><span class="v">Watermelon</span><span class="v">Musk melon</span>
+    <span class="v">Okra</span><span class="v">Asparagus</span><span class="v">Potatoes</span>
+    <span class="v">String beans</span><span class="v">Sweet peas</span><span class="v">Fava beans</span>
+    <span class="v">Cucumbers</span>
+  </div>
+  <p class="note">Come spring, the same plants we grow in our greenhouses are for sale for your own home garden.</p>
+</div></section>
+
+<section><div class="wrap">
+  <h2>More than a vegetable stand</h2>
+  <p class="lead">Three reasons the regulars keep pulling in off Breakwater Road all season.</p>
+  <div class="grid">
+    <div class="card"><div class="ic">🧺</div><h3>Pick your own — free to roam</h3><p>Walk the fields and fill your own box or wagon. No entry fee, and wagons and boxes are here for you to use.</p></div>
+    <div class="card"><div class="ic">🥚</div><h3>Fresh eggs daily</h3><p>About 150 hens, hand-raised from chicks, laying eggs we sell fresh through spring and summer — plus a couple of pigs, peacocks and ducks the kids love.</p></div>
+    <div class="card"><div class="ic">🌱</div><h3>Spring bedding plants</h3><p>Raised right in our greenhouses and sold in season, so you can start your own garden with plants grown on North Fork soil.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>How pick-your-own works</h2>
+  <p class="lead">First time out? It's about as simple as farming gets.</p>
+  <div class="pyo">
+    <div class="pcard"><div class="n">1</div><h3>Pull in &amp; grab a wagon</h3><p>Park at the stand on Breakwater Road. Wagons and boxes are right there — no charge to head into the fields.</p></div>
+    <div class="pcard"><div class="n">2</div><h3>Pick what's ready</h3><p>Walk the rows and pick what looks good that day. If it's on the stand, it's ripe in the field.</p></div>
+    <div class="pcard"><div class="n">3</div><h3>Weigh up at the stand</h3><p>Bring your box back, settle up, and take home vegetables that were in the ground twenty minutes ago.</p></div>
+  </div>
+</div></section>
+
+<section class="straw"><div class="wrap">
+  <div class="two">
+    <div>
+      <h2>Straw — picked up here or delivered across Long Island</h2>
+      <p class="lead">We grow and bale our own straw and deliver it anywhere on the Island, year-round. It's the same clean straw the farm runs on.</p>
+      <a class="btn leaf" href="#visit">Ask about a straw delivery</a>
+    </div>
+    <div class="box">
+      <h3 style="color:var(--field2);font-size:1.12rem">What folks use it for</h3>
+      <ul>
+        <li>Animal bedding for barns, coops &amp; kennels</li>
+        <li>Fall &amp; harvest decoration</li>
+        <li>Erosion control on new seed &amp; grading jobs</li>
+        <li>Mulch &amp; garden bedding</li>
+      </ul>
+      <p style="margin-top:12px;color:var(--slate);font-size:.92rem">Pick up at the farm or have it delivered — available all year, not just in October.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <h2 style="color:#fff">Come see us on Breakwater Road</h2>
+  <p class="lead" style="color:#d3e7ca">We're open every day through the growing season. Call ahead for straw delivery or to ask what's picking this week.</p>
+  <div class="two">
+    <div class="info">
+      <div class="li"><b>📍&nbsp;</b><span><b>Find us</b><br>2200 Breakwater Road<br>Mattituck, NY 11952</span></div>
+      <div class="li"><b>📞&nbsp;</b><span><b>Call the farm</b><br>(631) 298-5195</span></div>
+      <div class="li"><b>🚜&nbsp;</b><span><b>Straw delivery</b><br>Anywhere on Long Island — call to schedule</span></div>
+      <div class="li"><b>🥚&nbsp;</b><span><b>Eggs &amp; produce</b><br>Fresh daily, spring through summer</span></div>
+    </div>
+    <div class="hoursbox">
+      <div style="color:var(--gold);font-weight:800;letter-spacing:1px;text-transform:uppercase;font-size:.78rem">Open</div>
+      <div class="big">7 days a week</div>
+      <div class="big" style="color:var(--gold)">8 AM until dusk</div>
+      <p>No entry fee to pick your own. Wagons and boxes provided. Bring the kids to meet the peacocks.</p>
+    </div>
+  </div>
+</div></section>
+
+<footer>
+  Cooper's Farm Stand · 2200 Breakwater Road, Mattituck, NY 11952 · (631) 298-5195 · "If we sell it, we grew it."<br>
+  <span style="opacity:.7">Concept preview prepared for Cooper's Farm Stand — not the live site.</span>
+</footer>
+
+</body>
+</html>

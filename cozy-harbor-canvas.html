@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cozy Harbor Canvas — Custom Marine Canvas &amp; Yacht Upholstery | Locust Valley, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#1f3a4d;--navy2:#26485f;--sun:#c88a3c;--rope:#e7dcc6;--canvas:#faf7f0;--ink:#20313b;--muted:#5b6c76;--line:#e2dccd}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Work Sans',sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+  h1,h2,h3,.serif{font-family:'Fraunces',serif;font-weight:600;line-height:1.1}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  header{position:sticky;top:0;z-index:20;background:rgba(31,58,77,.97);backdrop-filter:blur(6px)}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:15px 24px;max-width:1120px;margin:0 auto}
+  .brand{color:#fff;font-family:'Fraunces',serif;font-size:1.45rem;font-weight:600}
+  .brand span{color:var(--sun)}
+  .navlinks a{color:#d6e0e6;text-decoration:none;margin-left:24px;font-size:.92rem}
+  .navlinks a:hover{color:var(--sun)}
+  .btn{display:inline-block;background:var(--sun);color:#1f2e19;padding:13px 26px;border-radius:3px;text-decoration:none;font-weight:600;font-size:.94rem;transition:.2s;border:none;cursor:pointer}
+  .btn:hover{background:#d89b4d}
+  .btn-out{background:transparent;border:1px solid rgba(255,255,255,.45);color:#fff}
+  .btn-out:hover{border-color:var(--sun);color:var(--sun)}
+  @media(max-width:760px){.navlinks{display:none}}
+
+  .hero{background:linear-gradient(rgba(20,34,44,.55),rgba(20,34,44,.68)),url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1600&q=70');background-size:cover;background-position:center;color:#fff;padding:116px 0 124px}
+  .hero .wrap{max-width:840px}
+  .kicker{color:var(--sun);text-transform:uppercase;letter-spacing:3px;font-size:.8rem;font-weight:600;margin-bottom:18px}
+  .hero h1{font-size:3.7rem;margin-bottom:20px}
+  .hero p{font-size:1.18rem;color:#e6ecef;max-width:620px;margin-bottom:32px}
+  .hero .btn{margin-right:12px}
+  @media(max-width:760px){.hero h1{font-size:2.5rem}}
+
+  .season{background:var(--sun);color:#26320f;text-align:center;padding:15px 24px;font-weight:600;font-size:.98rem}
+
+  section{padding:80px 0}
+  .sec-kicker{color:var(--navy2);text-transform:uppercase;letter-spacing:2.5px;font-size:.77rem;font-weight:700;margin-bottom:12px}
+  h2{font-size:2.5rem;color:var(--navy);margin-bottom:14px}
+  .sub{color:var(--muted);font-size:1.05rem;max-width:680px}
+
+  .services{background:var(--canvas)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:44px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:5px;padding:30px 26px}
+  .card .ic{font-size:1.6rem;margin-bottom:12px}
+  .card h3{font-size:1.45rem;color:var(--navy);margin-bottom:9px}
+  .card p{color:var(--muted);font-size:.95rem}
+
+  .gallery .ggrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:40px}
+  .shot{height:210px;border-radius:5px;background-size:cover;background-position:center;position:relative;overflow:hidden}
+  .shot span{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(20,34,44,.82));color:#fff;font-size:.85rem;padding:26px 14px 12px;font-weight:500}
+  .ph-note{font-size:.74rem;color:#a98a54;font-style:italic;margin-top:12px}
+
+  .materials{background:var(--navy);color:#fff}
+  .materials h2{color:#fff}
+  .mgrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:34px}
+  .materials ul{list-style:none}
+  .materials li{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.14);display:flex;gap:12px;color:#e6ecef}
+  .materials li::before{content:"✦";color:var(--sun)}
+  .materials .img{background:url('https://images.unsplash.com/photo-1605281317010-fe5ffe798166?auto=format&fit=crop&w=900&q=70');background-size:cover;background-position:center;border-radius:6px;min-height:320px}
+  @media(max-width:760px){.mgrid{grid-template-columns:1fr}}
+
+  .how{text-align:center}
+  .hsteps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-top:44px}
+  .hstep .n{font-family:'Fraunces',serif;font-size:2.6rem;color:var(--sun)}
+  .hstep h3{font-size:1.3rem;color:var(--navy);margin:6px 0 8px}
+  .hstep p{color:var(--muted);font-size:.94rem}
+
+  .quote{background:var(--canvas)}
+  .qgrid{display:grid;grid-template-columns:1fr 1fr;gap:52px;margin-top:20px;align-items:start}
+  .field{margin-bottom:15px}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  label{display:block;font-size:.78rem;letter-spacing:1px;text-transform:uppercase;color:var(--navy2);margin-bottom:6px;font-weight:600}
+  input,select,textarea{width:100%;padding:12px 14px;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:3px;font-family:inherit;font-size:.95rem}
+  .quote .btn{width:100%;text-align:center;font-size:1rem;margin-top:6px}
+  .cinfo{background:var(--navy);color:#fff;border-radius:6px;padding:32px 30px}
+  .cinfo .big{font-family:'Fraunces',serif;font-size:1.9rem;color:#fff}
+  .cinfo p{margin-bottom:12px;color:#d6e0e6}
+  .cinfo a{color:var(--sun);text-decoration:none}
+  @media(max-width:760px){.qgrid{grid-template-columns:1fr;gap:30px}.row2{grid-template-columns:1fr}}
+
+  footer{background:#162933;color:#8ba0ab;text-align:center;padding:34px 0;font-size:.86rem}
+  footer .brand{font-size:1.2rem;display:block;margin-bottom:8px}
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <div class="brand">Cozy Harbor <span>Canvas</span></div>
+    <div class="navlinks">
+      <a href="#services">Services</a>
+      <a href="#gallery">Our Work</a>
+      <a href="#materials">Materials</a>
+      <a href="#how">How It Works</a>
+      <a href="#quote">Get a Quote</a>
+    </div>
+    <a href="#quote" class="btn">Get a quote</a>
+  </nav>
+</header>
+
+<div class="season">Spring commissioning books up fast — reserve your canvas or interior work before launch day.</div>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="kicker">Locust Valley, NY · Manhasset Bay to Oyster Bay</div>
+    <h1>Canvas and cushions stitched to fit your boat exactly.</h1>
+    <p>Custom bimini tops, enclosures, covers, and yacht-interior reupholstery — measured on your boat, built by hand, and finished to sit tight and last through North Shore seasons.</p>
+    <div>
+      <a href="#quote" class="btn">Request a measure &amp; quote</a>
+      <a href="#gallery" class="btn btn-out">See our work</a>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="wrap">
+    <div class="sec-kicker">What we make</div>
+    <h2>From helm to headliner</h2>
+    <p class="sub">One shop for the canvas that keeps the weather out and the interior that makes the cabin feel like new.</p>
+    <div class="grid">
+      <div class="card"><div class="ic">⛵</div><h3>Bimini Tops &amp; Enclosures</h3><p>Full canvas tops, connectors, and clear-vinyl enclosures cut and sewn to your boat's frame and lines.</p></div>
+      <div class="card"><div class="ic">🧵</div><h3>Cushions &amp; Interiors</h3><p>Cockpit cushions, cabin seating, and full yacht-interior reupholstery — including Formula and Sea Ray headliners.</p></div>
+      <div class="card"><div class="ic">🛥️</div><h3>Covers &amp; Camper Tops</h3><p>Mooring and travel covers, camper backs, and weighted custom screen hatch covers made to your measurements.</p></div>
+      <div class="card"><div class="ic">🪡</div><h3>Repairs &amp; Refresh</h3><p>Restitching, zipper and window replacement, and freshening tired canvas so you get more seasons out of it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="gallery">
+  <div class="wrap">
+    <div class="sec-kicker">Our work</div>
+    <h2>Stitched by hand, on the North Shore</h2>
+    <p class="sub">A look at recent canvas and interior projects for boats berthed on Manhasset Bay and Oyster Bay.</p>
+    <div class="ggrid">
+      <div class="shot" style="background-image:url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=700&q=70')"><span>Bimini top &amp; connector</span></div>
+      <div class="shot" style="background-image:url('https://images.unsplash.com/photo-1605281317010-fe5ffe798166?auto=format&fit=crop&w=700&q=70')"><span>Cockpit cushions</span></div>
+      <div class="shot" style="background-image:url('https://images.unsplash.com/photo-1540946485063-a40da27545f8?auto=format&fit=crop&w=700&q=70')"><span>Clear-vinyl enclosure</span></div>
+      <div class="shot" style="background-image:url('https://images.unsplash.com/photo-1520255870062-bd79d3865de7?auto=format&fit=crop&w=700&q=70')"><span>Yacht interior reupholstery</span></div>
+    </div>
+    <p class="ph-note">Gallery uses placeholder imagery — swap in Cozy Harbor's own project photos before publishing.</p>
+  </div>
+</section>
+
+<section id="materials" class="materials">
+  <div class="wrap">
+    <div class="sec-kicker" style="color:var(--sun)">Materials</div>
+    <div class="mgrid">
+      <div>
+        <h2>The right cloth for salt, sun, and seasons</h2>
+        <ul>
+          <li>Sunbrella marine-grade acrylic canvas</li>
+          <li>Marine vinyls for cushions and interiors</li>
+          <li>Strataglass / clear vinyl for enclosures and windows</li>
+          <li>UV-resistant thread and marine hardware</li>
+          <li>Foam and batting matched to seating and headliners</li>
+        </ul>
+        <p style="color:#c6d2d9;margin-top:20px">Every job is measured on your boat, not from a template — so the fit is right the first time.</p>
+      </div>
+      <div class="img" role="img" aria-label="Marine canvas fabric and stitching detail"></div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="how">
+  <div class="wrap">
+    <div class="sec-kicker">How it works</div>
+    <h2>Three steps, no surprises</h2>
+    <div class="hsteps">
+      <div class="hstep"><div class="n">1</div><h3>Measure</h3><p>Send your boat's make and model with a few photos, or we come to the slip and measure in person.</p></div>
+      <div class="hstep"><div class="n">2</div><h3>Quote</h3><p>You get a clear price and a realistic timeline built around your launch or haul-out date.</p></div>
+      <div class="hstep"><div class="n">3</div><h3>Build &amp; Fit</h3><p>We cut, sew, and fit — then check it on the boat so it sits tight and looks right.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="quote" class="quote">
+  <div class="wrap">
+    <div class="sec-kicker">Get a quote</div>
+    <h2 style="margin-bottom:26px">Tell us about your boat</h2>
+    <div class="qgrid">
+      <form onsubmit="return false">
+        <div class="row2">
+          <div class="field"><label>Your name</label><input type="text" placeholder="Name"></div>
+          <div class="field"><label>Phone or email</label><input type="text" placeholder="Best way to reach you"></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label>Boat make &amp; model</label><input type="text" placeholder="e.g. Sea Ray 280"></div>
+          <div class="field"><label>Where it's kept</label><input type="text" placeholder="Marina / town"></div>
+        </div>
+        <div class="field"><label>What do you need?</label>
+          <select><option>Bimini top / enclosure</option><option>Cushions / interior reupholstery</option><option>Mooring or travel cover</option><option>Repair / refresh</option><option>Not sure — need advice</option></select>
+        </div>
+        <div class="field"><label>Details</label><textarea rows="3" placeholder="Tell us what you're picturing and your target date..."></textarea></div>
+        <button class="btn">Request a measure &amp; quote</button>
+      </form>
+      <div class="cinfo">
+        <p class="big">Cozy Harbor Canvas</p>
+        <p>Custom marine canvas &amp; upholstery</p>
+        <p><strong style="color:#fff">(516) 967-9187</strong></p>
+        <p><a href="mailto:cozyharborcanvas@gmail.com">cozyharborcanvas@gmail.com</a></p>
+        <p>Locust Valley, NY · North Shore</p>
+        <p><a href="https://www.instagram.com/sheshedraperie">Instagram</a> · <a href="#">Facebook</a></p>
+        <p style="color:#9fb1ba;font-size:.9rem;margin-top:8px">Call or text with your boat details for the fastest quote.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="brand">Cozy Harbor <span style="color:var(--sun)">Canvas</span></span>
+    Custom Marine Canvas &amp; Yacht Upholstery · Locust Valley, NY · (516) 967-9187
+    <div style="margin-top:8px;font-size:.78rem;opacity:.6">Preview concept prepared by Onyx Rise Media.</div>
+  </div>
+</footer>
+</body>
+</html>

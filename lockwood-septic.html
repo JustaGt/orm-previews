@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lockwood Septic Tank Service — Pumping &amp; Cleaning, Hannibal NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#0f6e78; --teal2:#0a545c; --deep:#08363c; --aqua:#25a3ad; --lime:#8bc34a;
+    --mist:#eef6f6; --card:#ffffff; --ink:#1f3236; --muted:#5e7175; --line:#d7e6e6;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--mist);line-height:1.62}
+  h1,h2,h3,.disp{font-family:'Rubik',sans-serif;line-height:1.12}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+  a{color:inherit}
+  .topbar{background:var(--deep);color:#bfe1e3;font-size:.9rem}
+  .topbar .wrap{display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:space-between;padding:9px 22px}
+  .topbar a{color:#7fd6dd;text-decoration:none;font-weight:600}
+  header{background:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(15,110,120,.06)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;padding:13px 22px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .dot{width:38px;height:38px;border-radius:50%;background:radial-gradient(circle at 32% 30%,var(--aqua),var(--teal2));flex:none}
+  .brand .n{font-family:'Rubik';font-weight:700;font-size:1.28rem;color:var(--teal2)}
+  .brand .s{font-size:.72rem;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase}
+  nav a{color:var(--ink);text-decoration:none;margin-left:20px;font-weight:600;font-size:.94rem}
+  nav a:hover{color:var(--teal)}
+  .nav-links{display:flex;align-items:center}
+  .callbtn{background:var(--teal);color:#fff;padding:10px 16px;border-radius:30px;font-family:'Rubik';font-weight:600;text-decoration:none;margin-left:20px;white-space:nowrap}
+  @media(max-width:760px){.nav-links nav{display:none}}
+  .hero{background:linear-gradient(160deg,var(--teal) 0%,var(--teal2) 60%,var(--deep) 100%);color:#fff;padding:70px 0 62px;position:relative;overflow:hidden}
+  .hero:after{content:"";position:absolute;right:-90px;bottom:-90px;width:320px;height:320px;border-radius:50%;background:rgba(255,255,255,.06)}
+  .hero .ey{color:#a9e7ec;font-family:'Rubik';font-weight:600;letter-spacing:2.5px;font-size:.82rem;text-transform:uppercase}
+  .hero h1{font-size:3rem;font-weight:700;margin:12px 0 16px;max-width:17ch}
+  .hero p{max-width:54ch;font-size:1.12rem;color:#dbf1f2}
+  .hero .cta{margin-top:26px;display:flex;flex-wrap:wrap;gap:13px}
+  .btn{background:#fff;color:var(--teal2);padding:14px 22px;border-radius:30px;font-family:'Rubik';font-weight:600;text-decoration:none;font-size:1.02rem}
+  .btn.alt{background:var(--lime);color:#20340c}
+  .hero .promise{margin-top:24px;display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);padding:9px 16px;border-radius:10px;font-size:.94rem;color:#eafafb}
+  section{padding:58px 0}
+  .kicker{color:var(--teal);font-family:'Rubik';font-weight:600;letter-spacing:2px;font-size:.8rem;text-transform:uppercase}
+  h2.title{font-size:2.1rem;font-weight:700;margin:8px 0 10px;color:var(--deep)}
+  .lead{color:var(--muted);max-width:60ch;margin-bottom:28px}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media(max-width:820px){.grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.grid{grid-template-columns:1fr}}
+  .svc{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:22px 18px;text-align:center}
+  .svc .ic{width:46px;height:46px;border-radius:12px;background:var(--mist);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-family:'Rubik';font-weight:700;color:var(--teal);font-size:1.25rem}
+  .svc h3{font-size:1.05rem;color:var(--teal2);margin-bottom:6px}
+  .svc p{font-size:.9rem;color:var(--muted)}
+  /* pump guide */
+  .guide{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .guide .wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+  @media(max-width:820px){.guide .wrap{grid-template-columns:1fr}}
+  .guide h2{color:var(--deep);font-size:1.95rem;margin-bottom:12px}
+  .guide p{color:var(--muted);margin-bottom:12px}
+  .table{background:var(--mist);border-radius:13px;padding:8px 20px}
+  .table .row{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px dashed var(--line);font-size:.98rem}
+  .table .row:last-child{border-bottom:0}
+  .table .row b{color:var(--teal2);font-family:'Rubik'}
+  /* warning */
+  .warn{background:var(--deep);color:#dff2f3}
+  .warn h2{color:#fff;font-size:1.9rem;margin-bottom:6px;text-align:center}
+  .warn p.sub{text-align:center;color:#a9d5d8;max-width:52ch;margin:0 auto 26px}
+  .wgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  @media(max-width:820px){.wgrid{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.wgrid{grid-template-columns:1fr}}
+  .wcard{background:#0e474e;border:1px solid #17636b;border-radius:12px;padding:18px;border-left:4px solid var(--lime)}
+  .wcard h4{font-family:'Rubik';color:#bff2c1;font-size:1rem;margin-bottom:6px}
+  .wcard p{font-size:.88rem;color:#c6e4e6}
+  /* area */
+  .area .wrap{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px 26px;border-top:5px solid var(--aqua)}
+  .area h2{color:var(--deep);font-size:1.7rem;margin-bottom:8px}
+  .towns{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
+  .towns span{background:var(--mist);border:1px solid var(--line);padding:6px 13px;border-radius:20px;font-size:.9rem;color:var(--teal2)}
+  .band{background:linear-gradient(135deg,var(--teal),var(--teal2));color:#fff;text-align:center}
+  .band .wrap{padding:52px 22px}
+  .band h2{font-size:2rem;margin-bottom:10px}
+  .band p{color:#dbf1f2;max-width:52ch;margin:0 auto 20px}
+  .band .phone{font-family:'Rubik';font-weight:700;font-size:2.1rem;color:#fff;letter-spacing:1px;display:inline-block}
+  #contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+  @media(max-width:760px){#contact .wrap{grid-template-columns:1fr}}
+  .info p{margin-bottom:12px}
+  .info b{font-family:'Rubik';color:var(--teal2)}
+  form label{display:block;font-size:.86rem;font-weight:600;margin:12px 0 5px;color:var(--deep)}
+  form input,form textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:9px;font:inherit;background:#fff}
+  form button{margin-top:16px;background:var(--teal);color:#fff;border:0;padding:13px 22px;border-radius:30px;font-family:'Rubik';font-weight:600;font-size:1rem;cursor:pointer}
+  .note{font-size:.8rem;color:var(--muted);margin-top:10px}
+  footer{background:var(--deep);color:#8fbcc0;font-size:.86rem}
+  footer .wrap{padding:26px 22px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+  footer a{color:#7fd6dd;text-decoration:none}
+</style>
+</head>
+<body>
+  <div class="topbar"><div class="wrap">
+    <span>Family septic service &bull; Hannibal &amp; Oswego County</span>
+    <span>Call to schedule: <a href="tel:+13153424551">(315) 342-4551</a></span>
+  </div></div>
+
+  <header><div class="wrap">
+    <div class="brand"><span class="dot"></span>
+      <div><div class="n">Lockwood Septic Tank Service</div><div class="s">Hannibal, New York</div></div>
+    </div>
+    <div class="nav-links">
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#guide">When to Pump</a>
+        <a href="#warn">Warning Signs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="callbtn" href="tel:+13153424551">(315) 342-4551</a>
+    </div>
+  </div></header>
+
+  <section class="hero"><div class="wrap">
+    <div class="ey">Pumping &bull; Cleaning &bull; Inspections</div>
+    <h1>The tank you forget about — until you can't.</h1>
+    <p>A local family that's pumped and cleaned septic tanks across Hannibal and Oswego County for years. Call before it backs up, or call the day it does — either way, someone who knows your ground is on the way.</p>
+    <div class="cta">
+      <a class="btn" href="tel:+13153424551">Call (315) 342-4551</a>
+      <a class="btn alt" href="#guide">Am I due for a pump?</a>
+    </div>
+    <div class="promise">Real-estate inspection on a deadline? Tell us the closing date when you call.</div>
+  </div></section>
+
+  <section id="services"><div class="wrap">
+    <div class="kicker">What we do</div>
+    <h2 class="title">Septic work, done by the family that answers</h2>
+    <p class="lead">No call center, no franchise. Lockwood pumps it, cleans it, inspects it and tells you straight when to have us back — so the tank stays the thing you don't think about.</p>
+    <div class="grid">
+      <div class="svc"><div class="ic">▾</div><h3>Tank Pumping</h3><p>Full pump-out of residential and camp tanks on the schedule your household actually needs.</p></div>
+      <div class="svc"><div class="ic">◍</div><h3>Cleaning</h3><p>Cleaning down to the baffles so solids don't carry into — and ruin — your leach field.</p></div>
+      <div class="svc"><div class="ic">✓</div><h3>Inspections</h3><p>Point-of-sale and pre-closing inspections, written up in time for the real-estate deadline.</p></div>
+      <div class="svc"><div class="ic">↻</div><h3>Maintenance</h3><p>A standing pump interval so you're never guessing — we remind you when it's time.</p></div>
+    </div>
+  </div></section>
+
+  <section id="guide" class="guide"><div class="wrap">
+    <div>
+      <div class="kicker">A useful rule of thumb</div>
+      <h2>How often should you really pump?</h2>
+      <p>Most Oswego-County homes should pump every 3 to 5 years — but a full house on an older tank fills faster than a two-person camp. Here's the honest range. When you call, tell us the tank size and how many people live there and we'll pin it down.</p>
+      <p class="note" style="color:var(--muted);font-size:.85rem">*General guidance for typical residential tanks — not a substitute for an actual look at your system.</p>
+    </div>
+    <div class="table">
+      <div class="row"><span>1–2 people</span><b>every 4–6 yrs</b></div>
+      <div class="row"><span>3–4 people</span><b>every 3–4 yrs</b></div>
+      <div class="row"><span>5–6 people</span><b>every 2–3 yrs</b></div>
+      <div class="row"><span>Garbage disposal in use</span><b>pump sooner</b></div>
+      <div class="row"><span>Buying / selling a home</span><b>inspect first</b></div>
+    </div>
+  </div></section>
+
+  <section id="warn" class="warn"><div class="wrap">
+    <div class="kicker" style="color:var(--lime)">Don't wait for the backup</div>
+    <h2>Four signs it's time to call today</h2>
+    <p class="sub">Catch these early and it's a routine pump. Ignore them and it's a flooded basement or a field you have to dig up.</p>
+    <div class="wgrid">
+      <div class="wcard"><h4>Slow drains</h4><p>Sinks, tubs and toilets all draining slow at once usually means the tank — not the pipe.</p></div>
+      <div class="wcard"><h4>Odor outside</h4><p>A sewage smell near the tank or field is the first warning most people ignore.</p></div>
+      <div class="wcard"><h4>Wet, lush grass</h4><p>A soggy or extra-green patch over the leach field means effluent is surfacing.</p></div>
+      <div class="wcard"><h4>Gurgling</h4><p>Toilets or drains that gurgle when other fixtures run mean the tank is full.</p></div>
+    </div>
+  </div></section>
+
+  <section id="area" class="area"><div class="wrap">
+    <div class="kicker">Where we pump</div>
+    <h2>Hannibal &amp; the surrounding Oswego County towns</h2>
+    <p class="lead" style="margin-bottom:0">Based on Chapel Road in Hannibal, serving the septic-country towns nearby. Not sure you're in range? Give a call.</p>
+    <div class="towns">
+      <span>Hannibal</span><span>Oswego (town)</span><span>Fulton</span><span>Sterling</span><span>Fair Haven</span><span>Martville</span><span>Red Creek</span><span>Granby</span>
+    </div>
+  </div></section>
+
+  <section class="band"><div class="wrap">
+    <div class="kicker" style="color:#bff2c1">Overdue, backing up, or selling?</div>
+    <h2>One call and we'll get you on the schedule.</h2>
+    <p>Routine pump, emergency, or an inspection before you close — tell us what's going on and when you need us.</p>
+    <a class="phone" href="tel:+13153424551">(315) 342-4551</a>
+  </div></section>
+
+  <section id="contact"><div class="wrap">
+    <div class="info">
+      <div class="kicker">Get in touch</div>
+      <h2 class="title" style="font-size:1.8rem">Lockwood Septic Tank Service</h2>
+      <p><b>Location:</b> 184 Chapel Rd, Hannibal, NY 13074</p>
+      <p><b>Phone:</b> <a href="tel:+13153424551" style="text-decoration:none;color:var(--teal)">(315) 342-4551</a></p>
+      <p><b>Owner:</b> James E. Lockwood</p>
+      <p><b>Best for:</b> scheduling a pump, an emergency, or a pre-sale inspection.</p>
+      <p class="note">Calling is quickest for an emergency. For a routine pump, the form is fine — we'll ring you back to set a day.</p>
+    </div>
+    <form onsubmit="return false">
+      <div class="kicker">Request a pump or inspection</div>
+      <label>Name</label><input type="text" placeholder="Your name">
+      <label>Phone</label><input type="tel" placeholder="Best number to reach you">
+      <label>Town</label><input type="text" placeholder="Where's the tank?">
+      <label>What's going on?</label><textarea rows="4" placeholder="Routine pump, slow drains, selling the house, not sure of the last pump…"></textarea>
+      <button type="submit">Send it over</button>
+      <p class="note">This is a design preview. On the live site this form emails Lockwood directly.</p>
+    </form>
+  </div></section>
+
+  <footer><div class="wrap">
+    <span>Lockwood Septic Tank Service &bull; 184 Chapel Rd, Hannibal, NY 13074</span>
+    <span><a href="tel:+13153424551">(315) 342-4551</a></span>
+  </div></footer>
+</body>
+</html>

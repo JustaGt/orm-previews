@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Michael Dee's Motel & Country Campsites — Rooms, Tiny Cabins & Camping | East Durham, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#20503f; --forest2:#2f6b52; --pine:#173d30; --sun:#f2b134; --sun2:#e19a12;
+    --clay:#c2653b; --cream:#fbf7ee; --ink:#243029; --grey:#5f6b62; --line:#e5ded0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Nunito Sans',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.65}
+  h1,h2,h3,.fr{font-family:'Fraunces',serif}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--sun);color:#3d2c05;font-weight:800;padding:14px 26px;border-radius:40px;
+    box-shadow:0 5px 16px rgba(226,154,18,.4);transition:transform .12s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.leaf{background:var(--forest);color:#fff;box-shadow:0 5px 16px rgba(23,61,48,.32)}
+
+  header{position:absolute;top:0;left:0;right:0;z-index:20}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0;flex-wrap:wrap;gap:10px}
+  .brand{color:#fff;font-family:'Fraunces';font-weight:700;font-size:1.35rem;line-height:1.05}
+  .brand small{display:block;font-family:'Nunito Sans';font-weight:700;font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--sun)}
+  .nav nav{display:flex;gap:22px;color:#fff;font-weight:700;font-size:.92rem}
+  .nav nav a{opacity:.9} .nav nav a:hover{color:var(--sun)}
+
+  .hero{min-height:78vh;display:flex;align-items:center;color:#fff;position:relative;
+    background:
+      radial-gradient(circle at 78% 18%,rgba(242,177,52,.34),transparent 42%),
+      linear-gradient(180deg,rgba(15,40,31,.55),rgba(15,40,31,.72)),
+      linear-gradient(120deg,#20503f,#2f6b52 55%,#3f7a5f)}
+  .hero::before{content:"";position:absolute;inset:0;opacity:.18;
+    background-image:radial-gradient(circle at 20% 80%,#fff 1px,transparent 2px);background-size:44px 44px}
+  .hero .inner{position:relative;padding:96px 0 40px}
+  .hero .badge{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);
+    padding:6px 15px;border-radius:30px;font-weight:800;font-size:.78rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px}
+  .hero h1{font-size:3.7rem;font-weight:600;max-width:16ch;line-height:1.02}
+  .hero h1 em{font-style:italic;color:var(--sun)}
+  .hero p{font-size:1.24rem;max-width:52ch;margin:18px 0 30px;color:#eef3ec}
+  .hero .row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .hero .mi{margin-top:22px;color:#d6e2d8;font-weight:700}
+
+  .ribbon{background:var(--pine);color:#cfe0d4}
+  .ribbon .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 30px;padding:14px 22px;font-weight:700;font-size:.95rem}
+  .ribbon span::before{content:"✦";color:var(--sun);margin-right:8px}
+
+  section{padding:66px 0}
+  .ey{color:var(--forest2);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:.8rem;margin-bottom:8px}
+  h2{font-size:2.7rem;font-weight:600;color:var(--pine);line-height:1.05}
+  .lead{color:var(--grey);max-width:60ch;font-size:1.1rem;margin:10px 0 36px}
+
+  .stays{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .stay{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 10px 30px rgba(32,80,63,.07);display:flex;flex-direction:column}
+  .stay .pic{height:150px;position:relative;color:#fff;display:grid;place-items:center;font-family:'Fraunces';font-weight:600;font-size:1.5rem}
+  .p-room{background:linear-gradient(135deg,#3f7a5f,#20503f)}
+  .p-cabin{background:linear-gradient(135deg,#c2653b,#9c4d2b)}
+  .p-camp{background:linear-gradient(135deg,#2f6b52,#173d30)}
+  .stay .body{padding:22px;flex:1;display:flex;flex-direction:column}
+  .stay h3{font-size:1.5rem;color:var(--pine);margin-bottom:6px}
+  .stay p{color:var(--grey);font-size:.96rem;margin-bottom:12px}
+  .stay ul{list-style:none;margin-bottom:16px}
+  .stay li{font-size:.9rem;padding:4px 0;color:var(--ink)}
+  .stay li::before{content:"›";color:var(--sun2);font-weight:800;margin-right:8px}
+  .stay .go{margin-top:auto}
+
+  .amen{background:var(--cream)}
+  .amen .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .amen .a{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;text-align:center}
+  .amen .a .e{font-size:1.8rem}
+  .amen .a b{display:block;font-family:'Fraunces';font-size:1.12rem;color:var(--pine);margin:8px 0 4px}
+  .amen .a small{color:var(--grey)}
+
+  .near{background:var(--forest);color:#eaf2ec}
+  .near .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:center}
+  .near h2{color:#fff}
+  .near .lead{color:#c9dccf}
+  .near .list{display:flex;flex-wrap:wrap;gap:10px}
+  .near .list span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:30px;padding:9px 16px;font-weight:700}
+
+  .disc{background:var(--sun);color:#3d2c05;text-align:center}
+  .disc h2{color:#3d2c05}
+  .disc p{font-weight:800;font-size:1.1rem;margin-top:8px}
+
+  .book .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+  .book .det p{font-size:1.06rem;margin-bottom:10px}
+  .book .det b{color:var(--pine)}
+  .book .call{display:block;background:var(--pine);color:#fff;border-radius:16px;padding:24px;text-align:center;margin-top:6px}
+  .book .call small{display:block;text-transform:uppercase;letter-spacing:1px;font-weight:800;font-size:.76rem;color:var(--sun)}
+  .book .call b{font-family:'Fraunces';font-size:2.3rem;display:block}
+  form label{display:block;font-weight:800;color:var(--pine);margin-bottom:6px;font-size:.9rem}
+  form input,form textarea,form select{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--cream);font:inherit;margin-bottom:15px}
+  form button{width:100%;border:0;cursor:pointer}
+
+  footer{background:var(--pine);color:#bcd0c3;padding:32px 0;font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer b{color:#fff}
+  .demo{background:var(--clay);color:#fff;text-align:center;font-size:.8rem;padding:7px;font-weight:700}
+
+  @media(max-width:880px){
+    .hero h1{font-size:2.6rem}
+    .stays{grid-template-columns:1fr}.amen .grid{grid-template-columns:repeat(2,1fr)}
+    .near .wrap,.book .wrap{grid-template-columns:1fr}
+    .nav nav{display:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="demo">Preview concept prepared by Onyx Rise Media for Michael Dee's Motel &amp; Country Campsites — not the live site.</div>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">Michael Dee's<small>Motel &amp; Country Campsites</small></div>
+    <nav>
+      <a href="#stays">Where to Stay</a>
+      <a href="#amen">On the Grounds</a>
+      <a href="#near">Nearby</a>
+      <a href="#book">Check Dates</a>
+    </nav>
+    <a class="btn" href="tel:15186347005">(518) 634-7005</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap inner">
+    <span class="badge">East Durham · The Irish Catskills · Family-run 40+ years</span>
+    <h1>Sixty acres, a pool, and two horses named <em>ED &amp; KOKO</em>.</h1>
+    <p>Book a motel room, a tiny cabin, or a tent/RV site on our family grounds in East Durham — under two hours from the city, and steps from the festivals, Zoom Flume and the golf.</p>
+    <div class="row">
+      <a class="btn" href="#stays">See rooms, cabins &amp; sites</a>
+      <a class="btn leaf" href="#book">Check availability</a>
+    </div>
+    <div class="mi">Senior · AAA · Veteran · Group discounts · Major cards accepted</div>
+  </div>
+</section>
+
+<div class="ribbon"><div class="wrap">
+  <span>Heated pool</span><span>Tiny cabins</span><span>Tent &amp; RV sites</span>
+  <span>Bath house</span><span>Playground</span><span>Campfires</span><span>Animal photo area</span>
+</div></div>
+
+<section id="stays">
+  <div class="wrap">
+    <div class="ey">Three ways to stay</div>
+    <h2>Pick your kind of Catskills weekend.</h2>
+    <p class="lead">Whether you want a bed and a balcony over the pool, a brand-new cabin, or a fire ring under the stars, it's all on the same 60 acres — and all a short walk from East Durham.</p>
+    <div class="stays">
+      <div class="stay">
+        <div class="pic p-room">Motel Rooms</div>
+        <div class="body">
+          <h3>Motel Rooms</h3>
+          <p>Standard and luxury rooms — some with a private balcony overlooking the pool.</p>
+          <ul>
+            <li>2 double beds · private bath · A/C</li>
+            <li>Cable TV · fridge · microwave · coffee</li>
+            <li>Towels, soap &amp; shampoo provided</li>
+          </ul>
+          <a class="btn leaf go" href="#book">Request a room</a>
+        </div>
+      </div>
+      <div class="stay">
+        <div class="pic p-cabin">Tiny Cabins</div>
+        <div class="body">
+          <h3>Tiny Cabin Collection</h3>
+          <p>Cozy to luxury cabins (some brand-new), sleeping 2 to 6 — a few right by the horses.</p>
+          <ul>
+            <li>Kitchen &amp; bath · A/C · WiFi · cable</li>
+            <li>Deck, picnic table, fire ring &amp; BBQ</li>
+            <li>Options that sleep 2, 3, 4 or 6</li>
+          </ul>
+          <a class="btn leaf go" href="#book">Request a cabin</a>
+        </div>
+      </div>
+      <div class="stay">
+        <div class="pic p-camp">Campsites</div>
+        <div class="body">
+          <h3>Country Campsites</h3>
+          <p>Roomy tent and RV sites with hookups, and a bath house on the grounds.</p>
+          <ul>
+            <li>Fresh well water · septic · electric</li>
+            <li>Restrooms &amp; showers in the bath house</li>
+            <li>Nightly, weekly &amp; seasonal stays</li>
+          </ul>
+          <a class="btn leaf go" href="#book">Request a site</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="amen" class="amen">
+  <div class="wrap">
+    <div class="ey">On the grounds</div>
+    <h2>Room to spread out and slow down.</h2>
+    <p class="lead">Sixty acres of Catskills space for the whole family — the kids won't want to leave the playing field or the animal photo area.</p>
+    <div class="grid">
+      <div class="a"><div class="e">🏊</div><b>Big Heated Pool</b><small>Splash all afternoon</small></div>
+      <div class="a"><div class="e">🔥</div><b>Campfires &amp; BBQ</b><small>Bring the marshmallows</small></div>
+      <div class="a"><div class="e">🐴</div><b>ED &amp; KOKO</b><small>Our two friendly horses</small></div>
+      <div class="a"><div class="e">⛺</div><b>Party Tent</b><small>Picnic &amp; group area</small></div>
+      <div class="a"><div class="e">🏐</div><b>Volleyball &amp; Horseshoes</b><small>Lawn games all day</small></div>
+      <div class="a"><div class="e">🛝</div><b>Playground</b><small>Space for the kids to run</small></div>
+      <div class="a"><div class="e">🚿</div><b>Bath House</b><small>Restrooms &amp; showers</small></div>
+      <div class="a"><div class="e">🌄</div><b>Mountain Views</b><small>Wake up to the Catskills</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="near" class="near">
+  <div class="wrap">
+    <div>
+      <div class="ey" style="color:var(--sun)">Right down the road</div>
+      <h2>The best of East Durham, minutes away.</h2>
+      <p class="lead">Park once and walk to the Irish festivals, or drive a few minutes to the water park, caverns and go-carts. Easy Thruway access, under 2 hours from NYC.</p>
+    </div>
+    <div class="list">
+      <span>Irish festivals</span><span>Zoom Flume Water Park</span><span>Golf &amp; mini-golf</span>
+      <span>Go-carts</span><span>Horseback riding</span><span>Fishing</span><span>Howe Caverns</span>
+    </div>
+  </div>
+</section>
+
+<section class="disc">
+  <div class="wrap">
+    <div class="ey" style="color:#7a5a12">Bring the whole crew</div>
+    <h2>Senior, AAA, Veteran &amp; Group discounts</h2>
+    <p>Ask about our discounts when you check dates — major credit cards accepted.</p>
+  </div>
+</section>
+
+<section id="book" class="book">
+  <div class="wrap">
+    <div class="det">
+      <div class="ey">Plan your stay</div>
+      <h2>Check dates &amp; pricing.</h2>
+      <p><b>Where:</b> 1931 Route 145, East Durham, NY 12423</p>
+      <p><b>What:</b> Motel rooms · tiny cabins · tent &amp; RV campsites</p>
+      <p><b>Good to know:</b> Family owned · open year-round · 60 acres</p>
+      <a class="call" href="tel:15186347005"><small>Call or text to book</small><b>(518) 634-7005</b></a>
+    </div>
+    <div>
+      <form onsubmit="return false">
+        <label>Name</label><input type="text" placeholder="Your name">
+        <label>Phone or email</label><input type="text" placeholder="How we reach you">
+        <label>What are you after?</label>
+        <select><option>Motel room</option><option>Tiny cabin</option><option>Tent site</option><option>RV site</option><option>Not sure yet</option></select>
+        <label>Dates &amp; party size</label><textarea rows="3" placeholder="e.g. Aug 15–17, 2 adults + 2 kids"></textarea>
+        <button class="btn" type="submit">Request availability</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>Michael Dee's Motel &amp; Country Campsites</b><br>1931 Route 145, East Durham, NY 12423</div>
+    <div><b><a href="tel:15186347005">(518) 634-7005</a></b><br>Rooms · Cabins · Camping · The Complete Family Getaway</div>
+  </div>
+</footer>
+
+</body>
+</html>

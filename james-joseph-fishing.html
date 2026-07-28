@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>James Joseph II — Half-Day Party Boat Fishing from Huntington, NY</title>
+<style>
+  :root{
+    --sound:#0a2a3f; --deep:#0f3c58; --wave:#17567c; --foam:#eef5f9;
+    --sun:#f6b53c; --sun-d:#d8951c; --rope:#e4d9bd; --line:#245d7e; --ink:#061a28;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--sound);color:var(--foam);line-height:1.6}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  a{color:inherit;text-decoration:none}
+
+  header{position:sticky;top:0;z-index:20;background:rgba(6,26,40,.95);border-bottom:1px solid var(--line)}
+  .nav{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:11px 20px}
+  .brand{font-weight:900;font-size:1.06rem}
+  .brand span{color:var(--sun)}
+  .links{display:none;gap:20px;font-size:.9rem}
+  @media(min-width:780px){.links{display:flex}}
+  .nav a.cta{background:var(--sun);color:#20160a;padding:8px 15px;border-radius:4px;font-weight:800;font-size:.88rem}
+
+  /* hero: real-boat-first, ocean gradient (NOT a mountain-lake stock photo) */
+  .hero{position:relative;padding:64px 0 56px;overflow:hidden;
+    background:linear-gradient(180deg,rgba(6,26,40,.25),rgba(6,26,40,.9)),
+      linear-gradient(160deg,var(--wave),var(--sound) 65%)}
+  .hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:120px;
+    background:repeating-linear-gradient(100deg,rgba(255,255,255,.05) 0 30px,transparent 30px 60px)}
+  .hero .kick{color:var(--sun);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:.76rem}
+  .hero h1{font-size:2.55rem;line-height:1.1;color:#fff;margin:12px 0 12px;max-width:16ch}
+  @media(min-width:780px){.hero h1{font-size:3.3rem}}
+  .hero p.sub{font-size:1.16rem;max-width:54ch;color:#d3e4ee}
+  .boatchip{margin-top:18px;display:inline-block;background:var(--ink);border:1px solid var(--line);border-radius:8px;padding:10px 16px;color:#bcd6e5;font-size:.92rem}
+  .boatchip b{color:#fff}
+  .cta-row{margin-top:24px;display:flex;flex-wrap:wrap;gap:13px}
+  .btn{padding:15px 26px;border-radius:6px;font-weight:800;font-size:1.02rem}
+  .btn.p{background:var(--sun);color:#20160a}
+  .btn.g{border:1.5px solid var(--line)}
+
+  /* three daily trips — the whole point */
+  .trips{background:var(--ink);border-top:3px solid var(--sun)}
+  .trips .wrap{padding:34px 20px}
+  .trips h2{color:var(--sun);text-transform:uppercase;letter-spacing:2px;font-size:1rem;text-align:center}
+  .tgrid{display:grid;gap:14px;grid-template-columns:1fr;margin-top:18px}
+  @media(min-width:640px){.tgrid{grid-template-columns:repeat(3,1fr)}}
+  .tgrid div{background:var(--deep);border:1px solid var(--line);border-radius:10px;padding:22px;text-align:center}
+  .tgrid .t{font-size:2rem;font-weight:900;color:#fff}
+  .tgrid .l{color:var(--sun);font-weight:700;margin-top:4px}
+  .tgrid .d{color:#a8c6d6;font-size:.9rem;margin-top:6px}
+
+  section{padding:56px 0}
+  h2.sec{font-size:1.9rem;color:#fff;margin-bottom:8px}
+  .lead{color:#a8c6d6;max-width:58ch;margin-bottom:28px}
+
+  .incl{display:grid;gap:16px;grid-template-columns:1fr}
+  @media(min-width:720px){.incl{grid-template-columns:repeat(2,1fr)}}
+  .incl .c{background:var(--deep);border:1px solid var(--line);border-radius:10px;padding:22px;display:flex;gap:14px}
+  .incl .c .ic{font-size:1.6rem}
+  .incl h3{color:var(--sun);font-size:1.08rem;margin-bottom:4px}
+  .incl p{color:#cfe0ea;font-size:.95rem}
+
+  .charter{background:var(--wave)}
+  .charter .box{display:grid;gap:22px;grid-template-columns:1fr}
+  @media(min-width:760px){.charter .box{grid-template-columns:1fr 1fr}}
+  .charter .panel{background:var(--ink);border:1px solid var(--line);border-radius:12px;padding:26px}
+  .charter h3{color:var(--sun);font-size:1.25rem;margin-bottom:8px}
+  .charter p{color:#cfe0ea}
+
+  .rates{background:var(--sound)}
+  .ratebar{background:var(--deep);border:1px solid var(--line);border-left:4px solid var(--sun);border-radius:0 8px 8px 0;padding:18px 20px;max-width:640px}
+  .ratebar b{color:#fff}
+
+  .find{background:var(--ink)}
+  .findbox{display:grid;gap:24px;grid-template-columns:1fr}
+  @media(min-width:760px){.findbox{grid-template-columns:1fr 1fr}}
+  .findbox .info p{color:#cfe0ea;margin-bottom:9px}
+  .findbox .info b{color:var(--sun)}
+  .callbtn{display:block;text-align:center;background:var(--sun);color:#20160a;padding:17px;border-radius:8px;font-weight:900;font-size:1.2rem;margin-top:8px}
+  .callbtn.alt{background:transparent;border:1.5px solid var(--line);color:var(--foam);font-size:1rem;margin-top:12px}
+  .map{background:var(--deep);border:1px solid var(--line);border-radius:10px;min-height:210px;display:flex;align-items:center;justify-content:center;text-align:center;color:#88b0c6;padding:20px}
+  .note{font-size:.82rem;color:#6f97ad;margin-top:14px}
+
+  footer{background:#04121c;text-align:center;padding:24px;color:#5e7f92;font-size:.84rem;border-top:1px solid var(--line)}
+  .ph{border:1px dashed var(--line);color:#7ea6bd;padding:1px 6px;border-radius:3px;font-size:.8em}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="brand">James Joseph <span>II</span></div>
+    <nav class="links">
+      <a href="#trips">Daily Trips</a>
+      <a href="#included">What's Included</a>
+      <a href="#charter">Private Charters</a>
+      <a href="#find">Find the Dock</a>
+    </nav>
+    <a class="cta" href="tel:6316808159">Reserve</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="kick">Sailing from the Huntington Town Dock · Long Island Sound</div>
+    <h1>Half a day on the Sound. Everything's on the boat.</h1>
+    <p class="sub">The James Joseph II is a 65-foot open boat running bottom-fishing trips three times a day out of Huntington. No boat, no gear, no license needed — rods, bait and the boat's license are all included. Come as an old salt or a first-timer.</p>
+    <div class="boatchip">🚤 <b>James Joseph II</b> · 65 ft · up to 144 anglers · free parking at the Town Dock</div>
+    <div class="cta-row">
+      <a class="btn p" href="tel:6316808159">Reserve your spot</a>
+      <a class="btn g" href="#trips">See today's trips</a>
+    </div>
+  </div>
+</section>
+
+<div class="trips" id="trips">
+  <div class="wrap">
+    <h2>Three trips, every day in season</h2>
+    <div class="tgrid">
+      <div><div class="t">7:00 AM</div><div class="l">Morning</div><div class="d">Half-day bottom fishing</div></div>
+      <div><div class="t">12:00 PM</div><div class="l">Midday</div><div class="d">Half-day bottom fishing</div></div>
+      <div><div class="t">4:30 PM</div><div class="l">Evening</div><div class="d">Half-day into the sunset</div></div>
+    </div>
+    <p class="lead" style="text-align:center;margin:18px auto 0">Call the recording at (631) 651-8235 for the day's schedule and <span style="color:var(--sun)">what's biting</span> — or reserve with Capt James direct.</p>
+  </div>
+</div>
+
+<section id="included">
+  <div class="wrap">
+    <h2 class="sec">What's on the boat</h2>
+    <p class="lead">Show up with a cooler and a good attitude. We handle the rest — and the crew cleans your catch on the ride home.</p>
+    <div class="incl">
+      <div class="c"><div class="ic">🎣</div><div><h3>Rods, reels &amp; bait included</h3><p>All the tackle's on board and ready. Prefer your own setup? Bring it — the mates will help you rig.</p></div></div>
+      <div class="c"><div class="ic">📋</div><div><h3>Fishing license covered</h3><p>You're covered under the boat's license the moment you step aboard. Nothing to buy first.</p></div></div>
+      <div class="c"><div class="ic">🧑‍✈️</div><div><h3>The same crew, year after year</h3><p>Familiar mates who'll set a beginner up and swap tips with the regulars. Ask questions — that's what they're there for.</p></div></div>
+      <div class="c"><div class="ic">🐟</div><div><h3>We clean your fish</h3><p>On the way back to the dock the crew fillets your catch so you head home with dinner, not a chore.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="charter" id="charter">
+  <div class="wrap">
+    <h2 class="sec">Book the whole boat — or gift a trip</h2>
+    <div class="box">
+      <div class="panel">
+        <h3>Private charters</h3>
+        <p>Birthdays, bachelor parties, company outings, family reunions — take a smaller group out on a private charter. Call Capt James to build a trip around your date and your crew.</p>
+      </div>
+      <div class="panel">
+        <h3>Gift certificates</h3>
+        <p>A day on the Sound makes a gift that beats another gadget. Gift certificates are available by phone for any of the daily trips or a private charter.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rates">
+  <div class="wrap">
+    <h2 class="sec">Rates</h2>
+    <p class="lead">Fair pricing for a half-day with everything included.</p>
+    <div class="ratebar">
+      <b>Half-day trips &amp; private-charter rates</b> — current pricing to be confirmed with the boat and listed here <span class="ph">[rates placeholder — confirm before launch]</span>.
+    </div>
+  </div>
+</section>
+
+<section class="find" id="find">
+  <div class="wrap">
+    <h2 class="sec">Find the dock</h2>
+    <p class="lead">Route 110 north to the very end — the Town Dock at the north end of New York Ave, across from the harbor-side restaurant. Free parking, no sticker needed.</p>
+    <div class="findbox">
+      <div class="info">
+        <p><b>James Joseph Fishing — James Joseph II</b></p>
+        <p>84 New York Ave (Town Dock), Huntington, NY 11743</p>
+        <p><b>Capt James (best contact):</b> (631) 680-8159</p>
+        <p><b>Schedule recording:</b> (631) 651-8235</p>
+        <a class="callbtn" href="tel:6316808159">Reserve with Capt James</a>
+        <a class="callbtn alt" href="tel:6316518235">Hear today's schedule</a>
+        <p class="note">Preview site prepared for James Joseph Fishing. Captain name, rates and this season's dates to be confirmed before launch.</p>
+      </div>
+      <div class="map">
+        📍 Huntington Town Dock<br>north end of Route 110 / New York Ave<br>(interactive map on the live site)
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  James Joseph II · 84 New York Ave (Town Dock), Huntington, NY 11743 · Half-day party-boat fishing on Long Island Sound
+</footer>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finger's Upholstery — Reupholstery &amp; Furniture Restoration | Cheshire, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#1f3d38;--forest-d:#152b27;--brass:#c19749;--brass-d:#a67e35;--cream:#f6f2e9;--paper:#fbf9f3;--line:#e4ddcd;--ink:#26302c}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;color:var(--ink);line-height:1.65;background:var(--paper)}
+h1,h2,h3,.disp{font-family:'Fraunces',serif;line-height:1.14}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+.btn{display:inline-block;background:var(--brass);color:var(--forest-d);font-weight:700;padding:14px 28px;border-radius:4px;text-decoration:none;transition:.15s}
+.btn:hover{background:var(--brass-d)}
+.btn-out{background:transparent;border:2px solid var(--brass);color:var(--brass)}
+.btn-out:hover{background:var(--brass);color:var(--forest-d)}
+.topbar{background:var(--forest-d);color:#dfe7e2;font-size:.87rem;padding:9px 0}
+.topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.topbar b{color:var(--brass)}
+nav{background:var(--forest);position:sticky;top:0;z-index:20}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:15px 22px}
+.brand{font-family:'Fraunces';color:#fff;font-weight:700;font-size:1.3rem}
+.brand small{display:block;font-family:'Inter';font-weight:600;font-size:.6rem;letter-spacing:.24em;color:var(--brass)}
+.navlinks a{color:#d6e0da;text-decoration:none;margin-left:22px;font-weight:600;font-size:.93rem}
+.navlinks a:hover{color:var(--brass)}
+@media(max-width:780px){.navlinks{display:none}}
+.hero{background:linear-gradient(rgba(21,43,39,.82),rgba(21,43,39,.9)),repeating-linear-gradient(45deg,#24463f 0 12px,#28493f 12px 24px);color:#fff;padding:96px 0 88px}
+.hero .kick{font-family:'Inter';font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--brass);font-size:.85rem;margin-bottom:15px}
+.hero h1{font-size:3.1rem;font-weight:600;max-width:16ch;margin-bottom:18px}
+.hero p{font-size:1.16rem;max-width:52ch;color:#dbe4de;margin-bottom:28px}
+.stars{color:var(--brass);font-size:1.05rem;margin-bottom:26px;font-weight:600}
+.stars small{color:#b8c4bd;font-weight:500}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:600px){.hero h1{font-size:2.2rem}}
+section{padding:66px 0}
+.eyebrow{color:var(--brass-d);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.83rem;margin-bottom:9px}
+h2.head{font-size:2.15rem;color:var(--forest);margin-bottom:12px}
+.lead{font-size:1.07rem;color:#4c5a54;max-width:60ch;margin-bottom:34px}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.piece{background:#fff;border:1px solid var(--line);border-radius:9px;overflow:hidden}
+.ba{display:flex;height:150px}
+.ba .before,.ba .after{flex:1;display:flex;align-items:flex-end;justify-content:center;padding-bottom:8px;font-family:'Inter';font-size:.72rem;font-weight:700;letter-spacing:.1em;color:#fff}
+.ba .before{background:repeating-linear-gradient(45deg,#7d766a 0 10px,#6f685d 10px 20px)}
+.ba .after{background:repeating-linear-gradient(45deg,#24463f 0 10px,#2c5149 10px 20px)}
+.piece .cap{padding:16px 20px}
+.piece h3{font-size:1.1rem;color:var(--forest);margin-bottom:4px}
+.piece p{font-size:.92rem;color:#57645d}
+/* what */
+.what{background:var(--cream)}
+.wgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.wcard{background:#fff;border:1px solid var(--line);border-radius:8px;padding:24px 22px}
+.wcard h3{font-size:1.08rem;color:var(--forest);margin-bottom:6px}
+.wcard p{font-size:.94rem;color:#57645d}
+/* process */
+.proc{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-top:8px}
+.step{position:relative;padding-left:14px}
+.step .n{font-family:'Fraunces';color:var(--brass);font-size:1.5rem;font-weight:700}
+.step h3{font-size:1.05rem;color:var(--forest);margin:4px 0 5px}
+.step p{font-size:.94rem;color:#57645d}
+/* reviews */
+.rev{background:var(--forest);color:#fff}
+.rev h2.head{color:#fff}.rev .eyebrow{color:var(--brass)}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:8px}
+.quotecard{background:#26463f;border:1px solid #315650;border-radius:9px;padding:24px 24px}
+.quotecard .st{color:var(--brass);margin-bottom:8px}
+.quotecard p{color:#e2ebe6;font-size:.98rem;font-style:italic}
+.quotecard .by{margin-top:12px;font-size:.85rem;color:#a9b8b1;font-style:normal}
+.revnote{font-size:.8rem;color:#9fb0a8;margin-top:18px}
+/* estimate */
+.est{background:var(--paper)}
+.ebox{background:#fff;border:1px solid var(--line);border-radius:10px;padding:40px 38px;display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.ebox h2{font-size:2rem;color:var(--forest);margin-bottom:12px}
+.ebox p{color:#4c5a54;margin-bottom:16px}
+.ebox .ph{font-family:'Fraunces';font-weight:700;font-size:1.9rem;color:var(--brass-d)}
+form{display:grid;gap:13px}
+label{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#4c5a54}
+input,select,textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:5px;font-family:inherit;font-size:.97rem;margin-top:5px}
+textarea{min-height:78px;resize:vertical}
+@media(max-width:760px){.ebox{grid-template-columns:1fr}}
+footer{background:var(--forest-d);color:#a9b8b1;padding:42px 0;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}
+footer b{color:#fff;font-family:'Fraunces';font-size:1.05rem}
+footer a{color:var(--brass);text-decoration:none}
+.note{background:#f3efe4;border-top:1px solid var(--cream);color:#6d6a52;font-size:.8rem;text-align:center;padding:10px}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>Reupholstery &amp; furniture restoration &middot; Cheshire, NY</span><span>Bob Finger: <b>(585) 394-9392</b></span></div></div>
+<nav><div class="wrap"><div class="brand">Finger's Upholstery<small>CHESHIRE &middot; CANANDAIGUA, NY</small></div>
+<div class="navlinks"><a href="#gallery">Our Work</a><a href="#what">What We Do</a><a href="#process">Process</a><a href="#reviews">Reviews</a><a href="#estimate">Get an Estimate</a></div></div></nav>
+
+<header class="hero"><div class="wrap">
+<div class="kick">Bob Finger &middot; Upholstering since 1982</div>
+<h1>Forty-four years of bringing tired furniture back to life.</h1>
+<p>That armchair from your grandmother's parlor doesn't belong at the curb. In the shop on Route 21 in Cheshire, it gets stripped, rebuilt, and re-covered by hand — one piece at a time.</p>
+<div class="stars">★★★★★ <small>&nbsp;5.0 from 9 verified reviews (Birdeye)</small></div>
+<div class="cta-row"><a class="btn" href="#estimate">Request an Estimate</a><a class="btn btn-out" href="tel:+15853949392">Call (585) 394-9392</a></div>
+</div></header>
+
+<section id="gallery"><div class="wrap">
+<div class="eyebrow">Before &amp; after</div>
+<h2 class="head">The pieces that came back to life.</h2>
+<p class="lead">A look at the kind of work that leaves the shop. Real photos of your own projects will fill this gallery — worn, then restored.</p>
+<div class="gal">
+<div class="piece"><div class="ba"><div class="before">BEFORE</div><div class="after">AFTER</div></div><div class="cap"><h3>Wingback armchair</h3><p>Frame re-tied, new foam and webbing, re-covered in the customer's fabric.</p></div></div>
+<div class="piece"><div class="ba"><div class="before">BEFORE</div><div class="after">AFTER</div></div><div class="cap"><h3>Antique settee</h3><p>Structural repair and full restoration for an heirloom kept in the family.</p></div></div>
+<div class="piece"><div class="ba"><div class="before">BEFORE</div><div class="after">AFTER</div></div><div class="cap"><h3>Dining chair set</h3><p>Six seats stripped and recovered to match a refinished table.</p></div></div>
+<div class="piece"><div class="ba"><div class="before">BEFORE</div><div class="after">AFTER</div></div><div class="cap"><h3>Boat cushions</h3><p>New marine-grade foam and canvas for a Canandaigua Lake runabout.</p></div></div>
+</div>
+</div></section>
+
+<section class="what" id="what"><div class="wrap">
+<div class="eyebrow">What comes through the shop</div>
+<h2 class="head">If it has cushions or a frame, Bob can rebuild it.</h2>
+<p class="lead">Four decades means very little walks in that hasn't been done before.</p>
+<div class="wgrid">
+<div class="wcard"><h3>Sofas &amp; Chairs</h3><p>Full reupholstery — new foam, springs re-tied, and your fabric or ours.</p></div>
+<div class="wcard"><h3>Antiques &amp; Heirlooms</h3><p>Careful restoration of older pieces where the frame is worth saving.</p></div>
+<div class="wcard"><h3>Dining &amp; Accent Seats</h3><p>Chair seats and benches recovered to match a room or a refinished table.</p></div>
+<div class="wcard"><h3>Boat &amp; Auto Cushions</h3><p>Marine and vehicle seating in weather-ready foam and covers.</p></div>
+<div class="wcard"><h3>Custom Cushions</h3><p>New cushions and covers built to fit window seats, benches, and built-ins.</p></div>
+<div class="wcard"><h3>Canvas Work</h3><p>Custom canvas fabrication for covers, cushions, and outdoor pieces.</p></div>
+</div>
+</div></section>
+
+<section id="process"><div class="wrap">
+<div class="eyebrow">How it works</div>
+<h2 class="head">Simple, honest, and done right.</h2>
+<div class="proc">
+<div class="step"><div class="n">1</div><h3>Send a photo</h3><p>Snap a picture of the piece and tell Bob what's wrong with it.</p></div>
+<div class="step"><div class="n">2</div><h3>Get an estimate</h3><p>He'll give you an honest read on the work and the cost before anything starts.</p></div>
+<div class="step"><div class="n">3</div><h3>Pick your fabric</h3><p>Bring your own material or choose from what's in the shop.</p></div>
+<div class="step"><div class="n">4</div><h3>Rebuilt by hand</h3><p>Stripped, repaired, and re-covered — then it's ready to come home.</p></div>
+</div>
+</div></section>
+
+<section class="rev" id="reviews"><div class="wrap">
+<div class="eyebrow">What customers say</div>
+<h2 class="head">5.0 stars, and the work to back it.</h2>
+<div class="rgrid">
+<div class="quotecard"><div class="st">★★★★★</div><p>"Placeholder for a real 5-star customer review — pulled from the shop's verified Birdeye profile once the site is live."</p><div class="by">— Verified review (to be added)</div></div>
+<div class="quotecard"><div class="st">★★★★★</div><p>"Placeholder for a second genuine review highlighting quality and turnaround, drawn from existing customer feedback."</p><div class="by">— Verified review (to be added)</div></div>
+<div class="quotecard"><div class="st">★★★★★</div><p>"Placeholder for a third real review — heirloom restoration or fabric selection, in the customer's own words."</p><div class="by">— Verified review (to be added)</div></div>
+</div>
+<p class="revnote">Rating shown (5.0 / 9 reviews) reflects the shop's public Birdeye profile. Individual quotes above are placeholders to be replaced with real, attributed reviews before the site goes live.</p>
+</div></section>
+
+<section class="est" id="estimate"><div class="wrap">
+<div class="ebox">
+<div>
+<h2>Got a piece worth saving?</h2>
+<p>Send a photo and a few details and Bob will get back to you with an honest estimate. No pressure, no guesswork.</p>
+<p>Prefer to call?</p>
+<div class="ph">(585) 394-9392</div>
+</div>
+<form onsubmit="event.preventDefault();this.reset();alert('Thanks — Bob will follow up with an estimate. (Demo preview form.)');">
+<div><label>Name</label><input required></div>
+<div><label>Phone or email</label><input required></div>
+<div><label>What is it?</label><select><option>Sofa / chair</option><option>Antique / heirloom</option><option>Dining or accent seats</option><option>Boat / auto cushions</option><option>Custom cushions</option><option>Canvas work</option><option>Not sure</option></select></div>
+<div><label>Tell Bob about it</label><textarea placeholder="What's the piece, what's wrong, and any fabric ideas."></textarea></div>
+<div><label>Photo</label><input type="file"></div>
+<button class="btn" type="submit">Request My Estimate</button>
+</form>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<div><b>Finger's Upholstery</b><br>4264 State Route 21, Cheshire (Canandaigua), NY 14424<br>Ontario County</div>
+<div>Reupholstery &middot; Restoration &middot; Cushions &amp; canvas<br>Bob Finger &middot; since 1982<br><a href="tel:+15853949392">(585) 394-9392</a> &middot; <a href="mailto:fingersupholstery@gmail.com">fingersupholstery@gmail.com</a></div>
+</div></footer>
+<div class="note">Preview concept built by Onyx Rise Media for review. Review quotes are placeholders; 5.0/9 rating reflects the shop's public Birdeye profile as of research.</div>
+</body>
+</html>

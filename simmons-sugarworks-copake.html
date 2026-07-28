@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simmons Sugarworks — Copake Maple Syrup, Sugar &amp; Maple Treats | Copake, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--maple:#b5651d;--maple-d:#8f4e14;--caramel:#d98a3b;--bark:#4a3220;--bark-d:#37241480;--cream:#faf1e2;--paper:#fdf7ec;--leaf:#a6472a;--line:#e7d7bf;--ink:#3a2c1c;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito Sans',sans-serif;color:var(--ink);background:var(--paper);line-height:1.68}
+h1,h2,h3,.disp{font-family:'Fraunces',serif;line-height:1.12;letter-spacing:-.01em}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+.btn{display:inline-block;background:var(--maple);color:#fff;font-family:'Nunito Sans';font-weight:700;letter-spacing:.02em;padding:14px 30px;border-radius:30px;text-decoration:none;font-size:.98rem;transition:.15s}
+.btn:hover{background:var(--maple-d)}
+.btn-ghost{background:transparent;border:1.5px solid #fff;color:#fff}
+.btn-ghost:hover{background:#fff;color:var(--maple-d)}
+.topbar{background:var(--bark);color:#ecd9bf;font-size:.85rem;padding:8px 0}
+.topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.topbar b{color:var(--caramel)}
+nav{background:var(--cream);position:sticky;top:0;z-index:20;box-shadow:0 2px 12px rgba(74,50,32,.1);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
+.brand{font-family:'Fraunces';color:var(--bark);font-weight:700;font-size:1.5rem}
+.brand span{color:var(--maple)}
+.navlinks a{color:var(--bark);text-decoration:none;font-weight:700;font-size:.9rem;margin-left:22px}
+.navlinks a:hover{color:var(--maple)}
+@media(max-width:760px){.navlinks{display:none}}
+.hero{background:linear-gradient(rgba(55,36,20,.66),rgba(55,36,20,.78)),url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="90"><rect width="90" height="90" fill="%234a3220"/><path d="M45 20l6 14 15 1-11 10 4 15-14-8-14 8 4-15-11-10 15-1z" fill="%23583b23"/></svg>');color:#fff;padding:100px 0 90px}
+.hero .kick{color:var(--caramel);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.82rem;margin-bottom:16px}
+.hero h1{font-size:3.6rem;font-weight:700;max-width:16ch;margin-bottom:20px}
+.hero p{font-size:1.2rem;max-width:50ch;color:#f2e6d4;margin-bottom:30px}
+.hero .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+@media(max-width:600px){.hero h1{font-size:2.5rem}}
+.strip{background:var(--cream);border-bottom:1px solid var(--line)}
+.strip .wrap{display:flex;flex-wrap:wrap;justify-content:space-around;padding:22px 22px;gap:16px;text-align:center}
+.strip .s b{font-family:'Fraunces';font-size:1.9rem;font-weight:700;display:block;line-height:1;color:var(--maple-d)}
+.strip .s span{font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;color:var(--bark);font-weight:700;opacity:.75}
+section{padding:72px 0}
+.eyebrow{color:var(--maple-d);font-weight:700;letter-spacing:.13em;text-transform:uppercase;font-size:.82rem;margin-bottom:12px}
+h2.head{font-size:2.5rem;color:var(--bark);margin-bottom:14px;font-weight:700}
+.lead{font-size:1.12rem;color:#6a5540;max-width:58ch;margin-bottom:40px}
+.prod-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.prod{background:#fff;border:1px solid var(--line);border-radius:10px;padding:26px 24px;transition:.15s}
+.prod:hover{box-shadow:0 12px 26px rgba(74,50,32,.12);transform:translateY(-3px)}
+.prod .ic{font-family:'Fraunces';font-size:1.7rem;color:var(--caramel);margin-bottom:6px}
+.prod h3{font-size:1.4rem;color:var(--bark);margin-bottom:6px;font-weight:600}
+.prod p{font-size:.96rem;color:#6a5540}
+.prod .price{margin-top:12px;font-weight:700;color:var(--maple-d);font-size:.9rem}
+.story{background:var(--bark);color:#f0e2ce}
+.story h2.head{color:#fff}
+.story .lead{color:#e0cfb6}
+.story-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px;margin-top:12px}
+.story-item h3{font-size:1.3rem;margin-bottom:6px;color:var(--caramel);font-weight:600}
+.story-item p{font-size:.96rem;color:#e0cfb6}
+.market{background:var(--cream)}
+.mbox{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:12px;padding:44px 40px}
+.mbox h2{font-size:2.1rem;color:var(--bark);margin-bottom:12px;font-weight:700}
+.mbox p{color:#6a5540;margin-bottom:14px}
+.mbox .when{background:var(--paper);border:1px dashed var(--caramel);border-radius:8px;padding:16px 20px;color:var(--bark)}
+.mbox .when b{font-family:'Fraunces';font-size:1.15rem;color:var(--maple-d)}
+@media(max-width:760px){.mbox{grid-template-columns:1fr;padding:30px 26px}}
+.order{background:var(--paper)}
+.obox{display:grid;grid-template-columns:1.05fr 1fr;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.obox .side{background:var(--maple);color:#fff;padding:44px 38px}
+.obox .side h2{font-size:2.05rem;margin-bottom:14px;color:#fff}
+.obox .side p{color:#fbe9d4;margin-bottom:18px}
+form{padding:40px 36px;display:grid;gap:14px}
+label{font-size:.78rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--bark);opacity:.8}
+input,select,textarea{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:6px;font-family:inherit;font-size:.98rem;margin-top:5px;background:var(--paper)}
+textarea{min-height:82px;resize:vertical}
+@media(max-width:760px){.obox{grid-template-columns:1fr}}
+footer{background:var(--bark);color:#c8b295;padding:44px 0;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px}
+footer b{color:#fff;font-family:'Fraunces';font-size:1.3rem;font-weight:700}
+footer a{color:var(--caramel);text-decoration:none}
+.note{background:#f7ecd8;border-top:1px solid var(--caramel);color:#7a5417;font-size:.8rem;text-align:center;padding:10px}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>Small-batch maple from the Copake woods</span><span>Find us at the <b>Copake Hillsdale Farmers Market</b></span></div></div>
+<nav><div class="wrap"><div class="brand">Simmons <span>Sugarworks</span></div>
+<div class="navlinks"><a href="#shop">The Pantry</a><a href="#story">Our Sugarbush</a><a href="#market">At the Market</a><a href="#order">Order &amp; Gifts</a></div></div></nav>
+
+<header class="hero"><div class="wrap">
+<div class="kick">Copake, NY &middot; Columbia County</div>
+<h1>Syrup boiled down from our own Copake maples.</h1>
+<p>A family sugarbush turning sap into syrup, maple sugar, and maple-sweetened treats — sold by the jug at the market and packed up for gifts.</p>
+<div class="cta-row"><a class="btn" href="#order">Order or Ask a Question</a><a class="btn btn-ghost" href="#market">Where to Find Us</a></div>
+</div></header>
+
+<div class="strip"><div class="wrap">
+<div class="s"><b>Our trees</b><span>Tapped in Copake</span></div>
+<div class="s"><b>Small batch</b><span>Boiled each spring</span></div>
+<div class="s"><b>5 sizes</b><span>Nip to gallon</span></div>
+<div class="s"><b>Maple treats</b><span>Cookies, sugar &amp; more</span></div>
+</div></div>
+
+<section id="shop"><div class="wrap">
+<div class="eyebrow">The pantry</div>
+<h2 class="head">Everything we make from the sap.</h2>
+<p class="lead">It starts as syrup and doesn't stop there. Once the sugarhouse is running, the same maple becomes cookies, sugar, and a few things people drive back for.</p>
+<div class="prod-grid">
+<div class="prod"><div class="ic">&#127809;</div><h3>Pure Maple Syrup</h3><p>Our own syrup in five sizes, from a little nip bottle to the full gallon jug. Amber, rich, and nothing added.</p><div class="price">Sizes: nip &middot; half pint &middot; pint &middot; quart &middot; gallon</div></div>
+<div class="prod"><div class="ic">&#127850;</div><h3>Maple Cookies</h3><p>Three flavors of cookies sweetened with our maple instead of sugar — the thing that sells out first most Saturdays.</p><div class="price">Three flavors</div></div>
+<div class="prod"><div class="ic">&#10052;</div><h3>Maple Sugar</h3><p>Syrup taken all the way to granular maple sugar — for baking, coffee, or spooning over oatmeal.</p></div>
+<div class="prod"><div class="ic">&#129744;</div><h3>Blueberry Preserves</h3><p>Small-batch blueberry preserves put up alongside the maple — a market-table favorite that isn't maple at all.</p></div>
+</div>
+<p style="margin-top:22px;color:#6a5540;font-size:.95rem"><em>Prices set by size and season &mdash; current pricing to be confirmed with the sugarhouse.</em></p>
+</div></section>
+
+<section class="story" id="story"><div class="wrap">
+<div class="eyebrow" style="color:var(--caramel)">Our sugarbush</div>
+<h2 class="head">Sap to syrup, the slow way.</h2>
+<p class="lead">Maple isn't made in a factory. It's a few weeks in late winter, a lot of firewood, and someone watching the pan. Here's how ours comes to be.</p>
+<div class="story-grid">
+<div class="story-item"><h3>Tapped here</h3><p>The sap comes off our own maples in the Copake woods — not bought in by the barrel from somewhere else.</p></div>
+<div class="story-item"><h3>Boiled in small batches</h3><p>Cooked down a batch at a time each spring, so nothing sits and the flavor stays bright.</p></div>
+<div class="story-item"><h3>Put up by hand</h3><p>Bottled, baked, and jarred by the family — the same hands you'll meet at the market table.</p></div>
+</div>
+</div></section>
+
+<section class="market" id="market"><div class="wrap">
+<div class="mbox">
+<div>
+<div class="eyebrow">Come say hi</div>
+<h2>Find us at the Copake Hillsdale Farmers Market.</h2>
+<p>Most Saturdays in season you'll find our table stacked with syrup, cookies, maple sugar, and preserves. Come taste before you buy and stock up for the pantry.</p>
+</div>
+<div class="when">
+<b>Copake Hillsdale Farmers Market</b><br>
+Roeliff Jansen Park &middot; 9140 Route 22, Hillsdale, NY<br>
+<span style="display:block;margin-top:8px">Saturdays 9 AM&ndash;1 PM &middot; May through November</span>
+<span style="display:block;margin-top:8px;font-size:.85rem;opacity:.8">Dates vary by season &mdash; confirm current market schedule.</span>
+</div>
+</div>
+</div></section>
+
+<section class="order" id="order"><div class="wrap">
+<div class="obox">
+<div class="side">
+<h2>Ordering, gifts, and wholesale.</h2>
+<p>Want a case for the holidays, a gift box shipped to family, or Simmons syrup on your shop shelf or restaurant table? Send a note and we'll sort out what you need and how to get it to you.</p>
+<p style="font-size:.9rem;opacity:.85">Prefer to talk? Leave your number and we'll call you back.</p>
+</div>
+<form onsubmit="event.preventDefault();this.reset();alert('Thanks — Simmons Sugarworks will get back to you. (Demo preview form.)');">
+<div><label>Your name</label><input required></div>
+<div><label>Email or phone</label><input required></div>
+<div><label>What are you after?</label><select><option>A gift box / order</option><option>Bulk / case order</option><option>Wholesale for my shop or restaurant</option><option>Just a question</option></select></div>
+<div><label>Details</label><textarea placeholder="Sizes, how many, and when you'd need it."></textarea></div>
+<button class="btn" type="submit">Send it Over</button>
+</form>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<div><b>Simmons Sugarworks</b><br>Copake, NY 12516 &middot; Columbia County<br>Pure maple &middot; small batch</div>
+<div>Syrup &middot; Maple sugar &middot; Maple cookies &middot; Preserves<br>At the Copake Hillsdale Farmers Market</div>
+</div></footer>
+<div class="note">Preview concept built by Onyx Rise Media for review. Product details from the maker's public market listings; sizes, prices, and contact details to be confirmed with the owner.</div>
+</body>
+</html>

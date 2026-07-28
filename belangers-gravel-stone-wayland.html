@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Belanger's Gravel &amp; Stone — Crushed Stone, Gravel &amp; Topsoil | Wayland, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--stone:#8a7d6b;--stone-d:#5e5446;--tan:#d9ccb4;--sand:#f3ede1;--slate:#33383d;--rust:#a3552b;--line:#ddd3c1;--ink:#2b2721}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3',sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+h1,h2,h3,.disp{font-family:'Bitter',serif;line-height:1.12}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+.btn{display:inline-block;background:var(--rust);color:#fff;font-weight:700;padding:14px 28px;border-radius:4px;text-decoration:none;letter-spacing:.02em;transition:.15s}
+.btn:hover{background:#8a4522}
+.btn-alt{background:var(--slate)}
+.btn-alt:hover{background:#22262a}
+.topbar{background:var(--stone-d);color:#f3ede1;font-size:.87rem;padding:9px 0}
+.topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.topbar b{color:#f0c99a}
+nav{background:var(--slate);position:sticky;top:0;z-index:20}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:15px 22px}
+.brand{font-family:'Bitter';color:#fff;font-weight:800;font-size:1.2rem}
+.brand em{color:#e0b184;font-style:normal}
+.navlinks a{color:#d8dde1;text-decoration:none;margin-left:22px;font-weight:600;font-size:.94rem}
+.navlinks a:hover{color:#e0b184}
+@media(max-width:760px){.navlinks{display:none}}
+.hero{background:linear-gradient(rgba(51,56,61,.72),rgba(51,56,61,.78)),repeating-linear-gradient(135deg,#6f6455 0 14px,#7b7062 14px 28px);color:#fff;padding:96px 0 88px}
+.hero .kick{font-family:'Bitter';color:#f0c99a;font-weight:700;letter-spacing:.04em;margin-bottom:14px;text-transform:uppercase;font-size:.92rem}
+.hero h1{font-size:3rem;font-weight:800;max-width:17ch;margin-bottom:18px}
+.hero p{font-size:1.18rem;max-width:50ch;color:#efe9dd;margin-bottom:28px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:600px){.hero h1{font-size:2.15rem}}
+.badge-strip{background:var(--tan);color:var(--stone-d)}
+.badge-strip .wrap{display:flex;flex-wrap:wrap;justify-content:space-around;gap:14px;padding:18px 22px;font-family:'Bitter';font-weight:700;text-align:center}
+.badge-strip .b span{display:block;font-size:1.5rem}
+.badge-strip .b small{font-weight:600;font-family:'Source Sans 3';color:var(--stone-d);font-size:.82rem;letter-spacing:.03em}
+section{padding:68px 0}
+.eyebrow{color:var(--rust);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.85rem;margin-bottom:9px}
+h2.head{font-size:2.15rem;color:var(--slate);margin-bottom:12px}
+.lead{font-size:1.08rem;color:var(--stone-d);max-width:58ch;margin-bottom:34px}
+.mats{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.mat{border:1px solid var(--line);border-radius:7px;overflow:hidden;background:#fff}
+.mat .swatch{height:78px}
+.mat .body{padding:18px 20px}
+.mat h3{font-size:1.1rem;color:var(--slate);margin-bottom:5px}
+.mat p{font-size:.93rem;color:#5c5646}
+.s1{background:repeating-linear-gradient(45deg,#b9b1a3 0 8px,#a79e8e 8px 16px)}
+.s2{background:repeating-linear-gradient(45deg,#c9b48d 0 8px,#bda478 8px 16px)}
+.s3{background:repeating-linear-gradient(45deg,#7a6a52 0 8px,#6a5b45 8px 16px)}
+.s4{background:repeating-linear-gradient(45deg,#9aa0a3 0 8px,#888e91 8px 16px)}
+.s5{background:repeating-linear-gradient(45deg,#c4bca8 0 8px,#b3ab96 8px 16px)}
+.s6{background:repeating-linear-gradient(45deg,#8f7f66 0 8px,#7e6f57 8px 16px)}
+.deliver{background:var(--slate);color:#fff}
+.deliver h2.head{color:#fff}.deliver .lead{color:#c9cdd1}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px}
+.two .card{background:#3c4247;border:1px solid #4a5157;border-radius:8px;padding:26px 26px}
+.two .card h3{color:#f0c99a;font-size:1.2rem;margin-bottom:8px}
+.two .card p{color:#cdd2d6;font-size:.97rem}
+.two .card ul{margin:12px 0 0 18px;color:#cdd2d6;font-size:.95rem}
+@media(max-width:640px){.two{grid-template-columns:1fr}}
+.area .towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.area .towns span{background:var(--sand);border:1px solid var(--line);border-radius:20px;padding:7px 15px;font-weight:600;color:var(--stone-d);font-size:.92rem}
+.quote{background:var(--sand)}
+.qbox{background:#fff;border:1px solid var(--line);border-radius:9px;padding:40px 38px;display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.qbox h2{font-size:1.9rem;color:var(--slate);margin-bottom:12px}
+.qbox p{color:var(--stone-d);margin-bottom:16px}
+.qbox .ph{font-family:'Bitter';font-weight:800;font-size:1.9rem;color:var(--rust)}
+form{display:grid;gap:13px}
+label{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--stone-d)}
+input,select,textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:5px;font-family:inherit;font-size:.97rem;margin-top:5px}
+textarea{min-height:80px;resize:vertical}
+@media(max-width:720px){.qbox{grid-template-columns:1fr}}
+footer{background:#26221c;color:#a99f8d;padding:42px 0;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}
+footer b{color:#fff;font-family:'Bitter';font-size:1.05rem}
+footer a{color:#e0b184;text-decoration:none}
+.note{background:#f6efe2;border-top:1px solid var(--tan);color:#7a6a4c;font-size:.8rem;text-align:center;padding:10px}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>Stone, gravel &amp; topsoil — loaded at the yard or delivered</span><span>Call the pit: <b>(585) 728-3906</b></span></div></div>
+<nav><div class="wrap"><div class="brand">BELANGER'S <em>Gravel &amp; Stone</em></div>
+<div class="navlinks"><a href="#materials">Materials</a><a href="#delivery">Delivery</a><a href="#area">Area</a><a href="#quote">Get a Load</a></div></div></nav>
+
+<header class="hero"><div class="wrap">
+<div class="kick">Wayland, NY &middot; Family &amp; women-owned since 1965</div>
+<h1>Crushed stone, gravel, and topsoil — loaded and delivered across the Wayland hills.</h1>
+<p>Sixty years of keeping local driveways, barnyards, and job sites stocked. Tell us the material and the tons; we'll load your truck or run it out to you.</p>
+<div class="cta-row"><a class="btn" href="#quote">Get a Load Quote</a><a class="btn btn-alt" href="tel:+15857283906">Call (585) 728-3906</a></div>
+</div></header>
+
+<div class="badge-strip"><div class="wrap">
+<div class="b"><span>1965</span><small>Serving Steuben County since</small></div>
+<div class="b"><span>Women-owned</span><small>Local, family-run yard</small></div>
+<div class="b"><span>Pickup or delivery</span><small>By the ton or the load</small></div>
+</div></div>
+
+<section id="materials"><div class="wrap">
+<div class="eyebrow">What's in the pit</div>
+<h2 class="head">Materials, by the ton.</h2>
+<p class="lead">A working list of what we keep on hand. Sizes and availability shift with the season — call the yard and we'll tell you what's screened and ready today.</p>
+<div class="mats">
+<div class="mat"><div class="swatch s1"></div><div class="body"><h3>Crushed Stone</h3><p>Assorted sizes for driveways, drainage, and base — from fine screenings to larger drainage stone.</p></div></div>
+<div class="mat"><div class="swatch s2"></div><div class="body"><h3>Run-of-Bank Gravel</h3><p>Bank-run gravel for fill, base, and driveway rebuilds where you need volume that packs.</p></div></div>
+<div class="mat"><div class="swatch s3"></div><div class="body"><h3>Screened Topsoil</h3><p>Screened topsoil for lawns, gardens, and grading around a new build.</p></div></div>
+<div class="mat"><div class="swatch s4"></div><div class="body"><h3>Stone Dust</h3><p>Stone dust for paver and slab bases, walkways, and setting stone.</p></div></div>
+<div class="mat"><div class="swatch s5"></div><div class="body"><h3>Fill &amp; Rough Grade</h3><p>Bulk fill for raising low ground, backfilling, and rough grading a site.</p></div></div>
+<div class="mat"><div class="swatch s6"></div><div class="body"><h3>Driveway Mix</h3><p>The go-to blend for a fresh rural driveway that sheds water and holds up to freeze-thaw.</p></div></div>
+</div>
+</div></section>
+
+<section class="deliver" id="delivery"><div class="wrap">
+<div class="eyebrow" style="color:#f0c99a">Two easy ways to get it</div>
+<h2 class="head">Load it here, or we'll bring it.</h2>
+<p class="lead">Whether you're running one yard for a garden bed or need multiple loads for a job site, the yard sorts it either way.</p>
+<div class="two">
+<div class="card"><h3>Pick it up</h3><p>Bring your truck or trailer to the Route 21 yard and we'll load you out. Good for small quantities and same-day runs.</p><ul><li>Loaded on site</li><li>Pay by the ton</li><li>Call ahead for what's screened</li></ul></div>
+<div class="card"><h3>We deliver</h3><p>Order by the load and we'll haul it to your driveway, barn, or job site across the local towns.</p><ul><li>Single loads to full job orders</li><li>Delivered where you need it dumped</li><li>Contractor quantities welcome</li></ul></div>
+</div>
+</div></section>
+
+<section class="area" id="area"><div class="wrap">
+<div class="eyebrow">Delivery country</div>
+<h2 class="head">Around Wayland and the southern hills.</h2>
+<p class="lead">Based on State Route 21 in Wayland, delivering through the Steuben–Livingston line towns.</p>
+<div class="towns"><span>Wayland</span><span>Cohocton</span><span>Dansville</span><span>Springwater</span><span>Atlanta</span><span>Perkinsville</span><span>Naples</span><span>Wayland Depot</span><span>Ossian</span><span>North Cohocton</span></div>
+</div></section>
+
+<section class="quote" id="quote"><div class="wrap">
+<div class="qbox">
+<div>
+<h2>Need a load?</h2>
+<p>Tell us the material and roughly how much, and where it's going. We'll price it and set up a pickup or delivery.</p>
+<p>Rather just call the pit?</p>
+<div class="ph">(585) 728-3906</div>
+</div>
+<form onsubmit="event.preventDefault();this.reset();alert('Thanks — the yard will get back to you. (Demo preview form.)');">
+<div><label>Name</label><input required></div>
+<div><label>Phone</label><input required type="tel"></div>
+<div><label>Material</label><select><option>Crushed stone</option><option>Run-of-bank gravel</option><option>Topsoil</option><option>Stone dust</option><option>Fill</option><option>Driveway mix</option><option>Not sure — need advice</option></select></div>
+<div><label>How much &amp; where</label><textarea placeholder="e.g. 6 tons topsoil, delivered to Cohocton"></textarea></div>
+<button class="btn" type="submit">Get My Load Quote</button>
+</form>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<div><b>BELANGER'S GRAVEL &amp; STONE</b><br>10184 State Route 21, Wayland, NY 14572<br>Steuben County &middot; Women-owned since 1965</div>
+<div>Crushed stone &middot; Gravel &middot; Topsoil &middot; Delivery<br><a href="tel:+15857283906">(585) 728-3906</a></div>
+</div></footer>
+<div class="note">Preview concept built by Onyx Rise Media for review. Materials list reflects typical yard offerings; exact sizes, pricing, and delivery range to be confirmed with the owner.</div>
+</body>
+</html>

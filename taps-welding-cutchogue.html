@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taps Welding Services — Custom Railings, Gates &amp; Repair Welding, Cutchogue NY</title>
+<style>
+  :root{
+    --steel:#15181c; --steel2:#20262d; --iron:#2c333b; --spark:#f0871e; --spark2:#cf6f12;
+    --zinc:#9aa6b2; --paper:#eef1f4; --ink:#161a1e; --line:#39424c; --lline:#d3d9e0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Segoe UI",Roboto,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--spark);color:#1a1205;font-weight:800;padding:15px 28px;border-radius:5px;letter-spacing:.3px;border:2px solid var(--spark2)}
+  .btn:hover{background:var(--spark2);color:#fff}
+  .btn.ghost{background:transparent;color:#fff;border:2px solid var(--zinc)}
+  .btn.ghost:hover{border-color:var(--spark);color:var(--spark)}
+  /* bar */
+  .bar{background:var(--steel);color:#e7ecf1;border-bottom:3px solid var(--spark)}
+  .bar .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;padding:12px 22px}
+  .brand{font-weight:900;letter-spacing:1px;font-size:1.16rem;text-transform:uppercase}
+  .brand b{color:var(--spark)}
+  .bar .ph{font-weight:900;color:#fff}
+  /* hero */
+  .hero{color:#fff;background:
+     linear-gradient(180deg,rgba(15,18,22,.82),rgba(15,18,22,.94)),
+     repeating-linear-gradient(135deg,#22282f 0 12px,#1b2127 12px 24px);position:relative}
+  .hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:linear-gradient(90deg,transparent,var(--spark),transparent)}
+  .hero .wrap{padding:70px 22px 60px}
+  .kick{color:var(--spark);font-weight:800;letter-spacing:3px;text-transform:uppercase;font-size:.76rem}
+  h1{font-size:2.8rem;line-height:1.06;margin:12px 0 12px;max-width:17ch;text-transform:none}
+  .hero p{color:#d5dde5;font-size:1.16rem;max-width:55ch}
+  .hero .row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .trust{margin-top:26px;display:flex;gap:10px;flex-wrap:wrap}
+  .t{background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:4px;padding:8px 15px;font-weight:700;font-size:.84rem;color:#d9e0e7}
+  .t b{color:var(--spark)}
+  /* sections */
+  section{padding:56px 0}
+  h2{font-size:1.9rem;color:var(--steel)}
+  .lead{color:#55606b;max-width:62ch;margin:8px 0 26px;font-size:1.02rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:16px}
+  .card{background:#fff;border:1px solid var(--lline);border-left:4px solid var(--spark);border-radius:7px;padding:24px}
+  .card .ic{font-size:1.5rem}
+  .card h3{color:var(--steel);margin:8px 0 6px;font-size:1.1rem}
+  .card p{color:#4f5a64;font-size:.95rem}
+  /* steel band */
+  .band{background:var(--steel2);color:#e9eef3}
+  .band h2{color:#fff}
+  .band .lead{color:#b9c4cf}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .step{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:7px;padding:22px}
+  .step .n{font-weight:900;color:var(--spark);font-size:1.6rem}
+  .step h3{color:#fff;margin:6px 0;font-size:1.06rem}
+  .step p{color:#c3cdd6;font-size:.93rem}
+  /* materials */
+  .mats{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+  .chip{background:#fff;border:1px solid var(--lline);color:var(--steel);font-weight:800;border-radius:5px;padding:9px 16px;font-size:.9rem}
+  .chip span{color:var(--spark2)}
+  /* about */
+  .about{background:#fff;border-top:1px solid var(--lline);border-bottom:1px solid var(--lline)}
+  .about .two{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+  .about p{color:#47525c;margin-bottom:12px}
+  .quote{border-left:4px solid var(--spark);padding:6px 0 6px 18px;color:var(--steel);font-style:italic;font-size:1.05rem;margin:6px 0}
+  /* contact */
+  .contact{background:
+     linear-gradient(180deg,rgba(15,18,22,.93),rgba(15,18,22,.97)),
+     repeating-linear-gradient(135deg,#22282f 0 12px,#1b2127 12px 24px);color:#fff}
+  .contact .two{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+  .form{background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:9px;padding:26px}
+  .form label{display:block;font-weight:700;margin:12px 0 5px;font-size:.9rem;color:#cfd8e0}
+  .form input,.form select,.form textarea{width:100%;padding:12px;border-radius:6px;border:1px solid var(--line);background:rgba(255,255,255,.95);font-size:.96rem}
+  .form .note{font-size:.82rem;color:#9fb0be;margin-top:6px}
+  .info .li{display:flex;gap:12px;align-items:flex-start;margin-bottom:16px}
+  .info .li b{color:var(--spark)}
+  .info .li span{color:#dbe3ea}
+  footer{background:#0c0f12;color:#8794a1;text-align:center;padding:26px 22px;font-size:.9rem}
+  @media(max-width:820px){.about .two,.contact .two{grid-template-columns:1fr}h1{font-size:2.2rem}}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap">
+  <div class="brand">Taps <b>Welding</b></div>
+  <div class="ph">(631) 734-7127</div>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="kick">Cutchogue, NY · North Fork · Since 2008</div>
+  <h1>A railing that fits your steps, welded a mile from your door.</h1>
+  <p>Custom rail, gates and repair work you can't order out of a catalog — measured on site, built in the shop on Commerce Road, and installed by the same person who welded it.</p>
+  <div class="row">
+    <a class="btn" href="#quote">Send a photo &amp; get a quote</a>
+    <a class="btn ghost" href="#work">What we build</a>
+  </div>
+  <div class="trust">
+    <span class="t"><b>16+</b> years on the North Fork</span>
+    <span class="t">Residential · Commercial · Industrial</span>
+    <span class="t">Repairs welcome — one rail or a whole job</span>
+  </div>
+</div></header>
+
+<section id="work"><div class="wrap">
+  <h2>What comes off the bench</h2>
+  <p class="lead">A local shop that says yes to the small custom jobs the big fabricators won't quote — and does the machine-shop work too.</p>
+  <div class="grid">
+    <div class="card"><div class="ic">🪜</div><h3>Stair &amp; step railings</h3><p>Handrails and guardrails for front steps, porches and decks — sized to your actual risers so the grab height is right.</p></div>
+    <div class="card"><div class="ic">🚪</div><h3>Gates &amp; fence sections</h3><p>Driveway and garden gates, custom panels and posts built to the opening you have, not a stock width.</p></div>
+    <div class="card"><div class="ic">🔩</div><h3>Repair welding</h3><p>Cracked railings, broken brackets, trailer frames, gates off their hinges — brought back solid instead of replaced.</p></div>
+    <div class="card"><div class="ic">⚙️</div><h3>Machine shop work</h3><p>Small machining, fabrication and metal-finishing jobs handled in-house on the North Fork.</p></div>
+    <div class="card"><div class="ic">📐</div><h3>Sheet metal &amp; brackets</h3><p>One-off brackets, plates and sheet-metal pieces cut and formed to a drawing or a sample you drop off.</p></div>
+    <div class="card"><div class="ic">🛠️</div><h3>The odd job</h3><p>If it's metal and it broke, ask. A lot of our work starts with "nobody else would take this."</p></div>
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <h2>How a custom job actually goes</h2>
+  <p class="lead">No showroom, no salesman. Three steps from your text message to a railing that's bolted down.</p>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><h3>Send a photo</h3><p>Text or email a picture of the steps, the gate or the broken part, with a rough measurement. That's usually enough to price it.</p></div>
+    <div class="step"><div class="n">2</div><h3>We measure &amp; build</h3><p>For anything that has to fit, we come measure on site, then fabricate it in the Cutchogue shop.</p></div>
+    <div class="step"><div class="n">3</div><h3>We install it</h3><p>Same hands that welded it set it, level it and anchor it — no handing you a rail and wishing you luck.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Steel, aluminum, stainless — or bring us the piece</h2>
+  <p class="lead">We work the common metals and finish them so they hold up to salt air off the bays. Not sure what you need? Show us the job.</p>
+  <div class="mats">
+    <div class="chip"><span>—</span> Steel &amp; wrought iron</div>
+    <div class="chip"><span>—</span> Aluminum</div>
+    <div class="chip"><span>—</span> Stainless</div>
+    <div class="chip"><span>—</span> Sheet metal</div>
+    <div class="chip"><span>—</span> Metal finishing</div>
+  </div>
+</div></section>
+
+<section class="about"><div class="wrap">
+  <h2>A local guy, not a call center</h2>
+  <div class="two" style="margin-top:18px">
+    <div>
+      <p>Taps Welding has run out of the shop at 315 Commerce Road in Cutchogue since 2008 — long enough to have welded railings on porches all over Southold Town and to know what the salt does to a cheap rail after two winters.</p>
+      <p>It's the kind of shop where you can call, describe the problem in plain language, and get a straight price. No project is too small to ask about.</p>
+    </div>
+    <div>
+      <p class="quote">"Tap is one of the friendliest people I've had the pleasure of doing business with — a nice local guy, and very reasonably priced."</p>
+      <p style="color:#7a8590;font-size:.9rem">— North Fork customer review*</p>
+      <p style="font-size:.86rem;color:#7a8590">*Placeholder: a real, verified review to be dropped in before launch.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="contact" id="quote"><div class="wrap">
+  <h2 style="color:#fff">Send a photo, get a price</h2>
+  <p class="lead" style="color:#b9c4cf">The fastest way to a quote: a picture of the job and a rough measurement. We'll tell you what it takes.</p>
+  <div class="two">
+    <form class="form" onsubmit="return false">
+      <label>Your name &amp; phone</label>
+      <input type="text" placeholder="Name — (631) 000-0000">
+      <label>What do you need?</label>
+      <select>
+        <option>Step / porch railing</option>
+        <option>Gate or fence section</option>
+        <option>Repair weld (rail, bracket, trailer, gate)</option>
+        <option>Machine shop / fabrication job</option>
+        <option>Sheet metal / bracket</option>
+        <option>Something else — I'll explain</option>
+      </select>
+      <label>Town</label>
+      <input type="text" placeholder="Cutchogue, Southold, Mattituck, Greenport…">
+      <label>Describe it (and attach a photo when you email)</label>
+      <textarea rows="3" placeholder="e.g. 4 concrete front steps, need a handrail on the left side, about 5 feet…"></textarea>
+      <div style="margin-top:16px"><a class="btn" href="#quote">Request a quote</a></div>
+      <div class="note">Or just call (631) 734-7127 — Robert usually answers.</div>
+    </form>
+    <div class="info">
+      <div class="li"><b>📍&nbsp;</b><span><b>Shop</b><br>315 Commerce Road, Unit 4<br>Cutchogue, NY 11935</span></div>
+      <div class="li"><b>📞&nbsp;</b><span><b>Phone</b><br>(631) 734-7127</span></div>
+      <div class="li"><b>🧭&nbsp;</b><span><b>We cover</b><br>Cutchogue, Southold, Mattituck, Peconic, Greenport &amp; the North Fork</span></div>
+      <div class="li"><b>🔧&nbsp;</b><span><b>Good to know</b><br>No job too small. Repairs and one-offs are most of what we do.</span></div>
+    </div>
+  </div>
+</div></section>
+
+<footer>
+  Taps Welding Services · 315 Commerce Road, Cutchogue, NY 11935 · (631) 734-7127<br>
+  <span style="opacity:.7">Concept preview prepared for Taps Welding — not a live website.</span>
+</footer>
+
+</body>
+</html>

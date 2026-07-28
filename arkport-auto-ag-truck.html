@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arkport Auto, Ag and Truck — One Shop for Car, Tractor &amp; Truck Repair</title>
+<meta name="description" content="Arkport's shop for all three — passenger auto, agricultural equipment and commercial truck repair in one place. When a tractor or truck is down in season, call (607) 661-8581.">
+<style>
+  :root{
+    --field:#26492e; --field-d:#182f1e; --leaf:#3d7048; --meadow:#e3ecdd;
+    --yellow:#f2b829; --yellow-d:#d69d13; --barn:#a5341f; --ink:#1f2a21; --muted:#5c6a5c;
+    --paper:#f7f9f4; --white:#fff; --line:#d6ddce;
+    --font:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font);color:var(--ink);background:var(--paper);line-height:1.62}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{font-weight:800;letter-spacing:-.01em}
+  header{position:sticky;top:0;z-index:40;background:var(--field-d);border-bottom:4px solid var(--yellow)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:800}
+  .brand .mk{width:46px;height:46px;background:var(--yellow);color:var(--field-d);border-radius:8px;display:grid;place-items:center;font-weight:900;font-size:15px}
+  .brand small{display:block;font-size:9px;color:#b7c8b2;letter-spacing:.13em;text-transform:uppercase;font-weight:700}
+  nav a{color:#b7c8b2;font-size:13.5px;margin-left:20px}
+  nav a:hover{color:var(--yellow)}
+  .callbtn{background:var(--yellow);color:var(--field-d);padding:10px 16px;border-radius:7px;font-weight:800;font-size:13.5px;margin-left:20px}
+  @media(max-width:860px){nav .lk{display:none}}
+  .hero{background:linear-gradient(160deg,var(--field) 0%,var(--field-d) 100%);color:#fff;padding:82px 0 66px;position:relative;overflow:hidden}
+  .hero:after{content:"";position:absolute;right:-40px;bottom:-40px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(242,184,41,.2),transparent 70%)}
+  .tag{display:inline-block;background:rgba(242,184,41,.16);color:#ffe0a1;border:1px solid var(--yellow);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 13px;border-radius:20px;margin-bottom:20px}
+  .hero h1{font-size:clamp(2rem,5vw,3.05rem);line-height:1.1;max-width:19ch;position:relative}
+  .hero h1 span{color:var(--yellow)}
+  .hero p{margin-top:18px;color:#d3e0cd;font-size:clamp(1.02rem,2vw,1.2rem);max-width:58ch;position:relative}
+  .hbtns{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap;position:relative}
+  .btn{padding:14px 24px;border-radius:8px;font-weight:800;font-size:15px;display:inline-flex;gap:8px;align-items:center}
+  .btn.p{background:var(--yellow);color:var(--field-d)}.btn.p:hover{background:var(--yellow-d)}
+  .btn.g{background:transparent;border:1px solid var(--leaf);color:#fff}.btn.g:hover{border-color:var(--yellow)}
+  .lanes{background:var(--white);border-bottom:1px solid var(--line)}
+  .lanegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  @media(max-width:720px){.lanegrid{grid-template-columns:1fr}}
+  .lane{padding:30px 24px;border-right:1px solid var(--line);text-align:center}
+  .lane:last-child{border-right:none}
+  .lane .ic{font-size:34px}
+  .lane h3{color:var(--field-d);font-size:1.18rem;margin-top:10px}
+  .lane p{color:var(--muted);font-size:.94rem;margin-top:6px}
+  section{padding:60px 0}
+  .kick{color:var(--leaf);font-size:12px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
+  h2{font-size:clamp(1.6rem,3.4vw,2.15rem);margin-top:8px;color:var(--field-d)}
+  .lead{color:var(--muted);max-width:64ch;margin-top:12px;font-size:1.05rem}
+  .detail{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+  @media(max-width:760px){.detail{grid-template-columns:1fr}}
+  .dc{background:var(--white);border:1px solid var(--line);border-radius:11px;padding:26px}
+  .dc .top{display:flex;align-items:center;gap:12px}
+  .dc .top .b{width:40px;height:40px;border-radius:8px;display:grid;place-items:center;font-size:19px;color:#fff}
+  .dc h3{color:var(--field-d);font-size:1.1rem}
+  .dc ul{margin-top:12px;list-style:none;color:var(--ink);font-size:.94rem}
+  .dc li{padding:5px 0 5px 20px;position:relative}
+  .dc li:before{content:"›";position:absolute;left:4px;color:var(--yellow-d);font-weight:900}
+  .season{background:var(--field-d);color:#fff}
+  .season h2{color:#fff}
+  .season .lead{color:#d3e0cd}
+  .sbox{background:var(--field);border:1px solid var(--leaf);border-radius:12px;padding:30px;margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  @media(max-width:720px){.sbox{grid-template-columns:1fr}}
+  .sbox h3{color:var(--yellow);font-size:1.15rem}
+  .sbox p{color:#d3e0cd;font-size:.96rem;margin-top:8px}
+  .why{background:var(--meadow)}
+  .whyrow{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+  @media(max-width:760px){.whyrow{grid-template-columns:1fr}}
+  .wc{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:24px;text-align:center}
+  .wc .ic{font-size:26px}
+  .wc h3{color:var(--field-d);font-size:1.05rem;margin-top:8px}
+  .wc p{color:var(--muted);font-size:.92rem;margin-top:6px}
+  .contact{background:var(--field);color:#fff}
+  .cbox{background:var(--field-d);border:1px solid var(--leaf);border-radius:14px;padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:26px}
+  @media(max-width:720px){.cbox{grid-template-columns:1fr}}
+  .cbox h3{color:#fff;font-size:1.25rem}
+  .cbox .row{margin-top:14px;font-size:15px;color:#d3e0cd}
+  .cbox .row b{color:var(--yellow);display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+  .cta{background:var(--yellow);color:var(--field-d);padding:16px 22px;border-radius:8px;font-weight:800;text-align:center;display:block;margin-top:10px;font-size:1.05rem}
+  footer{background:#122015;color:#9db298;padding:30px 0;font-size:13px}
+  .note{font-size:11px;color:#9db298;margin-top:6px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <div class="brand"><div class="mk">AAT</div><div>Arkport Auto, Ag &amp; Truck<small>Arkport, NY · Full-service repair</small></div></div>
+    <nav>
+      <a class="lk" href="#lanes">Three Lanes</a>
+      <a class="lk" href="#detail">What We Fix</a>
+      <a class="lk" href="#season">In Season</a>
+      <a class="callbtn" href="tel:16076618581">(607) 661-8581</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">Car · Tractor · Truck — one shop</span>
+    <h1>The pickup, the tractor and the grain truck <span>all get fixed here.</span></h1>
+    <p>Arkport Auto, Ag and Truck is the area's single stop for everything with an engine — passenger cars, farm equipment and commercial trucks. No hauling a tractor to one shop and the truck to another.</p>
+    <div class="hbtns">
+      <a class="btn p" href="tel:16076618581">Call the shop</a>
+      <a class="btn g" href="#detail">What we fix</a>
+    </div>
+  </div>
+</section>
+
+<div class="lanes" id="lanes">
+  <div class="wrap lanegrid">
+    <div class="lane"><div class="ic">🚗</div><h3>Auto</h3><p>Everyday car and pickup repair to keep you on the road.</p></div>
+    <div class="lane"><div class="ic">🚜</div><h3>Agricultural</h3><p>Tractor and farm-equipment work when a machine can't be down.</p></div>
+    <div class="lane"><div class="ic">🚛</div><h3>Truck</h3><p>Commercial and diesel truck repair for owner-operators and small fleets.</p></div>
+  </div>
+</div>
+
+<section id="detail">
+  <div class="wrap">
+    <div class="kick">What we fix</div>
+    <h2>Three kinds of machines, one set of doors</h2>
+    <p class="lead">Most shops pick a lane. Around Arkport, a farm might run a car, a work truck and a tractor — so it helps to have one shop that takes all three.</p>
+    <div class="detail">
+      <div class="dc">
+        <div class="top"><div class="b" style="background:var(--leaf)">🚗</div><h3>Passenger auto</h3></div>
+        <ul><li>Cars &amp; light pickups</li><li>Brakes, suspension &amp; steering</li><li>Diagnostics &amp; general repair</li><li>Keep-it-running maintenance</li></ul>
+      </div>
+      <div class="dc">
+        <div class="top"><div class="b" style="background:var(--barn)">🚜</div><h3>Agricultural equipment</h3></div>
+        <ul><li>Tractors &amp; farm machinery</li><li>Time-sensitive in-season work</li><li>Engine &amp; driveline repair</li><li>Get the machine back to the field</li></ul>
+      </div>
+      <div class="dc">
+        <div class="top"><div class="b" style="background:var(--yellow-d)">🚛</div><h3>Commercial truck</h3></div>
+        <ul><li>Work trucks &amp; small fleets</li><li>Diesel repair</li><li>Owner-operator turnaround</li><li>Keep the truck earning</li></ul>
+      </div>
+    </div>
+    <p class="note">Exact services and equipment brands serviced to be confirmed with the shop before publishing.</p>
+  </div>
+</section>
+
+<section id="season" class="season">
+  <div class="wrap">
+    <div class="kick" style="color:#c7d6bf">When it matters most</div>
+    <h2>Downtime costs the most in season</h2>
+    <div class="sbox">
+      <div>
+        <h3>A tractor down in planting or harvest</h3>
+        <p>When the weather window is open, a machine sitting in the barn is money leaving the field. A local shop that takes ag work means the fix happens close to home, not a county away.</p>
+      </div>
+      <div>
+        <h3>A truck that has to be earning</h3>
+        <p>For an owner-operator or a small fleet, a truck in the shop is a truck not paying for itself. Local diesel and truck repair keeps the turnaround short.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="wrap">
+    <div class="kick">Why one shop</div>
+    <h2>The local advantage of doing all three</h2>
+    <div class="whyrow">
+      <div class="wc"><div class="ic">📍</div><h3>Right in Arkport</h3><p>On Ellis Hill Road — close for the farms and drivers north of Hornell.</p></div>
+      <div class="wc"><div class="ic">🔧</div><h3>All three under one roof</h3><p>Car, tractor and truck — one shop, one relationship, one number to call.</p></div>
+      <div class="wc"><div class="ic">☎️</div><h3>Talk to a person</h3><p>Call and describe what's wrong — no phone tree, no ticket queue.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="kick" style="color:#c7d6bf">Reach the shop</div>
+    <h2 style="color:#fff">Something down? Give us a call.</h2>
+    <div class="cbox">
+      <div>
+        <h3>Arkport Auto, Ag and Truck</h3>
+        <div class="row"><b>Location</b>196 Ellis Hill Rd, Arkport, NY 14807</div>
+        <div class="row"><b>Phone</b>(607) 661-8581</div>
+        <div class="row"><b>Hours</b>Call for current hours</div>
+      </div>
+      <div>
+        <div class="row"><b>Bring us</b>Cars · pickups · tractors · farm equipment · trucks</div>
+        <a class="cta" href="tel:16076618581">Call (607) 661-8581</a>
+        <p style="font-size:13px;color:#b7c8b2;margin-top:12px">Tell us the machine and what it's doing and we'll let you know how fast we can get to it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Arkport Auto, Ag and Truck · 196 Ellis Hill Rd, Arkport, NY 14807 · (607) 661-8581
+  <div class="note">Preview concept prepared by Onyx Rise Media for review. Hours, services and equipment brands serviced to be confirmed with the shop before publishing.</div></div>
+</footer>
+</body>
+</html>

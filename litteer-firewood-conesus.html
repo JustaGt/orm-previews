@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Litteer Firewood — Seasoned Hardwood, Split &amp; Delivered | Conesus, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ember:#c8531b;--ember-d:#9e3f13;--bark:#3a2c20;--bark-d:#291f16;--forest:#2f4a34;--cream:#f6efe4;--paper:#fbf6ec;--amber:#e6a13c;--line:#e2d6c2;--ink:#2c241c}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito Sans',sans-serif;color:var(--ink);line-height:1.65;background:var(--paper)}
+h1,h2,h3{line-height:1.12}
+.disp{font-family:'Alfa Slab One',serif;font-weight:400}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+.btn{display:inline-block;background:var(--ember);color:#fff;font-weight:800;padding:14px 30px;border-radius:6px;text-decoration:none;transition:.15s;letter-spacing:.01em}
+.btn:hover{background:var(--ember-d)}
+.btn-out{background:transparent;border:2px solid #fff;color:#fff}
+.btn-out:hover{background:#fff;color:var(--bark)}
+.topbar{background:var(--bark-d);color:#efe4d3;font-size:.87rem;padding:9px 0}
+.topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.topbar b{color:var(--amber)}
+nav{background:var(--bark);position:sticky;top:0;z-index:20}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
+.brand{font-family:'Alfa Slab One';color:#fff;font-size:1.28rem;letter-spacing:.01em}
+.brand span{color:var(--amber)}
+.navlinks a{color:#e2d6c2;text-decoration:none;margin-left:22px;font-weight:700;font-size:.93rem}
+.navlinks a:hover{color:var(--amber)}
+@media(max-width:780px){.navlinks{display:none}}
+.hero{background:linear-gradient(rgba(41,31,22,.78),rgba(41,31,22,.86)),repeating-linear-gradient(90deg,#4a3627 0 9px,#412f21 9px 18px);color:#fff;padding:96px 0 86px}
+.hero .kick{font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);font-size:.85rem;margin-bottom:15px}
+.hero h1{font-family:'Alfa Slab One';font-size:3rem;max-width:16ch;margin-bottom:18px;line-height:1.08}
+.hero p{font-size:1.18rem;max-width:52ch;color:#ecdfce;margin-bottom:22px}
+.urgent{display:inline-block;background:var(--forest);color:#dff0d8;font-weight:700;padding:7px 16px;border-radius:20px;font-size:.9rem;margin-bottom:24px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:600px){.hero h1{font-size:2.1rem}}
+.strip{background:var(--amber);color:var(--bark-d)}
+.strip .wrap{display:flex;flex-wrap:wrap;justify-content:space-around;gap:12px;padding:16px 22px;font-weight:800;text-align:center}
+section{padding:66px 0}
+.eyebrow{color:var(--ember);font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:.83rem;margin-bottom:9px}
+h2.head{font-size:2.15rem;color:var(--bark);margin-bottom:12px}
+.lead{font-size:1.08rem;color:#5b4a3a;max-width:60ch;margin-bottom:34px}
+.wood{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.wcard{background:#fff;border:1px solid var(--line);border-radius:9px;overflow:hidden}
+.wcard .top{height:12px;background:var(--ember)}
+.wcard .body{padding:24px 24px}
+.wcard h3{font-size:1.22rem;color:var(--bark);margin-bottom:6px}
+.wcard .price{font-family:'Alfa Slab One';color:var(--ember);font-size:1rem;margin-bottom:10px}
+.wcard p{font-size:.95rem;color:#5b4a3a}
+.wcard .tag{display:inline-block;background:#f4e7cf;color:#8a6a1f;font-size:.72rem;font-weight:800;padding:3px 9px;border-radius:20px;margin-top:12px;letter-spacing:.03em}
+.season{background:var(--forest);color:#fff}
+.season h2.head{color:#fff}.season .eyebrow{color:var(--amber)}
+.season .lead{color:#d5e2d3}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:22px;margin-top:8px}
+.st .n{font-family:'Alfa Slab One';color:var(--amber);font-size:1.7rem}
+.st h3{font-size:1.05rem;margin:4px 0 5px}
+.st p{color:#d5e2d3;font-size:.94rem}
+.area .towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.area .towns span{background:var(--cream);border:1px solid var(--line);border-radius:20px;padding:7px 15px;font-weight:700;color:#5b4a3a;font-size:.92rem}
+.tv{background:var(--cream);border:1px solid var(--line);border-left:5px solid var(--forest);border-radius:8px;padding:24px 26px;margin-top:30px}
+.tv h3{color:var(--forest);font-size:1.15rem;margin-bottom:6px}
+.tv p{color:#5b4a3a;font-size:.97rem}
+.order{background:var(--bark)}
+.obox{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.obox h2{color:#fff;font-size:2rem;margin-bottom:12px}
+.obox p{color:#e0d3c1;margin-bottom:16px}
+.obox .ph{font-family:'Alfa Slab One';color:var(--amber);font-size:1.9rem}
+form{background:#fff;border-radius:10px;padding:30px 28px;display:grid;gap:13px}
+label{font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:#5b4a3a}
+input,select,textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:6px;font-family:inherit;font-size:.97rem;margin-top:5px}
+textarea{min-height:76px;resize:vertical}
+@media(max-width:760px){.obox{grid-template-columns:1fr}}
+footer{background:var(--bark-d);color:#b3a48f;padding:42px 0;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}
+footer b{color:#fff;font-family:'Alfa Slab One';font-size:1.02rem}
+footer a{color:var(--amber);text-decoration:none}
+.note{background:#f5eddf;border-top:1px solid var(--cream);color:#7a6647;font-size:.8rem;text-align:center;padding:10px}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>Seasoned firewood, split &amp; delivered &middot; Conesus, NY</span><span>Order line: <b>(585) 346-2480</b></span></div></div>
+<nav><div class="wrap"><div class="brand">LITTEER <span>FIREWOOD</span></div>
+<div class="navlinks"><a href="#wood">Firewood</a><a href="#order-how">Ordering</a><a href="#area">Delivery Area</a><a href="#order">Reserve a Cord</a></div></div></nav>
+
+<header class="hero"><div class="wrap">
+<div class="kick">Conesus &middot; Livingston County</div>
+<h1>Seasoned hardwood, split and stacked before the first frost.</h1>
+<p>Dry wood that catches on the first match — cut, split, and run out to your place across the Livingston County hills. Order early and beat the fall rush.</p>
+<div class="urgent">🔥 Reserving loads now for the coming season</div>
+<div class="cta-row"><a class="btn" href="#order">Reserve a Cord</a><a class="btn btn-out" href="tel:+15853462480">Call (585) 346-2480</a></div>
+</div></header>
+
+<div class="strip"><div class="wrap">
+<span>Seasoned hardwood</span><span>Split &amp; delivered</span><span>Face cord or full cord</span><span>Stacking available</span>
+</div></div>
+
+<section id="wood"><div class="wrap">
+<div class="eyebrow">What we deliver</div>
+<h2 class="head">Firewood, cut and ready to burn.</h2>
+<p class="lead">Seasoned hardwood so you're not fighting wet, green logs all winter. Order by the face cord or the full cord — delivered, and stacked if you want it.</p>
+<div class="wood">
+<div class="wcard"><div class="top"></div><div class="body"><h3>Face Cord</h3><div class="price">Ask for current price</div><p>A face cord of seasoned, split hardwood — sized for stoves, fire pits, and campers. <span class="tag">Price to confirm</span></p></div></div>
+<div class="wcard"><div class="top"></div><div class="body"><h3>Full Cord</h3><div class="price">Ask for current price</div><p>A full cord for whole-season heating — the best value for wood-heat households. <span class="tag">Price to confirm</span></p></div></div>
+<div class="wcard"><div class="top"></div><div class="body"><h3>Delivered &amp; Stacked</h3><div class="price">Add-on</div><p>We'll dump it where you want it — or stack it neat so it's ready and out of the weather. <span class="tag">Ask when ordering</span></p></div></div>
+</div>
+</div></section>
+
+<section class="season" id="order-how"><div class="wrap">
+<div class="eyebrow">Getting your wood</div>
+<h2 class="head">Order early, burn easy.</h2>
+<p class="lead">The best wood goes fast once the nights turn. Reserving ahead means it's seasoned, split, and in your shed before you need the first fire.</p>
+<div class="steps">
+<div class="st"><div class="n">1</div><h3>Tell us how much</h3><p>Face cord, full cord, or a standing seasonal order.</p></div>
+<div class="st"><div class="n">2</div><h3>Give us your town</h3><p>We'll confirm delivery and a rough day for drop-off.</p></div>
+<div class="st"><div class="n">3</div><h3>Dumped or stacked</h3><p>Choose a simple dump or have us stack it for you.</p></div>
+<div class="st"><div class="n">4</div><h3>Burn all winter</h3><p>Dry hardwood that lights easy and holds a fire.</p></div>
+</div>
+</div></section>
+
+<section class="area" id="area"><div class="wrap">
+<div class="eyebrow">Where we deliver</div>
+<h2 class="head">Conesus and the Livingston County hills.</h2>
+<p class="lead">Based off West Swamp Road in Conesus, running wood out to the surrounding towns.</p>
+<div class="towns"><span>Conesus</span><span>Livonia</span><span>Lakeville</span><span>Geneseo</span><span>Springwater</span><span>Hemlock</span><span>Groveland</span><span>Conesus Lake</span><span>Scottsburg</span></div>
+<div class="tv"><h3>Also: satellite TV &amp; internet</h3><p>Beyond firewood, Litteer is an authorized dealer for satellite TV and internet service — handy for camps and rural homes off the cable grid. Ask about setup when you call.</p></div>
+</div></section>
+
+<section class="order" id="order"><div class="wrap">
+<div class="obox">
+<div>
+<h2>Reserve your wood for the season.</h2>
+<p>Tell us how much and where it's going, and we'll lock in your load and a delivery day. Order now while the good seasoned wood is still on the pile.</p>
+<p>Or call the order line:</p>
+<div class="ph">(585) 346-2480</div>
+</div>
+<form onsubmit="event.preventDefault();this.reset();alert('Thanks — we\'ll call to confirm your load and delivery. (Demo preview form.)');">
+<div><label>Name</label><input required></div>
+<div><label>Phone</label><input required type="tel"></div>
+<div><label>How much?</label><select><option>Face cord</option><option>Full cord</option><option>Multiple cords / seasonal</option><option>Not sure — need advice</option></select></div>
+<div><label>Delivery town</label><input placeholder="e.g. Livonia"></div>
+<div><label>Dumped or stacked?</label><select><option>Just dump it</option><option>Stack it, please</option></select></div>
+<button class="btn" type="submit">Reserve My Cord</button>
+</form>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<div><b>LITTEER FIREWOOD</b><br>6900 West Swamp Road, Conesus, NY 14435<br>Livingston County</div>
+<div>Seasoned firewood &middot; Delivery &amp; stacking &middot; Satellite TV<br><a href="tel:+15853462480">(585) 346-2480</a></div>
+</div></footer>
+<div class="note">Preview concept built by Onyx Rise Media for review. Cord pricing shown as placeholders to confirm with the owner; delivery range to be verified.</div>
+</body>
+</html>

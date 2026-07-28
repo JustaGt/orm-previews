@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C.M.C. Custom Canvas &amp; Upholstery — Boat &amp; Auto Upholstery, Copiague NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --char:#22262b; --char2:#2f353c; --teal:#0f6e73; --teal2:#0b555a;
+    --red:#c04532; --canvas:#f3efe6; --ink:#262a2e; --muted:#69707a; --line:#e0dccf;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Barlow',system-ui,sans-serif;color:var(--ink);background:var(--canvas);line-height:1.62}
+  h1,h2,h3,.disp{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.4px;line-height:1.04}
+  .wrap{max-width:1050px;margin:0 auto;padding:0 22px}
+  .topbar{background:var(--char);color:#cdd3d9;font-size:.88rem}
+  .topbar .wrap{display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:space-between;padding:9px 22px}
+  .topbar a{color:#e7b34a;text-decoration:none;font-weight:700}
+  header.hero{position:relative;color:#fff;padding:80px 0 66px;border-bottom:6px solid var(--teal);
+    background:linear-gradient(0deg,rgba(26,30,34,.92),rgba(26,30,34,.72)),
+    repeating-linear-gradient(45deg,#2a3037 0 10px,#262c33 10px 20px)}
+  .badge{display:inline-block;background:var(--red);color:#fff;font-family:'Barlow Condensed';font-weight:800;text-transform:uppercase;letter-spacing:1.6px;font-size:.84rem;padding:6px 15px}
+  header.hero h1{font-size:clamp(2.3rem,6vw,4rem);font-weight:800;margin:.34em 0 .3em}
+  header.hero .lead{font-size:1.16rem;max-width:610px;color:#dbe0e5;font-weight:500}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+  .btn{display:inline-block;background:var(--teal);color:#fff;font-family:'Barlow Condensed';font-weight:800;font-size:1.2rem;text-transform:uppercase;letter-spacing:.6px;padding:12px 27px;text-decoration:none;transition:.15s}
+  .btn:hover{background:#128086}
+  .btn.line{background:transparent;border:2px solid rgba(255,255,255,.36)}
+  section{padding:56px 0}
+  h2{font-size:clamp(1.9rem,4.5vw,2.7rem);color:var(--char);font-weight:700}
+  .sub{color:var(--muted);max-width:640px;margin:.35em 0 30px;font-size:1.03rem}
+  .svc{display:grid;gap:15px;grid-template-columns:repeat(auto-fit,minmax(232px,1fr))}
+  .s{background:#fff;border:1px solid var(--line);border-left:5px solid var(--teal);padding:22px}
+  .s h3{font-size:1.5rem;color:var(--char);margin-bottom:.2em}
+  .s p{font-size:.96rem;color:var(--muted)}
+  .band{background:var(--char2);color:#e6ebef}
+  .band h2{color:#fff}.band .sub{color:#c0c8cf}
+  .steps{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));margin-top:8px}
+  .step{background:#20262c;border:1px solid #333b43;border-top:4px solid var(--red);padding:20px}
+  .step span{font-family:'Barlow Condensed';font-size:2rem;color:var(--red);font-weight:800;display:block;line-height:1}
+  .step h3{color:#fff;font-size:1.28rem;margin:.25em 0 .2em}
+  .step p{color:#c0c8cf;font-size:.93rem}
+  .split{display:grid;gap:34px;grid-template-columns:1.05fr .95fr;align-items:center;margin-top:6px}
+  .imgph{width:100%;border-radius:5px;background:#ded9cd;min-height:250px;display:flex;align-items:center;justify-content:center;color:#8a8577;font-style:italic;border:1px dashed #b6b0a1;text-align:center;padding:16px}
+  .contact{background:var(--char);color:#dbe0e5}
+  .contact h2{color:#fff}
+  .cg{display:grid;gap:26px;grid-template-columns:1fr 1fr;margin-top:20px}
+  .contact a{color:#e7b34a;font-weight:700}
+  .contact .big{font-family:'Barlow Condensed';font-size:2rem;color:#fff}
+  .note{font-size:.78rem;color:#8b95a0;margin-top:8px}
+  footer{background:#15191d;color:#79838c;text-align:center;padding:26px;font-size:.85rem}
+  @media(max-width:720px){.split,.cg{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>730 Montauk Hwy · Copiague, NY 11726</span>
+  <span>Mon–Fri 9–6 · Sat 9–3 · <a href="tel:16317890616">631-789-0616</a></span>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <span class="badge">Marine &amp; auto · one stitch shop</span>
+  <h1>Sun-rotted seats and a leaky top don't need a new boat. Or a new car.</h1>
+  <p class="lead">Cracked bimini, split helm seats, a convertible top that won't seal, headliner hanging on your neck — bring it to the shop on Montauk Highway and we re-cover it to fit, not off a shelf.</p>
+  <div class="btns">
+    <a class="btn" href="#contact">Get a stitching quote</a>
+    <a class="btn line" href="#work">What we re-cover</a>
+  </div>
+</div></header>
+
+<section id="work"><div class="wrap">
+  <h2>Cut, sewn and fit in Copiague</h2>
+  <p class="sub">Two trades under one roof — the boat that lives on the Great South Bay and the car in the driveway both get the same custom pattern work.</p>
+  <div class="svc">
+    <div class="s"><h3>Bimini tops &amp; enclosures</h3><p>New tops, full camper enclosures, drop curtains and frame work — cut to your boat so it actually snaps closed in a blow.</p></div>
+    <div class="s"><h3>Boat seats &amp; cushions</h3><p>Helm seats, bench seats, back-to-back and cockpit cushions rebuilt with marine vinyl and closed-cell foam that shrugs off salt and sun.</p></div>
+    <div class="s"><h3>Convertible tops</h3><p>Ragtops replaced and repaired — new top, rear window, pads and cables so it seals and folds the way it should.</p></div>
+    <div class="s"><h3>Car seats &amp; headliners</h3><p>Split seats re-skinned, sagging headliners re-glued and re-covered, custom seat covers stitched to the pattern of the car.</p></div>
+    <div class="s"><h3>Snap &amp; cover repair</h3><p>Torn covers, blown-out snaps, chafed seams and zippers fixed instead of full replacement when that's the honest call.</p></div>
+    <div class="s"><h3>Custom canvas</h3><p>Console covers, T-top curtains and one-off canvas pieces measured and sewn for the boat you actually own.</p></div>
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <h2>How a job runs</h2>
+  <p class="sub">No online cart, no guesswork — you bring the piece or the boat, we measure, you get a real number.</p>
+  <div class="steps">
+    <div class="step"><span>1</span><h3>Bring it by</h3><p>Drop the seat, the top or the whole boat at 730 Montauk Highway during shop hours.</p></div>
+    <div class="step"><span>2</span><h3>We measure &amp; quote</h3><p>You get a straight price on materials and labor before anything is cut.</p></div>
+    <div class="step"><span>3</span><h3>We stitch to fit</h3><p>Pattern made for your piece — vinyl, canvas or fabric, sewn on-site.</p></div>
+    <div class="step"><span>4</span><h3>Back on the water/road</h3><p>Picked up ready to snap, zip and use — before the season, not after it.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="split">
+    <div>
+      <h2>Why a local shop beats a big-box seat cover</h2>
+      <p class="sub" style="color:var(--muted)">A universal cover from the auto-parts wall never quite fits, and a mail-order bimini shows up two sizes wrong. A shop that measures your boat and your car gets it right the first time — and you're dealing with the person doing the sewing, not a call center.</p>
+      <p style="color:var(--muted)">Serving Copiague, Amityville, Lindenhurst and the South Shore boating and driving crowd.</p>
+    </div>
+    <div class="imgph">[ Photo: helm seat re-covered in the shop — Sandro to add ]</div>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <h2>Get a stitching quote</h2>
+  <p class="sub">Call the shop or stop in with the piece. Tell us the boat or the car and what's torn — we'll tell you what it takes.</p>
+  <div class="cg">
+    <div>
+      <p class="big">631-789-0616</p>
+      <p>C.M.C. Custom Canvas &amp; Upholstery</p>
+      <p style="margin-top:8px">Mon–Fri 9–6 · Sat 9–3</p>
+    </div>
+    <div>
+      <p><strong>Shop</strong><br>730 Montauk Highway<br>Copiague, NY 11726</p>
+      <p style="margin-top:10px"><a href="tel:16317890616">Call for a quote →</a></p>
+    </div>
+  </div>
+  <p class="note">Preview concept prepared by Onyx Rise Media. Details from public listings; owner to confirm services, hours and pricing.</p>
+</div></section>
+
+<footer>C.M.C. Custom Canvas &amp; Upholstery · Marine &amp; auto upholstery · Copiague, NY · 631-789-0616</footer>
+
+</body>
+</html>

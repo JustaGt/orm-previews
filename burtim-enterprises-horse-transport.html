@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Burtim Enterprises — Professional Horse Transport | Glen Head, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#152238;--navy2:#1e3252;--slate:#42546e;--chestnut:#a9663d;--chestnut2:#c17b4d;--paper:#f5f6f8;--ink:#1a2233;--muted:#5a6577;--line:#dde1e8}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+  h1,h2,h3,.cond{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.5px;line-height:1.05}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+  header{position:sticky;top:0;z-index:20;background:var(--navy)}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1140px;margin:0 auto}
+  .brand{color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:700;text-transform:uppercase;letter-spacing:1px}
+  .brand span{color:var(--chestnut2)}
+  .navlinks a{color:#c8d0dc;text-decoration:none;margin-left:24px;font-size:.92rem;font-weight:500}
+  .navlinks a:hover{color:#fff}
+  .btn{display:inline-block;background:var(--chestnut);color:#fff;padding:13px 26px;border-radius:3px;text-decoration:none;font-weight:600;font-size:.95rem;transition:.2s;border:none;cursor:pointer}
+  .btn:hover{background:var(--chestnut2)}
+  .btn-out{background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff}
+  .btn-out:hover{border-color:var(--chestnut2);color:var(--chestnut2)}
+  @media(max-width:760px){.navlinks{display:none}}
+
+  .hero{background:linear-gradient(rgba(15,22,38,.78),rgba(15,22,38,.72)),url('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1600&q=70');background-size:cover;background-position:center;color:#fff;padding:110px 0 118px}
+  .hero .wrap{max-width:900px}
+  .kicker{color:var(--chestnut2);text-transform:uppercase;letter-spacing:3px;font-size:.8rem;font-weight:700;margin-bottom:18px}
+  .hero h1{font-size:4rem;margin-bottom:20px}
+  .hero p{font-size:1.2rem;color:#dbe1ea;max-width:660px;margin-bottom:32px}
+  .hero .btn{margin-right:12px}
+  @media(max-width:760px){.hero h1{font-size:2.6rem}}
+
+  section{padding:80px 0}
+  .sec-kicker{color:var(--chestnut);text-transform:uppercase;letter-spacing:2.5px;font-size:.78rem;font-weight:700;margin-bottom:12px;font-family:'Source Sans 3',sans-serif}
+  h2{font-size:2.7rem;color:var(--navy);margin-bottom:14px}
+  .sub{color:var(--muted);font-size:1.06rem;max-width:680px}
+
+  .services{background:var(--paper)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:44px}
+  .card{background:#fff;border:1px solid var(--line);border-top:3px solid var(--chestnut);border-radius:4px;padding:28px 26px}
+  .card h3{font-size:1.5rem;color:var(--navy);margin-bottom:10px}
+  .card p{color:var(--muted);font-size:.96rem}
+
+  .safety{background:var(--navy);color:#fff}
+  .safety h2{color:#fff}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px;margin-top:44px}
+  .step{border-left:2px solid var(--chestnut);padding:6px 0 6px 22px}
+  .step .n{font-family:'Barlow Condensed',sans-serif;font-size:2.4rem;color:var(--chestnut2);line-height:1}
+  .step h3{font-size:1.35rem;margin:6px 0 8px;color:#fff}
+  .step p{color:#c2cad6;font-size:.94rem}
+
+  .creds{text-align:center}
+  .badges{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;margin-top:40px}
+  .badge{border:1px solid var(--line);border-radius:4px;padding:28px 20px;background:var(--paper)}
+  .badge .t{font-family:'Barlow Condensed',sans-serif;font-size:1.8rem;color:var(--navy);text-transform:uppercase}
+  .badge p{color:var(--muted);font-size:.9rem;margin-top:6px}
+
+  .routes{background:var(--paper)}
+  .rlist{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+  .chip{background:#fff;border:1px solid var(--line);border-radius:40px;padding:10px 20px;font-weight:600;color:var(--navy);font-size:.92rem}
+  .chip span{color:var(--chestnut)}
+
+  .quote{background:var(--navy2);color:#fff}
+  .qgrid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:20px;align-items:start}
+  .quote h2{color:#fff}
+  .quote .sub{color:#cdd5e0}
+  .field{margin-bottom:15px}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  label{display:block;font-size:.78rem;letter-spacing:1px;text-transform:uppercase;color:var(--chestnut2);margin-bottom:6px;font-weight:600}
+  input,select,textarea{width:100%;padding:12px 14px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.07);color:#fff;border-radius:3px;font-family:inherit;font-size:.95rem}
+  input::placeholder,textarea::placeholder{color:#aab3c2}
+  .quote .btn{width:100%;text-align:center;font-size:1rem;margin-top:6px}
+  .cinfo p{margin-bottom:14px;color:#dbe1ea}
+  .cinfo a{color:var(--chestnut2);text-decoration:none}
+  .cinfo .big{font-family:'Barlow Condensed',sans-serif;font-size:2rem;color:#fff}
+  @media(max-width:760px){.qgrid{grid-template-columns:1fr;gap:32px}.row2{grid-template-columns:1fr}}
+
+  footer{background:#0f1626;color:#8894a6;text-align:center;padding:34px 0;font-size:.86rem}
+  footer .brand{font-size:1.3rem;display:block;margin-bottom:8px}
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <div class="brand">Burtim <span>Enterprises</span></div>
+    <div class="navlinks">
+      <a href="#services">Services</a>
+      <a href="#safety">How We Haul</a>
+      <a href="#creds">Credentials</a>
+      <a href="#routes">Routes</a>
+      <a href="#quote">Get a Quote</a>
+    </div>
+    <a href="#quote" class="btn">Request a quote</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="kicker">Glen Head, NY · Serving the Northeast &amp; beyond</div>
+    <h1>Your horse gets there calm, sound, and on schedule.</h1>
+    <p>Professional horse transport across Long Island and North America — box-stall comfort, an experienced hand at the wheel, and full insurance. Member of the National Horse Carriers Association.</p>
+    <div>
+      <a href="#quote" class="btn">Request a shipping quote</a>
+      <a href="#safety" class="btn btn-out">See how we haul</a>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="wrap">
+    <div class="sec-kicker">What we ship</div>
+    <h2>Four kinds of runs</h2>
+    <p class="sub">Whether it's a ten-minute move to a new North Shore barn or a cross-country haul to a winter base, the standard is the same.</p>
+    <div class="grid">
+      <div class="card"><h3>Local &amp; Regional</h3><p>Barn-to-barn moves across Nassau, Suffolk, and the tri-state area — new boarding barns, breedings, and pickups.</p></div>
+      <div class="card"><h3>Long-Distance</h3><p>Coast-to-coast and cross-country hauling with planned rest stops, hydration, and a driver who checks on every horse.</p></div>
+      <div class="card"><h3>Show Circuit</h3><p>Getting you and your horse to the ring — Wellington, HITS, Devon, and the Northeast rated shows, on your show schedule.</p></div>
+      <div class="card"><h3>Vet &amp; Clinic Runs</h3><p>Timely transport to and from equine hospitals and clinics, coordinated around appointments and recovery.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="safety" class="safety">
+  <div class="wrap">
+    <div class="sec-kicker" style="color:var(--chestnut2)">How we haul</div>
+    <h2>Plain talk about how your horse travels</h2>
+    <p class="sub" style="color:#c2cad6">You're handing over a valuable, living animal. Here's exactly what that looks like with us.</p>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Loading</h3><p>Patient, no-rush loading — box stall or straight load depending on your horse and the trip.</p></div>
+      <div class="step"><div class="n">2</div><h3>On the road</h3><p>Steady driving, good ventilation, hay and water, and regular stops to check and offer water on long runs.</p></div>
+      <div class="step"><div class="n">3</div><h3>Communication</h3><p>You get pickup confirmation and updates in transit, so you always know where your horse is.</p></div>
+      <div class="step"><div class="n">4</div><h3>Arrival</h3><p>Calm unloading and hand-off at the destination barn, with time to settle before we leave.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="creds" class="creds">
+  <div class="wrap">
+    <div class="sec-kicker">Why owners trust us</div>
+    <h2>Credentials that matter when it's your horse</h2>
+    <div class="badges">
+      <div class="badge"><div class="t">NHCA Member</div><p>National Horse Carriers Association</p></div>
+      <div class="badge"><div class="t">USDOT</div><p>Federally authorized interstate carrier</p></div>
+      <div class="badge"><div class="t">Fully Insured</div><p>Coverage on every horse we move</p></div>
+      <div class="badge"><div class="t">Owner-Operated</div><p>Timothy Post at the wheel — not a broker</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="routes" class="routes">
+  <div class="wrap">
+    <div class="sec-kicker">Where we run</div>
+    <h2>Long Island and the circuit</h2>
+    <p class="sub">Home base on the North Shore, running the routes horse people actually need.</p>
+    <div class="rlist">
+      <span class="chip"><span>·</span> North Shore Nassau</span>
+      <span class="chip"><span>·</span> Suffolk &amp; the Hamptons</span>
+      <span class="chip"><span>·</span> Tri-State</span>
+      <span class="chip"><span>·</span> Wellington, FL</span>
+      <span class="chip"><span>·</span> HITS Ocala</span>
+      <span class="chip"><span>·</span> Devon, PA</span>
+      <span class="chip"><span>·</span> New England</span>
+      <span class="chip"><span>·</span> Coast-to-coast on request</span>
+    </div>
+  </div>
+</section>
+
+<section id="quote" class="quote">
+  <div class="wrap">
+    <div class="sec-kicker" style="color:var(--chestnut2)">Get a quote</div>
+    <div class="qgrid">
+      <div>
+        <h2>Tell us the trip</h2>
+        <p class="sub">Give us the origin, destination, date, and how many horses — we'll get you a straight answer on availability and price.</p>
+        <div class="cinfo" style="margin-top:30px">
+          <p class="big">(516) 674-3203</p>
+          <p>Glen Head, NY · North Shore, Long Island</p>
+          <p>National Horse Carriers Association member</p>
+        </div>
+      </div>
+      <form onsubmit="return false">
+        <div class="row2">
+          <div class="field"><label>Pickup (origin)</label><input type="text" placeholder="Barn / town"></div>
+          <div class="field"><label>Drop-off (destination)</label><input type="text" placeholder="Barn / town"></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label>Date</label><input type="text" placeholder="MM/DD/YYYY or flexible"></div>
+          <div class="field"><label># of horses</label><input type="text" placeholder="e.g. 1"></div>
+        </div>
+        <div class="field"><label>Your name &amp; phone</label><input type="text" placeholder="Name · best number"></div>
+        <div class="field"><label>Anything we should know</label><textarea rows="2" placeholder="Special handling, tight timing, etc."></textarea></div>
+        <button class="btn">Request quote</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="brand">Burtim <span style="color:var(--chestnut2)">Enterprises</span></span>
+    Professional Horse Transport · Glen Head, NY · (516) 674-3203 · NHCA Member
+    <div style="margin-top:8px;font-size:.78rem;opacity:.6">Preview concept prepared by Onyx Rise Media.</div>
+  </div>
+</footer>
+</body>
+</html>

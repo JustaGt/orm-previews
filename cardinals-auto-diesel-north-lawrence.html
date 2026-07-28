@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cardinal's Auto &amp; Diesel Repair — Gas &amp; Diesel, One Shop | North Lawrence, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--char:#191b1e;--char2:#24272c;--red:#c8202c;--steel:#8b929c;--pale:#eef0f2;--line:#d7dbe0;--ink:#1e2126;--muted:#5a6069;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Roboto',sans-serif;color:var(--ink);background:#fff;line-height:1.6;}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px;}
+.top{background:var(--char);color:#cfd3d9;font-size:.82rem;text-align:center;padding:8px 12px;letter-spacing:.03em;border-bottom:2px solid var(--red);}
+header{background:var(--char2);color:#fff;}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:15px 0;flex-wrap:wrap;gap:10px;}
+.logo{font-family:'Rajdhani';font-weight:700;font-size:1.55rem;text-transform:uppercase;letter-spacing:.04em;line-height:1;}
+.logo span{color:var(--red);}
+.logo small{display:block;font-family:'Roboto';font-weight:500;font-size:.6rem;letter-spacing:.24em;color:var(--steel);margin-top:3px;}
+a.call{background:var(--red);color:#fff;font-weight:700;padding:11px 20px;border-radius:3px;text-decoration:none;font-size:.95rem;}
+.hero{position:relative;color:#fff;background:
+  repeating-linear-gradient(135deg,#1c1e22 0 22px,#202329 22px 44px);
+  padding:76px 0 60px;border-bottom:4px solid var(--red);}
+.tag{font-family:'Rajdhani';color:var(--red);letter-spacing:.2em;text-transform:uppercase;font-weight:700;font-size:.92rem;}
+h1{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(2.15rem,5.4vw,3.5rem);line-height:1.02;text-transform:uppercase;margin:10px 0 16px;}
+h1 em{color:var(--red);font-style:normal;}
+.hero p{color:#c9ced5;font-size:1.14rem;max-width:600px;}
+.btns{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;}
+.btn{font-family:'Rajdhani';font-weight:700;font-size:1.1rem;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;padding:13px 28px;border-radius:3px;display:inline-block;}
+.btn.p{background:var(--red);color:#fff;}
+.btn.s{border:2px solid #4a4f58;color:#fff;}
+.bar{background:var(--char);color:#fff;}
+.bar .wrap{display:flex;flex-wrap:wrap;}
+.bar div{flex:1 1 220px;padding:18px 20px;border-right:1px solid #33373e;}
+.bar b{font-family:'Rajdhani';color:var(--red);font-size:1.05rem;display:block;text-transform:uppercase;letter-spacing:.04em;}
+.bar span{color:#b7bcc4;font-size:.88rem;}
+section{padding:58px 0;}
+.k{font-family:'Rajdhani';color:#9a2028;letter-spacing:.16em;text-transform:uppercase;font-weight:700;font-size:.86rem;}
+h2{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:2.1rem;text-transform:uppercase;margin:5px 0 10px;color:var(--char);}
+.lead{color:var(--muted);max-width:680px;margin-bottom:28px;}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:2px;background:var(--line);border:1px solid var(--line);}
+.svc div{background:#fff;padding:24px 22px;}
+.svc h3{font-family:'Rajdhani';font-weight:700;font-size:1.25rem;text-transform:uppercase;color:var(--char);margin-bottom:6px;}
+.svc h3::before{content:"";display:inline-block;width:10px;height:10px;background:var(--red);margin-right:9px;}
+.svc p{font-size:.94rem;color:var(--muted);}
+.split{background:var(--char);color:#fff;}
+.split .grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;}
+@media(max-width:760px){.split .grid{grid-template-columns:1fr;}}
+.split h2{color:#fff;}
+.split .k{color:var(--red);}
+.split p{color:#c9ced5;}
+.chip{display:inline-block;background:var(--char2);border:1px solid #3a3f47;border-left:3px solid var(--red);padding:14px 16px;border-radius:3px;margin-top:10px;width:100%;}
+.chip b{color:#fff;font-family:'Rajdhani';font-size:1.1rem;text-transform:uppercase;display:block;}
+.chip span{color:#aeb4bd;font-size:.9rem;}
+.hours{background:var(--pale);}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:26px;}
+@media(max-width:700px){.hgrid{grid-template-columns:1fr;}}
+.htbl{background:#fff;border:1px solid var(--line);border-radius:5px;overflow:hidden;}
+.htbl div{display:flex;justify-content:space-between;padding:11px 18px;border-bottom:1px solid var(--line);font-size:.96rem;}
+.htbl div:last-child{border-bottom:none;}
+.htbl .closed{color:#9aa0a8;}
+.form{background:#fff;border:1px solid var(--line);border-radius:5px;padding:24px;}
+.form label{font-weight:600;font-size:.85rem;color:var(--char);display:block;margin:11px 0 5px;}
+.form input,.form textarea,.form select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:4px;font-family:inherit;font-size:.95rem;}
+.form button{margin-top:16px;width:100%;background:var(--red);color:#fff;border:none;padding:14px;border-radius:4px;font-family:'Rajdhani';font-weight:700;font-size:1.15rem;text-transform:uppercase;letter-spacing:.04em;cursor:pointer;}
+footer{background:var(--char);color:#aeb3bc;padding:32px 0;font-size:.9rem;border-top:3px solid var(--red);}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+footer b{color:#fff;font-family:'Rajdhani';font-size:1.2rem;letter-spacing:.03em;}
+.rd{color:var(--red);font-weight:700;}
+</style>
+</head>
+<body>
+<div class="top">North Lawrence, NY • Gas &amp; diesel • Foreign &amp; domestic • Skip the drive to the dealer</div>
+<header>
+  <div class="wrap nav">
+    <div class="logo">Cardinal's <span>Auto &amp; Diesel</span><small>Repair • Diagnostics • Service</small></div>
+    <a class="call" href="tel:13157053376">Call (315) 705-3376</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="tag">North Lawrence, New York</div>
+    <h1>Gas <em>and</em> diesel.<br>Fixed right, close to home.</h1>
+    <p>From a check-engine light on the family car to a work truck that won't make power, we diagnose and repair foreign and domestic gas and diesel engines — right here in North Lawrence, so your truck isn't parked for a week waiting on a dealer an hour away.</p>
+    <div class="btns">
+      <a class="btn p" href="#book">Request an Appointment</a>
+      <a class="btn s" href="tel:13157053376">Call (315) 705-3376</a>
+    </div>
+  </div>
+</div>
+<div class="bar">
+  <div class="wrap">
+    <div><b>Gas + Diesel</b><span>One shop, both — cars &amp; work trucks</span></div>
+    <div><b>Foreign &amp; Domestic</b><span>We diagnose across makes</span></div>
+    <div><b>Real Diagnostics</b><span>Driveability &amp; electrical, not guesswork</span></div>
+    <div><b>Local &amp; Owner-Run</b><span>Straight answers, fair price</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="k">What we fix</div>
+    <h2>Repair &amp; service</h2>
+    <p class="lead">Diagnostics and repair for gas and diesel vehicles — the everyday stuff and the tough drivability problems other shops send down the road.</p>
+    <div class="svc">
+      <div><h3>Diesel Repair</h3><p>Diagnostics and repair on diesel pickups and light trucks — no-start, low power, glow plugs, sensors, injection and driveability issues.</p></div>
+      <div><h3>Gas Engine Repair</h3><p>Check-engine lights, misfires, cooling, brakes, belts, and general engine and driveline repair on foreign and domestic vehicles.</p></div>
+      <div><h3>Electrical &amp; Wiring</h3><p>Electrical faults, wiring, charging and starting problems, and hard-to-find intermittent gremlins traced properly.</p></div>
+      <div><h3>Diagnostics &amp; Driveability</h3><p>Scan-tool diagnosis and road testing to find the real cause before parts go on — so you pay to fix it once.</p></div>
+      <div><h3>General Repair &amp; Maintenance</h3><p>Fluids, filters, brakes, and the routine work that keeps daily drivers and work trucks on the road.</p></div>
+      <div><h3>Work Trucks &amp; Farm Pickups</h3><p>We know a down truck costs you money. We get diesel work trucks diagnosed and back to work fast.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="split">
+  <div class="wrap grid">
+    <div>
+      <div class="k">Why local matters up here</div>
+      <h2>Don't tow it to Massena or Potsdam</h2>
+      <p>Out here, a real diesel-capable shop within reach is hard to find — and dealer service means a long haul and days of waiting. Cardinal's does both gas and diesel under one roof in North Lawrence, so your truck gets diagnosed close to home and you get it back sooner.</p>
+      <div class="chip"><b>Both fuels, one shop</b><span>Bring the diesel work truck and the family car to the same place.</span></div>
+    </div>
+    <div>
+      <div class="chip"><b>We diagnose before we replace</b><span>Real testing first, so you're not paying for parts that weren't the problem.</span></div>
+      <div class="chip"><b>Owner-run, plain talk</b><span>You'll hear what it needs, what it'll cost, and what can wait.</span></div>
+      <div class="chip"><b>Foreign &amp; domestic</b><span>Import or American, gas or diesel — we'll take a look.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="hours" id="book">
+  <div class="wrap">
+    <div class="k">Hours &amp; appointments</div>
+    <h2>Get on the schedule</h2>
+    <p class="lead">Call the shop or send the basics below and we'll get you in. Same-day help when we can for a truck that's down.</p>
+    <div class="hgrid">
+      <div>
+        <div class="htbl">
+          <div><span>Tuesday</span><span>8:30 am – 4:00 pm</span></div>
+          <div><span>Wednesday</span><span>8:30 am – 4:00 pm</span></div>
+          <div><span>Thursday</span><span>8:30 am – 4:00 pm</span></div>
+          <div><span>Friday</span><span>8:30 am – 4:00 pm</span></div>
+          <div><span>Saturday</span><span class="closed">Closed</span></div>
+          <div><span>Sunday</span><span class="closed">Closed</span></div>
+          <div><span>Monday</span><span class="closed">Closed</span></div>
+        </div>
+        <p style="margin-top:14px;font-size:.94rem;color:var(--muted);">11 McEwen Rd, North Lawrence, NY 12967<br>Phone: <a href="tel:13157053376" class="rd">(315) 705-3376</a></p>
+      </div>
+      <form class="form" onsubmit="return false;">
+        <label>Name</label><input type="text" placeholder="Your name">
+        <label>Phone</label><input type="tel" placeholder="Best number to reach you">
+        <label>Vehicle</label><input type="text" placeholder="Year / make / model — gas or diesel">
+        <label>What's going on?</label><textarea rows="3" placeholder="Check-engine light, no-start, noise, low power, service due…"></textarea>
+        <button type="submit">Request Appointment</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>Cardinal's Auto &amp; Diesel Repair LLC</b><br>11 McEwen Rd, North Lawrence, NY 12967</div>
+    <div>Phone: <span class="rd">(315) 705-3376</span><br>Gas &amp; diesel • Foreign &amp; domestic • Tue–Fri 8:30–4</div>
+  </div>
+</footer>
+</body>
+</html>

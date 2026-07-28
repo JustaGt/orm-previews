@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adirondack Sand & Gravel — Stone, Gravel & Fill in Crown Point, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --stone:#3a3f45; --slate:#23272b; --gravel:#b9a986; --tan:#d8c9a3;
+    --safety:#d4711f; --cream:#f4f1ea; --line:#4a4f55; --ink:#1a1c1f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Roboto',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  h1,h2,h3,.oswald{font-family:'Oswald',sans-serif;letter-spacing:.5px;text-transform:uppercase}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  .btn{display:inline-block;background:var(--safety);color:#fff;font-family:'Oswald',sans-serif;
+    text-transform:uppercase;letter-spacing:1px;padding:15px 30px;border-radius:3px;text-decoration:none;font-weight:600}
+  .btn:hover{background:#b95f14}
+  .btn-ghost{background:transparent;border:2px solid #fff;color:#fff}
+  /* top bar */
+  .topbar{background:var(--slate);color:#cfd3d8;font-size:.86rem}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:8px 22px;flex-wrap:wrap;gap:6px}
+  .topbar a{color:#fff;text-decoration:none;font-weight:700}
+  /* hero */
+  .hero{background:linear-gradient(rgba(26,28,31,.72),rgba(26,28,31,.72)),
+    repeating-linear-gradient(135deg,#5a5347 0 22px,#4d4639 22px 44px);
+    color:#fff;padding:82px 0 70px}
+  .hero .kicker{color:var(--tan);font-family:'Oswald',sans-serif;letter-spacing:3px;font-size:.95rem}
+  .hero h1{font-size:3rem;line-height:1.05;margin:12px 0 16px}
+  .hero p{font-size:1.18rem;max-width:640px;color:#e9e6de}
+  .hero .cta{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+  .phone-big{font-family:'Oswald',sans-serif;font-size:1.5rem;color:#fff;text-decoration:none;border-bottom:3px solid var(--safety)}
+  /* strip */
+  .strip{background:var(--gravel);color:var(--ink)}
+  .strip .wrap{display:flex;justify-content:space-around;flex-wrap:wrap;gap:14px;padding:16px 22px;text-align:center}
+  .strip b{font-family:'Oswald',sans-serif;display:block;font-size:1.05rem}
+  /* section */
+  section{padding:58px 0}
+  .lede{max-width:720px}
+  h2{font-size:2rem;color:var(--slate);margin-bottom:8px}
+  .sub{color:var(--stone);font-weight:500;margin-bottom:28px}
+  /* materials grid */
+  .mats{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+  .mat{background:#fff;border:1px solid #e2dccb;border-top:5px solid var(--stone);border-radius:4px;padding:22px}
+  .mat h3{font-size:1.15rem;color:var(--slate)}
+  .mat .use{color:var(--stone);font-size:.94rem;margin-top:6px}
+  .mat .tag{display:inline-block;margin-top:12px;background:#efe9d9;color:#6b6350;font-size:.78rem;
+    padding:4px 10px;border-radius:20px;font-weight:700;letter-spacing:.5px}
+  /* deliver split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .card{background:var(--slate);color:#eef0f2;border-radius:6px;padding:30px}
+  .card h3{color:#fff;font-size:1.3rem;margin-bottom:10px}
+  .card ul{list-style:none;margin-top:12px}
+  .card li{padding:6px 0 6px 26px;position:relative}
+  .card li:before{content:"›";position:absolute;left:6px;color:var(--safety);font-weight:700;font-size:1.2rem;top:2px}
+  /* form */
+  .quote{background:var(--stone);color:#fff}
+  form{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+  form label{font-size:.82rem;letter-spacing:.5px;text-transform:uppercase;color:var(--tan);display:block;margin-bottom:5px}
+  form input,form select,form textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:4px;
+    background:#2c3035;color:#fff;font-family:inherit;font-size:1rem}
+  .full{grid-column:1/-1}
+  /* area */
+  .area{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+  .area span{background:#fff;border:1px solid #e2dccb;padding:8px 16px;border-radius:4px;font-weight:700;color:var(--slate)}
+  footer{background:var(--ink);color:#aab0b6;padding:34px 0;font-size:.9rem}
+  footer a{color:#fff;text-decoration:none}
+  .foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px}
+  .note{font-size:.78rem;color:#7d848a;margin-top:14px}
+  @media(max-width:720px){.hero h1{font-size:2.2rem}.split{grid-template-columns:1fr}form{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Crown Point, NY · Route 9N · Open Mon–Fri 8–4, Sat 8–1</span>
+  <span>Call the yard: <a href="tel:15185973439">(518) 597-3439</a></span>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="kicker">SAND · GRAVEL · CRUSHED STONE · FILL</div>
+  <h1>Stone and gravel<br>loaded or delivered<br>in Crown Point</h1>
+  <p>A local yard on Route 9N stocking driveway stone, screened topsoil, sand and fill by the load — pick it up yourself or have it dropped on your job. Call for a price and we'll tell you what's in the pile today.</p>
+  <div class="cta">
+    <a class="btn" href="#quote">Request a load</a>
+    <a class="phone-big" href="tel:15185973439">(518) 597-3439</a>
+  </div>
+</div></header>
+
+<div class="strip"><div class="wrap">
+  <div><b>By the yard or by the ton</b>Priced for the load you need</div>
+  <div><b>Pickup or delivery</b>Bring a trailer or we'll haul it</div>
+  <div><b>Local &amp; family-run</b>On Route 9N in Crown Point</div>
+</div></div>
+
+<section><div class="wrap">
+  <div class="lede">
+    <h2>What's in the yard</h2>
+    <p class="sub">Common materials for driveways, drainage, pads and fill. Sizes and stock change through the season — call the yard to confirm before you drive out.</p>
+  </div>
+  <div class="mats">
+    <div class="mat"><h3>Driveway &amp; Road Stone</h3><div class="use">Crusher-run and washed stone for driveways, pads and parking. Packs hard and sheds water.</div><span class="tag">Driveways · Pads</span></div>
+    <div class="mat"><h3>Crushed Stone &amp; Gravel</h3><div class="use">Assorted sizes for drainage, base, backfill and landscaping stone.</div><span class="tag">Drainage · Base</span></div>
+    <div class="mat"><h3>Screened Topsoil</h3><div class="use">Screened soil for lawns, garden beds and grading. By the yard.</div><span class="tag">Lawns · Grading</span></div>
+    <div class="mat"><h3>Sand</h3><div class="use">Bedding, mason and fill sand for pipe, footings and general work.</div><span class="tag">Bedding · Fill</span></div>
+    <div class="mat"><h3>Fill &amp; Bank Run</h3><div class="use">Bulk fill for raising grade, building up sites and rough backfill.</div><span class="tag">Site fill</span></div>
+    <div class="mat"><h3>Ask for a Custom Load</h3><div class="use">Need something specific for a septic bed, culvert or wall? Tell us the job and we'll match the material.</div><span class="tag">Call the yard</span></div>
+  </div>
+  <p class="note">Material sizes and availability shown here are typical for this kind of yard and should be confirmed with the owner before publishing. Update with the exact stocked list, sizes and pricing.</p>
+</div></section>
+
+<section style="background:#ece7da"><div class="wrap">
+  <h2>Pick it up or have it delivered</h2>
+  <p class="sub">Two easy ways to get your material — whichever fits the job.</p>
+  <div class="split">
+    <div class="card">
+      <h3>Load your own</h3>
+      <p>Back a trailer or truck into the yard during open hours and we'll load you out. Good for small jobs and quick top-ups.</p>
+      <ul><li>Open Mon–Fri 8–4, Sat 8–1</li><li>Bring a trailer or dump bed</li><li>Pay by the yard or ton</li></ul>
+    </div>
+    <div class="card">
+      <h3>We deliver</h3>
+      <p>For bigger loads or hard-to-reach spots, we'll haul it to your driveway, camp or job site around Crown Point.</p>
+      <ul><li>Driveways, camps &amp; job sites</li><li>Contractor loads welcome</li><li>Call ahead to schedule a drop</li></ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="quote" class="quote"><div class="wrap">
+  <h2 style="color:#fff">Request a load</h2>
+  <p class="sub" style="color:#cdbf9c">Tell us the material and where it's going. We'll call back with a price and when we can get it to you. Prefer to talk now? Call the yard at <a href="tel:15185973439" style="color:#fff">(518) 597-3439</a>.</p>
+  <form onsubmit="event.preventDefault();alert('Thanks — this is a preview. On the live site this sends your request to the yard.');">
+    <div><label>Name</label><input required></div>
+    <div><label>Phone</label><input required type="tel"></div>
+    <div><label>Material needed</label>
+      <select><option>Driveway / road stone</option><option>Crushed stone / gravel</option><option>Screened topsoil</option><option>Sand</option><option>Fill / bank run</option><option>Not sure — need advice</option></select>
+    </div>
+    <div><label>Pickup or delivery?</label><select><option>Delivery</option><option>I'll pick it up</option></select></div>
+    <div class="full"><label>Job / delivery town &amp; details</label><textarea rows="3" placeholder="e.g. 4 yards of driveway stone delivered to a camp on Lake Rd, Crown Point"></textarea></div>
+    <div class="full"><button class="btn" type="submit">Send my request</button></div>
+  </form>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Delivering around the south lake</h2>
+  <p class="sub">Crown Point and the nearby towns along Lake Champlain and into the iron country.</p>
+  <div class="area">
+    <span>Crown Point</span><span>Port Henry</span><span>Moriah</span><span>Mineville</span>
+    <span>Ticonderoga</span><span>Witherbee</span><span>Moriah Center</span>
+  </div>
+  <p class="note">Confirm delivery radius and any minimum-load terms with the owner before publishing.</p>
+</div></section>
+
+<footer><div class="wrap foot-grid">
+  <div>
+    <strong style="color:#fff;font-family:'Oswald',sans-serif;font-size:1.2rem;letter-spacing:1px">ADIRONDACK SAND &amp; GRAVEL</strong><br>
+    3237 NYS Route 9N, Crown Point, NY 12928<br>
+    Open Mon–Fri 8–4 · Sat 8–1
+  </div>
+  <div>
+    Yard: <a href="tel:15185973439">(518) 597-3439</a><br>
+    <a href="#quote">Request a load →</a>
+  </div>
+</div>
+<div class="wrap"><p class="note">Preview concept prepared by Onyx Rise Media for the owner's review. Business name spelling, hours, delivery area and pricing to be confirmed before launch.</p></div>
+</footer>
+
+</body>
+</html>

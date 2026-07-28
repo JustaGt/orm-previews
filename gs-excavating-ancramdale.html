@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>G &amp; S Excavating — Site Work, Septic &amp; Material Delivery | Ancramdale, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--graphite:#22282e;--graphite-d:#171b20;--steel:#39424b;--hivis:#f26522;--hivis-d:#c94f14;--concrete:#eceef0;--paper:#fff;--line:#d3d8dd;--ink:#1d2126;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Barlow',sans-serif;color:var(--ink);background:var(--paper);line-height:1.62}
+h1,h2,h3,.disp{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.05}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+.btn{display:inline-block;background:var(--hivis);color:#fff;font-family:'Barlow Condensed';font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:14px 32px;border-radius:2px;text-decoration:none;font-size:1.08rem;transition:.15s}
+.btn:hover{background:var(--hivis-d)}
+.btn-ghost{background:transparent;border:2px solid var(--hivis);color:#fff}
+.btn-ghost:hover{background:var(--hivis);color:#fff}
+.topbar{background:var(--hivis);color:#fff;font-size:.86rem;padding:7px 0;font-weight:600}
+.topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+nav{background:var(--graphite);position:sticky;top:0;z-index:20;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
+.brand{font-family:'Barlow Condensed';color:#fff;font-weight:700;font-size:1.5rem;letter-spacing:.04em}
+.brand span{color:var(--hivis)}
+.navlinks a{color:#cdd3d9;text-decoration:none;font-family:'Barlow Condensed';text-transform:uppercase;font-size:1rem;margin-left:22px;letter-spacing:.03em;font-weight:600}
+.navlinks a:hover{color:var(--hivis)}
+@media(max-width:820px){.navlinks{display:none}}
+.hero{background:linear-gradient(rgba(23,27,32,.86),rgba(23,27,32,.92)),url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"><rect width="48" height="48" fill="%2322282e"/><path d="M0 0l48 48M48 0L0 48" stroke="%2f2e363d" stroke-width="1"/></svg>');color:#fff;padding:96px 0 88px}
+.hero .kick{color:var(--hivis);font-family:'Barlow Condensed';letter-spacing:.16em;text-transform:uppercase;font-weight:600;font-size:1rem;margin-bottom:14px}
+.hero h1{font-size:3.6rem;font-weight:700;max-width:17ch;margin-bottom:18px}
+.hero p{font-size:1.2rem;max-width:54ch;color:#d3d8dd;margin-bottom:28px}
+.hero .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+@media(max-width:600px){.hero h1{font-size:2.4rem}}
+.bar{background:var(--graphite-d);border-top:3px solid var(--hivis)}
+.bar .wrap{display:flex;flex-wrap:wrap;justify-content:space-around;padding:22px 22px;gap:16px;text-align:center}
+.bar .s b{font-family:'Barlow Condensed';font-size:2.2rem;display:block;line-height:1;color:var(--hivis)}
+.bar .s span{font-family:'Barlow Condensed';text-transform:uppercase;font-size:.86rem;letter-spacing:.07em;color:#aeb6be}
+section{padding:70px 0}
+.eyebrow{color:var(--hivis-d);font-family:'Barlow Condensed';letter-spacing:.14em;text-transform:uppercase;font-weight:600;font-size:.95rem;margin-bottom:10px}
+h2.head{font-size:2.5rem;color:var(--graphite);margin-bottom:14px}
+.lead{font-size:1.12rem;color:var(--steel);max-width:60ch;margin-bottom:38px}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:0;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.svc{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:28px 26px;background:#fff;transition:.15s}
+.svc:hover{background:var(--concrete)}
+.svc h3{font-size:1.42rem;color:var(--graphite);margin-bottom:7px;border-left:4px solid var(--hivis);padding-left:12px}
+.svc p{font-size:.97rem;color:#4c565d}
+.mat{background:var(--concrete)}
+.mat .menu{display:grid;grid-template-columns:1fr 1fr;gap:0 40px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 34px;max-width:840px}
+.mat .row{display:flex;justify-content:space-between;align-items:baseline;padding:15px 0;border-bottom:1px dashed var(--line)}
+.mat .row .m{font-family:'Barlow Condensed';font-size:1.25rem;text-transform:uppercase;color:var(--graphite);letter-spacing:.02em}
+.mat .row .d{font-size:.9rem;color:#6b7580;text-align:right;max-width:16ch}
+@media(max-width:680px){.mat .menu{grid-template-columns:1fr}}
+.why{background:var(--graphite);color:#e7eaed}
+.why h2.head{color:#fff}
+.why .lead{color:#bcc3ca}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px;margin-top:12px}
+.why-item{display:flex;gap:13px;align-items:flex-start}
+.why-item .n{font-family:'Barlow Condensed';color:var(--hivis);font-size:1.9rem;font-weight:700;line-height:1}
+.why-item h3{font-size:1.3rem;margin-bottom:5px;color:#fff}
+.why-item p{font-size:.95rem;color:#bcc3ca}
+.area .towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.area .towns span{background:var(--concrete);border:1px solid var(--line);border-radius:4px;padding:7px 15px;font-size:.92rem;font-weight:600;color:var(--steel)}
+.quote{background:var(--concrete)}
+.qbox{display:grid;grid-template-columns:1.05fr 1fr;background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.qbox .side{background:var(--graphite);color:#e7eaed;padding:44px 38px}
+.qbox .side h2{font-size:2.05rem;margin-bottom:14px;color:#fff}
+.qbox .side p{color:#bcc3ca;margin-bottom:20px}
+.qbox .side .ph{font-family:'Barlow Condensed';font-size:2rem;color:var(--hivis)}
+form{padding:40px 36px;display:grid;gap:14px}
+label{font-size:.8rem;font-family:'Barlow Condensed';text-transform:uppercase;letter-spacing:.06em;color:var(--steel);font-weight:600}
+input,select,textarea{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:4px;font-family:inherit;font-size:.98rem;margin-top:5px}
+textarea{min-height:88px;resize:vertical}
+@media(max-width:760px){.qbox{grid-template-columns:1fr}}
+footer{background:var(--graphite-d);color:#9aa2aa;padding:44px 0;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px}
+footer b{color:#fff;font-family:'Barlow Condensed';font-size:1.25rem}
+footer a{color:var(--hivis);text-decoration:none}
+.note{background:#fff4ec;border-top:1px solid var(--hivis);color:#8a4415;font-size:.8rem;text-align:center;padding:10px}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>Excavation &middot; Septic &middot; Aggregate delivery &mdash; Ancramdale, NY</span><span>Call the yard: (518) 329-1176</span></div></div>
+<nav><div class="wrap"><div class="brand">G &amp; S <span>EXCAVATING</span></div>
+<div class="navlinks"><a href="#services">Services</a><a href="#materials">Materials</a><a href="#why">Why G&amp;S</a><a href="#area">Service Area</a><a href="#quote">Get a Quote</a></div></div></nav>
+
+<header class="hero"><div class="wrap">
+<div class="kick">Ancramdale &middot; Wiltsie Bridge Road</div>
+<h1>We dig it, set the system, and truck in the stone.</h1>
+<p>One Ancramdale outfit for the whole job — site clearing, septic systems, foundations, and load after load of gravel, sand, and fill delivered where you need it.</p>
+<div class="cta-row"><a class="btn" href="#quote">Request a Quote</a><a class="btn btn-ghost" href="tel:+15183291176">Call (518) 329-1176</a></div>
+</div></header>
+
+<div class="bar"><div class="wrap">
+<div class="s"><b>Since '80s</b><span>Working Columbia Co.</span></div>
+<div class="s"><b>Dig + Haul</b><span>Excavation &amp; trucking</span></div>
+<div class="s"><b>Septic</b><span>Install &amp; repair</span></div>
+<div class="s"><b>By the load</b><span>Stone, sand, fill</span></div>
+</div></div>
+
+<section id="services"><div class="wrap">
+<div class="eyebrow">What we run</div>
+<h2 class="head">Site work from the first cut to the final load of stone.</h2>
+<p class="lead">Most jobs out here need someone who can both dig the hole and bring the material to fill it. G&amp;S owns the machines and the trucks, so it's one crew and one number for the whole thing.</p>
+<div class="svc-grid">
+<div class="svc"><h3>Septic Systems</h3><p>New septic installs, replacements, and repairs sized to your soil and county code — from the perc test to the final backfill and grade.</p></div>
+<div class="svc"><h3>Excavation &amp; Site Work</h3><p>Clearing, digging, and rough-to-finish grading for new homes, additions, barns, and pads across the Ancram–Copake hill country.</p></div>
+<div class="svc"><h3>Foundations &amp; Footings</h3><p>Dig-outs, backfill, and drainage for basements and slab foundations on ground that doesn't drain the same twice.</p></div>
+<div class="svc"><h3>Driveways &amp; Roads</h3><p>Stone driveways and private roads shaped, based, and crowned to hold up to Columbia County mud season and freeze-thaw.</p></div>
+<div class="svc"><h3>Ponds &amp; Drainage</h3><p>Farm ponds, culverts, ditching, and grading that moves water off your fields and away from the house.</p></div>
+<div class="svc"><h3>Trucking &amp; Delivery</h3><p>Hauling and delivery of gravel, sand, fill, and crushed concrete by the load — spread on site or dropped where you want it.</p></div>
+</div>
+</div></section>
+
+<section class="mat" id="materials"><div class="wrap">
+<div class="eyebrow">By the load, delivered or picked up</div>
+<h2 class="head">Material menu.</h2>
+<p class="lead">Contractors and homeowners call for the same handful of materials over and over. Here's what runs out of the yard — call for a delivered price to your address.</p>
+<div class="menu">
+<div class="row"><span class="m">Select Fill</span><span class="d">Clean structural fill</span></div>
+<div class="row"><span class="m">Run-of-Bank Gravel</span><span class="d">Driveways &amp; base</span></div>
+<div class="row"><span class="m">Crushed Stone</span><span class="d">Multiple sizes</span></div>
+<div class="row"><span class="m">Cushion / Masonry Sand</span><span class="d">Pipe bed &amp; block</span></div>
+<div class="row"><span class="m">Crushed Concrete</span><span class="d">Recycled base</span></div>
+<div class="row"><span class="m">Topsoil</span><span class="d">Screened, for finish grade</span></div>
+</div>
+<p style="margin-top:22px;color:var(--steel);font-size:.98rem">Need a material that's not listed? Call the yard &mdash; if it comes on a truck, we can usually get it.</p>
+</div></section>
+
+<section class="why" id="why"><div class="wrap">
+<div class="eyebrow" style="color:var(--hivis)">Why the calls keep coming</div>
+<h2 class="head">Own the iron, own the trucks, own the outcome.</h2>
+<p class="lead">Anybody with a rented machine can bid a dig. The jobs that go smooth are the ones where the same outfit clears it, digs it, and hauls in the stone — no waiting on three subcontractors and a rental yard.</p>
+<div class="why-grid">
+<div class="why-item"><div class="n">01</div><div><h3>Dig and haul, one crew</h3><p>Excavation and trucking under one roof means your material shows up when the hole's ready, not three days later.</p></div></div>
+<div class="why-item"><div class="n">02</div><div><h3>Local ground knowledge</h3><p>Decades reading Ancram and Copake soil, ledge, and hillside water. We know how this dirt behaves before the first cut.</p></div></div>
+<div class="why-item"><div class="n">03</div><div><h3>Septic done to code</h3><p>Systems designed and set to pass — the part of the job you don't want a learning curve on.</p></div></div>
+<div class="why-item"><div class="n">04</div><div><h3>One number, start to finish</h3><p>If something needs adjusting, you call the people who dug it. No finger-pointing between trades.</p></div></div>
+</div>
+</div></section>
+
+<section class="area" id="area"><div class="wrap">
+<div class="eyebrow">Where we work</div>
+<h2 class="head">The Ancram–Copake corner and out across the county.</h2>
+<p class="lead">Based on Wiltsie Bridge Road in Ancramdale, working the towns of the Roe Jan valley and the Columbia County line.</p>
+<div class="towns"><span>Ancramdale</span><span>Ancram</span><span>Copake</span><span>Copake Falls</span><span>Hillsdale</span><span>Craryville</span><span>Taghkanic</span><span>Gallatin</span><span>Pine Plains</span><span>Millerton</span></div>
+</div></section>
+
+<section class="quote" id="quote"><div class="wrap">
+<div class="qbox">
+<div class="side">
+<h2>Tell us what needs digging or hauling.</h2>
+<p>A new build, a failed septic, a driveway washing out, or just a few loads of gravel — send the details and the yard will get back to you with next steps and a time to look at it.</p>
+<div>Or just call the yard:</div>
+<div class="ph">(518) 329-1176</div>
+</div>
+<form onsubmit="event.preventDefault();this.reset();alert('Thanks — the yard will follow up. (Demo preview form.)');">
+<div><label>Name</label><input required></div>
+<div><label>Phone</label><input required type="tel"></div>
+<div><label>Property town</label><input placeholder="e.g. Ancram"></div>
+<div><label>What do you need?</label><select><option>Septic — new install</option><option>Septic — repair / replace</option><option>Excavation / site work</option><option>Foundation</option><option>Driveway / road</option><option>Pond / drainage</option><option>Material delivery (stone / gravel / fill)</option><option>Something else</option></select></div>
+<div><label>Details</label><textarea placeholder="Tell us about the site, timing, access, and how much material if you know."></textarea></div>
+<button class="btn" type="submit">Request a Quote</button>
+</form>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<div><b>G &amp; S EXCAVATING</b><br>Wiltsie Bridge Road, Ancramdale, NY 12503<br>PO Box 358, Copake, NY 12516</div>
+<div>Excavation &middot; Septic &middot; Site Work &middot; Material Delivery<br>Serving Columbia County<br><a href="tel:+15183291176">(518) 329-1176</a></div>
+</div></footer>
+<div class="note">Preview concept built by Onyx Rise Media for review. Company details from public listings; materials, years in business, and specifics to be confirmed with the owner.</div>
+</body>
+</html>
