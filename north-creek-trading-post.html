@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>North Creek Trading Post — Licenses, Bait, Tackle &amp; Hunting Gear | North Creek, NY</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#20301f;--pine2:#2c4229;--olive:#5a6b3a;--orange:#e8571f;--orange2:#f47438;--canvas:#f3eddf;--canvas2:#e9e0cc;--ink:#221f18;--muted:#5c574b;--line:#ddd4c0;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:#fff;line-height:1.6;}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px;}
+.top{background:var(--pine);color:#cdd6bf;font-size:.82rem;text-align:center;padding:8px 12px;letter-spacing:.01em;}
+.top b{color:var(--orange2);}
+header{background:var(--canvas);border-bottom:3px solid var(--pine);position:sticky;top:0;z-index:20;}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:13px 0;flex-wrap:wrap;gap:10px;}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--pine);line-height:.9;letter-spacing:.03em;}
+.logo span{color:var(--orange);}
+.logo small{display:block;font-family:'Inter';font-weight:600;font-size:.58rem;letter-spacing:.2em;color:var(--olive);text-transform:uppercase;margin-top:3px;}
+.navlinks{display:flex;gap:20px;align-items:center;flex-wrap:wrap;}
+.navlinks a{color:var(--pine);text-decoration:none;font-weight:600;font-size:.93rem;}
+a.call{background:var(--orange);color:#fff;font-weight:700;padding:10px 18px;border-radius:5px;text-decoration:none;font-family:'Roboto Slab';font-size:.95rem;}
+.hero{background:linear-gradient(rgba(24,34,22,.82),rgba(24,34,22,.9)),radial-gradient(circle at 82% 20%,#3c5232 0,transparent 46%),var(--pine);color:#fff;padding:76px 0 64px;}
+.tag{font-family:'Roboto Slab';color:var(--orange2);letter-spacing:.1em;text-transform:uppercase;font-weight:700;font-size:.92rem;}
+h1{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:clamp(2.7rem,6.2vw,4.4rem);line-height:.98;margin:12px 0 14px;letter-spacing:.02em;}
+.hero p{color:#dce3d2;font-size:1.17rem;max-width:620px;}
+.btns{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+.btn{font-weight:700;font-size:1rem;text-decoration:none;padding:14px 26px;border-radius:5px;display:inline-block;font-family:'Roboto Slab';}
+.btn.p{background:var(--orange);color:#fff;}
+.btn.s{border:2px solid #8a9a68;color:#fff;}
+.hnote{margin-top:16px;color:#b3c0a2;font-size:.94rem;}
+.strip{background:var(--orange);color:#fff;text-align:center;padding:16px 22px;font-family:'Roboto Slab';font-weight:700;font-size:1.05rem;letter-spacing:.02em;}
+.section{padding:62px 0;}
+.ey{font-family:'Roboto Slab';color:var(--olive);letter-spacing:.08em;text-transform:uppercase;font-weight:700;font-size:.88rem;}
+h2{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:clamp(2rem,4.4vw,3rem);line-height:1;margin:6px 0 14px;letter-spacing:.02em;color:var(--pine);}
+.lead{color:var(--muted);font-size:1.08rem;max-width:700px;}
+.svcs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px;}
+.card{background:var(--canvas);border:1px solid var(--line);border-bottom:4px solid var(--orange);border-radius:8px;padding:22px 18px;}
+.card h3{font-family:'Roboto Slab';font-size:1.08rem;color:var(--pine);margin-bottom:7px;}
+.card p{color:var(--muted);font-size:.92rem;}
+.ico{font-size:1.7rem;margin-bottom:10px;}
+.lic{background:var(--pine);color:#dce3d2;}
+.lic h2{color:#fff;}
+.licgrid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;margin-top:22px;}
+.licgrid ul{list-style:none;margin-top:14px;}
+.licgrid li{padding:10px 0 10px 28px;position:relative;border-bottom:1px solid #3a4a30;color:#d3ddc6;}
+.licgrid li:before{content:"✦";color:var(--orange2);position:absolute;left:0;top:10px;font-size:.8rem;}
+.panel{background:#18241660;border:2px solid var(--orange);border-radius:11px;padding:26px;background:#172315;}
+.panel .big{font-family:'Bebas Neue';font-size:2.4rem;color:var(--orange2);line-height:1;letter-spacing:.02em;}
+.panel p{color:#c8d3ba;margin-top:6px;}
+.find{background:var(--canvas2);}
+.findbox{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:8px;}
+.findbox .card{background:#fff;border-bottom-color:var(--olive);}
+.season{background:var(--olive);color:#fff;text-align:center;padding:26px 22px;font-weight:600;font-size:1.05rem;}
+.season b{font-family:'Bebas Neue';font-size:1.5rem;letter-spacing:.02em;}
+.cta{background:var(--pine2);color:#fff;text-align:center;padding:60px 22px;}
+.cta h2{color:#fff;}
+.cta p{color:#d6dfc9;max-width:560px;margin:0 auto 22px;font-size:1.08rem;}
+.phone{font-family:'Bebas Neue';font-size:2.6rem;color:var(--orange2);text-decoration:none;display:inline-block;margin:4px 0;letter-spacing:.03em;}
+footer{background:#16210f;color:#93a081;padding:32px 0;font-size:.9rem;}
+footer b{color:#cdd8bb;}
+@media(max-width:860px){.svcs{grid-template-columns:1fr 1fr;}.licgrid,.findbox{grid-template-columns:1fr;}.navlinks{display:none;}}
+@media(max-width:480px){.svcs{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+<div class="top">Main Street, North Creek — behind Braley &amp; Noxon · <b>NYS sporting licenses sold here</b></div>
+<header>
+<div class="wrap nav">
+<div class="logo">NORTH CREEK <span>TRADING POST</span><small>North Creek, New York</small></div>
+<div class="navlinks">
+<a href="#carry">What We Carry</a>
+<a href="#license">Licenses</a>
+<a href="#find">Find Us</a>
+<a class="call" href="tel:+15182514867">(518) 251-4867</a>
+</div>
+</div>
+</header>
+
+<section class="hero">
+<div class="wrap">
+<div class="tag">Licenses · Bait · Tackle · Hunting Gear</div>
+<h1>The last stop before<br>the woods and the water</h1>
+<p>Grab your New York sporting license, a box of worms, the tackle that's actually biting, and the gear you forgot — right on Main Street in North Creek before you head up to Gore, the Hudson, or the Siamese Ponds.</p>
+<div class="btns">
+<a class="btn p" href="#license">Get your license here</a>
+<a class="btn s" href="#carry">See what we carry</a>
+</div>
+<div class="hnote">Locally run · live bait · New York State license agent</div>
+</div>
+</section>
+
+<div class="strip">Open for the season — call ahead for today's hours: (518) 251-4867</div>
+
+<section class="section" id="carry">
+<div class="wrap">
+<div class="ey">Under one roof</div>
+<h2>Everything for the trip out</h2>
+<p class="lead">The stuff you need before a morning on the water or a day in the woods — without a drive to Queensbury.</p>
+<div class="svcs">
+<div class="card"><div class="ico">🪱</div><h3>Live Bait &amp; Worms</h3><p>Nightcrawlers and bait ready to go for the ponds, the Hudson and the local lakes.</p></div>
+<div class="card"><div class="ico">🎣</div><h3>Fishing Tackle</h3><p>Rods, line, lures, hooks and terminal tackle — restocked for what's actually running this season.</p></div>
+<div class="card"><div class="ico">🦌</div><h3>Hunting Gear</h3><p>Accessories and supplies for deer and small-game season — the odds and ends you always need one more of.</p></div>
+<div class="card"><div class="ico">🔫</div><h3>Firearms, Ammo &amp; Reloading</h3><p>Firearms, ammunition and reloading supplies for the hunters and shooters in the area.</p></div>
+</div>
+</div>
+</section>
+
+<section class="section lic" id="license">
+<div class="wrap">
+<div class="ey" style="color:var(--orange2)">Skip the online hassle</div>
+<h2>Buy your NYS sporting license here</h2>
+<div class="licgrid">
+<div>
+<p>You don't have to fumble with the state website in a spot with no signal. We're a New York State sporting-license agent — walk in, get your fishing or hunting license over the counter, grab your bait and tackle in the same stop, and be on the water before the sun's fully up.</p>
+<ul>
+<li>Fishing &amp; hunting licenses sold over the counter</li>
+<li>Bait, tackle and gear in the same trip</li>
+<li>Local folks who know where they're biting and what's open</li>
+<li>Right on Main Street — no drive down the Northway</li>
+</ul>
+</div>
+<div class="panel">
+<div class="big">License + bait +<br>tackle, one stop</div>
+<p>The whole point of a trading post — everything you need to legally and actually catch something, handed to you across one counter in North Creek.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="season">
+<b>Open water or hunting season</b> — swing in for licenses, bait and the gear you forgot. Call for today's hours: (518) 251-4867
+</section>
+
+<section class="section find" id="find">
+<div class="wrap">
+<div class="ey">Don't drive past us</div>
+<h2>How to find the door</h2>
+<p class="lead">We're tucked behind another Main Street shop — easy to miss if you don't know to look.</p>
+<div class="findbox">
+<div class="card"><h3>Where we are</h3><p>256 Main Street, North Creek — <b>behind Braley &amp; Noxon Hardware.</b> Look for us just off Main; if you hit the hardware store, you're in the right spot — come around back.</p></div>
+<div class="card"><h3>Before you drive over</h3><p>Give a quick call at <b>(518) 251-4867</b> to check hours or ask if we've got the bait or tackle you're after. Open 8AM–8PM in season.</p></div>
+</div>
+</div>
+</section>
+
+<section class="cta" id="contact">
+<div class="wrap">
+<h2>Gear up before you head out</h2>
+<p>Licenses, live bait, tackle and hunting gear — the local outfitter stop in North Creek. Call ahead or stop in.</p>
+<a class="phone" href="tel:+15182514867">(518) 251-4867</a><br>
+<span style="color:#aeba9c;font-size:.95rem;">256 Main Street (behind Braley &amp; Noxon), North Creek, NY 12853 · Open 8AM–8PM in season</span><br><br>
+<a class="btn p" href="tel:+15182514867">Call the trading post</a>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<b>North Creek Trading Post</b> — Sporting licenses, live bait, fishing tackle &amp; hunting gear · 256 Main Street (behind Braley &amp; Noxon), North Creek, NY 12853 · (518) 251-4867<br>
+Your local hunting &amp; fishing outfitter — the last stop before Gore Mountain, the Hudson and the Siamese Ponds Wilderness.
+</div>
+</footer>
+</body>
+</html>
