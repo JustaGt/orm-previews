@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ruelas Saddle Shop — Custom Handmade Saddles | Greenville, TX</title>
+<meta name="description" content="Family-owned custom saddle maker in Greenville, TX for 40 years — cutting, reining, barrel racing, roping, range and trophy saddles in Hermann Oak leather, lifetime tree warranty. Start your order: (903) 455-9420.">
+<style>
+  :root{
+    --tan:#b07a3f; --tan2:#8f5f2c; --russet:#7a2f1c; --russet2:#963c25; --turq:#2f8f93;
+    --cream:#f6efe1; --paper:#fbf6ea; --ink:#2a2015; --mut:#6a5c48; --line:#e2d6bf; --card:#ffffff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1050px;margin:0 auto;padding:0 20px}
+  .top{background:var(--russet);color:#f0d9cf;font-size:.85rem;border-bottom:3px solid var(--tan)}
+  .top .wrap{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 20px;flex-wrap:wrap}
+  .top b{color:#fff}
+  .top a.call{background:var(--tan);color:#241605;font-weight:800;padding:7px 14px;border-radius:4px}
+  header.hero{background:linear-gradient(155deg,rgba(122,47,28,.92),rgba(150,60,37,.80)),repeating-linear-gradient(135deg,#7f3520 0 22px,#7a2f1c 22px 44px);color:#fff;padding:80px 0 66px;border-bottom:5px solid var(--turq)}
+  .tag{display:inline-block;background:rgba(47,143,147,.18);border:1px solid var(--turq);color:#a7e0e2;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;padding:6px 13px;border-radius:4px;margin-bottom:20px}
+  .hero h1{font-size:2.6rem;line-height:1.12;font-weight:800;max-width:19ch;letter-spacing:-.01em}
+  .hero h1 span{color:var(--tan)}
+  .hero p.lead{font-size:1.15rem;color:#f0ddd3;margin-top:18px;max-width:52ch}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+  .btn{display:inline-block;font-weight:800;padding:15px 26px;border-radius:5px;font-size:1rem;text-align:center}
+  .btn-a{background:var(--tan);color:#241605}
+  .btn-b{background:var(--turq);color:#fff}
+  .btn-c{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}
+  .hero small{display:block;color:#e0b9ab;margin-top:18px;font-size:.9rem}
+  .marq{background:var(--turq);color:#08302f;font-weight:800;text-align:center;padding:12px 20px;font-size:1rem}
+  section{padding:60px 0}
+  .kick{color:var(--russet2);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.74rem;margin-bottom:10px}
+  h2{font-size:1.98rem;line-height:1.14;font-weight:800;max-width:24ch;letter-spacing:-.01em;color:var(--russet)}
+  .sub{color:var(--mut);margin-top:12px;max-width:60ch}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:34px}
+  .svc{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px 20px;border-top:3px solid var(--tan)}
+  .svc h3{font-size:1.1rem;margin-bottom:7px;color:var(--russet)}
+  .svc p{color:var(--mut);font-size:.94rem}
+  .leather{background:var(--russet);color:#f0ddd3}
+  .leather h2{color:#fff}.leather .sub{color:#e0b9ab}
+  .lgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+  .lgrid .b{background:#7f3520;border:1px solid #9a4a30;border-radius:10px;padding:22px}
+  .lgrid .b h3{color:var(--tan);font-size:1.05rem;margin-bottom:5px}
+  .lgrid .b p{color:#e6c8bc;font-size:.92rem}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px;border-left:4px solid var(--turq)}
+  .step b{color:var(--russet2);font-weight:800;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
+  .step h3{color:var(--russet);font-size:1.05rem;margin:6px 0}
+  .step p{color:var(--mut);font-size:.93rem}
+  .why{display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center}
+  .quote{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px;border-left:5px solid var(--tan)}
+  .quote p{font-size:1.16rem;font-style:italic;color:#33271a;line-height:1.5}
+  .quote small{display:block;margin-top:12px;color:var(--russet2);font-weight:700;font-style:normal}
+  .final{background:linear-gradient(120deg,#7a2f1c,#2f8f93);color:#fff;text-align:center;border-radius:16px;padding:52px 24px;border-top:4px solid var(--tan)}
+  .final h2{margin:0 auto;color:#fff}
+  .final p{color:#f0ddd3;margin:14px auto 22px;max-width:50ch}
+  footer{background:var(--russet);color:#e0b9ab;padding:28px 0;font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--tan);font-weight:700}
+  .note{background:#7f3520;color:#d9ac9d;font-size:.8rem;text-align:center;padding:10px 20px}
+  @media(max-width:820px){.grid,.lgrid,.steps,.why{grid-template-columns:1fr}.hero h1{font-size:2.1rem}}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap"><span><b>Ruelas Saddle Shop</b> · 921 Commerce Dr, Greenville, TX · Family-owned 40 years</span><a class="call" href="tel:+19034559420">Call (903) 455-9420</a></div></div>
+
+<header class="hero"><div class="wrap">
+  <span class="tag">★ Greenville, TX · Custom handmade saddles</span>
+  <h1>A saddle built to fit <span>your horse and your event.</span></h1>
+  <p class="lead">Forty years of handmade saddles out of Greenville — cutting, reining, barrel racing, roping and ranch work, cut and tooled in Hermann Oak leather with a lifetime warranty on the tree.</p>
+  <div class="cta-row">
+    <a class="btn btn-a" href="#order">Start a Custom Order</a>
+    <a class="btn btn-b" href="#saddles">See Saddle Types</a>
+    <a class="btn btn-c" href="tel:+19034559420">Call the Shop</a>
+  </div>
+  <small>Cutting · Reining · Barrel racing · Roping · Range · Trophy · Consultations during the week</small>
+</div></header>
+
+<div class="marq">Every saddle is made to order and cut to fit — start with a call or a note and we'll talk through your build.</div>
+
+<section id="saddles"><div class="wrap">
+  <div class="kick">What we build</div>
+  <h2>Six kinds of saddle, each made to the rider</h2>
+  <p class="sub">All custom, all handmade. Tell us the discipline and the horse, and we build the tree and the fit around it.</p>
+  <div class="grid">
+    <div class="svc"><h3>Cutting Saddles</h3><p>Close contact and a secure seat for reading a cow — built for the cutting pen.</p></div>
+    <div class="svc"><h3>Reining Saddles</h3><p>Free-swinging fenders and balance for spins and sliding stops.</p></div>
+    <div class="svc"><h3>Barrel Racing</h3><p>Light, secure and quick — a barrel saddle fit to horse and rider for the cloverleaf.</p></div>
+    <div class="svc"><h3>Roping Saddles</h3><p>Strong tree, strong rig — built to take a dally and hold up to ranch and arena roping.</p></div>
+    <div class="svc"><h3>Range Saddles</h3><p>All-day comfort for real ranch work, made to hold up season after season.</p></div>
+    <div class="svc"><h3>Trophy Saddles</h3><p>Association and rodeo trophy saddles, tooled and finished to be won and shown off.</p></div>
+  </div>
+</div></section>
+
+<section class="leather"><div class="wrap">
+  <div class="kick" style="color:var(--tan)">Leather &amp; warranty</div>
+  <h2>Hermann Oak leather, and a tree that's guaranteed for life</h2>
+  <div class="lgrid">
+    <div class="b"><h3>Hermann Oak Leather</h3><p>We build on top-quality American Hermann Oak leather — the standard for saddles made to last.</p></div>
+    <div class="b"><h3>Lifetime Tree Warranty</h3><p>A lifetime warranty on the saddle tree — the foundation your saddle is built around.</p></div>
+    <div class="b"><h3>Custom &amp; Bulk Orders</h3><p>One saddle or a string of them for an association or ranch — we take custom and bulk orders.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="kick">How a custom order works</div>
+  <h2>From a conversation to a saddle that fits</h2>
+  <div class="steps">
+    <div class="step"><b>Step 1</b><h3>Talk it through</h3><p>Call or send a note with your discipline, your horse, and what you ride now. Consultations run during the week.</p></div>
+    <div class="step"><b>Step 2</b><h3>We build to fit</h3><p>Tree, seat, rigging, tooling — chosen for the horse first, then the rider, then the look.</p></div>
+    <div class="step"><b>Step 3</b><h3>Ride it for life</h3><p>You get a handmade saddle on a lifetime-warranted tree, made to hold up for decades.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="why">
+    <div>
+      <div class="kick">Why Ruelas</div>
+      <h2>Forty years, one family, saddles built one at a time</h2>
+      <p class="sub">Ruelas Saddle Shop is family-owned with 40 years of experience creating custom, hand-designed saddles. Every saddle is handmade with quality leather and built to fit the horse and the rider — not pulled off a rack. When you order from Ruelas, you're working straight with the people who'll cut, tool and stitch it.</p>
+    </div>
+    <div class="quote">
+      <p>"Family-owned, 40 years, and every saddle handmade to fit — the horse first, then the rider."</p>
+      <small>— the Ruelas standard</small>
+    </div>
+  </div>
+</div></section>
+
+<section id="order"><div class="wrap">
+  <div class="kick">Start your saddle</div>
+  <h2>Tell us about your horse and your riding</h2>
+  <p class="sub">Send your discipline, your horse, and what you're after — cutting, reining, barrel, roping, range or a trophy saddle — and we'll start the conversation.</p>
+  <div class="cta-row" style="margin-top:22px">
+    <a class="btn btn-a" href="mailto:ramiro.ruelas@yahoo.com?subject=Custom%20saddle%20order%20-%20Ruelas%20Saddle%20Shop&amp;body=Discipline%20(cutting%2Freining%2Fbarrel%2Froping%2Frange%2Ftrophy)%3A%0AHorse%3A%0AWhat%20I%20ride%20now%3A%0AName%20%26%20phone%3A">Email a Custom Order</a>
+    <a class="btn btn-b" href="tel:+19034559420">Call (903) 455-9420</a>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="final">
+    <h2>Order a saddle built to fit — and to last</h2>
+    <p>Call the shop or send your details and we'll talk through the build that fits your horse and your event.</p>
+    <div class="cta-row" style="justify-content:center">
+      <a class="btn btn-a" href="tel:+19034559420">Call (903) 455-9420</a>
+      <a class="btn btn-c" href="mailto:ramiro.ruelas@yahoo.com?subject=Ruelas%20Saddle%20Shop%20-%20custom%20order" style="border-color:rgba(255,255,255,.6)">Email ramiro.ruelas@yahoo.com</a>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>Ruelas Saddle Shop · 921 Commerce Dr, Greenville, TX 75401 · Custom handmade saddles · Family-owned 40 years</span>
+  <span><a href="tel:+19034559420">(903) 455-9420</a> · <a href="mailto:ramiro.ruelas@yahoo.com">ramiro.ruelas@yahoo.com</a></span>
+</div></footer>
+<div class="note">Preview concept prepared by Onyx Rise Media for Ruelas Saddle Shop. Finished replacement for the current template site (whose homepage slides still show "Slide Title / Write your caption here"). Real saddle photos would replace placeholders before publishing.</div>
+
+</body>
+</html>
