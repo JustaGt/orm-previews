@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taylor Upholstering — Home, Antique, Auto &amp; Marine Reupholstery | Savannah, GA</title>
+<meta name="description" content="Custom upholstery in Savannah, GA since 1999 — home furniture, antique restoration, commercial, auto and marine. If it's Taylor Made, it's Custom Made. Request a quote: (912) 961-9104.">
+<style>
+  :root{
+    --teal:#12474a; --teal2:#1c6367; --aqua:#3f9aa0; --brass:#c39a3f; --brass2:#a67f2c;
+    --cream:#f5f0e6; --paper:#fbf8f1; --ink:#20272a; --mut:#5d6a6c; --line:#ddd7c8; --card:#ffffff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1050px;margin:0 auto;padding:0 20px}
+  .top{background:var(--teal);color:#cfe2e3;font-size:.85rem;border-bottom:3px solid var(--brass)}
+  .top .wrap{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 20px;flex-wrap:wrap}
+  .top b{color:#fff}
+  .top a.call{background:var(--brass);color:#241c04;font-weight:800;padding:7px 14px;border-radius:4px}
+  header.hero{background:linear-gradient(155deg,rgba(18,71,74,.93),rgba(28,99,103,.78));color:#fff;padding:78px 0 64px;border-bottom:5px solid var(--brass)}
+  .swatches{display:flex;gap:8px;margin-bottom:22px}
+  .swatches i{width:34px;height:22px;border-radius:3px;display:inline-block;border:1px solid rgba(255,255,255,.35)}
+  .hero h1{font-size:2.6rem;line-height:1.12;font-weight:800;max-width:19ch;letter-spacing:-.01em}
+  .hero h1 span{color:var(--brass)}
+  .hero p.lead{font-size:1.15rem;color:#cfe2e3;margin-top:18px;max-width:52ch}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+  .btn{display:inline-block;font-weight:800;padding:15px 26px;border-radius:5px;font-size:1rem;text-align:center}
+  .btn-a{background:var(--brass);color:#241c04}
+  .btn-b{background:#fff;color:var(--teal)}
+  .btn-c{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}
+  .hero small{display:block;color:#9fc0c2;margin-top:18px;font-size:.9rem}
+  .tagline{background:var(--brass);color:#241c04;font-weight:800;text-align:center;padding:12px 20px;font-size:1.05rem;letter-spacing:.02em}
+  section{padding:60px 0}
+  .kick{color:var(--teal2);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.74rem;margin-bottom:10px}
+  h2{font-size:1.98rem;line-height:1.14;font-weight:800;max-width:24ch;letter-spacing:-.01em;color:var(--teal)}
+  .sub{color:var(--mut);margin-top:12px;max-width:60ch}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:34px}
+  .svc{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px 20px;border-top:3px solid var(--aqua)}
+  .svc h3{font-size:1.1rem;margin-bottom:7px;color:var(--teal)}
+  .svc p{color:var(--mut);font-size:.94rem}
+  .port{background:var(--teal);color:#dcebec}
+  .port h2{color:#fff}.port .sub{color:#9fc0c2}
+  .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:26px}
+  .tile{background:#16585c;border:1px solid #2a7276;border-radius:10px;padding:22px 16px;text-align:center}
+  .tile b{display:block;color:var(--brass);font-size:1.5rem}
+  .tile span{color:#bcd8da;font-size:.86rem}
+  .why{display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center}
+  .quote{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px;border-left:5px solid var(--brass)}
+  .quote p{font-size:1.16rem;font-style:italic;color:#233} .quote p{line-height:1.5}
+  .quote small{display:block;margin-top:12px;color:var(--teal2);font-weight:700;font-style:normal}
+  .quotebox{background:var(--paper)}
+  .qcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:32px;margin-top:24px;border-left:5px solid var(--brass);display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+  .qcard h3{color:var(--teal);font-size:1.24rem;margin-bottom:8px}
+  .qcard p{color:var(--mut);font-size:.97rem;margin-bottom:8px}
+  .qcard .btn{width:100%;margin-top:6px}
+  .final{background:linear-gradient(120deg,#12474a,#c39a3f);color:#fff;text-align:center;border-radius:16px;padding:52px 24px;border-top:4px solid #fff}
+  .final h2{margin:0 auto;color:#fff}
+  .final p{color:#eee6d2;margin:14px auto 22px;max-width:50ch}
+  footer{background:var(--teal);color:#9fc0c2;padding:28px 0;font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  footer a{color:var(--brass);font-weight:700}
+  .note{background:#16585c;color:#8fb2b4;font-size:.8rem;text-align:center;padding:10px 20px}
+  @media(max-width:820px){.grid{grid-template-columns:1fr}.tiles{grid-template-columns:1fr 1fr}.why,.qcard{grid-template-columns:1fr}.hero h1{font-size:2.1rem}}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap"><span><b>Taylor Upholstering Company</b> · 12 Television Cir, Savannah, GA · Since 1999</span><a class="call" href="tel:+19129619104">Call (912) 961-9104</a></div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="swatches"><i style="background:#7d2a24"></i><i style="background:#c39a3f"></i><i style="background:#1c6367"></i><i style="background:#2f4858"></i></div>
+  <h1>If it's Taylor Made, <span>it's custom made.</span></h1>
+  <p class="lead">Full-service upholstery in Savannah since 1999 — home furniture and antiques, commercial seating, auto interiors and marine. One shop, five specialties, real hands doing the work.</p>
+  <div class="cta-row">
+    <a class="btn btn-a" href="#quote">Request a Quote</a>
+    <a class="btn btn-b" href="#services">What We Reupholster</a>
+    <a class="btn btn-c" href="tel:+19129619104">Call the Shop</a>
+  </div>
+  <small>Home · Antique restoration · Commercial · Auto · Marine · Serving the Savannah area for 25+ years</small>
+</div></header>
+
+<div class="tagline">Send a photo of the piece and we'll tell you what it takes to make it new again.</div>
+
+<section id="services"><div class="wrap">
+  <div class="kick">What we reupholster</div>
+  <h2>Five kinds of upholstery work, under one roof</h2>
+  <p class="sub">Most shops do sofas. We also handle the antiques, the restaurant booths, the car seats and the boat cushions — the jobs other shops turn away.</p>
+  <div class="grid">
+    <div class="svc"><h3>Home Furniture</h3><p>Sofas, chairs, sectionals, headboards and cushions — reupholstered in the fabric you choose, built to last.</p></div>
+    <div class="svc"><h3>Antique Restoration</h3><p>Careful restoration of antique and heirloom pieces — frame, springs, padding and fabric done the right way.</p></div>
+    <div class="svc"><h3>Commercial</h3><p>Restaurant booths, office chairs and waiting-room seating redone durably, on a schedule that fits your business.</p></div>
+    <div class="svc"><h3>Auto Interiors</h3><p>Seats, door panels and interior trim for classics and daily drivers — a specialty many upholstery shops skip.</p></div>
+    <div class="svc"><h3>Marine</h3><p>Boat cushions, helm seats and covers built to take Georgia sun, salt and spray on the coast.</p></div>
+    <div class="svc"><h3>Fabric &amp; Materials</h3><p>Help choosing a fabric that fits how the piece is actually used — durability first, then the look you want.</p></div>
+  </div>
+</div></section>
+
+<section class="port"><div class="wrap">
+  <div class="kick" style="color:var(--brass)">A quarter century of work</div>
+  <h2>Savannah's furniture, redone right since 1999</h2>
+  <div class="tiles">
+    <div class="tile"><b>1999</b><span>Serving Savannah since</span></div>
+    <div class="tile"><b>5</b><span>Specialties in one shop</span></div>
+    <div class="tile"><b>Home + Marine</b><span>Residential to boats</span></div>
+    <div class="tile"><b>Custom</b><span>Every job, fabric of your choice</span></div>
+  </div>
+  <p class="sub" style="margin-top:22px">The portfolio speaks for the shop — before-and-after work across furniture, antiques, commercial seating and marine. (A gallery of real project photos would live here, replacing the placeholder images currently on the site.)</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="why">
+    <div>
+      <div class="kick">Why Taylor Upholstering</div>
+      <h2>25 years of doing it the way that lasts</h2>
+      <p class="sub">Taylor Upholstering has served the Savannah area since 1999, and the range is the difference — home furniture, antique restoration, commercial seating, auto and marine, all handled in one shop. When you bring in a piece, you're dealing with people who've reupholstered thousands of them and will tell you honestly what a job needs before you commit.</p>
+    </div>
+    <div class="quote">
+      <p>"If it's Taylor Made, it's Custom Made — superior quality upholstery, done in Savannah since 1999."</p>
+      <small>— the shop's standard, in its own words</small>
+    </div>
+  </div>
+</div></section>
+
+<section class="quotebox" id="quote"><div class="wrap">
+  <div class="kick">Get a quote</div>
+  <h2>Tell us about the piece — get a real number back</h2>
+  <div class="qcard">
+    <div>
+      <h3>Send a photo and the details</h3>
+      <p>Snap a picture of the furniture, antique, car seat or boat cushion, tell us the fabric you have in mind, and we'll come back with what the job takes. No showroom trip required to get started.</p>
+      <p style="color:var(--teal);font-weight:700">Home · antique · commercial · auto · marine — all welcome.</p>
+    </div>
+    <div>
+      <a class="btn btn-a" href="mailto:tayloruph@yahoo.com?subject=Reupholstery%20quote%20request%20-%20Taylor%20Upholstering&amp;body=What%20it%20is%20(sofa%2Fchair%2Fantique%2Fauto%2Fmarine)%3A%0AFabric%20in%20mind%3A%0A(Attach%20a%20photo)%0AName%20%26%20phone%3A">Email a Quote Request</a>
+      <a class="btn btn-b" href="tel:+19129619104" style="margin-top:10px">Call (912) 961-9104</a>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="final">
+    <h2>Bring in the piece other shops won't touch</h2>
+    <p>Home, antique, commercial, auto or marine — send a photo and we'll tell you what it takes to make it custom-made again.</p>
+    <div class="cta-row" style="justify-content:center">
+      <a class="btn btn-a" href="tel:+19129619104">Call (912) 961-9104</a>
+      <a class="btn btn-b" href="mailto:tayloruph@yahoo.com?subject=Reupholstery%20quote%20request">Email tayloruph@yahoo.com</a>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>Taylor Upholstering Company, Inc. · 12 Television Circle, Savannah, GA 31406 · Home · Antique · Commercial · Auto · Marine · Since 1999</span>
+  <span><a href="tel:+19129619104">(912) 961-9104</a> · <a href="mailto:tayloruph@yahoo.com">tayloruph@yahoo.com</a></span>
+</div></footer>
+<div class="note">Preview concept prepared by Onyx Rise Media for Taylor Upholstering. Proposed replacement addressing the broken hero-slider placeholder images and stale content on the current site, with a photo-based online quote request. Portfolio gallery would use the shop's real project photos before publishing.</div>
+
+</body>
+</html>
