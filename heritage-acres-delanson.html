@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heritage Acres — Pasture-Raised Beef, Pork &amp; Eggs · Delanson, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --barn:#7d2b24; --barn-dk:#5f1f1a; --pasture:#5b7a3a; --pasture-dk:#456028;
+    --wheat:#e7b24a; --cream:#f7f2e7; --oat:#efe7d4; --ink:#33291f; --line:#e0d6c0; --white:#fff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Nunito Sans',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+  h1,h2,h3,.disp{font-family:'Fraunces',Georgia,serif;line-height:1.1;letter-spacing:-.01em}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  a{color:inherit}
+  .btn{display:inline-block;background:var(--barn);color:#fff;font-family:'Nunito Sans',sans-serif;font-weight:700;
+    text-decoration:none;padding:14px 30px;border-radius:30px;font-size:1.02rem;letter-spacing:.01em}
+  .btn:hover{background:var(--barn-dk)}
+  .btn.leaf{background:var(--pasture)}
+  .btn.leaf:hover{background:var(--pasture-dk)}
+  .btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6)}
+
+  .topbar{background:var(--barn-dk);color:#f0dcc8;font-size:.92rem}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 20px;flex-wrap:wrap}
+  .topbar b{color:#fff}
+  .topbar .tag{background:var(--wheat);color:#3a2a12;font-weight:700;padding:2px 11px;border-radius:20px;font-size:.82rem}
+
+  .hero{position:relative;color:#fff;padding:74px 0 64px;background:
+    linear-gradient(180deg,rgba(52,35,22,.66),rgba(52,35,22,.6)),
+    linear-gradient(135deg,#6f9247 0 40%,#4d6a2d 100%);}
+  .hero .kick{font-weight:700;color:var(--wheat);letter-spacing:.14em;font-size:.92rem;text-transform:uppercase}
+  .hero h1{font-size:clamp(2.3rem,6vw,4.1rem);font-weight:600;margin:.28em 0 .3em;max-width:19ch}
+  .hero h1 em{font-style:italic;color:var(--wheat)}
+  .hero p.sub{font-size:1.22rem;max-width:47ch;color:#f4efe4}
+  .hero .cta{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero .note{margin-top:16px;font-size:.95rem;color:#e7dcc9}
+
+  .strip{background:var(--oat)}
+  .strip .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .st{padding:22px 18px;text-align:center;border-right:1px solid #dccdae}
+  .st:last-child{border-right:none}
+  .st .b{font-family:'Fraunces';font-weight:700;font-size:1.25rem;color:var(--barn)}
+  .st .s{font-size:.92rem;color:#6a5b46;margin-top:2px}
+
+  section{padding:60px 0}
+  .lead{font-size:.95rem;letter-spacing:.14em;color:var(--pasture-dk);font-weight:700;text-transform:uppercase}
+  h2.h{font-size:clamp(1.8rem,4.4vw,2.7rem);color:var(--barn);margin:.18em 0 .5em;font-weight:600}
+  .intro p{max-width:64ch;font-size:1.1rem;color:#4c3f2f}
+
+  .prod{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:10px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px;box-shadow:0 6px 18px rgba(80,55,25,.05)}
+  .card .ic{font-size:1.7rem}
+  .card h3{font-size:1.5rem;color:var(--barn);margin:.15em 0 .25em;font-weight:600}
+  .card p{font-size:1rem;color:#5b4d3b}
+  .card .p{margin-top:.5em;font-weight:700;color:var(--pasture-dk);font-size:.95rem}
+
+  .how{background:var(--pasture-dk);color:#f2f0e6}
+  .how h2{color:#fff}
+  .how .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;margin-top:12px}
+  .how .step{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:22px}
+  .how .step .n{font-family:'Fraunces';font-weight:700;font-size:2.2rem;color:var(--wheat);line-height:.9}
+  .how .step h3{font-size:1.25rem;color:#fff;margin:.25em 0 .2em;font-weight:600}
+  .how .step p{font-size:.97rem;color:#e5e7d8}
+
+  .about{background:var(--oat)}
+  .about .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:38px;align-items:center}
+  .about p{max-width:54ch;font-size:1.08rem;color:#4c3f2f;margin-bottom:.8em}
+  .about .side{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px;border-top:5px solid var(--barn)}
+  .about .side h3{color:var(--barn);font-size:1.4rem;margin-bottom:.4em;font-weight:600}
+  .about .side ul{list-style:none}
+  .about .side li{padding:8px 0;border-bottom:1px dashed var(--line);font-size:1rem;color:#5b4d3b;display:flex;gap:9px}
+  .about .side li:last-child{border-bottom:none}
+  .about .side li::before{content:"\1F33F"}
+
+  .contact{background:var(--barn);color:#fff;text-align:center}
+  .contact h2{color:#fff;font-size:clamp(1.9rem,4.6vw,2.8rem);font-weight:600}
+  .contact p{color:#f0dcc8;max-width:50ch;margin:.6em auto 0}
+  .contact .big{font-family:'Fraunces';font-weight:700;font-size:clamp(1.9rem,6vw,2.9rem);color:var(--wheat);margin:.35em 0}
+  .contact .cta{margin-top:14px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  footer{background:var(--barn-dk);color:#e2c9b4;font-size:.86rem;text-align:center;padding:22px 0}
+  footer a{color:#f4dcc8}
+  @media(max-width:760px){.about .wrap{grid-template-columns:1fr}.strip .wrap{grid-template-columns:1fr}.st{border-right:none;border-bottom:1px solid #dccdae}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <div><b>Heritage Acres</b> · 602 Miller's Corners Rd, Delanson NY</div>
+  <div><span class="tag">Pasture-raised · by appointment</span> &nbsp; <b>518-875-6026</b></div>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="kick">A SMALL FAMILY FARM · DELANSON, SCHENECTADY COUNTY</div>
+  <h1>Beef and pork raised on <em>grass</em> — a few miles from your kitchen.</h1>
+  <p class="sub">No hormones, no antibiotics, no feedlot. Pastured beef, pork, chicken and brown eggs from one small Delanson farm — reserved by the cut, the quarter, or the half.</p>
+  <div class="cta">
+    <a class="btn" href="tel:5188756026">Call to reserve — 518-875-6026</a>
+    <a class="btn leaf" href="#available">See what's available</a>
+  </div>
+  <p class="note">Farm pickup on Miller's Corners Road · order ahead by phone or email · know exactly where your meat came from.</p>
+</div></header>
+
+<div class="strip"><div class="wrap">
+  <div class="st"><div class="b">Raised on pasture</div><div class="s">Out on grass, the way it should be</div></div>
+  <div class="st"><div class="b">No hormones or antibiotics</div><div class="s">Just the animal, the field, and time</div></div>
+  <div class="st"><div class="b">One family, one farm</div><div class="s">You meet the people who raised it</div></div>
+</div></div>
+
+<section class="intro" id="available"><div class="wrap">
+  <div class="lead">What's in the freezer</div>
+  <h2 class="h">Raised here, sold by the cut or the share</h2>
+  <p>Heritage Acres is a small Delanson farm — not a brand, not a distributor. What's available depends on the season and what's come back from the butcher, so ordering ahead is the way to go. Call or email, tell us roughly what you're after, and we'll tell you what's ready and set a pickup.</p>
+  <div class="prod">
+    <div class="card"><div class="ic">&#127777;</div><h3>Grass-Fed Beef</h3><p>Pasture-raised beef by the cut, or buy a quarter or half for the freezer and split the cost per pound.</p><div class="p">By the cut · quarter · half</div></div>
+    <div class="card"><div class="ic">&#128055;</div><h3>Pastured Pork</h3><p>Chops, roasts, sausage and bacon from pigs raised outdoors — richer flavor than anything shrink-wrapped at the store.</p><div class="p">Cuts &amp; whole/half hog</div></div>
+    <div class="card"><div class="ic">&#128020;</div><h3>Pastured Chicken</h3><p>Whole birds raised on grass and moved to fresh ground — seasonal, so ask what's ready.</p><div class="p">Seasonal · reserve ahead</div></div>
+    <div class="card"><div class="ic">&#129370;</div><h3>Brown Eggs</h3><p>Eggs from hens that actually go outside. When the girls are laying, they go fast.</p><div class="p">When available</div></div>
+  </div>
+  <p style="margin-top:16px;font-size:.92rem;color:#8a765b"><em>Availability and pricing change with the season and the butcher schedule — call for what's ready this month. (No fixed prices are shown here on purpose.)</em></p>
+</div></section>
+
+<section class="how"><div class="wrap">
+  <div class="lead" style="color:var(--wheat)">Ordering</div>
+  <h2>How to get some</h2>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><h3>Reach out</h3><p>Call or email with what you're interested in — a few cuts, or a quarter/half for the freezer.</p></div>
+    <div class="step"><div class="n">2</div><h3>We confirm what's ready</h3><p>We'll tell you what's in stock, roughly what it runs, and how much freezer space a share needs.</p></div>
+    <div class="step"><div class="n">3</div><h3>Pick a pickup time</h3><p>Everything's by appointment at the farm on Miller's Corners Road — no set store hours to work around.</p></div>
+    <div class="step"><div class="n">4</div><h3>Come get it</h3><p>Meet the farm, load the cooler, and know exactly where your family's meat was raised.</p></div>
+  </div>
+</div></section>
+
+<section class="about"><div class="wrap">
+  <div>
+    <div class="lead">Know your farmer</div>
+    <h2 class="h">A farm you can actually drive to</h2>
+    <p>The whole point of Heritage Acres is that it isn't anonymous. The beef and pork come from animals raised right here in Delanson, on pasture, without hormones or antibiotics — and you pick it up from the people who did the raising.</p>
+    <p>That's something a grocery-store label can't give you: the address, the fields, and a phone number that reaches the farmer. If you've been looking for meat you can trace to a real place, this is the place.</p>
+  </div>
+  <div class="side">
+    <h3>The short version</h3>
+    <ul>
+      <li>602 Miller's Corners Road, Delanson, NY 12053</li>
+      <li>Pasture-raised beef, pork, chicken &amp; brown eggs</li>
+      <li>No added hormones or antibiotics</li>
+      <li>By the cut, or quarter/half shares</li>
+      <li>By appointment — call or email to reserve</li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="contact"><div class="wrap">
+  <h2>Reserve your meat for the season</h2>
+  <div class="big">518-875-6026</div>
+  <p>Call the farm, or send a note with what you're after and we'll tell you what's ready and set up a pickup.</p>
+  <div class="cta">
+    <a class="btn leaf" href="tel:5188756026">Call the farm</a>
+    <a class="btn ghost" href="mailto:rudesheim@msn.com">Email to reserve</a>
+  </div>
+</div></section>
+
+<footer>
+  <div class="wrap">Heritage Acres · 602 Miller's Corners Road, Delanson, NY 12053 · 518-875-6026 · Pasture-raised beef, pork, chicken &amp; eggs · by appointment<br>
+  Preview concept prepared for the farm's review — not the live site. Contact details from public listings; confirm before publishing.</div>
+</footer>
+
+</body>
+</html>

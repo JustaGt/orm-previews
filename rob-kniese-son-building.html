@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rob Kniese &amp; Son Building — Framing, Roofing, Siding &amp; Additions · Duanesburg, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --char:#23211e; --char2:#332f2a; --cedar:#b5651d; --cedar-dk:#8f4d13;
+    --amber:#e0a53c; --oat:#f3efe7; --ink:#26231f; --line:#ddd6ca; --white:#fff; --moss:#5d6b4a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Source Sans 3',system-ui,sans-serif;color:var(--ink);background:var(--oat);line-height:1.6}
+  h1,h2,h3,.disp{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:1.02}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+  a{color:inherit}
+  .btn{display:inline-block;background:var(--cedar);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;
+    text-transform:uppercase;letter-spacing:.05em;text-decoration:none;padding:14px 30px;border-radius:3px;font-size:1.2rem;
+    border-bottom:3px solid var(--cedar-dk)}
+  .btn:hover{background:var(--cedar-dk)}
+  .btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55);border-bottom-width:2px}
+
+  .topbar{background:var(--char);color:#d4cdc0;font-size:.9rem}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 20px;flex-wrap:wrap}
+  .topbar b{color:#fff}
+  .topbar .tag{background:var(--amber);color:#26231f;font-family:'Barlow Condensed';font-weight:700;padding:2px 10px;border-radius:2px;text-transform:uppercase;font-size:.82rem;letter-spacing:.03em}
+
+  .hero{position:relative;color:#fff;padding:70px 0 60px;background:
+    linear-gradient(180deg,rgba(28,26,23,.86),rgba(28,26,23,.74)),
+    repeating-linear-gradient(90deg,#4a4038 0 3px,#443a32 3px 6px,#4e433a 6px 34px);}
+  .hero .kick{font-family:'Barlow Condensed';font-weight:700;color:var(--amber);letter-spacing:.16em;font-size:1rem}
+  .hero h1{font-size:clamp(2.3rem,6.4vw,4.4rem);font-weight:700;margin:.3em 0 .32em;max-width:18ch}
+  .hero h1 span{color:var(--amber)}
+  .hero p.sub{font-size:1.2rem;max-width:46ch;color:#e9e3d8}
+  .hero .cta{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero .note{margin-top:16px;font-size:.94rem;color:#c3bcae}
+
+  .badges{background:var(--char2);color:#fff}
+  .badges .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+  .badge{padding:22px 18px;text-align:center;border-right:1px solid rgba(255,255,255,.08)}
+  .badge:last-child{border-right:none}
+  .badge .b{font-family:'Barlow Condensed';font-weight:700;font-size:1.5rem;text-transform:uppercase;color:var(--amber);line-height:1}
+  .badge .s{font-size:.92rem;color:#cdc6b9;margin-top:4px}
+
+  section{padding:58px 0}
+  .lead{font-size:1rem;font-family:'Barlow Condensed';letter-spacing:.14em;color:var(--cedar-dk);font-weight:700;text-transform:uppercase}
+  h2.h{font-size:clamp(1.7rem,4.4vw,2.6rem);color:var(--char);margin:.2em 0 .6em}
+  .intro p{max-width:64ch;font-size:1.08rem;color:#4a453d}
+
+  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:8px}
+  .svc{background:#fff;border:1px solid var(--line);border-radius:6px;padding:24px;border-top:4px solid var(--cedar)}
+  .svc h3{font-size:1.35rem;color:var(--char);margin-bottom:.25em}
+  .svc p{font-size:.98rem;color:#575149}
+
+  .process{background:#efe8dc}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;margin-top:10px}
+  .step{background:#fff;border:1px solid var(--line);border-radius:6px;padding:22px;position:relative}
+  .step .n{font-family:'Barlow Condensed';font-weight:700;font-size:2.4rem;color:var(--amber);line-height:.8}
+  .step h3{font-size:1.2rem;color:var(--char);margin:.3em 0 .25em}
+  .step p{font-size:.95rem;color:#575149}
+
+  .about{background:var(--char);color:#e9e3d8}
+  .about .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:38px;align-items:center}
+  .about h2{color:#fff}
+  .about p{color:#d6cfc2;font-size:1.06rem;margin-bottom:.9em;max-width:52ch}
+  .about .side{background:var(--char2);border-radius:8px;padding:26px;border-left:4px solid var(--amber)}
+  .about .side h3{color:var(--amber);font-size:1.3rem;margin-bottom:.4em}
+  .about .side ul{list-style:none}
+  .about .side li{padding:7px 0;border-bottom:1px dashed rgba(255,255,255,.14);font-size:.98rem;color:#e4ddd0}
+  .about .side li:last-child{border-bottom:none}
+
+  .quoteband{background:#efe8dc}
+  .quote{background:#fff;border:1px solid var(--line);border-left:5px solid var(--cedar);border-radius:8px;padding:26px;max-width:760px;margin:0 auto}
+  .quote p{font-size:1.15rem;font-style:italic;color:#403b33}
+  .quote .who{margin-top:10px;font-family:'Barlow Condensed';color:var(--cedar-dk);font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:.92rem}
+
+  .contact{background:var(--char);color:#fff;text-align:center}
+  .contact h2{color:#fff;font-size:clamp(1.8rem,4.6vw,2.7rem)}
+  .contact p{color:#cdc6b9;max-width:48ch;margin:.6em auto 0}
+  .contact .big{font-family:'Barlow Condensed';font-weight:700;font-size:clamp(1.9rem,6vw,3rem);color:var(--amber);margin:.35em 0}
+  .contact .cta{margin-top:12px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  footer{background:#171512;color:#8f887c;font-size:.86rem;text-align:center;padding:22px 0}
+  footer a{color:#b6afa2}
+  @media(max-width:760px){.about .wrap{grid-template-columns:1fr}.badges .wrap{grid-template-columns:1fr}.badge{border-right:none;border-bottom:1px solid rgba(255,255,255,.08)}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <div><b>Rob Kniese &amp; Son Building, LLC</b> · Duanesburg, NY</div>
+  <div><span class="tag">Family-run · 20+ years</span> &nbsp; <b>518-857-0957</b></div>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="kick">CARPENTRY · FRAMING · ROOFING · SIDING — DUANESBURG</div>
+  <h1>The same two hands, <span>start to finish.</span></h1>
+  <p class="sub">Rob and his son frame it, roof it, side it, and finish the trim — one small crew that's still on your job the day it wraps up.</p>
+  <div class="cta">
+    <a class="btn" href="tel:5188570957">Call Rob — 518-857-0957</a>
+    <a class="btn ghost" href="#estimate">Ask for an estimate</a>
+  </div>
+  <p class="note">Framing to finish trim · new builds, additions, roofs &amp; siding · Schenectady County and the Route 20 towns.</p>
+</div></header>
+
+<div class="badges"><div class="wrap">
+  <div class="badge"><div class="b">20+ yrs</div><div class="s">Building around Duanesburg</div></div>
+  <div class="badge"><div class="b">Father &amp; son</div><div class="s">You get the owner on site, not a sub you never met</div></div>
+  <div class="badge"><div class="b">Frame → finish</div><div class="s">One crew from the first stud to the last piece of trim</div></div>
+</div></div>
+
+<section class="intro"><div class="wrap">
+  <div class="lead">What we build</div>
+  <h2 class="h">Rough framing to finished rooms</h2>
+  <p>A lot of contractors hand your project off to whoever's free that week. Rob Kniese &amp; Son is a two-man, one-name operation: the carpenter who quotes your addition is the one swinging the hammer and the one you call if something needs a second look. Twenty years of framing, roofs, and siding in the Duanesburg hills — the work holds up because the same people stand behind it.</p>
+  <div class="services">
+    <div class="svc"><h3>Framing</h3><p>New homes, garages, and additions framed straight and square — the bones everything else depends on.</p></div>
+    <div class="svc"><h3>Roofing</h3><p>Tear-offs and re-roofs in architectural shingle. We get you dried in before the weather turns.</p></div>
+    <div class="svc"><h3>Siding</h3><p>Vinyl and fiber-cement siding that stands up to Schoharie-valley winters and finishes the house clean.</p></div>
+    <div class="svc"><h3>Additions</h3><p>Mudrooms, primary suites, family rooms — tied into your existing house so the seam doesn't show.</p></div>
+    <div class="svc"><h3>Windows &amp; Doors</h3><p>Replacement windows and exterior doors set and flashed right, so they seal and swing for years.</p></div>
+    <div class="svc"><h3>Decks &amp; Trim</h3><p>Decks, porches, and the interior finish carpentry that makes a room feel done.</p></div>
+  </div>
+</div></section>
+
+<section class="process"><div class="wrap">
+  <div class="lead">How a job goes</div>
+  <h2 class="h">Straightforward, from the first call</h2>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><h3>You call Rob</h3><p>Tell him what you're thinking — a new roof, an addition, siding that's had it. He comes out and looks.</p></div>
+    <div class="step"><div class="n">2</div><h3>A real estimate</h3><p>A written number for the work described, no vague "we'll see." You know what you're signing up for.</p></div>
+    <div class="step"><div class="n">3</div><h3>We build it</h3><p>Small crew, clean site, honest timeline. If the weather or a surprise changes things, you hear it from Rob first.</p></div>
+    <div class="step"><div class="n">4</div><h3>Finished right</h3><p>We don't disappear at 90%. The trim, the punch list, the last details — done before we call it complete.</p></div>
+  </div>
+</div></section>
+
+<section class="about"><div class="wrap">
+  <div>
+    <div class="lead" style="color:var(--amber)">Who you're hiring</div>
+    <h2>A Duanesburg name that's been around</h2>
+    <p>Rob Kniese has been building in and around Duanesburg for more than two decades — long enough that most new jobs come from a neighbor who points to a roof or an addition and says "he did ours." Now his son works alongside him, which is the whole idea: a crew small enough that the owner knows every board that went into your house.</p>
+    <p>No call center, no rotating subcontractors you've never met. When you hire Rob Kniese &amp; Son, you're hiring the two people who show up.</p>
+  </div>
+  <div class="side">
+    <h3>Good to know</h3>
+    <ul>
+      <li>Based in Duanesburg (PO Box 107)</li>
+      <li>Serving Schenectady County &amp; the Route 20 towns</li>
+      <li>New construction, additions, roofing &amp; siding</li>
+      <li>Free estimates — call to schedule a look</li>
+      <li>Owner on every job, start to finish</li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="quoteband"><div class="wrap">
+  <div class="quote">
+    <p>"The kind of builder who does what he said, when he said, and cleans up after himself. Hard to find anymore."</p>
+    <div class="who">— How Duanesburg homeowners describe the work</div>
+    <!-- REVIEW PLACEHOLDER: qualitative summary consistent with the shop's word-of-mouth reputation on its Facebook page (facebook.com/Robshammer). No star rating or count invented. Sandro to confirm exact wording — or swap in a real Google/Facebook review — before publishing. -->
+  </div>
+</div></section>
+
+<section class="contact" id="estimate"><div class="wrap">
+  <h2>Thinking about a project this year?</h2>
+  <div class="big">518-857-0957</div>
+  <p>Call Rob, or send a note with what you're planning and the best way to reach you. He'll come out and give you a straight estimate.</p>
+  <div class="cta">
+    <a class="btn" href="tel:5188570957">Call now</a>
+    <a class="btn ghost" href="mailto:genesisbuilding1@yahoo.com">Email the shop</a>
+  </div>
+</div></section>
+
+<footer>
+  <div class="wrap">Rob Kniese &amp; Son Building, LLC · Duanesburg, NY 12056 · 518-857-0957 · genesisbuilding1@yahoo.com<br>
+  Preview concept prepared for the builder's review — not the live site.</div>
+</footer>
+
+</body>
+</html>

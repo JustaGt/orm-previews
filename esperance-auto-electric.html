@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esperance Auto Electric — Auto Electrical &amp; Repair · Route 20, Esperance NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#141c2b; --navy2:#1e2942; --slate:#2c3a55;
+    --volt:#f6b21a; --volt-dk:#d0940c; --copper:#c96a2b;
+    --mist:#eef1f5; --ink:#1a2230; --line:#d5dbe4; --white:#fff; --grn:#2f9e6e;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--mist);line-height:1.6}
+  h1,h2,h3,.disp{font-family:'Rajdhani',sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.03}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+  a{color:inherit}
+  .btn{display:inline-block;background:var(--volt);color:#171b22;font-family:'Rajdhani',sans-serif;font-weight:700;
+    text-transform:uppercase;letter-spacing:.05em;text-decoration:none;padding:13px 30px;border-radius:4px;font-size:1.2rem;
+    border-bottom:3px solid var(--volt-dk)}
+  .btn:hover{background:var(--volt-dk);color:#fff}
+  .btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5);border-bottom-width:2px}
+
+  .topbar{background:var(--navy);color:#b9c4d6;font-size:.9rem}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 20px;flex-wrap:wrap}
+  .topbar b{color:#fff}
+  .topbar .tag{background:var(--volt);color:#171b22;font-family:'Rajdhani';font-weight:700;padding:2px 10px;border-radius:3px;text-transform:uppercase;font-size:.85rem;letter-spacing:.04em}
+
+  .hero{position:relative;color:#fff;padding:70px 0 60px;background:
+    linear-gradient(180deg,rgba(15,21,34,.9),rgba(20,28,43,.8)),
+    radial-gradient(circle at 80% 15%,rgba(246,178,26,.16),transparent 45%),
+    linear-gradient(135deg,#16203380 0 60%,#1e2942);}
+  .hero .kick{font-family:'Rajdhani';font-weight:700;color:var(--volt);letter-spacing:.16em;font-size:1rem}
+  .hero h1{font-size:clamp(2.2rem,6.2vw,4.3rem);font-weight:700;margin:.3em 0 .3em;max-width:20ch}
+  .hero h1 span{color:var(--volt)}
+  .hero p.sub{font-size:1.2rem;max-width:48ch;color:#dbe2ee}
+  .hero .cta{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero .note{margin-top:16px;font-size:.94rem;color:#9fabc0}
+
+  .badges{background:var(--navy2);color:#fff}
+  .badges .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+  .badge{padding:22px 18px;text-align:center;border-right:1px solid rgba(255,255,255,.08)}
+  .badge:last-child{border-right:none}
+  .badge .b{font-family:'Rajdhani';font-weight:700;font-size:1.5rem;text-transform:uppercase;color:var(--volt);line-height:1}
+  .badge .s{font-size:.92rem;color:#c1cad9;margin-top:4px}
+
+  section{padding:58px 0}
+  .lead{font-size:1rem;font-family:'Rajdhani';letter-spacing:.14em;color:var(--copper);font-weight:700;text-transform:uppercase}
+  h2.h{font-size:clamp(1.7rem,4.4vw,2.6rem);color:var(--navy);margin:.2em 0 .55em}
+  .intro p{max-width:64ch;font-size:1.08rem;color:#41506a}
+
+  .elec{background:var(--navy);color:#e6ecf5}
+  .elec .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
+  .elec h2{color:#fff}
+  .elec p{color:#c3cdde;max-width:52ch;margin-bottom:.8em}
+  .elec .list{background:var(--navy2);border-radius:8px;padding:24px;border-left:4px solid var(--volt)}
+  .elec .list ul{list-style:none}
+  .elec .list li{padding:8px 0;border-bottom:1px dashed rgba(255,255,255,.14);font-size:1rem;color:#e2e8f2;display:flex;gap:10px}
+  .elec .list li:last-child{border-bottom:none}
+  .elec .list li::before{content:"▹";color:var(--volt);font-weight:700}
+
+  .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:8px}
+  .svc{background:#fff;border:1px solid var(--line);border-radius:6px;padding:22px;border-top:4px solid var(--copper)}
+  .svc h3{font-size:1.3rem;color:var(--navy);margin-bottom:.25em}
+  .svc p{font-size:.97rem;color:#57627a}
+
+  .two{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:start}
+  .card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:26px}
+  .card h3{font-size:1.35rem;color:var(--navy);margin-bottom:.5em}
+  .hours{list-style:none}
+  .hours li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed var(--line);font-size:1rem}
+  .hours li:last-child{border-bottom:none}
+  .hours .cl{color:#b23;font-weight:700}
+  .dir{font-size:1rem;color:#41506a}
+  .dir b{color:var(--navy)}
+  .rev{background:#fff;border:1px solid var(--line);border-left:5px solid var(--volt);border-radius:8px;padding:24px;margin-top:18px}
+  .rev .stars{color:var(--volt-dk);font-weight:700;font-family:'Rajdhani';font-size:1.4rem;letter-spacing:.05em}
+  .rev p{font-style:italic;color:#3a4459;margin-top:.3em}
+  .rev .who{margin-top:8px;font-family:'Rajdhani';color:var(--copper);font-weight:700;text-transform:uppercase;font-size:.9rem;letter-spacing:.04em}
+
+  .contact{background:var(--navy);color:#fff;text-align:center}
+  .contact h2{color:#fff;font-size:clamp(1.8rem,4.6vw,2.7rem)}
+  .contact p{color:#c1cad9;max-width:48ch;margin:.6em auto 0}
+  .contact .big{font-family:'Rajdhani';font-weight:700;font-size:clamp(1.9rem,6vw,3rem);color:var(--volt);margin:.35em 0}
+  .contact .cta{margin-top:12px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  footer{background:#0f1522;color:#7e8aa0;font-size:.86rem;text-align:center;padding:22px 0}
+  footer a{color:#aeb9cd}
+  @media(max-width:760px){.elec .wrap,.two{grid-template-columns:1fr}.badges .wrap{grid-template-columns:1fr}.badge{border-right:none;border-bottom:1px solid rgba(255,255,255,.08)}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <div><b>Esperance Auto Electric</b> · 10497 Western Turnpike (Route 20), Esperance NY</div>
+  <div><span class="tag">Auto electrical specialists</span> &nbsp; <b>518-875-6051</b></div>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <div class="kick">ON ROUTE 20 SINCE THE 1980s · ESPERANCE / DELANSON LINE</div>
+  <h1>The shop you call when nobody can find <span>the electrical gremlin.</span></h1>
+  <p class="sub">Dash lights that won't quit, a car that cranks but won't start, wiring the last place gave up on — that's the work this shop was built around. Plus the everyday brakes, exhaust, and engine jobs.</p>
+  <div class="cta">
+    <a class="btn" href="tel:5188756051">Call the shop — 518-875-6051</a>
+    <a class="btn ghost" href="#services">See what we fix</a>
+  </div>
+  <p class="note">Auto electrical diagnostics · brakes &amp; mufflers · engine &amp; radiator work · Route 20 in Esperance, NY.</p>
+</div></header>
+
+<div class="badges"><div class="wrap">
+  <div class="badge"><div class="b">36 years</div><div class="s">Same shop on Western Turnpike</div></div>
+  <div class="badge"><div class="b">Electrical first</div><div class="s">Diagnostics most general shops send away</div></div>
+  <div class="badge"><div class="b">4.8&#9733; · 34 reviews</div><div class="s">"Honest, fair, gets it right"*</div></div>
+</div></div>
+
+<section class="intro"><div class="wrap">
+  <div class="lead">Why people drive out here</div>
+  <h2 class="h">Named for the hard part</h2>
+  <p>Most repair shops are comfortable with brakes and oil changes and start sweating the moment a problem is electrical. Esperance Auto Electric has done it the other way around for 36 years: the wiring, the alternators, the no-start mysteries and the intermittent faults are the reason the shop has the name it does. You still get the full-service repairs too — but when the last place shrugged, this is where the car ends up.</p>
+</div></section>
+
+<section class="elec"><div class="wrap">
+  <div>
+    <div class="lead" style="color:var(--volt)">The specialty</div>
+    <h2>Automotive electrical, done properly</h2>
+    <p>Electrical problems get "parts-cannoned" everywhere else — swap the battery, swap the alternator, hand you the bill, hope it's fixed. Here it gets traced. That's the difference 36 years of doing mostly electrical work makes.</p>
+    <p>If your check-engine light, charging system, starter, or a chased-down short has beaten another shop, bring it to the one named for exactly that.</p>
+  </div>
+  <div class="list">
+    <ul>
+      <li>Starting &amp; charging — starters, alternators, batteries</li>
+      <li>No-start and intermittent electrical diagnosis</li>
+      <li>Wiring, grounds, shorts &amp; parasitic drains</li>
+      <li>Check-engine &amp; warning-light diagnostics</li>
+      <li>Lighting, power accessories &amp; sensors</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="services"><div class="wrap">
+  <div class="lead">Also in the bay</div>
+  <h2 class="h">Full-service repair, not just electrical</h2>
+  <div class="services">
+    <div class="svc"><h3>Brakes</h3><p>Pads, rotors, lines and the noises you'd rather not ignore on the Route 20 hills.</p></div>
+    <div class="svc"><h3>Mufflers &amp; Exhaust</h3><p>Custom pipe and muffler work — quiet it down and pass inspection.</p></div>
+    <div class="svc"><h3>Engine Work</h3><p>From rough-running fixes to rebuilds when a good car is worth keeping on the road.</p></div>
+    <div class="svc"><h3>Radiators &amp; Cooling</h3><p>Overheating, leaks, and cooling-system work before a hot-weather tow.</p></div>
+    <div class="svc"><h3>Routine Maintenance</h3><p>Oil, belts, hoses and the seasonal service that heads off the big bills.</p></div>
+    <div class="svc"><h3>Second Opinions</h3><p>Told you need a fortune in electrical work? Get it looked at by the shop that does this all day.</p></div>
+  </div>
+</div></section>
+
+<section style="background:#e7ebf1"><div class="wrap two">
+  <div>
+    <div class="lead">Getting here</div>
+    <h2 class="h">Right on Route 20</h2>
+    <p class="dir"><b>Esperance Auto Electric</b><br>10497 Western Turnpike (Route 20), Esperance, NY 12066<br><br>
+    Straight out Western Turnpike between Duanesburg and Esperance village — the same stretch of Route 20 the shop's been on for decades. Coming from Delanson or Schenectady, it's an easy run west. Not sure you've got the right driveway? Call and we'll point you in.</p>
+    <div class="rev">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733; 4.8 / 5</div>
+      <p>"Honest, fair, and they actually fix the problem instead of guessing. Been going for years."</p>
+      <div class="who">— Representative of the shop's review reputation*</div>
+      <!-- REVIEW PLACEHOLDER: 4.8-star / 34-review figure is real, sourced from the shop's aggregated review profile (Birdeye, verified Aug 2026); the quoted wording is a representative paraphrase, not a single verbatim review. Sandro to drop in one real Google/Facebook review before publishing. -->
+    </div>
+  </div>
+  <div>
+    <div class="card">
+      <h3>Hours &amp; Contact</h3>
+      <ul class="hours">
+        <li><span>Mon–Fri</span><span>8:00 am – 5:00 pm</span></li>
+        <li><span>Saturday</span><span>8:00 am – 12:00 pm</span></li>
+        <li><span>Sunday</span><span class="cl">Closed</span></li>
+      </ul>
+      <p style="margin-top:16px"><b>Phone:</b> <a href="tel:5188756051">518-875-6051</a></p>
+      <p style="margin-top:8px;font-size:.9rem;color:#788196">Wheelchair accessible · free parking. Hours shown from current listings — a quick call confirms same-day availability.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="contact"><div class="wrap">
+  <h2>Got a problem no one else could fix?</h2>
+  <div class="big">518-875-6051</div>
+  <p>Tell us what the car's doing — especially if it's electrical. If we can talk you through it on the phone, we will; if it needs the bay, we'll get you in.</p>
+  <div class="cta">
+    <a class="btn" href="tel:5188756051">Call now</a>
+  </div>
+</div></section>
+
+<footer>
+  <div class="wrap">Esperance Auto Electric · 10497 Western Turnpike (Route 20), Esperance, NY 12066 · 518-875-6051 · Serving the Duanesburg / Esperance / Delanson area for 36 years<br>
+  Preview concept prepared for the shop's review — not the live site.</div>
+</footer>
+
+</body>
+</html>
