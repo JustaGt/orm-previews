@@ -3,18 +3,33 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>By Yurii’s Pizza | New York Style Pizza Food Truck in Junction City, KS</title>
-<meta name="description" content="Handmade New York style pizza, halal gyros, calzones and cannoli from our food truck at 901 N Washington St, Junction City, KS. Wood fired catering for events. Call 785.556.8303.">
+<title>By Yurii’s Pizza | New York Pizza Truck in Junction City, KS near Fort Riley</title>
+<meta name="description" content="New York style pizza, halal gyros, calzones and cannoli from our food truck at 901 N Washington St in Junction City, KS, serving Fort Riley. Order online for pickup.">
 <meta name="theme-color" content="#1d1814">
+<!-- SITE ADDRESS: when the site moves to its own domain, change this one URL in the canonical, og:url and JSON LD below (search for justagt.github.io) -->
+<link rel="canonical" href="https://justagt.github.io/orm-previews/by-yuriis-pizza.html">
+<link rel="icon" href="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513a7436f78fefb7ecb99.jpg">
+<link rel="apple-touch-icon" href="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513a7436f78fefb7ecb99.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="By Yurii’s Pizza">
+<meta property="og:title" content="By Yurii’s Pizza | New York pizza in Junction City">
+<meta property="og:description" content="Handmade New York style pies, halal gyros and cannoli from the truck on North Washington Street. Order online for pickup.">
+<meta property="og:url" content="https://justagt.github.io/orm-previews/by-yuriis-pizza.html">
+<meta property="og:image" content="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da436f78fefb7ed098.jpg">
+<meta property="og:image:alt" content="Pepperoni pizza with a box of cannoli from By Yurii’s Pizza">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"By Yurii's Pizza","alternateName":"BY YURII'S PIZZA (New York Style)","url":"https://justagt.github.io/orm-previews/by-yuriis-pizza.html","hasMenu":"https://justagt.github.io/orm-previews/by-yuriis-pizza.html#menu","telephone":"+1-785-556-8303","email":"byyuriiskitchen@gmail.com","image":["https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da436f78fefb7ed098.jpg","https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da989628c77a633dc6.jpg"],"logo":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513a7436f78fefb7ecb99.jpg","servesCuisine":["Pizza","New York style pizza","Gyros"],"address":{"@type":"PostalAddress","streetAddress":"901 N Washington St","addressLocality":"Junction City","addressRegion":"KS","postalCode":"66441","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":39.0316591,"longitude":-96.8293101},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":"Tuesday","opens":"16:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Thursday","Friday","Saturday"],"opens":"12:00","closes":"20:00"}],"areaServed":[{"@type":"City","name":"Junction City, KS"},{"@type":"Place","name":"Fort Riley, KS"},{"@type":"City","name":"Manhattan, KS"},{"@type":"City","name":"Ogden, KS"},{"@type":"City","name":"Milford, KS"}],"sameAs":["https://www.facebook.com/p/By-Yuriis-Pizza-100077439078403/","https://www.doordash.com/store/by-yuriis-pizza-25154504/","https://www.ubereats.com/store/by-yuriis-pizza/UKaXHLAtSj-tXHe6GpSYGw"]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ultra&family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#f2e9d8; --paper2:#e9dcc4; --white:#fbf6ec;
-  --ink:#1d1814; --ink2:#2a231d; --text:#3b322a; --muted:#73665a;
+  --ink:#1d1814; --ink2:#2a231d; --text:#3b322a; --muted:#665a4f;
   --red:#cf3f2e; --orange:#ec6a35; --gold:#f2b544;
-  --rule:#1d1814; --hair:#cdbd9f; --hair-d:rgba(242,233,216,.18);
+  --rule:#1d1814; --red-t:#b3301f; --hair:#cdbd9f; --hair-d:rgba(242,233,216,.18);
   --max:1200px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -408,6 +423,443 @@ footer a:hover{color:#fff;text-decoration:underline}
 .fade{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
 .fade.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}.fade{opacity:1;transform:none}}
+/* ===== v2 additions: ordering, events, reviews, story, miles ===== */
+[hidden]{display:none!important}
+.sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.hp{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0}
+button{background:none;border:0;cursor:pointer}
+:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.cnt{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 6px;border-radius:11px;background:var(--gold);color:var(--ink);font-size:.78rem;font-weight:900;letter-spacing:0;font-variation-settings:"wdth" 100;margin-left:.15rem}
+.cnt[hidden]{display:none}
+.btn-red .cnt{background:var(--white)}
+
+/* truck today */
+.tbanner{background:var(--gold);border-bottom:2px solid var(--ink);color:var(--ink);font-weight:700;font-size:.95rem;text-align:center;padding:.65rem 18px;line-height:1.35}
+.tbanner b{font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-variation-settings:"wdth" 80;margin-right:.35rem}
+.todaynote{margin-top:1rem;border:2px dashed var(--ink);background:var(--white);padding:.7rem .9rem;font-weight:600;color:var(--ink)}
+.todaynote b{display:block;font-size:.7rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;font-variation-settings:"wdth" 110;color:var(--red);margin-bottom:.15rem}
+
+/* favorites add */
+.fadd{margin-top:.55rem;display:inline-flex;align-items:center;gap:.4rem;font-weight:800;font-size:.86rem;letter-spacing:.06em;text-transform:uppercase;font-variation-settings:"wdth" 75;color:var(--ink);border-bottom:3px solid var(--orange);padding:.15rem 0;min-height:32px}
+.fadd span{font-size:1.1rem;line-height:1;color:var(--red)}
+.fadd:hover{color:var(--red)}
+
+/* printed menu with prices */
+.mbody{min-width:0}
+.grp h3 .sz{margin-left:auto;display:flex;gap:0;font-family:Archivo,sans-serif;font-size:.62rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-variation-settings:"wdth" 100;color:var(--muted);line-height:1.15;text-align:right}
+.grp h3 .sz span{width:4.2rem}
+.mi{position:relative}
+.mi.go{cursor:pointer}
+.mi.go:hover .nm{color:var(--red)}
+.mi .top-line{gap:.45rem}
+.mi .pr{display:flex;flex:none;font-weight:800;font-size:1.02rem;color:var(--ink);font-variation-settings:"wdth" 90;font-variant-numeric:tabular-nums}
+.mi .pr span{width:4.2rem;text-align:right}
+.mi .pr span:only-child{width:auto;min-width:3.4rem}
+.mi .pr.ask{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.madd{flex:none;width:30px;height:30px;margin-left:.35rem;border:2px solid var(--ink);background:var(--white);display:grid;place-items:center;font-size:1.25rem;font-weight:700;line-height:1;color:var(--ink);transform:translateY(2px)}
+.madd:hover,.mi.go:hover .madd{background:var(--ink);color:var(--paper)}
+.mi .ds:empty{display:none}
+.byo .byo-h{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap}
+.byo .byo-h .pr{margin-left:auto;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}
+.byo .byo-h .pr small{font-size:.66rem;font-weight:800;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;margin:0 .2rem 0 .5rem}
+.byo .btn{margin-top:1rem;height:46px}
+.xtra{margin-top:18px;display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;font-size:.88rem;color:var(--muted)}
+.xtra b{color:var(--ink);font-weight:800}
+.nos{text-align:center;font-weight:700;color:var(--ink);padding:1rem}
+.sheet .opt{width:100%;cursor:pointer;text-align:left}
+
+/* event photo story */
+.evp{background:var(--white);border-top:2px solid var(--ink)}
+.evgrid{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;align-items:start}
+.evp figure{position:relative;border:2px solid var(--ink);overflow:hidden;background:var(--paper2);cursor:zoom-in;margin:0}
+.evp img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.evp figure:hover img{transform:scale(1.03)}
+.evp figcaption{position:absolute;left:0;bottom:12px;max-width:calc(100% - 16px);background:var(--ink);color:var(--paper);font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-variation-settings:"wdth" 110;padding:.35rem .65rem;line-height:1.3}
+.ev-main{aspect-ratio:7/5;box-shadow:10px 10px 0 var(--ink)}
+.ev-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ev-row figure{aspect-ratio:4/5}
+.ev-cta{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-top:40px}
+.ev-cta span{color:var(--muted);font-size:.95rem}
+@media(max-width:900px){
+  .evgrid{grid-template-columns:1fr;gap:14px}
+  .ev-main{box-shadow:6px 6px 0 var(--ink)}
+  .ev-row{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -18px;padding:4px 18px 8px;scrollbar-width:none;overscroll-behavior-x:contain}
+  .ev-row::-webkit-scrollbar{display:none}
+  .ev-row figure{flex:0 0 72%;max-width:300px;scroll-snap-align:start}
+}
+
+/* booking */
+.bslot{min-width:0}
+.fintro{grid-column:1/-1;margin-top:-8px;color:var(--muted);font-size:.95rem}
+.bcal{background:var(--white);border:2px solid var(--ink);position:relative;padding:28px 0 0}
+.bcal:before{content:"";position:absolute;left:-2px;right:-2px;top:-2px;height:10px;background:linear-gradient(90deg,var(--red) 0 33.3%,var(--orange) 33.3% 66.6%,var(--gold) 66.6%)}
+.bcal-h{padding:0 24px 14px}
+.bcal-h b{display:block;font-family:Ultra,serif;font-weight:400;font-size:1.6rem;color:var(--ink);line-height:1.1}
+.bcal-h span{display:block;color:var(--muted);font-size:.92rem;margin-top:.35rem}
+.bcal-frame{min-height:720px;border-top:2px solid var(--ink);position:relative}
+.bcal-frame iframe{display:block;width:100%;height:720px;border:0}
+.bcal-load{padding:24px;color:var(--muted)}
+
+/* reviews band and cards */
+.stars{position:relative;display:inline-block;color:rgba(242,181,68,.28);letter-spacing:4px;margin:.4rem 0 .5rem;font-size:1.2rem;line-height:1}
+.stars span:last-child{position:absolute;left:0;top:0;width:calc(var(--r)/5*100%);overflow:hidden;white-space:nowrap;color:var(--gold)}
+.rates{margin-top:1.1rem;display:flex;flex-wrap:wrap;gap:.4rem 1.3rem;font-size:.9rem;color:rgba(255,255,255,.9)}
+.rates b{color:var(--gold);font-weight:900;margin-right:.2rem}
+.rates .asof{color:rgba(255,255,255,.7);font-size:.8rem;align-self:center}
+#kind-words{background:var(--paper)}
+.tcards{columns:3 300px;column-gap:18px}
+.tcard{break-inside:avoid;margin:0 0 18px;background:var(--white);border:2px solid var(--ink);padding:22px 22px 18px;position:relative}
+.tcard:nth-child(3n+1){box-shadow:6px 6px 0 var(--gold)}
+.tcard:nth-child(3n+2){box-shadow:6px 6px 0 var(--orange)}
+.tcard:nth-child(3n){box-shadow:6px 6px 0 var(--red)}
+.tcard .q{font-family:Ultra,serif;font-size:2.6rem;line-height:.6;color:var(--red);display:block;height:.9rem}
+.tcard p{color:var(--ink);font-size:1.02rem;line-height:1.5}
+.tcard .who{display:flex;justify-content:space-between;align-items:center;gap:.6rem;margin-top:.9rem;padding-top:.7rem;border-top:1px dotted #a8987d;font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-variation-settings:"wdth" 100;color:var(--muted)}
+.tcard .who b{color:var(--ink)}
+.tcard .who .s{color:var(--orange);letter-spacing:2px;font-size:.85rem}
+.tsrc{margin-top:8px;font-size:.84rem;color:var(--muted)}
+@media(max-width:760px){
+  .tcards{columns:auto;display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -18px;padding:4px 18px 14px;scrollbar-width:none;overscroll-behavior-x:contain}
+  .tcards::-webkit-scrollbar{display:none}
+  .tcard{flex:0 0 84%;max-width:340px;margin:0;scroll-snap-align:start}
+  .tcard:nth-child(n){box-shadow:5px 5px 0 var(--gold)}
+}
+
+/* story and press */
+#story{background:var(--paper2);border-top:2px solid var(--ink)}
+.press{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:center;margin-bottom:84px}
+.press.noimg{grid-template-columns:1fr}
+.clip{margin:0;background:var(--white);padding:10px;border:2px solid var(--ink);transform:rotate(-2deg);box-shadow:8px 8px 0 var(--ink);position:relative}
+.clip:before,.clip:after{content:"";position:absolute;width:86px;height:26px;background:rgba(242,181,68,.75);top:-12px}
+.clip:before{left:-18px;transform:rotate(-28deg)}
+.clip:after{right:-18px;transform:rotate(24deg)}
+.clip img{width:100%;height:auto;cursor:zoom-in}
+.clip[hidden]{display:none}
+.pcopy .pub{font-family:Ultra,serif;font-size:clamp(1.8rem,3.6vw,2.6rem);line-height:1;color:var(--ink);margin-top:.6rem}
+.pcopy .pcol{font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-variation-settings:"wdth" 110;color:var(--muted);margin:.5rem 0 1.4rem}
+.pq{position:relative;font-size:1.25rem;line-height:1.45;color:var(--ink);font-weight:600;padding-left:1.6rem;margin-bottom:1rem;max-width:640px}
+.pq:before{content:"“";position:absolute;left:-.2rem;top:-.35rem;font-family:Ultra,serif;font-size:2.6rem;line-height:1;color:var(--red)}
+.pq.sm{font-size:1.02rem;font-weight:500;color:var(--text)}
+.pq-tag{display:inline-block;background:var(--ink);color:var(--gold);font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-variation-settings:"wdth" 80;padding:.4rem .8rem;margin:.2rem 0 1rem 1.6rem;transform:rotate(-1.5deg)}
+.pcopy .ulink{margin-left:1.6rem}
+.sgrid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:start}
+.scopy h2{font-size:clamp(2.2rem,4.6vw,3.4rem);margin:.8rem 0 1.3rem}
+.scopy p{margin-bottom:1rem;max-width:600px}
+.stubs{list-style:none;display:grid;gap:10px;counter-reset:s}
+.stubs li{position:relative;background:var(--white);border:2px solid var(--ink);padding:.7rem 1rem .7rem 3.3rem;counter-increment:s}
+.stubs li:before{content:counter(s);position:absolute;left:0;top:0;bottom:0;width:2.4rem;display:grid;place-items:center;font-family:Ultra,serif;color:var(--paper);background:var(--red);border-right:2px dashed var(--white)}
+.stubs li:nth-child(even):before{background:var(--orange)}
+.stubs small{display:block;font-size:.66rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;font-variation-settings:"wdth" 110;color:var(--muted)}
+.stubs b{display:block;font-weight:900;font-size:1.05rem;text-transform:uppercase;letter-spacing:.02em;font-variation-settings:"wdth" 75;color:var(--ink);line-height:1.2}
+@media(max-width:900px){.press{grid-template-columns:1fr;gap:34px;margin-bottom:60px}.clip{max-width:280px;margin:0 auto}.sgrid{grid-template-columns:1fr;gap:34px}}
+
+/* miles */
+#miles{background:var(--white);border-top:2px solid var(--ink)}
+.mgrid{display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:start}
+.mcopy h2{font-size:clamp(2.2rem,4.6vw,3.4rem);margin:.8rem 0 1rem}
+.mstats{display:grid;grid-template-columns:repeat(3,1fr);border:2px solid var(--ink);margin:1.4rem 0;background:var(--paper)}
+.mstats div{padding:12px 10px;text-align:center}
+.mstats div+div{border-left:2px solid var(--ink)}
+.mstats b{display:block;font-family:Ultra,serif;font-weight:400;font-size:1.8rem;color:var(--red);line-height:1.1}
+.mstats small{display:block;font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-variation-settings:"wdth" 100;color:var(--muted);line-height:1.3;margin-top:.2rem}
+.pinform{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:1.4rem;background:var(--paper);border:2px solid var(--ink);padding:20px}
+.pinform .btn{grid-column:1/-1;width:100%}
+.pnote{grid-column:1/-1;font-size:.84rem;color:var(--muted)}
+.pinform .sent{grid-column:1/-1}
+.mmap{position:relative;border:2px solid var(--ink);box-shadow:10px 10px 0 var(--ink);background:var(--paper2)}
+#milesMap{height:440px;width:100%}
+.mempty{position:absolute;left:12px;right:12px;bottom:12px;z-index:500;background:var(--ink);color:var(--paper);font-weight:700;font-size:.9rem;padding:.55rem .8rem;text-align:center}
+.mempty[hidden]{display:none}
+.mlist{list-style:none;border-top:2px solid var(--ink);background:var(--white);counter-reset:m}
+.mlist:empty{display:none}
+.mlist li{display:flex;gap:.6rem;align-items:baseline;padding:.55rem .9rem;border-bottom:1px dotted #a8987d;font-size:.95rem;counter-increment:m}
+.mlist li:before{content:counter(m);font-family:Ultra,serif;color:var(--red);min-width:1.2rem}
+.mlist li b{color:var(--ink)}
+.mlist li span{margin-left:auto;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.leaflet-container{font:inherit;background:var(--paper2)}
+.ypin{width:18px;height:18px;border-radius:50%;background:var(--red);border:3px solid var(--white);box-shadow:0 0 0 2px var(--ink)}
+.ypin.home{width:24px;height:24px;background:var(--gold);box-shadow:0 0 0 2px var(--ink),0 0 0 7px rgba(207,63,46,.25)}
+@media(max-width:900px){.mgrid{grid-template-columns:1fr;gap:36px}.mmap{box-shadow:6px 6px 0 var(--ink)}#milesMap{height:340px}}
+@media(max-width:560px){.pinform{grid-template-columns:1fr;padding:16px}.mstats b{font-size:1.4rem}}
+
+/* footer join */
+.fjoin{display:grid;grid-template-columns:1fr 1.2fr;gap:12px 28px;align-items:center;margin-top:36px;padding:22px;border:2px solid rgba(242,233,216,.3)}
+.fjoin[hidden]{display:none}
+.fj-copy p{color:rgba(242,233,216,.75);font-size:.92rem}
+.fj-row{display:flex;gap:8px}
+.fj-row input{flex:1;min-width:0;border-color:var(--paper)}
+.fj-row .btn{height:auto;min-height:48px}
+.fj-fine{grid-column:1/-1;font-size:.78rem;color:rgba(242,233,216,.6);line-height:1.5}
+.fj-fine a{text-decoration:underline}
+.fjoin .sent{grid-column:1/-1}
+@media(max-width:760px){.fjoin{grid-template-columns:1fr}.fj-row{flex-direction:column}.fj-row .btn{width:100%}}
+.fbot a{text-decoration:underline}
+
+/* mobile bar */
+@media(max-width:720px){.mbar{grid-template-columns:.8fr 1.4fr}.mbar .btn-line{background:var(--white)}}
+
+/* ===== order sheet ===== */
+html.locked,html.locked body{overflow:hidden}
+.os{position:fixed;inset:0;z-index:120}
+.os[hidden]{display:none}
+.os-back{position:absolute;inset:0;background:rgba(29,24,20,.6)}
+.os-panel{position:absolute;inset:0;background:var(--paper);display:flex;flex-direction:column;overflow:hidden}
+@media(min-width:760px){.os-panel{top:22px;bottom:22px;left:50%;right:auto;width:min(760px,calc(100% - 44px));transform:translateX(-50%);border:2px solid var(--ink);box-shadow:10px 10px 0 var(--ink)}}
+.os-head{flex:none;display:flex;align-items:center;gap:6px;padding:8px 8px 8px 12px;min-height:60px;background:var(--ink);color:var(--paper);padding-top:max(8px,env(safe-area-inset-top))}
+.os-t{flex:1;min-width:0;padding:0 4px}
+.os-t b{display:block;font-family:Ultra,serif;font-weight:400;font-size:1.25rem;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.os-t small{display:block;font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-variation-settings:"wdth" 100;color:rgba(242,233,216,.75);margin-top:.15rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.os-t small .dot{display:inline-block;vertical-align:middle;margin-right:.35rem}
+.os-ico{flex:none;width:44px;height:44px;display:grid;place-items:center;color:inherit;border-radius:2px}
+.os-ico svg{width:24px;height:24px}
+.os-ico:hover{background:rgba(255,255,255,.1)}
+.os-ico[hidden]{display:none}
+.os-note{flex:none;background:var(--gold);color:var(--ink);border-bottom:2px solid var(--ink);padding:.6rem 14px;font-size:.9rem;font-weight:700;line-height:1.35}
+.os-note[hidden]{display:none}
+.os-view{flex:1;min-height:0;display:flex;flex-direction:column}
+.os-view[hidden]{display:none}
+.os-scroll{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding:0 14px 24px}
+.os-cats{flex:none;display:flex;gap:6px;overflow-x:auto;padding:10px 14px;border-bottom:2px solid var(--ink);background:var(--paper);scrollbar-width:none}
+.os-cats::-webkit-scrollbar{display:none}
+.os-cats button{flex:none;height:38px;padding:0 .9rem;border:2px solid var(--ink);background:var(--white);font-weight:800;font-size:.86rem;letter-spacing:.06em;text-transform:uppercase;font-variation-settings:"wdth" 80;color:var(--ink);white-space:nowrap}
+.os-cats button[aria-current="true"]{background:var(--ink);color:var(--paper)}
+.os-sec{padding-top:18px;scroll-margin-top:4px}
+.os-sec h3{font-family:Ultra,serif;font-weight:400;font-size:1.35rem;color:var(--ink);line-height:1.1;display:flex;align-items:center;gap:.5rem}
+.os-sec h3 small{font-family:Archivo,sans-serif;font-size:.8rem;font-style:italic;color:var(--muted);margin-left:auto;font-weight:500;text-align:right}
+.os-sec .rule{height:3px;background:var(--ink);margin:.55rem 0 .4rem}
+.oc{width:100%;display:grid;grid-template-columns:72px 1fr auto;gap:12px;align-items:center;padding:10px 0;border-bottom:1px dotted #a8987d;text-align:left;color:inherit;min-height:92px}
+.oc:last-child{border-bottom:0}
+.oc .ph{width:72px;height:72px;border:2px solid var(--ink);overflow:hidden;background:var(--paper2);display:grid;place-items:center}
+.oc .ph img{width:100%;height:100%;object-fit:cover}
+.oc .ph svg{width:62px;height:62px}
+.oc .tx{min-width:0}
+.oc .tx b{display:block;font-weight:900;font-size:1.06rem;letter-spacing:.02em;text-transform:uppercase;font-variation-settings:"wdth" 75;color:var(--ink);line-height:1.15}
+.oc .rt{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.oc .rt .p{font-weight:900;color:var(--ink);font-size:1rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+.oc .rt .p small{font-size:.7rem;color:var(--muted);font-weight:700}
+.oc .rt i{font-style:normal;width:34px;height:34px;display:grid;place-items:center;border:2px solid var(--ink);background:var(--white);font-size:1.3rem;font-weight:700;line-height:1;color:var(--ink)}
+.oc:hover .rt i,.oc:focus-visible .rt i{background:var(--red);border-color:var(--red);color:#fff}
+.oc .inq{display:inline-grid;place-items:center;min-width:22px;height:22px;border-radius:11px;background:var(--gold);font-size:.75rem;font-weight:900;color:var(--ink);padding:0 5px;margin-left:.35rem;vertical-align:2px}
+.os-byo{margin-top:18px;border:2px dashed var(--ink);background:var(--white);padding:14px;display:grid;grid-template-columns:84px 1fr;gap:14px;align-items:center;width:100%;text-align:left;color:inherit}
+.os-byo svg{width:84px;height:84px}
+.os-byo b{display:block;font-family:Ultra,serif;font-weight:400;font-size:1.25rem;color:var(--ink);line-height:1.1}
+.os-byo span{display:block;font-size:.88rem;color:var(--muted);margin-top:.25rem}
+.os-byo em{display:inline-block;font-style:normal;margin-top:.5rem;font-weight:800;font-size:.86rem;letter-spacing:.06em;text-transform:uppercase;font-variation-settings:"wdth" 75;color:var(--red);border-bottom:2px solid var(--red)}
+.os-deliv{margin:26px 0 6px;padding:14px;border:2px solid var(--ink);background:var(--paper2);font-size:.92rem}
+.os-deliv b{display:block;font-weight:900;text-transform:uppercase;letter-spacing:.04em;font-variation-settings:"wdth" 80;color:var(--ink);margin-bottom:.2rem}
+.os-deliv p{color:var(--muted);margin-bottom:.6rem}
+.os-deliv .lk{display:flex;gap:8px;flex-wrap:wrap}
+.os-deliv .lk a{flex:1 1 130px;display:flex;align-items:center;justify-content:center;min-height:44px;border:2px solid var(--ink);background:var(--white);font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-variation-settings:"wdth" 80;color:var(--ink);font-size:.92rem}
+.os-deliv .lk a:hover{background:var(--ink);color:var(--paper)}
+.os-foot{flex:none;padding:10px 14px calc(10px + env(safe-area-inset-bottom));border-top:2px solid var(--ink);background:var(--paper)}
+.os-foot:empty{display:none}
+.os-foot .btn{width:100%;height:56px;font-size:1rem}
+.os-foot .btn[disabled]{opacity:.45;cursor:not-allowed}
+.os-foot .btn .amt{margin-left:auto;font-variant-numeric:tabular-nums}
+.os-foot .btn .lbl2{display:flex;align-items:center;gap:.55rem}
+.os-foot .row2{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:8px;font-size:.88rem;color:var(--muted)}
+.os-foot .hint{text-align:center;font-size:.9rem;color:var(--muted);padding:6px 0}
+.bigbtn{display:flex!important;justify-content:space-between!important;padding:0 1.1rem!important}
+
+/* item layer */
+.oi{position:absolute;inset:0;z-index:5;background:var(--paper);display:flex;flex-direction:column;animation:oiUp .22s ease}
+.oi[hidden]{display:none}
+@keyframes oiUp{from{transform:translateY(24px);opacity:.4}to{transform:none;opacity:1}}
+.oi-x{position:absolute;top:max(10px,env(safe-area-inset-top));right:10px;z-index:3;background:var(--ink);color:var(--paper);border:2px solid var(--paper)}
+.oi-scroll{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding-bottom:24px}
+.oi-hero{position:relative;background:var(--paper2);border-bottom:2px solid var(--ink);aspect-ratio:16/10;overflow:hidden;display:grid;place-items:center}
+.oi-hero img{width:100%;height:100%;object-fit:cover}
+.oi-hero.art{aspect-ratio:auto;padding:22px 0 16px;background:repeating-linear-gradient(45deg,var(--paper2) 0 14px,#e4d5ba 14px 28px)}
+.oi-hero.art svg{width:min(62vw,250px);height:auto;transition:transform .35s ease}
+.oi-hero.art.big svg{transform:scale(1.12)}
+.oi-in{padding:18px 16px 0}
+.oi-in h3{font-family:Ultra,serif;font-weight:400;font-size:1.75rem;line-height:1.05;color:var(--ink)}
+.oi-in .d{color:var(--muted);margin-top:.5rem;font-size:.98rem}
+.oi-in .tgs{display:flex;gap:5px;margin-top:.6rem}
+.og{margin-top:20px;border-top:3px solid var(--ink);padding-top:12px}
+.og h4{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;font-weight:900;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;font-variation-settings:"wdth" 80;color:var(--ink);margin-bottom:10px}
+.og h4 small{font-weight:700;font-size:.74rem;letter-spacing:.08em;color:var(--muted);text-transform:none;font-variation-settings:"wdth" 100}
+.og h4 .req{color:var(--red)}
+.sizes{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sizes label{position:relative;cursor:pointer}
+.sizes input{position:absolute;opacity:0;width:1px;height:1px}
+.sizes span{display:flex;flex-direction:column;align-items:center;gap:.1rem;padding:.75rem .5rem;border:2px solid var(--ink);background:var(--white);text-align:center;min-height:64px;justify-content:center}
+.sizes span b{font-weight:900;font-size:1.05rem;text-transform:uppercase;letter-spacing:.03em;font-variation-settings:"wdth" 80;color:var(--ink)}
+.sizes span em{font-style:normal;font-size:.9rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.sizes input:checked+span{background:var(--ink)}
+.sizes input:checked+span b{color:var(--paper)}
+.sizes input:checked+span em{color:var(--gold)}
+.sizes input:focus-visible+span{box-shadow:4px 4px 0 var(--gold)}
+.tops{display:flex;flex-wrap:wrap;gap:8px}
+.tops label{position:relative;cursor:pointer}
+.tops input{position:absolute;opacity:0;width:1px;height:1px}
+.tops span{display:inline-flex;align-items:center;gap:.4rem;min-height:44px;padding:.45rem .8rem;border:2px solid var(--ink);background:var(--white);font-weight:800;font-size:.92rem;letter-spacing:.03em;text-transform:uppercase;font-variation-settings:"wdth" 80;color:var(--ink)}
+.tops span small{font-weight:700;font-size:.78rem;letter-spacing:0;color:var(--muted);font-variation-settings:"wdth" 100}
+.tops span:before{content:"+";font-weight:900;color:var(--red);width:.7rem}
+.tops input:checked+span{background:var(--ink);color:var(--paper)}
+.tops input:checked+span:before{content:"✓";color:var(--gold)}
+.tops input:checked+span small{color:var(--gold)}
+.tops input:focus-visible+span{box-shadow:3px 3px 0 var(--gold)}
+.og textarea{min-height:76px}
+.og .cc{display:block;text-align:right;font-size:.75rem;color:var(--muted);margin-top:.3rem}
+.oi-foot{flex:none;display:flex;gap:10px;align-items:center;padding:10px 14px calc(10px + env(safe-area-inset-bottom));border-top:2px solid var(--ink);background:var(--paper)}
+.qty{flex:none;display:flex;align-items:center;border:2px solid var(--ink);background:var(--white);height:56px}
+.qty button{width:44px;height:100%;font-size:1.5rem;font-weight:700;color:var(--ink);display:grid;place-items:center}
+.qty button:disabled{opacity:.3;cursor:not-allowed}
+.qty output{min-width:2rem;text-align:center;font-weight:900;font-size:1.1rem;font-variant-numeric:tabular-nums;color:var(--ink)}
+.oi-foot .btn{flex:1;height:56px;padding:0 1rem;justify-content:space-between;font-size:.98rem}
+
+/* cart */
+.cl{display:grid;grid-template-columns:auto 1fr auto;gap:4px 12px;padding:14px 0;border-bottom:1px dotted #a8987d;align-items:start}
+.cl .q{font-weight:900;color:var(--red);font-size:1.05rem;min-width:1.8rem}
+.cl .n b{display:block;font-weight:900;text-transform:uppercase;letter-spacing:.02em;font-variation-settings:"wdth" 75;color:var(--ink);font-size:1.05rem;line-height:1.2}
+.cl .n span{display:block;font-size:.86rem;color:var(--muted);margin-top:.15rem;line-height:1.4}
+.cl .n .pend{color:var(--red);font-weight:700}
+.cl .p{font-weight:900;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.cl .acts{grid-column:2/4;display:flex;gap:16px;margin-top:4px}
+.cl .acts button{font-weight:800;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;font-variation-settings:"wdth" 90;color:var(--ink);border-bottom:2px solid var(--orange);min-height:32px;padding:0}
+.cl .acts .rm{border-color:var(--hair);color:var(--muted)}
+.tot{margin-top:16px;border-top:3px double var(--ink);padding-top:12px}
+.tot div{display:flex;justify-content:space-between;gap:1rem;font-size:.98rem;padding:.2rem 0}
+.tot div b{font-variant-numeric:tabular-nums}
+.tot .big{font-weight:900;font-size:1.2rem;color:var(--ink)}
+.tot .fine{font-size:.84rem;color:var(--muted);margin-top:.3rem;display:block}
+.empty{text-align:center;padding:48px 10px 20px}
+.empty svg{width:110px;height:110px;margin:0 auto 10px;display:block}
+.empty b{display:block;font-family:Ultra,serif;font-weight:400;font-size:1.4rem;color:var(--ink)}
+.empty p{color:var(--muted);margin:.4rem 0 1.2rem}
+.os-h2{font-family:Ultra,serif;font-weight:400;font-size:1.5rem;color:var(--ink);padding-top:18px;line-height:1.1}
+
+/* checkout */
+.ck{display:grid;gap:16px;padding-top:16px}
+.ck .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ck .hint{display:block;font-size:.8rem;color:var(--muted);margin-top:.35rem}
+.ck .err{display:block;font-size:.84rem;color:#9b2414;font-weight:700;margin-top:.35rem}
+.ck input[aria-invalid="true"],.ck select[aria-invalid="true"]{border-color:var(--red);background:#fff7f4}
+.pays{display:grid;gap:10px}
+.pays label{position:relative;cursor:pointer}
+.pays input{position:absolute;opacity:0;width:1px;height:1px}
+.pays span{display:grid;grid-template-columns:24px 1fr;gap:4px 12px;align-items:center;padding:14px;border:2px solid var(--ink);background:var(--white)}
+.pays span:before{content:"";width:20px;height:20px;border-radius:50%;border:2px solid var(--ink);background:#fff;grid-row:1/3;box-shadow:inset 0 0 0 4px #fff}
+.pays input:checked+span{box-shadow:5px 5px 0 var(--gold)}
+.pays input:checked+span:before{background:var(--red)}
+.pays input:focus-visible+span{outline:3px solid var(--orange);outline-offset:2px}
+.pays b{font-weight:900;text-transform:uppercase;letter-spacing:.03em;font-variation-settings:"wdth" 80;color:var(--ink);font-size:1.02rem}
+.pays small{grid-column:2;color:var(--muted);font-size:.86rem;line-height:1.4}
+.optin{display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:start;font-size:.84rem;color:var(--muted);line-height:1.5;cursor:pointer}
+.optin input{width:22px;height:22px;margin-top:2px;appearance:auto;-webkit-appearance:checkbox;padding:0;accent-color:var(--red)}
+.optin a{text-decoration:underline}
+.sumline{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:12px 14px;background:var(--ink);color:var(--paper);font-weight:800}
+.sumline b{color:var(--gold);font-size:1.15rem;font-variant-numeric:tabular-nums}
+.fine{font-size:.84rem;color:var(--muted);line-height:1.5}
+.inapp{border-left:4px solid var(--orange);background:var(--white);padding:10px 12px;font-size:.86rem}
+
+/* done ticket */
+.tk{margin:20px auto 8px;max-width:460px;background:var(--white);border:2px solid var(--ink);position:relative;padding:22px 20px 18px;--h:12px}
+.tk:before,.tk:after{content:"";position:absolute;left:-2px;right:-2px;height:var(--h);background:radial-gradient(circle at 8px 0,transparent 7px,var(--white) 7.5px) repeat-x;background-size:16px var(--h)}
+.tk:before{top:calc(var(--h)*-1 + 2px);transform:rotate(180deg)}
+.tk:after{bottom:calc(var(--h)*-1 + 2px)}
+.tk .stp{display:inline-block;border:3px solid var(--red);color:var(--red);font-weight:900;letter-spacing:.12em;text-transform:uppercase;font-variation-settings:"wdth" 90;padding:.25rem .6rem;transform:rotate(-4deg);font-size:.86rem}
+.tk h3{font-family:Ultra,serif;font-weight:400;font-size:2.2rem;color:var(--ink);line-height:1;margin:.7rem 0 .2rem}
+.tk .when{font-weight:900;font-size:1.15rem;text-transform:uppercase;letter-spacing:.03em;font-variation-settings:"wdth" 80;color:var(--ink)}
+.tk .meta{margin:.9rem 0;padding:.8rem 0;border-top:2px dashed var(--ink);border-bottom:2px dashed var(--ink);display:grid;gap:.35rem;font-size:.95rem}
+.tk .meta b{color:var(--ink)}
+.tk ul{list-style:none;font-size:.92rem}
+.tk li{display:flex;justify-content:space-between;gap:1rem;padding:.2rem 0}
+.tk li span:last-child{font-variant-numeric:tabular-nums;font-weight:700;color:var(--ink)}
+.tk li small{display:block;color:var(--muted);font-size:.8rem}
+.tk .tt{display:flex;justify-content:space-between;font-weight:900;color:var(--ink);font-size:1.1rem;margin-top:.5rem;padding-top:.5rem;border-top:3px double var(--ink)}
+.done-acts{display:grid;gap:10px;max-width:460px;margin:18px auto 0}
+.done-acts .btn{width:100%}
+.done-msg{max-width:460px;margin:16px auto 0;text-align:center}
+.done-msg b{display:block;font-family:Ultra,serif;font-weight:400;font-size:1.45rem;color:var(--ink);line-height:1.15}
+.done-msg p{color:var(--muted);margin-top:.4rem}
+@media(max-width:380px){.oc{grid-template-columns:60px 1fr auto;gap:10px}.oc .ph{width:60px;height:60px}.ck .two{grid-template-columns:1fr}.os-t b{font-size:1.1rem}}
+@media(prefers-reduced-motion:reduce){.oi{animation:none}.byo-t{animation:none!important}}
+
+/* pizza art */
+.byo-t{transform-box:fill-box;transform-origin:center;animation:popin .28s ease both}
+@keyframes popin{from{transform:scale(.2);opacity:0}to{transform:scale(1);opacity:1}}
+
+.oi-in.nohero{padding-top:66px}
+.oi-in.nohero h3{padding-right:8px}
+@media(max-width:600px){
+  .mi .pr{font-size:.92rem}
+  .mi .pr span{width:3.5rem}
+  .grp h3 .sz span{width:3.5rem}
+  .grp h3 .sz{font-size:.56rem;letter-spacing:.08em}
+  .madd{width:28px;height:28px;font-size:1.1rem;margin-left:.25rem}
+  .ev-cta{margin-top:28px}
+  .tcard p{font-size:.95rem}
+  .pq{font-size:1.08rem}
+  .pq.sm{font-size:.95rem}
+  .press{margin-bottom:48px}
+  .stubs b{font-size:.95rem}
+  .mstats small{font-size:.58rem}
+}
+
+/* menu row: name and tags wrap together so prices never push past the edge */
+.mi .nmw{display:flex;flex-wrap:wrap;align-items:center;gap:.3rem .45rem;min-width:0;flex:0 1 auto}
+.mi .nmw .tg{flex:none}
+.grp h3 .sz .szsp{width:calc(30px + .35rem)}
+@media(max-width:700px){.mi .nm{white-space:normal}}
+@media(max-width:600px){.grp h3 .sz .szsp{width:calc(28px + .25rem)}}
+.ev-row,.tcards{scroll-padding-inline:18px}
+.tcard blockquote,.pq{font-family:Archivo,system-ui,sans-serif}
+.tcard blockquote{font-size:inherit;line-height:inherit;color:inherit}
+.mempty{bottom:30px}
+
+/* printed menu: one column until there is room for two columns of prices */
+@media(max-width:1199px){.cols{grid-template-columns:1fr}}
+.mi .pr span{width:3.8rem}
+.grp h3 .sz span{width:3.8rem}
+@media(max-width:600px){.mi .pr span,.grp h3 .sz span{width:3.4rem}}
+@media(max-width:360px){
+  .mi .pr span,.grp h3 .sz span{width:3.05rem}
+  .mi .pr{font-size:.86rem}
+  .mi .lead{min-width:8px}
+  .mi .top-line{gap:.3rem}
+  .madd{width:26px;height:26px;margin-left:.15rem}
+  .grp h3 .sz .szsp{width:calc(26px + .15rem)}
+  .mi .nm{font-size:.9rem}
+}
+@media(max-width:1100px){.frame .stamp{right:-8px}}
+
+.oc .tx .dsc{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:.86rem;color:var(--muted);line-height:1.4;margin-top:.2rem}
+.oc .tx .tgs{display:flex;gap:4px;margin-top:.4rem}
+.os-sec .osub{font-size:.84rem;font-style:italic;color:var(--muted);margin-top:.25rem}
+form.ck,form.fjoin{background:none;border:0;padding:16px 0 0;box-shadow:none}
+form.ck{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+form.fjoin{padding:22px;border:2px solid rgba(242,233,216,.3)}
+form.ck:before,form.fjoin:before{display:none}
+.oc .tx b .inq{display:inline-grid}
+
+.os-sec h3:not(:first-child){margin-top:24px}
+
+.cols{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:1199px){.cols{grid-template-columns:minmax(0,1fr)}}
+.mi .nmw .nm{white-space:normal}
+.pinform{grid-template-columns:minmax(0,1fr)}
+
+.grp h3{flex-wrap:wrap;row-gap:.2rem}
+.grp h3 .sz{flex:none}
+.grp h3 .sz .szsp{width:calc(30px + .8rem)}
+@media(max-width:600px){.grp h3 .sz .szsp{width:calc(28px + .7rem)}}
+@media(max-width:360px){.grp h3 .sz .szsp{width:calc(26px + .45rem)}}
+@media(max-width:420px){.mtitle .sub{font-size:.56rem;letter-spacing:.2em}}
+
+/* contrast: darker red for small text on light paper */
+.lbl,.band a.go,.og h4 .req,.cl .q,.cl .pend,.os-byo em,.fadd span,.tops span:before{color:var(--red-t)}
+.os-byo em{border-color:var(--red-t)}
+.tk .stp{color:var(--red-t);border-color:var(--red-t)}
+footer h3.fh{color:var(--paper);font-size:.7rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase;font-variation-settings:"wdth" 125;margin-bottom:.9rem;font-family:Archivo,sans-serif}
+.cite{color:#fff}
+.themes span{color:#fff;border-color:#fff}
+.rates{color:#fff}
+.rates span:not(.asof){background:var(--ink);padding:.3rem .6rem;color:var(--paper);font-weight:600}
+.rates b{color:var(--gold)}
+.rates .asof{color:#fff}
+
 </style>
 </head>
 <body>
@@ -421,11 +873,12 @@ footer a:hover{color:#fff;text-decoration:underline}
 
 <header class="site">
   <div class="wrap hdr">
-    <a href="#top" class="brand" aria-label="By Yurii’s Pizza home"><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513a7436f78fefb7ecb99.jpg" data-k="logo" alt="By Yurii’s Pizza logo" width="56" height="56"><span><b>By Yurii’s</b><small>Pizza · Junction City</small></span></a>
-    <nav class="nav" aria-label="Main"><a href="#menu">Menu</a><a href="#catering">Catering</a><a href="#visit">Hours &amp; Location</a><a href="#gallery">Photos</a></nav>
-    <a href="tel:+17855568303" class="btn btn-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call to order</a>
+    <a href="#top" class="brand"><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513a7436f78fefb7ecb99.jpg" data-k="logo" alt="" width="56" height="56"><span><b>By Yurii’s</b><small>Pizza · Junction City</small></span></a>
+    <nav class="nav" aria-label="Main"><a href="#menu">Menu</a><a href="#catering">Catering</a><a href="#story">Our Story</a><a href="#visit">Hours &amp; Location</a></nav>
+    <button type="button" class="btn btn-red hbtn" data-order><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>Order online<span class="cnt" data-cart-count hidden></span></button>
   </div>
 </header>
+<div class="tbanner" id="tbanner" role="status" hidden></div>
 
 <main id="top">
 <section class="hero">
@@ -434,18 +887,19 @@ footer a:hover{color:#fff;text-decoration:underline}
       <div>
         <span class="ticket"><span class="dot" id="heroDot"></span><span id="heroStatus">Food truck · 901 N Washington St</span></span>
         <h1 class="disp">New York pizza<br><span class="l2">in <span class="stripe-hl">Junction City</span></span></h1>
-        <p class="lead">Handmade 12 inch pies, halal gyros, calzones and cannoli, made fresh on our food truck on North Washington Street. Call ahead and it’ll be hot when you pull up.</p>
+        <p class="lead">Handmade 12 and 16 inch pies, halal gyros, calzones and cannoli, made fresh on our food truck on North Washington Street. Order ahead and it’ll be hot when you pull up.</p>
         <div class="btns">
-          <a href="tel:+17855568303" class="btn btn-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>785.556.8303</a>
-          <button class="btn btn-line" data-order>Order online</button>
+          <button type="button" class="btn btn-red" data-order>Order online for pickup</button>
+          <a href="tel:+17855568303" class="btn btn-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>785.556.8303</a>
         </div>
         <div class="proof">
           <span><span class="st">★★★★★</span><b>4.9</b> on Uber Eats</span>
+          <span><b>4.6</b> on Google, 63 reviews</span>
           <span><b>Halal</b> beef and lamb gyros</span>
         </div>
       </div>
       <div class="frame">
-        <div class="big"><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da436f78fefb7ed098.jpg" data-k="pepcannoli" alt="Pepperoni pizza with a box of cannoli and a By Yurii’s business card"></div>
+        <div class="big"><img fetchpriority="high" src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da436f78fefb7ed098.jpg" data-k="pepcannoli" alt="Pepperoni pizza with a box of cannoli and a By Yurii’s business card"></div>
         <div class="row"><div><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da989628c77a633dd2.jpg" data-k="pickle" alt="Pickle pizza"></div><div><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513dbcd7225ed37d10ec3.jpg" data-k="taco" alt="Taco pizza"></div></div>
         <div class="cap"><span>Pepperoni &amp; cannoli</span><span>Pickle · Taco</span></div>
         <img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513a7436f78fefb7ecb99.jpg" class="stamp" data-k="logo" alt="" aria-hidden="true">
@@ -454,7 +908,7 @@ footer a:hover{color:#fff;text-decoration:underline}
     <div class="band">
       <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><small>Hours today</small><b id="icHours">Tue 4 to 8 pm</b><a class="go" href="#visit">All hours</a></span></div>
       <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span><small>Find the truck</small><b>901 N Washington St</b><a class="go" href="https://www.google.com/maps/search/?api=1&query=901%20N%20Washington%20St%2C%20Junction%20City%2C%20KS%2066441" target="_blank" rel="noopener">Get directions</a></span></div>
-      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h13v10H3zM16 10h3l2 3v4h-5"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg><span><small>Pickup &amp; delivery</small><b>Call or order online</b><a class="go" href="#" data-order>DoorDash or Uber Eats</a></span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h13v10H3zM16 10h3l2 3v4h-5"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg><span><small>Pickup &amp; delivery</small><b>Order online for pickup</b><a class="go" href="#" data-deliver>Delivery on DoorDash or Uber Eats</a></span></div>
     </div>
   </div>
 </section>
@@ -466,10 +920,10 @@ footer a:hover{color:#fff;text-decoration:underline}
       <a href="#menu" class="ulink">Full menu</a>
     </div>
     <div class="favs">
-      <article class="fav fade"><div class="im" data-k="pickle"><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da989628c77a633dd2.jpg" data-k="pickle" alt="Pickle pizza"><span class="tag">House favorite</span></div><h3>Pickle Pizza</h3><p>Pickles on our white base, served with a cup of garlic sauce.</p></article>
-      <article class="fav fade"><div class="im" data-k="chicken"><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da436f78fefb7ed07f.jpg" data-k="chicken" alt="Chicken bacon ranch pizza"><span class="tag">Popular</span></div><h3>Chicken Bacon Ranch</h3><p>House garlic sauce, chicken, bacon and a ranch drizzle.</p></article>
-      <article class="fav fade"><div class="im" data-k="taco"><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513dbcd7225ed37d10ec3.jpg" data-k="taco" alt="Taco pizza"></div><h3>Taco Pizza</h3><p>Seasoned beef, cheddar, lettuce, tomato and sour cream.</p></article>
-      <article class="fav fade"><div class="im" data-k="pepperoni"><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da989628c77a633dc6.jpg" data-k="pepperoni" alt="Pepperoni pizza"><span class="tag">Popular</span></div><h3>Pepperoni</h3><p>The New York classic, covered in crispy cupped pepperoni.</p></article>
+      <article class="fav fade"><div class="im" data-k="pickle"><img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da989628c77a633dd2.jpg" data-k="pickle" alt="Pickle pizza"><span class="tag">House favorite</span></div><h3>Pickle Pizza</h3><p>Pickles on our white base, served with a cup of garlic sauce.</p><button type="button" class="fadd" data-add="pickle">Add to order <span aria-hidden="true">+</span></button></article>
+      <article class="fav fade"><div class="im" data-k="chicken"><img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da436f78fefb7ed07f.jpg" data-k="chicken" alt="Chicken bacon ranch pizza"><span class="tag">Popular</span></div><h3>Chicken Bacon Ranch</h3><p>House garlic sauce, chicken, bacon and a ranch drizzle.</p><button type="button" class="fadd" data-add="cbr">Add to order <span aria-hidden="true">+</span></button></article>
+      <article class="fav fade"><div class="im" data-k="taco"><img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513dbcd7225ed37d10ec3.jpg" data-k="taco" alt="Taco pizza"></div><h3>Taco Pizza</h3><p>Seasoned beef, cheddar, lettuce, tomato and sour cream.</p><button type="button" class="fadd" data-add="taco">Add to order <span aria-hidden="true">+</span></button></article>
+      <article class="fav fade"><div class="im" data-k="pepperoni"><img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da989628c77a633dc6.jpg" data-k="pepperoni" alt="Pepperoni pizza"><span class="tag">Popular</span></div><h3>Pepperoni</h3><p>The New York classic, covered in crispy cupped pepperoni.</p><button type="button" class="fadd" data-add="pepperoni">Add to order <span aria-hidden="true">+</span></button></article>
     </div>
   </div>
 </section>
@@ -480,101 +934,52 @@ footer a:hover{color:#fff;text-decoration:underline}
   <div class="wrap">
     <div class="sheetm">
       <div class="mtitle"><h2 class="disp">The Menu</h2><span class="sub">By Yurii’s Pizza · Junction City, KS</span></div>
-      <div class="mrule"><span>12 inch pies · Made by hand</span></div>
+      <div class="mrule"><span>12 &amp; 16 inch pies · Made by hand</span></div>
 
       <div class="tabs" role="tablist" aria-label="Menu categories">
         <button role="tab" aria-selected="true" aria-controls="p-pizza" id="t-pizza">Pizza</button>
-        <button role="tab" aria-selected="false" aria-controls="p-calz" id="t-calz">Calzones<span class="x"> &amp; Knots</span></button>
-        <button role="tab" aria-selected="false" aria-controls="p-gyro" id="t-gyro">Gyros<span class="x"> &amp; Rice</span></button>
+        <button role="tab" aria-selected="false" aria-controls="p-calz" id="t-calz">Calzones<span class="x"> &amp; Strombolis</span></button>
+        <button role="tab" aria-selected="false" aria-controls="p-gyro" id="t-gyro">Gyros</button>
         <button role="tab" aria-selected="false" aria-controls="p-sweet" id="t-sweet">Desserts</button>
       </div>
 
       <div class="panel" id="p-pizza" role="tabpanel" aria-labelledby="t-pizza">
-        <div>
-          <div class="cols">
-            <div class="grp"><h3><span class="sauce red"></span>Red Sauce</h3><span class="gsub">Classic tomato sauce and mozzarella</span><div class="rule"></div>
-              <div class="mi"><div class="top-line"><span class="nm">Cheese</span><span class="lead"></span><span class="tg pop">Popular</span><span class="tg veg">V</span></div><span class="ds">Red sauce and melted mozzarella. The New York classic.</span></div>
-              <div class="mi"><div class="top-line"><span class="nm">Pepperoni</span><span class="lead"></span><span class="tg pop">Popular</span></div><span class="ds">Covered in crispy cupped pepperoni.</span></div>
-              <div class="mi"><div class="top-line"><span class="nm">Supreme</span><span class="lead"></span></div><span class="ds">Pepperoni, mushrooms, green peppers, onions and black olives.</span></div>
-              <div class="mi"><div class="top-line"><span class="nm">Meat Lovers</span><span class="lead"></span></div><span class="ds">Pepperoni, sausage, bacon and ham.</span></div>
-              <div class="mi"><div class="top-line"><span class="nm">Hawaiian</span><span class="lead"></span></div><span class="ds">Ham and pineapple.</span></div>
-            </div>
-            <div class="grp"><h3><span class="sauce white"></span>White Sauce</h3><span class="gsub">Our house garlic Alfredo base</span><div class="rule"></div>
-              <div class="mi"><div class="top-line"><span class="nm">White Pizza</span><span class="lead"></span><span class="tg veg">V</span></div><span class="ds">Garlic Alfredo and whole milk mozzarella.</span></div>
-              <div class="mi"><div class="top-line"><span class="nm">4 Cheese</span><span class="lead"></span><span class="tg pop">Popular</span><span class="tg veg">V</span></div><span class="ds">A four cheese blend on a rich, creamy base.</span></div>
-              <div class="mi"><div class="top-line"><span class="nm">Chicken Bacon Ranch</span><span class="lead"></span><span class="tg pop">Popular</span></div><span class="ds">Chicken, bacon and mozzarella with a ranch drizzle.</span></div>
-              <div class="mi"><div class="top-line"><span class="nm">Pickle Pizza</span><span class="lead"></span><span class="tg fav">Fave</span><span class="tg veg">V</span></div><span class="ds">Pickles on our white base, with garlic sauce on the side.</span></div>
-              <div class="mi"><div class="top-line"><span class="nm">BBQ Chicken</span><span class="lead"></span></div><span class="ds">Chicken and barbecue sauce.</span></div>
-              <div class="mi"><div class="top-line"><span class="nm">Buffalo Chicken</span><span class="lead"></span></div><span class="ds">Chicken and buffalo sauce.</span></div>
-            </div>
-          </div>
-          <div class="cols" style="margin-top:8px">
-            <div class="grp"><h3>NY Specialties</h3><div class="rule"></div>
-              <div class="mi"><div class="top-line"><span class="nm">Taco Pizza</span><span class="lead"></span></div><span class="ds">Seasoned beef, cheddar, lettuce, tomato and sour cream.</span></div>
-              <div class="mi"><div class="top-line"><span class="nm">Prosciutto Arugula</span><span class="lead"></span></div><span class="ds">Thin sliced prosciutto topped with fresh arugula.</span></div>
-            </div>
-            <div class="grp"><h3>Personal Size</h3><div class="rule"></div>
-              <div class="mi"><div class="top-line"><span class="nm">7 Inch Pita Pizza</span><span class="lead"></span></div><span class="ds">A personal pizza made on fresh pita. Just right for one.</span></div>
-            </div>
-          </div>
-          <div class="byo">
-            <b>Make your own</b>
-            <p>Start with a cheese pie on red or white sauce and pile on your favorites.</p>
-            <div class="chips"><span>Pepperoni</span><span>Sausage</span><span>Bacon</span><span>Ham</span><span>Chicken</span><span>Mushrooms</span><span>Green peppers</span><span>Onions</span><span>Black olives</span><span>Pineapple</span><span>Pickles</span></div>
-          </div>
+        <div class="mbody" data-menu="pizza"></div>
+        <div class="side">
+          <figure class="mp tall" data-k="pepperoni"><img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da989628c77a633dc6.jpg" data-k="pepperoni" alt="Pepperoni pizza"><figcaption>Pepperoni</figcaption></figure>
+          <figure class="mp" data-k="supreme"><img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da989628c77a633dde.jpg" data-k="supreme" alt="Supreme pizza"><figcaption>Supreme</figcaption></figure>
         </div>
-        <aside class="side">
-          <figure class="mp tall" data-k="pepperoni"><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da989628c77a633dc6.jpg" data-k="pepperoni" alt="Pepperoni pizza"><figcaption>Pepperoni</figcaption></figure>
-          <figure class="mp" data-k="supreme"><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da989628c77a633dde.jpg" data-k="supreme" alt="Supreme pizza"><figcaption>Supreme</figcaption></figure>
-        </aside>
       </div>
 
       <div class="panel" id="p-calz" role="tabpanel" aria-labelledby="t-calz" hidden>
-        <div>
-          <div class="grp"><h3>Calzones, Strombolis &amp; Knots</h3><span class="gsub">Folded, rolled and baked to order</span><div class="rule"></div>
-            <div class="mi"><div class="top-line"><span class="nm">Calzone</span><span class="lead"></span></div><span class="ds">Folded, stuffed and baked golden, with marinara on the side for dipping.</span></div>
-            <div class="mi"><div class="top-line"><span class="nm">Meat Lovers Stromboli</span><span class="lead"></span></div><span class="ds">Fresh dough rolled up with meats and cheese and baked until crisp.</span></div>
-            <div class="mi"><div class="top-line"><span class="nm">Garlic Knots</span><span class="lead"></span><span class="tg veg">V</span></div><span class="ds">Six warm garlic knots to an order. Great with any pie.</span></div>
-          </div>
+        <div class="mbody" data-menu="calz"></div>
+        <div class="side">
+          <figure class="mp" data-k="calzone"><img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9989628c77a633d88.jpg" data-k="calzone" alt="Calzone with marinara"><figcaption>Calzone</figcaption></figure>
+          <figure class="mp" data-k="rolls"><img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513db3cacdd9117ad0000.jpg" data-k="rolls" alt="Stromboli"><figcaption>Stromboli</figcaption></figure>
         </div>
-        <aside class="side">
-          <figure class="mp" data-k="calzone"><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9989628c77a633d88.jpg" data-k="calzone" alt="Calzone with marinara"><figcaption>Calzone</figcaption></figure>
-          <figure class="mp" data-k="rolls"><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513db3cacdd9117ad0000.jpg" data-k="rolls" alt="Stromboli"><figcaption>Stromboli</figcaption></figure>
-        </aside>
       </div>
 
       <div class="panel" id="p-gyro" role="tabpanel" aria-labelledby="t-gyro" hidden>
-        <div>
-          <div class="grp"><h3>Gyros &amp; Rice</h3><span class="gsub">New York street cart style</span><div class="rule"></div>
-            <div class="mi"><div class="top-line"><span class="nm">Gyro</span><span class="lead"></span><span class="tg hal">Halal</span></div><span class="ds">Beef and lamb with tzatziki, red onion, tomato and lettuce in warm pita. Add special sauce or feta.</span></div>
-            <div class="mi"><div class="top-line"><span class="nm">Chicken over Rice</span><span class="lead"></span></div><span class="ds">Yellow rice topped with chicken, lettuce and tomato.</span></div>
-            <div class="mi"><div class="top-line"><span class="nm">Meat over Rice</span><span class="lead"></span></div><span class="ds">Yellow rice with a beef and lamb mix, lettuce and tomato.</span></div>
-          </div>
-        </div>
-        <aside class="side">
+        <div class="mbody" data-menu="gyro"></div>
+        <div class="side">
           <div class="note"><b>Street cart style, right here</b><p>Our gyros are made with halal beef and lamb, wrapped warm with tzatziki and fresh veggies. Add special sauce or feta to make it yours.</p></div>
-        </aside>
+        </div>
       </div>
 
       <div class="panel" id="p-sweet" role="tabpanel" aria-labelledby="t-sweet" hidden>
-        <div>
-          <div class="grp"><h3>Desserts</h3><span class="gsub">Save room</span><div class="rule"></div>
-            <div class="mi"><div class="top-line"><span class="nm">Small Cannoli</span><span class="lead"></span></div><span class="ds">By the 4 pack, or grab a dozen for the party.</span></div>
-            <div class="mi"><div class="top-line"><span class="nm">Large Chocolate Cannoli</span><span class="lead"></span></div><span class="ds">Dipped in chocolate and dusted with powdered sugar.</span></div>
-            <div class="mi"><div class="top-line"><span class="nm">Ferrero Rocher Pizza</span><span class="lead"></span></div><span class="ds">A chocolate and hazelnut dessert pizza made for sharing.</span></div>
-          </div>
+        <div class="mbody" data-menu="sweet"></div>
+        <div class="side">
+          <figure class="mp" data-k="cannoli2"><img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9f9a985d42cfb6417.jpg" data-k="cannoli2" alt="Assorted cannoli"><figcaption>Cannoli</figcaption></figure>
+          <figure class="mp" data-k="cannoli1"><img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9cd7225ed37d10e2e.jpg" data-k="cannoli1" alt="Chocolate chip cannoli"><figcaption>Sweet finish</figcaption></figure>
         </div>
-        <aside class="side">
-          <figure class="mp" data-k="cannoli2"><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9f9a985d42cfb6417.jpg" data-k="cannoli2" alt="Assorted cannoli"><figcaption>Cannoli</figcaption></figure>
-          <figure class="mp" data-k="cannoli1"><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9cd7225ed37d10e2e.jpg" data-k="cannoli1" alt="Chocolate chip cannoli"><figcaption>By the dozen</figcaption></figure>
-        </aside>
       </div>
 
+      <noscript><p class="nos">Our full menu needs JavaScript to show. Call us at 785.556.8303 and we’ll read it to you.</p></noscript>
       <div class="legend"><span><span class="tg pop">Popular</span> Most ordered</span><span><span class="tg fav">Fave</span> House favorite</span><span><span class="tg veg">V</span> Vegetarian</span><span><span class="tg hal">Halal</span> Halal meat</span></div>
     </div>
     <div class="mfoot">
-      <p>Menu and prices can change, so call for today’s prices and specials. You can also see current prices and order on DoorDash or Uber Eats.</p>
-      <div class="btns"><a href="tel:+17855568303" class="btn btn-gold">Call to order</a><button class="btn btn-line" data-order>Order online</button></div>
+      <p>These are our prices at the truck. The delivery apps set their own prices, and our menu can change, so give us a call if you have a question about today’s specials.</p>
+      <div class="btns"><button type="button" class="btn btn-gold" data-order>Order online</button><a href="tel:+17855568303" class="btn btn-line">Call 785.556.8303</a></div>
     </div>
   </div>
 </section>
@@ -584,31 +989,52 @@ footer a:hover{color:#fff;text-decoration:underline}
 <section id="catering">
   <div class="wrap">
     <div class="cgrid">
-      <figure class="cphoto fade"><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513db436f78fefb7ed0c4.jpg" data-k="woodfire" alt="Wood fired pizzas served at an outdoor event"><figcaption class="cap">Wood fired at a private event</figcaption></figure>
+      <figure class="cphoto fade"><img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513db436f78fefb7ed0c4.jpg" data-k="woodfire" alt="Wood fired pizzas served at an outdoor event"><figcaption class="cap">Wood fired at a private event</figcaption></figure>
       <div class="ccopy fade">
         <span class="lbl">Catering &amp; events</span>
         <h2 class="disp">Wood fired pizza, <span class="stripe-hl">only at your event</span></h2>
         <p>Our wood fired pizza isn’t on the everyday menu. We save it for catering and private events, so your guests get pizza baked fresh right in front of them.</p>
         <p>Round it out with platters, appetizers and a tray of cannoli, and we’ll put together a menu that fits your crowd.</p>
         <ul class="offer">
-          <li><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513dacd7225ed37d10e51.jpg" data-k="margherita" alt="">Wood fired pizzas</li>
-          <li><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513daf9a985d42cfb6434.jpg" data-k="charc2" alt="">Charcuterie &amp; cheese</li>
-          <li><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da436f78fefb7ed072.jpg" data-k="fruit2" alt="">Fruit platters</li>
-          <li><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513db436f78fefb7ed0b8.jpg" data-k="veggie" alt="">Veggie trays</li>
-          <li><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9f9a985d42cfb640c.jpg" data-k="bruschetta" alt="">Bruschetta &amp; caprese</li>
-          <li><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9f9a985d42cfb6417.jpg" data-k="cannoli2" alt="">Cannoli trays</li>
+          <li><img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513dacd7225ed37d10e51.jpg" data-k="margherita" alt="">Wood fired pizzas</li>
+          <li><img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513daf9a985d42cfb6434.jpg" data-k="charc2" alt="">Charcuterie &amp; cheese</li>
+          <li><img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da436f78fefb7ed072.jpg" data-k="fruit2" alt="">Fruit platters</li>
+          <li><img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513db436f78fefb7ed0b8.jpg" data-k="veggie" alt="">Veggie trays</li>
+          <li><img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9f9a985d42cfb640c.jpg" data-k="bruschetta" alt="">Bruschetta &amp; caprese</li>
+          <li><img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9f9a985d42cfb6417.jpg" data-k="cannoli2" alt="">Cannoli trays</li>
         </ul>
         <p class="for"><b>Great for</b> birthdays, weddings, corporate events and private parties around Junction City, Fort Riley, Manhattan, Ogden and Milford.</p>
         <a href="#book" class="btn btn-ink">Plan your event</a>
       </div>
     </div>
     <div class="strip">
-      <figure class="fade" data-k="spread"><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513dacd7225ed37d10e98.jpg" data-k="spread" alt="Catering spread with meats, cheeses and fruit"></figure>
-      <figure class="fade" data-k="caprese"><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9436f78fefb7ed054.jpg" data-k="caprese" alt="Caprese with balsamic"></figure>
-      <figure class="fade" data-k="charc1"><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9989628c77a633d89.jpg" data-k="charc1" alt="Meat and cheese platter"></figure>
-      <figure class="fade" data-k="fruit1"><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da3cacdd9117acffd4.jpg" data-k="fruit1" alt="Fruit platter"></figure>
-      <figure class="fade" data-k="cannoli1"><img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9cd7225ed37d10e2e.jpg" data-k="cannoli1" alt="Chocolate chip cannoli"></figure>
+      <figure class="fade" data-k="spread"><img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513dacd7225ed37d10e98.jpg" data-k="spread" alt="Catering spread with meats, cheeses and fruit"></figure>
+      <figure class="fade" data-k="caprese"><img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9436f78fefb7ed054.jpg" data-k="caprese" alt="Caprese with balsamic"></figure>
+      <figure class="fade" data-k="charc1"><img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9989628c77a633d89.jpg" data-k="charc1" alt="Meat and cheese platter"></figure>
+      <figure class="fade" data-k="fruit1"><img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da3cacdd9117acffd4.jpg" data-k="fruit1" alt="Fruit platter"></figure>
+      <figure class="fade" data-k="cannoli1"><img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9cd7225ed37d10e2e.jpg" data-k="cannoli1" alt="Chocolate chip cannoli"></figure>
     </div>
+  </div>
+</section>
+
+<section id="event-photos" class="evp" hidden>
+  <div class="wrap">
+    <div class="head fade">
+      <div><span class="lbl">What to expect</span><h2 class="disp">What your event looks like</h2></div>
+      <p>Real photos from an event we served in Topeka. Truck, tent, fresh dough and a whole lot of pizza boxes.</p>
+    </div>
+    <div class="evgrid">
+      <figure class="ev-main fade" data-k="topeka01"><img data-img="topeka01" width="1400" height="1000" loading="lazy" alt="Red By Yurii’s food trailer with a white tent on a lawn and guests lined up at an event in Topeka"><figcaption>The truck and tent, set up on site</figcaption></figure>
+      <div class="ev-row" aria-label="Event photos" tabindex="0">
+        <figure data-k="topeka02"><img data-img="topeka02" width="933" height="1400" loading="lazy" alt="Cook in a red shirt tossing pizza dough in the air under a white tent"><figcaption>Dough tossed by hand under the tent</figcaption></figure>
+        <figure data-k="topeka03"><img data-img="topeka03" width="1000" height="1400" loading="lazy" alt="Smiling cook holding a freshly stretched pizza dough"><figcaption>Fresh dough, stretched right there</figcaption></figure>
+        <figure data-k="topeka04"><img data-img="topeka04" width="1400" height="933" loading="lazy" alt="A fresh pizza sliding off a peel into a pizza box"><figcaption>Off the peel and into the box</figcaption></figure>
+        <figure data-k="topeka06"><img data-img="topeka06" width="1400" height="1000" loading="lazy" alt="Cook handing a boxed pizza to a guest beside the red trailer"><figcaption>Handed right to your guests</figcaption></figure>
+        <figure data-k="topeka07"><img data-img="topeka07" width="1000" height="1400" loading="lazy" alt="Smiling guest holding her pizza box"><figcaption>One happy guest</figcaption></figure>
+        <figure data-k="topeka08"><img data-img="topeka08" width="1000" height="1400" loading="lazy" alt="Four guests holding pizza boxes in front of an office building"><figcaption>Pizza for the whole crew</figcaption></figure>
+      </div>
+    </div>
+    <p class="ev-cta fade"><a href="#book" class="btn btn-red">Book the truck</a><span>One private event a day. A $600 deposit locks in your date.</span></p>
   </div>
 </section>
 
@@ -617,43 +1043,130 @@ footer a:hover{color:#fff;text-decoration:underline}
     <div class="bcopy fade">
       <span class="lbl">Book the truck</span>
       <h2 class="disp">Bring By Yurii’s to your party</h2>
-      <p>Tell us about your event and we’ll get back to you with menu ideas and a quote.</p>
+      <p>Pick your date, put down the deposit, and we’ll bring the truck and cook for your crew.</p>
       <ol class="steps">
-        <li><span class="n">1</span><div><b>Send us the details</b><span>Date, location and about how many people.</span></div></li>
-        <li><span class="n">2</span><div><b>We plan the menu together</b><span>Truck favorites, wood fired pizza, platters or a mix.</span></div></li>
-        <li><span class="n">3</span><div><b>We show up and cook</b><span>Hot food for your guests and no cleanup for you.</span></div></li>
+        <li><span class="n">1</span><div><b>Pick your date</b><span>We take one private event a day, so the day is all yours.</span></div></li>
+        <li><span class="n">2</span><div><b>Lock it in with a $600 deposit</b><span>Your date is held for you once the deposit is in.</span></div></li>
+        <li><span class="n">3</span><div><b>We plan the menu and show up</b><span>Truck favorites, wood fired pizza, platters or a mix. Hot food for your guests and no cleanup for you.</span></div></li>
       </ol>
-      <p class="call">Rather talk it through? Call <a href="tel:+17855568303">785.556.8303</a></p>
+      <p class="call">Questions first? Call or text <a href="tel:+17855568303">785.556.8303</a></p>
     </div>
-    <form id="bf" class="fade" novalidate>
-      <h3>Event request</h3>
-      <div><label class="fl" for="fn">Name</label><input id="fn" required autocomplete="name"></div>
-      <div><label class="fl" for="fp">Phone</label><input id="fp" type="tel" required autocomplete="tel"></div>
-      <div><label class="fl" for="fd">Event date</label><input id="fd" type="date" required></div>
-      <div><label class="fl" for="fg">Guests</label><select id="fg"><option>Under 25</option><option selected>25 to 50</option><option>50 to 100</option><option>100 to 200</option><option>Over 200</option></select></div>
-      <div class="full"><label class="fl" for="fl">Event location</label><input id="fl" placeholder="Venue or address"></div>
-      <div class="full"><span class="fl">What are you interested in?</span>
-        <div class="checks" id="fw">
-          <label><input type="checkbox" value="Food truck" checked><span>Food truck</span></label>
-          <label><input type="checkbox" value="Wood fired pizza"><span>Wood fired pizza</span></label>
-          <label><input type="checkbox" value="Platters"><span>Platters</span></label>
-          <label><input type="checkbox" value="Cannoli trays"><span>Cannoli trays</span></label>
-        </div></div>
-      <div class="full"><label class="fl" for="fm">Anything else?</label><textarea id="fm" placeholder="Type of event, serving time, dietary needs"></textarea></div>
-      <button type="submit" class="btn btn-red">Send request by text</button>
-      <p class="fnote">Opens your messages app with everything filled in, ready to send to 785.556.8303.</p>
-      <p class="sent" id="sent" role="status"></p>
-    </form>
+    <div class="bslot fade">
+      <div class="bcal" id="bcal" hidden>
+        <div class="bcal-h"><b>Pick your date</b><span>Booked dates are already blocked out. The $600 deposit is paid by card when you book.</span></div>
+        <div class="bcal-frame" id="bcalFrame"><p class="bcal-load">Loading the calendar…</p></div>
+      </div>
+      <form id="bf" novalidate>
+        <h3>Event request</h3>
+        <p class="fintro full">Tell us your date and we’ll confirm it’s open. We take one private event a day, and a $600 deposit locks it in.</p>
+        <div><label class="fl" for="fn">Name</label><input id="fn" required autocomplete="name"></div>
+        <div><label class="fl" for="fp">Phone</label><input id="fp" type="tel" inputmode="tel" required autocomplete="tel"></div>
+        <div><label class="fl" for="fd">Event date</label><input id="fd" type="date" required></div>
+        <div><label class="fl" for="fg">Guests</label><select id="fg"><option>Under 25</option><option selected>25 to 50</option><option>50 to 100</option><option>100 to 200</option><option>Over 200</option></select></div>
+        <div class="full"><label class="fl" for="fl">Event location</label><input id="fl" placeholder="Venue or address" autocomplete="street-address"></div>
+        <div class="full"><span class="fl">What are you interested in?</span>
+          <div class="checks" id="fw">
+            <label><input type="checkbox" value="Food truck" checked><span>Food truck</span></label>
+            <label><input type="checkbox" value="Wood fired pizza"><span>Wood fired pizza</span></label>
+            <label><input type="checkbox" value="Platters"><span>Platters</span></label>
+            <label><input type="checkbox" value="Cannoli trays"><span>Cannoli trays</span></label>
+          </div></div>
+        <div class="full"><label class="fl" for="fm">Anything else?</label><textarea id="fm" placeholder="Type of event, serving time, dietary needs"></textarea></div>
+        <button type="submit" class="btn btn-red">Send request by text</button>
+        <p class="fnote">Opens your messages app with everything filled in, ready to send to 785.556.8303.</p>
+        <p class="sent" id="sent" role="status"></p>
+      </form>
+    </div>
   </div>
 </section>
 
 <section id="reviews">
   <div class="wrap rev fade">
-    <div class="score"><div class="n">4.9</div><div class="st">★★★★★</div><small>Rating on Uber Eats</small></div>
+    <div class="score"><div class="n">4.6</div><div class="stars" style="--r:4.6" role="img" aria-label="4.6 out of 5 stars"><span>★★★★★</span><span>★★★★★</span></div><small>63 reviews on Google</small></div>
     <div>
-      <blockquote>“This pizza was amazing.”</blockquote>
-      <p class="cite">Elizabeth M. · Yelp review</p>
+      <blockquote>“Best pizza in town.”</blockquote>
+      <p class="cite">Christopher Chiodo · Google review</p>
       <div class="themes"><span>Great crust</span><span>Fresh gyros</span><span>Fast service</span><span>Friendly owner</span><span>The pickle pizza</span></div>
+      <p class="rates"><span><b>4.9</b> Uber Eats, 41 ratings</span><span><b>4.5</b> DoorDash, 200+ ratings</span><span class="asof">Checked Oct 2026</span></p>
+    </div>
+  </div>
+</section>
+
+<section id="kind-words">
+  <div class="wrap">
+    <div class="head fade">
+      <div><span class="lbl">Kind words</span><h2 class="disp">What folks are saying</h2></div>
+      <a class="ulink" href="https://g.page/r/CYcN0Oag510bEBE/review" target="_blank" rel="noopener">Leave us a Google review</a>
+    </div>
+    <div class="tcards" id="tcards" tabindex="0" aria-label="Customer reviews"></div>
+    <p class="tsrc">Every review here is copied word for word from Google.</p>
+  </div>
+</section>
+
+<section id="story">
+  <div class="wrap">
+    <div class="press fade">
+      <figure class="clip" id="clip">
+        <img data-img="spotlight" width="674" height="960" loading="lazy" alt="Citizen Spotlight feature on Yurii from The Junction Dysfunction, with his photo in a pink frame">
+      </figure>
+      <div class="pcopy">
+        <span class="lbl">As featured in</span>
+        <p class="pub">The Junction Dysfunction</p>
+        <p class="pcol">Citizen Spotlight by Lady Junction</p>
+        <blockquote class="pq">The dough is homemade. The sauce is homemade. The result is wonderfully done, balanced, flavorful, and entirely too confident for something that disappears by the slice.</blockquote>
+        <blockquote class="pq sm">In fact, my own children devoured it like ravenous little beasts, leaving behind barely enough for me to conduct what I will generously call “journalistic research.”</blockquote>
+        <p class="pq-tag">“Yurii is him. Pizza slaps.”</p>
+        <a class="ulink" id="pressLink" href="#" target="_blank" rel="noopener" hidden>Read the full column</a>
+      </div>
+    </div>
+    <div class="sgrid">
+      <div class="scopy fade">
+        <span class="lbl">Meet Yurii</span>
+        <h2 class="disp">From Kolomyia to <span class="stripe-hl">Junction City</span></h2>
+        <p>Yurii grew up in Kolomyia, in Western Ukraine. At 15 he was picked as one of three assistants to a land and zoning commissioner, which is where his interest in city planning and local government started.</p>
+        <p>At 16 he went to culinary school in Odesa, focusing on Italian and French cooking, and he came to the United States at 18. By 19 he was studying at the Institute of Culinary Education, where he was recognized as a knife instructor and took advanced training in French and Italian cuisine. He also did a four month internship in Paris.</p>
+        <p>In 2016 he cooked at Saison, a two star Michelin restaurant. By 2017 he was Executive Sous Chef for the Northeast region, overseeing operations across seven states and more than 120 restaurants and pizza places.</p>
+        <p>In 2020 he moved to Fort Riley and started cooking from home for the military community. Word got around Junction City and the towns nearby, and By Yurii’s grew from there. The dough is homemade and so is the sauce.</p>
+        <p>He gives back, too. He has funded and organized community dinners for people in need during the Christmas season, and the most recent one served 190 meals at the American Legion. He serves with the Chamber of Commerce and was recently selected for the local Housing Authority.</p>
+      </div>
+      <ol class="stubs fade" aria-label="Yurii’s path">
+        <li><small>Where it started</small><b>Kolomyia, Ukraine</b></li>
+        <li><small>Age 16</small><b>Culinary school in Odesa</b></li>
+        <li><small>Age 19</small><b>Institute of Culinary Education</b></li>
+        <li><small>Four months</small><b>Internship in Paris</b></li>
+        <li><small>2016</small><b>Saison, two Michelin stars</b></li>
+        <li><small>2017</small><b>Executive Sous Chef, Northeast</b></li>
+        <li><small>2020</small><b>Fort Riley, cooking from home</b></li>
+        <li><small>Christmas season</small><b>Community dinners</b></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="miles" hidden>
+  <div class="wrap mgrid">
+    <div class="mcopy fade">
+      <span class="lbl">Miles for a slice</span>
+      <h2 class="disp">How far folks drive for Yurii’s</h2>
+      <p>Fort Riley brings people in from all over. Tell us where you came from and we’ll put you on the map.</p>
+      <div class="mstats" id="mstats" hidden>
+        <div><b data-ms="pins">0</b><small>pins on the map</small></div>
+        <div><b data-ms="far">0</b><small>miles, longest trip</small></div>
+        <div><b data-ms="places">0</b><small>states and countries</small></div>
+      </div>
+      <form class="pinform" id="pinform" novalidate>
+        <div><label class="fl" for="pn">First name or initials</label><input id="pn" maxlength="24" autocomplete="given-name"></div>
+        <div><label class="fl" for="pf">Where you came from</label><input id="pf" maxlength="60" placeholder="Town and state, or country"></div>
+        <input class="hp" id="pw" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="btn btn-ink">Add my pin</button>
+        <p class="pnote">We only show your first name and your town. Pins go up after a quick look from Yurii.</p>
+        <p class="sent" id="pinsent" role="status"></p>
+      </form>
+    </div>
+    <div class="mmap fade">
+      <div id="milesMap" role="img" aria-label="Map of the towns our customers came from"></div>
+      <p class="mempty" id="mempty">No pins yet. Be the first one on the map.</p>
+      <ol class="mlist" id="mlist" aria-label="Longest trips"></ol>
     </div>
   </div>
 </section>
@@ -664,6 +1177,7 @@ footer a:hover{color:#fff;text-decoration:underline}
       <span class="lbl">Hours &amp; location</span>
       <h2 class="disp">Come find the truck</h2>
       <p class="vaddr">901 N Washington St<br>Junction City, KS 66441</p>
+      <div class="todaynote" id="todayNote" hidden></div>
       <table class="hours" id="hrs" aria-label="Opening hours">
         <tr data-d="2"><td>Tuesday</td><td>4 to 8 pm</td></tr>
         <tr data-d="3"><td>Wednesday</td><td>12 to 8 pm</td></tr>
@@ -698,112 +1212,1493 @@ footer a:hover{color:#fff;text-decoration:underline}
 <footer>
   <div class="wrap">
     <div class="fbig">
-      <img src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513a7436f78fefb7ecb99.jpg" data-k="logo" alt="By Yurii’s Pizza logo">
+      <img loading="lazy" decoding="async" src="https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513a7436f78fefb7ecb99.jpg" data-k="logo" alt="By Yurii’s Pizza logo">
       <h2>Hungry? <span>Give us a call.</span></h2>
       <a href="tel:+17855568303" class="btn btn-gold">785.556.8303</a>
     </div>
     <div class="fgrid">
-      <div><h4>Visit</h4><ul><li>901 N Washington St</li><li>Junction City, KS 66441</li><li><a href="https://www.google.com/maps/search/?api=1&query=901%20N%20Washington%20St%2C%20Junction%20City%2C%20KS%2066441" target="_blank" rel="noopener">Get directions</a></li></ul></div>
-      <div><h4>Hours</h4><ul><li>Tue 4 to 8 pm</li><li>Wed to Sat 12 to 8 pm</li><li>Sun and Mon closed</li></ul></div>
-      <div><h4>Order</h4><ul><li><a href="tel:+17855568303">Call for pickup</a></li><li><a href="https://www.doordash.com/store/by-yuriis-pizza-25154504/" target="_blank" rel="noopener">DoorDash</a></li><li><a href="https://www.ubereats.com/store/by-yuriis-pizza/UKaXHLAtSj-tXHe6GpSYGw" target="_blank" rel="noopener">Uber Eats</a></li><li><a href="https://www.facebook.com/p/By-Yuriis-Pizza-100077439078403/" target="_blank" rel="noopener">Facebook</a></li></ul></div>
+      <div><h3 class="fh">Visit</h3><ul><li>901 N Washington St</li><li>Junction City, KS 66441</li><li><a href="https://www.google.com/maps/search/?api=1&query=901%20N%20Washington%20St%2C%20Junction%20City%2C%20KS%2066441" target="_blank" rel="noopener">Get directions</a></li></ul></div>
+      <div><h3 class="fh">Hours</h3><ul><li>Tue 4 to 8 pm</li><li>Wed to Sat 12 to 8 pm</li><li>Sun and Mon closed</li></ul></div>
+      <div><h3 class="fh">Order</h3><ul><li><a href="#order" data-order>Order online for pickup</a></li><li><a href="tel:+17855568303">Call for pickup</a></li><li><a href="https://www.doordash.com/store/by-yuriis-pizza-25154504/" target="_blank" rel="noopener">DoorDash</a></li><li><a href="https://www.ubereats.com/store/by-yuriis-pizza/UKaXHLAtSj-tXHe6GpSYGw" target="_blank" rel="noopener">Uber Eats</a></li><li><a href="https://www.facebook.com/p/By-Yuriis-Pizza-100077439078403/" target="_blank" rel="noopener">Facebook</a></li><li><a href="mailto:byyuriiskitchen@gmail.com">byyuriiskitchen@gmail.com</a></li></ul></div>
     </div>
-    <div class="fbot"><span>© <span id="yr"></span> By Yurii’s Pizza, Junction City, Kansas</span><span>Website by Onyx Rise Media</span></div>
+    <form class="fjoin" id="fjoin" novalidate hidden>
+      <div class="fj-copy"><h3 class="fh">Get texts from the truck</h3><p>Specials, new pies and days we’re parked somewhere new.</p></div>
+      <div class="fj-row"><label class="sr" for="jp">Mobile number</label><input id="jp" type="tel" inputmode="tel" autocomplete="tel" placeholder="Mobile number"><button type="submit" class="btn btn-gold">Sign me up</button></div>
+      <p class="fj-fine" id="jfine"></p>
+      <p class="sent" id="jsent" role="status"></p>
+    </form>
+    <div class="fbot"><span>© <span id="yr"></span> By Yurii’s Pizza, Junction City, Kansas</span><span><a href="privacy.html">Privacy and text terms</a></span><span>Website by Onyx Rise Media</span></div>
   </div>
 </footer>
 
-<div class="mbar"><a href="tel:+17855568303" class="btn btn-red">Call to order</a><button class="btn btn-ink" data-order>Order online</button></div>
+<div class="mbar"><a href="tel:+17855568303" class="btn btn-line">Call</a><button type="button" class="btn btn-red" data-order><span data-mbar-label>Order online</span><span class="cnt" data-cart-count hidden></span></button></div>
 
 <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetT">
   <div class="box">
     <button class="close" aria-label="Close">×</button>
-    <h3 id="sheetT">Order online</h3>
-    <p>Pick your favorite app for pickup or delivery.</p>
+    <h3 id="sheetT">Want it delivered?</h3>
+    <p>Delivery runs through these apps. Their prices can be different from ours at the truck.</p>
     <a class="opt" href="https://www.doordash.com/store/by-yuriis-pizza-25154504/" target="_blank" rel="noopener">DoorDash <small>Open ›</small></a>
     <a class="opt" href="https://www.ubereats.com/store/by-yuriis-pizza/UKaXHLAtSj-tXHe6GpSYGw" target="_blank" rel="noopener">Uber Eats <small>Open ›</small></a>
-    <a class="opt" href="tel:+17855568303">Call the truck <small>785.556.8303</small></a>
+    <button type="button" class="opt" data-order>Pick up from the truck <small>Order here ›</small></button>
   </div>
 </div>
 
-<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer"><button class="x" aria-label="Close">×</button><button class="pv" aria-label="Previous photo">‹</button><img alt=""><button class="nx" aria-label="Next photo">›</button></div>
 
-<script>
-const IMG={"rolls":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513db3cacdd9117ad0000.jpg","taco":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513dbcd7225ed37d10ec3.jpg","woodfire":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513db436f78fefb7ed0c4.jpg","veggie":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513db436f78fefb7ed0b8.jpg","supreme":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da989628c77a633dde.jpg","pickle":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da989628c77a633dd2.jpg","spread":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513dacd7225ed37d10e98.jpg","pepperoni":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da989628c77a633dc6.jpg","pepcannoli":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da436f78fefb7ed098.jpg","mushroom":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da3cacdd9117acffe8.jpg","chicken":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da436f78fefb7ed07f.jpg","margherita":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513dacd7225ed37d10e51.jpg","fruit1":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da3cacdd9117acffd4.jpg","fruit2":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da436f78fefb7ed072.jpg","charc2":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513daf9a985d42cfb6434.jpg","bruschetta":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9f9a985d42cfb640c.jpg","cannoli1":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9cd7225ed37d10e2e.jpg","cannoli2":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9f9a985d42cfb6417.jpg","caprese":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9436f78fefb7ed054.jpg","charc1":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9989628c77a633d89.jpg","calzone":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9989628c77a633d88.jpg","logo":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513a7436f78fefb7ecb99.jpg"};
+<div class="os" id="os" role="dialog" aria-modal="true" aria-labelledby="osT" hidden>
+  <div class="os-back" data-close></div>
+  <div class="os-panel" id="osPanel">
+    <div class="os-head">
+      <button type="button" class="os-ico" id="osBack" aria-label="Back" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="os-t"><b id="osT">Order for pickup</b><small id="osSub">901 N Washington St, Junction City</small></div>
+      <button type="button" class="os-ico" data-close aria-label="Close order"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="os-note" id="osNote" role="status" hidden></div>
+    <div class="os-view" data-view="menu">
+      <nav class="os-cats" id="osCats" aria-label="Menu sections"></nav>
+      <div class="os-scroll" id="osList"></div>
+    </div>
+    <div class="os-view" data-view="cart" hidden><div class="os-scroll" id="osCart"></div></div>
+    <div class="os-view" data-view="checkout" hidden><div class="os-scroll" id="osCheck"></div></div>
+    <div class="os-view" data-view="done" hidden><div class="os-scroll" id="osDone"></div></div>
+    <div class="os-foot" id="osFoot"></div>
+    <div class="oi" id="oi" role="dialog" aria-modal="true" aria-labelledby="oiT" hidden>
+      <button type="button" class="os-ico oi-x" id="oiX" aria-label="Close item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <div class="oi-scroll" id="oiBody"></div>
+      <div class="oi-foot" id="oiFoot"></div>
+    </div>
+  </div>
+</div>
 
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer"><button class="x" aria-label="Close">×</button><button class="pv" aria-label="Previous photo">‹</button><img loading="lazy" decoding="async" alt=""><button class="nx" aria-label="Next photo">›</button></div>
 
-/* hours, Central time */
-const H={0:null,1:null,2:[16,20],3:[12,20],4:[12,20],5:[12,20],6:[12,20]};
-const DAYS=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-const fmtH=h=>h===12?"12 pm":h>12?(h-12)+" pm":h+" am";
-function central(){
-  const p=new Intl.DateTimeFormat("en-US",{timeZone:"America/Chicago",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
-  const g=t=>p.find(x=>x.type===t).value;
-  return {d:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday")),h:(+g("hour"))%24+(+g("minute"))/60};
+<!-- MENU AND PRICES: every item, price and topping. The printed menu and the ordering screen both read from here. -->
+<script type="application/json" id="menu-data">
+{
+ "note": "Prices from Yurii's printed truck menu (sent Oct 21, 2026). 12 inch Regular and 16 inch Large. Items marked pending need Yurii to confirm before they show.",
+ "sizes": {
+  "r": "12 inch",
+  "l": "16 inch"
+ },
+ "extras": {
+  "topping": {
+   "r": 1.5,
+   "l": 2.5
+  },
+  "cheese": {
+   "r": 2.5,
+   "l": 3.5
+  },
+  "sauce": {
+   "r": 0.5,
+   "l": 1.0
+  }
+ },
+ "toppings": [
+  {
+   "id": "pepperoni",
+   "name": "Pepperoni"
+  },
+  {
+   "id": "sausage",
+   "name": "Sausage"
+  },
+  {
+   "id": "bacon",
+   "name": "Bacon"
+  },
+  {
+   "id": "ham",
+   "name": "Ham"
+  },
+  {
+   "id": "chicken",
+   "name": "Chicken"
+  },
+  {
+   "id": "mushroom",
+   "name": "Mushrooms"
+  },
+  {
+   "id": "greenpep",
+   "name": "Green peppers"
+  },
+  {
+   "id": "onion",
+   "name": "Onions"
+  },
+  {
+   "id": "olive",
+   "name": "Black olives"
+  },
+  {
+   "id": "pineapple",
+   "name": "Pineapple"
+  },
+  {
+   "id": "pickle",
+   "name": "Pickles"
+  }
+ ],
+ "categories": [
+  {
+   "id": "pizza",
+   "order": "Pizza",
+   "groups": [
+    {
+     "id": "red",
+     "title": "Red Sauce",
+     "sub": "Classic tomato sauce and mozzarella",
+     "sauce": "red",
+     "sized": true,
+     "items": [
+      {
+       "id": "cheese",
+       "name": "Cheese",
+       "desc": "Red sauce and melted mozzarella. The New York classic.",
+       "tags": [
+        "pop",
+        "veg"
+       ],
+       "price": {
+        "r": 13.5,
+        "l": 17.5
+       },
+       "art": {
+        "sauce": "red",
+        "tops": []
+       }
+      },
+      {
+       "id": "pepperoni",
+       "name": "Pepperoni",
+       "desc": "Covered in crispy cupped pepperoni.",
+       "tags": [
+        "pop"
+       ],
+       "price": {
+        "r": 14.5,
+        "l": 19.5
+       },
+       "photo": "pepperoni",
+       "art": {
+        "sauce": "red",
+        "tops": [
+         "pepperoni"
+        ]
+       }
+      },
+      {
+       "id": "supreme",
+       "name": "Supreme",
+       "desc": "Pepperoni, sausage, onion, bell pepper, green pepper, mushroom and olives.",
+       "price": {
+        "r": 17.5,
+        "l": 24.5
+       },
+       "photo": "supreme",
+       "art": {
+        "sauce": "red",
+        "tops": [
+         "pepperoni",
+         "sausage",
+         "onion",
+         "greenpep",
+         "mushroom",
+         "olive"
+        ]
+       }
+      },
+      {
+       "id": "sausmush",
+       "name": "Sausage & Mushroom",
+       "desc": "",
+       "pending": "description",
+       "price": {
+        "r": 15.5,
+        "l": 21.5
+       },
+       "art": {
+        "sauce": "red",
+        "tops": [
+         "sausage",
+         "mushroom"
+        ]
+       }
+      },
+      {
+       "id": "meat",
+       "name": "Meat Lovers",
+       "desc": "Pepperoni, sausage, bacon and ham.",
+       "price": {
+        "r": 17.0,
+        "l": 24.0
+       },
+       "art": {
+        "sauce": "red",
+        "tops": [
+         "pepperoni",
+         "sausage",
+         "bacon",
+         "ham"
+        ]
+       }
+      },
+      {
+       "id": "hawaiian",
+       "name": "Hawaiian",
+       "desc": "Ham and pineapple.",
+       "price": {
+        "r": 15.0,
+        "l": 20.5
+       },
+       "art": {
+        "sauce": "red",
+        "tops": [
+         "ham",
+         "pineapple"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "white",
+     "title": "White Sauce",
+     "sub": "Our house garlic Alfredo base",
+     "sauce": "white",
+     "sized": true,
+     "items": [
+      {
+       "id": "white",
+       "name": "White Pizza",
+       "desc": "Garlic Alfredo and whole milk mozzarella.",
+       "tags": [
+        "veg"
+       ],
+       "price": {
+        "r": 13.5,
+        "l": 17.5
+       },
+       "art": {
+        "sauce": "white",
+        "tops": []
+       }
+      },
+      {
+       "id": "fourcheese",
+       "name": "4 Cheese",
+       "desc": "A four cheese blend on a rich, creamy base.",
+       "tags": [
+        "pop",
+        "veg"
+       ],
+       "price": {
+        "r": 16.0,
+        "l": 22.5
+       },
+       "art": {
+        "sauce": "white",
+        "tops": [],
+        "cheese": 2
+       }
+      },
+      {
+       "id": "pickle",
+       "name": "Pickle Pizza",
+       "desc": "Pickles on our white base, with garlic sauce on the side.",
+       "tags": [
+        "fav",
+        "veg"
+       ],
+       "price": {
+        "r": 15.0,
+        "l": 21.0
+       },
+       "photo": "pickle",
+       "art": {
+        "sauce": "white",
+        "tops": [
+         "pickle"
+        ]
+       }
+      },
+      {
+       "id": "buffalo",
+       "name": "Buffalo Chicken",
+       "desc": "Chicken and buffalo sauce.",
+       "price": {
+        "r": 17.0,
+        "l": 22.5
+       },
+       "art": {
+        "sauce": "white",
+        "tops": [
+         "chicken"
+        ]
+       }
+      },
+      {
+       "id": "bbq",
+       "name": "BBQ Chicken",
+       "desc": "Chicken and barbecue sauce.",
+       "price": {
+        "r": 17.0,
+        "l": 22.5
+       },
+       "art": {
+        "sauce": "white",
+        "tops": [
+         "chicken"
+        ]
+       }
+      },
+      {
+       "id": "cbr",
+       "name": "Chicken Bacon Ranch",
+       "desc": "Chicken, bacon and mozzarella with a ranch drizzle.",
+       "tags": [
+        "pop"
+       ],
+       "price": {
+        "r": 17.5,
+        "l": 23.5
+       },
+       "photo": "chicken",
+       "art": {
+        "sauce": "white",
+        "tops": [
+         "chicken",
+         "bacon"
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "id": "spec",
+     "title": "NY Specialties",
+     "sized": true,
+     "items": [
+      {
+       "id": "prosciutto",
+       "name": "Prosciutto & Arugula",
+       "desc": "Thin sliced prosciutto topped with fresh arugula.",
+       "price": {
+        "r": 18.0,
+        "l": 25.0
+       },
+       "art": {
+        "sauce": "white",
+        "tops": []
+       }
+      },
+      {
+       "id": "taco",
+       "name": "Taco Pizza",
+       "desc": "Seasoned beef, cheddar, lettuce, tomato and sour cream.",
+       "price": {
+        "r": 17.0,
+        "l": 23.5
+       },
+       "photo": "taco",
+       "art": {
+        "sauce": "red",
+        "tops": []
+       }
+      },
+      {
+       "id": "nypizza",
+       "name": "New York Pizza",
+       "desc": "",
+       "pending": "description",
+       "price": {
+        "r": 17.0,
+        "l": 22.5
+       },
+       "art": {
+        "sauce": "red",
+        "tops": []
+       }
+      },
+      {
+       "id": "gyropizza",
+       "name": "Gyro Pizza",
+       "desc": "",
+       "pending": "description",
+       "price": {
+        "r": 17.0,
+        "l": 24.0
+       },
+       "art": {
+        "sauce": "white",
+        "tops": []
+       }
+      },
+      {
+       "id": "ferrero",
+       "name": "Ferrero Rocher Pizza",
+       "desc": "A chocolate and hazelnut dessert pizza made for sharing.",
+       "price": {
+        "r": 16.0,
+        "l": 22.0
+       },
+       "noExtras": true,
+       "art": {
+        "sauce": "choc",
+        "tops": [],
+        "cheese": 0
+       }
+      }
+     ]
+    }
+   ],
+   "byo": {
+    "id": "byo",
+    "name": "Build Your Own",
+    "desc": "Our marinara pie, your toppings.",
+    "price": {
+     "r": 12.5,
+     "l": 17.0
+    },
+    "art": {
+     "sauce": "red",
+     "tops": []
+    }
+   }
+  },
+  {
+   "id": "calz",
+   "order": "Calzones & Strombolis",
+   "groups": [
+    {
+     "id": "calz",
+     "title": "Calzones & Strombolis",
+     "sub": "Folded, rolled and baked to order",
+     "items": [
+      {
+       "id": "pepcalz",
+       "name": "Pepperoni Calzone",
+       "desc": "",
+       "pending": "description",
+       "price": 11.0,
+       "photo": "calzone"
+      },
+      {
+       "id": "chixcalz",
+       "name": "Chicken Calzone",
+       "desc": "",
+       "pending": "description",
+       "price": 13.0,
+       "photo": "calzone"
+      },
+      {
+       "id": "meatcalz",
+       "name": "Meat Lovers Calzone",
+       "desc": "",
+       "pending": "description",
+       "price": 14.0,
+       "photo": "calzone"
+      },
+      {
+       "id": "meatstrom",
+       "name": "Meat Lovers Stromboli",
+       "desc": "Fresh dough rolled up with meats and cheese and baked until crisp.",
+       "price": 7.5,
+       "photo": "rolls"
+      },
+      {
+       "id": "byostrom",
+       "name": "Build Your Own Stromboli",
+       "desc": "Pick your fillings. Fillings are priced at the window.",
+       "price": 7.5,
+       "fill": true,
+       "photo": "rolls"
+      },
+      {
+       "id": "byocalz",
+       "name": "Build Your Own Calzone",
+       "desc": "Pick your fillings. Fillings are priced at the window.",
+       "price": 11.0,
+       "fill": true,
+       "photo": "calzone"
+      }
+     ]
+    },
+    {
+     "id": "sides",
+     "title": "On the Side",
+     "items": [
+      {
+       "id": "garliccup",
+       "name": "Cup of Garlic Sauce",
+       "desc": "A side cup of our house garlic sauce.",
+       "price": 0.75
+      },
+      {
+       "id": "knots",
+       "name": "Garlic Knots",
+       "desc": "Six warm garlic knots to an order. Great with any pie.",
+       "tags": [
+        "veg"
+       ],
+       "price": null,
+       "hidden": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gyro",
+   "order": "Gyros",
+   "groups": [
+    {
+     "id": "gyro",
+     "title": "Gyros",
+     "sub": "New York street cart style",
+     "items": [
+      {
+       "id": "gyro",
+       "name": "Gyro",
+       "desc": "Beef and lamb with tzatziki, red onion, tomato and lettuce in warm pita. Add special sauce or feta.",
+       "tags": [
+        "hal"
+       ],
+       "price": 13.0,
+       "notePrompt": "Want special sauce or feta? Tell us here."
+      },
+      {
+       "id": "chixrice",
+       "name": "Chicken over Rice",
+       "desc": "Yellow rice topped with chicken, lettuce and tomato.",
+       "price": null,
+       "hidden": true
+      },
+      {
+       "id": "meatrice",
+       "name": "Meat over Rice",
+       "desc": "Yellow rice with a beef and lamb mix, lettuce and tomato.",
+       "price": null,
+       "hidden": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sweet",
+   "order": "Desserts",
+   "groups": [
+    {
+     "id": "sweet",
+     "title": "Desserts",
+     "sub": "Save room",
+     "items": [
+      {
+       "id": "cannoli4",
+       "name": "4 Small Cannoli",
+       "desc": "A four pack of small cannoli.",
+       "price": 7.0,
+       "photo": "cannoli2"
+      },
+      {
+       "id": "cannolil",
+       "name": "Large Chocolate Cannoli",
+       "desc": "Dipped in chocolate and dusted with powdered sugar.",
+       "price": 6.5
+      },
+      {
+       "ref": "ferrero"
+      },
+      {
+       "id": "cannoli12",
+       "name": "Dozen Small Cannoli",
+       "desc": "",
+       "price": null,
+       "hidden": true
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "personal": [
+  {
+   "id": "pita",
+   "name": "7 Inch Pita Pizza",
+   "desc": "A personal pizza made on fresh pita. Just right for one.",
+   "price": null,
+   "hidden": true
+  }
+ ]
 }
-try{
-  const {d,h}=central(),t=H[d];
-  let open=false,msg;
-  const today=t?fmtH(t[0])+" to "+fmtH(t[1]):"Closed today";
-  if(t&&h>=t[0]&&h<t[1]){open=true;msg="Open now until "+fmtH(t[1])}
-  else if(t&&h<t[0]){msg="Opens today at "+fmtH(t[0])}
-  else{let n=d;for(let i=1;i<=7;i++){n=(d+i)%7;if(H[n])break}msg="Closed now · Opens "+(n===(d+1)%7?"tomorrow":DAYS[n])+" at "+fmtH(H[n][0])}
-  ["tbDot","heroDot"].forEach(id=>document.getElementById(id).classList.toggle("open",open));
-  document.getElementById("tbStatus").textContent=msg;
-  document.getElementById("heroStatus").textContent=msg;
-  document.getElementById("icHours").textContent=today;
-  const row=document.querySelector('#hrs tr[data-d="'+d+'"]');if(row)row.classList.add("today");
-}catch(e){}
+</script>
+<script>
+/* =====================================================================
+   SETTINGS: everything that might change lives here.
+   ===================================================================== */
+const SITE = {
+  // true while Yurii reviews the preview. At launch set to false: anything
+  // not connected yet (map pins, booking calendar) then hides itself.
+  preview: true,
 
-/* menu tabs */
-const tabs=[...document.querySelectorAll('.tabs [role="tab"]')];
-tabs.forEach(t=>t.addEventListener("click",()=>{
-  tabs.forEach(x=>{const on=x===t;x.setAttribute("aria-selected",on);document.getElementById(x.getAttribute("aria-controls")).hidden=!on});
-  const tb=t.closest(".tabs"),panel=document.getElementById(t.getAttribute("aria-controls"));
-  const hdr=document.querySelector("header.site").getBoundingClientRect().bottom;
-  const stuck=getComputedStyle(tb).position==="sticky";
-  const offset=(stuck?tb.getBoundingClientRect().bottom:hdr)+12;
-  if(panel.getBoundingClientRect().top<offset)scrollBy({top:panel.getBoundingClientRect().top-offset,behavior:"smooth"});
-}));
-tabs.forEach((t,i)=>t.addEventListener("keydown",e=>{if(e.key==="ArrowRight"||e.key==="ArrowLeft"){const n=tabs[(i+(e.key==="ArrowRight"?1:tabs.length-1))%tabs.length];n.focus();n.click()}}));
+  phone: "+17855568303",
+  phoneShow: "785.556.8303",
+  email: "byyuriiskitchen@gmail.com",
+  directions: "https://www.google.com/maps/search/?api=1&query=901%20N%20Washington%20St%2C%20Junction%20City%2C%20KS%2066441",
+  doordash: "https://www.doordash.com/store/by-yuriis-pizza-25154504/",
+  ubereats: "https://www.ubereats.com/store/by-yuriis-pizza/UKaXHLAtSj-tXHe6GpSYGw",
+  googleReview: "https://g.page/r/CYcN0Oag510bEBE/review",
+  truck: { lat: 39.0316591, lng: -96.8293101 },   // from his Google Maps listing
 
-/* order sheet */
-const sheet=document.getElementById("sheet");
-document.querySelectorAll("[data-order]").forEach(b=>b.addEventListener("click",e=>{e.preventDefault();sheet.classList.add("on")}));
-sheet.addEventListener("click",e=>{if(e.target===sheet||e.target.closest(".close"))sheet.classList.remove("on")});
+  ordering: {
+    // "site": our own ordering below.  "link": every Order button opens the link instead.
+    mode: "site",
+    // His GloriaFood page (Oracle retires GloriaFood on April 30, 2027).
+    link: "https://www.foodbooking.com/ordering/?restaurant_uid=39de8e4a-7411-4ebb-885f-f7d99947dafd&company_uid=97184e7e-a2b2-4f6a-acc8-44954ab04c01",
+    // Cloudflare Worker URL. Leave empty and orders go to the truck as a text message.
+    endpoint: "",
+    payAtWindow: true,
+    payOnline: false,          // switch on once Stripe and the Worker are live
+    prepMinutes: 20,           // CONFIRM WITH YURII: earliest pickup after ordering
+    slotMinutes: 15,
+    lastPickupBeforeClose: 15, // CONFIRM WITH YURII: last pickup slot before closing
+    daysAhead: 3,              // CONFIRM WITH YURII: open days people can order ahead
+    windowMax: null,           // CONFIRM WITH YURII: e.g. 150 means bigger pay at window orders must call
+    paused: false,             // true turns online ordering off for now
+    pausedMsg: "Online ordering is taking a break right now. Give us a call and we’ll take care of you."
+  },
 
-/* gallery + lightbox */
-const G=[["pepcannoli",""],["woodfire","t"],["supreme",""],["cannoli2","t"],["mushroom",""],["margherita",""],["calzone","t"],["rolls",""],["charc2",""],["bruschetta","t"],["taco",""],["fruit1",""]];
-const gal=document.getElementById("gal");
-gal.innerHTML=G.map(([k,c])=>`<figure class="${c}" data-k="${k}"><img src="${IMG[k]}" alt="Food from By Yurii’s Pizza"></figure>`).join("");
-const ALL=[...new Set([...G.map(g=>g[0]),"pickle","chicken","pepperoni","spread","caprese","charc1","cannoli1","fruit2","veggie"])];
-const lb=document.getElementById("lb"),lbi=lb.querySelector("img");let cur=0;
-const show=()=>{lbi.src=IMG[ALL[cur]]};
-function openLb(k){cur=Math.max(0,ALL.indexOf(k));show();lb.classList.add("on")}
-document.querySelectorAll("[data-k]:not(img)").forEach(f=>f.addEventListener("click",()=>openLb(f.dataset.k)));
-lb.querySelector(".x").onclick=()=>lb.classList.remove("on");
-lb.querySelector(".nx").onclick=e=>{e.stopPropagation();cur=(cur+1)%ALL.length;show()};
-lb.querySelector(".pv").onclick=e=>{e.stopPropagation();cur=(cur-1+ALL.length)%ALL.length;show()};
-lb.addEventListener("click",e=>{if(e.target===lb)lb.classList.remove("on")});
-addEventListener("keydown",e=>{if(e.key==="Escape"){lb.classList.remove("on");sheet.classList.remove("on")}if(!lb.classList.contains("on"))return;if(e.key==="ArrowRight")lb.querySelector(".nx").click();if(e.key==="ArrowLeft")lb.querySelector(".pv").click()});
+  // Paste his GoHighLevel "Private Event" calendar link here to replace the text request form.
+  booking: { calendarUrl: "" },
 
-/* booking by text */
-document.getElementById("fd").min=new Date().toISOString().slice(0,10);
-document.getElementById("bf").addEventListener("submit",e=>{
-  e.preventDefault();
-  const v=id=>document.getElementById(id).value.trim();
-  const sent=document.getElementById("sent");
-  sent.style.display="block";
-  if(!v("fn")||!v("fp")||!v("fd")){sent.classList.add("err");sent.textContent="Please add your name, phone number and event date.";return}
-  sent.classList.remove("err");
-  const wants=[...document.querySelectorAll("#fw input:checked")].map(x=>x.value).join(", ")||"Not sure yet";
-  const date=new Date(v("fd")+"T12:00:00").toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric",year:"numeric"});
-  const body=`Hi Yurii, I'd like to book By Yurii's for an event.\nName: ${v("fn")}\nPhone: ${v("fp")}\nDate: ${date}\nGuests: ${v("fg")}\nLocation: ${v("fl")||"TBD"}\nInterested in: ${wants}${v("fm")?"\nNotes: "+v("fm"):""}`;
-  sent.textContent="Your messages app should open now. If it doesn’t, call or text 785.556.8303 and we’ll take care of you.";
-  location.href="sms:+17855568303?&body="+encodeURIComponent(body);
+  // Google Apps Script web app URL (where's the truck today + Miles for a slice map).
+  live: { url: "" },
+
+  // Text list of regulars. Turn on only after A2P texting is approved in GoHighLevel.
+  textList: { enabled: false },
+
+  // Link to the Lady Junction column, once we have it.
+  press: { link: "" }
+};
+
+/* Images live in the GoHighLevel media library. Empty ones are skipped until a URL is pasted in. */
+const IMG = {
+  "rolls":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513db3cacdd9117ad0000.jpg",
+  "taco":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513dbcd7225ed37d10ec3.jpg",
+  "woodfire":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513db436f78fefb7ed0c4.jpg",
+  "veggie":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513db436f78fefb7ed0b8.jpg",
+  "supreme":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da989628c77a633dde.jpg",
+  "pickle":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da989628c77a633dd2.jpg",
+  "spread":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513dacd7225ed37d10e98.jpg",
+  "pepperoni":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da989628c77a633dc6.jpg",
+  "pepcannoli":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da436f78fefb7ed098.jpg",
+  "mushroom":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da3cacdd9117acffe8.jpg",
+  "chicken":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da436f78fefb7ed07f.jpg",
+  "margherita":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513dacd7225ed37d10e51.jpg",
+  "fruit1":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da3cacdd9117acffd4.jpg",
+  "fruit2":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513da436f78fefb7ed072.jpg",
+  "charc2":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513daf9a985d42cfb6434.jpg",
+  "bruschetta":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9f9a985d42cfb640c.jpg",
+  "cannoli1":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9cd7225ed37d10e2e.jpg",
+  "cannoli2":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9f9a985d42cfb6417.jpg",
+  "caprese":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9436f78fefb7ed054.jpg",
+  "charc1":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9989628c77a633d89.jpg",
+  "calzone":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513d9989628c77a633d88.jpg",
+  "logo":"https://assets.cdn.filesafe.space/0jCGsopcZRwQXDNWLajp/media/6ad513a7436f78fefb7ecb99.jpg",
+  /* Topeka event photos: paste each GoHighLevel URL between the quotes */
+  "topeka01":"", "topeka02":"", "topeka03":"", "topeka04":"", "topeka05":"", "topeka06":"",
+  "topeka07":"", "topeka08":"", "topeka09":"", "topeka10":"", "topeka11":"", "topeka12":"",
+  /* Lady Junction Citizen Spotlight image */
+  "spotlight":""
+};
+
+/* Real reviews only, copied word for word from Google on Oct 21, 2026. */
+const REVIEWS = [
+  { n: "matthew Bahner", t: "As someone who just came from New York I can with 100% certainty say this is authentic new york style pizza." },
+  { n: "Vanessa VandeRiet", t: "Came for the Pizza Pickle and LOVE it This is the best thing since sliced pickles The pizza crust is amazing ! My new favorite pizza" },
+  { n: "Tricia Johnson", t: "Delicious gyros. Lots of meat, fresh, and wonderful flavors. Fun to find a great gyro in Kansas!" },
+  { n: "Patti Noriega", t: "Yurii does an excellent job making everyone feel welcome and the pizza is top notch!" },
+  { n: "Nate Davis", t: "The crust, the cheese, the flavor. The food was superb. Cannolis were great, pizza was great, stromboli was perfect." },
+  { n: "Ian Sanchez", t: "Love the stromboli! Flavorful, filling, and affordable!" },
+  { n: "Ashley Winfield", t: "Hands down the best pizza I have ever had. The owner is extremely knowledgeable on pizza. I can’t wait to go back again" },
+  { n: "Christopher Chiodo", t: "Love this place. Best pizza in town. Tried the gyro and cannoli and I'm so glad I did. The gyro was tender and packed with flavor." },
+  { n: "Jennifer Heard", t: "Fresh and delicious quality food with amazing customer service and prices." }
+];
+
+/* ===================================================================== */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const cents = d => Math.round(Number(d) * 100);
+const money = c => "$" + (c / 100).toFixed(2);
+const plain = c => (c / 100).toFixed(2);
+const O = SITE.ordering;
+const store = {
+  get(k, f) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : f; } catch (e) { return f; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+};
+const fmtPhone = s => { const d = String(s).replace(/\D/g, "").replace(/^1(?=\d{10}$)/, ""); return d.length === 10 ? d.slice(0, 3) + "." + d.slice(3, 6) + "." + d.slice(6) : s; };
+
+/* ========== menu data ========== */
+const MENU = JSON.parse(document.getElementById("menu-data").textContent);
+const ITEMS = {};
+MENU.categories.forEach(c => c.groups.forEach(g => g.items.forEach(it => { if (!it.ref) { it.group = g; it.cat = c.id; ITEMS[it.id] = it; } })));
+const BYO = MENU.categories[0].byo; BYO.byo = true; BYO.cat = "pizza"; ITEMS[BYO.id] = BYO;
+const TOPS = Object.fromEntries(MENU.toppings.map(t => [t.id, t]));
+const isSized = it => it.price && typeof it.price === "object";
+const orderable = it => it && !it.hidden && it.price != null;
+const itemsOf = g => g.items.map(i => i.ref ? ITEMS[i.ref] : i).filter(orderable);
+const extrasOk = it => isSized(it) && !it.noExtras;
+
+function linePrice(l) {
+  const it = ITEMS[l.id]; if (!orderable(it)) return null;
+  const s = isSized(it) ? (l.size === "l" ? "l" : "r") : null;
+  let u = cents(s ? it.price[s] : it.price);
+  if (s && extrasOk(it)) {
+    u += (l.tops || []).length * cents(MENU.extras.topping[s]);
+    if (l.cheese) u += cents(MENU.extras.cheese[s]);
+    if (l.sauce) u += cents(MENU.extras.sauce[s]);
+  }
+  return { unit: u, total: u * l.qty, pending: !!(it.fill && (l.fills || []).length) };
+}
+function lineBits(l) {
+  const it = ITEMS[l.id], b = [];
+  if (isSized(it)) b.push(MENU.sizes[l.size === "l" ? "l" : "r"]);
+  const tn = (l.tops || []).map(t => TOPS[t] && TOPS[t].name).filter(Boolean);
+  if (tn.length) b.push((it.byo ? "" : "add ") + tn.join(", "));
+  if (l.cheese) b.push("extra cheese");
+  if (l.sauce) b.push("extra sauce");
+  const fn = (l.fills || []).map(t => TOPS[t] && TOPS[t].name).filter(Boolean);
+  if (fn.length) b.push("fillings: " + fn.join(", "));
+  return b;
+}
+function cleanLine(l) {
+  const it = ITEMS[l.id]; if (!orderable(it)) return null;
+  const okT = a => (Array.isArray(a) ? a : []).filter(t => TOPS[t]).filter((t, i, s) => s.indexOf(t) === i);
+  return {
+    key: l.key || Math.random().toString(36).slice(2, 9), id: it.id,
+    size: isSized(it) ? (l.size === "l" ? "l" : "r") : undefined,
+    tops: extrasOk(it) ? okT(l.tops) : [], cheese: extrasOk(it) && !!l.cheese, sauce: extrasOk(it) && !!l.sauce,
+    fills: it.fill ? okT(l.fills) : [],
+    qty: Math.min(20, Math.max(1, parseInt(l.qty, 10) || 1)),
+    note: String(l.note || "").slice(0, 140)
+  };
+}
+
+/* ========== cart ========== */
+let CART = (store.get("yp_cart_v2", []) || []).map(cleanLine).filter(Boolean);
+const saveCart = () => { store.set("yp_cart_v2", CART); updateBadges(); };
+const cartQty = () => CART.reduce((a, l) => a + l.qty, 0);
+const cartSum = () => CART.reduce((a, l) => { const p = linePrice(l); return a + (p ? p.total : 0); }, 0);
+const cartPending = () => CART.some(l => { const p = linePrice(l); return p && p.pending; });
+function updateBadges() {
+  const q = cartQty();
+  $$("[data-cart-count]").forEach(b => { b.textContent = q; b.hidden = !q; });
+  $$("[data-mbar-label]").forEach(s => s.textContent = q ? "Your order" : "Order online");
+}
+
+/* ========== time in Kansas ========== */
+const H = { 0: null, 1: null, 2: [960, 1200], 3: [720, 1200], 4: [720, 1200], 5: [720, 1200], 6: [720, 1200] };
+const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const DSHORT = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const MSHORT = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const pad = n => String(n).padStart(2, "0");
+const fmtMin = m => { const h = Math.floor(m / 60) % 24, mm = m % 60, ap = h >= 12 ? "pm" : "am", h12 = h % 12 || 12; return mm ? h12 + ":" + pad(mm) + " " + ap : h12 + " " + ap; };
+const toMin = s => { const m = /^(\d{1,2}):(\d{2})/.exec(String(s || "")); return m ? (+m[1]) * 60 + (+m[2]) : null; };
+let NOW_OVERRIDE = window.__YP_NOW || null; // test hook only: { y, m, d, min }
+function cnow() {
+  if (NOW_OVERRIDE) { const o = NOW_OVERRIDE, dt = new Date(Date.UTC(o.y, o.m - 1, o.d)); return { y: o.y, m: o.m, d: o.d, dow: dt.getUTCDay(), min: o.min, key: o.y + "-" + pad(o.m) + "-" + pad(o.d) }; }
+  const p = new Intl.DateTimeFormat("en-US", { timeZone: "America/Chicago", year: "numeric", month: "numeric", day: "numeric", hour: "numeric", minute: "numeric", hour12: false }).formatToParts(new Date());
+  const g = t => +p.find(x => x.type === t).value;
+  const y = g("year"), m = g("month"), d = g("day");
+  return { y, m, d, dow: new Date(Date.UTC(y, m - 1, d)).getUTCDay(), min: (g("hour") % 24) * 60 + g("minute"), key: y + "-" + pad(m) + "-" + pad(d) };
+}
+function addDays(o, n) { const dt = new Date(Date.UTC(o.y, o.m - 1, o.d + n)); const y = dt.getUTCFullYear(), m = dt.getUTCMonth() + 1, d = dt.getUTCDate(); return { y, m, d, dow: dt.getUTCDay(), key: y + "-" + pad(m) + "-" + pad(d) }; }
+const LIVE = { days: {}, pins: [], loaded: false };
+function hoursFor(day) {
+  const ov = LIVE.days[day.key];
+  if (ov) {
+    if (ov.status === "closed" || ov.status === "event") return null;
+    const a = toMin(ov.open), b = toMin(ov.close);
+    if (a != null && b != null && b > a) return [a, b];
+  }
+  return H[day.dow];
+}
+function nextOpen(n) {
+  for (let i = 1; i <= 14; i++) { const d = addDays(n, i), h = hoursFor(d); if (h) return { i, d, h }; }
+  return null;
+}
+function statusText() {
+  const n = cnow(), t = hoursFor(n), ov = LIVE.days[n.key];
+  let open = false, msg;
+  if (t && n.min >= t[0] && n.min < t[1]) { open = true; msg = "Open now until " + fmtMin(t[1]); }
+  else if (t && n.min < t[0]) msg = "Opens today at " + fmtMin(t[0]);
+  else {
+    const nx = nextOpen(n);
+    const lead = ov && ov.status === "event" ? "Closed today for a private event" : ov && ov.status === "closed" ? "Closed today" : "Closed now";
+    msg = nx ? lead + " · Opens " + (nx.i === 1 ? "tomorrow" : DAYS[nx.d.dow]) + " at " + fmtMin(nx.h[0]) : lead;
+  }
+  return { open, msg, today: t ? fmtMin(t[0]) + " to " + fmtMin(t[1]) : (ov && ov.status === "event" ? "Private event today" : "Closed today"), n };
+}
+function slotDays() {
+  const n = cnow(), out = [];
+  for (let i = 0; i < 14 && out.length < O.daysAhead; i++) {
+    const day = addDays(n, i), h = hoursFor(day); if (!h) continue;
+    let first = h[0] + O.prepMinutes; if (i === 0) first = Math.max(first, n.min + O.prepMinutes);
+    const start = Math.ceil(first / O.slotMinutes) * O.slotMinutes, end = h[1] - O.lastPickupBeforeClose, times = [];
+    for (let m = start; m <= end; m += O.slotMinutes) times.push(m);
+    if (!times.length) continue;
+    out.push({ day, i, times, openNow: i === 0 && n.min >= h[0] && n.min < h[1], name: i === 0 ? "Today" : i === 1 ? "Tomorrow" : DAYS[day.dow], date: MSHORT[day.m - 1] + " " + day.d });
+  }
+  return out;
+}
+function orderingPaused() {
+  if (O.paused) return O.pausedMsg;
+  const ov = LIVE.days[cnow().key];
+  if (ov && ov.status === "paused") return ov.note || O.pausedMsg;
+  if (!slotDays().length) return "We’re not taking online orders for the next few days. Give us a call at " + SITE.phoneShow + ".";
+  return "";
+}
+
+/* ========== status bar, banner, hours table ========== */
+function paintStatus() {
+  try {
+    const s = statusText();
+    ["tbDot", "heroDot"].forEach(id => { const e = document.getElementById(id); if (e) e.classList.toggle("open", s.open); });
+    ["tbStatus", "heroStatus"].forEach(id => { const e = document.getElementById(id); if (e) e.textContent = s.msg; });
+    const ic = document.getElementById("icHours"); if (ic) ic.textContent = s.today;
+    $$("#hrs tr").forEach(r => r.classList.toggle("today", r.dataset.d == s.n.dow));
+    const ov = LIVE.days[s.n.key], ban = $("#tbanner"), note = $("#todayNote");
+    if (ov && (ov.note || ov.place || ov.status !== "open")) {
+      const head = ov.status === "event" ? "Private event today" : ov.status === "closed" ? "Closed today" : ov.status === "hours" ? "Different hours today" : ov.status === "spot" ? "Find us somewhere new today" : "Today at the truck";
+      const where = ov.place || ov.address ? " " + [ov.place, ov.address].filter(Boolean).join(", ") + "." : "";
+      const hrs = ov.status === "hours" && toMin(ov.open) != null ? " " + fmtMin(toMin(ov.open)) + " to " + fmtMin(toMin(ov.close)) + "." : "";
+      const body = (hrs + where + (ov.note ? " " + ov.note : "")).trim();
+      ban.innerHTML = "<b>" + esc(head) + "</b>" + esc(body); ban.hidden = false;
+      note.innerHTML = "<b>" + esc(head) + "</b>" + esc(body || s.msg); note.hidden = false;
+    } else { ban.hidden = true; note.hidden = true; }
+  } catch (e) {}
+}
+
+/* ========== pizza art ========== */
+function rng(seed) { let a = 0; for (const ch of seed) a = (a * 31 + ch.charCodeAt(0)) | 0; return () => { a |= 0; a = (a + 0x6D2B79F5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+const SHAPE = {
+  pepperoni: (x, y, r) => `<circle cx="${x}" cy="${y}" r="9.5" fill="#b8322a" stroke="#8e2219" stroke-width="1.5"/><circle cx="${x - 3}" cy="${y - 2}" r="1.4" fill="#8e2219"/><circle cx="${x + 3}" cy="${y + 3}" r="1.2" fill="#8e2219"/>`,
+  sausage: (x, y, r) => `<circle cx="${x}" cy="${y}" r="4.2" fill="#7a4a2c"/><circle cx="${x + 5}" cy="${y + 2}" r="3.2" fill="#6a3d22"/><circle cx="${x + 1}" cy="${y + 5}" r="2.8" fill="#86553a"/>`,
+  bacon: (x, y, r) => `<rect x="${x - 8}" y="${y - 3}" width="16" height="6" rx="2" fill="#b5533c" stroke="#7d2f22" stroke-width="1.2" transform="rotate(${r * 180} ${x} ${y})"/>`,
+  ham: (x, y, r) => `<rect x="${x - 5.5}" y="${y - 5.5}" width="11" height="11" rx="2" fill="#f0a3a0" stroke="#c96f6c" stroke-width="1.2" transform="rotate(${r * 90} ${x} ${y})"/>`,
+  chicken: (x, y, r) => `<rect x="${x - 7}" y="${y - 4.5}" width="14" height="9" rx="4" fill="#f1dcb5" stroke="#b99460" stroke-width="1.2" transform="rotate(${r * 180} ${x} ${y})"/>`,
+  mushroom: (x, y, r) => `<g transform="rotate(${r * 360} ${x} ${y})"><path d="M${x - 7} ${y} a7 6 0 0 1 14 0 z" fill="#d8c3a5" stroke="#7b6246" stroke-width="1.2"/><rect x="${x - 2.2}" y="${y}" width="4.4" height="6" rx="1.5" fill="#d8c3a5" stroke="#7b6246" stroke-width="1.2"/></g>`,
+  greenpep: (x, y, r) => `<path d="M${x - 8} ${y + 3} q8 -12 16 0" fill="none" stroke="#3f8f3a" stroke-width="3.6" stroke-linecap="round" transform="rotate(${r * 360} ${x} ${y})"/>`,
+  onion: (x, y, r) => `<path d="M${x - 8} ${y + 2} q8 -10 16 0" fill="none" stroke="#b892c8" stroke-width="2.4" stroke-linecap="round" transform="rotate(${r * 360} ${x} ${y})"/>`,
+  olive: (x, y) => `<circle cx="${x}" cy="${y}" r="4.6" fill="none" stroke="#1d1814" stroke-width="3"/>`,
+  pineapple: (x, y, r) => `<path d="M${x - 6} ${y - 4} h12 l-3 9 h-6 z" fill="#f5c542" stroke="#c99a1d" stroke-width="1.2" transform="rotate(${r * 360} ${x} ${y})"/>`,
+  pickle: (x, y) => `<circle cx="${x}" cy="${y}" r="7.5" fill="#9bb54a" stroke="#5f7a24" stroke-width="1.4"/><circle cx="${x}" cy="${y}" r="3.8" fill="#c7d97a"/>`
+};
+const COUNT = { pepperoni: 9, sausage: 8, olive: 11, onion: 8, greenpep: 8, pickle: 9 };
+function pizzaSVG(art, fresh) {
+  art = art || {}; const sauce = art.sauce || "red";
+  const sc = { red: "#c8432f", white: "#f4ecd9", choc: "#5a3424" }[sauce] || "#c8432f";
+  const cheeseCol = sauce === "choc" ? "#f6f0e6" : sauce === "white" ? "#f8e7b0" : "#f7d98a";
+  let s = `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><circle cx="100" cy="100" r="94" fill="#e3ad62" stroke="#a8722f" stroke-width="3"/>`;
+  const R = rng("crust");
+  for (let i = 0; i < 18; i++) { const a = R() * 6.283, rr = 86 + R() * 5; s += `<circle cx="${(100 + Math.cos(a) * rr).toFixed(1)}" cy="${(100 + Math.sin(a) * rr).toFixed(1)}" r="${(1.5 + R() * 2.5).toFixed(1)}" fill="#b98040" opacity=".55"/>`; }
+  s += `<circle cx="100" cy="100" r="80" fill="${sc}"/>`;
+  const cheese = art.cheese == null ? 1 : art.cheese, RC = rng("cheese" + sauce);
+  if (cheese > 0 && sauce !== "choc") {
+    const cc = sauce === "white" ? "#f6e3a8" : "#f3cf72";
+    s += `<circle cx="100" cy="100" r="${sauce === "white" ? 70 : 64}" fill="${cc}"/>`;
+    for (let i = 0; i < 18; i++) { const a = i / 18 * 6.283 + RC() * .3, rr = (sauce === "white" ? 66 : 60) + RC() * 6; s += `<circle cx="${(100 + Math.cos(a) * rr).toFixed(1)}" cy="${(100 + Math.sin(a) * rr).toFixed(1)}" r="${(6 + RC() * 5).toFixed(1)}" fill="${cc}"/>`; }
+    for (let i = 0; i < 10; i++) { const a = RC() * 6.283, rr = 30 + RC() * 44; s += `<circle cx="${(100 + Math.cos(a) * rr).toFixed(1)}" cy="${(100 + Math.sin(a) * rr).toFixed(1)}" r="${(3 + RC() * 4).toFixed(1)}" fill="${sc}" opacity=".55"/>`; }
+    for (let i = 0; i < 8 * cheese; i++) { const a = RC() * 6.283, rr = Math.sqrt(RC()) * 66; s += `<circle cx="${(100 + Math.cos(a) * rr).toFixed(1)}" cy="${(100 + Math.sin(a) * rr).toFixed(1)}" r="${(2.5 + RC() * 3.5).toFixed(1)}" fill="#d49a3c" opacity="${cheese > 1 ? .5 : .35}"/>`; }
+    if (cheese > 1) for (let i = 0; i < 14; i++) { const a = RC() * 6.283, rr = Math.sqrt(RC()) * 64; s += `<circle cx="${(100 + Math.cos(a) * rr).toFixed(1)}" cy="${(100 + Math.sin(a) * rr).toFixed(1)}" r="${(6 + RC() * 6).toFixed(1)}" fill="#fbe7a6" opacity=".7"/>`; }
+  }
+  if (sauce === "choc") { const RN = rng("nut"); for (let i = 0; i < 14; i++) { const a = RN() * 6.283, rr = Math.sqrt(RN()) * 66; s += `<circle cx="${(100 + Math.cos(a) * rr).toFixed(1)}" cy="${(100 + Math.sin(a) * rr).toFixed(1)}" r="3.4" fill="#c79a5a"/>`; } }
+  (art.tops || []).forEach(t => {
+    const f = SHAPE[t]; if (!f) return; const RT = rng("t" + t), n = COUNT[t] || 8;
+    s += `<g class="${fresh && fresh.includes(t) ? "byo-t" : ""}">`;
+    for (let i = 0; i < n; i++) { const a = RT() * 6.283, rr = 12 + Math.sqrt(RT()) * 56; s += f(+(100 + Math.cos(a) * rr).toFixed(1), +(100 + Math.sin(a) * rr).toFixed(1), RT()); }
+    s += "</g>";
+  });
+  return s + "</svg>";
+}
+const ICON_BOX = `<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="24" width="44" height="26" fill="#e9dcc4" stroke="#1d1814" stroke-width="3"/><path d="M10 24l8-10h28l8 10" fill="#fbf6ec" stroke="#1d1814" stroke-width="3" stroke-linejoin="round"/><path d="M22 37h20" stroke="#cf3f2e" stroke-width="3"/></svg>`;
+const ICON_CUP = `<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M16 26h32l-4 24H20z" fill="#fbf6ec" stroke="#1d1814" stroke-width="3" stroke-linejoin="round"/><ellipse cx="32" cy="26" rx="16" ry="5" fill="#f4ecd9" stroke="#1d1814" stroke-width="3"/></svg>`;
+const ICON_CANNOLI = `<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="24" width="40" height="16" rx="8" fill="#d9a35a" stroke="#1d1814" stroke-width="3" transform="rotate(-18 32 32)"/><circle cx="14" cy="38" r="6" fill="#fbf6ec" stroke="#1d1814" stroke-width="3"/><circle cx="50" cy="26" r="6" fill="#fbf6ec" stroke="#1d1814" stroke-width="3"/></svg>`;
+function thumb(it) {
+  if (it.photo && IMG[it.photo]) return `<img src="${IMG[it.photo]}" alt="" loading="lazy" width="72" height="72">`;
+  if (it.art) return pizzaSVG(it.art);
+  if (/cannoli/.test(it.id)) return ICON_CANNOLI;
+  if (it.id === "garliccup") return ICON_CUP;
+  return ICON_BOX;
+}
+const TAGS = { pop: '<span class="tg pop">Popular</span>', fav: '<span class="tg fav">Fave</span>', veg: '<span class="tg veg">V</span>', hal: '<span class="tg hal">Halal</span>' };
+const tagsHTML = it => (it.tags || []).map(t => TAGS[t] || "").join("");
+
+/* ========== printed menu ========== */
+function renderMenu() {
+  const go = O.mode === "site" || O.mode === "link";
+  const row = it => {
+    const pr = isSized(it) ? `<span class="pr"><span>${plain(cents(it.price.r))}</span><span>${plain(cents(it.price.l))}</span></span>` : `<span class="pr"><span>${money(cents(it.price))}</span></span>`;
+    return `<div class="mi${go ? " go" : ""}" data-add="${it.id}"${go ? ` role="button" tabindex="0"` : ""}><div class="top-line"><span class="nmw"><span class="nm">${esc(it.name)}</span>${tagsHTML(it)}</span><span class="lead"></span>${pr}${go ? '<span class="madd" aria-hidden="true">+</span>' : ""}</div><span class="ds">${esc(it.desc)}</span>${go ? '<span class="sr">Add to order</span>' : ""}</div>`;
+  };
+  const grp = g => {
+    const list = itemsOf(g); if (!list.length) return "";
+    const sz = g.sized ? '<span class="sz" aria-hidden="true"><span>12 in</span><span>16 in</span>' + (go ? '<span class="szsp"></span>' : '') + '</span>' : "";
+    return `<div class="grp"><h3>${g.sauce ? `<span class="sauce ${g.sauce}"></span>` : ""}${esc(g.title)}${sz}</h3>${g.sub ? `<span class="gsub">${esc(g.sub)}</span>` : ""}<div class="rule"></div>${list.map(row).join("")}</div>`;
+  };
+  MENU.categories.forEach(c => {
+    const box = $(`[data-menu="${c.id}"]`); if (!box) return;
+    if (c.id === "pizza") {
+      const [red, white, spec] = c.groups, b = c.byo, x = MENU.extras;
+      const byo = `<div class="byo"><div class="byo-h"><b>Build your own</b><span class="pr"><small>12 in</small>${plain(cents(b.price.r))}<small>16 in</small>${plain(cents(b.price.l))}</span></div><p>${esc(b.desc)} Each topping adds ${money(cents(x.topping.r))} on a 12 inch or ${money(cents(x.topping.l))} on a 16 inch.</p><div class="chips">${MENU.toppings.map(t => `<span>${esc(t.name)}</span>`).join("")}</div><div class="xtra"><span>Extra cheese <b>${money(cents(x.cheese.r))} / ${money(cents(x.cheese.l))}</b></span><span>Extra sauce <b>${money(cents(x.sauce.r))} / ${money(cents(x.sauce.l))}</b></span><span>Extra toppings <b>${money(cents(x.topping.r))} / ${money(cents(x.topping.l))}</b></span></div>${go ? '<button type="button" class="btn btn-ink" data-add="byo">Build yours</button>' : ""}</div>`;
+      box.innerHTML = `<div class="cols">${grp(red)}${grp(white)}</div><div class="cols" style="margin-top:8px">${grp(spec)}<div>${byo}</div></div>`;
+    } else box.innerHTML = c.groups.map(grp).join("");
+  });
+}
+
+/* ========== order sheet ========== */
+const OSel = $("#os"), panel = $("#osPanel"), oiEl = $("#oi");
+let VIEW = "menu", VSTACK = [], lastFocus = null, sheetOpen = false;
+const opener = { el: null };
+function lockScroll(on) { document.documentElement.classList.toggle("locked", on); }
+function openOrder(view, push = true) {
+  if (O.mode === "link") { window.open(O.link, "_blank", "noopener"); return; }
+  $("#sheet").classList.remove("on");
+  if (!sheetOpen) {
+    lastFocus = document.activeElement; sheetOpen = true; OSel.hidden = false; lockScroll(true);
+    renderList(); if (push) history.pushState({ yp: 1 }, "");
+  }
+  showView(view || "menu", true);
+  setTimeout(() => { const f = $("[data-close].os-ico", OSel); f && f.focus(); }, 30);
+}
+function closeOrder(fromPop) {
+  if (!sheetOpen) return;
+  if (!fromPop && history.state && history.state.yp) { history.go(-history.state.yp); return; }
+  closeItem(true); sheetOpen = false; OSel.hidden = true; lockScroll(false); VSTACK = [];
+  if (VIEW === "done") { VIEW = "menu"; }
+  if (lastFocus && lastFocus.focus) lastFocus.focus();
+}
+function hideToast() { const t = $("#ostoast"); if (t) t.hidden = true; }
+function showView(v, reset) {
+  hideToast();
+  if (reset) VSTACK = [];
+  if (v !== VIEW && !reset) VSTACK.push(VIEW);
+  if (reset && v !== "menu") VSTACK = v === "done" ? [] : v === "checkout" ? ["menu", "cart"] : ["menu"];
+  VIEW = v;
+  $$(".os-view", OSel).forEach(x => x.hidden = x.dataset.view !== v);
+  $("#osBack").hidden = !VSTACK.length;
+  $("#osT").textContent = { menu: "Order for pickup", cart: "Your order", checkout: "Checkout", done: "Order sent" }[v];
+  paintSheetHead();
+  if (v === "cart") renderCart(); else if (v === "checkout") renderCheckout(); else if (v === "menu") { refreshCounts(); }
+  renderFoot();
+  const sc = $(`.os-view[data-view="${v}"] .os-scroll`, OSel); if (sc && v !== "menu") sc.scrollTop = 0;
+}
+function backView() { if (VSTACK.length) { VIEW = VSTACK.pop(); const keep = VSTACK.slice(); showView(VIEW, true); VSTACK = keep; $("#osBack").hidden = !VSTACK.length; } }
+function paintSheetHead() {
+  const s = statusText(), sub = $("#osSub");
+  sub.innerHTML = `<span class="dot${s.open ? " open" : ""}"></span>${esc(s.msg)}`;
+  const note = $("#osNote"), p = orderingPaused();
+  const d = slotDays()[0], when = d ? (d.i === 0 ? "later today" : d.i === 1 ? "tomorrow" : d.name) : "";
+  if (p) { note.textContent = p; note.hidden = false; }
+  else if (VIEW === "done" || !d) note.hidden = true;
+  else if (!s.open) { note.textContent = "We’re closed right now, but you can order ahead for " + when + "."; note.hidden = false; }
+  else if (d.i > 0) { note.textContent = "We’re done taking online orders for today. You can order ahead for " + when + ", or call us at " + SITE.phoneShow + "."; note.hidden = false; }
+  else note.hidden = true;
+}
+
+function renderList() {
+  const cats = MENU.categories, secs = [];
+  const chips = [];
+  cats.forEach(c => {
+    if (c.id === "pizza") chips.push(["byo", "Build your own"]);
+    chips.push([c.id, c.order]);
+  });
+  $("#osCats").innerHTML = chips.map(([id, n], i) => `<button type="button" data-jump="${id}"${i === 0 ? ' aria-current="true"' : ""}>${esc(n)}</button>`).join("");
+  const card = it => {
+    const p = isSized(it) ? `${money(cents(it.price.r))}<br><small>12 in</small>` : money(cents(it.price));
+    return `<button type="button" class="oc" data-item="${it.id}"><span class="ph">${thumb(it)}</span><span class="tx"><b>${esc(it.name)}<span class="inq" data-inq="${it.id}" hidden></span></b>${it.desc ? `<span class="dsc">${esc(it.desc)}</span>` : ""}${it.tags ? `<span class="tgs">${tagsHTML(it)}</span>` : ""}</span><span class="rt"><span class="p">${p}</span><i aria-hidden="true">+</i></span></button>`;
+  };
+  cats.forEach(c => {
+    let h = "";
+    if (c.id === "pizza") {
+      const b = c.byo;
+      h += `<section class="os-sec" id="os-byo" data-sec="byo"><button type="button" class="os-byo" data-item="byo">${pizzaSVG({ sauce: "red", tops: ["pepperoni", "mushroom", "greenpep", "olive"] })}<span><b>Build your own</b><span>${esc(b.desc)} ${money(cents(b.price.r))} for a 12 inch, plus ${money(cents(MENU.extras.topping.r))} a topping.</span><em>Start building</em></span></button></section>`;
+    }
+    h += `<section class="os-sec" id="os-${c.id}" data-sec="${c.id}">`;
+    c.groups.forEach(g => {
+      const list = itemsOf(g); if (!list.length) return;
+      h += `<h3>${g.sauce ? `<span class="sauce ${g.sauce}"></span>` : ""}${esc(g.title)}</h3>${g.sub ? `<p class="osub">${esc(g.sub)}</p>` : ""}<div class="rule"></div>${list.map(card).join("")}`;
+    });
+    secs.push(h + "</section>");
+  });
+  secs.push(`<div class="os-deliv"><b>Want it delivered?</b><p>Online orders here are for pickup at the truck. For delivery, use one of these apps. Their prices can be different from ours.</p><div class="lk"><a href="${SITE.doordash}" target="_blank" rel="noopener">DoorDash</a><a href="${SITE.ubereats}" target="_blank" rel="noopener">Uber Eats</a></div></div>`);
+  $("#osList").innerHTML = secs.join("");
+  refreshCounts(); spy();
+}
+function refreshCounts() {
+  const q = {}; CART.forEach(l => q[l.id] = (q[l.id] || 0) + l.qty);
+  $$("[data-inq]", OSel).forEach(s => { const n = q[s.dataset.inq] || 0; s.textContent = n; s.hidden = !n; });
+}
+let spyIO = null;
+function spy() {
+  if (spyIO) spyIO.disconnect();
+  const root = $("#osList"), chips = $$("#osCats button");
+  spyIO = new IntersectionObserver(es => {
+    const vis = es.filter(e => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+    if (!vis) return; const id = vis.target.dataset.sec;
+    chips.forEach(c => c.setAttribute("aria-current", c.dataset.jump === id ? "true" : "false"));
+    const on = chips.find(c => c.dataset.jump === id); if (on) on.scrollIntoView({ block: "nearest", inline: "center" });
+  }, { root, rootMargin: "0px 0px -70% 0px", threshold: 0 });
+  $$(".os-sec", root).forEach(s => spyIO.observe(s));
+}
+
+/* ========== item layer ========== */
+let CUR = null, prevTops = [];
+function openItem(id, editKey) {
+  const it = ITEMS[id]; if (!orderable(it)) return;
+  if (!sheetOpen) openOrder("menu");
+  const src = editKey ? CART.find(l => l.key === editKey) : null;
+  CUR = { it, edit: editKey || null, l: cleanLine(src ? JSON.parse(JSON.stringify(src)) : { id, size: "r", tops: [], qty: 1 }) };
+  prevTops = CUR.l.tops.slice(); hideToast();
+  renderItem(); oiEl.hidden = false;
+  if (history.state && history.state.yp === 1) history.pushState({ yp: 2 }, "");
+  $("#oiBody").scrollTop = 0;
+  setTimeout(() => $("#oiX").focus(), 30);
+}
+function closeItem(silent) {
+  if (oiEl.hidden) return;
+  if (!silent && history.state && history.state.yp === 2) { history.back(); return; }
+  oiEl.hidden = true; CUR = null;
+  const t = $("#osList [data-item].lastopen"); if (t) { t.classList.remove("lastopen"); t.focus(); }
+}
+function artFor(l, it) {
+  const base = it.art || { sauce: "red", tops: [] };
+  return { sauce: base.sauce, tops: [...new Set([...(base.tops || []), ...l.tops])], cheese: (base.cheese == null ? 1 : base.cheese) + (l.cheese ? 1 : 0) };
+}
+function renderItem() {
+  const { it, l } = CUR, s = l.size || "r", x = MENU.extras;
+  const useArt = it.byo || !(it.photo && IMG[it.photo]);
+  const hero = useArt && it.art ? `<div class="oi-hero art${s === "l" ? " big" : ""}" id="oiArt">${pizzaSVG(artFor(l, it))}</div>` : it.photo && IMG[it.photo] ? `<div class="oi-hero"><img src="${IMG[it.photo]}" alt="${esc(it.name)}"></div>` : "";
+  let h = hero + `<div class="oi-in${hero ? "" : " nohero"}"><h3 id="oiT">${esc(it.name)}</h3>${it.desc ? `<p class="d">${esc(it.desc)}</p>` : ""}${it.tags ? `<div class="tgs">${tagsHTML(it)}</div>` : ""}`;
+  if (isSized(it)) {
+    h += `<div class="og"><h4>Size <small class="req">Pick one</small></h4><div class="sizes" role="radiogroup" aria-label="Size">${["r", "l"].map(k => `<label><input type="radio" name="oisz" value="${k}"${s === k ? " checked" : ""}><span><b>${MENU.sizes[k]}</b><em>${money(cents(it.price[k]))}</em></span></label>`).join("")}</div></div>`;
+  }
+  if (extrasOk(it)) {
+    const each = money(cents(x.topping[s]));
+    h += `<div class="og"><h4>${it.byo ? "Your toppings" : "Add toppings"} <small>${each} each</small></h4><div class="tops">${MENU.toppings.map(t => `<label><input type="checkbox" name="oitop" value="${t.id}"${l.tops.includes(t.id) ? " checked" : ""}><span>${esc(t.name)} <small>+${each}</small></span></label>`).join("")}</div></div>`;
+    h += `<div class="og"><h4>Extras</h4><div class="tops"><label><input type="checkbox" name="oich"${l.cheese ? " checked" : ""}><span>Extra cheese <small>+${money(cents(x.cheese[s]))}</small></span></label><label><input type="checkbox" name="oisa"${l.sauce ? " checked" : ""}><span>Extra sauce <small>+${money(cents(x.sauce[s]))}</small></span></label></div></div>`;
+  }
+  if (it.fill) {
+    h += `<div class="og"><h4>Fillings <small>Priced at the window</small></h4><div class="tops">${MENU.toppings.map(t => `<label><input type="checkbox" name="oifill" value="${t.id}"${l.fills.includes(t.id) ? " checked" : ""}><span>${esc(t.name)}</span></label>`).join("")}</div></div>`;
+  }
+  h += `<div class="og"><h4><label for="oinote">Special instructions</label> <small>Optional</small></h4><textarea id="oinote" maxlength="140" placeholder="${esc(it.notePrompt || "Anything we should know?")}">${esc(l.note)}</textarea><span class="cc" id="oicc">${l.note.length}/140</span></div></div>`;
+  $("#oiBody").innerHTML = h;
+  renderItemFoot();
+}
+function renderItemFoot() {
+  const { l, edit } = CUR, p = linePrice(l);
+  $("#oiFoot").innerHTML = `<div class="qty" role="group" aria-label="Quantity"><button type="button" data-q="-1" aria-label="One less"${l.qty <= 1 ? " disabled" : ""}><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 12h14" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></button><output aria-live="polite">${l.qty}</output><button type="button" data-q="1" aria-label="One more"${l.qty >= 20 ? " disabled" : ""}><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 12h14M12 5v14" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></button></div><button type="button" class="btn btn-red" id="oiAdd"><span>${edit ? "Update order" : "Add to order"}</span><span class="amt">${money(p.total)}${p.pending ? "+" : ""}</span></button>`;
+}
+function syncItem(e) {
+  if (!CUR) return; const { it, l } = CUR, body = $("#oiBody");
+  const sz = $("input[name=oisz]:checked", body); if (sz) l.size = sz.value;
+  l.tops = $$("input[name=oitop]:checked", body).map(i => i.value);
+  l.cheese = !!($("input[name=oich]", body) || {}).checked; l.sauce = !!($("input[name=oisa]", body) || {}).checked;
+  l.fills = $$("input[name=oifill]:checked", body).map(i => i.value);
+  const n = $("#oinote", body); if (n) { l.note = n.value.slice(0, 140); $("#oicc").textContent = l.note.length + "/140"; }
+  if (e && e.target.name === "oisz") { const y = body.scrollTop; renderItem(); body.scrollTop = y; return; }
+  const art = $("#oiArt");
+  if (art && e && (e.target.name === "oitop" || e.target.name === "oich")) {
+    const fresh = l.tops.filter(t => !prevTops.includes(t)); art.innerHTML = pizzaSVG(artFor(l, it), fresh); prevTops = l.tops.slice();
+  }
+  renderItemFoot();
+}
+function commitItem() {
+  const { l, edit } = CUR, clean = cleanLine(l);
+  if (edit) { const i = CART.findIndex(c => c.key === edit); if (i > -1) CART[i] = clean; }
+  else {
+    const same = CART.find(c => JSON.stringify({ ...c, key: 0, qty: 0 }) === JSON.stringify({ ...clean, key: 0, qty: 0 }));
+    if (same) same.qty = Math.min(20, same.qty + clean.qty); else CART.push(clean);
+  }
+  saveCart(); closeItem(); refreshCounts(); renderFoot();
+  if (VIEW === "cart") renderCart();
+  toast(edit ? "Order updated" : "Added to your order");
+}
+let toastT;
+function toast(msg) {
+  let t = $("#ostoast"); if (!t) { t = document.createElement("div"); t.id = "ostoast"; t.setAttribute("role", "status"); t.style.cssText = "position:absolute;left:50%;transform:translateX(-50%);bottom:84px;z-index:9;background:#1d1814;color:#f2e9d8;font-weight:800;padding:.6rem 1rem;border:2px solid #f2b544;font-size:.9rem;letter-spacing:.04em;white-space:nowrap;pointer-events:none"; panel.appendChild(t); }
+  t.textContent = msg; t.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => t.hidden = true, 1300);
+}
+
+/* ========== cart view ========== */
+function renderCart() {
+  const box = $("#osCart");
+  if (!CART.length) { box.innerHTML = `<div class="empty">${pizzaSVG({ sauce: "red", tops: [] })}<b>Your order is empty</b><p>Pick something tasty and it’ll show up here.</p><button type="button" class="btn btn-ink" data-view-go="menu">See the menu</button></div>`; return; }
+  const rows = CART.map(l => {
+    const it = ITEMS[l.id], p = linePrice(l), bits = lineBits(l);
+    return `<div class="cl"><span class="q">${l.qty}×</span><span class="n"><b>${esc(it.name)}</b>${bits.length ? `<span>${esc(bits.join(" · "))}</span>` : ""}${l.note ? `<span>Note: ${esc(l.note)}</span>` : ""}${p.pending ? '<span class="pend">Fillings priced at the window</span>' : ""}</span><span class="p">${money(p.total)}</span><span class="acts"><button type="button" data-edit="${l.key}">Edit</button><button type="button" class="rm" data-rm="${l.key}">Remove</button></span></div>`;
+  }).join("");
+  box.innerHTML = `<h2 class="os-h2">Your order</h2>${rows}<div class="tot"><div class="big"><span>Subtotal</span><b>${money(cartSum())}${cartPending() ? "+" : ""}</b></div><span class="fine">Your total is rung up at the window, including any sales tax.${cartPending() ? " Fillings are added there too." : ""}</span></div><div class="os-deliv"><b>Pickup at the truck</b><p>901 N Washington St, Junction City. Want delivery instead? Use <a href="${SITE.doordash}" target="_blank" rel="noopener">DoorDash</a> or <a href="${SITE.ubereats}" target="_blank" rel="noopener">Uber Eats</a>.</p></div>`;
+}
+
+/* ========== checkout ========== */
+let CK = store.get("yp_ck", { name: "", phone: "", email: "", from: "" }) || {};
+function renderCheckout() {
+  const days = slotDays(), paused = orderingPaused();
+  const opts = days.map(d => `<optgroup label="${esc(d.name + ", " + d.date)}">${d.times.map((m, i) => `<option value="${d.day.key} ${pad(Math.floor(m / 60))}:${pad(m % 60)}"${d.i === 0 && i === 0 && d.openNow ? ' data-asap="1"' : ""}>${d.i === 0 && i === 0 && d.openNow ? "As soon as it’s ready, about " + fmtMin(m) : d.name + " at " + fmtMin(m)}</option>`).join("")}</optgroup>`).join("");
+  const online = O.payOnline && O.endpoint && !cartPending();
+  const inApp = /FBAN|FBAV|Instagram|FB_IAB|Messenger/i.test(navigator.userAgent);
+  const milesOn = !!SITE.live.url || SITE.preview;
+  $("#osCheck").innerHTML = `<form class="ck" id="ckf" novalidate>
+    <h2 class="os-h2">Checkout</h2>
+    <div class="two"><div><label class="fl" for="ckn">Your name</label><input id="ckn" autocomplete="name" maxlength="40" value="${esc(CK.name)}" required></div>
+    <div><label class="fl" for="ckp">Mobile number</label><input id="ckp" type="tel" inputmode="tel" autocomplete="tel" maxlength="20" value="${esc(CK.phone)}" required><span class="hint">In case we need to reach you about your order.</span></div></div>
+    <div><label class="fl" for="ckt">Pickup time</label><select id="ckt" required>${opts || "<option value=\"\">No pickup times open</option>"}</select><span class="hint">Pickup at 901 N Washington St, Junction City.</span></div>
+    <fieldset style="border:0;padding:0;margin:0"><legend class="fl">How you’ll pay</legend><div class="pays">
+      ${O.payAtWindow ? `<label><input type="radio" name="ckpay" value="window"${!online ? " checked" : ""}><span><b>Pay at the window</b><small>Cash, or tap Apple Pay or a card on our reader when you pick up.</small></span></label>` : ""}
+      ${online ? `<label><input type="radio" name="ckpay" value="online" checked><span><b>Pay now online</b><small>Apple Pay, Google Pay or card. You’ll finish on a secure Stripe page.</small></span></label>` : ""}
+    </div>${O.payOnline && O.endpoint && cartPending() ? `<p class="hint" style="margin-top:8px">Build your own fillings are priced at the window, so this order is paid there.</p>` : ""}${online && inApp ? `<p class="inapp" style="margin-top:10px">Want Apple Pay? Tap the three dots at the top and open this page in Safari. Card works right here too.</p>` : ""}</fieldset>
+    <div><label class="fl" for="cke">Email <span style="text-transform:none;letter-spacing:0;font-weight:600;color:var(--muted)">optional</span></label><input id="cke" type="email" autocomplete="email" maxlength="80" value="${esc(CK.email)}"><span class="hint">For a copy of your order.</span></div>
+    ${milesOn ? `<div><label class="fl" for="ckf2">Where are you coming from today? <span style="text-transform:none;letter-spacing:0;font-weight:600;color:var(--muted)">optional</span></label><input id="ckf2" maxlength="60" placeholder="Town and state, or country" value="${esc(CK.from)}"><span class="hint">Helps us put your town on our Miles for a slice map.</span></div>` : ""}
+    <div><label class="fl" for="ckm">Notes for the whole order <span style="text-transform:none;letter-spacing:0;font-weight:600;color:var(--muted)">optional</span></label><textarea id="ckm" maxlength="200" placeholder="Anything else we should know?"></textarea></div>
+    ${SITE.textList.enabled ? `<label class="optin"><input type="checkbox" id="ckopt"><span>Text me specials and truck updates from By Yurii’s Pizza at the number above. Message frequency varies. Msg and data rates may apply. Reply STOP to opt out, HELP for help. Consent isn’t required to order. See our <a href="privacy.html" target="_blank">privacy and text terms</a>.</span></label>` : ""}
+    <input class="hp" id="ckhp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="sumline"><span>${cartQty()} ${cartQty() === 1 ? "item" : "items"}</span><b>${money(cartSum())}${cartPending() ? "+" : ""}</b></div>
+    <p class="fine" id="ckfine"></p>
+    <p class="err" id="ckerr" role="alert"></p>
+  </form>`;
+  const ph = $("#ckp"); ph.addEventListener("blur", () => { ph.value = fmtPhone(ph.value); });
+  $$("#ckf input, #ckf select, #ckf textarea").forEach(i => i.addEventListener("input", () => { i.removeAttribute("aria-invalid"); }));
+  $$("input[name=ckpay]").forEach(r => r.addEventListener("change", paintFine));
+  paintFine();
+  if (paused) { $("#ckerr").textContent = paused; }
+}
+function payChoice() { const r = $("input[name=ckpay]:checked"); return r ? r.value : "window"; }
+function paintFine() {
+  const f = $("#ckfine"); if (!f) return;
+  if (O.endpoint) f.textContent = payChoice() === "online" ? "Next you’ll pay on Stripe’s secure page, then you’re all set." : "We’ll get your order right away. Pay at the window when you pick up.";
+  else f.innerHTML = "Tapping the button opens your messages app with your order filled in, addressed to the truck at " + SITE.phoneShow + ". Just hit send. On a computer? Call us at <a href=\"tel:" + SITE.phone + "\">" + SITE.phoneShow + "</a>.";
+  renderFoot();
+}
+function readCheckout() {
+  const v = id => ($("#" + id) || { value: "" }).value.trim(), errs = [];
+  const name = v("ckn"), phone = v("ckp").replace(/\D/g, "").replace(/^1(?=\d{10}$)/, ""), when = v("ckt"), email = v("cke");
+  const bad = (id, msg) => { const e = $("#" + id); if (e) e.setAttribute("aria-invalid", "true"); errs.push([id, msg]); };
+  if (name.length < 2) bad("ckn", "Please add your name.");
+  if (phone.length !== 10) bad("ckp", "Please add a 10 digit mobile number.");
+  if (!when) bad("ckt", "Please pick a pickup time.");
+  if (email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) bad("cke", "That email doesn’t look right.");
+  return { errs, name, phone, email, when, from: v("ckf2"), notes: v("ckm"), optIn: !!($("#ckopt") || {}).checked, hp: v("ckhp"), pay: payChoice(), asap: !!(($("#ckt") || {}).selectedOptions || [])[0]?.dataset.asap };
+}
+function whenLabel(when, asap) {
+  const [k, t] = when.split(" "), [y, m, d] = k.split("-").map(Number), min = toMin(t), n = cnow();
+  const day = { y, m, d }, diff = Math.round((Date.UTC(y, m - 1, d) - Date.UTC(n.y, n.m - 1, n.d)) / 864e5), dow = new Date(Date.UTC(y, m - 1, d)).getUTCDay();
+  const name = diff === 0 ? "Today" : diff === 1 ? "Tomorrow" : DAYS[dow];
+  return name + ", " + DSHORT[dow] + " " + MSHORT[m - 1] + " " + d + (asap ? ", as soon as it's ready (about " + fmtMin(min) + ")" : " at " + fmtMin(min));
+}
+function ticket(o) {
+  const L = [];
+  L.push("New pickup order #" + o.no + " from the website");
+  L.push("Pickup: " + o.whenLabel);
+  L.push("Pay: " + (o.pay === "online" ? "PAID ONLINE" : "at the window"));
+  L.push("");
+  o.lines.forEach(l => {
+    const it = ITEMS[l.id], p = linePrice(l), bits = lineBits(l);
+    L.push(l.qty + "x " + it.name.replace(/[’]/g, "'") + "  " + money(p.total) + (p.pending ? " + fillings" : ""));
+    if (bits.length) L.push("   " + bits.join(" | "));
+    if (l.note) L.push("   note: " + l.note);
+  });
+  L.push("");
+  L.push("Subtotal " + money(o.subtotal) + (o.pending ? " plus fillings" : "") + " (tax, if any, at the window)");
+  if (o.notes) L.push("Order notes: " + o.notes);
+  L.push("Name: " + o.name + " | Phone: " + fmtPhone(o.phone) + (o.email ? " | " + o.email : ""));
+  if (o.from) L.push("Coming from: " + o.from);
+  return L.join("\n");
+}
+const smsHref = body => "sms:" + SITE.phone + "?&body=" + encodeURIComponent(body);
+let sending = false;
+async function placeOrder() {
+  if (sending) return;
+  const paused = orderingPaused(); if (paused) { $("#ckerr").textContent = paused; return; }
+  const r = readCheckout();
+  if (r.errs.length) { $("#ckerr").textContent = r.errs.map(e => e[1]).join(" "); const f = $("#" + r.errs[0][0]); f && f.focus(); return; }
+  CK = { name: r.name, phone: fmtPhone(r.phone), email: r.email, from: r.from }; store.set("yp_ck", CK);
+  const sum = cartSum();
+  if (r.pay === "window" && O.windowMax && sum > cents(O.windowMax)) { $("#ckerr").innerHTML = "For orders this big, please call us at <a href=\"tel:" + SITE.phone + "\">" + SITE.phoneShow + "</a> so we can plan it right."; return; }
+  const o = { v: 2, no: String(1000 + Math.floor(Math.random() * 9000)), lines: CART.map(l => ({ ...l })), subtotal: sum, pending: cartPending(), name: r.name, phone: r.phone, email: r.email, when: r.when, asap: r.asap, whenLabel: whenLabel(r.when, r.asap), pay: r.pay, from: r.from, notes: r.notes, optIn: r.optIn, at: Date.now() };
+  if (r.hp) { finishOrder(o, "bot"); return; }
+  if (r.from) dropPin(r.name, r.from, "order");
+  if (!O.endpoint) { o.text = ticket(o); finishOrder(o, "sms"); location.href = smsHref("Hi! " + o.text); return; }
+  sending = true; renderFoot();
+  try {
+    const res = await fetch(O.endpoint.replace(/\/$/, "") + (r.pay === "online" ? "/checkout" : "/order"), { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ order: o, page: location.href.split("#")[0].split("?")[0] }) });
+    const j = await res.json().catch(() => ({}));
+    if (!res.ok || !j.ok) throw new Error(j.error || "Order did not go through");
+    o.no = j.orderNo || o.no; o.subtotal = j.subtotal != null ? j.subtotal : o.subtotal;
+    if (r.pay === "online" && j.url) { store.set("yp_last", { ...o, status: "paying" }); location.href = j.url; return; }
+    finishOrder(o, "sent");
+  } catch (e) {
+    o.text = ticket(o);
+    $("#ckerr").innerHTML = "We couldn’t send that just now. <a href=\"" + smsHref("Hi! " + o.text) + "\">Text the order to the truck</a> or call <a href=\"tel:" + SITE.phone + "\">" + SITE.phoneShow + "</a>.";
+  } finally { sending = false; renderFoot(); }
+}
+function finishOrder(o, how) {
+  o.status = how; store.set("yp_last", o);
+  CART = []; saveCart(); refreshCounts();
+  showView("done", true); renderDone(o);
+}
+function renderDone(o) {
+  if (!o) o = store.get("yp_last", null);
+  if (!o) { showView("menu", true); return; }
+  const items = (o.lines || []).map(l => { const it = ITEMS[l.id]; if (!it) return ""; const p = linePrice(l) || { total: 0 }; const b = lineBits(l); return `<li><span>${l.qty}× ${esc(it.name)}${b.length ? `<small>${esc(b.join(" · "))}</small>` : ""}</span><span>${money(p.total)}</span></li>`; }).join("");
+  const paid = o.status === "paid";
+  $("#osT").textContent = o.status === "sms" ? "Almost done" : paid ? "Paid and sent" : "Order in";
+  const msg = o.status === "sms" ? `<div class="done-msg"><b>Almost done. Hit send in your messages app.</b><p>Your order is filled in and addressed to the truck. Once you send it, we’ve got it.</p></div>`
+    : o.status === "paid" ? `<div class="done-msg"><b>Paid and sent. See you soon!</b><p>Your order is in and your payment went through.</p></div>`
+    : `<div class="done-msg"><b>Your order is in. See you soon!</b><p>We’ve got it. Pay at the window when you pick up.</p></div>`;
+  $("#osDone").innerHTML = msg + `<div class="tk"><span class="stp">${paid ? "Paid online" : "Pay at the window"}</span><h3>Order #${esc(o.no)}</h3><div class="when">${esc(o.whenLabel || "")}</div><div class="meta"><span><b>Pickup:</b> 901 N Washington St, Junction City</span><span><b>Name:</b> ${esc(o.name || "")}</span>${paid ? "" : "<span><b>Pay with:</b> cash, Apple Pay or card</span>"}</div><ul>${items}</ul><div class="tt"><span>Subtotal</span><span>${money(o.subtotal || 0)}${o.pending ? "+" : ""}</span></div></div>
+  <div class="done-acts">${o.status === "sms" && o.text ? `<a class="btn btn-red" href="${smsHref("Hi! " + o.text)}">Open messages again</a>` : ""}<a class="btn btn-ink" href="${SITE.directions}" target="_blank" rel="noopener">Directions to the truck</a><a class="btn btn-line" href="tel:${SITE.phone}">Call ${SITE.phoneShow}</a></div>`;
+}
+
+/* ========== footer button per view ========== */
+function renderFoot() {
+  const f = $("#osFoot"), q = cartQty(), sum = money(cartSum()) + (cartPending() ? "+" : ""), paused = orderingPaused();
+  if (VIEW === "menu") f.innerHTML = q ? `<button type="button" class="btn btn-red bigbtn" data-view-go="cart"><span class="lbl2">View order <span class="cnt">${q}</span></span><span class="amt">${sum}</span></button>` : `<p class="hint">Tap anything on the menu to add it to your order.</p>`;
+  else if (VIEW === "cart") f.innerHTML = q ? `<button type="button" class="btn btn-red bigbtn" data-view-go="checkout"${paused ? " disabled" : ""}><span>${paused ? "Ordering paused" : "Checkout"}</span><span class="amt">${sum}</span></button>` : "";
+  else if (VIEW === "checkout") {
+    const online = payChoice() === "online" && O.payOnline && O.endpoint;
+    const label = sending ? "Sending…" : !O.endpoint ? "Text my order to the truck" : online ? "Continue to payment" : "Place order";
+    f.innerHTML = `<button type="button" class="btn btn-red bigbtn" id="ckgo"${sending || paused || !q ? " disabled" : ""}><span>${label}</span><span class="amt">${sum}</span></button>`;
+  }
+  else if (VIEW === "done") f.innerHTML = `<button type="button" class="btn btn-ink" data-close>Done</button>`;
+}
+
+/* ========== events inside the sheet ========== */
+OSel.addEventListener("click", e => {
+  const t = e.target;
+  if (t.closest("[data-close]")) { e.preventDefault(); closeOrder(); return; }
+  const it = t.closest("[data-item]"); if (it) { $$("#osList .lastopen").forEach(x => x.classList.remove("lastopen")); it.classList.add("lastopen"); openItem(it.dataset.item); return; }
+  const jp = t.closest("[data-jump]"); if (jp) { const s = $("#os-" + jp.dataset.jump); if (s) $("#osList").scrollTo({ top: s.offsetTop - 6, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); return; }
+  const vg = t.closest("[data-view-go]"); if (vg && !vg.disabled) { showView(vg.dataset.viewGo); return; }
+  const ed = t.closest("[data-edit]"); if (ed) { const l = CART.find(c => c.key === ed.dataset.edit); if (l) openItem(l.id, l.key); return; }
+  const rm = t.closest("[data-rm]"); if (rm) { CART = CART.filter(c => c.key !== rm.dataset.rm); saveCart(); renderCart(); renderFoot(); refreshCounts(); toast("Removed"); return; }
+  if (t.closest("#ckgo")) { placeOrder(); return; }
+  if (t.closest("#oiX")) { closeItem(); return; }
+  const qb = t.closest("[data-q]"); if (qb && CUR) { CUR.l.qty = Math.min(20, Math.max(1, CUR.l.qty + (+qb.dataset.q))); renderItemFoot(); return; }
+  if (t.closest("#oiAdd") && CUR) { commitItem(); return; }
 });
-document.getElementById("yr").textContent=new Date().getFullYear();
+$("#osBack").addEventListener("click", backView);
+$("#oiBody").addEventListener("change", syncItem);
+$("#oiBody").addEventListener("input", e => { if (e.target.id === "oinote") syncItem(e); });
+OSel.addEventListener("submit", e => { e.preventDefault(); if (e.target.id === "ckf") placeOrder(); });
+OSel.addEventListener("keydown", e => {
+  if (e.key === "Escape") { e.stopPropagation(); if (!oiEl.hidden) closeItem(); else closeOrder(); return; }
+  if (e.key !== "Tab") return;
+  const scope = !oiEl.hidden ? oiEl : panel;
+  const f = $$('button:not([disabled]),a[href],input:not([type=hidden]):not(.hp),select,textarea,[tabindex="0"]', scope).filter(x => x.offsetParent !== null && !x.closest("[hidden]") && (scope === oiEl || !x.closest("#oi")));
+  if (!f.length) return; const a = f[0], z = f[f.length - 1];
+  if (e.shiftKey && document.activeElement === a) { e.preventDefault(); z.focus(); }
+  else if (!e.shiftKey && document.activeElement === z) { e.preventDefault(); a.focus(); }
+});
+addEventListener("popstate", e => {
+  const d = (e.state && e.state.yp) || 0;
+  if (d < 2 && !oiEl.hidden) closeItem(true);
+  if (d < 1 && sheetOpen) closeOrder(true);
+  if (d >= 1 && !sheetOpen) openOrder("menu", false);
+});
 
-const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.08});
-document.querySelectorAll(".fade").forEach(el=>io.observe(el));
+/* ========== page level buttons ========== */
+document.addEventListener("click", e => {
+  const ord = e.target.closest("[data-order]");
+  if (ord && !ord.closest("#os")) { e.preventDefault(); openOrder("menu"); return; }
+  const add = e.target.closest("[data-add]");
+  if (add && !add.closest("#os")) {
+    e.preventDefault();
+    if (O.mode === "link") { window.open(O.link, "_blank", "noopener"); return; }
+    openOrder("menu"); openItem(add.dataset.add); return;
+  }
+  const dl = e.target.closest("[data-deliver]"); if (dl) { e.preventDefault(); $("#sheet").classList.add("on"); }
+});
+document.addEventListener("keydown", e => {
+  const m = e.target.closest && e.target.closest(".mi.go");
+  if (m && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); openOrder("menu"); openItem(m.dataset.add); }
+});
+
+/* ========== reviews ========== */
+(function () {
+  const box = $("#tcards"); if (!box) return;
+  box.innerHTML = REVIEWS.map(r => `<figure class="tcard"><span class="q" aria-hidden="true">“</span><blockquote><p>${esc(r.t)}</p></blockquote><figcaption class="who"><b>${esc(r.n)}</b><span><span class="s" aria-label="5 stars">★★★★★</span> Google</span></figcaption></figure>`).join("");
+})();
+
+/* ========== images from the GoHighLevel library ========== */
+function paintImages() {
+  $$("img[data-img]").forEach(i => { const u = IMG[i.dataset.img]; if (u) i.src = u; else i.closest("figure") && i.closest("figure").setAttribute("hidden", ""); });
+  const ev = $("#event-photos");
+  if (ev && IMG.topeka01 && $$(".ev-row figure:not([hidden])", ev).length >= 3) ev.hidden = false;
+  const clip = $("#clip"); if (clip && !IMG.spotlight) { clip.hidden = true; clip.parentElement.classList.add("noimg"); }
+  else if (clip) clip.dataset.k = "spotlight";
+  const pl = $("#pressLink"); if (pl && SITE.press.link) { pl.href = SITE.press.link; pl.hidden = false; }
+}
+
+/* ========== booking ========== */
+(function () {
+  const url = SITE.booking.calendarUrl, cal = $("#bcal"), form = $("#bf");
+  if (url) {
+    cal.hidden = false; form.hidden = true;
+    const load = () => { $("#bcalFrame").innerHTML = `<iframe src="${esc(url)}" title="Book a private event with By Yurii’s Pizza" loading="lazy" scrolling="yes"></iframe>`; };
+    if ("IntersectionObserver" in window) { const io = new IntersectionObserver(es => { if (es.some(x => x.isIntersecting)) { load(); io.disconnect(); } }, { rootMargin: "600px" }); io.observe(cal); } else load();
+    return;
+  }
+  const fd = $("#fd"); const n = cnow(); fd.min = n.key;
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    const v = id => document.getElementById(id).value.trim(), sent = $("#sent");
+    sent.style.display = "block";
+    if (!v("fn") || !v("fp") || !v("fd")) { sent.classList.add("err"); sent.textContent = "Please add your name, phone number and event date."; return; }
+    sent.classList.remove("err");
+    const wants = $$("#fw input:checked").map(x => x.value).join(", ") || "Not sure yet";
+    const date = new Date(v("fd") + "T12:00:00").toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", year: "numeric" });
+    const body = `Hi Yurii, I'd like to book By Yurii's for a private event.\nName: ${v("fn")}\nPhone: ${fmtPhone(v("fp"))}\nDate: ${date}\nGuests: ${v("fg")}\nLocation: ${v("fl") || "TBD"}\nInterested in: ${wants}${v("fm") ? "\nNotes: " + v("fm") : ""}`;
+    sent.textContent = "Your messages app should open now. If it doesn’t, call or text " + SITE.phoneShow + " and we’ll take care of you.";
+    location.href = smsHref(body);
+  });
+})();
+
+/* ========== live data: truck today + miles map ========== */
+const STATES = "AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY DC PR".split(" ");
+function placeKey(t) { const p = String(t || "").split(",").map(s => s.trim()).filter(Boolean); const last = (p[p.length - 1] || "").toUpperCase(); return STATES.includes(last) ? last : last ? last : ""; }
+async function loadLive() {
+  let data = window.__YP_LIVE || null;
+  if (!SITE.live.url && !data) return;
+  try { const c = JSON.parse(sessionStorage.getItem("yp_live") || "null"); if (c && Date.now() - c.t < 3e5) data = c.d; } catch (e) {}
+  if (!data) {
+    try { const r = await fetch(SITE.live.url + (SITE.live.url.includes("?") ? "&" : "?") + "action=live", { cache: "no-store" }); data = await r.json(); try { sessionStorage.setItem("yp_live", JSON.stringify({ t: Date.now(), d: data })); } catch (e) {} } catch (e) { return; }
+  }
+  if (!data) return;
+  LIVE.days = data.days || {}; LIVE.pins = Array.isArray(data.pins) ? data.pins : []; LIVE.loaded = true;
+  paintStatus(); paintMiles();
+  if (sheetOpen) { paintSheetHead(); renderFoot(); }
+}
+function dropPin(name, from, source) {
+  if (!SITE.live.url) return false;
+  try { fetch(SITE.live.url, { method: "POST", mode: "no-cors", body: new URLSearchParams({ action: "pin", name: String(name).slice(0, 24), from: String(from).slice(0, 60), source }) }); } catch (e) {}
+  return true;
+}
+let MAP = null;
+function paintMiles() {
+  const sec = $("#miles"); if (!sec) return;
+  if (!SITE.live.url && !SITE.preview) { sec.hidden = true; return; }
+  sec.hidden = false;
+  const pins = LIVE.pins.filter(p => isFinite(p.lat) && isFinite(p.lng));
+  $("#mempty").hidden = pins.length > 0;
+  $("#mstats").hidden = !pins.length;
+  if (pins.length) {
+    $('[data-ms="pins"]').textContent = pins.length.toLocaleString();
+    $('[data-ms="far"]').textContent = Math.round(Math.max(...pins.map(p => +p.mi || 0))).toLocaleString();
+    $('[data-ms="places"]').textContent = new Set(pins.map(p => placeKey(p.town)).filter(Boolean)).size;
+    $("#mlist").innerHTML = pins.slice().sort((a, b) => (b.mi || 0) - (a.mi || 0)).slice(0, 5).map(p => `<li><b>${esc(p.name || "A friend")}</b> ${esc(p.town)}<span>${Math.round(p.mi || 0).toLocaleString()} mi</span></li>`).join("");
+  }
+  if (MAP && window.L) drawPins();
+}
+function drawPins() {
+  const L = window.L; if (MAP._ypLayer) MAP.removeLayer(MAP._ypLayer);
+  const grp = L.layerGroup(), pins = LIVE.pins.filter(p => isFinite(p.lat) && isFinite(p.lng));
+  const home = L.marker([SITE.truck.lat, SITE.truck.lng], { icon: L.divIcon({ className: "", html: '<div class="ypin home"></div>', iconSize: [24, 24], iconAnchor: [12, 12] }), title: "By Yurii’s truck" }).bindPopup("<b>By Yurii’s truck</b><br>901 N Washington St, Junction City");
+  grp.addLayer(home);
+  pins.forEach(p => grp.addLayer(L.marker([p.lat, p.lng], { icon: L.divIcon({ className: "", html: '<div class="ypin"></div>', iconSize: [18, 18], iconAnchor: [9, 9] }) }).bindPopup(`<b>${esc(p.name || "A friend")}</b><br>${esc(p.town)}<br>${Math.round(p.mi || 0).toLocaleString()} miles for a slice`)));
+  grp.addTo(MAP); MAP._ypLayer = grp;
+  if (pins.length) MAP.fitBounds(L.latLngBounds([[SITE.truck.lat, SITE.truck.lng], ...pins.map(p => [p.lat, p.lng])]).pad(0.2), { maxZoom: 7 });
+  else MAP.setView([38.6, -96.8], 4);
+}
+function initMap() {
+  if (MAP) return;
+  const css = document.createElement("link"); css.rel = "stylesheet"; css.href = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"; document.head.appendChild(css);
+  const s = document.createElement("script"); s.src = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"; s.async = true;
+  s.onload = () => {
+    const L = window.L;
+    MAP = L.map("milesMap", { scrollWheelZoom: false, dragging: !L.Browser.mobile, tap: false, zoomControl: true, attributionControl: true });
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 12, attribution: "© OpenStreetMap contributors" }).addTo(MAP);
+    drawPins();
+  };
+  document.head.appendChild(s);
+}
+(function () {
+  const sec = $("#miles"); if (!sec) return;
+  paintMiles(); if (sec.hidden) return;
+  if ("IntersectionObserver" in window) { const io = new IntersectionObserver(es => { if (es.some(x => x.isIntersecting)) { initMap(); io.disconnect(); } }, { rootMargin: "300px" }); io.observe(sec); } else initMap();
+  $("#pinform").addEventListener("submit", e => {
+    e.preventDefault();
+    const n = $("#pn").value.trim(), f = $("#pf").value.trim(), out = $("#pinsent"); out.style.display = "block";
+    if ($("#pw").value) { out.textContent = "Thanks!"; return; }
+    if (!n || f.length < 2) { out.classList.add("err"); out.textContent = "Add your first name and where you came from."; return; }
+    out.classList.remove("err");
+    if (dropPin(n, f, "site")) { out.textContent = "Thanks, " + n + "! Your pin goes up once Yurii gives it a quick look."; e.target.reset(); }
+    else out.textContent = "Thanks! The map isn’t connected yet in this preview, so this pin wasn’t saved.";
+  });
+})();
+
+/* ========== text list ========== */
+(function () {
+  const f = $("#fjoin"); if (!f || !SITE.textList.enabled || !O.endpoint) return;
+  f.hidden = false;
+  $("#jfine").innerHTML = "By signing up you agree to get texts from By Yurii’s Pizza about specials and truck updates. Message frequency varies. Msg and data rates may apply. Reply STOP to opt out, HELP for help. See our <a href=\"privacy.html\">privacy and text terms</a>.";
+  f.addEventListener("submit", async e => {
+    e.preventDefault(); const p = $("#jp").value.replace(/\D/g, "").replace(/^1(?=\d{10}$)/, ""), out = $("#jsent"); out.style.display = "block";
+    if (p.length !== 10) { out.classList.add("err"); out.textContent = "Please add a 10 digit mobile number."; return; }
+    out.classList.remove("err"); out.textContent = "Signing you up…";
+    try { const r = await fetch(O.endpoint.replace(/\/$/, "") + "/join", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ phone: p }) }); if (!r.ok) throw 0; out.textContent = "You’re on the list. Watch for a text from us."; f.reset(); }
+    catch (x) { out.classList.add("err"); out.textContent = "That didn’t go through. Try again in a minute."; }
+  });
+})();
+
+/* ========== menu tabs (kept from v1) ========== */
+const tabs = [...document.querySelectorAll('.tabs [role="tab"]')];
+tabs.forEach(t => t.addEventListener("click", () => {
+  tabs.forEach(x => { const on = x === t; x.setAttribute("aria-selected", on); document.getElementById(x.getAttribute("aria-controls")).hidden = !on; });
+  const tb = t.closest(".tabs"), pnl = document.getElementById(t.getAttribute("aria-controls"));
+  const hdr = document.querySelector("header.site").getBoundingClientRect().bottom;
+  const stuck = getComputedStyle(tb).position === "sticky";
+  const offset = (stuck ? tb.getBoundingClientRect().bottom : hdr) + 12;
+  if (pnl.getBoundingClientRect().top < offset) scrollBy({ top: pnl.getBoundingClientRect().top - offset, behavior: "smooth" });
+}));
+tabs.forEach((t, i) => t.addEventListener("keydown", e => { if (e.key === "ArrowRight" || e.key === "ArrowLeft") { const n = tabs[(i + (e.key === "ArrowRight" ? 1 : tabs.length - 1)) % tabs.length]; n.focus(); n.click(); } }));
+
+/* ========== delivery sheet ========== */
+const sheet = document.getElementById("sheet");
+sheet.addEventListener("click", e => { if (e.target === sheet || e.target.closest(".close")) sheet.classList.remove("on"); });
+
+/* ========== gallery + lightbox (kept from v1) ========== */
+const G = [["pepcannoli", ""], ["woodfire", "t"], ["supreme", ""], ["cannoli2", "t"], ["mushroom", ""], ["margherita", ""], ["calzone", "t"], ["rolls", ""], ["charc2", ""], ["bruschetta", "t"], ["taco", ""], ["fruit1", ""], ["topeka09", ""], ["topeka10", "t"], ["topeka11", ""], ["topeka05", ""]].filter(g => IMG[g[0]]);
+const gal = document.getElementById("gal");
+gal.innerHTML = G.map(([k, c]) => `<figure class="${c}" data-k="${k}"><img src="${IMG[k]}" alt="${k.startsWith("topeka") ? "By Yurii’s Pizza at an event in Topeka" : "Food from By Yurii’s Pizza"}" loading="lazy"></figure>`).join("");
+paintImages();
+const ALL = [...new Set([...G.map(g => g[0]), "pickle", "chicken", "pepperoni", "spread", "caprese", "charc1", "cannoli1", "fruit2", "veggie", ...Object.keys(IMG).filter(k => /^topeka/.test(k)), "spotlight"])].filter(k => IMG[k]);
+const lb = document.getElementById("lb"), lbi = lb.querySelector("img"); let cur = 0;
+const show = () => { lbi.src = IMG[ALL[cur]]; };
+function openLb(k) { cur = Math.max(0, ALL.indexOf(k)); show(); lb.classList.add("on"); lb.querySelector(".x").focus(); }
+document.querySelectorAll("[data-k]:not(img)").forEach(f => f.addEventListener("click", () => { if (IMG[f.dataset.k]) openLb(f.dataset.k); }));
+lb.querySelector(".x").onclick = () => lb.classList.remove("on");
+lb.querySelector(".nx").onclick = e => { e.stopPropagation(); cur = (cur + 1) % ALL.length; show(); };
+lb.querySelector(".pv").onclick = e => { e.stopPropagation(); cur = (cur - 1 + ALL.length) % ALL.length; show(); };
+lb.addEventListener("click", e => { if (e.target === lb) lb.classList.remove("on"); });
+addEventListener("keydown", e => { if (e.key === "Escape") { lb.classList.remove("on"); sheet.classList.remove("on"); } if (!lb.classList.contains("on")) return; if (e.key === "ArrowRight") lb.querySelector(".nx").click(); if (e.key === "ArrowLeft") lb.querySelector(".pv").click(); });
+
+/* ========== start ========== */
+document.getElementById("yr").textContent = new Date().getFullYear();
+renderMenu(); updateBadges(); paintStatus(); loadLive();
+setInterval(() => { paintStatus(); if (sheetOpen) paintSheetHead(); }, 60000);
+const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }), { threshold: .08 });
+document.querySelectorAll(".fade").forEach(el => io.observe(el));
+(function () {
+  const q = new URLSearchParams(location.search);
+  if (q.get("paid") === "1") { const o = store.get("yp_last", null); if (o) { o.status = "paid"; o.no = q.get("o") || o.no; store.set("yp_last", o); CART = []; saveCart(); } history.replaceState(null, "", location.pathname + location.hash); openOrder("menu"); showView("done", true); renderDone(o); }
+  else if (q.get("canceled") === "1") { history.replaceState(null, "", location.pathname); openOrder("menu"); showView("cart"); const n = $("#osNote"); n.textContent = "Payment was canceled, so nothing was charged. Your order is still here, and you can pay at the window instead."; n.hidden = false; }
+  else if (location.hash === "#order") { history.replaceState(null, "", location.pathname + location.search); openOrder("menu"); }
+})();
+
 </script>
 </body>
 </html>
