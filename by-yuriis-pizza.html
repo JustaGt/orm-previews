@@ -860,6 +860,11 @@ footer h3.fh{color:var(--paper);font-size:.7rem;font-weight:800;letter-spacing:.
 .rates b{color:var(--gold)}
 .rates .asof{color:#fff}
 
+.byo .chips span b{font-weight:800;color:var(--muted);margin-left:.2rem;font-variant-numeric:tabular-nums}
+.mi .pr.lab{align-items:baseline;gap:.25rem}
+.mi .pr.lab small{font-size:.58rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-left:.35rem}
+.mi .pr.lab small:first-child{margin-left:0}
+
 </style>
 </head>
 <body>
@@ -940,7 +945,7 @@ footer h3.fh{color:var(--paper);font-size:.7rem;font-weight:800;letter-spacing:.
         <button role="tab" aria-selected="true" aria-controls="p-pizza" id="t-pizza">Pizza</button>
         <button role="tab" aria-selected="false" aria-controls="p-calz" id="t-calz">Calzones<span class="x"> &amp; Strombolis</span></button>
         <button role="tab" aria-selected="false" aria-controls="p-gyro" id="t-gyro">Gyros</button>
-        <button role="tab" aria-selected="false" aria-controls="p-sweet" id="t-sweet">Desserts</button>
+        <button role="tab" aria-selected="false" aria-controls="p-sweet" id="t-sweet">Desserts<span class="x"> &amp; Drinks</span></button>
       </div>
 
       <div class="panel" id="p-pizza" role="tabpanel" aria-labelledby="t-pizza">
@@ -1275,69 +1280,86 @@ footer h3.fh{color:var(--paper);font-size:.7rem;font-weight:800;letter-spacing:.
 <!-- MENU AND PRICES: every item, price and topping. The printed menu and the ordering screen both read from here. -->
 <script type="application/json" id="menu-data">
 {
- "note": "Prices from Yurii's printed truck menu (sent Oct 21, 2026). 12 inch Regular and 16 inch Large. Items marked pending need Yurii to confirm before they show.",
+ "note": "Pizza prices from Yurii's printed truck menu. Toppings, extras and drinks from his Square register (sent Oct 21, 2026). 12 inch Regular and 16 inch Large.",
  "sizes": {
   "r": "12 inch",
   "l": "16 inch"
  },
  "extras": {
-  "topping": {
-   "r": 1.5,
-   "l": 2.5
-  },
   "cheese": {
-   "r": 2.5,
-   "l": 3.5
+   "r": 3.5,
+   "l": 5.0
   },
   "sauce": {
    "r": 0.5,
-   "l": 1.0
+   "l": 0.5
   }
  },
  "toppings": [
   {
    "id": "pepperoni",
-   "name": "Pepperoni"
+   "name": "Pepperoni",
+   "price": 1.5
   },
   {
    "id": "sausage",
-   "name": "Sausage"
+   "name": "Sausage",
+   "price": 2.0
   },
   {
    "id": "bacon",
-   "name": "Bacon"
+   "name": "Bacon",
+   "price": 2.5
   },
   {
    "id": "ham",
-   "name": "Ham"
+   "name": "Ham",
+   "price": 1.0
   },
   {
    "id": "chicken",
-   "name": "Chicken"
+   "name": "Chicken",
+   "price": 2.75
   },
   {
    "id": "mushroom",
-   "name": "Mushrooms"
-  },
-  {
-   "id": "greenpep",
-   "name": "Green peppers"
+   "name": "Mushroom",
+   "price": 1.5
   },
   {
    "id": "onion",
-   "name": "Onions"
+   "name": "Onion",
+   "price": 1.0
+  },
+  {
+   "id": "greenpep",
+   "name": "Green peppers",
+   "price": 0.99
+  },
+  {
+   "id": "bananapep",
+   "name": "Banana peppers",
+   "price": 0.75
   },
   {
    "id": "olive",
-   "name": "Black olives"
+   "name": "Olives",
+   "price": 0.99
+  },
+  {
+   "id": "tomato",
+   "name": "Tomatoes",
+   "price": 0.99
   },
   {
    "id": "pineapple",
-   "name": "Pineapple"
+   "name": "Pineapple",
+   "price": 0.99
   },
   {
-   "id": "pickle",
-   "name": "Pickles"
+   "id": "feta",
+   "name": "Feta cheese",
+   "price": 1.99
   }
  ],
  "categories": [
@@ -1731,9 +1753,15 @@ footer h3.fh{color:var(--paper);font-size:.7rem;font-weight:800;letter-spacing:.
      "items": [
       {
        "id": "garliccup",
-       "name": "Cup of Garlic Sauce",
+       "name": "Extra Garlic Sauce",
        "desc": "A side cup of our house garlic sauce.",
        "price": 0.75
+      },
+      {
+       "id": "tzatzikiside",
+       "name": "Side of Tzatziki Sauce",
+       "desc": "",
+       "price": 1.5
       },
       {
        "id": "knots",
@@ -1766,7 +1794,19 @@ footer h3.fh{color:var(--paper);font-size:.7rem;font-weight:800;letter-spacing:.
         "hal"
        ],
        "price": 13.0,
-       "notePrompt": "Want special sauce or feta? Tell us here."
+       "notePrompt": "Want special sauce? Tell us here.",
+       "addons": [
+        {
+         "id": "gyromeat",
+         "name": "Extra gyro meat",
+         "price": 3.5
+        },
+        {
+         "id": "tzatziki",
+         "name": "Side of tzatziki sauce",
+         "price": 1.5
+        }
+       ]
       },
       {
        "id": "chixrice",
@@ -1788,7 +1828,7 @@ footer h3.fh{color:var(--paper);font-size:.7rem;font-weight:800;letter-spacing:.
   },
   {
    "id": "sweet",
-   "order": "Desserts",
+   "order": "Desserts & Drinks",
    "groups": [
     {
      "id": "sweet",
@@ -1817,6 +1857,54 @@ footer h3.fh{color:var(--paper);font-size:.7rem;font-weight:800;letter-spacing:.
        "desc": "",
        "price": null,
        "hidden": true
+      }
+     ]
+    },
+    {
+     "id": "drinks",
+     "title": "Drinks",
+     "items": [
+      {
+       "id": "water",
+       "name": "Bottle of Water",
+       "desc": "",
+       "price": 1.5,
+       "icon": "water"
+      },
+      {
+       "id": "coke",
+       "name": "Coke 12 oz",
+       "desc": "",
+       "price": 2.0,
+       "icon": "can"
+      },
+      {
+       "id": "pepsi",
+       "name": "Pepsi 12 oz",
+       "desc": "",
+       "price": 2.0,
+       "icon": "can"
+      },
+      {
+       "id": "drpepper",
+       "name": "Dr Pepper 12 oz",
+       "desc": "",
+       "price": 2.0,
+       "icon": "can"
+      },
+      {
+       "id": "sprite",
+       "name": "Sprite 12 oz",
+       "desc": "",
+       "price": 2.0,
+       "icon": "can"
+      },
+      {
+       "id": "mtndew",
+       "name": "Mountain Dew",
+       "desc": "",
+       "price": 2.0,
+       "icon": "can"
       }
      ]
     }
@@ -1951,16 +2039,21 @@ const isSized = it => it.price && typeof it.price === "object";
 const orderable = it => it && !it.hidden && it.price != null;
 const itemsOf = g => g.items.map(i => i.ref ? ITEMS[i.ref] : i).filter(orderable);
 const extrasOk = it => isSized(it) && !it.noExtras;
+const topCents = id => TOPS[id] && TOPS[id].price != null ? cents(TOPS[id].price) : 0;
+const addonOf = (it, id) => (it.addons || []).find(a => a.id === id);
+const minTop = () => Math.min(...MENU.toppings.map(t => topCents(t.id)));
+const sizePair = o => o.r === o.l ? money(cents(o.r)) : money(cents(o.r)) + " / " + money(cents(o.l));
 
 function linePrice(l) {
   const it = ITEMS[l.id]; if (!orderable(it)) return null;
   const s = isSized(it) ? (l.size === "l" ? "l" : "r") : null;
   let u = cents(s ? it.price[s] : it.price);
   if (s && extrasOk(it)) {
-    u += (l.tops || []).length * cents(MENU.extras.topping[s]);
+    (l.tops || []).forEach(t => { u += topCents(t); });
     if (l.cheese) u += cents(MENU.extras.cheese[s]);
     if (l.sauce) u += cents(MENU.extras.sauce[s]);
   }
+  (l.adds || []).forEach(a => { const x = addonOf(it, a); if (x) u += cents(x.price); });
   return { unit: u, total: u * l.qty, pending: !!(it.fill && (l.fills || []).length) };
 }
 function lineBits(l) {
@@ -1970,6 +2063,8 @@ function lineBits(l) {
   if (tn.length) b.push((it.byo ? "" : "add ") + tn.join(", "));
   if (l.cheese) b.push("extra cheese");
   if (l.sauce) b.push("extra sauce");
+  const an = (l.adds || []).map(a => (addonOf(it, a) || {}).name).filter(Boolean);
+  if (an.length) b.push("add " + an.join(", "));
   const fn = (l.fills || []).map(t => TOPS[t] && TOPS[t].name).filter(Boolean);
   if (fn.length) b.push("fillings: " + fn.join(", "));
   return b;
@@ -1982,6 +2077,7 @@ function cleanLine(l) {
     size: isSized(it) ? (l.size === "l" ? "l" : "r") : undefined,
     tops: extrasOk(it) ? okT(l.tops) : [], cheese: extrasOk(it) && !!l.cheese, sauce: extrasOk(it) && !!l.sauce,
     fills: it.fill ? okT(l.fills) : [],
+    adds: (Array.isArray(l.adds) ? l.adds : []).filter((a, i, s) => addonOf(it, a) && s.indexOf(a) === i),
     qty: Math.min(20, Math.max(1, parseInt(l.qty, 10) || 1)),
     note: String(l.note || "").slice(0, 140)
   };
@@ -2095,9 +2191,12 @@ const SHAPE = {
   onion: (x, y, r) => `<path d="M${x - 8} ${y + 2} q8 -10 16 0" fill="none" stroke="#b892c8" stroke-width="2.4" stroke-linecap="round" transform="rotate(${r * 360} ${x} ${y})"/>`,
   olive: (x, y) => `<circle cx="${x}" cy="${y}" r="4.6" fill="none" stroke="#1d1814" stroke-width="3"/>`,
   pineapple: (x, y, r) => `<path d="M${x - 6} ${y - 4} h12 l-3 9 h-6 z" fill="#f5c542" stroke="#c99a1d" stroke-width="1.2" transform="rotate(${r * 360} ${x} ${y})"/>`,
+  bananapep: (x, y) => `<circle cx="${x}" cy="${y}" r="5.5" fill="none" stroke="#d9c74a" stroke-width="2.6"/><circle cx="${x + 1}" cy="${y}" r="1" fill="#f1e7a0"/>`,
+  tomato: (x, y) => `<circle cx="${x}" cy="${y}" r="7.5" fill="#d8402c" stroke="#a52a1c" stroke-width="1.3"/><circle cx="${x - 2.5}" cy="${y - 1}" r="1.2" fill="#f4d36a"/><circle cx="${x + 2.5}" cy="${y + 1.5}" r="1.2" fill="#f4d36a"/>`,
+  feta: (x, y, r) => `<rect x="${x - 3.5}" y="${y - 3}" width="7" height="6" rx="1.5" fill="#fffdf6" stroke="#d8cfb8" stroke-width="1" transform="rotate(${r * 90} ${x} ${y})"/>`,
   pickle: (x, y) => `<circle cx="${x}" cy="${y}" r="7.5" fill="#9bb54a" stroke="#5f7a24" stroke-width="1.4"/><circle cx="${x}" cy="${y}" r="3.8" fill="#c7d97a"/>`
 };
-const COUNT = { pepperoni: 9, sausage: 8, olive: 11, onion: 8, greenpep: 8, pickle: 9 };
+const COUNT = { pepperoni: 9, sausage: 8, olive: 11, onion: 8, greenpep: 8, pickle: 9, bananapep: 10, tomato: 7, feta: 14 };
 function pizzaSVG(art, fresh) {
   art = art || {}; const sauce = art.sauce || "red";
   const sc = { red: "#c8432f", white: "#f4ecd9", choc: "#5a3424" }[sauce] || "#c8432f";
@@ -2127,11 +2226,15 @@ function pizzaSVG(art, fresh) {
 const ICON_BOX = `<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="24" width="44" height="26" fill="#e9dcc4" stroke="#1d1814" stroke-width="3"/><path d="M10 24l8-10h28l8 10" fill="#fbf6ec" stroke="#1d1814" stroke-width="3" stroke-linejoin="round"/><path d="M22 37h20" stroke="#cf3f2e" stroke-width="3"/></svg>`;
 const ICON_CUP = `<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M16 26h32l-4 24H20z" fill="#fbf6ec" stroke="#1d1814" stroke-width="3" stroke-linejoin="round"/><ellipse cx="32" cy="26" rx="16" ry="5" fill="#f4ecd9" stroke="#1d1814" stroke-width="3"/></svg>`;
 const ICON_CANNOLI = `<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="24" width="40" height="16" rx="8" fill="#d9a35a" stroke="#1d1814" stroke-width="3" transform="rotate(-18 32 32)"/><circle cx="14" cy="38" r="6" fill="#fbf6ec" stroke="#1d1814" stroke-width="3"/><circle cx="50" cy="26" r="6" fill="#fbf6ec" stroke="#1d1814" stroke-width="3"/></svg>`;
+const ICON_CAN = `<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="20" y="12" width="24" height="42" rx="5" fill="#cf3f2e" stroke="#1d1814" stroke-width="3"/><path d="M22 20h20M22 46h20" stroke="#1d1814" stroke-width="2.5"/><path d="M27 28h10v10H27z" fill="#fbf6ec"/></svg>`;
+const ICON_WATER = `<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M27 8h10v7l5 6v33a3 3 0 0 1-3 3H25a3 3 0 0 1-3-3V21l5-6z" fill="#dce9ef" stroke="#1d1814" stroke-width="3" stroke-linejoin="round"/><path d="M22 32h20" stroke="#1d1814" stroke-width="2.5"/><path d="M22 40h20" stroke="#5c9bb5" stroke-width="5"/></svg>`;
 function thumb(it) {
   if (it.photo && IMG[it.photo]) return `<img src="${IMG[it.photo]}" alt="" loading="lazy" width="72" height="72">`;
   if (it.art) return pizzaSVG(it.art);
   if (/cannoli/.test(it.id)) return ICON_CANNOLI;
-  if (it.id === "garliccup") return ICON_CUP;
+  if (it.icon === "can") return ICON_CAN;
+  if (it.icon === "water") return ICON_WATER;
+  if (it.id === "garliccup" || it.id === "tzatzikiside") return ICON_CUP;
   return ICON_BOX;
 }
 const TAGS = { pop: '<span class="tg pop">Popular</span>', fav: '<span class="tg fav">Fave</span>', veg: '<span class="tg veg">V</span>', hal: '<span class="tg hal">Halal</span>' };
@@ -2140,20 +2243,20 @@ const tagsHTML = it => (it.tags || []).map(t => TAGS[t] || "").join("");
 /* ========== printed menu ========== */
 function renderMenu() {
   const go = O.mode === "site" || O.mode === "link";
-  const row = it => {
-    const pr = isSized(it) ? `<span class="pr"><span>${plain(cents(it.price.r))}</span><span>${plain(cents(it.price.l))}</span></span>` : `<span class="pr"><span>${money(cents(it.price))}</span></span>`;
+  const row = (it, g) => {
+    const pr = isSized(it) ? (g && g.sized ? `<span class="pr"><span>${plain(cents(it.price.r))}</span><span>${plain(cents(it.price.l))}</span></span>` : `<span class="pr lab"><small>12 in</small>${plain(cents(it.price.r))}<small>16 in</small>${plain(cents(it.price.l))}</span>`) : `<span class="pr"><span>${money(cents(it.price))}</span></span>`;
     return `<div class="mi${go ? " go" : ""}" data-add="${it.id}"${go ? ` role="button" tabindex="0"` : ""}><div class="top-line"><span class="nmw"><span class="nm">${esc(it.name)}</span>${tagsHTML(it)}</span><span class="lead"></span>${pr}${go ? '<span class="madd" aria-hidden="true">+</span>' : ""}</div><span class="ds">${esc(it.desc)}</span>${go ? '<span class="sr">Add to order</span>' : ""}</div>`;
   };
   const grp = g => {
     const list = itemsOf(g); if (!list.length) return "";
     const sz = g.sized ? '<span class="sz" aria-hidden="true"><span>12 in</span><span>16 in</span>' + (go ? '<span class="szsp"></span>' : '') + '</span>' : "";
-    return `<div class="grp"><h3>${g.sauce ? `<span class="sauce ${g.sauce}"></span>` : ""}${esc(g.title)}${sz}</h3>${g.sub ? `<span class="gsub">${esc(g.sub)}</span>` : ""}<div class="rule"></div>${list.map(row).join("")}</div>`;
+    return `<div class="grp"><h3>${g.sauce ? `<span class="sauce ${g.sauce}"></span>` : ""}${esc(g.title)}${sz}</h3>${g.sub ? `<span class="gsub">${esc(g.sub)}</span>` : ""}<div class="rule"></div>${list.map(it => row(it, g)).join("")}</div>`;
   };
   MENU.categories.forEach(c => {
     const box = $(`[data-menu="${c.id}"]`); if (!box) return;
     if (c.id === "pizza") {
       const [red, white, spec] = c.groups, b = c.byo, x = MENU.extras;
-      const byo = `<div class="byo"><div class="byo-h"><b>Build your own</b><span class="pr"><small>12 in</small>${plain(cents(b.price.r))}<small>16 in</small>${plain(cents(b.price.l))}</span></div><p>${esc(b.desc)} Each topping adds ${money(cents(x.topping.r))} on a 12 inch or ${money(cents(x.topping.l))} on a 16 inch.</p><div class="chips">${MENU.toppings.map(t => `<span>${esc(t.name)}</span>`).join("")}</div><div class="xtra"><span>Extra cheese <b>${money(cents(x.cheese.r))} / ${money(cents(x.cheese.l))}</b></span><span>Extra sauce <b>${money(cents(x.sauce.r))} / ${money(cents(x.sauce.l))}</b></span><span>Extra toppings <b>${money(cents(x.topping.r))} / ${money(cents(x.topping.l))}</b></span></div>${go ? '<button type="button" class="btn btn-ink" data-add="byo">Build yours</button>' : ""}</div>`;
+      const byo = `<div class="byo"><div class="byo-h"><b>Build your own</b><span class="pr"><small>12 in</small>${plain(cents(b.price.r))}<small>16 in</small>${plain(cents(b.price.l))}</span></div><p>${esc(b.desc)} Here’s what each topping adds:</p><div class="chips">${MENU.toppings.map(t => `<span>${esc(t.name)} <b>${money(topCents(t.id))}</b></span>`).join("")}</div><div class="xtra"><span>Extra cheese <b>${sizePair(x.cheese)}</b></span><span>Extra sauce <b>${sizePair(x.sauce)}</b></span>${ITEMS.garliccup ? `<span>Extra garlic sauce <b>${money(cents(ITEMS.garliccup.price))}</b></span>` : ""}</div>${go ? '<button type="button" class="btn btn-ink" data-add="byo">Build yours</button>' : ""}</div>`;
       box.innerHTML = `<div class="cols">${grp(red)}${grp(white)}</div><div class="cols" style="margin-top:8px">${grp(spec)}<div>${byo}</div></div>`;
     } else box.innerHTML = c.groups.map(grp).join("");
   });
@@ -2225,7 +2328,7 @@ function renderList() {
     let h = "";
     if (c.id === "pizza") {
       const b = c.byo;
-      h += `<section class="os-sec" id="os-byo" data-sec="byo"><button type="button" class="os-byo" data-item="byo">${pizzaSVG({ sauce: "red", tops: ["pepperoni", "mushroom", "greenpep", "olive"] })}<span><b>Build your own</b><span>${esc(b.desc)} ${money(cents(b.price.r))} for a 12 inch, plus ${money(cents(MENU.extras.topping.r))} a topping.</span><em>Start building</em></span></button></section>`;
+      h += `<section class="os-sec" id="os-byo" data-sec="byo"><button type="button" class="os-byo" data-item="byo">${pizzaSVG({ sauce: "red", tops: ["pepperoni", "mushroom", "greenpep", "olive"] })}<span><b>Build your own</b><span>${esc(b.desc)} ${money(cents(b.price.r))} for a 12 inch, toppings from ${money(minTop())}.</span><em>Start building</em></span></button></section>`;
     }
     h += `<section class="os-sec" id="os-${c.id}" data-sec="${c.id}">`;
     c.groups.forEach(g => {
@@ -2287,9 +2390,11 @@ function renderItem() {
     h += `<div class="og"><h4>Size <small class="req">Pick one</small></h4><div class="sizes" role="radiogroup" aria-label="Size">${["r", "l"].map(k => `<label><input type="radio" name="oisz" value="${k}"${s === k ? " checked" : ""}><span><b>${MENU.sizes[k]}</b><em>${money(cents(it.price[k]))}</em></span></label>`).join("")}</div></div>`;
   }
   if (extrasOk(it)) {
-    const each = money(cents(x.topping[s]));
-    h += `<div class="og"><h4>${it.byo ? "Your toppings" : "Add toppings"} <small>${each} each</small></h4><div class="tops">${MENU.toppings.map(t => `<label><input type="checkbox" name="oitop" value="${t.id}"${l.tops.includes(t.id) ? " checked" : ""}><span>${esc(t.name)} <small>+${each}</small></span></label>`).join("")}</div></div>`;
+    h += `<div class="og"><h4>${it.byo ? "Your toppings" : "Add toppings"} <small>Priced per topping</small></h4><div class="tops">${MENU.toppings.map(t => `<label><input type="checkbox" name="oitop" value="${t.id}"${l.tops.includes(t.id) ? " checked" : ""}><span>${esc(t.name)} <small>+${money(topCents(t.id))}</small></span></label>`).join("")}</div></div>`;
     h += `<div class="og"><h4>Extras</h4><div class="tops"><label><input type="checkbox" name="oich"${l.cheese ? " checked" : ""}><span>Extra cheese <small>+${money(cents(x.cheese[s]))}</small></span></label><label><input type="checkbox" name="oisa"${l.sauce ? " checked" : ""}><span>Extra sauce <small>+${money(cents(x.sauce[s]))}</small></span></label></div></div>`;
+  }
+  if (it.addons && it.addons.length) {
+    h += `<div class="og"><h4>Add ons <small>Optional</small></h4><div class="tops">${it.addons.map(a => `<label><input type="checkbox" name="oiadd" value="${a.id}"${(l.adds || []).includes(a.id) ? " checked" : ""}><span>${esc(a.name)} <small>+${money(cents(a.price))}</small></span></label>`).join("")}</div></div>`;
   }
   if (it.fill) {
     h += `<div class="og"><h4>Fillings <small>Priced at the window</small></h4><div class="tops">${MENU.toppings.map(t => `<label><input type="checkbox" name="oifill" value="${t.id}"${l.fills.includes(t.id) ? " checked" : ""}><span>${esc(t.name)}</span></label>`).join("")}</div></div>`;
@@ -2308,6 +2413,7 @@ function syncItem(e) {
   l.tops = $$("input[name=oitop]:checked", body).map(i => i.value);
   l.cheese = !!($("input[name=oich]", body) || {}).checked; l.sauce = !!($("input[name=oisa]", body) || {}).checked;
   l.fills = $$("input[name=oifill]:checked", body).map(i => i.value);
+  l.adds = $$("input[name=oiadd]:checked", body).map(i => i.value);
   const n = $("#oinote", body); if (n) { l.note = n.value.slice(0, 140); $("#oicc").textContent = l.note.length + "/140"; }
   if (e && e.target.name === "oisz") { const y = body.scrollTop; renderItem(); body.scrollTop = y; return; }
   const art = $("#oiArt");
