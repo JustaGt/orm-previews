@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Old Marani Georgian Restaurant</title>
+<meta name="description" content="Old Marani, a Georgian kitchen and beer and wine house at 1103 Kings Highway, Brooklyn. Khachapuri, khinkali, mtsvadi and Georgian wine. Open daily 11 AM to 11 PM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Sans:wdth,wght@75..100,400..700&family=Noto+Sans+Georgian:wdth,wght@62.5..100,300..700&family=Noto+Serif+Georgian:wdth,wght@62.5..100,200..800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero-acharuli.webp">
+<style>
+/* Layout idea: rooms of a Georgian wine cellar. Each section is a room with its own wall color
+   (smoked oak, sage plaster, saperavi, paper, verdigris); the arch of the marani doorway frames
+   the key photos, and the Georgian name in Mkhedruli is the one loud typographic gesture. */
+:root{
+  --oak:#1b1411;        /* smoked oak, the cellar dark */
+  --wall:#c5cbbb;       /* sage plaster, from the dining room walls */
+  --paper:#ecebe3;      /* menu paper, cool and slightly green */
+  --teal:#1e4f4b;       /* verdigris, from the cabinets and the old awning */
+  --wine:#5a1628;       /* saperavi */
+  --yolk:#efb12f;       /* the egg in an acharuli */
+
+  --oak-2:#261d19;
+  --oak-line:rgba(236,235,227,.14);
+  --ink-soft:#4a433f;
+  --paper-dim:#b9b4aa;
+
+  --display:"Gloock","Noto Serif Georgian",Georgia,serif;
+  --body:"Instrument Sans","Noto Sans Georgian",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mkh:"Noto Serif Georgian",Georgia,serif;
+
+  --s-1:.875rem; --s0:1.0625rem; --s1:1.25rem; --s2:1.6rem;
+  --s3:clamp(1.85rem,1.3rem + 2.1vw,2.7rem);
+  --s4:clamp(2.3rem,1.5rem + 3.2vw,3.7rem);
+  --giant:clamp(4.4rem,1.2rem + 12.5vw,11.5rem);
+
+  --gutter:clamp(18px,4.5vw,56px);
+  --maxw:1240px;
+  --radius:10px;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--oak);color:var(--paper);font-family:var(--body);font-size:var(--s0);line-height:1.6;font-stretch:96%;}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-synthesis:style;font-family:var(--display);font-weight:400;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0}
+:lang(ka) h1,:lang(ka) h2,:lang(ka) h3{font-weight:600;font-stretch:87.5%;line-height:1.22;letter-spacing:0}
+:lang(ka) body{line-height:1.7}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--yolk);outline-offset:3px;border-radius:4px}
+section{scroll-margin-top:72px}
+main{transition:opacity .18s ease,filter .18s ease}
+main.swapping{opacity:.25;filter:blur(3px)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.55em;font:600 var(--s0)/1 var(--body);text-decoration:none;padding:.95em 1.35em;border-radius:999px;border:1.5px solid transparent;cursor:pointer;transition:transform .15s ease,background .15s ease,color .15s ease;line-height:1.2;text-align:left}
+.btn:active{transform:translateY(1px)}
+.btn svg{width:1.1em;height:1.1em;flex:none}
+.btn-yolk{background:var(--yolk);color:var(--oak)}
+.btn-yolk:hover{background:#f6c452}
+.btn-line{border-color:currentColor;background:transparent}
+.btn-line:hover{background:rgba(236,235,227,.08)}
+.btn-teal{background:var(--teal);color:var(--paper)}
+.btn-teal:hover{background:#286560}
+.btn-paper{background:var(--paper);color:var(--oak)}
+.btn-paper:hover{background:#fff}
+
+/* sample ribbon */
+.ribbon{background:var(--teal);color:#d9e3dc;font-size:.8rem;text-align:center;padding:.45rem 1rem;line-height:1.35}
+.ribbon a{color:#fff;text-underline-offset:2px}
+
+/* header */
+.top{position:sticky;top:0;z-index:40;background:rgba(27,20,17,.86);backdrop-filter:saturate(1.2) blur(10px);-webkit-backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--oak-line)}
+.top .wrap{display:flex;align-items:center;gap:1rem;height:64px}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;margin-right:auto}
+.brand svg{width:30px;height:33px;color:var(--yolk)}
+.brand b{font:400 1.35rem/1 var(--display);letter-spacing:.01em}
+.brand small{display:block;font:500 .72rem/1.2 var(--mkh);color:var(--wall);opacity:.8;margin-top:3px}
+.nav{display:none;gap:1.6rem}
+.nav a{text-decoration:none;font-weight:500;font-size:.95rem;opacity:.85}
+.nav a:hover{opacity:1;color:var(--yolk)}
+.lang{display:inline-flex;border:1.5px solid rgba(236,235,227,.35);border-radius:999px;padding:3px;gap:2px}
+.lang button{all:unset;cursor:pointer;font:600 .82rem/1 var(--body);padding:.5em .8em;border-radius:999px;color:var(--paper);opacity:.75}
+.lang button[aria-pressed="true"]{background:var(--paper);color:var(--oak);opacity:1}
+.lang button:focus-visible{outline:3px solid var(--yolk)}
+.lang .ka{font-family:var(--mkh);font-weight:600}
+.top .btn{padding:.7em 1.1em;font-size:.9rem}
+.top .call-top{display:none}
+.burger{all:unset;cursor:pointer;width:42px;height:42px;display:grid;place-items:center;border-radius:50%;border:1.5px solid rgba(236,235,227,.35)}
+.burger svg{width:20px;height:20px}
+.sheet{position:fixed;inset:0;z-index:60;background:var(--oak);display:none;flex-direction:column;padding:88px var(--gutter) 2rem}
+.sheet.open{display:flex}
+.sheet a{font:400 2.2rem/1.2 var(--display);text-decoration:none;padding:.35rem 0;border-bottom:1px solid var(--oak-line)}
+:lang(ka) .sheet a{font-weight:600;font-stretch:87.5%;font-size:1.9rem}
+.sheet .close{position:absolute;top:14px;right:var(--gutter)}
+@media (min-width:980px){.nav{display:flex}.burger{display:none}.top .call-top{display:inline-flex}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:clamp(28px,5vw,64px) 0 clamp(48px,7vw,96px);background:
+  radial-gradient(60% 55% at 78% 42%,rgba(239,177,47,.16),transparent 70%),
+  radial-gradient(40% 40% at 10% 100%,rgba(90,22,40,.55),transparent 75%),var(--oak)}
+.hero .wrap{display:grid;gap:clamp(28px,4vw,56px);align-items:center}
+.giant{font-family:var(--mkh);font-weight:300;font-stretch:62.5%;font-size:var(--giant);line-height:.98;color:var(--wall);margin:0 0 .12em;letter-spacing:-.01em;user-select:none}
+.giant span{display:block}
+.giant span:nth-child(2){padding-left:.42em;color:var(--yolk)}
+.hero-kicker{font-size:var(--s-1);color:var(--paper-dim);max-width:36ch;margin-bottom:.9rem}
+.hero h1{font-size:var(--s3);max-width:17ch}
+.hero .lead{margin-top:1rem;font-size:var(--s1);line-height:1.5;color:#d8d3c9;max-width:44ch}
+:lang(ka) .hero .lead{font-size:1.12rem}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.6rem}
+.hero-meta{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;margin-top:1.5rem;font-size:.95rem;color:#d8d3c9;align-items:center}
+.status{display:inline-flex;align-items:center;gap:.55rem;font-weight:600}
+.status i{width:10px;height:10px;border-radius:50%;background:#6fbf73;box-shadow:0 0 0 4px rgba(111,191,115,.18)}
+.status.closed i{background:#d0675b;box-shadow:0 0 0 4px rgba(208,103,91,.2)}
+.status.soon i{background:var(--yolk);box-shadow:0 0 0 4px rgba(239,177,47,.2)}
+.status em{font-style:normal;font-weight:400;opacity:.85}
+.stars{--p:94%;display:inline-block;position:relative;font-size:1rem;letter-spacing:2px;line-height:1;color:rgba(236,235,227,.25)}
+.stars::before{content:"★★★★★"}
+.stars::after{content:"★★★★★";position:absolute;inset:0;width:var(--p);overflow:hidden;color:var(--yolk)}
+.rating{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none}
+.rating:hover span{text-decoration:underline}
+
+.arch-stage{position:relative;justify-self:center;width:min(100%,460px);padding:0 0 0 12%}
+.arch{position:relative;border-radius:999px 999px 14px 14px;overflow:hidden;aspect-ratio:3/4;background:var(--oak-2)}
+.arch img{width:100%;height:100%;object-fit:cover}
+.arch-stage::before{content:"";position:absolute;inset:-14px -14px auto calc(12% - 14px);height:calc(100% + 28px);border:1.5px solid rgba(239,177,47,.55);border-radius:999px 999px 22px 22px;pointer-events:none}
+.arch-small{position:absolute;left:0;bottom:-6%;width:44%;border-radius:999px 999px 10px 10px;overflow:hidden;aspect-ratio:3/4;border:5px solid var(--oak);box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.arch-small img{width:100%;height:100%;object-fit:cover;object-position:40% 50%}
+.tag{position:absolute;right:-6px;bottom:18%;background:var(--paper);color:var(--oak);font-size:.85rem;font-weight:600;padding:.5rem .8rem;border-radius:6px;box-shadow:0 10px 24px rgba(0,0,0,.35);transform:rotate(-3deg)}
+.tag b{font-family:var(--display);font-weight:400;color:var(--wine);font-size:1rem;margin-left:.3rem}
+@media (min-width:900px){
+  .hero .wrap{grid-template-columns:1.12fr .88fr}
+  .giant span:nth-child(2){padding-left:.6em}
+}
+.flicker{animation:candle 5s ease-in-out infinite alternate}
+@keyframes candle{0%{opacity:.88}35%{opacity:1}55%{opacity:.93}100%{opacity:1}}
+
+/* story */
+.story{background:var(--wall);color:var(--oak);padding:clamp(56px,8vw,112px) 0}
+.story .wrap{display:grid;gap:clamp(32px,5vw,72px);align-items:center}
+.story h2{font-size:var(--s4);max-width:16ch}
+.word{display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap;margin-bottom:1.2rem;color:var(--teal)}
+.word .ka-w{font:500 1.7rem/1 var(--mkh)}
+.word .pron{font-size:.95rem;font-style:italic}
+.story .copy p{margin-top:1.1rem;max-width:60ch;color:var(--ink-soft);font-size:1.08rem}
+.story .copy p:first-of-type{margin-top:1.4rem}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:end}
+.duo figure{margin:0}
+.duo .a{border-radius:999px 999px 8px 8px;overflow:hidden;aspect-ratio:3/4.3}
+.duo .b{border-radius:8px;overflow:hidden;aspect-ratio:4/3.6;margin-bottom:12%}
+.duo img{width:100%;height:100%;object-fit:cover}
+.duo figcaption{font-size:.82rem;color:var(--ink-soft);margin-top:.5rem}
+.facts{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1.5px solid rgba(27,20,17,.25);margin-top:clamp(8px,2vw,24px)}
+.facts div{padding:1.2rem 1rem 0 0}
+.facts dt{font-synthesis:style;font:400 clamp(2rem,1.4rem + 2vw,2.9rem)/1 var(--display);color:var(--wine)}
+:lang(ka) .facts dt{font-weight:600}
+.facts dd{margin:.45rem 0 0;font-size:.95rem;color:var(--ink-soft);max-width:22ch}
+@media (min-width:900px){.story .wrap{grid-template-columns:1fr 1fr}.facts{grid-template-columns:repeat(4,1fr)}}
+
+/* dishes */
+.dishes{padding:clamp(56px,8vw,112px) 0}
+.sec-head{display:grid;gap:.8rem;margin-bottom:clamp(28px,4vw,48px)}
+.sec-head h2{font-size:var(--s4)}
+.sec-head p{max-width:52ch;color:#cfc9bf}
+@media (min-width:900px){.sec-head{grid-template-columns:1fr 1fr;align-items:end}.sec-head p{justify-self:end}}
+.rail{scroll-padding-inline:var(--gutter);display:grid;grid-auto-flow:column;grid-auto-columns:min(78%,320px);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--gutter) 18px;margin:0 calc(var(--gutter) * -1);scrollbar-width:thin;scrollbar-color:rgba(236,235,227,.3) transparent}
+.dish{scroll-snap-align:start;display:flex;flex-direction:column;gap:.6rem}
+.dish .ph{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5;background:var(--oak-2)}
+.dish img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.dish:hover img{transform:scale(1.035)}
+.dish .row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-top:.3rem}
+.dish h3{font-size:1.45rem}
+:lang(ka) .dish h3{font-size:1.3rem}
+.dish .alt{font:500 .95rem/1.3 var(--mkh);color:var(--wall)}
+:lang(ka) .dish .alt{font-family:var(--display);font-weight:400}
+.dish .price{font:400 1.35rem/1 var(--display);color:var(--yolk);font-variant-numeric:tabular-nums}
+.dish p{font-size:.95rem;color:#cfc9bf}
+@media (min-width:1100px){
+  .rail{grid-auto-flow:row;grid-template-columns:repeat(4,1fr);overflow:visible;margin:0;padding:0;gap:36px 24px}
+}
+
+/* feast */
+.feast{background:var(--wine);padding:clamp(56px,8vw,112px) 0;position:relative;overflow:hidden}
+.feast .wrap{display:grid;gap:clamp(28px,5vw,64px);align-items:center}
+.feast .ph{border-radius:var(--radius);overflow:hidden;aspect-ratio:3/4;max-height:640px}
+.feast .ph img{width:100%;height:100%;object-fit:cover}
+.feast h2{font-size:var(--s4);max-width:14ch}
+.feast p.body{margin-top:1.2rem;max-width:52ch;color:#ecd9dc;font-size:1.08rem}
+.portions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:1.6rem;max-width:420px}
+.portions div{border:1.5px solid rgba(236,235,227,.3);border-radius:var(--radius);padding:1rem 1.1rem}
+.portions span{display:block;font-size:.9rem;color:#ecd9dc}
+.portions b{font:400 2.2rem/1.1 var(--display);color:var(--yolk);font-variant-numeric:tabular-nums}
+.feast .note{margin-top:1.4rem;max-width:46ch;color:#ecd9dc}
+.feast .btn{margin-top:1.2rem}
+.toast{margin-top:2rem;display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap}
+.toast b{font:600 2rem/1 var(--mkh);font-stretch:75%;color:var(--wall)}
+.toast span{font-size:.95rem;color:#ecd9dc}
+@media (min-width:900px){.feast .wrap{grid-template-columns:.9fr 1.1fr}}
+
+/* menu */
+.menu{background:var(--paper);color:var(--oak);padding:clamp(56px,8vw,112px) 0}
+.menu .sec-head p{color:var(--ink-soft)}
+.cats{position:sticky;top:64px;z-index:5;background:var(--paper);display:flex;gap:8px;overflow-x:auto;padding:12px var(--gutter);margin:0 calc(var(--gutter) * -1) 8px;scrollbar-width:none;border-bottom:1px solid rgba(27,20,17,.12)}
+.cats::-webkit-scrollbar{display:none}
+@media (min-width:1000px){.cats{flex-wrap:wrap;overflow:visible}}
+.cats a{flex:none;text-decoration:none;font-weight:600;font-size:.9rem;padding:.55em 1em;border-radius:999px;border:1.5px solid rgba(27,20,17,.2);color:var(--oak)}
+.cats a:hover{border-color:var(--teal);color:var(--teal)}
+.cats a.on{background:var(--teal);border-color:var(--teal);color:var(--paper)}
+.menu-cols{margin-top:28px;column-gap:clamp(32px,5vw,72px)}
+@media (min-width:820px){.menu-cols{columns:2}}
+.mcat{scroll-margin-top:140px;break-inside:avoid;margin-bottom:clamp(28px,4vw,44px)}
+.mcat h3{font-size:1.8rem;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:1rem;border-bottom:2px solid var(--oak);padding-bottom:.45rem;margin-bottom:.4rem}
+:lang(ka) .mcat h3{font-size:1.55rem}
+.mcat h3 small{font:500 1rem/1 var(--mkh);color:var(--teal)}
+:lang(ka) .mcat h3 small{font-family:var(--display);font-weight:400}
+.mcat .cols{display:flex;justify-content:flex-end;gap:1.4rem;font-size:.78rem;color:var(--ink-soft);padding-top:.2rem}
+.mcat .cols span{width:3.2rem;text-align:right}
+.item{display:grid;grid-template-columns:1fr auto;gap:.15rem 1rem;padding:.7rem 0;border-bottom:1px dashed rgba(27,20,17,.22)}
+.item .n{font-weight:600}
+.item .k{font:400 .92rem/1.35 var(--mkh);color:var(--ink-soft);grid-column:1}
+:lang(ka) .item .k{font-family:var(--body)}
+.item .pr{grid-row:1/span 2;grid-column:2;display:flex;gap:1.4rem;font:400 1.2rem/1.2 var(--display);color:var(--wine);font-variant-numeric:tabular-nums;align-self:start}
+.item .pr span{min-width:3.2rem;text-align:right}
+.menu-foot{margin-top:2.2rem;display:grid;gap:.8rem;color:var(--ink-soft);font-size:.98rem;max-width:70ch}
+.veg{display:inline-flex;gap:.6rem;align-items:flex-start}
+.veg svg{flex:none;width:20px;height:20px;color:var(--teal);margin-top:3px}
+
+/* khinkali */
+.how{background:var(--wall);color:var(--oak);padding:clamp(56px,8vw,112px) 0}
+.how .wrap{display:grid;gap:clamp(28px,5vw,64px);align-items:center}
+.how .ph{border-radius:999px 999px 10px 10px;overflow:hidden;aspect-ratio:3/4;max-width:420px}
+.how .ph img{width:100%;height:100%;object-fit:cover}
+.how h2{font-size:var(--s4)}
+.how .sub{margin-top:.7rem;color:var(--ink-soft);font-size:1.08rem}
+.steps{list-style:none;padding:0;margin:1.8rem 0 0;counter-reset:s;display:grid;gap:0}
+.steps li{counter-increment:s;display:grid;grid-template-columns:3.2rem 1fr;gap:1rem;align-items:baseline;padding:1rem 0;border-top:1.5px solid rgba(27,20,17,.2);font-size:1.1rem}
+.steps li::before{content:counter(s);font:400 2.2rem/1 var(--display);color:var(--wine)}
+.how .tip{margin-top:1.4rem;padding:1rem 1.2rem;background:rgba(30,79,75,.1);border-left:4px solid var(--teal);border-radius:0 8px 8px 0;max-width:56ch}
+@media (min-width:900px){.how .wrap{grid-template-columns:.8fr 1.2fr}}
+
+/* gallery */
+.gallery{padding:clamp(56px,8vw,112px) 0}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filters button{all:unset;cursor:pointer;font-weight:600;font-size:.9rem;padding:.55em 1.05em;border-radius:999px;border:1.5px solid rgba(236,235,227,.3)}
+.filters button[aria-pressed="true"]{background:var(--paper);color:var(--oak);border-color:var(--paper)}
+.filters button:focus-visible{outline:3px solid var(--yolk)}
+.grid{columns:2 160px;column-gap:12px;margin-top:24px}
+@media (min-width:700px){.grid{columns:3 220px;column-gap:16px}}
+@media (min-width:1100px){.grid{columns:4}}
+.grid button{all:unset;display:block;width:100%;margin:0 0 12px;break-inside:avoid;cursor:zoom-in;border-radius:8px;overflow:hidden;position:relative;background:var(--oak-2)}
+@media (min-width:700px){.grid button{margin-bottom:16px}}
+.grid button:focus-visible{outline:3px solid var(--yolk);outline-offset:2px}
+.grid img{width:100%;height:auto;transition:transform .5s ease,filter .3s ease}
+.grid button:hover img{transform:scale(1.03)}
+.grid .cap{position:absolute;left:0;right:0;bottom:0;padding:1.6rem .8rem .6rem;font-size:.85rem;font-weight:500;background:linear-gradient(transparent,rgba(17,12,10,.82));opacity:0;transition:opacity .2s ease}
+.grid button:hover .cap,.grid button:focus-visible .cap{opacity:1}
+@media (hover:none){.grid .cap{opacity:1;font-size:.78rem;padding-top:1.2rem}}
+.lb{position:fixed;inset:0;z-index:80;background:rgba(14,10,8,.95);display:none;grid-template-rows:auto 1fr auto;padding:12px}
+.lb.open{display:grid}
+.lb-top{display:flex;justify-content:space-between;align-items:center;padding:4px 6px 10px;color:#d8d3c9;font-size:.95rem}
+.lb-fig{margin:0;display:grid;place-items:center;min-height:0;touch-action:pan-y}
+.lb-fig img{max-width:100%;max-height:100%;object-fit:contain;border-radius:6px}
+.lb-bot{display:flex;justify-content:center;gap:12px;padding:12px 0 4px}
+.icon-btn{all:unset;cursor:pointer;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;border:1.5px solid rgba(236,235,227,.35);color:var(--paper)}
+.icon-btn:hover{background:rgba(236,235,227,.1)}
+.icon-btn:focus-visible{outline:3px solid var(--yolk)}
+.icon-btn svg{width:22px;height:22px}
+
+/* reviews */
+.reviews{background:var(--paper);color:var(--oak);padding:clamp(56px,8vw,112px) 0}
+.score{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap}
+.score .big{font:400 clamp(4rem,3rem + 4vw,6.5rem)/.9 var(--display);color:var(--wine)}
+.score .stars{font-size:1.4rem;color:rgba(27,20,17,.18)}
+.score .stars::after{color:#d99a12}
+.score p{font-size:.98rem;color:var(--ink-soft);margin-top:.35rem}
+.quotes{scroll-padding-inline:var(--gutter);display:grid;grid-auto-flow:column;grid-auto-columns:min(84%,360px);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px var(--gutter) 18px;margin:28px calc(var(--gutter) * -1) 0}
+.quotes blockquote{scroll-snap-align:start;margin:0;background:#fff;border-radius:var(--radius);padding:1.4rem 1.4rem 1.2rem;display:flex;flex-direction:column;gap:1rem;border:1px solid rgba(27,20,17,.08)}
+.quotes blockquote p{font-size:1.04rem;line-height:1.55}
+.quotes blockquote p::before{content:"“";font:400 3rem/0 var(--display);color:var(--teal);vertical-align:-.45em;margin-right:.1em}
+.quotes footer{margin-top:auto;display:flex;justify-content:space-between;align-items:center;font-size:.9rem;color:var(--ink-soft)}
+.quotes footer .stars{font-size:.8rem;color:rgba(27,20,17,.15)}
+.quotes footer .stars::after{color:#d99a12}
+@media (min-width:1100px){.quotes{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);overflow:visible;margin:28px 0 0;padding:0}}
+.rev-actions{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.4rem;margin-top:1.6rem;font-size:.92rem;color:var(--ink-soft)}
+
+/* visit */
+.visit{background:var(--teal);color:var(--paper);padding:clamp(56px,8vw,112px) 0}
+.visit .wrap{display:grid;gap:clamp(32px,5vw,64px)}
+.visit h2{font-size:var(--s4)}
+.addr{font:400 clamp(1.5rem,1.1rem + 1.4vw,2.2rem)/1.2 var(--display);margin-top:1rem}
+.visit .btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+.visit .btn-line{color:var(--paper)}
+.phone-line{margin-top:1rem;font-size:1rem;color:#cfe0db}
+.phone-line a{font-weight:600;color:var(--paper)}
+.hours{margin-top:2rem;max-width:460px}
+.hours h3,.amen h3{font:600 1rem/1.3 var(--body);margin-bottom:.6rem;color:#cfe0db}
+.hours table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hours td{padding:.55rem 0;border-bottom:1px solid rgba(236,235,227,.16)}
+.hours td:last-child{text-align:right}
+.hours tr.today td{font-weight:700;color:var(--yolk)}
+.hours tr.today td:first-child::after{content:attr(data-today);font-weight:600;font-size:.72rem;margin-left:.55rem;background:var(--yolk);color:var(--oak);padding:.15rem .45rem;border-radius:999px;vertical-align:2px}
+.hours .note{font-size:.88rem;color:#cfe0db;margin-top:.7rem}
+.map{border-radius:var(--radius);overflow:hidden;background:#173f3c;border:1px solid rgba(236,235,227,.15)}
+.map svg{width:100%;height:auto;display:block}
+.map-cap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:.8rem 1rem;font-size:.88rem;color:#cfe0db;border-top:1px solid rgba(236,235,227,.15)}
+.amen{margin-top:1.6rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-size:.88rem;padding:.45em .85em;border-radius:999px;background:rgba(236,235,227,.1);border:1px solid rgba(236,235,227,.18)}
+@media (min-width:900px){.visit .wrap{grid-template-columns:1fr 1fr;align-items:start}}
+
+/* footer */
+.foot{padding:clamp(56px,8vw,96px) 0 140px;background:var(--oak);border-top:1px solid var(--oak-line)}
+.cheers{font-family:var(--mkh);font-weight:300;font-stretch:62.5%;font-size:clamp(3.6rem,1rem + 10vw,9rem);line-height:1.3;color:var(--wall);margin:0}
+.foot .line{font-size:var(--s1);margin-top:.2rem;color:#d8d3c9}
+.foot-grid{display:grid;gap:1.6rem;margin-top:2.6rem;padding-top:1.6rem;border-top:1px solid var(--oak-line);font-size:.95rem;color:#bdb6ab}
+.foot-grid b{display:block;color:var(--paper);font-weight:600;margin-bottom:.3rem}
+.foot-grid a{color:var(--paper)}
+.credit{margin-top:2rem;font-size:.85rem;color:#8f877c}
+.credit a{color:#bdb6ab}
+@media (min-width:800px){.foot-grid{grid-template-columns:repeat(3,1fr)}.foot{padding-bottom:64px}}
+
+/* mobile action bar */
+.bar{position:fixed;left:10px;right:10px;bottom:10px;z-index:50;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:6px;padding:6px;background:rgba(27,20,17,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--oak-line);border-radius:999px;box-shadow:0 12px 30px rgba(0,0,0,.4);transform:translateY(0);transition:transform .3s ease}
+.bar.hide{transform:translateY(160%)}
+.bar a{display:flex;align-items:center;justify-content:center;gap:.45rem;text-decoration:none;font-weight:600;font-size:.92rem;padding:.8rem .4rem;border-radius:999px}
+.bar a svg{width:18px;height:18px}
+.bar a.call{background:var(--yolk);color:var(--oak)}
+@media (min-width:800px){.bar{display:none}}
+
+.toast-msg{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--paper);color:var(--oak);font-weight:600;padding:.7rem 1.1rem;border-radius:999px;z-index:90;box-shadow:0 10px 30px rgba(0,0,0,.35);opacity:0;pointer-events:none;transition:opacity .2s ease}
+.toast-msg.show{opacity:1}
+</style>
+</head>
+<body>
+
+<div class="ribbon"><span data-t="ribbon">Sample website designed by <a href="https://onyxrisemedia.com">Onyx Rise Media</a></span></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Old Marani home">
+      <svg viewBox="0 0 40 44" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" aria-hidden="true"><path d="M4 42V18a8 8 0 0 1 16 0a8 8 0 0 1 16 0v24"/><path d="M20 18v12"/><g fill="currentColor" stroke="none"><circle cx="16.6" cy="34.4" r="1.7"/><circle cx="20" cy="34.4" r="1.7"/><circle cx="23.4" cy="34.4" r="1.7"/><circle cx="18.3" cy="37.5" r="1.7"/><circle cx="21.7" cy="37.5" r="1.7"/><circle cx="20" cy="40.6" r="1.7"/></g></svg>
+      <span><b>Old Marani</b><small lang="ka">ძველი მარანი</small></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#menu" data-t="nav_menu">Menu</a>
+      <a href="#story" data-t="nav_story">Our cellar</a>
+      <a href="#photos" data-t="nav_photos">Photos</a>
+      <a href="#visit" data-t="nav_visit">Visit</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language" data-ta="lang_label">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="ka" class="ka" aria-pressed="false" lang="ka">ქარ</button>
+    </div>
+    <a class="btn btn-yolk call-top" href="tel:+17189750055"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-t="call_short">718 975 0055</span></a>
+    <button class="burger" type="button" aria-label="Open sections" data-ta="open_sections" aria-expanded="false" aria-controls="sheet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
+  </div>
+</header>
+
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Sections">
+  <button class="icon-btn close" type="button" aria-label="Close" data-ta="close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <a href="#menu" data-t="nav_menu">Menu</a>
+  <a href="#favorites" data-t="nav_fav">Favorites</a>
+  <a href="#story" data-t="nav_story">Our cellar</a>
+  <a href="#khinkali" data-t="nav_khinkali">How to eat khinkali</a>
+  <a href="#photos" data-t="nav_photos">Photos</a>
+  <a href="#reviews" data-t="nav_reviews">Reviews</a>
+  <a href="#visit" data-t="nav_visit">Visit</a>
+</div>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div>
+      <p class="giant flicker" lang="ka" aria-hidden="true"><span>ძველი</span><span>მარანი</span></p>
+      <p class="hero-kicker" data-t="hero_kicker">Georgian kitchen and beer &amp; wine house on Kings Highway, Brooklyn</p>
+      <h1 id="hero-title" data-t="hero_title">Bread from the oven, wine from the cellar.</h1>
+      <p class="lead" data-t="hero_lead">Molten acharuli khachapuri, hand pleated khinkali, mtsvadi straight off the skewer and Georgian wine by the glass or bottle. Pull up a chair, we are open every day.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-yolk" href="#menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 4h10a4 4 0 0 1 4 4v12H9a4 4 0 0 1-4-4z"/><path d="M9 9h6M9 13h6"/></svg><span data-t="cta_menu">See the menu</span></a>
+        <a class="btn btn-line" href="tel:+17189750055"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-t="cta_call">Call 718 975 0055</span></a>
+      </div>
+      <div class="hero-meta">
+        <span class="status" id="status" aria-live="polite"><i></i><span class="st-main">Open daily</span> <em class="st-sub">11 AM to 11 PM</em></span>
+        <a class="rating" href="https://www.google.com/maps?cid=5439918880196583644" rel="noopener"><span class="stars" style="--p:94%" aria-hidden="true"></span><span data-t="rating">4.7 on Google from 733 reviews</span></a>
+      </div>
+    </div>
+    <div class="arch-stage">
+      <div class="arch"><img src="img/hero-acharuli.webp" width="1125" height="1500" alt="Acharuli khachapuri with butter and egg yolk" data-ta="alt_hero" fetchpriority="high"></div>
+      <div class="arch-small"><img src="img/khinkali-board.webp" width="1400" height="1050" alt="Khinkali on a wooden board" data-ta="alt_khinkali"></div>
+      <p class="tag"><span data-t="tag_name">Acharuli khachapuri</span><b>$15</b></p>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="story" aria-labelledby="story-title">
+  <div class="wrap">
+    <div class="copy">
+      <p class="word"><span class="ka-w" lang="ka">მარანი</span><span class="pron" data-t="pron">ma·ra·ni, the wine cellar</span></p>
+      <h2 id="story-title" data-t="story_title">In Georgia, the marani is where the wine rests and the family gathers.</h2>
+      <p data-t="story_p1">A marani is the wine cellar of a Georgian home. Wine ages there in clay qvevri buried in the earth, and it is where the table gets set, the toasts begin and nobody hurries home.</p>
+      <p data-t="story_p2">Old Marani brings that feeling to Kings Highway: red brick, oak barrels, Georgian art on the walls and a kitchen cooking the dishes Georgians miss most when they are far from home.</p>
+    </div>
+    <div class="duo">
+      <figure><div class="a"><img src="img/room-wall.webp" width="1400" height="1050" alt="Brick wall with the Marani sign and oak barrels" data-ta="alt_wall" loading="lazy" style="object-position:30% 50%"></div></figure>
+      <figure><div class="b"><img src="img/room-dining.webp" width="1400" height="1050" alt="Dining room with Georgian art and a fireplace screen" data-ta="alt_dining" loading="lazy"></div><figcaption data-t="cap_dining">The dining room on Kings Highway</figcaption></figure>
+    </div>
+    <dl class="facts">
+      <div><dt data-t="f1_n">7 days</dt><dd data-t="f1_t">a week, 11 AM to 11 PM</dd></div>
+      <div><dt>4.7</dt><dd data-t="f2_t">stars from 733 Google reviews</dd></div>
+      <div><dt>4</dt><dd data-t="f3_t">Georgian wines by the glass or bottle</dd></div>
+      <div><dt>7</dt><dd data-t="f4_t">khachapuri, lobiani and kubdari from the oven</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="dishes" id="favorites" aria-labelledby="fav-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="fav-title" data-t="fav_title">Where to start</h2>
+      <p data-t="fav_lead">The plates our regulars order again and again. Bring friends and share everything, that is how Georgians eat.</p>
+    </div>
+    <div class="rail" id="dish-rail"></div>
+  </div>
+</section>
+
+<section class="feast" aria-labelledby="feast-title">
+  <div class="wrap">
+    <div class="ph"><img src="img/feast-board.webp" width="1050" height="1400" alt="Roasted pork shin with sausages, potatoes and pickles on a big board" data-ta="alt_feast" loading="lazy"></div>
+    <div>
+      <h2 id="feast-title" data-t="feast_title">Bring everyone. We will set the table.</h2>
+      <p class="body" data-t="feast_body">Roasted pork shin with assorted sausages, baked potatoes and pickles, all on one big board. Add khachapuri, a round of khinkali and a bottle of Saperavi and you have a supra, the Georgian feast.</p>
+      <div class="portions">
+        <div><span data-t="feeds4">Feeds 4</span><b>$68</b></div>
+        <div><span data-t="feeds6">Feeds 6</span><b>$98</b></div>
+      </div>
+      <p class="note" data-t="feast_note">Birthday, family night or a big group? Call ahead and we will have the table ready.</p>
+      <a class="btn btn-paper" href="tel:+17189750055"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-t="reserve">Reserve by phone, 718 975 0055</span></a>
+      <p class="toast"><b lang="ka">გაუმარჯოს!</b><span data-t="toast_sub">Gaumarjos! That is how Georgians say cheers.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="menu" aria-labelledby="menu-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="menu-title" data-t="menu_title">The menu</h2>
+      <p data-t="menu_lead">Prices in US dollars. Ask your server about today's cakes and desserts.</p>
+    </div>
+    <nav class="cats" id="cats" aria-label="Menu categories"></nav>
+    <div class="menu-cols" id="menu-cols"></div>
+    <div class="menu-foot">
+      <p class="veg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 19c0-8 5-13 15-14-1 10-6 15-14 15"/><path d="M5 19l7-7"/></svg><span data-t="veg">Vegetarian friendly: pkhali, khachapuri, lobiani, mushroom khinkali, baked mushrooms and salads.</span></p>
+      <p data-t="order_note">Takeout and delivery: call 718 975 0055 and we will have it ready.</p>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="khinkali" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="ph"><img src="img/khinkali-plate.webp" width="750" height="1000" alt="Plate of khinkali" data-ta="alt_khinkali2" loading="lazy"></div>
+    <div>
+      <h2 id="how-title" data-t="how_title">How to eat khinkali</h2>
+      <p class="sub" data-t="how_sub">There is a right way, and every Georgian at the next table knows it.</p>
+      <ol class="steps">
+        <li data-t="step1">Pick it up by the knot on top. Leave the fork alone.</li>
+        <li data-t="step2">Take a small bite from the side.</li>
+        <li data-t="step3">Sip the hot broth before it escapes.</li>
+        <li data-t="step4">Eat the rest and leave the knot on the plate.</li>
+      </ol>
+      <p class="tip" data-t="how_tip">Order them by the six, crack black pepper on top, and keep your knots on the plate so the table can count who won.</p>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="photos" aria-labelledby="gal-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="gal-title" data-t="gal_title">Inside Old Marani</h2>
+      <div class="filters" role="group" aria-label="Filter photos" data-ta="filter_label">
+        <button type="button" data-f="all" aria-pressed="true" data-t="f_all">All</button>
+        <button type="button" data-f="food" aria-pressed="false" data-t="f_food">Food</button>
+        <button type="button" data-f="room" aria-pressed="false" data-t="f_room">The room</button>
+        <button type="button" data-f="drink" aria-pressed="false" data-t="f_drink">Drinks</button>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews" aria-labelledby="rev-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="rev-title" data-t="rev_title">What guests say</h2>
+      <div class="score">
+        <span class="big">4.7</span>
+        <div><span class="stars" role="img" style="--p:94%" aria-label="4.7 out of 5 stars"></span><p data-t="rev_count">733 reviews on Google</p></div>
+      </div>
+    </div>
+    <div class="quotes">
+      <blockquote><p>For a true taste of Georgia, this is where you need to be. From their amazing Adjarian Khachapuri to their kebabs and salads, everything is delicious.</p><footer><span>Mira K.</span><span class="stars" role="img" aria-label="5 stars" style="--p:100%"></span></footer></blockquote>
+      <blockquote><p>This is the best Georgian restaurant we have ever been to. My husband and I go there almost every weekend, and every time this place amazes us with its food, atmosphere, and wonderful staff.</p><footer><span>Darina B.</span><span class="stars" role="img" aria-label="5 stars" style="--p:100%"></span></footer></blockquote>
+      <blockquote><p>If you wanna enjoy some really good Georgian food in a super friendly, welcoming place without all the fancy nonsense and showing off, you gotta check out Marani.</p><footer><span>Sandro T.</span><span class="stars" role="img" aria-label="5 stars" style="--p:100%"></span></footer></blockquote>
+      <blockquote><p>The food, service and atmosphere was amazing. The Georgian salad with walnuts was so fresh. Will definitely be recommending this place and coming back again!</p><footer><span>Anna R.</span><span class="stars" role="img" aria-label="5 stars" style="--p:100%"></span></footer></blockquote>
+      <blockquote><p>The traditional Georgian cheese bread was absolutely amazing, and everything we ordered was delicious.</p><footer><span>Tornike K.</span><span class="stars" role="img" aria-label="5 stars" style="--p:100%"></span></footer></blockquote>
+      <blockquote><p>The food was delicious with generous portions. The beer was delicious and came in large glasses. The service was excellent.</p><footer><span data-t="g_reviewer">Google reviewer</span><span class="stars" role="img" aria-label="5 stars" style="--p:100%"></span></footer></blockquote>
+    </div>
+    <div class="rev-actions">
+      <a class="btn btn-teal" href="https://www.google.com/maps?cid=5439918880196583644" rel="noopener"><span data-t="rev_link">Read every review on Google</span></a>
+      <span data-t="rev_note">Quoted from Google reviews.</span>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit" aria-labelledby="visit-title">
+  <div class="wrap">
+    <div>
+      <h2 id="visit-title" data-t="visit_title">Come by</h2>
+      <p class="addr">1103 Kings Highway<br>Brooklyn, NY 11229</p>
+      <div class="btns">
+        <a class="btn btn-yolk" href="https://www.google.com/maps/dir/?api=1&amp;destination=Old+Marani+Georgian+Restaurant+Brooklyn%2C+1103+Kings+Hwy%2C+Brooklyn%2C+NY+11229" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span data-t="directions">Get directions</span></a>
+        <button class="btn btn-line" type="button" id="copy-addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg><span data-t="copy_addr">Copy address</span></button>
+      </div>
+      <p class="phone-line"><span data-t="phone_label">Call us:</span> <a href="tel:+17189750055">718 975 0055</a></p>
+      <div class="hours">
+        <h3 data-t="hours_label">Hours</h3>
+        <table><tbody id="hours"></tbody></table>
+        <p class="note" data-t="holiday">Holiday hours can change, so give us a call if you are coming on a holiday.</p>
+      </div>
+    </div>
+    <div>
+      <figure class="map" style="margin:0">
+        <svg viewBox="0 0 600 420" role="img" aria-labelledby="map-t">
+          <title id="map-t">Map: Old Marani on Kings Highway next to Coney Island Avenue, a short walk from the Kings Hwy B and Q station</title>
+          <rect width="600" height="420" fill="#173f3c"/>
+          <g stroke="#2a5a56" stroke-width="2">
+            <path d="M330 0L338 420M392 0L400 420M452 0L460 420M512 0L520 420M150 0L158 420M98 0L106 420M205 0L213 420"/>
+          </g>
+          <g stroke="#3a6c67" stroke-width="5" stroke-linecap="round">
+            <path d="M0 76L600 50"/><path d="M0 362L600 340"/><path d="M0 232L600 212"/>
+          </g>
+          <path d="M572 0L580 420" stroke="#3a6c67" stroke-width="5"/>
+          <path d="M582 0L590 420" stroke="#efb12f" stroke-width="3" stroke-dasharray="10 7" opacity=".7"/>
+          <path d="M40 0L48 420" stroke="#4d807a" stroke-width="9"/>
+          <path d="M252 0L262 420" stroke="#c5cbbb" stroke-width="10"/>
+          <path d="M0 330L600 110" stroke="#ecebe3" stroke-width="13"/>
+          <g fill="#c5cbbb" font-family="Instrument Sans, sans-serif" font-size="13" font-weight="600">
+            <text x="430" y="177" transform="rotate(-20.1 430 177)" fill="#1b1411" font-size="12.5">KINGS HWY</text>
+            <text x="270" y="30" transform="rotate(88.6 270 30)" font-size="12">CONEY ISLAND AVE</text>
+            <text x="56" y="30" transform="rotate(88.9 56 30)" font-size="11">OCEAN PKWY</text>
+            <text x="440" y="232" font-size="11" opacity=".9">QUENTIN RD</text>
+            <text x="420" y="74" font-size="11" opacity=".9">AVENUE P</text>
+            <text x="420" y="366" font-size="11" opacity=".9">AVENUE R</text>
+          </g>
+          <g transform="translate(574 122)">
+            <circle r="17" fill="#ecebe3"/>
+            <text x="-9.5" y="5" font-family="Instrument Sans, sans-serif" font-size="12" font-weight="700" fill="#e67e22">B</text>
+            <text x="1.5" y="5" font-family="Instrument Sans, sans-serif" font-size="12" font-weight="700" fill="#f1c40f">Q</text>
+          </g>
+          <text x="448" y="98" font-family="Instrument Sans, sans-serif" font-size="12" font-weight="600" fill="#ecebe3">Kings Hwy station</text>
+          <g transform="translate(290 220)">
+            <circle r="26" fill="#efb12f" opacity=".22"/>
+            <path d="M0 0c-9-11-14-17-14-24a14 14 0 0 1 28 0c0 7-5 13-14 24z" fill="#efb12f" stroke="#1b1411" stroke-width="2"/>
+            <circle cy="-24" r="5" fill="#1b1411"/>
+          </g>
+          <g transform="translate(312 262)">
+            <rect x="0" y="-17" width="118" height="26" rx="13" fill="#1b1411"/>
+            <text x="13" y="1" font-family="Gloock, Georgia, serif" font-size="15" fill="#ecebe3">Old Marani</text>
+          </g>
+        </svg>
+        <figcaption class="map-cap"><span data-t="map_cap">At Kings Highway and Coney Island Avenue</span><span data-t="map_walk">Near the Kings Hwy B and Q station</span></figcaption>
+      </figure>
+      <div class="amen">
+        <h3 data-t="good_to_know">Good to know</h3>
+        <div class="chips" id="chips"></div>
+        <p class="note" style="margin-top:.9rem;font-size:.9rem;color:#cfe0db" data-t="parking">Street parking nearby, though spots get tight at dinner time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="cheers" lang="ka" aria-hidden="true">გაუმარჯოს!</p>
+    <p class="line" data-t="foot_line">Gaumarjos! See you at the table.</p>
+    <div class="foot-grid">
+      <div><b data-t="foot_find">Find us</b>1103 Kings Highway<br>Brooklyn, NY 11229</div>
+      <div><b data-t="foot_hours">Open every day</b><span data-t="foot_hours_t">11 AM to 11 PM</span></div>
+      <div><b data-t="foot_call">Call or order</b><a href="tel:+17189750055">718 975 0055</a></div>
+    </div>
+    <p class="credit"><span data-t="copyright">© 2026 Old Marani Georgian Restaurant.</span> <span data-t="ribbon">Sample website designed by <a href="https://onyxrisemedia.com">Onyx Rise Media</a></span></p>
+  </div>
+</footer>
+
+<nav class="bar hide" aria-label="Quick actions" id="bar">
+  <a class="call" href="tel:+17189750055"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-t="bar_call">Call</span></a>
+  <a href="#menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 4h10a4 4 0 0 1 4 4v12H9a4 4 0 0 1-4-4z"/><path d="M9 9h6M9 13h6"/></svg><span data-t="bar_menu">Menu</span></a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Old+Marani+Georgian+Restaurant+Brooklyn%2C+1103+Kings+Hwy%2C+Brooklyn%2C+NY+11229" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span data-t="bar_dir">Directions</span></a>
+</nav>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <div class="lb-top"><span id="lb-cap"></span><button class="icon-btn" type="button" id="lb-close" aria-label="Close" data-ta="close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <figure class="lb-fig" id="lb-fig"><img id="lb-img" alt=""></figure>
+  <div class="lb-bot">
+    <button class="icon-btn" type="button" id="lb-prev" aria-label="Previous photo" data-ta="prev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <span id="lb-count" style="align-self:center;min-width:4.5rem;text-align:center;color:#d8d3c9;font-variant-numeric:tabular-nums"></span>
+    <button class="icon-btn" type="button" id="lb-next" aria-label="Next photo" data-ta="next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+</div>
+
+<div class="toast-msg" id="toast" role="status"></div>
+
+<script>
+/* ---------- copy in both languages ---------- */
+const T = {
+en:{
+  ribbon:'Sample website designed by <a href="https://onyxrisemedia.com">Onyx Rise Media</a>',
+  lang_label:'Language', open_sections:'Open sections', close:'Close', prev:'Previous photo', next:'Next photo', filter_label:'Filter photos',
+  nav_menu:'Menu', nav_story:'Our cellar', nav_photos:'Photos', nav_visit:'Visit', nav_fav:'Favorites', nav_khinkali:'How to eat khinkali', nav_reviews:'Reviews',
+  call_short:'718 975 0055',
+  hero_kicker:'Georgian kitchen and beer &amp; wine house on Kings Highway, Brooklyn',
+  hero_title:'Bread from the oven, wine from the cellar.',
+  hero_lead:'Molten acharuli khachapuri, hand pleated khinkali, mtsvadi straight off the skewer and Georgian wine by the glass or bottle. Pull up a chair, we are open every day.',
+  cta_menu:'See the menu', cta_call:'Call 718 975 0055',
+  rating:'4.7 on Google from 733 reviews',
+  tag_name:'Acharuli khachapuri',
+  alt_hero:'Acharuli khachapuri with butter and egg yolk', alt_khinkali:'Khinkali on a wooden board', alt_wall:'Brick wall with the Marani sign and oak barrels', alt_dining:'Dining room with Georgian art and a fireplace screen', alt_feast:'Roasted pork shin with sausages, potatoes and pickles on a big board', alt_khinkali2:'Plate of khinkali',
+  pron:'ma·ra·ni, the wine cellar',
+  story_title:'In Georgia, the marani is where the wine rests and the family gathers.',
+  story_p1:'A marani is the wine cellar of a Georgian home. Wine ages there in clay qvevri buried in the earth, and it is where the table gets set, the toasts begin and nobody hurries home.',
+  story_p2:'Old Marani brings that feeling to Kings Highway: red brick, oak barrels, Georgian art on the walls and a kitchen cooking the dishes Georgians miss most when they are far from home.',
+  cap_dining:'The dining room on Kings Highway',
+  f1_n:'7 days', f1_t:'a week, 11 AM to 11 PM', f2_t:'stars from 733 Google reviews', f3_t:'Georgian wines by the glass or bottle', f4_t:'khachapuri, lobiani and kubdari from the oven',
+  fav_title:'Where to start', fav_lead:'The plates our regulars order again and again. Bring friends and share everything, that is how Georgians eat.',
+  feast_title:'Bring everyone. We will set the table.',
+  feast_body:'Roasted pork shin with assorted sausages, baked potatoes and pickles, all on one big board. Add khachapuri, a round of khinkali and a bottle of Saperavi and you have a supra, the Georgian feast.',
+  feeds4:'Feeds 4', feeds6:'Feeds 6',
+  feast_note:'Birthday, family night or a big group? Call ahead and we will have the table ready.',
+  reserve:'Reserve by phone, 718 975 0055',
+  toast_sub:'Gaumarjos! That is how Georgians say cheers.',
+  menu_title:'The menu', menu_lead:"Prices in US dollars. Ask your server about today's cakes and desserts.",
+  veg:'Vegetarian friendly: pkhali, khachapuri, lobiani, mushroom khinkali, baked mushrooms and salads.',
+  order_note:'Takeout and delivery: call 718 975 0055 and we will have it ready.',
+  glass:'Glass', bottle:'Bottle',
+  how_title:'How to eat khinkali', how_sub:'There is a right way, and every Georgian at the next table knows it.',
+  step1:'Pick it up by the knot on top. Leave the fork alone.', step2:'Take a small bite from the side.', step3:'Sip the hot broth before it escapes.', step4:'Eat the rest and leave the knot on the plate.',
+  how_tip:'Order them by the six, crack black pepper on top, and keep your knots on the plate so the table can count who won.',
+  gal_title:'Inside Old Marani', f_all:'All', f_food:'Food', f_room:'The room', f_drink:'Drinks',
+  rev_title:'What guests say', rev_count:'733 reviews on Google', rev_link:'Read every review on Google', rev_note:'Quoted from Google reviews.', g_reviewer:'Google reviewer',
+  visit_title:'Come by', directions:'Get directions', copy_addr:'Copy address', copied:'Address copied', copy_fail:'Copy did not work. The address is 1103 Kings Highway, Brooklyn, NY 11229',
+  phone_label:'Call us:', hours_label:'Hours', today:'Today', holiday:'Holiday hours can change, so give us a call if you are coming on a holiday.',
+  map_cap:'At Kings Highway and Coney Island Avenue', map_walk:'Near the Kings Hwy B and Q station',
+  good_to_know:'Good to know', parking:'Street parking nearby, though spots get tight at dinner time.',
+  foot_line:'Gaumarjos! See you at the table.', foot_find:'Find us', foot_hours:'Open every day', foot_hours_t:'11 AM to 11 PM', foot_call:'Call or order',
+  copyright:'© 2026 Old Marani Georgian Restaurant.',
+  bar_call:'Call', bar_menu:'Menu', bar_dir:'Directions',
+  open:'Open now', open_sub:'until 11 PM', soon:'Closing soon', soon_sub:'at 11 PM', closed:'Closed now', closed_sub:'opens at 11 AM', closed_sub_tmr:'opens tomorrow at 11 AM',
+  hours_range:'11 AM to 11 PM',
+  days:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+  amen:['Dine in','Takeout','Delivery','Curbside pickup','Reservations','Wheelchair accessible','Good for kids','Groups welcome','Vegetarian options','WiFi']
+},
+ka:{
+  ribbon:'ვებგვერდის ნიმუში. დიზაინი: <a href="https://onyxrisemedia.com">Onyx Rise Media</a>',
+  lang_label:'ენა', open_sections:'განყოფილებები', close:'დახურვა', prev:'წინა ფოტო', next:'შემდეგი ფოტო', filter_label:'ფოტოების ფილტრი',
+  nav_menu:'მენიუ', nav_story:'ჩვენი მარანი', nav_photos:'ფოტოები', nav_visit:'მისამართი', nav_fav:'რჩეული კერძები', nav_khinkali:'როგორ ვჭამოთ ხინკალი', nav_reviews:'შეფასებები',
+  call_short:'718 975 0055',
+  hero_kicker:'ქართული სამზარეულო და ლუდისა და ღვინის სახლი ბრუკლინში, კინგს ჰაივეიზე',
+  hero_title:'პური ღუმელიდან, ღვინო მარნიდან.',
+  hero_lead:'აჭარული ხაჭაპური, ხელით ნაკეთები ხინკალი, შამფურზე შემწვარი მწვადი და ქართული ღვინო ჭიქით ან ბოთლით. მობრძანდით, ყოველდღე ღია ვართ.',
+  cta_menu:'მენიუს ნახვა', cta_call:'დარეკეთ: 718 975 0055',
+  rating:'Google შეფასება 4.7 (733 მიმოხილვა)',
+  tag_name:'აჭარული ხაჭაპური',
+  alt_hero:'აჭარული ხაჭაპური კარაქითა და კვერცხით', alt_khinkali:'ხინკალი ხის დაფაზე', alt_wall:'აგურის კედელი მარნის წარწერით და მუხის კასრები', alt_dining:'დარბაზი ქართული ნახატებით', alt_feast:'შემწვარი ღორის კანჭი ძეხვეულით, კარტოფილითა და მწნილით', alt_khinkali2:'ხინკლის თეფში',
+  pron:'ქართული ღვინის სახლი',
+  story_title:'მარანი ის ადგილია, სადაც ღვინო ისვენებს და ოჯახი იკრიბება.',
+  story_p1:'მარანი ქართული ოჯახის ღვინის სახლია. აქ, მიწაში ჩაფლულ ქვევრებში, ღვინო მწიფდება, აქვე იშლება სუფრა, იწყება სადღეგრძელოები და შინ წასვლას არავინ ჩქარობს.',
+  story_p2:'ძველმა მარანმა ეს განცდა კინგს ჰაივეიზე ჩამოიტანა: წითელი აგური, მუხის კასრები, ქართული ხელოვნება კედლებზე და სამზარეულო, სადაც ის კერძები მზადდება, რომლებიც სახლიდან შორს ყველაზე მეტად გენატრება.',
+  cap_dining:'ჩვენი დარბაზი კინგს ჰაივეიზე',
+  f1_n:'7 დღე', f1_t:'კვირაში, 11:00 საათიდან 23:00 საათამდე', f2_t:'საშუალო ქულა 733 Google შეფასებით', f3_t:'ქართული ღვინო ჭიქით ან ბოთლით', f4_t:'სახის ხაჭაპური, ლობიანი და კუბდარი ღუმელიდან',
+  fav_title:'საიდან დავიწყოთ', fav_lead:'კერძები, რომლებსაც ჩვენი სტუმრები ისევ და ისევ უკვეთავენ. მოიყვანეთ მეგობრები და ყველაფერი ერთად გასინჯეთ, ქართულად.',
+  feast_title:'მოიყვანეთ ყველა, სუფრას ჩვენ გავშლით.',
+  feast_body:'შემწვარი ღორის კანჭი ძეხვეულით, გამომცხვარი კარტოფილითა და მწნილით, ერთ დიდ დაფაზე. დაამატეთ ხაჭაპური, ხინკალი და ერთი ბოთლი საფერავი და ნამდვილი ქართული სუფრა მზადაა.',
+  feeds4:'4 კაცზე', feeds6:'6 კაცზე',
+  feast_note:'დაბადების დღე, ოჯახური საღამო თუ დიდი შეკრება? დაგვირეკეთ წინასწარ და მაგიდა მზად დაგხვდებათ.',
+  reserve:'დაჯავშნეთ: 718 975 0055',
+  toast_sub:'ასე იწყება ყოველი სადღეგრძელო.',
+  menu_title:'მენიუ', menu_lead:'ფასები აშშ დოლარშია. დღის ტორტებისა და დესერტების შესახებ ჰკითხეთ მიმტანს.',
+  veg:'ვეგეტარიანელებისთვის: ფხალი, ხაჭაპური, ლობიანი, სოკოს ხინკალი, სოკო კეცზე და სალათები.',
+  order_note:'წასაღებად და მიტანით: დარეკეთ 718 975 0055 და შეკვეთას მოგიმზადებთ.',
+  glass:'ჭიქა', bottle:'ბოთლი',
+  how_title:'როგორ ვჭამოთ ხინკალი', how_sub:'ამას თავისი წესი აქვს და ეს ყველა ქართველმა იცის.',
+  step1:'აიღეთ ხელით, კუდით. ჩანგალი გვერდზე გადადეთ.', step2:'გვერდიდან პატარად მოკბიჩეთ.', step3:'ცხელი წვენი შეწრუპეთ, სანამ დაიღვრება.', step4:'დანარჩენი შეჭამეთ, კუდი კი თეფშზე დატოვეთ.',
+  how_tip:'ზემოდან მოაყარეთ შავი პილპილი და კუდები თეფშზე დატოვეთ, რომ ბოლოს დათვალოთ, ვინ რამდენი შეჭამა.',
+  gal_title:'ძველ მარანში', f_all:'ყველა', f_food:'კერძები', f_room:'ინტერიერი', f_drink:'სასმელები',
+  rev_title:'რას ამბობენ სტუმრები', rev_count:'733 Google შეფასება', rev_link:'ყველა შეფასების ნახვა', rev_note:'ციტატები Google შეფასებებიდან, ორიგინალის ენაზე.', g_reviewer:'Google მომხმარებელი',
+  visit_title:'გვესტუმრეთ', directions:'მარშრუტის ნახვა', copy_addr:'მისამართის კოპირება', copied:'მისამართი დაკოპირდა', copy_fail:'კოპირება ვერ მოხერხდა. მისამართი: 1103 Kings Highway, Brooklyn, NY 11229',
+  phone_label:'დაგვირეკეთ:', hours_label:'სამუშაო საათები', today:'დღეს', holiday:'დღესასწაულებზე საათები შეიძლება შეიცვალოს, ამიტომ წინასწარ დაგვირეკეთ.',
+  map_cap:'Kings Highway და Coney Island Avenue კვეთასთან', map_walk:'Kings Hwy სადგურთან ახლოს (B და Q)',
+  good_to_know:'კარგია იცოდეთ', parking:'ქუჩაში პარკინგი არის, თუმცა საღამოს ადგილის პოვნა ძნელია.',
+  foot_line:'სუფრასთან გელოდებით.', foot_find:'მისამართი', foot_hours:'ღია ვართ ყოველდღე', foot_hours_t:'11:00 საათიდან 23:00 საათამდე', foot_call:'დარეკეთ ან შეუკვეთეთ',
+  copyright:'© 2026 ძველი მარანი.',
+  bar_call:'დარეკვა', bar_menu:'მენიუ', bar_dir:'მარშრუტი',
+  open:'ახლა ღიაა', open_sub:'23:00 საათამდე', soon:'მალე ვიკეტებით', soon_sub:'23:00 საათზე', closed:'ახლა დაკეტილია', closed_sub:'გავიხსნებით 11:00 საათზე', closed_sub_tmr:'გავიხსნებით ხვალ 11:00 საათზე',
+  hours_range:'11:00 საათიდან 23:00 საათამდე',
+  days:['ორშაბათი','სამშაბათი','ოთხშაბათი','ხუთშაბათი','პარასკევი','შაბათი','კვირა'],
+  amen:['ადგილზე','წასაღებად','მიტანა','მანქანასთან გამოტანა','ჯავშანი','ეტლით მისაწვდომი','ბავშვებისთვის','ჯგუფებისთვის','ვეგეტარიანული კერძები','WiFi']
+}};
+
+/* ---------- favorites ---------- */
+const DISHES = [
+ {img:'acharuli', en:'Acharuli Khachapuri', ka:'აჭარული ხაჭაპური', p:15,
+  den:'A boat of bread filled with molten cheese, butter and a soft egg. Stir it together, tear off the crust and dip.',
+  dka:'ნავის ფორმის პური გამდნარი ყველით, კარაქითა და კვერცხით. აურიეთ, მოტეხეთ ნაპირი და მიირთვით.'},
+ {img:'khinkali', en:'Khinkali', ka:'ხინკალი', p:12,
+  den:'Six hand pleated dumplings full of spiced broth. Kalakuri style, or try lamb or mushroom.',
+  dka:'ექვსი ცალი, ხელით ნაკეთები, სურნელოვანი წვენით. ქალაქური, ასევე ცხვრის ან სოკოს.'},
+ {img:'mtsvadi', en:'Pork Mtsvadi', ka:'ღორის მწვადი', p:18,
+  den:'Juicy pork grilled on skewers the Georgian way. Chicken mtsvadi and lula kebab too.',
+  dka:'შამფურზე შემწვარი წვნიანი ღორის ხორცი, ქართულად. ასევე ქათმის მწვადი და ლულა ქაბაბი.'},
+ {img:'badrijani', en:'Eggplant with Walnuts', ka:'ბადრიჯანი ნიგვზით', p:16,
+  den:'Fried eggplant rolled around a garlicky walnut filling and finished with pomegranate.',
+  dka:'შემწვარი ბადრიჯანი ნივრიანი ნიგვზით, ბროწეულის მარცვლებით.'},
+ {img:'ojakhuri', en:'Ojakhuri', ka:'ოჯახური', p:22,
+  den:'Pan fried potatoes with pork, onion and herbs. Also made with chicken or mushrooms.',
+  dka:'ტაფაზე შემწვარი კარტოფილი ღორის ხორცით, ხახვითა და მწვანილით. ასევე ქათმით ან სოკოთი.'},
+ {img:'megruli', en:'Megruli Khachapuri', ka:'მეგრული ხაჭაპური', p:19,
+  den:'Round cheese bread with a second layer of cheese baked golden on top.',
+  dka:'მრგვალი ხაჭაპური, რომელსაც ზემოდანაც ყველი აქვს, ოქროსფრად გამომცხვარი.'},
+ {img:'pkhali', en:'Pkhali Trio', ka:'ფხალი', p:20,
+  den:'Spinach, beetroot and eggplant, each worked with walnuts and herbs. Made for sharing with bread.',
+  dka:'ისპანახი, ჭარხალი და ბადრიჯანი ნიგვზითა და მწვანილით. იდეალურია პურთან ერთად.'},
+ {img:'trout', en:'Grilled Trout', ka:'შემწვარი კალმახი', p:22,
+  den:'Whole trout off the grill, served with lemon and greens.',
+  dka:'მთლიანი კალმახი გრილზე, ლიმონითა და მწვანილით.'}
+];
+
+/* ---------- full menu (from the house menu) ---------- */
+const MENU = [
+ {id:'cold', en:'Appetizers & Salads', ka:'ცივი კერძები და სალათები', items:[
+  ['Georgian Salad','ქართული სალათი',14],
+  ['Georgian Salad with Walnuts','ქართული სალათი ნიგვზით',16],
+  ['Spinach, Beetroot and Eggplant Salad','ისპანახის, ჭარხლისა და ბადრიჯნის ფხალი',20],
+  ['Rolled Eggplant with Walnuts','ბადრიჯანი ნიგვზით',16],
+  ['Mixed Cheese Board','ყველის ასორტი',25],
+  ['Assorted Pickles','მწნილის ასორტი',14]]},
+ {id:'pastry', en:'Khachapuri & Breads', ka:'ხაჭაპური და ცომეული', items:[
+  ['Imeruli Khachapuri','იმერული ხაჭაპური',16],
+  ['Megruli Khachapuri','მეგრული ხაჭაპური',19],
+  ['Acharuli Khachapuri','აჭარული ხაჭაპური',15],
+  ['Acharuli Lobiani','აჭარული ლობიანი',19],
+  ['Lobiani with Beans','ლობიანი',16],
+  ['Lobiani with Bacon','ლობიანი ბეკონით',19],
+  ['Kubdari, chopped meat','კუბდარი',19],
+  ['Mchadi, corn bread','მჭადი',3],
+  ['Georgian Bread','ქართული პური',4]]},
+ {id:'khinkali', en:'Khinkali', ka:'ხინკალი', items:[
+  ['Kalakuri Khinkali (6)','ქალაქური ხინკალი (6)',12],
+  ['Lamb Khinkali (6)','ცხვრის ხინკალი (6)',18],
+  ['Mushroom Khinkali (6)','სოკოს ხინკალი (6)',15],
+  ['Cheese Dumplings (4)','ყველის ხინკალი (4)',16],
+  ['Pot Dumplings','ქოთნის ხინკალი',14]]},
+ {id:'soups', en:'Soups', ka:'წვნიანები', items:[
+  ['Chicken Soup','ქათმის წვნიანი',14],
+  ['Kharcho, beef soup','ხარჩო',16],
+  ['Khashi','ხაში',15],
+  ['Chakapuli, veal stew','ჩაქაფული',25]]},
+ {id:'hot', en:'Hot Dishes', ka:'ცხელი კერძები', items:[
+  ['Ostri','ოსტრი',17],
+  ['Shkmeruli','შქმერული',18],
+  ['Kuchmachi','კუჭმაჭი',20],
+  ['Kupati','კუპატი',22],
+  ['Fried Potatoes with Chicken, Pork or Mushrooms','შემწვარი კარტოფილი ქათმით, ღორით ან სოკოთი',22],
+  ['Beans with Mchadi and Pickles','ლობიო მჭადითა და მწნილით',18],
+  ['Baked Mushrooms with Cheese','სოკო კეცზე ყველით',18]]},
+ {id:'grill', en:'From the Grill', ka:'მწვადი', items:[
+  ['Chicken Mtsvadi','ქათმის მწვადი',16],
+  ['Pork Mtsvadi','ღორის მწვადი',18],
+  ['Lula Kebab','ლულა ქაბაბი',15]]},
+ {id:'fish', en:'Fish', ka:'თევზი', items:[
+  ['Grilled Salmon with a Side','შემწვარი ორაგული გარნირით',25],
+  ['Grilled Trout','შემწვარი კალმახი',22]]},
+ {id:'feast', en:'Feast Board', ka:'სუფრის დაფა', items:[
+  ['Roasted Pork Shin, Sausages, Baked Potatoes and Pickles, for 4','შემწვარი ღორის კანჭი, ძეხვეული, კარტოფილი და მწნილი, 4 კაცზე',68],
+  ['The same board for 6','იგივე დაფა 6 კაცზე',98]]},
+ {id:'wine', en:'Georgian Wine', ka:'ქართული ღვინო', wine:true, items:[
+  ['Tsitska Tsolikouri, white dry','ციცქა და ცოლიკოური, თეთრი მშრალი',[14,37]],
+  ['Rkatsiteli, white dry','რქაწითელი, თეთრი მშრალი',[14,37]],
+  ['Kindzmarauli, red semi sweet','ქინძმარაული, წითელი ნახევრად ტკბილი',[14,37]],
+  ['Saperavi, red dry','საფერავი, წითელი მშრალი',[14,37]]]},
+ {id:'beer', en:'Beer', ka:'ლუდი', items:[
+  ['Hofbräu, filtered','Hofbräu, ფილტრირებული',8],
+  ['Weihenstephan, unfiltered','Weihenstephan, არაფილტრირებული',8]]},
+ {id:'drinks', en:'Drinks', ka:'სასმელები', items:[
+  ['Water','წყალი',3],
+  ['Sparkling Water','მინერალური წყალი',4],
+  ['Georgian Lemonade','ქართული ლიმონათი',4],
+  ['Compote','კომპოტი',8],
+  ['Coffee','ყავა',5],
+  ['Tea','ჩაი',3]]}
+];
+
+/* ---------- gallery ---------- */
+const PHOTOS = [
+ ['oven','food',710,900,'Acharuli khachapuri going into the oven','აჭარული ხაჭაპური ღუმელში'],
+ ['room-wall','room',1400,1050,'The Marani wall','მარნის კედელი'],
+ ['cheese-pull','food',619,1100,'The cheese pull','გამდნარი ყველი'],
+ ['cork-map','room',1200,720,'Georgia, made of wine corks','საქართველო, ღვინის საცობებისგან'],
+ ['ojakhuri-pan','food',823,1100,'Ojakhuri in the pan','ოჯახური ტაფაზე'],
+ ['wine-wall','drink',825,1100,'The wine wall','ღვინის კედელი'],
+ ['bar','room',825,1100,'The bar','ბარი'],
+ ['meat-board','food',1100,825,'Mtsvadi with fresh herbs','მწვადი მწვანილით'],
+ ['lemonade','drink',1100,825,'Georgian lemonade and beer','ქართული ლიმონათი და ლუდი'],
+ ['soup-pot','food',1100,825,'Lobio with mchadi and pickles','ლობიო მჭადითა და მწნილით'],
+ ['art','room',1100,825,'Georgian art on the walls','ქართული ხელოვნება კედლებზე'],
+ ['barrel-beer','drink',825,1100,'Cold beer, light or dark','ცივი ლუდი, ღია ან მუქი'],
+ ['whole-fish','food',825,1100,'Grilled fish with lemon','შემწვარი თევზი ლიმონით'],
+ ['room-long','room',825,1100,'The dining room','დარბაზი'],
+ ['nut-cake','food',825,1100,'Cake of the day','დღის ტორტი'],
+ ['pkhali-lemonade','food',898,1100,'Pkhali, badrijani and lemonade','ფხალი, ბადრიჯანი და ლიმონათი'],
+ ['room-barrels','room',1100,825,'Barrels and brick','კასრები და აგური'],
+ ['wine-beer','drink',825,1100,'A glass of white and a tall beer','თეთრი ღვინო და ლუდი'],
+ ['dessert','food',825,1100,'Dessert with walnuts','დესერტი ნიგვზით'],
+ ['room-dining','room',1400,1050,'Tables by the window','მაგიდები ფანჯარასთან']
+];
+
+let LANG = 'en';
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const t = k => T[LANG][k];
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+
+function renderDishes(){
+  const other = LANG==='en' ? 'ka' : 'en';
+  $('#dish-rail').innerHTML = DISHES.map(d => `
+    <article class="dish">
+      <div class="ph"><img src="img/${d.img}.webp" alt="${esc(d[LANG])}" loading="lazy"></div>
+      <div class="row"><h3>${esc(d[LANG])}</h3><span class="price">$${d.p}</span></div>
+      <span class="alt" lang="${other}">${esc(d[other])}</span>
+      <p>${esc(LANG==='en'?d.den:d.dka)}</p>
+    </article>`).join('');
+}
+
+function renderMenu(){
+  const sub = LANG==='en' ? 'ka' : 'en';
+  $('#cats').innerHTML = MENU.map((c,i) => `<a href="#m-${c.id}"${i===0?' class="on"':''}>${esc(c[LANG])}</a>`).join('');
+  $('#menu-cols').innerHTML = MENU.map(c => `
+    <div class="mcat" id="m-${c.id}">
+      <h3><span>${esc(c[LANG])}</span><small lang="${sub}">${esc(c[sub])}</small></h3>
+      ${c.wine?`<div class="cols"><span>${t('glass')}</span><span>${t('bottle')}</span></div>`:''}
+      ${c.items.map(([en,ka,p]) => {
+        const main = LANG==='en'?en:ka, alt = LANG==='en'?ka:en;
+        const pr = Array.isArray(p) ? p.map(x=>`<span>${x}</span>`).join('') : `<span>${p}</span>`;
+        return `<div class="item"><span class="n">${esc(main)}</span><span class="pr">${pr}</span><span class="k" lang="${sub}">${esc(alt)}</span></div>`;
+      }).join('')}
+    </div>`).join('');
+  watchCats();
+}
+
+let galFilter = 'all', galList = [];
+function renderGallery(){
+  galList = PHOTOS.filter(p => galFilter==='all' || p[1]===galFilter);
+  const idx = LANG==='en'?4:5;
+  $('#grid').innerHTML = galList.map((p,i) => `
+    <button type="button" data-i="${i}" aria-label="${esc(p[idx])}">
+      <img src="img/${p[0]}.webp" width="${p[2]}" height="${p[3]}" alt="" loading="lazy"><span class="cap">${esc(p[idx])}</span>
+    </button>`).join('');
+}
+
+function renderHours(){
+  const now = nyNow();
+  const todayIdx = (now.day + 6) % 7; // Monday first
+  $('#hours').innerHTML = T[LANG].days.map((d,i) =>
+    `<tr${i===todayIdx?' class="today"':''}><td data-today="${t('today')}">${d}</td><td>${t('hours_range')}</td></tr>`).join('');
+  $('#chips').innerHTML = T[LANG].amen.map(a => `<span>${esc(a)}</span>`).join('');
+}
+
+/* live open / closed, always on New York time */
+function nyNow(){
+  const parts = new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date());
+  const get = k => parts.find(p=>p.type===k).value;
+  const days = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+  return {day:days[get('weekday')], mins:(+get('hour'))*60 + (+get('minute'))};
+}
+function updateStatus(){
+  const {mins} = nyNow();
+  const el = $('#status');
+  const OPEN = 11*60, CLOSE = 23*60;
+  let state, sub;
+  if (mins >= OPEN && mins < CLOSE){ state = mins >= CLOSE-45 ? 'soon' : 'open'; sub = state==='soon' ? t('soon_sub') : t('open_sub'); }
+  else { state = 'closed'; sub = mins >= CLOSE ? t('closed_sub_tmr') : t('closed_sub'); }
+  el.className = 'status ' + (state==='open'?'':state);
+  el.querySelector('.st-main').textContent = t(state);
+  el.querySelector('.st-sub').textContent = sub;
+}
+
+/* category chips follow the scroll */
+let catObs;
+function watchCats(){
+  if (catObs) catObs.disconnect();
+  if (!('IntersectionObserver' in window)) return;
+  catObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting){
+        $$('#cats a').forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#'+e.target.id));
+        const on = $('#cats a.on'); if (on) { const c=$('#cats'); c.scrollTo({left:on.offsetLeft - 20, behavior:'smooth'}); }
+      }
+    });
+  }, {rootMargin:'-150px 0px -60% 0px'});
+  $$('.mcat').forEach(m => catObs.observe(m));
+}
+
+function applyLang(l, animate){
+  const run = () => {
+    LANG = l;
+    document.documentElement.lang = l;
+    $$('[data-t]').forEach(el => { const v = T[l][el.dataset.t]; if (v != null) el.innerHTML = v; });
+    $$('[data-ta]').forEach(el => { const v = T[l][el.dataset.ta]; if (v != null) el.setAttribute(el.tagName==='IMG'?'alt':'aria-label', v); });
+    $$('.lang button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang===l)));
+    renderDishes(); renderMenu(); renderGallery(); renderHours(); updateStatus();
+    try { localStorage.setItem('oldmarani-lang', l); } catch(e){}
+  };
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!animate || reduce){ run(); return; }
+  const m = $('main'); m.classList.add('swapping');
+  setTimeout(() => { run(); requestAnimationFrame(() => m.classList.remove('swapping')); }, 180);
+}
+
+$$('.lang button').forEach(b => b.addEventListener('click', () => { if (b.dataset.lang !== LANG) applyLang(b.dataset.lang, true); }));
+
+/* gallery filters + lightbox */
+$$('.filters button').forEach(b => b.addEventListener('click', () => {
+  galFilter = b.dataset.f;
+  $$('.filters button').forEach(x => x.setAttribute('aria-pressed', String(x===b)));
+  renderGallery();
+}));
+let lbI = 0, lastFocus = null;
+function showLb(i){
+  lbI = (i + galList.length) % galList.length;
+  const p = galList[lbI], idx = LANG==='en'?4:5;
+  $('#lb-img').src = `img/${p[0]}.webp`; $('#lb-img').alt = p[idx];
+  $('#lb-cap').textContent = p[idx];
+  $('#lb-count').textContent = `${lbI+1} / ${galList.length}`;
+}
+function openLb(i){ lastFocus = document.activeElement; showLb(i); $('#lb').classList.add('open'); document.body.style.overflow='hidden'; $('#lb-close').focus(); }
+function closeLb(){ $('#lb').classList.remove('open'); document.body.style.overflow=''; if (lastFocus) lastFocus.focus(); }
+$('#grid').addEventListener('click', e => { const b = e.target.closest('button[data-i]'); if (b) openLb(+b.dataset.i); });
+$('#lb-close').addEventListener('click', closeLb);
+$('#lb-prev').addEventListener('click', () => showLb(lbI-1));
+$('#lb-next').addEventListener('click', () => showLb(lbI+1));
+$('#lb').addEventListener('click', e => { if (e.target.id==='lb' || e.target.id==='lb-fig') closeLb(); });
+document.addEventListener('keydown', e => {
+  if ($('#lb').classList.contains('open')){
+    if (e.key==='Escape') closeLb();
+    if (e.key==='ArrowLeft') showLb(lbI-1);
+    if (e.key==='ArrowRight') showLb(lbI+1);
+  } else if (e.key==='Escape' && $('#sheet').classList.contains('open')) toggleSheet(false);
+});
+let tx = null;
+$('#lb-fig').addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, {passive:true});
+$('#lb-fig').addEventListener('touchend', e => { if (tx===null) return; const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 45) showLb(lbI + (dx<0?1:-1)); tx = null; });
+
+/* mobile sections sheet */
+function toggleSheet(open){
+  $('#sheet').classList.toggle('open', open);
+  $('.burger').setAttribute('aria-expanded', String(open));
+  document.body.style.overflow = open ? 'hidden' : '';
+  if (open) $('#sheet .close').focus(); else $('.burger').focus();
+}
+$('.burger').addEventListener('click', () => toggleSheet(true));
+$('#sheet .close').addEventListener('click', () => toggleSheet(false));
+$$('#sheet a').forEach(a => a.addEventListener('click', () => { $('#sheet').classList.remove('open'); document.body.style.overflow=''; $('.burger').setAttribute('aria-expanded','false'); }));
+
+/* copy address */
+function toast(msg){ const el=$('#toast'); el.textContent = msg; el.classList.add('show'); clearTimeout(toast.t); toast.t = setTimeout(()=>el.classList.remove('show'), 2600); }
+$('#copy-addr').addEventListener('click', async () => {
+  const addr = '1103 Kings Highway, Brooklyn, NY 11229';
+  try { await navigator.clipboard.writeText(addr); toast(t('copied')); }
+  catch(e){
+    try { const ta=document.createElement('textarea'); ta.value=addr; ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); const ok=document.execCommand('copy'); ta.remove(); toast(ok?t('copied'):t('copy_fail')); }
+    catch(e2){ toast(t('copy_fail')); }
+  }
+});
+
+/* quick action bar shows once the hero buttons scroll away */
+function checkBar(){ $('#bar').classList.toggle('hide', window.scrollY < 480); }
+window.addEventListener('scroll', checkBar, {passive:true}); checkBar();
+
+/* start */
+let start = 'en';
+try { const saved = localStorage.getItem('oldmarani-lang'); if (saved==='en' || saved==='ka') start = saved; else if ((navigator.language||'').toLowerCase().startsWith('ka')) start = 'ka'; } catch(e){}
+applyLang(start, false);
+setInterval(updateStatus, 60000);
+</script>
+</body>
+</html>
